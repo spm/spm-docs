@@ -1,6 +1,7 @@
 # Summary
 
+* [Introduction](README.md)
 * Overview
 * Recipes
-* Theory
+* [Theory](theory/theory.md)
 
