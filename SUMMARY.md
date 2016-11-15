@@ -10,5 +10,5 @@
    * [EEG/MEG](theory/dcm/models/eeg)
    * [Inference](theory/dcm/inference/dcm-inference.md)
 * [Appendix](appendix.md)
-   * Guide for authors
+   * [Guide for authors](guide_for_authors.md)
 
