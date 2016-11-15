@@ -21,7 +21,7 @@ The state equation, which describes how experimental inputs give rise to brain a
 $$
  \dot{z} = (A + \sum{u_jB^j})z + Cu 
 $$
- The rate of change in neuronal activity with respect to time $$\dot{z}$$ is controlled by three sets of parameters: matrix A (connections within and between regions, representing baseline or average connectivity), matrix $$B^j$$ (the modulatory influence of experimental input $$j$$ on each connection) and matrix $$C$$ (the driving input of each experimental input on each region). Matrix $$u$$ contains the experimental timeseries. These could be boxcar on-off times or parametric regressors representing the level of some experimental manipulation.
+ Where $$\dot{z}$$ is a vector with one element per brain region, representing the rate of change in neuronal activity with respect to time. It is a function of three sets of parameters: matrix $$A$$ (the baseline or average connectivity), matrix $$B^j$$ (the modulatory influence of experimental input $$j$$ on each connection) and matrix $$C$$ (the driving input of each experimental input on each region). Matrix $$u$$ contains the experimental manipulations which are hypothesised to drive or modulate the network. These are usually boxcar regressors representing the on-off times for each experimental condition, but they can also include parametric regressors representing the level of some experimental manipulation or the output of a behavioural model.
  
  
 
