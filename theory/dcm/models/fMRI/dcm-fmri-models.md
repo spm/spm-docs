@@ -4,7 +4,7 @@ This page gives an overview of the different neural models available for analysi
 
 | Model | Description |
 | -- | -- |
-| [Deterministic DCM](theory/dcm/models/fMRI/#Deterministic-DCM) | The basic DCM model for fMRI |
+| [Deterministic DCM](#Deterministic-DCM) | The basic DCM model for fMRI |
 
 ## Deterministic DCM
 
