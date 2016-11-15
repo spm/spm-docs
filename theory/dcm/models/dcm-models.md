@@ -5,4 +5,4 @@
 
 | Model | Description |
 | -- | -- |
-| [Deterministic DCM](fMRI/dcm-onestate.md) | The basic DCM model for fMRI |
+| [Deterministic DCM](fMRI/dcm-onestate) | The basic DCM model for fMRI |
