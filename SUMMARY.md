@@ -9,3 +9,5 @@
   * [Functional MRI](theory/dcm/models/fMRI/dcm-fmri-models.md)
   * [EEG/MEG](theory/dcm/models/eeg)
  * [Inference](theory/dcm/inference/dcm-inference.md)
+* Appendix
+ * Guide for authors
