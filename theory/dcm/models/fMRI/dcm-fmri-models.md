@@ -1,8 +1,12 @@
 
 # DCM models for fMRI
+This page gives an overview of the different neural models available for analysing fMRI data.
 
+| Model | Description |
+| -- | -- |
+| [Deterministic DCM](theory/dcm/models/fMRI/#Deterministic-DCM) | The basic DCM model for fMRI |
 
-## One-state DCM for fMRI
+## Deterministic DCM
 
 This is the most basic neuronal model for DCM for fMRI. Activity in each region is represented by a single number (hidden state).
 
