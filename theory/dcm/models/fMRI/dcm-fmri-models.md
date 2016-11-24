@@ -30,8 +30,8 @@ Given n regions and u experimental inputs:
 
 | Parameter | Dimension | Directory |
 | --- | --- | --- |
-| A | n x n | Average or baseline connectivity within and between regions. Entries on the diagonal of the matrix are self connections and the off-diagonal entries are between region connections.<br><br>*See note below on units.* |
-| B | n x n x u | The modulatory influence of each experimental input on each connection. This often represents the context of the experimental manipulation. For instance, at certain time points, the participant may be instructed to pay attention. The entries of the B-matrix would then be used to represent the influence of attention on the coupling between specific regions or the self-connections within regions.<br><br>*See note below on units.* |
+| A | n x n | Average or baseline connectivity within and between regions. Entries on the diagonal of the matrix are self connections and the off-diagonal entries are between region connections. |
+| B | n x n x u | The modulatory influence of each experimental input on each connection. This often represents the context of the experimental manipulation. For instance, at certain time points, the participant may be instructed to pay attention. The entries of the B-matrix would then be used to represent the influence of attention on the coupling between specific regions or the self-connections within regions. |
 | C | n x u | The driving effect of each experimental input on each region. Units: Hz. |
 
 **Note #1:** The units for A,B and C are Hz (rates of change). To force the self-connections to always be negative, the values of the self-connections on A and B are scaling parameters, which scale the prior of -0.5Hz. The values in the A and B matrices undergo the following transformation to give the strength of the self-connection $$S_{i}$$ for region $$i$$:
