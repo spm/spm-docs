@@ -29,6 +29,7 @@ Where $$\dot{z}$$ is a vector with one element per brain region, representing th
 The model has three sets of parameters:
 
 | Parameter | Dimension | Directory |
-| A | \[n x n\] matrix where n is the number of regions | Average or baseline connectivity within and between regions. Entries on the diagonal of the matrix represent self connections and the off-diagonal entries represent between-region connections. |
-| B | \[n x n x u\] matrix where u is the number of experimental inputs | The modulatory influence of each experimental input on each connection. This often represents the 'context' of the experimental manipulation. For instance, at certain time points, the participant may be instructed to pay attention. The entries of the B-matrix would then be used to represent the influence of attention on the coupling between regions or the self-connections within regions. |
-| C | \[n x u\] matrix | The driving effect of each experimental input on each region. |
+| —- | —- | —- |
+| A | n x n matrix where n is the number of regions | Average or baseline connectivity within and between regions. Entries on the diagonal of the matrix represent self connections and the off-diagonal entries represent between-region connections. |
+| B | n x n x u matrix where u is the number of experimental inputs | The modulatory influence of each experimental input on each connection. This often represents the context of the experimental manipulation. For instance, at certain time points, the participant may be instructed to pay attention. The entries of the B-matrix would then be used to represent the influence of attention on the coupling between regions or the self-connections within regions. |
+| C | n x u matrix | The driving effect of each experimental input on each region. |
