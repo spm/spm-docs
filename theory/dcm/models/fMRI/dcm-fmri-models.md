@@ -12,6 +12,8 @@ This page gives an overview of the different neural models available for analysi
 
 This is the most basic neuronal model for DCM for fMRI. Activity in each region is represented by a single number \(hidden state\).
 
+![One-state DCM model](../one_state_dcm_fmri.png)
+
 ### The model
 
 We summarise the level of neural activity in each brain region by a single number $$z_i$$ and collate these into a vector $$z$$. This *state vector* represents hidden neural activity - hidden in the sense that we cannot directly measure it. The change in z over time $$\dot{z}$$ is then function:
