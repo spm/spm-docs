@@ -27,6 +27,8 @@ $$
 $$
 This state equation is a function of three sets of parameters: matrix $$A$$ \(the baseline or average connectivity\), matrix $$B^j$$ \(the modulatory influence of experimental input $$j$$ on each connection\) and matrix $$C$$ \(the driving input of each experimental input on each region\). Matrix $$u$$ contains the experimental timeseries (e.g. boxcar on-off regressors) which are hypothesised to drive or modulate the network. 
 
+Learn more about Taylor approximations at [Kahn Academy](https://www.khanacademy.org/math/calculus-home/series-calc/taylor-series-calc/v/maclauren-and-taylor-series-intuition).
+
 ### Parameters
 
 Given n regions and u experimental inputs:
@@ -39,13 +41,13 @@ Given n regions and u experimental inputs:
 
 #### Matrix A
 
-Matrix A represents the causal influence of one neural population on another, i.e. how the rate of change in neural activity depends on the neural activity itself:
+Matrix A represents the causal influence of one neural population on another, i.e. rate of change in neural activity, dependent on the neural activity itself:
 $$
 A = \frac{\partial\dot{z}}{\partial z}
 $$
-It is implemented as a 2D matrix, where $$A(x,y)$$ is the strength of the connection from region $$y$$ to region $$x$$. Entries on the diagonal of the A-matrix are inhibitory self-connections and the off-diagonal entries are between-region connections.
+(Evaluated in the absence of input, i.e. $$u=0$$). This is implemented in Matlab as a matrix, where $$A(x,y)$$ is the strength of the connection from region $$y$$ to region $$x$$. Entries on the diagonal of the A-matrix are self-connections and the off-diagonal entries are between-region connections.
 
-The units for A,B and C are Hz (rates of change). To force the self-connections to always be negative, the values of the self-connections on A and B are scaling parameters, which scale the prior of -0.5Hz. The values in the A and B matrices undergo the following transformation to give the strength of the self-connection $$S_{i}$$ for region $$i$$:
+The unit for elements of matrix $$A$$, as well as $$B$$ and $$C$$ introduced below, is Hz (as they are rates of change). To force the self-connections to always be negative, the values of the self-connections on A and B are scaling parameters, which scale the prior of -0.5Hz. The values in the A and B matrices undergo the following transformation to give the strength of the self-connection $$S_{i}$$ for region $$i$$:
 $$
 S_{i}=-0.5*exp(A_{ii} + B_{ii})
 $$
@@ -53,7 +55,7 @@ $$
 #### Matrix B
 Matrix $$B^j$$ is the change in the strength of particular connections caused by the $$j^{th}$$ experimental input. i.e. 
 $$
-B^j = \frac{\partial A}{\partial u^j}
+B^j = \frac{\partial}{\partial u^j}A
 $$
 In words, matrix $$B^j$$ is the change in the effective connectivity $$A$$ per unit change of the $$j^{th}$$ experimental input. It is implemented as a 3D matrix in Matlab, where element $$B(x,y,j)$$ is the modulatory input of region $$j$$ on the connection from region $$y$$ to region $$x$$.
 
