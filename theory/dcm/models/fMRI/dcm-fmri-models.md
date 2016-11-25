@@ -43,7 +43,7 @@ Matrix A represents the causal influence of one neural population on another, i.
 $$
 A = \frac{\partial\dot{z}}{\partial z}
 $$
-Entries on the diagonal of the A-matrix are self connections and the off-diagonal entries are between-region connections.
+It is implemented as a 2D matrix, where $$A(x,y)$$ is the strength of the connection from region $$y$$ to region $$x$$. Entries on the diagonal of the A-matrix are inhibitory self-connections and the off-diagonal entries are between-region connections.
 
 The units for A,B and C are Hz (rates of change). To force the self-connections to always be negative, the values of the self-connections on A and B are scaling parameters, which scale the prior of -0.5Hz. The values in the A and B matrices undergo the following transformation to give the strength of the self-connection $$S_{i}$$ for region $$i$$:
 $$
@@ -53,10 +53,15 @@ $$
 #### Matrix B
 Matrix $$B^j$$ is the change in the strength of particular connections caused by the $$j^{th}$$ experimental input. i.e. 
 $$
-B^j = \frac{\partial A}{\partial u_j}
+B^j = \frac{\partial A}{\partial u^j}
 $$
-In words, matrix $$B^j$$ is the change in the effective connectivity $$A$$ caused by the $$j^{th}$$ experimental input.
+In words, matrix $$B^j$$ is the change in the effective connectivity $$A$$ per unit change of the $$j^{th}$$ experimental input. It is implemented as a 3D matrix in Matlab, where element $$B(x,y,j)$$ is the modulatory input of region $$j$$ on the connection from region $$y$$ to region $$x$$.
 
-This often represents the context of the experimental manipulation. For instance, at certain time points, the participant may be instructed to pay attention. The entries of the B-matrix would then be used to represent the influence of attention on the coupling between specific regions or the self-connections within regions.
+This often represents the context of the experimental manipulation. For instance, at certain time points, the participant may be instructed to pay attention. The entries of the B-matrix would then represent the influence of attention on the coupling between specific regions or the self-connections within regions.
 
-
+#### Matrix C
+Each experimental input $$u^j$$ can enter the model in two places. They can modulate the strength of specific connections, as described above. Additionally, they can enter specific regions to drive the dynamics in the system. The driving inputs are represented in matrix C:
+$$
+C = \frac{\partial F}{\partial U}
+$$
+Where element C(i,j) represents the strength of input j on region i, in units of Hz.
