@@ -30,12 +30,12 @@ This state equation is a function of three sets of parameters: matrix $$A$$ \(th
 ### Mathematical background
 As mentioned, the neural state equation above is a Taylor approximation of the function $$f$$. We include the first three terms of the approximation:
 $$
-\begin{align*}
+\begin{aligned}
 f(z,u)&=\frac{dz}{dt} \\[0.5ex]
 &\approx f(z_0,u)+\frac{\partial f}{\partial z}z + \frac{\partial f}{\partial u}u + \frac{\partial^2 f}{\partial z \partial u}uz \\[0.5ex]
 &= f(z_0,u) + Az + Cu + Buz \\[0.5ex]
 &= (A + \sum{u_jB^j})z + Cu
-\end{align*}$$
+\end{aligned}$$
 (Where $$A$$ is evaluated at $$u=0$$, $$C$$ is evaluated at $$z=0$$, and we assume neural activity at rest $$z_0$$ is zero.)
 
 Learn more about the Taylor approximation via a lecture at [Kahn Academy](https://www.khanacademy.org/math/calculus-home/series-calc/taylor-series-calc/v/maclauren-and-taylor-series-intuition).
