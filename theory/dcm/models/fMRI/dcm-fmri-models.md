@@ -66,4 +66,4 @@ C = \frac{\partial F}{\partial U}
 $$
 Where element C(i,j) represents the strength of input j on region i, in units of Hz. An example of a driving input would be in a DCM of a visual task, where visual input would be modelled as driving early visual cortex. 
 
-[Back to top](#DCM-models-for-fMRI)
+[Back to top](#dcm-models-for-fmri)
