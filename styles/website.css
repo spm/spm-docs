@@ -3,3 +3,8 @@ figure {
   margin-left: auto;
   margin-right: auto;
 }
+figure img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
