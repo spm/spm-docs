@@ -28,17 +28,24 @@ $$
 This state equation is a function of three sets of parameters: matrix $$A$$ \(the baseline or average connectivity\), matrix $$B^j$$ \(the modulatory influence of experimental input $$j$$ on each connection\) and matrix $$C$$ \(the driving input of each experimental input on each region\). Matrix $$u$$ contains the experimental timeseries (e.g. boxcar on-off regressors) which are hypothesised to drive or modulate the network. 
 
 ### Mathematical background
-As mentioned, the neural state equation above is a Taylor approximation of the function $$f$$. We include the first three terms of the approximation:
+As mentioned, the neural state equation above is the Taylor approximation of the function $$f$$. We include the first three terms of the approximation:
 $$
 \begin{aligned}
-f(z,u)&=\frac{dz}{dt} \\[0.5ex]
-&\approx f(z_0,u)+\frac{\partial f}{\partial z}z + \frac{\partial f}{\partial u}u + \frac{\partial^2 f}{\partial z \partial u}uz \\[0.5ex]
-&= f(z_0,u) + Az + Cu + Buz \\[0.5ex]
-&= (A + \sum{u_jB^j})z + Cu
+\dot{z}&=f(z,u) \\
+&\approx f(z_0,u)+\frac{\partial f}{\partial z}z + \frac{\partial f}{\partial u}u + \frac{\partial^2 f}{\partial z \partial u}uz
 \end{aligned}$$
-(Where $$A$$ is evaluated at $$u=0$$, $$C$$ is evaluated at $$z=0$$, and we assume neural activity at rest $$z_0$$ is zero.)
+The first expression, $$f(z_o,u)$$, is the response of the neural system at rest, which we typically assume is zero. By including the following terms, we ensure that the first and second derivatives of our approximation match the first and second derivatives of the real response function. 
 
-Learn more about the Taylor approximation via a lecture at [Kahn Academy](https://www.khanacademy.org/math/calculus-home/series-calc/taylor-series-calc/v/maclauren-and-taylor-series-intuition).
+We would like to divide this expression into parameters that we can estimate from the data, which have some biologically relevant meaning. To do this we introduce parameters we substitute the derivative terms for parameters $$A$$, $$B$$ and $$C$$:
+
+$$
+\begin{aligned}
+&f(z_0,u)+\frac{\partial f}{\partial z}z + \frac{\partial f}{\partial u}u + \frac{\partial^2 f}{\partial z \partial u}uz \\
+&= f(z_0,u) + Az + Cu + Buz \\
+&= (A + \sum{u_jB^j})z + Cu
+\end{aligned}
+$$
+(Where $$A$$ is evaluated at $$u=0$$ and $$C$$ is evaluated at $$z=0$$.) We detail the interpretation of $$A$$, $$B$$ and $$C$$ in the next section. If you wish to learn more about the Taylor approximation, see the lecture series at [Kahn Academy](https://www.khanacademy.org/math/calculus-home/series-calc/taylor-series-calc/v/maclauren-and-taylor-series-intuition).
 
 ### Parameters
 
