@@ -12,8 +12,6 @@ This page gives an overview of the different neural models available for analysi
 
 This is the most basic neuronal model for DCM for fMRI. Activity in each region is represented by a single number \(hidden state\).
 
-![One-state DCM model](../one_state_dcm_fmri.png)
-
 ### The model
 
 We summarise the level of neural activity in each brain region by a single number $$z_i$$ and collate these into a vector $$z$$. This *state vector* represents hidden neural activity - hidden in the sense that we cannot directly measure it. The change in z over time $$\dot{z}$$ is then function:
@@ -28,6 +26,8 @@ $$
  \dot{z} = (A + \sum{u_jB^j})z + Cu
 $$
 This state equation is a function of three sets of parameters: matrix $$A$$ \(the baseline or average connectivity\), matrix $$B^j$$ \(the modulatory influence of experimental input $$j$$ on each connection\) and matrix $$C$$ \(the driving input of each experimental input on each region\). Matrix $$u$$ contains the experimental timeseries (e.g. boxcar on-off regressors) which are hypothesised to drive or modulate the network. 
+
+![One-state DCM model](../one_state_dcm_fmri.png)
 
 ### Mathematical background
 As mentioned, the neural state equation above is the Taylor approximation of the function $$f$$. We include the first three terms of the approximation:
