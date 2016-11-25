@@ -17,15 +17,18 @@ This is the most basic neuronal model for DCM for fMRI. Activity in each region 
 We summarise the level of neural activity in each brain region by a single number $$z_i$$ and collate these into a vector $$z$$. This *state vector* represents hidden neural activity - hidden in the sense that we cannot directly measure it. The change in z over time $$\dot{z}$$ is then function:
 $$
 \dot{z}=F(z,u,\theta^n)
-$$In words, the rate of change in each brain region's activity is a function of its current activity $$z$$, experimental inputs $$u$$ and connection parameters $$\theta^n$$. The definition of $$F$$ depends on the DCM model being used.
+$$In words, the rate of change in each brain region's activity is a function of its current activity $$z$$, experimental inputs $$u$$ and connection parameters $$\theta^n$$. 
 
-In the one-state DCM model, $$F$$ is written as follows:
+The definition of $$F$$ depends on the DCM model being used. At its extreme, $$F$$ could be a tremendously complicated function, taking into account the all the possible biological causes of changes in neural activity. However, to simplify things, we use an approximation of $$F$$. The approximation used here is a [Taylor series](https://en.wikipedia.org/wiki/Taylor_series), which gets closer to representing the true function as more terms are included.
 
-
+In the one-state DCM model, $$F$$ is as follows:
 $$
  \dot{z} = (A + \sum{u_jB^j})z + Cu
 $$
 This state equation is a function of three sets of parameters: matrix $$A$$ \(the baseline or average connectivity\), matrix $$B^j$$ \(the modulatory influence of experimental input $$j$$ on each connection\) and matrix $$C$$ \(the driving input of each experimental input on each region\). Matrix $$u$$ contains the experimental timeseries (e.g. boxcar on-off regressors) which are hypothesised to drive or modulate the network. 
+
+### Where this comes from
+
 
 Learn more about Taylor approximations at [Kahn Academy](https://www.khanacademy.org/math/calculus-home/series-calc/taylor-series-calc/v/maclauren-and-taylor-series-intuition).
 
