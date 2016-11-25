@@ -60,8 +60,10 @@ In words, matrix $$B^j$$ is the change in the effective connectivity $$A$$ per u
 This often represents the context of the experimental manipulation. For instance, at certain time points, the participant may be instructed to pay attention. The entries of the B-matrix would then represent the influence of attention on the coupling between specific regions or the self-connections within regions.
 
 #### Matrix C
-Each experimental input $$u^j$$ can enter the model in two places. They can modulate the strength of specific connections, as described above. Additionally, they can enter specific regions to drive the dynamics in the system. The driving inputs are represented in matrix C:
+Experimental inputs $$u$$ can enter the model in two places. They can modulate the strength of specific connections, as described above. Additionally, they can enter specific regions to drive the dynamics in the system. The driving inputs are represented in matrix C:
 $$
 C = \frac{\partial F}{\partial U}
 $$
-Where element C(i,j) represents the strength of input j on region i, in units of Hz.
+Where element C(i,j) represents the strength of input j on region i, in units of Hz. An example of a driving input would be in a DCM of a visual task, where visual input would be modelled as driving early visual cortex. 
+
+[Back to top](#DCM-models-for-fMRI)
