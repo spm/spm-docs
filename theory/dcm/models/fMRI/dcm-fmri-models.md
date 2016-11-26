@@ -10,14 +10,14 @@ This page gives an overview of the different neural models available for analysi
 
 ## One-state DCM
 
-This is the most basic neuronal model for DCM for fMRI. Activity in each region is represented by a single number \(hidden state\).
+This is the basic neuronal model for DCM for fMRI and was the first DCM to be introduced. The model represents activity in each region (which may be interpreted as average post-synaptic firing) by a single number \(hidden state\).
 
 ### The model
 
-We summarise the level of neural activity in each brain region by a single number $$z_i$$ and collate these into a vector $$z$$. This *state vector* represents hidden neural activity - hidden in the sense that we cannot directly measure it. The change in z over time $$\dot{z}$$ is then function:
+The level of neural activity in each brain region is summarised by a single number $$z_i$$ and these are collated into a vector $$z$$. This *state vector* represents hidden neural activity - hidden in the sense that it cannot be directly measured. The change in z over time (i.e. its derivative with respect to time), for which we use the notation $$\dot{z}$$, can most broadly be written as follows:
 $$
 \dot{z}=f(z,u,\theta^n)
-$$In words, the rate of change in each brain region's activity is a function of its current activity $$z$$, experimental inputs $$u$$ and connection parameters $$\theta^n$$. 
+$$In words, the rate of change in each brain region's activity is a function $$f$$ of its current activity $$z$$, experimental inputs $$u$$ and connection parameters $$\theta^n$$. 
 
 The definition of $$f$$ depends on the DCM model being used. At its extreme, $$f$$ could be a tremendously detailed biophysical model, taking into account the all the possible causes of changes in neural activity. However, in the context of fMRI, we use a simple approximation of $$f$$. The approximation used here is a [Taylor series](https://en.wikipedia.org/wiki/Taylor_series), which gets closer to representing the true function as more terms are included.
 
