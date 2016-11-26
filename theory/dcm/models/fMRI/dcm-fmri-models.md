@@ -19,13 +19,13 @@ $$
 \dot{z}=f(z,u,\theta^n)
 $$In words, the rate of change in each brain region's activity is a function $$f$$ of its current activity $$z$$, experimental inputs $$u$$ and connection parameters $$\theta^n$$. 
 
-The definition of $$f$$ depends on the DCM model being used. At its extreme, $$f$$ could be a tremendously detailed biophysical model, taking into account the all the possible causes of changes in neural activity. However, in the context of fMRI, we use a simple approximation of $$f$$. The approximation used here is a [Taylor series](https://en.wikipedia.org/wiki/Taylor_series), which gets closer to representing the true function as more terms are included.
+The definition of $$f$$ depends on the DCM model being used. At its extreme, $$f$$ could be a tremendously detailed biophysical model, taking into account the all the possible causes of changes in neural activity. However, in the context of fMRI, we use a simple approximation of $$f$$. The approximation used here is a [Taylor series](https://en.wikipedia.org/wiki/Taylor_series), which gets closer to representing the true function as more terms are included. 
 
 In the one-state DCM model, $$f$$ is approximated as follows:
 $$
  \dot{z} = (A + \sum{u_jB^j})z + Cu
 $$
-This state equation is a function of three sets of parameters: matrix $$A$$ \(the baseline or average connectivity\), matrix $$B^j$$ \(the modulatory influence of experimental input $$j$$ on each connection\) and matrix $$C$$ \(the driving input of each experimental input on each region\). Matrix $$u$$ contains the experimental timeseries (e.g. boxcar on-off regressors) which are hypothesised to drive or modulate the network. 
+This is a function of three sets of parameters: matrix $$A$$ \(the baseline or average connectivity\), matrix $$B^j$$ \(the modulatory influence of experimental input $$j$$ on each connection\) and matrix $$C$$ \(the driving input of each experimental input on each region\). Matrix $$u$$ contains the experimental timeseries (e.g. boxcar on-off regressors) which are hypothesised to drive or modulate the network. 
 
 ![One-state DCM model](../one_state_dcm_fmri.png)
 
@@ -42,8 +42,8 @@ We would like to divide this expression into parameters that we can estimate fro
 
 $$
 \begin{aligned}
-&f(z_0,u)+\frac{\partial f}{\partial z}z + \frac{\partial f}{\partial u}u + \frac{\partial^2 f}{\partial z \partial u}uz \\
-&= f(z_0,u) + Az + Cu + Buz \\
+&f(z_0,u)+\frac{\partial f}{\partial z}z + \frac{\partial f}{\partial u}u + \frac{\partial^2 f}{\partial z \partial u}uz \\[5pt]
+&= f(z_0,u) + Az + Cu + Buz  \\[5pt]
 &= (A + \sum{u_jB^j})z + Cu
 \end{aligned}
 $$
