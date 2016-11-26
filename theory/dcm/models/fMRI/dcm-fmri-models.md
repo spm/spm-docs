@@ -42,8 +42,8 @@ We would like to divide this expression into parameters that we can estimate fro
 
 $$
 \begin{aligned}
-&f(z_0,u)+\frac{\partial f}{\partial z}z + \frac{\partial f}{\partial u}u + \frac{\partial^2 f}{\partial z \partial u}uz \\[5pt]
-&= f(z_0,u) + Az + Cu + Buz  \\[5pt]
+&f(z_0,u)+\frac{\partial f}{\partial z}z + \frac{\partial f}{\partial u}u + \frac{\partial^2 f}{\partial z \partial u}uz \\[2ex]
+&= f(z_0,u) + Az + Cu + Buz  \\[2ex]
 &= (A + \sum{u_jB^j})z + Cu
 \end{aligned}
 $$
