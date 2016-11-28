@@ -10,16 +10,16 @@ This page gives an overview of the different neural models available for analysi
 
 ## One-state DCM
 
-This is the basic neuronal model for DCM for fMRI and was the first DCM to be introduced. The model represents activity in each region (which may be interpreted as average post-synaptic firing) by a single number \(hidden state\).
+This is the basic neuronal model for DCM for fMRI and was the first DCM to be introduced. The model represents activity in each region (which may be interpreted as average post-synaptic firing) by a single number. This is referred to as a \(hidden state\) in that the neuronal activity cannot be measured directly and must be inferred.
 
 ### The model
 
-The level of neural activity in each brain region is summarised by a single number $$z_i$$ and these are collated into a vector $$z$$. This *state vector* represents hidden neural activity - hidden in the sense that it cannot be directly measured. The change in z over time (i.e. its derivative with respect to time), for which we use the notation $$\dot{z}$$, can most broadly be written as follows:
+The level of neural activity in each brain region is summarised by a vector $$z$$, where $$z_i$$ is the activity of region $$i$$. The change in z over time (i.e. its derivative with respect to time), for which we use the notation $$\dot{z}$$, is written as follows:
 $$
 \dot{z}=f(z,u,\theta^n)
 $$In words, the rate of change in each brain region's activity is a function $$f$$ of its current activity $$z$$, experimental inputs $$u$$ and connection parameters $$\theta^n$$. 
 
-The definition of $$f$$ depends on the DCM model being used. At its extreme, $$f$$ could be a tremendously detailed biophysical model, taking into account the all the possible causes of changes in neural activity. However, in the context of fMRI, we use a simple approximation of $$f$$. The approximation used here is a [Taylor series](https://en.wikipedia.org/wiki/Taylor_series), which gets closer to representing the true function as more terms are included. 
+The definition of $$f$$ depends on the DCM model being used. With enough data, $$f$$ could be a tremendously detailed biophysical model, taking into account many possible causes of changes in neural activity. However, in the context of fMRI, we use a simple approximation of $$f$$. The approximation used here is a [Taylor series](https://en.wikipedia.org/wiki/Taylor_series), which gets closer to representing the true function as more terms are included. 
 
 In the one-state DCM model, $$f$$ is approximated as follows:
 $$
@@ -36,9 +36,9 @@ $$
 \dot{z}&=f(z,u) \\
 &\approx f(z_0,u)+\frac{\partial f}{\partial z}z + \frac{\partial f}{\partial u}u + \frac{\partial^2 f}{\partial z \partial u}uz
 \end{aligned}$$
-The first expression, $$f(z_o,u)$$, is the response of the neural system at rest, which we typically assume is zero. By including the following terms, we ensure that the first and second derivatives of our approximation match the first and second derivatives of the real response function. 
+The first expression, $$f(z_o,u)$$, is the response of the neural system at rest, which we typically assume is zero. By including the three terms which follow, we ensure that the first and second derivatives of our approximation match the first and second derivatives of the real response function. 
 
-We would like to divide this expression into parameters that we can estimate from the data, which have some biologically relevant meaning. To do this we introduce parameters we substitute the derivative terms for parameters $$A$$, $$B$$ and $$C$$:
+We would like to parameterise this approximation - so that we have parameters estimated from the data which have some biologically relevant meaning. To do this we substitute the derivative terms for parameters $$A$$, $$B$$ and $$C$$:
 
 $$
 \begin{aligned}
@@ -61,9 +61,9 @@ Given n regions and u experimental inputs:
 
 #### Matrix A
 
-Matrix A represents the causal influence of one neural population on another. This is implemented in Matlab as a matrix, where $$A(x,y)$$ is the strength of the connection from region $$y$$ to region $$x$$. Entries on the diagonal of the A-matrix are self-connections and the off-diagonal entries are between-region connections.
+Matrix $$A$$ represents the causal influence of one neural population on another (the effective connectivity). This is implemented as a Matlab matrix, where $$A(x,y)$$ is the strength of the connection from region $$y$$ to region $$x$$. Entries on the diagonal of the matrix are self-connections and the off-diagonal entries are between-region connections.
 
-The unit for elements of matrix $$A$$, as well as $$B$$ and $$C$$ introduced below, is Hz (as they are rates of change). To force the self-connections to always be negative, the values of the self-connections on A and B are scaling parameters, which scale the prior of -0.5Hz. The values in the A and B matrices undergo the following transformation to give the strength of the self-connection $$S_{i}$$ for region $$i$$:
+The units for matrix $$A$$ (as well as $$B$$ and $$C$$) are Hz, because they are rates of change. To force the self-connections to always be negative, the values of the self-connections on $$A$$ and $$B$$ are scaling parameters, which scale the prior of -0.5Hz. The values in the A and B matrices undergo the following transformation to give the strength of the self-connection $$S_{i}$$ for region $$i$$:
 $$
 S_{i}=-0.5*exp(A_{ii} + B_{ii})
 $$
