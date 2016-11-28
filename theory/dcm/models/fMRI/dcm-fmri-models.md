@@ -5,6 +5,7 @@ This page gives an overview of the different neural models available for analysi
 | Model | Description |
 | --- | --- |
 | [One-state DCM](#one-state-dcm) | The basic DCM model for fMRI |
+| [Non-linear DCM](#non-linear-dcm) | Extended model enabling regions to gate connectivity between other regions |
 | [Two-state DCM](#two-state-dcm) | Extended model with excitatory and inhibitory neural populations per region |
 
 ---
