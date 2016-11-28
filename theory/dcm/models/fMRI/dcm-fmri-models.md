@@ -69,11 +69,15 @@ S_{i}=-0.5*exp(A_{ii} + B_{ii})
 $$
 
 #### Matrix B
-Parameters in matrix $$B^j$$ represent the change in the effective connectivity of particular connections  caused by the $$j^{th}$$ experimental input. It is implemented as a 3D matrix in Matlab, where element $$B(x,y,j)$$ is the modulatory input of region $$j$$ on the connection from region $$y$$ to region $$x$$.
+Parameters in matrix $$B^j$$ represent the change in the effective connectivity of particular connections  caused by the $$j^{th}$$ experimental input. It is implemented as a 3D matrix in Matlab, where element $$B(x,y,j)$$ is the influence of condition $$j$$ on the connection from region $$y$$ to region $$x$$.
 
-Matrix $$B$$, which is sometimes called the 'bilinear' term of the DCM equation, may be used to represent the context of an experimental manipulation. For instance, an experiment may involve participants seeing visual stimuli, with the instruction to pay attention to some visual feature on a subset of trials. The $$B$$-matrix would then be used to represent the change in connection strengths during attention periods, relative to trials without attention.
+Matrix $$B$$, which is sometimes called the 'bilinear' term of the DCM equation, may be used to represent the context of an experimental manipulation. For instance, an experiment may involve participants seeing visual stimuli, with the instruction to pay attention to some feature of the stimuli on a subset of trials. The $$B$$-matrix could then be used to represent the change in connection strengths on attention trials, relative to connectivity during trials without attention.
 
 #### Matrix C
-Experimental inputs $$u$$ can enter the model in two places. They can modulate the strength of specific connections, as described above. Additionally, they can enter specific regions to drive the dynamics in the system. The driving inputs are represented in matrix $$C$$, where element $$C(i,j)$$ represents the strength of input $$j$$ on region $$i$$, in units of Hz. An example of a driving input would be in a DCM of a visual task, where visual input would be modelled as driving early visual cortex. 
+Experimental inputs $$u$$ enter the model in two places. They modulate the strength of connections, as described above. Additionally, they enter specific regions to drive the dynamics in the network.
+
+The driving inputs are represented in matrix $$C$$, where element $$C(i,j)$$ represents the strength of input $$j$$ on region $$i$$, in units of Hz. Note that in the absence of driving input, there would be no activity in the model, so this model is not suited to representing resting state dynamics.
+
+
 
 [Back to top](#dcm-models-for-fmri)
