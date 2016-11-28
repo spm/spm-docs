@@ -82,6 +82,33 @@ The driving inputs are represented in matrix $$C$$, where element $$C(i,j)$$ rep
 [Back to top](#dcm-models-for-fmri)
 
 ---
+## Non-linear DCM
+
+Non-linear DCM is an extension to the basic DCM described above, but includes an extra term which enables individual regions to modulate the connectivity between other regions. This was developed to enable "neuronal gain control" to be modelled, which is the generic mechanism by which the response of a neuron $$N_1$$ to inputs from a second neuron $$N_2$$ depends on a third neuron, $$N_3$$. In other words, $$N_3$$ has a gating effect on the communication between two other neurons. This is nonlinear in the sense that $$N_1$$ depends on the interaction (multiplication) of inputs from $$N_2$$ and $$N_3$$. This may be of particular interest in the study of attention, where a high level brain region may influence the sensitivity of lower level brain regions to inputs from early sensory cortex.
+
+![Non-linear DCM](../nonlinear_dcm_fmri.png)
+
+### The model
+
+The neural model is the same as that described above, but it includes one more term $$D$$ to represent the influence of each region on each connection:
+
+$$
+ \dot{z} = (A + \sum{u_jB^j} + \sum{z_jD^j})z + Cu
+$$
+### The parameters
+
+
+| Parameter | Dimension | Directory |
+| --- | --- | --- |
+| D | n x n x n | Influence of each region on each connection  |
+
+The parameter $$D(i,j,k)$$ represents the influence of region $$k$$ on the connection between $$j$$ to region $$i$$.
+
+
+[Back to top](#dcm-models-for-fmri)
+
+---
+
 ## Two-state DCM
 Two-state DCM is an extension to the standard neuronal model in DCM for fMRI. Whereas the standard neuronal model in DCM represents the activity in each region as a single quantity, two-state DCM has an inhibitory and excitatory population of neurons in each region. This gives an explicit model of intrinsic connectivity within each region, and was adopted to be more plausible and less constrained than the original model. Two-state DCM imposes positivity constraints - all connections between regions are excitatory, which conforms to the organisation of real cortical hierarchies, where long-range connections are glutamatergic. With these richer dynamics, two-state DCM may provide a better fit to fMRI data. Furthermore, the inhibitory and excitatory populations add stability to the model, allowing the priors on the connections to be relaxed, which also may improve the model's ability to explain the data.
 
