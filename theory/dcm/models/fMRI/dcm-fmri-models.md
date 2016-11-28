@@ -164,19 +164,19 @@ All this means that in order to inspect the results of model estimation, one sho
 
 Here are some more examples of how to interpret the parameters:
 
-#### A-matrix between-region connections
+**A-matrix between-region connections**
 
 A between-region connection exp(DCM.Ep.A(i,j)) larger than 1 would mean the excitatory influence of region j on region i is larger than the prior (1/8Hz). A value smaller than 1 would mean the excitatory influence is smaller than the prior.
 
-#### A-matrix self connections
+**A-matrix self connections**
 
 A self-connection exp(DCM.Ep.A(i,i)) larger than 1 would mean stronger (more negative) self-inhibition in region i than the prior (-1/8Hz). A self-connection smaller than 1 would mean weaker (less negative) self-inhibition in region i than the prior.
 
-#### Modulatory (task) effects on the self-connections
+**Modulatory (task) effects on the self-connections**
 
 An estimated parameter exp(DCM.Ep.B(i,i)) larger than 1 would mean an increase in self-inhibition in region i caused by the task. Whereas, a value smaller than 1 on this connection would mean a decrease in self-inhibition caused by the task. 
 
-#### Modulatory (task) effects on the between-region connections
+**Modulatory (task) effects on the between-region connections**
 
 An estimated parameter exp(DCM.Ep.B(i,j)) larger than 1 on a between-regions connection would mean an increase in the connection strength from region j to region i caused by the task. A value smaller than 1 would mean a decrease in this connection due to the task.
 
