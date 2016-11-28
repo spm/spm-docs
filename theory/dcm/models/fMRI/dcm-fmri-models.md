@@ -63,7 +63,7 @@ Given n regions and u experimental inputs:
 
 Matrix $$A$$ represents the causal influence of one neural population on another (the effective connectivity). This is implemented as a Matlab matrix, where $$A(x,y)$$ is the strength of the connection from region $$y$$ to region $$x$$. Entries on the diagonal of the matrix are self-connections and the off-diagonal entries are between-region connections.
 
-The units for matrix $$A$$ (as well as $$B$$ and $$C$$) are Hz, because they are rates of change. To force the self-connections to always be negative, the values of the self-connections on $$A$$ and $$B$$ are scaling parameters, which scale the prior of -0.5Hz. The values in the A and B matrices undergo the following transformation to give the strength of the self-connection $$S_{i}$$ for region $$i$$:
+The units for matrix $$A$$ (as well as $$B$$ and $$C$$) are Hz, because they are rates of change. Note that the self-connections on the $$A$$ and $$B$$ go through an extra stage of processing. In order to force them  always to be negative, the self-connections are log scaling parameters, which scale the prior value of -0.5Hz. The strength of the self-connection $$S_{i}$$ for region $$i$$ is given by:
 $$
 S_{i}=-0.5*exp(A_{ii} + B_{ii})
 $$
