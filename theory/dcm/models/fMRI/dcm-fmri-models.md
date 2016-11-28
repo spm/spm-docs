@@ -186,3 +186,10 @@ An estimated parameter exp(DCM.Ep.B(i,j)) larger than 1 on a between-regions con
 The implementation of the model in SPM12, which is described here, has certain differences from its description in the original scientific paper by Marreiros and colleagues. In the paper, all possible intrinsic connections between the excitatory and inhibitory states are modulated and estimated explicitly. Therefore the matrices A and B have size [2xm,2xn] as opposed to [m,n]. This implementation wasn't adopted in SPM, in order to allow a more straightforward model comparison (BMS) with the other single-state and non-linear DCM options. As described above, the software uses a simplified scheme where an estimated parameter larger than 1 on a self-connection on the B-matrix contributes to the IE intrinsic inhibitory to excitatory connection, and therefore an increase in self-inhibition in that region caused by the task.
 
 [Back to top](#dcm-models-for-fmri)
+
+---
+## Summary
+There have been several refinements and extensions to the DCM model since its original formulation, which are detailed in this section. A key constraint on these models is that neural dynamics are caused by the experimenter via the task. In the next section, we introduce DCM models for fMRI which are particularly suited to modelling endogenous neural activity, such as in the context of resting state fMRI data. 
+
+
+[Back to top](#dcm-models-for-fmri)
