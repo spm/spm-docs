@@ -39,7 +39,7 @@ $$
 \end{aligned}$$
 The first expression, $$f(z_o,u)$$, is the response of the neural system at rest, which we typically assume is zero. By including the three terms which follow, we ensure that the first and second derivatives of our approximation match the first and second derivatives of the real response function. 
 
-We would like to parameterise this approximation - so that we have parameters estimated from the data which have some biologically relevant meaning. To do this we substitute the derivative terms for parameters $$A$$, $$B$$ and $$C$$:
+We would like to parameterize this approximation - so that we have parameters estimated from the data which have some biologically relevant meaning. To do this we substitute the derivative terms for parameters $$A$$, $$B$$ and $$C$$:
 
 $$
 \begin{aligned}
@@ -93,8 +93,23 @@ Non-linear DCM is an extension to the basic DCM described above, but includes an
 The neural model is the same as that described above, but it includes one more term $$D$$ to represent the influence of each region on each connection:
 
 $$
- \dot{z} = (A + \sum{u_jB^j} + \sum{z_jD^j})z + Cu
+ \dot{z} = (A + \sum{u_jB^j} + \sum{z_kD^k})z + Cu
 $$
+Where $$z_k$$ is the activity (state) of region $$k$$ and $$D^k$$ is a matrix representing the non-linear influences of region $$k$$.
+
+### Mathematical background
+
+The basic DCM neural model described above consists of the first 3 terms of the Taylor series approximation of the system $$\dot{z}=f(z,u,\theta)$$. The nonlinear model simply involves including one more term from the Taylor series:
+
+$$
+\begin{aligned}
+&f(z_0,u)+\frac{\partial f}{\partial z}z + \frac{\partial f}{\partial u}u + \frac{\partial^2 f}{\partial z \partial u}uz + \frac{1}{2}\frac{\partial ^2 f}{\partial z^2}\frac{z^2}{2} \\[2ex]
+&= f(z_0,u) + Az + Cu + Buz + Dz^2 \\[2ex]
+&= (A + \sum{u_jB^j} + \sum{z_jD^j})z + Cu
+\end{aligned}
+$$
+Here we have added new a nonlinear term involving the matrix $$D$$ which depends only on the current activity in the network.
+
 ### The parameters
 
 
