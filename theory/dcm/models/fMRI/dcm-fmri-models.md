@@ -94,13 +94,13 @@ Non-linear DCM is an extension to the basic DCM described above, but includes an
 The neural model is the same as that described above, but it includes one more term $$D$$ to represent the influence of each region on each connection:
 
 $$
- \dot{z} = (A + \sum{u_jB^j} + \sum{z_kD^k})z + Cu
+ \dot{z} = (A + \sum{u_jB^j} + \color{#38528C}{\sum{z_kD^k}})z + Cu
 $$
 Where $$z_k$$ is the activity (state) of region $$k$$ and $$D^k$$ is a matrix representing the non-linear influences of region $$k$$.
 
 ### Mathematical background
 
-The basic DCM neural model described above consists of the first 3 terms of the Taylor series approximation of the system $$\dot{z}=f(z,u,\theta)$$. The nonlinear model simply involves including one more term from the Taylor series:
+The basic DCM neural model described above consists of the first 3 terms of the Taylor series approximation of the system $$\dot{z}=f(z,u,\theta)$$. Extending this to the nonlinear model involves including one more term from the Taylor series:
 
 $$
 \begin{aligned}
@@ -109,7 +109,7 @@ $$
 &= (A + \sum{u_jB^j} + \sum{z_jD^j})z + Cu
 \end{aligned}
 $$
-Here we have added new a nonlinear term involving the matrix $$D$$ which depends only on the current activity in the network.
+Here a nonlinear term has been added involving the matrix $$D$$, which depends only on the current activity in the network.
 
 ### The parameters
 
@@ -118,7 +118,7 @@ Here we have added new a nonlinear term involving the matrix $$D$$ which depends
 | --- | --- | --- |
 | D | n x n x n | Influence of each region on each connection  |
 
-The parameter $$D(i,j,k)$$ represents the influence of region $$k$$ on the connection between $$j$$ to region $$i$$.
+The parameter $$D(i,j,k)$$ represents the influence of region $$k$$ on the connection from $$j$$ to region $$i$$.
 
 
 [Back to top](#dcm-models-for-fmri)
