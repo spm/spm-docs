@@ -69,9 +69,9 @@ S_{i}=-0.5*exp(A_{ii} + B_{ii})
 $$
 
 #### Matrix B
-Matrix $$B^j$$ is the change in the effective connectivity of particular connections (i.e. the change of matrix $$A$$) caused by the $$j^{th}$$ experimental input. It is implemented as a 3D matrix in Matlab, where element $$B(x,y,j)$$ is the modulatory input of region $$j$$ on the connection from region $$y$$ to region $$x$$.
+Parameters in matrix $$B^j$$ represent the change in the effective connectivity of particular connections  caused by the $$j^{th}$$ experimental input. It is implemented as a 3D matrix in Matlab, where element $$B(x,y,j)$$ is the modulatory input of region $$j$$ on the connection from region $$y$$ to region $$x$$.
 
-This often represents the context of the experimental manipulation. For instance, at certain time points, the participant may be instructed to pay attention. The entries of the B-matrix would then represent the influence of attention on the coupling between specific regions or the self-connections within regions.
+Matrix $$B$$, which is sometimes called the 'bilinear' term of the DCM equation, may be used to represent the context of an experimental manipulation. For instance, an experiment may involve participants seeing visual stimuli, with the instruction to pay attention to some visual feature on a subset of trials. The $$B$$-matrix would then be used to represent the change in connection strengths during attention periods, relative to trials without attention.
 
 #### Matrix C
 Experimental inputs $$u$$ can enter the model in two places. They can modulate the strength of specific connections, as described above. Additionally, they can enter specific regions to drive the dynamics in the system. The driving inputs are represented in matrix $$C$$, where element $$C(i,j)$$ represents the strength of input $$j$$ on region $$i$$, in units of Hz. An example of a driving input would be in a DCM of a visual task, where visual input would be modelled as driving early visual cortex. 
