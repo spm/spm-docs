@@ -6,7 +6,7 @@
 * [Theory](theory/theory.md)
     * [DCM](theory/dcm/dcm.md)
         * [Models](theory/dcm/models/dcm-models.md)
-            * [fMRI](theory/dcm/models/fMRI/dcm-fmri-models.md)
+            * [fMRI (task)](theory/dcm/models/fMRI/dcm-task-fmri-models.md)
         * [Inference](theory/dcm/inference/dcm-inference.md)
 * [Appendix](appendix.md)
     * [Guide for authors](guide_for_authors.md)
