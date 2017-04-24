@@ -27,7 +27,7 @@ The definition of $$f$$ depends on the DCM model being used. With enough data, $
 In the one-state DCM model, $$f$$ is approximated as follows:
 
 $$
-\dot{z} = \(A + \sum{u\_jB^j}\)z + Cu
+\dot{z} = (A + \sum{u\_jB^j})z + Cu
 $$
 
 This is a function of three sets of parameters: matrix $$A$$ \(the baseline or average connectivity\), matrix $$B^j$$ \(the modulatory influence of experimental input $$j$$ on each connection\) and matrix $$C$$ \(the driving input of each experimental input on each region\). Matrix $$u$$ contains the experimental timeseries (e.g. boxcar on-off regressors) which are hypothesised to drive or modulate the network. 
