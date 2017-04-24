@@ -1,5 +1,5 @@
 {
-  "plugins": ["katex","anchors","image-captions","gitbook-plugin-mathjax-inline"],
+  "plugins": ["katex","anchors","image-captions"],
   
   "pluginsConfig": {
       "image-captions": {
