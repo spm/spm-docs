@@ -39,12 +39,12 @@ As mentioned, the neural state equation above is the Taylor approximation of the
 
 $$
 \begin{aligned}  
-\dot{z}&=f\(z,u\) \  
-&\approx f\(z\_0,u\)+\frac{\partial f}{\partial z}z + \frac{\partial f}{\partial u}u + \frac{\partial^2 f}{\partial z \partial u}uz  
+\dot{z}&=f(z,u) \  
+&\approx f(z_0,u)+\frac{\partial f}{\partial z}z + \frac{\partial f}{\partial u}u + \frac{\partial^2 f}{\partial z \partial u}uz  
 \end{aligned}
 $$
 
-The first expression, $$f\(z\_o,u\)$$, is the response of the neural system at rest, which we typically assume is zero. By including the three terms which follow, we ensure that the first and second derivatives of our approximation match the first and second derivatives of the real response function.
+The first expression, $$f(z_0,u)$$, is the response of the neural system at rest, which we typically assume is zero. By including the three terms which follow, we ensure that the first and second derivatives of our approximation match the first and second derivatives of the real response function.
 
 We would like to parameterize this approximation - so that we have parameters estimated from the data which have some biologically relevant meaning. To do this we substitute the derivative terms for parameters $$A$$, $$B$$ and $$C$$:
 
