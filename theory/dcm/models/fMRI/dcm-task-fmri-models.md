@@ -17,25 +17,33 @@ This is the basic neuronal model for DCM for fMRI and was the first DCM to be in
 ### The model
 
 The level of neural activity in each brain region is summarised by a vector $$z$$, where $$z_i$$ is the activity of region $$i$$. The change in z over time \(i.e. its derivative with respect to time\), for which we use the notation $$\dot{z}$$, is written as follows:
+
+
 $$
 \dot{z}=f(z,u,\theta^n)
 $$
-In words, the rate of change in each brain region's activity is a function $$f$$ of its current activity$$z$$, experimental inputs $$u$$ and connection parameters $$\theta^n$$. 
 
-The definition of $$f$$ depends on the DCM model being used. With enough data, $$f$$ could be a tremendously detailed biophysical model, taking into account many possible causes of changes in neural activity. However, in the context of fMRI, we use a simple approximation of $$f$$. The approximation used here is a \[Taylor series\]\(https://en.wikipedia.org/wiki/Taylor\_series\), which gets closer to representing the true function as more terms are included. 
+
+In words, the rate of change in each brain region's activity is a function $$f$$ of its current activity$$z$$, experimental inputs $$u$$ and connection parameters $$\theta^n$$.
+
+The definition of $$f$$ depends on the DCM model being used. With enough data, $$f$$ could be a tremendously detailed biophysical model, taking into account many possible causes of changes in neural activity. However, in the context of fMRI, we use a simple approximation of $$f$$. The approximation used here is a \[Taylor series\]\([https://en.wikipedia.org/wiki/Taylor\_series\](https://en.wikipedia.org/wiki/Taylor_series\)\), which gets closer to representing the true function as more terms are included.
 
 In the one-state DCM model, $$f$$ is approximated as follows:
 
+
 $$
-\dot{z} = (A + \sum{u\_jB^j})z + Cu
+\dot{z} = (A + \sum{u_jB^j})z + Cu
 $$
 
-This is a function of three sets of parameters: matrix $$A$$ \(the baseline or average connectivity\), matrix $$B^j$$ \(the modulatory influence of experimental input $$j$$ on each connection\) and matrix $$C$$ \(the driving input of each experimental input on each region\). Matrix $$u$$ contains the experimental timeseries (e.g. boxcar on-off regressors) which are hypothesised to drive or modulate the network. 
+
+This is a function of three sets of parameters: matrix $$A$$ \(the baseline or average connectivity\), matrix $$B^j$$ \(the modulatory influence of experimental input $$j$$ on each connection\) and matrix $$C$$ \(the driving input of each experimental input on each region\). Matrix $$u$$ contains the experimental timeseries \(e.g. boxcar on-off regressors\) which are hypothesised to drive or modulate the network.
 
 ![One-state DCM model](../one_state_dcm_fmri.png)
 
 ### Mathematical background
+
 As mentioned, the neural state equation above is the Taylor approximation of the function $$f$$. We include the first three terms of the approximation:
+
 
 $$
 \begin{aligned}  
@@ -44,9 +52,11 @@ $$
 \end{aligned}
 $$
 
+
 The first expression, $$f(z_0,u)$$, is the response of the neural system at rest, which we typically assume is zero. By including the three terms which follow, we ensure that the first and second derivatives of our approximation match the first and second derivatives of the real response function.
 
 We would like to parameterize this approximation - so that we have parameters estimated from the data which have some biologically relevant meaning. To do this we substitute the derivative terms for parameters $$A$$, $$B$$ and $$C$$:
+
 
 $$
 \begin{aligned}
@@ -56,7 +66,8 @@ $$
 \end{aligned}
 $$
 
-(Where $$A$$ is evaluated at $$u=0$$ and $$C$$ is evaluated at $$z=0$$.) We detail the interpretation of $$A$$, $$B$$ and $$C$$ in the next section. If you wish to learn more about the Taylor approximation, see the lecture series at [Kahn Academy](https://www.khanacademy.org/math/calculus-home/series-calc/taylor-series-calc/v/maclauren-and-taylor-series-intuition).
+
+\(Where $$A$$ is evaluated at $$u=0$$ and $$C$$ is evaluated at $$z=0$$.\) We detail the interpretation of $$A$$, $$B$$ and $$C$$ in the next section. If you wish to learn more about the Taylor approximation, see the lecture series at [Kahn Academy](https://www.khanacademy.org/math/calculus-home/series-calc/taylor-series-calc/v/maclauren-and-taylor-series-intuition).
 
 ### Parameters
 
@@ -74,9 +85,11 @@ Matrix $$A$$ represents the causal influence of one neural population on another
 
 The units for matrix $$A$$ \(as well as $$B$$ and $$C$$\) are Hz, because they are rates of change. Note that the self-connections on the $$A$$ and $$B$$ go through an extra stage of processing. In order to force them  always to be negative, the self-connections are log scaling parameters, which scale the prior value of -0.5Hz. The strength of the self-connection $$S_{i}$$ for region $$i$$ is given by:
 
+
 $$
 S_{i}=-0.5*exp(A_{ii} + B_{ii})
 $$
+
 
 #### Matrix B
 
@@ -104,15 +117,18 @@ Non-linear DCM is an extension to the basic DCM described above, but includes an
 
 The neural model is the same as that described above, but it includes one more term $$D$$ to represent the influence of each region on each connection:
 
+
 $$
  \dot{z} = (A + \sum{u_jB^j} + \color{#38528C}{\sum{z_kD^k}})z + Cu
 $$
+
 
 Where $$z_k$$ is the activity \(state\) of region $$k$$ and $$D^k$$ is a matrix representing the non-linear influences of region $$k$$.
 
 ### Mathematical background
 
 The basic DCM neural model described above consists of the first 3 terms of the Taylor series approximation of the system $$\dot{z}=f(z,u,\theta)$$. Extending this to the nonlinear model involves including one more term from the Taylor series:
+
 
 $$
 \begin{aligned}
@@ -121,6 +137,7 @@ $$
 &= (A + \sum{u_jB^j} + \sum{z_jD^j})z + Cu
 \end{aligned}
 $$
+
 
 Here a nonlinear term has been added involving the matrix $$D$$, which depends only on the current activity in the network.
 
