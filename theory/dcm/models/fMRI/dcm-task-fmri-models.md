@@ -26,7 +26,7 @@ $$
 
 In words, the rate of change in each brain region's activity is a function $$f$$ of its current activity$$z$$, experimental inputs $$u$$ and connection parameters $$\theta^n$$.
 
-The definition of $$f$$ depends on the DCM model being used. With enough data, $$f$$ could be a tremendously detailed biophysical model, taking into account many possible causes of changes in neural activity. However, in the context of fMRI, we use a simple approximation of $$f$$. The approximation used here is a \[Taylor series\]\([https://en.wikipedia.org/wiki/Taylor\_series\](https://en.wikipedia.org/wiki/Taylor_series\)\), which gets closer to representing the true function as more terms are included.
+The definition of $$f$$ depends on the DCM model being used. With enough data, $$f$$ could be a tremendously detailed biophysical model, taking into account many possible causes of changes in neural activity. However, in the context of fMRI, we use a simple approximation of $$f$$. The approximation used here is a [Taylor series](https://en.wikipedia.org/wiki/Taylor_series "Taylor series") which gets closer to representing the true function as more terms are included.
 
 In the one-state DCM model, $$f$$ is approximated as follows:
 
