@@ -2,18 +2,26 @@
 
 This chapter covers how to test hypotheses by comparing models and parameters. The methods described here are generic and can be to any Bayesian models. After introducing the basics, we'll move onto performing analyses across multiple subjects.
 
-##### Inference on Models
+##### Inference on models
 
 As described in the chapter on model inversion, estimating a model provides an approximation of its log model evidence: $$\log{p(y|m)}$$. The approximation of the log model evidence used in SPM is the negative variational free energy, or free energy for short. The free energy can be decomposed into two terms: the accuracy of the model minus its complexity. It's a tremendously useful quantity for the experimenter, because it's a single number which scores how good a model is relative to some other model. By embodying several hypotheses as models, the models can be compared and those with the strongest evidence identified.
 
 Two or more models can easily be compared by computing the Bayes factor. This is the ratio of the model evidence of one model relative to the other:
+
+
 $$
 bf = \frac{p(y|m_1)}{p(y|m_2)}
 $$
+
+
 If the Bayes factor is greater than 1, we can conclude that model 1 is better than model 2. Common practice is to take a Bayes factor of 20 as being 'strong evidence'. Because we are working with the free energy, which approximates the log of the model evidence, we generally work with log of the bayes factor. With logarithms, division becomes subtraction:
+
+
 $$
 \ln{bf} = \ln{ p(y|m_1)} - \ln{ p(y|m_2)} = F_1 - F_2
 $$
+
+
 Where $$F_1$$ is the free energy of model 1 and $$F_2$$ is the free energy of model 2. So to compare two models, we simply subtract their free energies, which gives us the log Bayes factor. The threshold for 'strong evidence' becomes $$\ln(20)=3$$, so with a difference in free energy of 3 or more, we can confidently conclude that one model is better than the other.
 
 We can generalise this method to more than 2 models by computing the Bayes factor for each model, relative to a selected reference model. Generally the worst model is selected to be the reference, so if we have a vector of free energies F then in Matlab code:
@@ -28,13 +36,17 @@ We can also plot these results as the probability that one model is better than 
 
 ...
 
-Parameters
+##### Inference on parameters
 
 By estimating a Bayesian model using SPM, we are supplied with a multivariate normal distribution of the estimated parameters. This consists of the expected value of each parameter and a covariance matrix, which quantifies the uncertainty about the parameters. The leading diagonal of the covariance matrix is the variance of each parameter and the off-diagonal elements are the covariances between each pair of parameters.
 
 As shown in the figure, parameters can conveniently be plotted by displaying their expected values \(gray bars\) and computing their 95% confidence intervals \(pink bars\). The confidence interval is:
 
-...
+
+$$
+\begin{aligned}c_j &= \text{icdf}(0.95) . \sigma_j \\ \text{ci}_j &= [\mu_j - c_j , \mu_j + c_j]\end{aligned}
+$$
+
 
 We can also compute the probability that these parameters have deviated from their prior expectations \(which was zero for all parameters\):
 
