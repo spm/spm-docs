@@ -10,8 +10,6 @@ A DCM analysis generally consists of three steps:
 
 The forward or generative model is a mathematical description of how experimental stimuli causes changes in brain activity, and how brain activity gives rise to the signals measured using imaging devices \(e.g. fMRI, MEG, EEG\).
 
-
-
 ![](/theory/dcm/stim-neural-observation.png)
 
 The forward model is split into two parts: a neuronal model and an observation model. The neuronal model $$f$$ specifies how brain activity changes over time:
@@ -38,9 +36,15 @@ Having specified a forward model which describes the chain of events from stimul
 
 ##### Model inversion
 
-The forward model lets us investigate things which we cannot directly measure. Specifically in neuroimaging, we are interested in parameters $$\theta^{(n)}$$, which represent some interesting quantity about neural activity, such as connection strengths or sensitivity to experimental inputs. Starting from the measured data, and ask which parameters best explain the data. This is called model estimation or model inversion.
+Having a forward model allows us to investigate things which we cannot directly measure. In neuroimaging, we are interested in parameters $$\theta^{(n)}$$, which represent some interesting quantity about neural activity, such as connection strengths or sensitivity of neural populations to experimental inputs. To estimate these parameters, we start from the measured data, and ask which particular settings of the parameters best explain the data. This is called model estimation or model inversion.
 
-DCM is Bayesian or probabilistic framework. This means that all parameters $$\theta=(\theta^{(n)},\theta^{(h)})$$ have prior probability distributions, which represent our beliefs about the parameters before collecting any data. These priors are combined with experimental data to give updated \(posterior\) beliefs about the parameters. In doing so, we also estimate the log model evidence $$\ln{p(y|m)}$$. In words, this is the probability of observing our data, given our model.
+DCM is Bayesian or probabilistic framework. As such, all parameters $$\theta=(\theta^{(n)},\theta^{(h)})$$ have prior probability distributions, which represent our beliefs about the parameters before collecting any data. These priors beliefs are combined with experimental data to give updated \(posterior\) beliefs. Bayes theorem states:
+
+
+$$
+ p(\theta|y,m) = \frac{p(y|\theta,m)p(\theta|m)}{p(y|m)}
+$$
+Where $$p(\theta|y,m)$$ are the posterior beliefs about the parameters after seeing the data, $$p(y|\theta,m)$$ is the prediction of the forward model about the data given a particular setting of the parameters, $$p(\theta|m)$$ are the prior beliefs about the parameters, and $$p(y|m)$$ is the probability of the data given the model, collapsed over possible settings of the parameters. This is a particularly useful part of the equation called the model evidence. Here, $$m$$ is the model, for instance a DCM or a GLM.
 
 
 
