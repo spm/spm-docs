@@ -54,7 +54,7 @@ $$
 
 Where $$p(\theta|y,m)$$ are the posterior beliefs about the parameters after seeing the data, $$p(y|\theta,m)$$ is the forward model's prediction of what data we would expect to measure given a particular setting of the parameters, $$p(\theta|m)$$ are the prior beliefs about the parameters, and $$p(y|m)$$ is how probable the observed data are, given the model \(after collapsing over possible settings of the parameters\). This last term is called the model evidence, and it's particularly useful because it quantifies how good the model is, in terms of balancing accuracy and complexity. \(In these equations, $$m$$ refers to the particular model being used, i.e. the set of equations representing the DCM forward model.\)
 
-DCM estimates the posterior distribution of the parameters $$p(\theta|y,m)$$ and the \(log\) model evidence $$p(y|m)$$ using an estimation scheme called variational Laplace.
+DCM estimates the posterior distribution of the parameters $$p(\theta|y,m)$$ and the \(log\) model evidence $$\ln{p(y|m)}$$ using an estimation scheme called variational Laplace.
 
 Read more about model inversion in DCM
 
@@ -62,5 +62,13 @@ Read more about model inversion in DCM
 
 **Inference**
 
-sdf
+The purpose of DCM is to test hypotheses. This can be achieved by specifying two or more models with different priors $$p(\theta|m)$$. For instance, one model's priors could say, with absolute confidence, that a particular connection between brain regions does not exist. A second model could have priors that do allow this connection to exist. After inverting each model, the models can be compared in terms of their log model evidence. The model with the stronger evidence would can be declared the best available explanation for the data. Additionally, the estimated parameters of the model\(s\) can be examined and reported, for instance to identify which connections are strong and which are weak.
+
+In practice, studies generally have multiple subjects and aim to characterise brain connectivity at the group level. We therefore need to collate our parameters and model evidences across subjects. There are several mechanisms for doing this, which are described in the page on group DCM analysis.
+
+Read more about model comparison and group analysis
+
+---
+
+Back to top
 
