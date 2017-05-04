@@ -2,7 +2,7 @@
 
 Dynamic Causal Modelling \(DCM\) is a framework for specifying, estimating and comparing models of neuroimaging data. It is particularly used for studying effective connectivity - the causal influences between brain regions.
 
-A DCM analysis generally consists of three steps: model specification, model inversion and inference. These are outlined here in brief and detailed in the follow chapters:
+A DCM analysis generally consists of three steps: [model specification](#model-specification), [model inversion](#model-inversion) and [inference](#inference). These are outlined below in brief and are detailed in the follow chapters.
 
 ---
 
@@ -60,7 +60,7 @@ Read more about model inversion in DCM
 
 ---
 
-**Inference**
+##### Inference
 
 The purpose of DCM is to test hypotheses. This can be achieved by specifying two or more models with different priors $$p(\theta|m)$$. For instance, one model's priors could say, with absolute confidence, that a particular connection between brain regions does not exist. A second model could have priors that do allow this connection to exist. After inverting each model, the models can be compared in terms of their log model evidence. The model with the stronger evidence would can be declared the best available explanation for the data. Additionally, the estimated parameters of the model\(s\) can be examined and reported, for instance to identify which connections are strong and which are weak.
 
