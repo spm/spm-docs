@@ -40,6 +40,10 @@ Read more about the forward models in DCM
 
 A forward model allows us to investigate things we cannot directly measure. In neuroimaging, we are particularly interested in  parameters $$\theta^{(n)}$$, which represent some interesting quantity about the brain, such as the strengths of connections or the sensitivity of neural populations to experimental inputs. To estimate these parameters, we run the model in reverse. We start from the measured data $$y$$, and ask which particular settings of the parameters $$\theta=(\theta^{(n)},\theta^{(h)})$$ best explains the data. This process is called model estimation or model inversion.
 
+![](/theory/dcm/forward_inverse_problems.png)
+
+\(Brain image adapted from image by [IsaacMao](https://www.flickr.com/photos/isaacmao/19245594/in/photolist-2GD3A-6MaCW8-dmktpf-64zrPn-64zrPt-9UwYi-4AkYYV-84cP5K-sq4RNt-NDMUU-cgJcUs-8bFv9f-dMPrVr-J8bQCu-vKCLx-dcVGb3-645D1o-gayZDq-jypVk8-wTEZDo-xbQUur-5vGNkE-bPewqD-qDbwbV-9UwYp), [CC By 2.0](https://creativecommons.org/licenses/by/2.0/)\)
+
 DCM is Bayesian or probabilistic framework. As such, all parameters have prior probability distributions, which represent our beliefs about these parameters before collecting any data. These priors beliefs are combined with experimental data to give updated \(posterior\) beliefs. Bayes theorem states:
 
 
@@ -57,6 +61,4 @@ Read more about model inversion
 ---
 
 **Inference**
-
-
 
