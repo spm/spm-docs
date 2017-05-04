@@ -38,7 +38,7 @@ Having specified a forward model which describes the chain of events from stimul
 
 ##### Model inversion
 
-A forward model allows us to investigate things we cannot directly measure. In neuroimaging, we are particularly interested in  parameters $$\theta^{(n)}$$, which represent some interesting quantity about the brain, such as the strengths of connections or the sensitivity of neural populations to experimental inputs. To estimate these parameters, we run the model in reverse. We start from the measured data $$y$$, and ask which particular settings of the parameters $$\theta=(\theta^{(n)},\theta^{(h)})$$ best explains the data. This process is called model estimation or model inversion. The "inverse problem" is generally more challenging than specifying the forward model, because it is often ill-posed - different possible neural configurations could give rise to the same observed timeseries.
+A forward model allows us to investigate things we cannot directly measure. In neuroimaging, we are particularly interested in  parameters $$\theta^{(n)}$$, which represent some interesting quantity about the brain, such as the strengths of connections or the sensitivity of neural populations to experimental inputs. To estimate these parameters, we run the model in reverse. We start from the measured data $$y$$, and ask which particular settings of the parameters $$\theta=(\theta^{(n)},\theta^{(h)})$$ best explain the data. This process is called model estimation or model inversion. The "inverse problem" is generally more challenging than specifying the forward model, because it is often ill-posed - different possible neural configurations could give rise to the same observed timeseries.
 
 ![](/theory/dcm/forward_inverse_problems.png)
 
