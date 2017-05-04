@@ -2,7 +2,7 @@
 
 Dynamic Causal Modelling \(DCM\) is a framework for specifying, estimating and comparing models of neuroimaging data. It is particularly used for studying effective connectivity - the causal influences between brain regions.
 
-A DCM analysis generally consists of three steps:
+A DCM analysis generally consists of three steps, which are outlined here in brief and detailed in the follow chapters:
 
 ---
 
@@ -32,19 +32,31 @@ Where $$\theta^{(h)}$$ are the parameters of the observation model. The particul
 
 Having specified a forward model which describes the chain of events from stimulation, to brain activity to observations, the next step is to fit the model to the data.
 
+Read more about the forward models in DCM
+
 ---
 
 ##### Model inversion
 
-Having a forward model allows us to investigate things which we cannot directly measure. In neuroimaging, we are interested in parameters $$\theta^{(n)}$$, which represent some interesting quantity about neural activity, such as connection strengths or sensitivity of neural populations to experimental inputs. To estimate these parameters, we start from the measured data, and ask which particular settings of the parameters best explain the data. This is called model estimation or model inversion.
+A forward model allows us to investigate things we cannot directly measure. In neuroimaging, we are particularly interested in  parameters $$\theta^{(n)}$$, which represent some interesting quantity about the brain, such as the strengths of connections or the sensitivity of neural populations to experimental inputs. To estimate these parameters, we run the model in reverse. We start from the measured data $$y$$, and ask which particular settings of the parameters $$\theta=(\theta^{(n)},\theta^{(h)})$$ best explains the data. This process is called model estimation or model inversion.
 
-DCM is Bayesian or probabilistic framework. As such, all parameters $$\theta=(\theta^{(n)},\theta^{(h)})$$ have prior probability distributions, which represent our beliefs about the parameters before collecting any data. These priors beliefs are combined with experimental data to give updated \(posterior\) beliefs. Bayes theorem states:
+DCM is Bayesian or probabilistic framework. As such, all parameters have prior probability distributions, which represent our beliefs about these parameters before collecting any data. These priors beliefs are combined with experimental data to give updated \(posterior\) beliefs. Bayes theorem states:
 
 
 $$
  p(\theta|y,m) = \frac{p(y|\theta,m)p(\theta|m)}{p(y|m)}
 $$
-Where $$p(\theta|y,m)$$ are the posterior beliefs about the parameters after seeing the data, $$p(y|\theta,m)$$ is the prediction of the forward model about the data given a particular setting of the parameters, $$p(\theta|m)$$ are the prior beliefs about the parameters, and $$p(y|m)$$ is the probability of the data given the model, collapsed over possible settings of the parameters. This is a particularly useful part of the equation called the model evidence. Here, $$m$$ is the model, for instance a DCM or a GLM.
+
+
+Where $$p(\theta|y,m)$$ are the posterior beliefs about the parameters after seeing the data, $$p(y|\theta,m)$$ is the forward model's prediction of what data we would expect to measure given a particular setting of the parameters, $$p(\theta|m)$$ are the prior beliefs about the parameters, and $$p(y|m)$$ is how probable the observed data are, given the model \(after collapsing over possible settings of the parameters\). This last term is called the model evidence, and it's particularly useful because it quantifies how good the model is, in terms of balancing accuracy and complexity. \(In these equations, $$m$$ refers to the particular model being used, for instance the set of equations representing the DCM for fMRI forward model.\)
+
+DCM estimates the posterior distribution of the parameters $$p(\theta|y,m)$$ and the \(log\) model evidence $$p(y|m)$$ using an estimation scheme called variational Laplace.
+
+Read more about model inversion
+
+---
+
+**Inference**
 
 
 
