@@ -40,13 +40,15 @@ We can also plot these results as the probability that one model is better than 
 
 By estimating a Bayesian model using SPM, we are supplied with a multivariate normal distribution of the estimated parameters. This consists of the expected value of each parameter and a covariance matrix, which quantifies the uncertainty about the parameters. The leading diagonal of the covariance matrix is the variance of each parameter and the off-diagonal elements are the covariances between each pair of parameters.
 
-As shown in the figure, parameters can conveniently be plotted by displaying their expected values \(gray bars\) and computing their 95% confidence intervals \(pink bars\). The confidence interval is:
+As shown in the figure, parameters can conveniently be plotted by displaying their expected values \(gray bars\) and computing their 95% confidence intervals \(pink bars\). The confidence interval for the $$jth$$ parameter $$\text{ci}_j$$ with expected value $$\mu_j$$ and standard deviation $$\sigma_j$$ is defined by:
 
 
 $$
 \begin{aligned}c_j &= \text{icdf}(0.95) . \sigma_j \\ \text{ci}_j &= [\mu_j - c_j , \mu_j + c_j]\end{aligned}
 $$
 
+
+Where $$\text{icdf}$$ is the inverse normal cumulative distribution function.
 
 We can also compute the probability that these parameters have deviated from their prior expectations \(which was zero for all parameters\):
 
