@@ -32,19 +32,19 @@ Where $$\theta^{(h)}$$ are the parameters of the observation model. The particul
 
 Having specified a forward model which describes the chain of events from stimulation, to brain activity to observations, the next step is to fit the model to the data.
 
-Read more about the forward models in DCM
+[Read more about the forward models in DCM](/theory/dcm/models/dcm-models.md)
 
 ---
 
 ##### Model inversion
 
-A forward model allows us to investigate things we cannot directly measure. In neuroimaging, we are particularly interested in  parameters $$\theta^{(n)}$$, which represent some interesting quantity about the brain, such as the strengths of connections or the sensitivity of neural populations to experimental inputs. To estimate these parameters, we run the model in reverse. We start from the measured data $$y$$, and ask which particular settings of the parameters $$\theta=(\theta^{(n)},\theta^{(h)})$$ best explains the data. This process is called model estimation or model inversion. The "inverse problem" can be difficult to solve.
+A forward model allows us to investigate things we cannot directly measure. In neuroimaging, we are particularly interested in  parameters $$\theta^{(n)}$$, which represent some interesting quantity about the brain, such as the strengths of connections or the sensitivity of neural populations to experimental inputs. To estimate these parameters, we run the model in reverse. We start from the measured data $$y$$, and ask which particular settings of the parameters $$\theta=(\theta^{(n)},\theta^{(h)})$$ best explains the data. This process is called model estimation or model inversion. The "inverse problem" is generally more challenging than specifying the forward model, because it is often ill-posed - different possible neural configurations could give rise to the same observed timeseries.
 
 ![](/theory/dcm/forward_inverse_problems.png)
 
 \(Brain image adapted from image by [IsaacMao](https://www.flickr.com/photos/isaacmao/19245594/in/photolist-2GD3A-6MaCW8-dmktpf-64zrPn-64zrPt-9UwYi-4AkYYV-84cP5K-sq4RNt-NDMUU-cgJcUs-8bFv9f-dMPrVr-J8bQCu-vKCLx-dcVGb3-645D1o-gayZDq-jypVk8-wTEZDo-xbQUur-5vGNkE-bPewqD-qDbwbV-9UwYp), [CC By 2.0](https://creativecommons.org/licenses/by/2.0/)\)
 
-DCM addresses the inverse using Bayesian or probabilistic methods. This means that all parameters have prior probability distributions, which represent our beliefs about these parameters before collecting any data. These priors beliefs are combined with experimental data to give updated \(posterior\) beliefs. Bayes theorem states:
+DCM addresses the inverse problem using Bayesian or probabilistic methods. This means that all parameters have prior probability distributions, which represent our beliefs about these parameters before collecting any data. These priors beliefs are combined with experimental data to give updated \(posterior\) beliefs. Bayes theorem states:
 
 
 $$
@@ -54,7 +54,7 @@ $$
 
 Where $$p(\theta|y,m)$$ are the posterior beliefs about the parameters after seeing the data, $$p(y|\theta,m)$$ is the forward model's prediction of what data we would expect to measure given a particular setting of the parameters, $$p(\theta|m)$$ are the prior beliefs about the parameters, and $$p(y|m)$$ is how probable the observed data are, given the model \(after collapsing over possible settings of the parameters\). This last term is called the model evidence, and it's particularly useful because it quantifies how good the model is, in terms of balancing accuracy and complexity. \(In these equations, $$m$$ refers to the particular model being used, i.e. the set of equations representing the DCM forward model.\)
 
-DCM estimates the posterior distribution of the parameters $$p(\theta|y,m)$$ and the \(log\) model evidence $$\ln{p(y|m)}$$ using an estimation scheme called variational Laplace.
+DCM estimates the posterior distribution of the parameters $$p(\theta|y,m)$$ and an approximation of the \(log\) model evidence $$\ln{p(y|m)}$$, using an estimation scheme called variational Laplace.
 
 Read more about model inversion in DCM
 
@@ -66,9 +66,9 @@ The purpose of DCM is to test hypotheses. This can be achieved by specifying two
 
 In practice, studies generally have multiple subjects and aim to characterise brain connectivity at the group level. We therefore need to collate our parameters and model evidences across subjects. There are several mechanisms for doing this, which are described in the page on group DCM analysis.
 
-Read more about model comparison and group analysis
+Read more about inference with DCM
 
 ---
 
-Back to top
+[Back to top](#dcm)
 
