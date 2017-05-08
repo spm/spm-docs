@@ -1,24 +1,32 @@
 # Inference
 
-This chapter covers how to test hypotheses by comparing models and parameters. The methods described here are generic and can be to any Bayesian models. After introducing the basics, we'll move onto performing analyses across multiple subjects.
+This chapter covers how to test hypotheses by comparing models and inspecting parameters. The methods described here are generic and can be to any Bayesian models. After introducing the basics, we'll move onto performing analyses across multiple subjects.
 
-##### Inference on models
+##### Comparing models
 
-As described in the chapter on model inversion, estimating a model provides an approximation of its log model evidence: $$\log{p(y|m)}$$. The approximation of the log model evidence used in SPM is the negative variational free energy, or free energy for short. The free energy can be decomposed into two terms: the accuracy of the model minus its complexity. It's a tremendously useful quantity for the experimenter, because it's a single number which scores how good a model is relative to some other model. By embodying several hypotheses as models, the models can be compared and those with the strongest evidence identified.
+As described in the chapter on model inversion, estimating a model provides an approximation of its log model evidence: $$\ln{p(y|m)}$$. The approximation used in SPM is the negative variational free energy, or free energy for short. The free energy can be decomposed into two terms: the accuracy of the model minus its complexity: 
+
+
+$$
+F \approx \ln{p(y|m)} = \text{accuracy} - \text{complexity}
+$$
+
+
+The free energy $$F$$ a tremendously useful quantity for the experimenter, because it's a single number which scores how good a model is for explaining the data. By embodying several hypotheses as models, the models can be compared and those with the strongest evidence identified.
 
 Two or more models can easily be compared by computing the Bayes factor. This is the ratio of the model evidence of one model relative to the other:
 
 
 $$
-bf = \frac{p(y|m_1)}{p(y|m_2)}
+\text{bf} = \frac{p(y|m_1)}{p(y|m_2)}
 $$
 
 
-If the Bayes factor is greater than 1, we can conclude that model 1 is better than model 2. Common practice is to take a Bayes factor of 20 as being 'strong evidence'. Because we are working with the free energy, which approximates the log of the model evidence, we generally work with log of the bayes factor. With logarithms, division becomes subtraction:
+If the Bayes factor is greater than 1, we can conclude that model 1 is better than model 2. Common practice is to take a Bayes factor of 20 as being 'strong evidence' in favour of one model over the other. Because we are working with the log of the model evidence, we generally work with log of the Bayes factor. With logarithms, division becomes subtraction, so:
 
 
 $$
-\ln{bf} = \ln{ p(y|m_1)} - \ln{ p(y|m_2)} = F_1 - F_2
+\ln{\text{bf}} = \ln{ p(y|m_1)} - \ln{ p(y|m_2)} = F_1 - F_2
 $$
 
 
