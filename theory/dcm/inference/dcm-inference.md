@@ -4,7 +4,7 @@ This chapter covers how to test hypotheses by comparing models and inspecting pa
 
 ##### Comparing models
 
-As described in the chapter on model inversion, estimating a model provides an approximation of its log model evidence: $$\ln{p(y|m)}$$. The approximation used in SPM is the negative variational free energy, or free energy for short. The free energy can be decomposed into two terms: the accuracy of the model minus its complexity: 
+As described in the chapter on model inversion, estimating a model provides an approximation of its log model evidence: $$\ln{p(y|m)}$$. The approximation used in SPM is the negative variational free energy, or free energy for short. The free energy can be decomposed into two terms: the accuracy of the model minus its complexity:
 
 
 $$
@@ -32,12 +32,10 @@ $$
 
 Where $$F_1$$ is the free energy of model 1 and $$F_2$$ is the free energy of model 2. So to compare two models, we simply subtract their free energies, which gives us the log Bayes factor. The threshold for 'strong evidence' becomes $$\ln(20)=3$$, so with a difference in free energy of 3 or more, we can confidently conclude that one model is better than the other.
 
-We can generalise this method to more than 2 models by computing the Bayes factor for each model, relative to a selected reference model. Generally the worst model is selected to be the reference, so if we have a vector of free energies F then in Matlab code:
-
-```
-logBF = F - min(F);
-```
-
+We can generalise this method to more than 2 models by computing the Bayes factor for each model, relative to a selected reference model. Generally the worst model is selected to be the reference, so if we have a vector of free energies F then the vector of log Bayes factors $$r$$ relative to the worst model is given by:
+$$
+ r=F-\min{F}
+$$
 These can then be plotted \(see figure below, left\). The worst model has a value of zero and any difference greater than 3 is strong evidence of a difference.
 
 We can also plot these results as the probability that one model is better than another.
