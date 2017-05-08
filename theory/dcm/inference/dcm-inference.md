@@ -33,9 +33,13 @@ $$
 Where $$F_1$$ is the free energy of model 1 and $$F_2$$ is the free energy of model 2. So to compare two models, we simply subtract their free energies, which gives us the log Bayes factor. The threshold for 'strong evidence' becomes $$\ln(20)=3$$, so with a difference in free energy of 3 or more, we can confidently conclude that one model is better than the other.
 
 We can generalise this method to more than 2 models by computing the Bayes factor for each model, relative to a selected reference model. Generally the worst model is selected to be the reference, so if we have a vector of free energies F then the vector of log Bayes factors $$r$$ relative to the worst model is given by:
+
+
 $$
  r=F-\min{F}
 $$
+
+
 These can then be plotted \(see figure below, left\). The worst model has a value of zero and any difference greater than 3 is strong evidence of a difference.
 
 We can also plot these results as the probability that one model is better than another.
@@ -44,7 +48,7 @@ We can also plot these results as the probability that one model is better than 
 
 ##### Inference on parameters
 
-By estimating a Bayesian model using SPM, we are supplied with a multivariate normal distribution of the estimated parameters. This consists of the expected value of each parameter and a covariance matrix, which quantifies the uncertainty about the parameters. The leading diagonal of the covariance matrix is the variance of each parameter and the off-diagonal elements are the covariances between each pair of parameters.
+After estimating a Bayesian model using SPM, we are supplied with a set of estimated parameters \(the posteriors\), which have a multivariate normal distribution. This consists of a vector containing the expected value of each parameter and a covariance matrix which quantifies the uncertainty about the parameters. The leading diagonal of the covariance matrix is the variance of each parameter and the off-diagonal elements are the covariances between each pair of parameters.
 
 As shown in the figure, parameters can conveniently be plotted by displaying their expected values \(gray bars\) and computing their 95% confidence intervals \(pink bars\). The 95% confidence interval for the $$jth$$ parameter $$\text{ci}_j$$ with expected value $$\mu_j$$ and standard deviation $$\sigma_j$$ is defined by:
 
