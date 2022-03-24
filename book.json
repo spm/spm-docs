@@ -1,9 +1,0 @@
-{
-  "plugins": ["katex","anchors","image-captions"],
-  
-  "pluginsConfig": {
-      "image-captions": {
-          "caption": "Figure _PAGE_IMAGE_NUMBER_ - _CAPTION_"
-      }
-  }  
-}
