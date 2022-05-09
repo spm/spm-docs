@@ -1,4 +1,13 @@
 site_name: SPM Documentation
+repo_url: https://github.com/spm/spm
 theme:
   name: material
-
+  features:
+    - header.autohide
+plugins:
+  - search:
+      lang: en
+extra:
+  generator: false
+  social:
+    - link: https://www.fil.ion.ucl.ac.uk/spm/
