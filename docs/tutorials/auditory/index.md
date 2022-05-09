@@ -1,8 +1,13 @@
-\chapter{Auditory fMRI data \label{Chap:data:auditory}}
+---
+title: Auditory fMRI data
+---
+
+# Auditory fMRI data
  
 This experiment was conducted by Geraint Rees under the direction of Karl Friston and the FIL methods group. The purpose was to explore equipment and techniques in the early days of our fMRI experience. As such, it has not been formally written up, and is freely available for personal education and evaluation purposes.
 
-This data set was the first ever collected and analysed in the Functional Imaging Laboratory (FIL) and is known locally as the mother of all experiments (MoAE).
+!!! note ""
+    This data set was the first ever collected and analysed in the Functional Imaging Laboratory (FIL) and is known locally as the mother of all experiments (MoAE).
 
 This data set comprises whole brain BOLD/EPI images acquired on a modified 2T Siemens MAGNETOM Vision system. Each acquisition consisted of 64 contiguous slices (64$\times$64$\times$64 3$\times$3$\times$3 mm$^3$ voxels). Acquisition took 6.05s, with the scan to scan repeat time (TR) set arbitrarily to 7s.
 
@@ -13,20 +18,18 @@ To analyse the data, first create a new directory \texttt{DIR},  eg. \texttt{C:$
 
 Start up \matlab\, enter your \texttt{jobs} directory and type \texttt{spm fmri} at the \matlab\ prompt. SPM will then open in fMRI mode with three windows (see Figure~\ref{aud_command}): (1) the top-left or ``Menu'' window, (2) the bottom-left or ``Interactive'' window and (3) the right-hand or ``Graphics'' window. Analysis then takes place in three major stages (i) spatial pre-processing, (ii) model specification, review and estimation and (iii) inference. These stages organise the buttons in SPM's Menu window.
 
-\begin{figure}
-\begin{center}
-\includegraphics[width=100mm]{auditory/command}
-\caption{\em The SPM base window comprises three sections i) spatial pre-processing, (ii) model specification, review and estimation and (iii) inference. \label{aud_command}}
-\end{center}
-\end{figure}
+<figure markdown>
+  ![](../../assets/images/auditory/command.png)
+  <figcaption>The SPM base window comprises three sections i) spatial pre-processing, (ii) model specification, review and estimation and (iii) inference.</figcaption>
+</figure>
 
-\section{Preamble (dummy scans)}
+# Preamble (dummy scans)
 
 To avoid T1 effects in the initial scans of an fMRI time series we recommend discarding the first few scans. To make this example simple, we'll discard the first complete cycle (12 scans, \texttt{04-15}), leaving 84 scans, image files \texttt{16-99}. This is best done by moving these files to a different directory, \texttt{dummy}, that we created earlier.
 
-\section{Spatial pre-processing}
+# Spatial pre-processing
 
-\subsection{Realignment}
+## Realignment
 
 Under the spatial pre-processing section of the SPM Menu window select \textsc{Realign (Est \& Res)} from the \textsc{Realign} pulldown menu. This will call up a realignment job specification in the batch editor. Then
 \begin{itemize}

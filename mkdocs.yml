@@ -4,6 +4,13 @@ theme:
   name: material
   features:
     - header.autohide
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - meta
+  - attr_list
+  - md_in_html
 plugins:
   - search:
       lang: en
