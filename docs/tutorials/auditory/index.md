@@ -4,84 +4,76 @@ title: Auditory fMRI data
 
 # Auditory fMRI data
  
-This experiment was conducted by Geraint Rees under the direction of Karl Friston and the FIL methods group. The purpose was to explore equipment and techniques in the early days of our fMRI experience. As such, it has not been formally written up, and is freely available for personal education and evaluation purposes.
+This experiment was conducted by [Geraint Rees](https://www.ucl.ac.uk/icn/people/geraint-rees) under the direction of [Karl Friston](https://www.fil.ion.ucl.ac.uk/~karl/) and the [FIL Methods group](https://www.fil.ion.ucl.ac.uk/methods/). The purpose was to explore equipment and techniques in the early days of our fMRI experience. As such, it has not been formally written up, and is freely available for personal education and evaluation purposes.
 
 !!! note ""
     This data set was the first ever collected and analysed in the Functional Imaging Laboratory (FIL) and is known locally as the mother of all experiments (MoAE).
 
 This data set comprises whole brain BOLD/EPI images acquired on a modified 2T Siemens MAGNETOM Vision system. Each acquisition consisted of 64 contiguous slices (64$\times$64$\times$64 3$\times$3$\times$3 mm$^3$ voxels). Acquisition took 6.05s, with the scan to scan repeat time (TR) set arbitrarily to 7s.
 
-96 acquisitions were made (TR=7s) from a single subject, in blocks of 6, giving 16 42s blocks. The condition for successive blocks alternated between rest and auditory stimulation, starting with rest. Auditory stimulation was bi-syllabic words presented binaurally at a rate of 60 per minute. The functional data starts at acquisition 4, image \texttt{fM00223\_004.\{hdr,img\}}, and are stored in folder \texttt{fM00223}. Due to T1 effects it is advisable to discard the first few scans (there were no ``dummy'' lead-in scans). A structural image was also acquired: \texttt{sM00223\_002.\{hdr,img\}}, stored in folder \texttt{sM00223}. These images are stored in Analyze format (now superseded by the NIfTI format, but SPM reads natively both formats and always saves images as NIfTI) and are available from the SPM site \footnote{Auditory fMRI dataset: \url{http://www.fil.ion.ucl.ac.uk/spm/data/auditory/}}.
+96 acquisitions were made (TR=7s) from a single subject, in blocks of 6, giving 16 42s blocks. The condition for successive blocks alternated between rest and auditory stimulation, starting with rest. Auditory stimulation was bi-syllabic words presented binaurally at a rate of 60 per minute. The functional data starts at acquisition 4, image `fM00223_004.{hdr,img}`, and are stored in folder `fM00223`. Due to T1 effects it is advisable to discard the first few scans (there were no "dummy" lead-in scans). A structural image was also acquired: `sM00223_002.{hdr,img}`, stored in folder `sM00223`. These images are stored in Analyze format (now superseded by the NIfTI format, but SPM reads natively both formats and always saves images as NIfTI) and are [available from the SPM website](http://www.fil.ion.ucl.ac.uk/spm/data/auditory/).
 
-To analyse the data, first create a new directory \texttt{DIR},  eg. \texttt{C:$\backslash$data$\backslash$auditory}, in which to place the results of your analysis. Then create 3 subdirectories (i) \texttt{dummy}, (ii) \texttt{jobs} and (iii) \texttt{classical}. As the analysis proceeds these directories will be filled with dummy scans, job-specification files, design matrices and models estimated using classical inference.
-%and (iv) \texttt{bayesian} for Bayesian methods.
+To analyse the data, first create a new directory `DIR`,  eg. `C:\data\auditory`, in which to place the results of your analysis. Then create 3 subdirectories (i) `dummy`, (ii) `jobs` and (iii) `classical`. As the analysis proceeds these directories will be filled with dummy scans, job-specification files, design matrices and models estimated using classical inference.
+<!--and (iv) \texttt{bayesian} for Bayesian methods.-->
 
-Start up \matlab\, enter your \texttt{jobs} directory and type \texttt{spm fmri} at the \matlab\ prompt. SPM will then open in fMRI mode with three windows (see Figure~\ref{aud_command}): (1) the top-left or ``Menu'' window, (2) the bottom-left or ``Interactive'' window and (3) the right-hand or ``Graphics'' window. Analysis then takes place in three major stages (i) spatial pre-processing, (ii) model specification, review and estimation and (iii) inference. These stages organise the buttons in SPM's Menu window.
+Start up MATLAB, enter your `jobs` directory and type `spm fmri` at the MATLAB prompt. SPM will then open in fMRI mode with three windows: (1) the top-left or "Menu" window, (2) the bottom-left or "Interactive" window and (3) the right-hand or "Graphics" window. Analysis then takes place in three major stages (i) spatial pre-processing, (ii) model specification, review and estimation and (iii) inference. These stages organise the buttons in SPM's Menu window.
 
 <figure markdown>
   ![](../../assets/images/auditory/command.png)
-  <figcaption>The SPM base window comprises three sections i) spatial pre-processing, (ii) model specification, review and estimation and (iii) inference.</figcaption>
+  <figcaption>The SPM base window comprises three sections: (i) spatial pre-processing, (ii) model specification, review and estimation and (iii) inference.</figcaption>
 </figure>
 
 # Preamble (dummy scans)
 
-To avoid T1 effects in the initial scans of an fMRI time series we recommend discarding the first few scans. To make this example simple, we'll discard the first complete cycle (12 scans, \texttt{04-15}), leaving 84 scans, image files \texttt{16-99}. This is best done by moving these files to a different directory, \texttt{dummy}, that we created earlier.
+To avoid T1 effects in the initial scans of an fMRI time series we recommend discarding the first few scans. To make this example simple, we'll discard the first complete cycle (12 scans, `04-15`), leaving 84 scans, image files `16-99`. This is best done by moving these files to a different directory, `dummy`, that we created earlier.
 
 # Spatial pre-processing
 
 ## Realignment
 
-Under the spatial pre-processing section of the SPM Menu window select \textsc{Realign (Est \& Res)} from the \textsc{Realign} pulldown menu. This will call up a realignment job specification in the batch editor. Then
-\begin{itemize}
-\item Highlight ``Data'', select ``New Session'', then highlight the newly created ``Session'' option.
-\item Press ``Select Files'' and use the SPM file selector to choose all of the functional images eg. (``\texttt{fM000*.img}''). There should be 84 files.
-\item Press ``Resliced images'' in the ``Reslice Options'' and select ``Mean Image Only''.
-\item Save the job file as eg. \texttt{DIR$\backslash$jobs$\backslash$realign.mat}.
-\item Press the \texttt{RUN} button in the batch editor (green arrow).
-\end{itemize}
+Under the spatial pre-processing section of the SPM Menu window select `Realign (Est & Res)` from the `Realign` pulldown menu. This will call up a realignment job specification in the batch editor. Then:
 
-This will run the realign job which will estimate the 6 parameter (rigid body) spatial transformation that will align the times series of images and will modify the header of the input images (\texttt{*.hdr}), such that they reflect the relative orientation of the data after correction for movement artefacts. SPM will then plot the estimated time series of translations and rotations shown in Figure~\ref{aud_realign}. These data are also saved to a file eg. \texttt{rp\_fM00223\_016.txt}, so that these variables can be later used as regressors when fitting GLMs. This allows movements effects to be discounted when looking for brain activations.
+1. Highlight `Data`, select `New Session`, then highlight the newly created `Session` option.
+2. Press `Select Files` and use the SPM file selector to choose all of the functional images eg. (`fM000*.img`). There should be 84 files.
+3. Press `Resliced images` in the `Reslice Options` and select `Mean Image Only`.
+4. Save the job file as eg. `DIR\jobs\realign.mat`.
+5. Press the `RUN` button in the batch editor (green arrow).
 
-SPM will also create a mean image eg. \texttt{meanfM00223\_016.img} which will be used in the next step of spatial processing - coregistration.
+This will run the realign job which will estimate the 6 parameter (rigid body) spatial transformation that will align the times series of images and will modify the header of the input images (`*.hdr`), such that they reflect the relative orientation of the data after correction for movement artefacts. SPM will then plot the estimated time series of translations and rotations shown below. These data are also saved to a file eg. `rp_fM00223_016.txt`, so that these variables can be later used as regressors when fitting GLMs. This allows movements effects to be discounted when looking for brain activations.
 
-\begin{figure}
-\begin{center}
-\includegraphics[width=125mm]{auditory/realign}
-\caption{\em Realignment of Auditory data.\label{aud_realign}}
-\end{center}
-\end{figure}
+SPM will also create a mean image eg. `meanfM00223_016.img` which will be used in the next step of spatial processing - coregistration.
 
-\subsection{Coregistration}
+<figure markdown>
+  ![](../../assets/images/auditory/realign.png)
+  <figcaption>Realignment of Auditory data.</figcaption>
+</figure>
 
-Select \textsc{Coregister (Estimate)} from the \textsc{Coregister} pulldown. This will call up the specification of a coregistration job in the batch editor. 
+## Coregistration
 
-\begin{itemize}
-\item Highlight ``Reference Image'' and then select the mean fMRI scan from realignment eg. \texttt{meanfM00223\_016.img}.
-\item Highlight ``Source Image'' and then select the structural image eg. \texttt{sM00223\_002.img}.
-\item Press the Save button and save the job as \texttt{DIR$\backslash$jobs$\backslash$coregister.mat}.
-\item Then press the \texttt{RUN} button.
-\end{itemize}
+Select `Coregister (Estimate)` from the `Coregister` pulldown. This will call up the specification of a coregistration job in the batch editor. 
 
-SPM will then implement a coregistration between the structural and functional data that maximises the mutual information. The image in figure~\ref{aud_coreg} should then appear in the Graphics window. SPM will have changed the header of the source file which in this case is the structural image \texttt{sM00223\_002.hdr}.
-\begin{figure}
-\begin{center}
-\includegraphics[width=125mm]{auditory/coreg}
-\caption{\em Mutual Information Coregistration of Auditory data.\label{aud_coreg}}
-\end{center}
-\end{figure}
+1. Highlight `Reference Image` and then select the mean fMRI scan from realignment eg. `meanfM00223_016.img`.
+2. Highlight `Source Image` and then select the structural image eg. `sM00223_002.img`.
+3. Press the Save button and save the job as `DIR\jobs\coregister.mat`.
+4. Then press the `RUN` button.
 
-The \textsc{Check Reg} facility is useful here, to check the results of coregistration. Press the \textsc{Check Reg} button in the lower section of the Menu window and then select the ``Reference'' and ``Source'' Images specified above ie \texttt{meanfM00223\_016.img} and \texttt{sM00223\_002.img}. SPM will then produce an image like that shown in Figure~\ref{aud_checkreg} in the Graphics window. You can then use your mouse to navigate these images to confirm that there is an anatomical correspondence.
+SPM will then implement a coregistration between the structural and functional data that maximises the mutual information. The image below should then appear in the Graphics window. SPM will have changed the header of the source file which in this case is the structural image `sM00223_002.hdr`.
 
-\begin{figure}
-\begin{center}
-\includegraphics[width=125mm]{auditory/checkreg}
-\caption{\em Checking registration of functional and ``registered'' structural data. \label{aud_checkreg}}
-\end{center}
-\end{figure}
+<figure markdown>
+  ![](../../assets/images/auditory/coreg.png)
+  <figcaption>Mutual Information Coregistration of Auditory data.</figcaption>
+</figure>
 
-\subsection{Segmentation}
+The `Check Reg` facility is useful here, to check the results of coregistration. Press the `Check Reg` button in the lower section of the Menu window and then select the `Reference` and `Source` Images specified above i.e. `meanfM00223_016.img` and `sM00223_002.img`. SPM will then produce an image like the one below in the Graphics window. You can then use your mouse to navigate these images to confirm that there is an anatomical correspondence.
 
-Press the \textsc{Segment} button. This will call up the specification of a segmentation job in the batch editor. Highlight the ``Volumes'' field and then select the subject's registered anatomical image eg. \texttt{sM00223\_002.img}. Highlight ``Save Bias Corrected'' and select ``Save Bias Corrected''. Highlight ``Deformation Fields'' \t the bottom of the list and select ``Forward''. Save the job file as \texttt{segment.mat} and then press \texttt{RUN}. SPM will segment the structural image using the default tissue probability maps as priors \cite{ashburner05}. 
+<figure markdown>
+  ![](../../assets/images/auditory/checkreg.png)
+  <figcaption>Checking registration of functional and <em>registered</em> structural data.</figcaption>
+</figure>
+
+## Segmentation
+
+Press the `Segment` button. This will call up the specification of a segmentation job in the batch editor. Highlight the ``Volumes'' field and then select the subject's registered anatomical image eg. \texttt{sM00223\_002.img}. Highlight ``Save Bias Corrected'' and select ``Save Bias Corrected''. Highlight ``Deformation Fields'' \t the bottom of the list and select ``Forward''. Save the job file as \texttt{segment.mat} and then press \texttt{RUN}. SPM will segment the structural image using the default tissue probability maps as priors \cite{ashburner05}. 
 
 SPM will create gray and white matter images and bias-field corrected structural image. These can be viewed using the \textsc{CheckReg} facility as described in the previous section. Figure~\ref{aud_gray} shows the gray matter image, \texttt{c1sM0023\_002.nii} along with the original structural. Figure~\ref{aud_bias} shows the structural and bias-corrected image, \texttt{msM0023\_002.nii}.
 
