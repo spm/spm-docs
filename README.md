@@ -1,2 +1,0 @@
-# SPM Documentation
-

@@ -1,27 +1,60 @@
-site_name: SPM Documentation
-repo_url: https://github.com/spm/spm
+site_name: SPM
 theme:
   name: material
+  palette:
+    primary: blue grey
+    accent: deep orange 
+  logo: assets/figures/spm_logo_white.png
   features:
-    - header.autohide
+    - content.tooltips
+    - navigation.tabs
+    - navigation.top
+    - navigation.tabs.sticky
+
+nav:
+  - Introduction to SPM: 'index.md'
+  - Download: 'https://www.fil.ion.ucl.ac.uk/spm/software/download/'
+  - Installation: 'installation.md'
+  - 'Tutorials':
+    - 'fMRI':
+      - 'Preprocessing': 
+          - 'Introduction to preprocessing': './tutorials/fmri_preprocessing/introduction.md'
+          - 'Visual inspection of the data': './tutorials/fmri_preprocessing/visual_inspection.md'
+          - 'Removal of dummy scans': './tutorials/fmri_preprocessing/dummy_scans.md'
+          - 'Realignment': './tutorials/fmri_preprocessing/realignment.md'
+          - 'Slice timing correction': './tutorials/fmri_preprocessing/slice_timing.md'
+          - 'Coregistration': './tutorials/fmri_preprocessing/coregistration.md'
+          - 'Segmentation': './tutorials/fmri_preprocessing/segmentation.md'
+          - 'Normalisation': './tutorials/fmri_preprocessing/normalisation.md'
+          - 'Smoothing': './tutorials/fmri_preprocessing/smoothing.md'
+      - 'First-level modelling - block design': './fmri_modelling/block_design.md'
+      - 'First-level modelling - event-related design': './fmri_modelling/event_related_design.md'
+      - 'Group-level modelling': './fmri_modelling/group_level.md'
+  - Courses: 'https://www.fil.ion.ucl.ac.uk/spm/course/'
+  - Support: 'https://www.fil.ion.ucl.ac.uk/spm/support/'
+
 markdown_extensions:
+  - abbr
   - admonition
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.details
-  - pymdownx.superfences
-  - meta
   - attr_list
+  - def_list
   - md_in_html
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
 plugins:
-  - search:
-      lang: en
-extra:
-  generator: false
-  social:
-    - icon: fontawesome/solid/brain
-      link: https://www.fil.ion.ucl.ac.uk/spm/
-extra_javascript:
-  - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - mkdocs-video:
+      css_style:
+        width: "100%"
+        height: "42.172vw"
+      is_video: True
+      video_autoplay: False 
+
