@@ -5,55 +5,47 @@
   <figcaption></figcaption>
 </figure>
 
-## Introduction to SPM
+## Getting started
 
 Statistical Parametric Mapping refers to the construction and assessment of spatially extended statistical processes used to test hypotheses about functional imaging data. These ideas have been instantiated in a free and open source software that is called **SPM**.
 
 The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject. The current release is designed for the analysis of [fMRI](https://www.fil.ion.ucl.ac.uk/spm/doc/biblio/Keyword/FMRI.html), [PET](https://www.fil.ion.ucl.ac.uk/spm/doc/biblio/Keyword/PET.html), [SPECT](https://www.fil.ion.ucl.ac.uk/spm/doc/biblio/Keyword/PET.html), [EEG](https://www.fil.ion.ucl.ac.uk/spm/doc/biblio/Keyword/EEG.html) and [MEG](https://www.fil.ion.ucl.ac.uk/spm/doc/biblio/Keyword/MEG.html).
 
-## Getting started
-
 <div class="grid cards" markdown>
 
--   :material-clock-fast:{ .lg .middle } __Open-access__
+-   :material-lock-open:{ .lg .middle } __Open-access__
 
     ---
 
-    SPM is freely available
+    SPM is freely available and can be run in [Matlab](https://www.mathworks.com/products/matlab.html) or [Octave](https://octave.org/index.html). 
 
-    [:octicons-arrow-right-24: Getting started](#)
+    [:octicons-arrow-right-24: Download here ](https://www.fil.ion.ucl.ac.uk/spm/software/download/)
 
--   :fontawesome-brands-markdown:{ .lg .middle } __It's just Markdown__
-
-    ---
-
-    Focus on your content and generate a responsive and searchable static site
-
-    [:octicons-arrow-right-24: Reference](#)
-
--   :material-format-font:{ .lg .middle } __Made to measure__
+-   :material-monitor:{ .lg .middle } __Educational materials__
 
     ---
 
-    Change the colors, fonts, language, icons, logo and more with a few lines
+    We provide a curated list of tutorials for different imaging analyses.
 
-    [:octicons-arrow-right-24: Customization](#)
+    [:octicons-arrow-right-24: Tutorials](tutorials/fmri_preprocessing/introduction/)
 
--   :material-scale-balance:{ .lg .middle } __Open Source, MIT__
+-   :fontawesome-solid-graduation-cap:{ .lg .middle } __Courses__
 
     ---
 
-    Material for MkDocs is licensed under MIT and available on [GitHub]
+    Regular SPM courses run every autumn and spring.
 
-    [:octicons-arrow-right-24: License](#)
+    [:octicons-arrow-right-24: Course information](https://www.fil.ion.ucl.ac.uk/spm/course/)
+
+-   :material-account-question:{ .lg .middle } __Support__
+
+    ---
+
+    SPM discussion list provides live support to your queries.
+
+    [:octicons-arrow-right-24: SPM dicscussion list](https://www.fil.ion.ucl.ac.uk/spm/support/)
 
 </div>
-
-SPM is an open-access software which can be freely downloaded from [here](https://www.fil.ion.ucl.ac.uk/spm/software/download/). We provide step-by-step instructions for different analyses that can be performed with SPM and run regular [SPM courses]((https://www.fil.ion.ucl.ac.uk/spm/course/). 
-
-[Tutorials](#)
-
-[SPM dicscussion list](https://www.fil.ion.ucl.ac.uk/spm/support/)
 
 ## History
 
