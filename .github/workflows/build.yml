@@ -1,0 +1,23 @@
+name: build using Material for MkDocs
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.7'
+          architecture: 'x64'
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install mkdocs
+          python3 -m pip install mkdocs-material
+          python3 -m pip install mkdocs-video
+      - name: Build site
+        run: mkdocs build
