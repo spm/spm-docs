@@ -44,6 +44,6 @@ SPM will also create a mean image `meansub-01_task-auditory_bold.nii` which will
 
 ## Video walkthrough
 
-![type:video](../../assets/videos/realignment.mov)
+![type:video](../../assets/videos/realignment.mp4)
 
 --8<-- "addons/abbreviations.md"

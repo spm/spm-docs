@@ -62,7 +62,7 @@ Browse through the image using your mouse or arrow keys. The crosshair will help
     Although initially, checking your data visually might seem daunting, you will notice that with practice you will quickly pick up this skill. [mrishark.com](http://www.mrishark.com/brain.html) has a rich repository of MRI data with various [scanner-related artefacts](http://www.mrishark.com/artifact.html) and [pathologies](http://www.mrishark.com/brain2.html) which can be a helpful resource when learning to distinguish between good and poor quality data. 
 
 ### Video walkthrough 
-![type:video](../../assets/videos/inspecting_anatomical_data.mov)
+![type:video](../../assets/videos/inspecting_anatomical_data.mp4)
 
 ## Inspecting functional data
 
@@ -97,7 +97,7 @@ You will now see :material-play: appear in the bottom-right corner of the SPM gr
     It's a good practice to keep a spreadsheet where you note down your qualitative observations of the data at each preprocessing step. This can be useful down the line when trying to troubleshoot potential analysis problems. 
 
 ### Video walkthrough
-![type:video](../../assets/videos/inspecting_functional_data.mov)
+![type:video](../../assets/videos/inspecting_functional_data.mp4)
 
 
 --8<-- "addons/abbreviations.md"
