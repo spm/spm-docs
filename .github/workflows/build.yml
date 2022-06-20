@@ -2,7 +2,13 @@ name: build using Material for MkDocs
 on:
   push:
     branches:
-      - master
+      - main
+  release:
+    types: [published]
+  pull_request:
+  workflow_dispatch:
+    branches:
+      - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
