@@ -19,7 +19,7 @@ Realignment refers to correcting the functional data for movement that has occur
 
 1. From the SPM menu panel, select `Realign (Estimate & Reslice)`. You will see a pop-up window appear looking like this:
 
-![](../../assets/figures/realignment_batch.png)
+    ![](../../assets/figures/realignment_batch.png)
 
 2. Select `Data` :material-arrow-right-bold: `Session`. 
 3. In the pop-up window, use the left-hand panel to navigate to `sub-01/func/`. 
@@ -29,8 +29,8 @@ Realignment refers to correcting the functional data for movement that has occur
 7. Save this batch for future reference - `File` :material-arrow-right-bold: `Save batch`. Give the file a meaningful name, such as `realignment_batch.mat`. 
 8. Now run your batch by pressing :material-play: in the top left corner. The button will be green if all required fields have specified inputs.
 
-!!! tip "Top tip"
-    In the SPM batch window, all fields marked with `X` require user input. Before running any SPM job make sure that you have specified inputs/parameters for all `X`'s. 
+    !!! tip "Top tip"
+       In the SPM batch window, all fields marked with `X` require user input. Before running any SPM job make sure that you have specified inputs/parameters for all `X`'s. 
 
 Your job is now estimating the 6-parameter (rigid body) spatial transformation that will realign the timeseries. SPM will also plot the estimated timeseries of translations and rotations shown below:
 ![](../../assets/figures/realignment_plot.png)
