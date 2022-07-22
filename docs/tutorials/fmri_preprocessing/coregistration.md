@@ -3,7 +3,7 @@
 ## Coregistration
 
 ??? info "Why coregister my data?" 
-    [normalisation](./normalisation.md). 
+    The goal of coregistration is to put the structural and functional data in alignment and ultimately improve bringing functional data into standard space, i.e. [normalisation](./normalisation.md). 
 
     For a thorough overview of issues related to coregistration, see the SPM book:
 
