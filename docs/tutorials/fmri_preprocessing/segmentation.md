@@ -15,11 +15,13 @@
 
 2. Select `Data` :material-arrow-right-bold: `Volumes`. 
 3. In the pop-up window, use the left-hand panel to navigate to `sub-01/anat/`. 
-4. From the right-hand panel, select the anatomical image `sub-01_T1w.nii` and and press `Done`.
+4. From the right-hand panel, select the anatomical image `sub-01_T1w.nii` and press `Done`.
 5. Select `Save bias corrected` :material-arrow-right-bold: `Save bias corrected`.
 6. Select `Deformation fields` :material-arrow-right-bold: `Forward`.
 7. Save this batch for future reference - `File` :material-arrow-right-bold: `Save batch` and name it, e.g. `segmentation_batch.mat.`
 8. Run your batch by pressing :material-play:.
+
+SPM will now create tissue-specific images (prefixed `c`) and a bias-field corrected structural image (prefixed `m`). Additionally, a deformation field (prefixed `y`) will be generated, which contains three volumes to encode the `x`, `y`, and `z` coordinates. Given that the structural and functional data have been [coregistered](./coregistration.md), this deformation field can be used in normalising the functional data. 
 
 ### Video walkthrough 
 
