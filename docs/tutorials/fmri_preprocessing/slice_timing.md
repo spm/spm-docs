@@ -96,7 +96,7 @@ Slice timing correction aims to account for the differences in timing of data ac
         Note that the `Microtime onset` should be set in the temporal convention (the number is the slice position in time) and scaled to the microtime resolution, whereas the `Reference slice` is in the spatial convention (the number is the slice position in space). 
 
 12. Save this batch for future reference - `File` :material-arrow-right-bold: `Save batch`. Give the file a meaningful name, such as `slice_timing_batch.mat`. 
-13. Now run your batch by pressing :material-play: in the top left corner. The button will be green if all required fields have specified inputs. 
+13. Run your batch by pressing :material-play: in the top left corner. 
 
 ??? info "Slice timing correction - before or after realignment?"
     There is some debate about whether slice timing correction should be used before or after realignment (i.e. motion correction). Performing motion correction first, might mean that data acquired at one time point may be moved to another slice. On the other hand, performing slice timing correction first may result in propagation of motion-induced intensity changes from one volume to the rest of the timeseries. 
