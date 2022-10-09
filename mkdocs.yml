@@ -6,10 +6,11 @@ theme:
     accent: deep orange 
   logo: assets/figures/spm_logo_white.png
   features:
+    - content.tabs.link
     - content.tooltips
     - navigation.tabs
-    - navigation.top
     - navigation.tabs.sticky
+    - navigation.top
 
 nav:
   - Introduction to SPM: 'index.md'
@@ -52,6 +53,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true 
   - pymdownx.tilde
 
 plugins:
