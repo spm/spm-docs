@@ -5,7 +5,7 @@
 Realignment refers to correcting the functional data for movement that has occured during scanning. 
 
 ??? info "Why is correcting for motion important?" 
-    Motion is one of the biggest confounds in fMRI. Movement in the scanner is problematic because it can change the mapping between specific voxels and brain regions, meaning that over the course of a scan signal from one specific location in the brain may be acquired across several different voxels. Movement is also known to induce large signal changes in the data which can introduce structured spatiotemporal noise into the data and cause spurious results.
+    Motion is one of the biggest confounds in fMRI. Movement in the scanner is problematic because it can change the mapping between specific voxels and brain regions, meaning that over the course of a scan signal from one specific location in the brain may be acquired across several different voxels. Movement is also known to induce large signal changes in the data which can introduce structured spatio-temporal noise into the data and cause spurious results.
 
     For a thorough overview of issues related to motion in fMRI, see the SPM book:
 

@@ -18,7 +18,7 @@ MoAEpilot/
     task-auditory_bold.json
 ```
 
-Inside the folder containing the Mother of All Experiments (MoAE) data, you can find `CHANGES`, `dataset_description.json`, `README` and `task-auditory_bold.json` files - these files contain meta-data about the study. The subject directory contains `anat` and `func` folders, which store anatomical and functional images, respectively. Addtionally, onset timings for task data are stored in the `func` folder alongside task images. 
+Inside the folder containing the Mother of All Experiments (MoAE) data, you can find `CHANGES`, `dataset_description.json`, `README` and `task-auditory_bold.json` files - these files contain meta-data about the study. The subject directory, `sub-01`, contains `anat` and `func` folders, which store anatomical and functional images, respectively. Addtionally, onset timings for task data are stored in the `func` folder alongside task images. 
 
 ## Inspecting anatomical data
 
@@ -84,12 +84,12 @@ Select `Check Reg` from the SPM menu and choose the functional data you want to 
     * all available volumes or a 4D file, e.g. `Inf` or `NaN`
     
 
-Up to this point you have only loaded in the first volume from your functional timeseries. To load the full timeseries, right-click on the SPM graphics window and navigate to `Browse`. In the pop-up window type `Inf` in the box below the `Filter` button and hit :material-keyboard-return: on your keyboard. This will prompt SPM to show all 84 volumes present in this directory. Right-click on the list of files and choose `Select all`. Press `Done`. 
+Up to this point you have only loaded the first volume from your functional timeseries. To load the full timeseries, right-click on the SPM graphics window and navigate to `Browse`. In the pop-up window type `Inf` in the box below the `Filter` button and hit :material-keyboard-return: on your keyboard. This will prompt SPM to show all 84 volumes present in this directory. Right-click on the list of files and choose `Select all`. Press `Done`. 
 
 You will now see :material-play: appear in the bottom-right corner of the SPM graphics window. Press the button to watch your functional timeseries as a movie. 
 
 !!! info "What to look for in functiona data?"
-    Checking functional data is similar to checking anatomical data. You want to pay attention to any unwanted distortions, dark/bright spots which can indicate pathologies, incorrect orientation. Keep in mind that the spatial resolution of functional data is lower than that of anatomical data, so some of those issues may be more difficult to spot. Also, it's worth noting that some distortions may be unavoidable in functional data. In the example dataset, you can see that there is some signal dropout towards the frontal pole and orbitofrontal regions. This is a consequence of the sequence used to acquire the data and cannot be fixed with preprocessing but is perfectly normal for this acqusition sequence. 
+    Checking functional data is similar to checking anatomical data. You want to pay attention to any unwanted distortions, dark/bright spots which can indicate pathologies, incorrect orientation. Keep in mind that the spatial resolution of functional data is lower than that of anatomical data, so some of those issues may be more difficult to spot. Also, it's worth noting that some distortions may be unavoidable in functional data. In the example dataset, you can see that there is some signal dropout towards the frontal pole and orbitofrontal regions. This is a consequence of the sequence used to acquire the data and cannot be fixed with preprocessing but is perfectly normal for this type of acqusition. 
 
     Another important part of viewing functional data is to visually check for excessive motion. You can do this by viewing the functional data as a movie, where each volume represents a timepoint in the scan. 
     

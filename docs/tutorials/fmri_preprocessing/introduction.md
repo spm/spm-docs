@@ -7,7 +7,7 @@ fMRI data is inherently noisy and in order to make sense of it, we first have to
 This page goes through an example pipeline for fMRI data preprocessing. 
 
 !!! attention "Customising your pipeline"
-    Although some steps of fMRI preprocessing will always be used, other steps may vary. This is dependednt on the way your data was acquired or the type of analysis you plan to perform. Additionally, the parameters used in each processing step should be tailored to the acquisition parameters of your dataset. The tutorial presented here shows an example pipeline and should not be used as a template but rather as a guide. 
+    Although some steps of fMRI preprocessing will always be used, other steps may vary. This is dependednt on the way your data was acquired and/or the type of analysis you plan to perform. Additionally, the parameters used in each processing step should be tailored to the acquisition parameters of your dataset. The tutorial presented here shows an example pipeline and should not be used as a template but rather as a guide. 
 
     **If you're not sure of the preprocessing steps or parameters appropriate for your data, please consult an experienced fMRI analyst.**
 
@@ -20,9 +20,9 @@ This page goes through an example pipeline for fMRI data preprocessing.
 
 ## About the data
 
-The dataset can be [downloaded from here](https://www.fil.ion.ucl.ac.uk/spm/download/data/MoAEpilot/MoAEpilot.bids.zip). 
+The dataset used in this tutorial can be [downloaded from here](https://www.fil.ion.ucl.ac.uk/spm/download/data/MoAEpilot/MoAEpilot.bids.zip). 
 
-The data consists of 96 volumes (TR = 7s, 64 contiguous slices, 3×3×3mm voxels) from a single subject, in blocks of 6, giving sixteen 42s blocks. Due to lack of lead-in dummy scans, the first 12 volumes have been discarded leaving 84 volumes. 
+The data consists of 96 volumes (TR = 7s, 64 contiguous slices, 3×3×3mm voxels) from a single participant, in blocks of six, giving sixteen 42s blocks. Due to the lack of lead-in dummy scans, the first 12 volumes have been discarded leaving 84 volumes. 
 
 The condition for successive blocks alternated between rest and auditory stimulation, starting with rest. Auditory stimulation was bi-syllabic words presented binaurally at a rate of 60 per minute. 
 

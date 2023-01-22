@@ -28,9 +28,9 @@ Slice timing correction aims to account for the differences in timing of data ac
 ??? info "When to use slice timing correction?"
     * Slice timing can be done on any fMRI data but it is particularly beneficial for studies with **longer TRs** (i.e. >2s). For studies with shorter TRs (≤2s), temporal derivative may be a better option.
 
-    * Slice timing can be performed on **multiband acquisition data**, however, with multiband data and a short TR, slice timing correction can usually be skipped without much impact. If you decide to run slice timing correction on multiband data, it is necessary to use slice timings instead of slice order, since a slice order cannot represent multiple slices acquired at the same time in a vector. If you don't know your slice timings, you can artificially create a slice timing manually, by generating artificial values from the slice order with equal temporal spacing and then scale the numbers on the TR, so that the last temporal slices timings = `TR - TR/(nslices/multiband_channels)`.
+    * Slice timing can be performed on **multiband acquisition data**, however, with multiband data and a short TR, slice timing correction can usually be skipped without much impact. If you decide to run slice timing correction on multiband data, it is necessary to use slice timings instead of slice order, since a slice order cannot represent multiple slices acquired at the same time in a vector. If you don't know your slice timings, you can artificially create a slice timing values manually. Genrate artificial values from the slice order with equal temporal spacing and then scale the numbers to the TR, so that the last temporal slice's timing = `TR - TR/(nslices/multiband_channels)`.
 
-    * If you plan to use **Dynamic Causal Modeling (DCM)**, slice timing correction is necessary.
+    * If you plan to use **DCM**, slice timing correction is necessary.
 
 1. From the SPM menu panel, select `Slice timing`. A pop-up window will open:
 
@@ -51,7 +51,7 @@ Slice timing correction aims to account for the differences in timing of data ac
 
         * `$` - a dollar sign indicates that the preceding characters end the file name. Filering for `\.nii$` will show all files with the extension `.nii`.
 
-       These expressions can be combined to create more powerful filters. For example, using `^r.*\.nii$` will filter for all files starting with `r`, having any number of characters, and ending in `.nii`.   
+        These expressions can be combined to create more powerful filters. For example, using `^r.*\.nii$` will filter for all files starting with `r`, having any number of characters, and ending in `.nii`.   
 
 5. Select `rsub-01_task-auditory_bold.nii` from the right-hand panel and press `Done`. 
 6. In the batch window, select `Number of slices` :material-arrow-right-bold: `64`
@@ -60,7 +60,7 @@ Slice timing correction aims to account for the differences in timing of data ac
 8. Select `TA` :material-arrow-right-bold: `6.8906` or `7-(7/64)`
 
     !!! tip "Top tip"
-        SPM batch window can do simple calculations for you. The equation to calculate TA (the time between the start of acquisition of the first and the last slice) is `TR-(TR/nslices)`. Simply plug in the number in the equation and press `Okay`.
+        SPM batch window can do simple calculations for you. The equation to calculate TA (the time between the start of acquisition of the first and the last slice) is `TR-(TR/nslices)`. Simply plug in the numbers in the equation and press `Okay`.
 
 9. Select `Slice order` :material-arrow-right-bold: `[64:-1:1]`
 
@@ -87,11 +87,11 @@ Slice timing correction aims to account for the differences in timing of data ac
 
         In SPM, you can change this parameter in `Reference slice`/`refslice`. If you want to choose the first acquired slice as a reference slice, you need to use the slice spatial number as reference slice. For example, with a slice order sequential descending `4 3 2 1`, to set the first temporal slice as the reference slice, you need to set the reference slice to 4. If instead of slice order you use slice timing in seconds (e.g. `2.0 1.0 0.0 1.5 0.5`), then you need to also specify the reference slice in seconds (e.g. to set the first slice as the reference, use `0`).
 
-        You can also choose to use another reference slice. Although setting the reference slice to the first is the easiest and the most common, another common reference is to use the middle slice for more precision with sequential slice orders. Using the middle slice theoretically guarantees that we minimize the amount of temporal interpolation error because the maximum interpolation will be of TR/2 (in negative and positive shifts). Also, since we assume we are in a sequential slice order, the middle slice in time is also the middle slice in space, thus we also minimise the spatial interpolation error and push the accumulating errors to the top and bottom slices, where there is usually less tissues of interest.
+        You can also choose to use another reference slice. Although setting the reference slice to the first is the easiest and the most common, another common reference is to use the middle slice. This allows for more precision with sequential slice orders. Using the middle slice theoretically guarantees that we minimise the amount of temporal interpolation error because the maximum interpolation will be of TR/2 (in negative and positive shifts). Also, since we assume we are in a sequential slice order, the middle slice in time is also the middle slice in space, thus we also minimise the spatial interpolation error and push the accumulating errors to the top and bottom slices, where there is usually less tissues of interest.
 
         It is important to note that whatever reference slice you use, you should check that the `Microtime onset`/`fMRI_T0` in the first-level model specification corresponds to your `Reference slice`/`refslice` of the slice timing module to ensure that your onsets during the statistical test are shifted appropriately. Note that by default, the microtime onset is set to `8` over `16` in SPM12, which corresponds to a middle reference slice, thus if you use the first temporal slice as the reference slice, you should change the `Microtime onset` to `1`.
 
-        In any case, one must ensure that the slice timing correction reference slice is the same as the first-level model `Microtime onset`. To make it easier, you can change the `Microtime resolution` to the number of slices there are in each volume, so that the number of bins in the statistical model will be the same as the number of slices used for slice timing correction, hence the microtime onset will correspond to the slice position in time.
+        In any case, it's important to ensure that the slice timing correction reference slice is the same as the first-level model `Microtime onset`. To make it easier, you can change the `Microtime resolution` to the number of slices there are in each volume, so that the number of bins in the statistical model will be the same as the number of slices used for slice timing correction, hence the microtime onset will correspond to the slice position in time.
 
         Note that the `Microtime onset` should be set in the temporal convention (the number is the slice position in time) and scaled to the microtime resolution, whereas the `Reference slice` is in the spatial convention (the number is the slice position in space). 
 
@@ -109,7 +109,7 @@ Slice timing correction aims to account for the differences in timing of data ac
     
     On the other hand, realignment can be done first if you use a contiguous slice order and expect only slight head movement. 
     
-    To avoid the interactions between realignment and slice timing correction and propagation of errors from one step to the next step, methods performing simultaneous realignment and slice timing correction have been designed. To learn more about them, visit the [SpaceTimeRealigner section of the nipype documentation](https://nipype.readthedocs.io/en/0.13.1/interfaces/generated/interfaces.nipy/preprocess.html) and the companion paper [Roche (2011)](https://doi.org/10.1109/TMI.2011.2131152). 
+    To avoid the interactions between realignment and slice timing correction and propagation of errors from one step to the next step, methods performing simultaneous realignment and slice timing correction have been developed. To learn more about them, visit the [SpaceTimeRealigner section of the nipype documentation](https://nipype.readthedocs.io/en/0.13.1/interfaces/generated/interfaces.nipy/preprocess.html) and the companion paper [Roche (2011)](https://doi.org/10.1109/TMI.2011.2131152). 
 
 ### Video walkthrough
 
