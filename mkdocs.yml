@@ -7,6 +7,7 @@ theme:
   logo: assets/images/spm_logo_white.png
   favicon: assets/images/spm_favicon.png
   features:
+    - content.code.copy
     - content.tabs.link
     - content.tooltips
     - navigation.tabs
@@ -14,8 +15,7 @@ theme:
     - navigation.top
 
 nav:
-  - Introduction to SPM: 'index.md'
-  - Download: 'https://www.fil.ion.ucl.ac.uk/spm/software/download/'
+  - Introduction: 'index.md'
   - Installation: 'installation.md'
   - 'Tutorials':
     - 'fMRI':
