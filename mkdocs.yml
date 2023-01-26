@@ -4,7 +4,8 @@ theme:
   palette:
     primary: blue grey
     accent: deep orange 
-  logo: assets/figures/spm_logo_white.png
+  logo: assets/images/spm_logo_white.png
+  favicon: assets/images/spm_favicon.png
   features:
     - content.tabs.link
     - content.tooltips
@@ -18,19 +19,20 @@ nav:
   - Installation: 'installation.md'
   - 'Tutorials':
     - 'fMRI':
-      - 'Preprocessing': 
-          - 'Introduction to preprocessing': './tutorials/fmri_preprocessing/introduction.md'
-          - 'Visual inspection of the data': './tutorials/fmri_preprocessing/visual_inspection.md'
-          - 'Removal of dummy scans': './tutorials/fmri_preprocessing/dummy_scans.md'
-          - 'Realignment': './tutorials/fmri_preprocessing/realignment.md'
-          - 'Slice timing correction': './tutorials/fmri_preprocessing/slice_timing.md'
-          - 'Coregistration': './tutorials/fmri_preprocessing/coregistration.md'
-          - 'Segmentation': './tutorials/fmri_preprocessing/segmentation.md'
-          - 'Normalisation': './tutorials/fmri_preprocessing/normalisation.md'
-          - 'Smoothing': './tutorials/fmri_preprocessing/smoothing.md'
-      - 'First-level modelling - block design': './fmri_modelling/block_design.md'
-      - 'First-level modelling - event-related design': './fmri_modelling/event_related_design.md'
-      - 'Group-level modelling': './fmri_modelling/group_level.md'
+      - 'Preprocessing':
+        - 'Introduction to preprocessing': './tutorials/fmri_preprocessing/introduction.md'
+        - 'Visual inspection of the data': './tutorials/fmri_preprocessing/visual_inspection.md'
+        - 'Removal of dummy scans': './tutorials/fmri_preprocessing/dummy_scans.md'
+        - 'Realignment': './tutorials/fmri_preprocessing/realignment.md'
+        - 'Slice timing correction': './tutorials/fmri_preprocessing/slice_timing.md'
+        - 'Coregistration': './tutorials/fmri_preprocessing/coregistration.md'
+        - 'Segmentation': './tutorials/fmri_preprocessing/segmentation.md'
+        - 'Normalisation': './tutorials/fmri_preprocessing/normalisation.md'
+        - 'Smoothing': './tutorials/fmri_preprocessing/smoothing.md'
+      - 'Statistical modelling':
+        - 'First-level modelling - block design': './tutorials/fmri_modelling/block_design.md'
+        - 'First-level modelling - event-related design': './tutorials/fmri_modelling/event_related_design.md'
+        - 'Group-level modelling': './tutorials/fmri_modelling/group_level.md'
   - Courses: 'https://www.fil.ion.ucl.ac.uk/spm/course/'
   - Support: 'https://www.fil.ion.ucl.ac.uk/spm/support/'
 
@@ -48,6 +50,9 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.snippets
   - pymdownx.superfences
