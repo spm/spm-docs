@@ -2,8 +2,10 @@
 
 ## Segmentation
 
+Segmentation splits an image into individual tissue types. 
+
 ??? info "Why segment my data?" 
-    Segmentation refers to separating your data into different tissue types. Segmentation in SPM is done based on probability maps of six tissues: grey matter, white matter, cerebrospinal fluid, non-brain soft tissuesm skull, and other (representing anything not captured by the previous maps). Knowing which voxels in your image belong to which tissue type can improve [normalisation](./normalisation.md). 
+    Segmentation refers to separating your data into different tissue types. Segmentation in SPM is done based on probability maps of six tissues: grey matter, white matter, cerebrospinal fluid, non-brain soft tissues, skull, and other (representing anything not captured by the previous maps). Knowing which voxels in your image belong to which tissue type can improve [normalisation](./normalisation.md). 
 
     For a thorough overview of issues related to segmentation, see the SPM book:
 
