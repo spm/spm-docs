@@ -2,6 +2,8 @@
 
 ## Normalisation
 
+Normalisation refers to bringing your data into a standard template space to allow group-level statistics. 
+
 ??? info "Why normalise my data?" 
     Normalisation is an essential step in neuroimaging analysis that allows group-level analyses. When neuroimaging data is normalised it means it has been transformed to fit into a standard template space. While many different templates exist, the most commonly used one is [MNI152](https://mcin.ca/research/neuroimaging-methods/atlases/). 
 
