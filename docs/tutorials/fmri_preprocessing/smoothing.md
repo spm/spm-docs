@@ -2,6 +2,34 @@
 
 ## Smoothing
 
+Smoothing is the process of averaging the signal in each voxel with a weighted average of the signal of neighbouring voxels. 
+
+??? info "Why smooth my data?" 
+    Smoothing is a common step performed as part of fMRI data preprocessing. Although it might seem counterintuitive since it decreases the spatial resolution of the data, it has several benefits. Smoothing increases the signal-to-noise ratio (i.e. enhances the signal) and can further help with [normalisation](./normalisation.md) by improving the mapping of small structures to the template space. 
+
+    For a thorough overview of issues related to smoothing, see the SPM book:
+
+    [Penny, W., Friston, K., Ashburner, J., Kiebel, S., & Nichols, T. (2006). *Statistical parametric mapping: The analysis of functional brain images* (1st ed.).](http://www.elsevierdirect.com/product.jsp?isbn=9780123725608&srccode=89660)
+
+    And other readings:
+
+    [Jenkinson, M. & Chappell, M. (2018). *Introduction to neuroimaging analysis*. Oxford University Press.](http://www.neuroimagingprimers.org/examples/introduction-primer-example-boxes/)
+
+    [Poldrack, R. A., Mumford, J. A., & Nichols, T. E. (2011). *Handbook of functional MRI data analysis*. Cambridge University Press.](https://www.cambridge.org/core/books/handbook-of-functional-mri-data-analysis/8EDF966C65811FCCC306F7C916228529)
+
+1. From the SPM menu panel, select `Smooth`. You will see a pop-up window appear looking like this:
+
+    ![](../../assets/figures/smoothing_batch.png)
+
+2. Select `Images to smooth`.
+3. In the pop-up window, navigate to `sub-01/func/`.
+4. From the right-hand panel, select the normalised, religned, and slice time corrected data - `warsub-01_task-auditory.nii`. Use the box underneath the `Filter` button to show a 4D file by typing in `NaN` and pressing ++return++. You can do this in combination with filtering for files starting with `war` by typing in `^war.*` in the `Filter` box and pressing ++return++. 
+5. Select `FWHM` and change [8 8 8] to [6 6 6]. 
+6. Save this batch for future reference - `File` :material-arrow-right-bold: `Save batch` and name it, e.g. `smoothing_batch.mat.`
+7. Run your batch by pressing :material-play:.
+
+SPM will now smooth your data by 6mm in each direction (i.e. x, y, z). The files will have the prefix `s`.
+
 ### Video walkthrough
 
 --8<-- "addons/abbreviations.md"
