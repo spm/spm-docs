@@ -2,6 +2,8 @@
 
 ## Coregistration
 
+Coregistration brings two images into alignment. In this case this we will be working with the subject-specific structural and functional data. 
+
 ??? info "Why coregister my data?" 
     The goal of coregistration is to put the structural and functional data in alignment and ultimately improve bringing functional data into standard space, i.e. [normalisation](./normalisation.md). 
 
