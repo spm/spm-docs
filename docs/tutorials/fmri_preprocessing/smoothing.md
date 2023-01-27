@@ -24,11 +24,11 @@ Smoothing is the process of averaging the signal in each voxel with a weighted a
 2. Select `Images to smooth`.
 3. In the pop-up window, navigate to `sub-01/func/`.
 4. From the right-hand panel, select the normalised, religned, and slice time corrected data - `warsub-01_task-auditory.nii`. Use the box underneath the `Filter` button to show a 4D file by typing in `NaN` and pressing ++return++. You can do this in combination with filtering for files starting with `war` by typing in `^war.*` in the `Filter` box and pressing ++return++. 
-5. Select `FWHM` and change [8 8 8] to [6 6 6]. 
+5. Select `FWHM` and change `[8 8 8]` to `[6 6 6]`. 
 6. Save this batch for future reference - `File` :material-arrow-right-bold: `Save batch` and name it, e.g. `smoothing_batch.mat.`
 7. Run your batch by pressing :material-play:.
 
-SPM will now smooth your data by 6mm in each direction (i.e. x, y, z). The files will have the prefix `s`.
+SPM will now smooth your data by 6mm in each direction (i.e. `x`, `y`, `z`). The files will have the prefix `s`.
 
 ### Video walkthrough
 
