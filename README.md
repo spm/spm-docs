@@ -7,9 +7,9 @@ The SPM Documentation is built using [Material for MkDocs](https://squidfunk.git
 
 All the features of Material for MkDocs are described in its [reference documentation](https://squidfunk.github.io/mkdocs-material/reference/). We are sponsoring the the project and therefore have access to all of the [Insiders features](https://squidfunk.github.io/mkdocs-material/insiders/).
 
-## Getting started :skier:
+## :skier: Getting started
 
-### File layout :bookmark_tabs:
+### :bookmark_tabs: File layout
 
 `MkDocs` is configured using the [mkdocs.yml](mkdocs.yml) file at the root of the git repository.
 
@@ -17,7 +17,7 @@ The [mkdocs.yml](mkdocs.yml) file defines the top level navigation for the site.
 
 See [MkDocs documentation](https://www.mkdocs.org/user-guide/writing-your-docs/#file-layout) for more details.
 
-### Markdown syntax :cool:
+### :cool: Markdown syntax
 
 `MkDocs` pages are written using the [Markdown](https://daringfireball.net/projects/markdown/syntax) syntax.
 
@@ -25,7 +25,9 @@ See [MkDocs documentation](https://www.mkdocs.org/user-guide/writing-your-docs/#
 
 See [MkDocs documentation](https://www.mkdocs.org/user-guide/writing-your-docs/#writing-with-markdown) for more details.
 
-## Installation :computer:
+To edit Markdown documents, we recommend [Visual Studio Code](https://code.visualstudio.com/) with its [preview mode](https://code.visualstudio.com/docs/languages/markdown).
+
+## :computer: Installation
 
 If you want to edit and build the documentation yourself, you first need to clone or download the repository:
 
@@ -56,13 +58,13 @@ To deactivate the virtual environment when you finished working, use:
 deactivate
 ```
 
-## Testing :bug:
+## :bug: Testing
 
-### Build :hammer_and_wrench:
+### :hammer_and_wrench: Build
 
 The documentation is built using [GitHub Action](https://github.com/spm/spm-docs/actions) after each commit in the `main` branch with the non-_Insiders_ version of Material for MkDocs.
 
-### Spelling :pencil:
+### :pencil: Spelling
 
 Detect common misspellings with [codespell](https://github.com/codespell-project/codespell).
 
@@ -72,13 +74,13 @@ TO run `codespell` interactively on the SPM documentation, use:
 codespell -w -i 1 docs
 ```
 
-## Contributing :clinking_glasses:
+## :clinking_glasses: Contributing
 
 Contributions are most welcome and appreciated! See the [First Contributions](https://github.com/firstcontributions/first-contributions) project for instructions.
 
 1. [GitHub repository](https://github.com/spm/spm-docs): Report issues, make feature requests or open pull requests.
 2. [SPM@JiscMail](https://www.fil.ion.ucl.ac.uk/spm/support/): Open mailing list for discussion and questions about SPM.
 
-## License :ribbon:
+## :ribbon: License
 
 The SPM Documentation is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, see [LICENSE](LICENSE) or visit http://creativecommons.org/licenses/by-sa/4.0/.
