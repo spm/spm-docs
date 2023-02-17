@@ -5,7 +5,7 @@
 
 The SPM Documentation is built using [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), a theme for the static site generator [MkDocs](https://www.mkdocs.org/).
 
-All the features of Material for MkDocs are described in its [reference documentation](https://squidfunk.github.io/mkdocs-material/reference/). We are sponsoring the the project and therefore have access to all of the [Insiders features](https://squidfunk.github.io/mkdocs-material/insiders/).
+All the features of Material for MkDocs are described in its [reference documentation](https://squidfunk.github.io/mkdocs-material/reference/). We are [sponsoring](https://github.com/orgs/spm/sponsoring) the project and therefore have access to all of the [Insiders features](https://squidfunk.github.io/mkdocs-material/insiders/).
 
 ## :skier: Getting started
 
@@ -68,7 +68,7 @@ The documentation is built using [GitHub Action](https://github.com/spm/spm-docs
 
 Detect common misspellings with [codespell](https://github.com/codespell-project/codespell).
 
-TO run `codespell` interactively on the SPM documentation, use:
+To run `codespell` interactively on the SPM documentation, use:
 
 ```shell
 codespell -w -i 1 docs
