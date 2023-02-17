@@ -1,4 +1,4 @@
-name: build using Material for MkDocs
+name: Build
 on:
   push:
     branches:
