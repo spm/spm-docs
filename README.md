@@ -23,8 +23,7 @@ source venv/bin/activate
 pip  install --requirement requirements.txt
 ```
 
-Preview your changes in the documentation with `mkdocs serve`
-and build a static site (in `site`) with `mkdocs build`.
+Preview your changes in the documentation with `mkdocs serve` and build a static site (in `site`) with `mkdocs build`.
 
 ```shell
 mkdocs serve
@@ -39,9 +38,19 @@ To deactivate the virtual environment when you finished working, use:
 deactivate
 ```
 
-## Test :bug:
+## Testing :bug:
 
-The documentation is built using [GitHub Action](https://github.com/spm/spm-docs/actions) after each commit with the non-Insiders version of Material for MkDocs.
+### Build
+
+The documentation is built using [GitHub Action](https://github.com/spm/spm-docs/actions) after each commit with the non-_Insiders_ version of Material for MkDocs.
+
+### Spelling
+
+Detect common misspellings with [codespell](https://github.com/codespell-project/codespell).
+
+## Contributing
+
+
 
 ## License
 
