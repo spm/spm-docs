@@ -39,3 +39,7 @@ deactivate
 ## Test :bug:
 
 The documentation is built using [GitHub Action](https://github.com/spm/spm-docs/actions) after each commit with the non-Insiders version of Material for MkDocs.
+
+## License
+
+The SPM Documentation is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, see [LICENSE](LICENSE) or visit http://creativecommons.org/licenses/by-sa/4.0/.
