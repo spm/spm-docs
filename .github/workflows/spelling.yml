@@ -23,5 +23,8 @@ jobs:
           python3 -m pip install -r requirements.txt
           apt install aspell aspell-en hunspell hunspell-en-gb
       - name: codespell
-        run: codespell docs
-      - pyspelling || true
+        run: |
+          codespell docs
+      - name: pyspelling
+        run: |
+          pyspelling || true
