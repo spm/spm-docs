@@ -20,13 +20,12 @@ matrix:
   - pyspelling.filters.context:
       context_visible_first: true
       delimiters:
-      - open: '^--8<--'
-        close: 'md"$'
-      - open: '^:'
-        content: '[a-z0-9\-]*'
-        close: ':$'
+      - open: ':'
+        content: '[\w-]*'
+        close: ':'
   - pyspelling.filters.markdown:
       markdown_extensions:
+      - pymdownx.snippets
       - markdown.extensions.extra:
   - pyspelling.filters.html:
       comments: false

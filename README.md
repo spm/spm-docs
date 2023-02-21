@@ -69,12 +69,25 @@ The documentation is built using [GitHub Action](https://github.com/spm/spm-docs
 
 ### :pencil: Spelling
 
+#### codespell
+
 Detect common misspellings with [codespell](https://github.com/codespell-project/codespell).
 
 To run `codespell` interactively on the SPM documentation, use:
 
 ```shell
 codespell -w -i 1 docs
+```
+
+#### PySpelling
+
+To run [`pySpelling`](https://facelessuser.github.io/pyspelling/) on the SPM documentation, use:
+
+```shell
+# Run PySpelling using the default spell checker, Aspell
+pyspelling
+# Run PySpelling using the Hunspell spell checker
+pyspelling --spellchecker hunspell
 ```
 
 ## :clinking_glasses: Contributing
