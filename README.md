@@ -1,11 +1,13 @@
 # :notebook_with_decorative_cover: SPM Documentation :wave:
 
-[![License: CC-BY-SA-4.0](https://img.shields.io/badge/license-CC%20BY--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![License: CC-BY-SA-4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [![Tests](https://github.com/spm/spm-docs/actions/workflows/build.yml/badge.svg)](https://github.com/spm/spm-docs/actions/workflows/build.yml)
 
 The SPM Documentation is built using [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), a theme for the static site generator [MkDocs](https://www.mkdocs.org/).
 
 All the features of Material for MkDocs are described in its [reference documentation](https://squidfunk.github.io/mkdocs-material/reference/). We are [sponsoring](https://github.com/orgs/spm/sponsoring) the project and therefore have access to all of the [Insiders features](https://squidfunk.github.io/mkdocs-material/insiders/).
+
+> :warning: This repository contains all the files used to generate the SPM documentation. This is therefore the place to make some edits and modifications to the documentation. If you only want to read the documentation, please have a look at [TBA](#).
 
 ## :skier: Getting started
 
@@ -23,7 +25,7 @@ See [MkDocs documentation](https://www.mkdocs.org/user-guide/writing-your-docs/#
 
 `MkDocs` natively supports [Markdown extensions](https://squidfunk.github.io/mkdocs-material/setup/extensions/) that enhance the Markdown writing experience. [Plugins](https://www.mkdocs.org/dev-guide/plugins/), built-in or third-party, are extensions to the MkDocs framework which allow users to add custom functionality and features to their MkDocs projects. These plugins can be used to add additional features such as search or analytics.
 
-See [MkDocs documentation](https://www.mkdocs.org/user-guide/writing-your-docs/#writing-with-markdown) for more details.
+See [MkDocs documentation](https://www.mkdocs.org/user-guide/writing-your-docs/#writing-with-markdown) for more details, and [best-of-mkdocs](https://github.com/pawamoy/best-of-mkdocs) for a curated list of plugins.
 
 To edit Markdown documents, we recommend [Visual Studio Code](https://code.visualstudio.com/) with its [preview mode](https://code.visualstudio.com/docs/languages/markdown).
 
