@@ -29,6 +29,6 @@ SPM will now implement a coregistration between the structural and functional da
 ![](../../assets/figures/coregistration_plot.png)
 
 
-### Video walkthrough
+### Video walk-through
 
 --8<-- "addons/abbreviations.md"

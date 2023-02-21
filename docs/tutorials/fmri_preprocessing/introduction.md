@@ -7,7 +7,7 @@ fMRI data is inherently noisy and in order to make sense of it, we first have to
 This page goes through an example pipeline for fMRI data preprocessing. 
 
 !!! attention "Customising your pipeline"
-    Although some steps of fMRI preprocessing will always be used, other steps may vary. This is dependednt on the way your data was acquired and/or the type of analysis you plan to perform. Additionally, the parameters used in each processing step should be tailored to the acquisition parameters of your dataset. The tutorial presented here shows an example pipeline and should not be used as a template but rather as a guide. 
+    Although some steps of fMRI preprocessing will always be used, other steps may vary. This is dependent on the way your data was acquired and/or the type of analysis you plan to perform. Additionally, the parameters used in each processing step should be tailored to the acquisition parameters of your dataset. The tutorial presented here shows an example pipeline and should not be used as a template but rather as a guide. 
 
     **If you're not sure of the preprocessing steps or parameters appropriate for your data, please consult an experienced fMRI analyst.**
 

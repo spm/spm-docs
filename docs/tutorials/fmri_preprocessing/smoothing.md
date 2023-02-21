@@ -5,7 +5,7 @@
 Smoothing is the process of averaging the signal in each voxel with a weighted average of the signal of neighbouring voxels. 
 
 ??? info "Why smooth my data?" 
-    Smoothing is a common step performed as part of fMRI data preprocessing. Although it might seem counterintuitive since it decreases the spatial resolution of the data, it has several benefits. Smoothing increases the signal-to-noise ratio (i.e. enhances the signal), compensates for minor differences in neuroanatomy across individuals, and can further help with [normalisation](./normalisation.md) by improving the mapping of small structures to the template space. 
+    Smoothing is a common step performed as part of fMRI data preprocessing. Although it might seem counter-intuitive since it decreases the spatial resolution of the data, it has several benefits. Smoothing increases the signal-to-noise ratio (i.e. enhances the signal), compensates for minor differences in neuroanatomy across individuals, and can further help with [normalisation](./normalisation.md) by improving the mapping of small structures to the template space. 
 
     For a thorough overview of issues related to smoothing, see the SPM book:
 
@@ -23,7 +23,7 @@ Smoothing is the process of averaging the signal in each voxel with a weighted a
 
 2. Select `Images to smooth`.
 3. In the pop-up window, navigate to `sub-01/func/`.
-4. From the right-hand panel, select the normalised, religned, and slice time corrected data - `warsub-01_task-auditory.nii`. Use the box underneath the `Filter` button to show a 4D file by typing in `NaN` and pressing ++return++. You can do this in combination with filtering for files starting with `war` by typing in `^war.*` in the `Filter` box and pressing ++return++. 
+4. From the right-hand panel, select the normalised, realigned, and slice time corrected data - `warsub-01_task-auditory.nii`. Use the box underneath the `Filter` button to show a 4D file by typing in `NaN` and pressing ++return++. You can do this in combination with filtering for files starting with `war` by typing in `^war.*` in the `Filter` box and pressing ++return++. 
 5. Select `FWHM` and change `[8 8 8]` to `[6 6 6]`. 
 
     ??? info "How to select a smoothing kernel?"
@@ -34,6 +34,6 @@ Smoothing is the process of averaging the signal in each voxel with a weighted a
 
 SPM will now smooth your data by 6mm in each direction (i.e. `x`, `y`, `z`). The files will have the prefix `s`.
 
-### Video walkthrough
+### Video walk-through
 
 --8<-- "addons/abbreviations.md"

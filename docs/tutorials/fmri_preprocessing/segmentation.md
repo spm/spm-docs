@@ -25,6 +25,6 @@ Segmentation splits an image into individual tissue types.
 
 SPM will now create tissue-specific images (prefixed `c`) and a bias-field corrected structural image (prefixed `m`). Additionally, a deformation field (prefixed `y`) will be generated, which contains three volumes to encode the `x`, `y`, and `z` coordinates. Given that the structural and functional data have been [coregistered](./coregistration.md), this deformation field can be used in normalising the functional data. 
 
-### Video walkthrough 
+### Video walk-through 
 
 --8<-- "addons/abbreviations.md"

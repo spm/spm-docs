@@ -11,7 +11,7 @@ Slice timing correction aims to account for the differences in timing of data ac
     
     This means that depending on the TR, there is a delay between the acquisition of the first and the last slice/group of slices. To fix this issue, information about the time of acquitision of each slice can be used to interpolate the signal of each slice in a volume to the same timepoint (referred to as the *reference slice*). It is thus important to know your data's TR and slice order acquisition or slice timings. 
     
-    Slice timing has been shown to reliably increase sensitivity and statistical power without adverse effects, particularly for studies with longer TRs (>2s; [Sladky et al., 2011](https://doi.org/10.1016/j.neuroimage.2011.06.078)). However, it is important to remember that slice timing is an interpolation method, which means it modifies the original data. As a general rule in imaging analysis, interpolation should be avoided unless necessary. In the case of slice timing, there is a risk of artifacts from one volume being propagated to other volumes in the timeseries,  which can be particularly problematic for data with large amounts of motion. 
+    Slice timing has been shown to reliably increase sensitivity and statistical power without adverse effects, particularly for studies with longer TRs (>2s; [Sladky et al., 2011](https://doi.org/10.1016/j.neuroimage.2011.06.078)). However, it is important to remember that slice timing is an interpolation method, which means it modifies the original data. As a general rule in imaging analysis, interpolation should be avoided unless necessary. In the case of slice timing, there is a risk of artifacts from one volume being propagated to other volumes in the time series,  which can be particularly problematic for data with large amounts of motion. 
     
     An alternative to slice timing for task fMRI is the use of a *temporal derivative*, i.e. additional regressors in the first-level model which can shift the model in time to get the best fit. This avoids modyfying the original data and has an additional benefit of accounting for variations in the HRF. Temporal derivative can be particularly useful for studies with shorter TRs (≤2s), where slice timining issues are not as problematic. 
 
@@ -38,7 +38,7 @@ Slice timing correction aims to account for the differences in timing of data ac
 
 2. Select `Data` :material-arrow-right-bold: `Session`.
 3. In the pop-up window, use the left-hand panel to navigate to `sub-01/func/`. 
-4. Identify the realigned timeseries - this will be the file with an `r` prefix, i.e. `rsub-01_task-auditory_bold.nii`. Use the box underneath the `Filter` button to show a 4D file by typing in `NaN` and pressing ++return++. You can do this in combination with filtering for files starting with `r` by typing in `^r.*` in the `Filter` box and pressing ++return++. 
+4. Identify the realigned time series - this will be the file with an `r` prefix, i.e. `rsub-01_task-auditory_bold.nii`. Use the box underneath the `Filter` button to show a 4D file by typing in `NaN` and pressing ++return++. You can do this in combination with filtering for files starting with `r` by typing in `^r.*` in the `Filter` box and pressing ++return++. 
 
     !!! tip "Top tip"
         The `Filter` box allows you to filter files based on a specific combination of characters. The syntax used in filtering file is based on regular expressions. Below are some useful expressions for selecting files:
@@ -99,7 +99,7 @@ Slice timing correction aims to account for the differences in timing of data ac
 13. Run your batch by pressing :material-play: in the top left corner. 
 
 ??? info "Slice timing correction - before or after realignment?"
-    There is some debate about whether slice timing correction should be used before or after realignment (i.e. motion correction). Performing motion correction first, might mean that data acquired at one time point may be moved to another slice. On the other hand, performing slice timing correction first may result in propagation of motion-induced intensity changes from one volume to the rest of the timeseries. 
+    There is some debate about whether slice timing correction should be used before or after realignment (i.e. motion correction). Performing motion correction first, might mean that data acquired at one time point may be moved to another slice. On the other hand, performing slice timing correction first may result in propagation of motion-induced intensity changes from one volume to the rest of the time series. 
     
     It is advised to use slice timing correction first if:
 
@@ -111,6 +111,6 @@ Slice timing correction aims to account for the differences in timing of data ac
     
     To avoid the interactions between realignment and slice timing correction and propagation of errors from one step to the next step, methods performing simultaneous realignment and slice timing correction have been developed. To learn more about them, visit the [SpaceTimeRealigner section of the nipype documentation](https://nipype.readthedocs.io/en/0.13.1/interfaces/generated/interfaces.nipy/preprocess.html) and the companion paper [Roche (2011)](https://doi.org/10.1109/TMI.2011.2131152). 
 
-### Video walkthrough
+### Video walk-through
 
 --8<-- "addons/abbreviations.md"

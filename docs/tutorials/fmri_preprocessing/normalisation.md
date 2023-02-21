@@ -29,13 +29,13 @@ Normalisation refers to bringing your data into a standard template space to all
 4. From the right-hand panel, select the deformation field generated during [coregistration](./coregistration.md) - `y_sub-01_T1w.nii` and press `Done`.
 5. Select `Images to write`.
 6. In the pop-up window, navigate to `sub-01/func/`. 
-7. From the right-hand panel, select the religned and slice time corrected data - `arsub-01_task-auditory.nii`. Use the box underneath the `Filter` button to show a 4D file by typing in `NaN` and pressing ++return++. You can do this in combination with filtering for files starting with `ar` by typing in `^ar.*` in the `Filter` box and pressing ++return++. 
+7. From the right-hand panel, select the realigned and slice time corrected data - `arsub-01_task-auditory.nii`. Use the box underneath the `Filter` button to show a 4D file by typing in `NaN` and pressing ++return++. You can do this in combination with filtering for files starting with `ar` by typing in `^ar.*` in the `Filter` box and pressing ++return++. 
 8. *Optional*: Under `Writing options`, change `Voxel sizes` form `[2 2 2]` to `[3 3 3]`. This will write images at a resolution closer to that at which they were acquired.
 9. Save this batch for future reference - `File` :material-arrow-right-bold: `Save batch` and name it, e.g. `normalisation_batch.mat.`
 10. Run your batch by pressing :material-play:.
 
 SPM will now write spatially normalised files to the functional data directory, i.e. `sub-01/func/`. These files have the prefix `w`.
 
-### Video walkthrough
+### Video walk-through
 
 --8<-- "addons/abbreviations.md"
