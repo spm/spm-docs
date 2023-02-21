@@ -1,0 +1,43 @@
+spellchecker: aspell
+
+matrix:
+- name: Markdown
+  sources:
+  - '*.md'
+  - 'docs/**/*.md'
+  aspell:
+    lang: en
+    d: en_GB
+    ignore-case: true
+  hunspell:
+    d: en_GB
+  dictionary:
+    wordlists:
+      - .wordlist.txt
+    output: .wordlist.dic
+    encoding: utf-8
+  pipeline:
+  - pyspelling.filters.context:
+      context_visible_first: true
+      delimiters:
+      - open: '^--8<--'
+        close: 'md"$'
+      - open: '^:'
+        content: '[a-z0-9\-]*'
+        close: ':$'
+  - pyspelling.filters.markdown:
+      markdown_extensions:
+      - markdown.extensions.extra:
+  - pyspelling.filters.html:
+      comments: false
+      attributes:
+      - title
+      - alt
+      ignores:
+      - code
+      - pre
+      - blockquote
+      - span
+      - a
+  - pyspelling.filters.url:
+
