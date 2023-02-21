@@ -97,6 +97,12 @@ pyspelling --spellchecker hunspell
 
 To run [`markdownlint-cli`](https://github.com/igorshubovych/markdownlint-cli), a command line interface to [`markdownlint`](https://github.com/DavidAnson/markdownlint), use:
 
+```shell
+markdownlint "docs/**/*.md"
+```
+
+Note that only MkDocs build and codespell will fail continuous integration on GitHub Actions. The other reports are only advisory.
+
 ## :clinking_glasses: Contributing
 
 Contributions are most welcome and appreciated! See the [First Contributions](https://github.com/firstcontributions/first-contributions) project for instructions.
