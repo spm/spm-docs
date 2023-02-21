@@ -1,3 +1,5 @@
 [codespell]
 ignore-words = .wordlist.txt
+ignore-regex = (FWE|TE|ans|Unser)
+skip = *.pdf
 quiet-level = 2

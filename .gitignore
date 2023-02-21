@@ -10,4 +10,7 @@ ENV/
 env.bak/
 venv.bak/
 
+# Spellcheck
+.wordlist.dic
+
 .DS_Store
