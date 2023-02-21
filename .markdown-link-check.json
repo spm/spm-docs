@@ -4,5 +4,5 @@
       "pattern": "^(?!http)"
     }
   ],
-  "aliveStatusCodes": [503]
+  "aliveStatusCodes": [200,206,503]
 }
