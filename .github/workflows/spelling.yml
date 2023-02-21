@@ -21,7 +21,11 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip setuptools
           python3 -m pip install -r requirements.txt
-          apt install aspell aspell-en hunspell hunspell-en-gb
+      - name: Install Aspell
+        run: |
+          sudo apt-get install aspell aspell-en
+      - name: Install Hunspell
+          sudo apt-get install hunspell hunspell-en-gb
       - name: codespell
         run: |
           codespell docs
