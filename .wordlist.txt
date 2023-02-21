@@ -76,6 +76,7 @@ fusiform
 gradiometer
 gradiometers
 GIfTI
+GitHub
 GLM
 GLMs
 gyrus
@@ -89,6 +90,7 @@ judgment
 Langevin
 LFP
 LORETA
+markdownlint
 MATLAB
 MaxFilter
 MkDocs

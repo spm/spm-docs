@@ -4,6 +4,7 @@
 [![Tests](https://github.com/spm/spm-docs/actions/workflows/build.yml/badge.svg)](https://github.com/spm/spm-docs/actions/workflows/build.yml)
 [![Tests](https://github.com/spm/spm-docs/actions/workflows/spelling.yml/badge.svg)](https://github.com/spm/spm-docs/actions/workflows/spelling.yml)
 [![Tests](https://github.com/spm/spm-docs/actions/workflows/linting.yml/badge.svg)](https://github.com/spm/spm-docs/actions/workflows/linting.yml)
+[![Tests](https://github.com/spm/spm-docs/actions/workflows/linkcheck.yml/badge.svg)](https://github.com/spm/spm-docs/actions/workflows/linkcheck.yml)
 
 The SPM Documentation is built using [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), a theme for the static site generator [MkDocs](https://www.mkdocs.org/).
 
@@ -72,9 +73,9 @@ The documentation is built using [GitHub Action](https://github.com/spm/spm-docs
 
 #### codespell
 
-Detect common misspellings with [codespell](https://github.com/codespell-project/codespell).
+Detect common misspellings with [`codespell`](https://github.com/codespell-project/codespell).
 
-To run `codespell` interactively on the SPM documentation, use:
+To run [`codespell`](https://github.com/codespell-project/codespell) interactively on the SPM documentation, use:
 
 ```shell
 codespell -w -i 1 docs
@@ -82,7 +83,7 @@ codespell -w -i 1 docs
 
 #### PySpelling
 
-To run [`pySpelling`](https://facelessuser.github.io/pyspelling/) on the SPM documentation, use:
+To run [`PySpelling`](https://facelessuser.github.io/pyspelling/) on the SPM documentation, use:
 
 ```shell
 # Run PySpelling using the default spell checker, Aspell
@@ -90,6 +91,12 @@ pyspelling
 # Run PySpelling using the Hunspell spell checker
 pyspelling --spellchecker hunspell
 ```
+
+### Links Check
+
+#### markdown-link-check
+
+A [GitHub Action](https://github.com/marketplace/actions/markdown-link-check) checks all Markdown files for broken links (using [markdown-link-check](https://github.com/tcort/markdown-link-check)).
 
 ### :ice_cube: Linting
 
@@ -101,7 +108,7 @@ To run [`markdownlint-cli`](https://github.com/igorshubovych/markdownlint-cli), 
 markdownlint "docs/**/*.md"
 ```
 
-Note that only MkDocs build and codespell will fail continuous integration on GitHub Actions. The other reports are only advisory.
+Note that only MkDocs build and codespell will potentially fail during continuous integration on GitHub Actions. The other reports are only advisory.
 
 ## :clinking_glasses: Contributing
 
