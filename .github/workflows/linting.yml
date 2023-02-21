@@ -1,0 +1,23 @@
+name: Linting
+on:
+  push:
+    branches:
+      - main
+  release:
+    types: [published]
+  pull_request:
+  workflow_dispatch:
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install markdownlint
+        run: |
+          npm install -g markdownlint-cli
+      - name: Run markdownlint
+        run: |
+          markdownlint "docs/**/*.md" || true

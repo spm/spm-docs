@@ -3,6 +3,7 @@
 [![License: CC-BY-SA-4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [![Tests](https://github.com/spm/spm-docs/actions/workflows/build.yml/badge.svg)](https://github.com/spm/spm-docs/actions/workflows/build.yml)
 [![Tests](https://github.com/spm/spm-docs/actions/workflows/spelling.yml/badge.svg)](https://github.com/spm/spm-docs/actions/workflows/spelling.yml)
+[![Tests](https://github.com/spm/spm-docs/actions/workflows/linting.yml/badge.svg)](https://github.com/spm/spm-docs/actions/workflows/linting.yml)
 
 The SPM Documentation is built using [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), a theme for the static site generator [MkDocs](https://www.mkdocs.org/).
 
@@ -89,6 +90,12 @@ pyspelling
 # Run PySpelling using the Hunspell spell checker
 pyspelling --spellchecker hunspell
 ```
+
+### :ice_cube: Linting
+
+#### markdownlint
+
+To run [`markdownlint-cli`](https://github.com/igorshubovych/markdownlint-cli), a command line interface to [`markdownlint`](https://github.com/DavidAnson/markdownlint), use:
 
 ## :clinking_glasses: Contributing
 
