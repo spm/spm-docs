@@ -35,6 +35,9 @@ nav:
         - 'First-level modelling - block design': './tutorials/fmri_modelling/block_design.md'
         - 'First-level modelling - event-related design': './tutorials/fmri_modelling/event_related_design.md'
         - 'Group-level modelling': './tutorials/fmri_modelling/group_level.md'
+    - 'OPM':
+      - 'Preprocessing':
+        - 'Introduction to preprocessing': './tutorials/opm_preprocessing/introduction.md'
   - Courses: 'https://www.fil.ion.ucl.ac.uk/spm/course/'
   - Support: 'https://www.fil.ion.ucl.ac.uk/spm/support/'
 
