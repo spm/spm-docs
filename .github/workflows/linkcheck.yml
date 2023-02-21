@@ -8,7 +8,7 @@ on:
   pull_request:
   workflow_dispatch:
 jobs:
-  checlk-links:
+  check-links:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -16,4 +16,5 @@ jobs:
         with:
           use-quiet-mode: 'no'
           use-verbose-mode: 'no'
+          config-file: '.markdown-link-check.json'
           folder-path: 'docs/'
