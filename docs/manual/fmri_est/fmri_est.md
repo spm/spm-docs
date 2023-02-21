@@ -447,7 +447,7 @@ Department of Imaging Neuroscience.
 
 Penny, W. D., G. Flandin, and N. Trujillo-Bareto. 2005. "Bayesian
 Comparison of Spatially Regularised General Linear Models." *Human Brain
-Mapping* 28: 275--93. <https://doi.org/doi:10.1002/hbm.20327>.
+Mapping* 28: 275--93. <https://doi.org/10.1002/hbm.20327>.
 
 </div>
 
