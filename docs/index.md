@@ -17,7 +17,7 @@ The SPM software package has been designed for the analysis of brain imaging dat
 
     ---
 
-    SPM is freely available and can be run in [Matlab](https://www.mathworks.com/products/matlab.html) or [Octave](https://octave.org/index.html). 
+    SPM is an academic free and open source software, released under the terms of the GPL.
 
     [:octicons-arrow-right-24: Download here ](https://www.fil.ion.ucl.ac.uk/spm/software/download/)
 

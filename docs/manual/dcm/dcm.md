@@ -668,10 +668,10 @@ called `DCM_mod_bwd.mat` will have been generated.
 
 <figure id="dcm_fig4">
 <div class="center">
-<p><img src="../../../assets/figures/manual/dcm/Fig4.png" style="width:70mm" alt="image" /> <img
-src="dcm/Fig5.png" style="width:70mm" alt="image" /> <img
-src="dcm/Fig6.png" style="width:70mm" alt="image" /> <img
-src="dcm/Fig7.png" style="width:70mm" alt="image" /></p>
+<p><img src="../../../assets/figures/manual/dcm/Fig4.png" style="width:70mm" /> <img
+src="../../../assets/figures/manual/dcm/Fig5.png" style="width:70mm" /> <img
+src="../../../assets/figures/manual/dcm/Fig6.png" style="width:70mm" /> <img
+src="../../../assets/figures/manual/dcm/Fig7.png" style="width:70mm" /></p>
 </div>
 <figcaption><em>Specification of model depicted in Fig <a href="#bwd"
 data-reference-type="ref" data-reference="bwd">1.4</a>. <strong>Top
@@ -695,7 +695,7 @@ button again and choosing <span class="smallcaps">estimate
 
 from the MATLAB command line.
 
-<figure id="fwd">
+<figure id="fwd" markdown>
 <div class="center">
 <img src="../../../assets/figures/manual/dcm/dcm_mod_fwd.png" style="width:100mm" />
 </div>
@@ -704,7 +704,7 @@ Dotted lines denote modulatory connections.<span id="fwd"
 label="fwd"></span></em></figcaption>
 </figure>
 
-<figure id="dcm_fig8">
+<figure id="dcm_fig8" markdown>
 <div class="center">
 <img src="../../../assets/figures/manual/dcm/Fig8.png" style="width:140mm" />
 </div>
@@ -774,7 +774,7 @@ data-reference="dcm_fig9">1.8</a>, now shows a bar plot of the model
 evidence. You can see that our second model is better than the first
 one.
 
-<figure id="dcm_fig9">
+<figure id="dcm_fig9" markdown>
 <div class="center">
 <img src="../../../assets/figures/manual/dcm/Fig9.png" style="width:140mm" />
 </div>
@@ -843,4 +843,4 @@ Penny, W. D., K. E. Stephan, A. Mechelli, and K. J. Friston. 2004.
     energy, $F$.
 
 [^2]: Attention to visual motion dataset:
-    <http://www.fil.ion.ucl.ac.uk/spm/data/attention/>
+    <https://www.fil.ion.ucl.ac.uk/spm/data/attention/>

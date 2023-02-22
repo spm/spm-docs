@@ -1,16 +1,34 @@
 site_name: SPM Documentation
+repo_url: https://github.com/spm/spm-docs
+repo_name: spm/spm
+edit_uri: blob/main/docs/
 
 theme:
   name: material
   palette:
-    primary: blue grey
-    accent: deep orange 
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
   logo: assets/images/spm_logo_white.png
   favicon: assets/images/spm_favicon.png
+  icon:
+    repo: fontawesome/brands/github
   features:
     - content.code.copy
     - content.tabs.link
     - content.tooltips
+    - content.action.edit
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
@@ -83,7 +101,7 @@ nav:
       - 'Batch Tutorial': manual/batch/batch.md
       - 'Developer''s Guide': manual/batch/devel.md
   - WikiBooks:
-    - wikibooks/SPM
+    - wikibooks/SPM.md
     - wikibooks/Advice_on_hardware_selection.md
     - wikibooks/Atlases.md
     - wikibooks/Autocorrelation.md
@@ -183,6 +201,8 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  - toc:
+      permalink: true
 
 plugins:
   - mkdocs-video:
