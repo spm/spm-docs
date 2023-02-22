@@ -18,6 +18,7 @@ BEM
 BioSemi
 Broca
 Broca's
+bu
 cerebrospinal
 cingulate
 codespell
@@ -109,6 +110,7 @@ Morlet
 MRIcro
 MRIcron
 MSP
+nam
 nasion
 natively
 neuroanatomy
