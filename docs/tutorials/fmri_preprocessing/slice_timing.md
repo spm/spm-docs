@@ -54,15 +54,15 @@ Slice timing correction aims to account for the differences in timing of data ac
         These expressions can be combined to create more powerful filters. For example, using `^r.*\.nii$` will filter for all files starting with `r`, having any number of characters, and ending in `.nii`.   
 
 5. Select `rsub-01_task-auditory_bold.nii` from the right-hand panel and press `Done`. 
-6. In the batch window, select `Number of slices` :material-arrow-right-bold: `64`
+6. In the batch window, select `Number of slices` :material-arrow-right-bold: `64`.
 
-7. Select `TR` :material-arrow-right-bold: `7`
-8. Select `TA` :material-arrow-right-bold: `6.8906` or `7-(7/64)`
+7. Select `TR` :material-arrow-right-bold: `7`.
+8. Select `TA` :material-arrow-right-bold: `6.8906` or `7-(7/64)`.
 
     !!! tip "Top tip"
         SPM batch window can do simple calculations for you. The equation to calculate TA (the time between the start of acquisition of the first and the last slice) is `TR-(TR/nslices)`. Simply plug in the numbers in the equation and press `Okay`.
 
-9. Select `Slice order` :material-arrow-right-bold: `[64:-1:1]`
+9. Select `Slice order` :material-arrow-right-bold: `[64:-1:1]`.
 
     !!! tip "Top tip"
 
@@ -80,7 +80,7 @@ Slice timing correction aims to account for the differences in timing of data ac
                 ```
 
 
-11. Select `Reference slice` :material-arrow-right-bold: `32` or `64/2`
+11. Select `Reference slice` :material-arrow-right-bold: `32` or `64/2`.
 
     ??? info "Which slice to choose as reference slice?"
         When you do slice timing correction, all slices of one volume are interpolated in time to one reference slice. This reference slice becomes the most accurate slice since it gets no interpolation, only other slices are interpolated.
