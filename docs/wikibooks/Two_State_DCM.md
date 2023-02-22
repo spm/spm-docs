@@ -31,9 +31,10 @@ of the A-matrix (plus modulatory input B if available), whereas the IE
 self-inhibitory connections take their value from the diagonal of the
 A-matrix (plus modulatory input B if available).
 
-<figure>
-<img src="Two_State_DCM_for_fMRI.png"
-title="Illustration of the two-state neuronal model implemented in Dynamic Causal Model (DCM). Neuronal populations E and I are excitatory and inhibitory respectively. SE=self-excitation, SI=self-inhibition, EE=excitatory to excitatory, EI=excitatory to inhibitory, IE=inhibitory to excitatory." />
+<figure markdown>
+<div class="center">
+<img src="../../../assets/figures/wikibooks/Two_State_DCM_for_fMRI.png" style="width:100mm" />
+</div>
 <figcaption>Illustration of the two-state neuronal model implemented in
 Dynamic Causal Model (DCM). Neuronal populations E and I are excitatory
 and inhibitory respectively. SE=self-excitation, SI=self-inhibition,

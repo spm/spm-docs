@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>SPM/Working with 4D data - Wikibooks, open books for an open world</title>
+<script>document.documentElement.className="client-js";(function(){var cookie=document.cookie.match(/(?:^|; )enwikibooksmwclientprefs=([^;]+)/);if(cookie){var featureName=cookie[1];document.documentElement.className=document.documentElement.className.replace(featureName+'-enabled',featureName+'-disabled');}}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"88c72c94-40a8-4328-840a-4b70f53c8293","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"SPM/Working_with_4D_data","wgTitle":"SPM/Working with 4D data","wgCurRevisionId":3665101,"wgRevisionId":3665101,"wgArticleId":276945,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Book:SPM"],
+"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"SPM/Working_with_4D_data","wgRelevantArticleId":276945,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{"value":{"levels":3}}},"wgStableRevisionId":3665101,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":true,"watchlist":true,"tagline":false,"nearby":true},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":8000,"wgNoticeProject":"wikibooks","wgVector2022PreviewPages":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgULSCurrentAutonym":"English","wgEditSubmitButtonLabelPublish":true,"wgCentralAuthMobileDomain":false,"wgULSPosition":"interlanguage","wgULSisCompactLinksEnabled":true,"wgULSisLanguageSelectorEmpty":false,"wgSiteNoticeId":"2.24"};RLSTATE={"ext.globalCssJs.user.styles":"ready",
+"site.styles":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.flaggedRevs.icons":"ready","oojs-ui-core.styles":"ready","oojs-ui.styles.indicators":"ready","mediawiki.widgets.styles":"ready","oojs-ui-core.icons":"ready","ext.pygments":"ready","ext.cite.styles":"ready","skins.vector.styles.legacy":"ready","ext.flaggedRevs.basic":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.wikimediaBadges":"ready","ext.uls.interlanguage":"ready","wikibase.client.init":"ready","ext.dismissableSiteNotice.styles":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js","ext.flaggedRevs.advanced","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.centralNotice.geoIP","ext.centralNotice.startUp","ext.gadget.wikidialog",
+"ext.gadget.commons-file","ext.centralauth.centralautologin","ext.echo.centralauth","ext.uls.compactlinks","ext.uls.interface","ext.dismissableSiteNotice"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.dismissableSiteNotice.styles%7Cext.flaggedRevs.basic%2Cicons%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.widgets.styles%7Coojs-ui-core.icons%2Cstyles%7Coojs-ui.styles.indicators%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.40.0-wmf.24"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta name="robots" content="max-image-preview:standard"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="viewport" content="width=1000"/>
+<meta property="og:title" content="SPM/Working with 4D data - Wikibooks, open books for an open world"/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="//upload.wikimedia.org"/>
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//en.m.wikibooks.org/wiki/SPM/Working_with_4D_data"/>
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=SPM/Working_with_4D_data&amp;action=edit"/>
+<link rel="icon" href="/static/favicon/wikibooks.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikibooks (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikibooks.org/w/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikibooks.org/wiki/SPM/Working_with_4D_data"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+</head>
+<body class="skin-vector-legacy mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-SPM_Working_with_4D_data rootpage-SPM skin-vector action-view"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"><!-- CentralNotice --><div id="mw-dismissablenotice-anonplace"></div><script>(function(){var node=document.getElementById("mw-dismissablenotice-anonplace");if(node){node.outerHTML="\u003Cdiv class=\"mw-dismissable-notice\"\u003E\u003Cdiv class=\"mw-dismissable-notice-close\"\u003E[\u003Ca tabindex=\"0\" role=\"button\"\u003Edismiss\u003C/a\u003E]\u003C/div\u003E\u003Cdiv class=\"mw-dismissable-notice-body\"\u003E\u003Cdiv id=\"localNotice\"\u003E\u003Cdiv class=\"anonnotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cdiv style=\"background: #ffffff; border: solid 1px #48b; width: auto; padding-left:2px; padding-right:2px; margin-left:auto; margin-right:auto; vertical-align: top; display:table; color:black;\"\u003E\u003Cfigure class=\"mw-halign-left\" typeof=\"mw:File\"\u003E\u003Ca href=\"/wiki/Shelf:Strategy_guides\" title=\"Shelf:Strategy guides\"\u003E\u003Cimg src=\"//upload.wikimedia.org/wikipedia/commons/thumb/0/01/Nuvola_apps_package_games.png/40px-Nuvola_apps_package_games.png\" decoding=\"async\" width=\"40\" height=\"40\" data-file-width=\"128\" data-file-height=\"128\" /\u003E\u003C/a\u003E\u003Cfigcaption\u003E\u003C/figcaption\u003E\u003C/figure\u003EThe Wikibooks community has accepted \u003Ca href=\"/wiki/Shelf:Strategy_guides\" title=\"Shelf:Strategy guides\"\u003Evideo game strategy guides\u003C/a\u003E on this wiki! See \u003Ca href=\"/wiki/Wikibooks:Strategy_guides\" title=\"Wikibooks:Strategy guides\"\u003EWikibooks:Strategy guides\u003C/a\u003E for the newly-created policy on strategy games. We're looking forward to your contributions.\n\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E";}}());</script></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">SPM/Working with 4D data</span></h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From Wikibooks, open books for an open world</div>
+		<div id="contentSub"><div id="mw-content-subtitle"><div class="subpages">&lt; <a href="/wiki/SPM" title="SPM">SPM</a></div></div></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><table class="plainlinks metadata ambox ambox-delete" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><span typeof="mw:File"><span><img alt="warning" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Nuvola_apps_important_yellow.svg/40px-Nuvola_apps_important_yellow.svg.png" decoding="async" width="40" height="33" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Nuvola_apps_important_yellow.svg/60px-Nuvola_apps_important_yellow.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Nuvola_apps_important_yellow.svg/80px-Nuvola_apps_important_yellow.svg.png 2x" data-file-width="600" data-file-height="500" /></span></span></div></td><td class="mbox-text"><span class="mbox-text-span">The SPM Wikibooks moved to <a rel="nofollow" class="external free" href="https://github.com/spm/spm-docs">https://github.com/spm/spm-docs</a></span></td></tr></tbody></table>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Working_with_four-dimensional_data"><span class="tocnumber">1</span> <span class="toctext">Working with four-dimensional data</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#An_example"><span class="tocnumber">1.1</span> <span class="toctext">An example</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Further_details"><span class="tocnumber">1.2</span> <span class="toctext">Further details</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Creating_4D_NIfTI_files_in_SPM"><span class="tocnumber">2</span> <span class="toctext">Creating 4D NIfTI files in SPM</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Possible_issues_with_4D_NIfTI_files"><span class="tocnumber">3</span> <span class="toctext">Possible issues with 4D NIfTI files</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Separating_4D_NIfTI_files_into_3D_volumes"><span class="tocnumber">4</span> <span class="toctext">Separating 4D NIfTI files into 3D volumes</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Working_with_four-dimensional_data">Working with four-dimensional data</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SPM/Working_with_4D_data&amp;veaction=edit&amp;section=1" class="mw-editsection-visualeditor" title="Edit section: Working with four-dimensional data">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=SPM/Working_with_4D_data&amp;action=edit&amp;section=1" title="Edit section: Working with four-dimensional data">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Recent versions of SPM (SPM5 or later) can handle 4D NIfTI data-sets, which are often used to represent fMRI time-series of 3D volumes, as well as more general collections of related image volumes (such as the different tissue classes in DARTEL Templates).
+</p><p>The key to working with 4D data in the graphical user interface (e.g. after clicking <i>Display</i> or <i>Check Reg</i>, or selecting images in the batch interface) is to realise that the <b>1</b> shown in the image selection dialogue (on the right, just above the list of selected files) refers to the first <b>volume or frame</b> of a 4D data-set. Note that 3D data can be viewed as a special case of 4D data with a single volume, so this first (only) frame is appropriate for normal 3D images too.
+</p><p>To select volumes other than the first, you simply need to change the frame specification. To choose a particular frame you can replace the number 1 with the desired number, e.g. 10 or 100, but more usefully, you can enter a MATLAB range, and you will then see any/all volumes up to the upper limit, so entering <b>1:999</b> will let you select all volumes in a time-series of less than 1000 volumes. The volumes are shown with their frame number after a comma at the end of the filename.
+</p><p>With fMRI data, it is often very helpful to change the <b>filter</b> expression from '.*' to a regular expression that shows only the set of images you are interested in selecting (e.g. change it to '^u' to see only the realigned and unwarped images starting with a 'u') and then to change the frame range from 1 to '1:999' (or some number large enough to show all of your volumes) and then to right click and choose 'Select All'. For more help on the filter (regular expressions), click the '?' on the left of the dialogue.
+</p><p>The reason the frame range doesn't just default to something like 1:9999999, is that if you entered a directory with a very large number of NIfTI files, the interface would be very slow, because all of the NIfTI headers would need to be read to find out how many volumes each one actually contained (even if most contained just 1). Again, note that setting the filter before expanding the frame range can help in this instance.
+</p>
+<h3><span class="mw-headline" id="An_example">An example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SPM/Working_with_4D_data&amp;veaction=edit&amp;section=2" class="mw-editsection-visualeditor" title="Edit section: An example">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=SPM/Working_with_4D_data&amp;action=edit&amp;section=2" title="Edit section: An example">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In the example illustrated here, I have used <i>Check Reg</i>, navigated to my SPM directory (using the <i>Prev</i> pull-down menu), entered the <i>toolbox</i> directory and then the <i>Seg</i> directory, which contains the tissue probability maps (TPMs) for the New Segmentation Toolbox (see also <i>SPM -&gt; Tools -&gt; New Segment</i>). There are six TPM volumes in the 4D <i>TPM.nii</i> NIfTI file; by changing the frame number from '1' to '1:10', I was able to see all six volumes, and I selected the second and third frames (shown as <i>TPM.nii,2</i> and <i>TPM.nii,3</i>), which correspond to the white-matter and CSF tissue classes.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="/wiki/File:Spm_4D_example.png" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/b/bf/Spm_4D_example.png" decoding="async" width="578" height="458" data-file-width="578" data-file-height="458" /></a></span>
+</p>
+<h3><span class="mw-headline" id="Further_details">Further details</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SPM/Working_with_4D_data&amp;veaction=edit&amp;section=3" class="mw-editsection-visualeditor" title="Edit section: Further details">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=SPM/Working_with_4D_data&amp;action=edit&amp;section=3" title="Edit section: Further details">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>For advanced users, the batch system lets you create batches which select files according to a pattern, using:
+</p>
+<pre>BasicIO -&gt; File Selector (Batch Mode)
+</pre>
+<p>In this case, entire 4D NIfTI files will be selected (with no ',n' frame number(s)). You can then use another batch module:
+</p>
+<pre>SPM -&gt; Util -&gt; Expand image frames
+</pre>
+<p>to reference the individual 4D file and associate a specified list or range of frames with it. The resultant set of volumes is then available as a <b>dependency</b> for use in later modules of the batch.
+</p><p>Finally, even more advanced users can simply add the frame numbers to filenames in MATLAB scripts, which even lets one work with five-dimensional data (!) that is sometimes used for multivariate data-sets (see e.g. pages 3 and 4 of this <a rel="nofollow" class="external text" href="http://nifti.nimh.nih.gov/nifti-1/documentation/nifti1diagrams_v2.pdf">NIfTI diagram</a>), by adding two numbers after commas. For example, to view the three (x, y and z) components that are stored in the fifth dimension of a 5D DARTEL velocity field (or just to show off!) you can do:
+</p>
+<pre>&gt;&gt; ims = [repmat('u_rc1Blah_Template.nii', 3, 1) [',1,1';',1,2';',1,3']]
+&gt;&gt; spm_check_registration(ims)
+</pre>
+<p>To automatically expand the volumes from a 4D nifti file path, you can use on SPM12:
+</p>
+<pre>&gt;&gt; ims = spm_select('expand', fullfile(SCAN_dir,'SCAN.nii'))
+</pre>
+<p>For SPM8 and below, you have to manually count the number of volumes and expand yourself, here is a code snippet:
+</p>
+<div class="mw-highlight mw-highlight-lang-matlab mw-content-ltr" dir="ltr"><pre><span></span><span class="k">function</span><span class="w"> </span>n<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">spm_select_get_nbframes</span><span class="p">(</span>file<span class="p">)</span><span class="w"></span>
+<span class="c">% spm_select_get_nbframes(file) Get the number of volumes of a 4D nifti file, excerpt from SPM12 spm_select.m</span><span class="w"></span>
+<span class="w">    </span><span class="n">N</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="n">nifti</span><span class="p">(</span><span class="n">file</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">dim</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">N</span><span class="p">.</span><span class="n">dat</span><span class="p">.</span><span class="n">dim</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="n">n</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="n">dim</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span><span class="w"></span>
+<span class="k">end</span><span class="w"></span>
+
+<span class="k">function</span><span class="w"> </span>out<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">expand_4d_vols</span><span class="p">(</span>nifti<span class="p">)</span><span class="w"></span>
+<span class="c">% expand_4d_vols(nifti)  Given a path to a 4D nifti file, count the number of volumes and generate a list of all volumes</span><span class="w"></span>
+<span class="w">    </span><span class="n">nb_vols</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">spm_select_get_nbframes</span><span class="p">(</span><span class="n">nifti</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">out</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">strcat</span><span class="p">(</span><span class="nb">repmat</span><span class="p">(</span><span class="n">nifti</span><span class="p">,</span><span class="w"> </span><span class="n">nb_vols</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="s">&#39;,&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">num2str</span><span class="p">([</span><span class="mi">1</span><span class="p">:</span><span class="n">nb_vols</span><span class="p">]</span><span class="o">&#39;</span><span class="p">));</span><span class="w"></span>
+<span class="k">end</span><span class="w"></span>
+</pre></div>
+<p>You can then use:
+</p>
+<pre>&gt;&gt; ims = expand_4d_vols(fullfile(SCAN_dir,'SCAN.nii'))
+</pre>
+<p>Note that any of the techniques above can be used to select only a subset of the 4D volumes (eg, to discard first x volumes to avoid MRI saturation effects):
+</p>
+<pre>&gt;&gt; ims = cellstr(ims(4:end,:));
+</pre>
+<h2><span class="mw-headline" id="Creating_4D_NIfTI_files_in_SPM">Creating 4D NIfTI files in SPM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SPM/Working_with_4D_data&amp;veaction=edit&amp;section=4" class="mw-editsection-visualeditor" title="Edit section: Creating 4D NIfTI files in SPM">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=SPM/Working_with_4D_data&amp;action=edit&amp;section=4" title="Edit section: Creating 4D NIfTI files in SPM">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>SPM lets you concatenate multiple 3D volumes into a 4D NIfTI using the batch system:
+</p>
+<pre>SPM -&gt; Util -&gt; 3D to 4D File Conversion
+</pre>
+<p>The images must have identical dimensions, otherwise it isn't meaningful to consider them as one 4D data-set.
+</p><p>Note that this interface also lets you create a new 4D file using volumes selected from within an existing 4D file, which means you can do things like dropping T1-equilibration scans from the start of one 4D file by creating a new 4D file containing just the volumes you want to keep.
+</p>
+<h2><span class="mw-headline" id="Possible_issues_with_4D_NIfTI_files">Possible issues with 4D NIfTI files</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SPM/Working_with_4D_data&amp;veaction=edit&amp;section=5" class="mw-editsection-visualeditor" title="Edit section: Possible issues with 4D NIfTI files">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=SPM/Working_with_4D_data&amp;action=edit&amp;section=5" title="Edit section: Possible issues with 4D NIfTI files">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Intrinsically, 4D NIfTI files are bound to produce memory issues, since they can grow up to any size possible (depending on the number of volumes a 4D NIfTI file contains). Most SPM modules fully support large 4D NIfTI files, but third-party toolboxes or your own scripts using SPM functions might not support these large files.
+</p><p>Even through SPM supports large NIfTI files, it can only load files as large as your available RAM memory<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup> and as your filesystem allows<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> (don't forget the output NIfTI file from a processing step might be a lot larger than the input file!). Techniques like out-of-core computing could be used to store and split large computations on on-disk files, but this is very experimental and not available in most neuroscientific toolboxes.
+</p><p>In practice, if you are using SPM, using too large 4D NIfTI file can produce the "Can't map view" error (but this is not the only possible cause: reading files from a network SAMBA share, permission issues and antiviruses can also produce it). In this case, you might try to convert your 4D NIfTI file to a set of 3D NIfTI files, separating each frame into a separate NIfTI file, to see if this fixes your issue.
+</p>
+<h2><span class="mw-headline" id="Separating_4D_NIfTI_files_into_3D_volumes">Separating 4D NIfTI files into 3D volumes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SPM/Working_with_4D_data&amp;veaction=edit&amp;section=6" class="mw-editsection-visualeditor" title="Edit section: Separating 4D NIfTI files into 3D volumes">edit</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=SPM/Working_with_4D_data&amp;action=edit&amp;section=6" title="Edit section: Separating 4D NIfTI files into 3D volumes">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>This page should have demonstrated that generally you do <b>not</b> need to split 4D data-sets into their constituent 3D volumes for use in SPM, whether using the interactive interface, batching or scripting, the exception being if you have too large 4D nifti files as explained above.
+</p><p>In these cases, or for some specific reasons pertaining to your design, you might want to split data-sets to work on the images in other software packages that do not handle 4D NIfTIs. To do this, SPM provides a simple command-line tool (not in the batch interface, sorry), that you can use by typing:
+</p>
+<pre>&gt;&gt; spm_file_split
+</pre>
+<p>and then selecting (the first frame of) a 4D NIfTI. If you select <i>Blah.nii</i>, this will then create images of the form <i>Blah_00001.nii, Blah_00002.nii, etc</i>. See <i>help spm_file_split</i> for more flexible usage.
+</p><p>A <a rel="nofollow" class="external text" href="https://github.com/lrq3000/csg_mri_pipelines/blob/64622fb4289e485a6b2266dbbed08a3f5f0030b2/analysis/fmri/nifti_4dto3d_convert_recursive/nifti_4dto3d_convert_recursive.m">recursive 4D to 3D niftis converter</a> using spm_file_split can be found here.
+</p>
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://www.jiscmail.ac.uk/cgi-bin/webadmin?A2=ind1009&amp;L=SPM&amp;D=0&amp;I=-3&amp;d=No+Match%3BMatch%3BMatches&amp;P=42567">https://www.jiscmail.ac.uk/cgi-bin/webadmin?A2=ind1009&amp;L=SPM&amp;D=0&amp;I=-3&amp;d=No+Match%3BMatch%3BMatches&amp;P=42567</a></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://www.jiscmail.ac.uk/cgi-bin/webadmin?A2=ind1411&amp;L=SPM&amp;P=R63209&amp;I=-3&amp;d=No+Match%3BMatch%3BMatches">https://www.jiscmail.ac.uk/cgi-bin/webadmin?A2=ind1411&amp;L=SPM&amp;P=R63209&amp;I=-3&amp;d=No+Match%3BMatch%3BMatches</a></span>
+</li>
+</ol>
+<!-- 
+NewPP limit report
+Parsed by mw1396
+Cached time: 20230222161156
+Cache expiry: 1814400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.051 seconds
+Real time usage: 0.076 seconds
+Preprocessor visited node count: 172/1000000
+Post‐expand include size: 1767/2097152 bytes
+Template argument size: 393/2097152 bytes
+Highest expansion depth: 12/100
+Expensive parser function count: 1/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 3365/5000000 bytes
+Lua time usage: 0.022/10.000 seconds
+Lua memory usage: 1335783/52428800 bytes
+Number of Wikibase entities loaded: 0/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   61.369      1 -total
+ 62.41%   38.298      1 Template:SPM_header
+ 57.80%   35.472      1 Template:Warning
+ 55.35%   33.967      1 Template:Mbox
+ 32.98%   20.240      1 Template:SPM_footer
+ 28.94%   17.757      1 Template:BookCat
+ 11.34%    6.960      1 Template:Evalx
+  4.34%    2.662      1 Template:BOOKCATEGORY
+  2.08%    1.274      1 Template:NAIVEBOOKNAME
+-->
+
+<!-- Saved in parser cache with key enwikibooks:pcache:idhash:276945-0!canonical and timestamp 20230222161156 and revision id 3665101. Rendering was triggered because: api-parse
+ -->
+</div><!--esi <esi:include src="/esitest-fa8a495983347898/content" /> --><noscript><img src="//en.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://en.wikibooks.org/w/index.php?title=SPM/Working_with_4D_data&amp;oldid=3665101">https://en.wikibooks.org/w/index.php?title=SPM/Working_with_4D_data&amp;oldid=3665101</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/wiki/Category:Book:SPM" title="Category:Book:SPM">Book:SPM</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="vector-menu mw-portlet mw-portlet-personal vector-user-menu-legacy" aria-labelledby="p-personal-label" role="navigation"  >
+	<h3
+		id="p-personal-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage" class="mw-list-item"><span title="The user page for the IP address you are editing as">Not logged in</span></li><li id="pt-anontalk" class="mw-list-item"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n"><span>Discussion for this IP address</span></a></li><li id="pt-anoncontribs" class="mw-list-item"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y"><span>Contributions</span></a></li><li id="pt-createaccount" class="mw-list-item"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=SPM%2FWorking+with+4D+data" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=SPM%2FWorking+with+4D+data" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="vector-menu mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy" aria-labelledby="p-namespaces-label" role="navigation"  >
+	<h3
+		id="p-namespaces-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="/wiki/SPM/Working_with_4D_data" title="View the content page [c]" accesskey="c"><span>Book</span></a></li><li id="ca-talk" class="mw-list-item"><a href="/wiki/Talk:SPM/Working_with_4D_data" rel="discussion" title="Discussion about the content page [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-variants-label"
+	/>
+	<label
+		id="p-variants-label"
+		 aria-label="Change language variant"
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="vector-menu mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy" aria-labelledby="p-views-label" role="navigation"  >
+	<h3
+		id="p-views-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="/wiki/SPM/Working_with_4D_data"><span>Read</span></a></li><li id="ca-ve-edit" class="mw-list-item"><a href="/w/index.php?title=SPM/Working_with_4D_data&amp;veaction=edit" title="Edit this page [v]" accesskey="v"><span>Edit</span></a></li><li id="ca-edit" class="collapsible mw-list-item"><a href="/w/index.php?title=SPM/Working_with_4D_data&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit source</span></a></li><li id="ca-history" class="mw-list-item"><a href="/w/index.php?title=SPM/Working_with_4D_data&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-cactions-label"
+	/>
+	<label
+		id="p-cactions-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+		<form action="/w/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-navigation">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search Wikibooks" aria-label="Search Wikibooks" autocapitalize="sentences" title="Search Wikibooks [f]" accesskey="f" id="searchInput"
+				>
+				<input type="hidden" name="title" value="Special:Search">
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+			</div>
+		</form>
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel" class="vector-legacy-sidebar">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="/wiki/Main_Page"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-Navigation" class="vector-menu mw-portlet mw-portlet-Navigation vector-menu-portal portal" aria-labelledby="p-Navigation-label" role="navigation"  >
+	<h3
+		id="p-Navigation-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-mainpage" class="mw-list-item"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z"><span>Main Page</span></a></li><li id="n-help" class="mw-list-item"><a href="/wiki/Help:Contents" title="Find help on how to use and edit Wikibooks"><span>Help</span></a></li><li id="n-Browse" class="mw-list-item"><a href="/wiki/Wikibooks:Card_Catalog_Office" title="Check out what Wikibooks has to offer"><span>Browse</span></a></li><li id="n-Cookbook" class="mw-list-item"><a href="/wiki/Cookbook:Table_of_Contents" title="Learn recipes from around the world"><span>Cookbook</span></a></li><li id="n-Wikijunior" class="mw-list-item"><a href="/wiki/Wikijunior" title="Books for children"><span>Wikijunior</span></a></li><li id="n-Featured-books" class="mw-list-item"><a href="/wiki/Wikibooks:Featured_books" title="The best of Wikibooks"><span>Featured books</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-sitesupport" class="mw-list-item"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikibooks.org&amp;uselang=en" title="Support Wikibooks"><span>Donations</span></a></li><li id="n-randomrootpage" class="mw-list-item"><a href="/wiki/Special:RandomInCategory/Book:Wikibooks_Stacks/Books"><span>Random book</span></a></li><li id="n-Using-Wikibooks" class="mw-list-item"><a href="/wiki/Using_Wikibooks"><span>Using Wikibooks</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-Community" class="vector-menu mw-portlet mw-portlet-Community vector-menu-portal portal" aria-labelledby="p-Community-label" role="navigation"  >
+	<h3
+		id="p-Community-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Community</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Reading-room-forum" class="mw-list-item"><a href="/wiki/Wikibooks:Reading_room"><span>Reading room forum</span></a></li><li id="n-portal" class="mw-list-item"><a href="/wiki/Wikibooks:Community_Portal" title="Find your way around the Wikibooks community"><span>Community portal</span></a></li><li id="n-currentevents" class="mw-list-item"><a href="/wiki/Wikibooks:Reading_room/Bulletin_Board" title="Important community news"><span>Bulletin Board</span></a></li><li id="n-maintenance" class="mw-list-item"><a href="/wiki/Wikibooks:Maintenance" title="Frequent tasks that you can help with"><span>Help out!</span></a></li><li id="n-Policies-and-guidelines" class="mw-list-item"><a href="/wiki/Wikibooks:Policies_and_guidelines" title="Pages detailing important rules and procedures"><span>Policies and guidelines</span></a></li><li id="n-contact" class="mw-list-item"><a href="/wiki/Wikibooks:Contact_us" title="Alternative methods of communication"><span>Contact us</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="vector-menu mw-portlet mw-portlet-tb vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation"  >
+	<h3
+		id="p-tb-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/Special:WhatLinksHere/SPM/Working_with_4D_data" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/Special:RecentChangesLinked/SPM/Working_with_4D_data" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-upload" class="mw-list-item"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=en" title="Upload files [u]" accesskey="u"><span>Upload file</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/w/index.php?title=SPM/Working_with_4D_data&amp;oldid=3665101" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/w/index.php?title=SPM/Working_with_4D_data&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-cite" class="mw-list-item"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=SPM%2FWorking_with_4D_data&amp;id=3665101&amp;wpFormIdentifier=titleform" title="Information on how to cite this page"><span>Cite this page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-Sister_projects" class="vector-menu mw-portlet mw-portlet-Sister_projects vector-menu-portal portal" aria-labelledby="p-Sister_projects-label" role="navigation"  >
+	<h3
+		id="p-Sister_projects-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Sister projects</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-Wikipedia" class="mw-list-item"><a href="https://en.wikipedia.org/wiki/Main_Page"><span>Wikipedia</span></a></li><li id="n-Wikiversity" class="mw-list-item"><a href="https://en.wikiversity.org/wiki/Wikiversity:Main_Page"><span>Wikiversity</span></a></li><li id="n-Wiktionary" class="mw-list-item"><a href="https://en.wiktionary.org/wiki/Wiktionary:Main_Page"><span>Wiktionary</span></a></li><li id="n-Wikiquote" class="mw-list-item"><a href="https://en.wikiquote.org/wiki/Main_Page"><span>Wikiquote</span></a></li><li id="n-Wikisource" class="mw-list-item"><a href="https://en.wikisource.org/wiki/Main_Page"><span>Wikisource</span></a></li><li id="n-Wikinews" class="mw-list-item"><a href="https://en.wikinews.org/wiki/Main_Page"><span>Wikinews</span></a></li><li id="n-Wikivoyage" class="mw-list-item"><a href="https://en.wikivoyage.org/wiki/Main_Page"><span>Wikivoyage</span></a></li><li id="n-Commons" class="mw-list-item"><a href="https://commons.wikimedia.org/wiki/Main_Page"><span>Commons</span></a></li><li id="n-Wikidata" class="mw-list-item"><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page"><span>Wikidata</span></a></li><li id="n-MediaWiki" class="mw-list-item"><a href="https://www.mediawiki.org/wiki/Main_Page"><span>MediaWiki</span></a></li><li id="n-Meta-Wiki" class="mw-list-item"><a href="https://meta.wikimedia.org/wiki/Main_Page"><span>Meta-Wiki</span></a></li></ul>
+		
+	</div>
+</nav>
+
+<nav id="p-coll-print_export" class="vector-menu mw-portlet mw-portlet-coll-print_export vector-menu-portal portal" aria-labelledby="p-coll-print_export-label" role="navigation"  >
+	<h3
+		id="p-coll-print_export-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Print/export</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="coll-create_a_book" class="mw-list-item"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=SPM%2FWorking+with+4D+data"><span>Create a collection</span></a></li><li id="coll-download-as-rl" class="mw-list-item"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=SPM%2FWorking_with_4D_data&amp;action=show-download-screen"><span>Download as PDF</span></a></li><li id="t-print" class="mw-list-item"><a href="/w/index.php?title=SPM/Working_with_4D_data&amp;printable=yes" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="vector-menu mw-portlet mw-portlet-lang vector-menu-portal portal" aria-labelledby="p-lang-label" role="navigation"  >
+	<h3
+		id="p-lang-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">In other languages</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		<div class="after-portlet after-portlet-lang"><span class="uls-after-portlet-link"></span><span class="wb-langlinks-add wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:NewItem?site=enwikibooks&amp;page=SPM%2FWorking+with+4D+data" title="Add interlanguage links" class="wbc-editpage">Add links</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 3 March 2020, at 19:07.</li>
+	<li id="footer-info-copyright">Text is available under the <a href="//creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike License</a>; additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy.</a></li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikibooks:Welcome">About Wikibooks</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/Wikibooks:General_disclaimer">Disclaimers</a></li>
+	<li id="footer-places-mobileview"><a href="//en.m.wikibooks.org/w/index.php?title=SPM/Working_with_4D_data&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	<li id="footer-places-developers"><a href="https://developer.wikimedia.org">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikibooks.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.051","walltime":"0.076","ppvisitednodes":{"value":172,"limit":1000000},"postexpandincludesize":{"value":1767,"limit":2097152},"templateargumentsize":{"value":393,"limit":2097152},"expansiondepth":{"value":12,"limit":100},"expensivefunctioncount":{"value":1,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":3365,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%   61.369      1 -total"," 62.41%   38.298      1 Template:SPM_header"," 57.80%   35.472      1 Template:Warning"," 55.35%   33.967      1 Template:Mbox"," 32.98%   20.240      1 Template:SPM_footer"," 28.94%   17.757      1 Template:BookCat"," 11.34%    6.960      1 Template:Evalx","  4.34%    2.662      1 Template:BOOKCATEGORY","  2.08%    1.274      1 Template:NAIVEBOOKNAME"]},"scribunto":{"limitreport-timeusage":{"value":"0.022","limit":"10.000"},"limitreport-memusage":{"value":1335783,"limit":52428800}},"cachereport":{"origin":"mw1396","timestamp":"20230222161156","ttl":1814400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":93,"wgHostname":"mw1435"});});</script>
+</body>
+</html>

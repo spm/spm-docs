@@ -50,9 +50,11 @@ also *SPM -\> Tools -\> New Segment*). There are six TPM volumes in the
 and third frames (shown as *TPM.nii,2* and *TPM.nii,3*), which
 correspond to the white-matter and CSF tissue classes.
 
-<figure>
-<img src="spm_4D_example.png" title="spm_4D_example.png" />
-<figcaption>spm_4D_example.png</figcaption>
+<figure markdown>
+<div class="center">
+<img src="../../../assets/figures/wikibooks/spm_4D_example.png" style="width:100mm" />
+</div>
+<figcaption></figcaption>
 </figure>
 
 ### Further details

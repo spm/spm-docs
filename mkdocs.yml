@@ -82,6 +82,7 @@ nav:
       - 'Batch Tutorial': manual/batch/batch.md
       - 'Developer''s Guide': manual/batch/devel.md
   - WikiBooks:
+    - wikibooks/SPM
     - wikibooks/Advice_on_hardware_selection.md
     - wikibooks/Atlases.md
     - wikibooks/Autocorrelation.md

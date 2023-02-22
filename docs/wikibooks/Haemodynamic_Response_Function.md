@@ -27,9 +27,10 @@ deoxyhaemoglobin. The decrease of deoxy-Hb concentration is seen because
 the increase in CBF following neural activity more than accounts for the
 effect of increased uptake of oxygen.
 
-<figure>
-<img src="SPM_hemodynamic_response_function.png"
-title="SPM Haemodynamic Response Function" />
+<figure markdown>
+<div class="center">
+<img src="../../../assets/figures/wikibooks/SPM_hemodynamic_response_function.png" />
+</div>
 <figcaption>SPM Haemodynamic Response Function</figcaption>
 </figure>
 

@@ -12,9 +12,11 @@ additional details of a brain network. Here is the DCM state equation:
 To explain each term in the equation, we\'ll consider the following
 example model:
 
-<figure>
-<img src="ExampleDCMGraph.png" title=" center" />
-<figcaption> center</figcaption>
+<figure markdown>
+<div class="center">
+<img src="../../../assets/figures/wikibooks/ExampleDCMGraph.png" style="width:100mm" />
+</div>
+<figcaption></figcaption>
 </figure>
 
 We\'ve got three brain regions represented by grey circles. Each region
