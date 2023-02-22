@@ -29,7 +29,7 @@ Smoothing is the process of averaging the signal in each voxel with a weighted a
     ??? info "How to select a smoothing kernel?"
         SPM's default smoothing kernel is 8mm. While this may work well for larger cortical regions, it can make it difficult to detect signal from smaller regions. The smoothing kernel should thus be informed by the size of the regions you are interested in testing. Additionally, the size of the smoothing kernel should account for the voxel size of your functional data. The rule of thumb for choosing a smoothing kernel is to use approximately double the voxel size (e.g. if your voxel size is 3x3x3mm, your smoothing kernel will be 6mm). 
 
-6. Save this batch for future reference - `File` :material-arrow-right-bold: `Save batch` and name it, e.g. `smoothing_batch.mat.`
+6. Save this batch for future reference - `File` :material-arrow-right-bold: `Save batch` and name it, e.g. `smoothing_batch.mat`.
 7. Run your batch by pressing :material-play:.
 
 SPM will now smooth your data by 6mm in each direction (i.e. `x`, `y`, `z`). The files will have the prefix `s`.

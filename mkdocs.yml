@@ -31,6 +31,7 @@ nav:
         - 'Normalisation': './tutorials/fmri_preprocessing/normalisation.md'
         - 'Smoothing': './tutorials/fmri_preprocessing/smoothing.md'
         - 'Batch interface': './tutorials/fmri_preprocessing/batch.md'
+        - 'Scripting': './tutorials/fmri_preprocessing/scripting.md'
       - 'Statistical modelling':
         - 'First-level modelling - block design': './tutorials/fmri_modelling/block_design.md'
         - 'First-level modelling - event-related design': './tutorials/fmri_modelling/event_related_design.md'
