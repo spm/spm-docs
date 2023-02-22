@@ -30,7 +30,7 @@ See [MkDocs documentation](https://www.mkdocs.org/user-guide/writing-your-docs/#
 
 See [MkDocs documentation](https://www.mkdocs.org/user-guide/writing-your-docs/#writing-with-markdown) for more details, and [best-of-mkdocs](https://github.com/pawamoy/best-of-mkdocs) for a curated list of plugins.
 
-To edit Markdown documents, we recommend [Visual Studio Code](https://code.visualstudio.com/) with its [preview mode](https://code.visualstudio.com/docs/languages/markdown).
+To edit Markdown documents, we recommend [Visual Studio Code](https://code.visualstudio.com/) with its [preview mode](https://code.visualstudio.com/docs/languages/markdown). If you want to make a quick change, navigate on GitHub to the page of the file you wish to modify and press the `.` key: it will open a VS Code environment directly in your browser.
 
 ## :computer: Installation
 
@@ -63,6 +63,12 @@ To deactivate the virtual environment when you finished working, use:
 deactivate
 ```
 
+Currently not used but something to consider is the [MkDocs plugin for citation management using bibtex](https://github.com/shyamd/mkdocs-bibtex).
+
+## :lion: Style guide
+
+* British English
+
 ## :bug: Testing
 
 ### :hammer_and_wrench: Build
@@ -92,7 +98,7 @@ pyspelling
 pyspelling --spellchecker hunspell
 ```
 
-### Links Check
+### :chains: Links Check
 
 #### markdown-link-check
 
@@ -108,7 +114,7 @@ To run [`markdownlint-cli`](https://github.com/igorshubovych/markdownlint-cli), 
 markdownlint "docs/**/*.md"
 ```
 
-Note that only MkDocs build and codespell will potentially fail during continuous integration on GitHub Actions. The other reports are only advisory.
+Note that only MkDocs build and codespell will potentially fail during continuous integration on GitHub Actions. The other reports are only advisory, for your perusal.
 
 ## :clinking_glasses: Contributing
 
