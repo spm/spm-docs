@@ -185,7 +185,8 @@ nav:
     - wikibooks/VBM.md
     - wikibooks/Working_with_4D_data.md
   - 'Reference': 'reference/index.md'
-  - 'Development': 'development/index.md'
+  - 'Development':
+    - 'Git': 'development/git.md'
 
 markdown_extensions:
   - abbr
