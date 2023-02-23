@@ -1,6 +1,6 @@
 # Project information
 site_name: SPM Documentation
-site_url: https://www.fil.ion.ucl.ac.uk/spm/
+#site_url: https://www.fil.ion.ucl.ac.uk/spm/#####
 site_author: SPM Team
 site_description: >-
   Documentation of the SPM Software for neuroimaging
@@ -195,6 +195,7 @@ markdown_extensions:
   - footnotes
   - meta
   - md_in_html
+  #- mdx_truly_sane_lists
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.caret
@@ -213,6 +214,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  - smarty
   - toc:
       permalink: true
 
