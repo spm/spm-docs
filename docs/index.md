@@ -43,7 +43,7 @@ The SPM software package has been designed for the analysis of brain imaging dat
 
     SPM discussion list provides live support to your queries.
 
-    [:octicons-arrow-right-24: SPM dicscussion list](https://www.fil.ion.ucl.ac.uk/spm/support/)
+    [:octicons-arrow-right-24: SPM discussion list](https://www.fil.ion.ucl.ac.uk/spm/support/)
 
 </div>
 

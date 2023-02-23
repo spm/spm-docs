@@ -30,7 +30,7 @@ See [MkDocs documentation](https://www.mkdocs.org/user-guide/writing-your-docs/#
 
 See [MkDocs documentation](https://www.mkdocs.org/user-guide/writing-your-docs/#writing-with-markdown) for more details, and [best-of-mkdocs](https://github.com/pawamoy/best-of-mkdocs) for a curated list of plugins.
 
-To edit Markdown documents, we recommend [Visual Studio Code](https://code.visualstudio.com/) with its [preview mode](https://code.visualstudio.com/docs/languages/markdown). If you want to make a quick change, navigate on GitHub to the page of the file you wish to modify and press the `.` key: it will open a VS Code environment directly in your browser.
+To edit Markdown documents, we recommend [Visual Studio Code](https://code.visualstudio.com/) with its [preview mode](https://code.visualstudio.com/docs/languages/markdown). If you want to make a quick change, navigate on GitHub to the page of the file you wish to modify (or click on the `Edit this page` icon) and press the `.` key: it will open a VS Code environment directly in your browser.
 
 ## :computer: Installation
 

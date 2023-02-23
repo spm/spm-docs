@@ -38,5 +38,6 @@ matrix:
       - blockquote
       - span
       - a
+      - :matches(.csl-bib-body)
   - pyspelling.filters.url:
 

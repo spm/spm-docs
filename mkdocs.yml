@@ -1,8 +1,19 @@
+# Project information
 site_name: SPM Documentation
+site_url: https://www.fil.ion.ucl.ac.uk/spm/
+site_author: SPM Team
+site_description: >-
+  Documentation of the SPM Software for neuroimaging
+
+# Repository
 repo_url: https://github.com/spm/spm-docs
 repo_name: spm/spm
 edit_uri: blob/main/docs/
 
+# Copyright
+copyright: Copyright &copy; 1991 - 2023 SPM Team
+
+# Configuration
 theme:
   name: material
   palette:
@@ -34,29 +45,30 @@ theme:
     - navigation.top
 
 nav:
-  - Introduction: 'index.md'
-  - Installation: 'installation.md'
+  - 'Home': 'index.md'
+  - 'Getting started':
+    - 'Installation': 'installation.md'
   - 'Tutorials':
     - 'fMRI':
       - 'Preprocessing':
-        - 'Introduction to preprocessing': './tutorials/fmri_preprocessing/introduction.md'
-        - 'Visual inspection of the data': './tutorials/fmri_preprocessing/visual_inspection.md'
-        - 'Removal of dummy scans': './tutorials/fmri_preprocessing/dummy_scans.md'
-        - 'Realignment': './tutorials/fmri_preprocessing/realignment.md'
-        - 'Slice timing correction': './tutorials/fmri_preprocessing/slice_timing.md'
-        - 'Coregistration': './tutorials/fmri_preprocessing/coregistration.md'
-        - 'Segmentation': './tutorials/fmri_preprocessing/segmentation.md'
-        - 'Normalisation': './tutorials/fmri_preprocessing/normalisation.md'
-        - 'Smoothing': './tutorials/fmri_preprocessing/smoothing.md'
-        - 'Batch interface': './tutorials/fmri_preprocessing/batch.md'
-        - 'Scripting': './tutorials/fmri_preprocessing/scripting.md'
+        - 'Introduction to preprocessing': 'tutorials/fmri_preprocessing/introduction.md'
+        - 'Visual inspection of the data': 'tutorials/fmri_preprocessing/visual_inspection.md'
+        - 'Removal of dummy scans': 'tutorials/fmri_preprocessing/dummy_scans.md'
+        - 'Realignment': 'tutorials/fmri_preprocessing/realignment.md'
+        - 'Slice timing correction': 'tutorials/fmri_preprocessing/slice_timing.md'
+        - 'Coregistration': 'tutorials/fmri_preprocessing/coregistration.md'
+        - 'Segmentation': 'tutorials/fmri_preprocessing/segmentation.md'
+        - 'Normalisation': 'tutorials/fmri_preprocessing/normalisation.md'
+        - 'Smoothing': 'tutorials/fmri_preprocessing/smoothing.md'
+        - 'Batch interface': 'tutorials/fmri_preprocessing/batch.md'
+        - 'Scripting': 'tutorials/fmri_preprocessing/scripting.md'
       - 'Statistical modelling':
-        - 'First-level modelling - block design': './tutorials/fmri_modelling/block_design.md'
-        - 'First-level modelling - event-related design': './tutorials/fmri_modelling/event_related_design.md'
-        - 'Group-level modelling': './tutorials/fmri_modelling/group_level.md'
+        - 'First-level modelling - block design': 'tutorials/fmri_modelling/block_design.md'
+        - 'First-level modelling - event-related design': 'tutorials/fmri_modelling/event_related_design.md'
+        - 'Group-level modelling': 'tutorials/fmri_modelling/group_level.md'
     - 'OPM':
       - 'Preprocessing':
-        - 'Introduction to preprocessing': './tutorials/opm_preprocessing/introduction.md'
+        - 'Introduction to preprocessing': 'tutorials/opm_preprocessing/introduction.md'
   - 'Manual':
     - 'Auditory fMRI data': manual/auditory/auditory.md
     - 'Face fMRI data':
@@ -100,7 +112,7 @@ nav:
     - 'Batch Interface':
       - 'Batch Tutorial': manual/batch/batch.md
       - 'Developer''s Guide': manual/batch/devel.md
-  - WikiBooks:
+  - 'WikiBooks':
     - wikibooks/SPM.md
     - wikibooks/Advice_on_hardware_selection.md
     - wikibooks/Atlases.md
@@ -172,8 +184,8 @@ nav:
     - wikibooks/Two_State_DCM.md
     - wikibooks/VBM.md
     - wikibooks/Working_with_4D_data.md
-  - Courses: 'https://www.fil.ion.ucl.ac.uk/spm/course/'
-  - Support: 'https://www.fil.ion.ucl.ac.uk/spm/support/'
+  - 'Reference': 'reference/index.md'
+  - 'Development': 'development/index.md'
 
 markdown_extensions:
   - abbr
@@ -217,6 +229,8 @@ plugins:
 extra:
   generator: false
   social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/spm
     - icon: fontawesome/solid/brain
       link: https://www.fil.ion.ucl.ac.uk/spm/
 
