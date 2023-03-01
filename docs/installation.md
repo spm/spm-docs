@@ -7,11 +7,49 @@
     
     [GNU Octave](https://www.octave.org/) is a free open-source numerical analysis software similar to MATLAB. See SPM/Octave for more details about compatibility between SPM and Octave. 
 
-=== "SPM12"
-    ## Mac
-    ### Installation
+=== "Windows"
 
-    Mac Intel with 64bit MATLAB is a supported SPM12 platform. Precompiled MEX files (`*.mexmaci64`) are included in the SPM distribution.
+    ## Installation 
+
+    1. Download spm12.zip.
+    2. Unzip spm12.zip in a folder of your choice, such as `C:\Users\login\Documents\MATLAB\spm12`.
+    3. Start MATLAB and add SPM into your path, either using:
+
+        `File` :material-arrow-right-bold: `Set Path` :material-arrow-right-bold: `Add Folder...` 
+
+        or typing:
+
+        ```
+        addpath C:\Users\login\Documents\MATLAB\spm12
+        ```
+        
+        in MATLAB's workspace.
+
+    4. Launch SPM by typing `spm`.
+
+    ## Update
+
+    If you have just downloaded the `spm12.zip` archive, it already contains the latest set of updates. To update SPM when a new version is released:
+
+    1. [Download `spm12_updates_rxxxx.zip`](https://www.fil.ion.ucl.ac.uk/spm/software/download/).
+    2. Uncompress `spm12_updates_rxxxx.zip` on top of the folder containing your SPM installation so that newer files overwrite existing files.
+
+    Alternatively, you can use the `spm_update.m` function:
+
+    ```
+    spm_update
+    ```
+
+    If a new version is available, it can be applied to your local installation by typing:
+
+    ```
+    spm_update update
+    ```
+
+=== "Mac"
+    ## Installation
+
+    Mac Intel with 64bit MATLAB is a supported SPM platform. Precompiled MEX files (`*.mexmaci64`) are included in the SPM distribution.
 
     1. [Download `spm12.zip`](https://www.fil.ion.ucl.ac.uk/spm/software/download/) and its updates `spm12_updates_rxxxx.zip` in your home directory.
 
@@ -96,47 +134,9 @@
         
         or change PATH accordingly. 
 
+=== "Unix/Linux"
 
-    ## Windows
-    ### Installation 
-
-    1. Download spm12.zip.
-    2. Unzip spm12.zip in a folder of your choice, such as `C:\Users\login\Documents\MATLAB\spm12`.
-    3. Start MATLAB and add SPM into your path, either using:
-
-        `File` :material-arrow-right-bold: `Set Path` :material-arrow-right-bold: `Add Folder...` 
-
-        or typing:
-
-        ```
-        addpath C:\Users\login\Documents\MATLAB\spm12
-        ```
-        
-        in MATLAB's workspace.
-
-    4. Launch SPM by typing `spm`.
-
-    ### Update
-
-    If you have just downloaded the `spm12.zip` archive, it already contains the latest set of updates. To update SPM when a new version is released:
-
-    1. [Download `spm12_updates_rxxxx.zip`](https://www.fil.ion.ucl.ac.uk/spm/software/download/).
-    2. Uncompress `spm12_updates_rxxxx.zip` on top of the folder containing your SPM installation so that newer files overwrite existing files.
-
-    Alternatively, you can use the `spm_update.m` function:
-
-    ```
-    spm_update
-    ```
-
-    If a new version is available, it can be applied to your local installation by typing:
-
-    ```
-    spm_update update
-    ```
-
-    ## Unix/Linux
-    ### Installation
+    ## Installation
 
     1. Download `spm12.zip` and its updates `spm12_updates_rxxxx.zip` in your home directory.
 
@@ -160,9 +160,9 @@
 
         in MATLAB's workspace.
         
-    ### Compilation
+    ## Compilation
 
-    In a Terminal, from the src folder of your SPM12 installation, type:
+    In a Terminal, from the src folder of your SPM installation, type:
 
     ```
     cd /home/login/spm12/src
@@ -288,10 +288,3 @@
         ```
         setenv('SPM_HTML_BROWSER','0')
         ```
-
-
-=== "SPM8"
-
-=== "SPM5"
-
-=== "SPM2"
