@@ -9,7 +9,7 @@
 
 === "Windows"
 
-    ## Installation 
+    ## Installation
 
     1. Download spm12.zip.
     2. Unzip spm12.zip in a folder of your choice, such as `C:\Users\login\Documents\MATLAB\spm12`.
