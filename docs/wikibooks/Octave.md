@@ -45,7 +45,7 @@ alternative.
 Feel free to contact <fil.spm@ucl.ac.uk> if this is something you are
 interested in. You need to use the latest versions of
 [SPM12](https://www.fil.ion.ucl.ac.uk/spm/software/spm12/) and [GNU
-Octave (7.3)](https://octave.org/download.html).
+Octave (8.1)](https://octave.org/download.html).
 
 ### Compilation
 
