@@ -1,8 +1,8 @@
 # SPM Development with Git and GitHub
 
-The development of SPM takes place with the [Git](https://git-scm.com/) version control system. [GitHub](https://github.com/) is used as the collaborative code hosting platform (with a local mirror using [Gitea](https://gitea.io/)).
+We use the [Git](https://git-scm.com/) version control system for the development of SPM. [GitHub](https://github.com/) is used as the collaborative code hosting platform (with a local mirror using [Gitea](https://gitea.io/)): the authoritative copy of the SPM repository is available at [spm/spm](https://github.com/spm/spm).
 
-The instructions below are with using the GitHub Desktop as a graphical user interface on Windows. We also mention the command line equivalent when relevant.
+We provide here instructions to interact with Git using the GitHub Desktop. This mainly concerns Windows developers -- we also mention the command line equivalents when relevant.
 
 ##  Git Installation
 
@@ -14,7 +14,8 @@ Once installed, you need to authenticate with your [GitHub account](https://docs
 
 * [Authenticating to GitHub](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/installing-and-authenticating-to-github-desktop/authenticating-to-github)
 
-Two-factor authentication (2FA) is not required yet but might be by the [end of 2023](https://github.blog/2023-03-09-raising-the-bar-for-software-security-github-2fa-begins-march-13/).
+!!! tip Two-factor authentication (2FA)
+    Two-factor authentication (2FA) is not required yet but might be by the [end of 2023](https://github.blog/2023-03-09-raising-the-bar-for-software-security-github-2fa-begins-march-13/). See [here](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa) for instructions on how to configure 2FA on your account.
 
 <!--
 You can also, optionally, install the Git command line tool and TortoiseGit:
@@ -73,7 +74,8 @@ git config --local user.email "k.friston@ucl.ac.uk"
 
 This can also be done with GitHub Desktop by following [these instructions](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop#configuring-different-author-information-for-an-individual-repository).
 
-Note that you can [associate multiple email addresses](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/adding-an-email-address-to-your-github-account) with a single GitHub account.
+!!! note
+    Note that you can [associate multiple email addresses](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/adding-an-email-address-to-your-github-account) with a single GitHub account.
 
 ### Merge Strategy
 
@@ -85,11 +87,13 @@ git config --global pull.rebase true
 
 This is equivalent to using `git pull --rebase`.
 
-To apply this setting from GitHub Desktop, you need to open the command prompt by selecting +Repository+ then +"Open in Command Prompt"+ from the top menu and enter the above command line.
+To apply this setting from GitHub Desktop, you need to open the command prompt by selecting ++"Repository"++ then ++"Open in Command Prompt"++ from the top menu and enter the above command line.
 
 ## Clone the SPM repository
 
+Follow [these instructions](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop) with the SPM repository: https://github/spm/spm
 
+From the command line, the equivalent is:
 
 ```
 git clone git@github.com:spm/spm.git
@@ -98,6 +102,14 @@ git clone git@github.com:spm/spm.git
 ## Git Commits
 
 ### Log Messages
+
+Use the imperative and prefix the commit message with one of:
+
+* ++"New feature"++
+* ++"Enhancement"++
+* ++"Bug fix"++
+* ++"Documentation"++
+* ++"Refactoring"++
 
 ## Git Workflow
 
