@@ -2,7 +2,7 @@
 
 We use the [Git](https://git-scm.com/) version control system for the development of SPM. [GitHub](https://github.com/) is used as the collaborative code hosting platform (with a local mirror using [Gitea](https://gitea.io/)): the authoritative copy of the SPM repository is available at [spm/spm](https://github.com/spm/spm).
 
-We provide here instructions to interact with Git using the GitHub Desktop. This mainly concerns Windows developers -- we also mention the command line equivalents when relevant.
+We provide here instructions to interact with the SPM repository using the [GitHub Desktop](https://desktop.github.com/). This mainly concerns Windows developers -- we also mention the command line equivalents when relevant.
 
 ##  Git Installation
 
@@ -14,7 +14,7 @@ Once installed, you need to authenticate with your [GitHub account](https://docs
 
 * [Authenticating to GitHub](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/installing-and-authenticating-to-github-desktop/authenticating-to-github)
 
-!!! tip Two-factor authentication (2FA)
+!!! tip "Two-factor authentication (2FA)"
     Two-factor authentication (2FA) is not required yet but might be by the [end of 2023](https://github.blog/2023-03-09-raising-the-bar-for-software-security-github-2fa-begins-march-13/). See [here](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa) for instructions on how to configure 2FA on your account.
 
 <!--
@@ -88,6 +88,9 @@ git config --global pull.rebase true
 This is equivalent to using `git pull --rebase`.
 
 To apply this setting from GitHub Desktop, you need to open the command prompt by selecting ++"Repository"++ then ++"Open in Command Prompt"++ from the top menu and enter the above command line.
+
+!!! note "Enforcing a linear commit history"
+    Note that the option to [require a linear history](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches#require-linear-history) has been enabled on the SPM repository. This prevents from pushing merge commits to the main branch.
 
 ## Clone the SPM repository
 
