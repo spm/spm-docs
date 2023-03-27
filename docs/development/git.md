@@ -155,7 +155,7 @@ We are using a [Centralised Workflow](https://www.atlassian.com/git/tutorials/co
 
 <figure markdown>
   ![Git clone](../assets/figures/git_pull_rebase.svg)
-  <figcaption><code>git pull</code> is used to incorporate upstream changes into the repository. The <code>--rebase</code> option tells Git to move all of the local commits to the tip of the <code>main</code> branch after synchronising it with the changes from the central repository. From <a href="https://www.atlassian.com/git/tutorials/comparing-workflows#centralized-workflow">Atlassian documentation</a>]()</figcaption>
+  <figcaption><code>git pull</code> is used to incorporate upstream changes into the repository. The <code>--rebase</code> option tells Git to move all of the local commits to the tip of the <code>main</code> branch after synchronising it with the changes from the central repository. Extracted from the <a href="https://www.atlassian.com/git/tutorials/comparing-workflows#centralized-workflow">Atlassian documentation</a>.</figcaption>
 </figure>
 
 ## Pull Requests
@@ -166,3 +166,5 @@ Recommendation for pull request reviewers: When merging, we generally like `squa
 
 * [Dangit, Git!?!](https://dangitgit.com/)
 * [On Git and Cognitive Load](https://dzone.com/articles/on-git-and-cognitive-load)
+* [xkcd 1296](https://xkcd.com/1296/)
+* [xkcd 1597](https://xkcd.com/1597/)
