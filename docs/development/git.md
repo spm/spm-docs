@@ -59,6 +59,11 @@ The instructions to set your commit name and email address in GitHub Desktop are
 
 * [Configuring your global author information](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop#configuring-your-global-author-information)
 
+<figure markdown>
+  ![Git configuration](../assets/figures/git_config.png)
+  <figcaption>Specify your commit name and email address in GitHub Desktop.</figcaption>
+</figure>
+
 The command line equivalent is:
 
 ```
@@ -94,7 +99,12 @@ To apply this setting from GitHub Desktop, you need to open the command prompt b
 
 ## Clone the SPM repository
 
-Follow [these instructions](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop) with the SPM repository: https://github/spm/spm
+Follow [these instructions](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop) with the SPM repository: [https://github/spm/spm](https://github/spm/spm)
+
+<figure markdown>
+  ![Git clone](../assets/figures/git_clone_repo.png)
+  <figcaption>Clone the SPM repository from its GitHub URL.</figcaption>
+</figure>
 
 From the command line, the equivalent is:
 
@@ -104,7 +114,20 @@ git clone git@github.com:spm/spm.git
 
 ## Git Commits
 
-### Log Messages
+After editing some files in the `main` branch, select the changes to include in a commit, write a commit message and push the changes to `origin`:
+
+* [Making changes](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project#selecting-changes-to-include-in-a-commit)
+
+From the command line, this is obtained with:
+
+```
+git add spm_example.m
+git commit -m "<commit message>"
+```
+
+Ideally, "each commit should be a perfect, atomic unit of change". Do commit related changes, commit often but don't commit half-done work (use branch or stash instead).
+
+### Commit Messages
 
 Use the imperative and prefix the commit message with one of:
 
@@ -114,6 +137,18 @@ Use the imperative and prefix the commit message with one of:
 * ++"Documentation"++
 * ++"Refactoring"++
 
+You should be able to suffix a commit message to the phrase "If applied, this code will ...".
+
+Commit messages should begin with a short summary of the changes (up to 70 characters) followed by a blank line and the body text, i.e.:
+
+```
+Enhancement: replace this with that in such and such
+
+Longer description that might contain bullet points:
+* item 1
+* item 2
+```
+
 ## Git Workflow
 
 We are using a [Centralised Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#centralized-workflow). This is also called [Trunk Based Development](https://trunkbaseddevelopment.com/) (see this [article](https://medium.com/@mattia.battiston/why-i-love-trunk-based-development-641fcf0b94a0) for a discussion). Popular other workflows include [GitHub Flow](https://githubflow.github.io/) and [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
@@ -121,7 +156,6 @@ We are using a [Centralised Workflow](https://www.atlassian.com/git/tutorials/co
 ## Pull Requests
 
 Recommendation for pull request reviewers: When merging, we generally like `squash+merge`. Unless it is the rare case of a PR with carefully staged individual commits that you want in the history separately, in which case `merge` is acceptable, but usually prefer `squash+merge`.
-
 
 ## References
 

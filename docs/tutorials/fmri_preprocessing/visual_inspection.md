@@ -5,17 +5,17 @@
 Let's take a look at the structure of the data you [downloaded](https://www.fil.ion.ucl.ac.uk/spm/download/data/MoAEpilot/MoAEpilot.bids.zip). The data is organised following [BIDS](https://bids.neuroimaging.io/) - a standardised format for organising and naming neuroimaging files, and looks like this:
 
 ``` 
-MoAEpilot/
-    CHANGES
-    dataset_description.json
-    README
-    sub-01/
-        anat/
-            sub-01_T1w.nii
-        func/
-            sub-01_task-auditory_bold.nii
-            sub-01_task-auditory_events.tsv
-    task-auditory_bold.json
+MoAEpilot
+├── CHANGES
+├── dataset_description.json
+├── README
+├── sub-01
+│   ├── anat
+│   │   └── sub-01_T1w.nii
+│   └── func
+│       ├── sub-01_task-auditory_bold.nii
+│       └── sub-01_task-auditory_events.tsv
+└── task-auditory_bold.json
 ```
 
 Inside the folder containing the Mother of All Experiments (MoAE) data, you can find `CHANGES`, `dataset_description.json`, `README` and `task-auditory_bold.json` files - these files contain meta-data about the study. The subject directory, `sub-01`, contains `anat` and `func` folders, which store anatomical and functional images, respectively. Additionally, onset timings for task data are stored in the `func` folder alongside task images. 
@@ -28,13 +28,13 @@ We will first look at the anatomical image `sub-01_T1w.nii` stored in `sub-01/an
 
 From your terminal or Matlab window open SPM by typing:
 
-```
+```matlab
 spm fmri
 ```
 
 or:
 
-```
+```matlab
 spm
 ```
 
@@ -43,8 +43,8 @@ and selecting `fMRI` in the SPM window.
 To view an image, click on `Display` from the SPM menu and select the image you want to inspect from the pop-up window. The selected image will now be shown in the SPM graphics window. 
 
 !!! tip "File extensions"
-    SPM can read read files in the Analyze format (`.hdr`/`.img`) and uncompressed NIFTI files (`.nii`). If your files are compressed and end in `.gz`, make sure to uncompress them first, e.g.:
-    ```
+    SPM can read uncompressed NIfTI files in single (`.nii`) and dual (`.hdr`/`.img`) formats. If your files are compressed with `gzip` and end in `.gz`, make sure to uncompress them first, e.g.:
+    ```matlab
     gunzip your_file.nii.gz
     ```
 

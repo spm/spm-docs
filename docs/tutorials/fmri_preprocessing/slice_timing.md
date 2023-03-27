@@ -17,13 +17,11 @@ Slice timing correction aims to account for the differences in timing of data ac
 
     For a thorough overview of issues related to slice timing in fMRI, see the SPM book:
 
-    [Penny, W., Friston, K., Ashburner, J., Kiebel, S., & Nichols, T. (2006). *Statistical parametric mapping: The analysis of functional brain images* (1st ed.).](http://www.elsevierdirect.com/product.jsp?isbn=9780123725608&srccode=89660)
+    [Penny, W., Friston, K., Ashburner, J., Kiebel, S., & Nichols, T. (2006). *Statistical parametric mapping: The analysis of functional brain images*.](https://www.fil.ion.ucl.ac.uk/spm/doc/#books)
 
     And other readings:
 
-    [Jenkinson, M. & Chappell, M. (2018). *Introduction to neuroimaging analysis*. Oxford University Press.](http://www.neuroimagingprimers.org/examples/introduction-primer-example-boxes/)
-
-    [Poldrack, R. A., Mumford, J. A., & Nichols, T. E. (2011). *Handbook of functional MRI data analysis*. Cambridge University Press.](https://www.cambridge.org/core/books/handbook-of-functional-mri-data-analysis/8EDF966C65811FCCC306F7C916228529)
+    [Sladky, R., Friston, K.j., Trostl J., Cunnington, R., Moser, E, Windischberger, C. (2011). *Slice-timing effects and their correction in functional MRI*.](https://doi.org/10.1016/j.neuroimage.2011.06.078)
 
 ??? info "When to use slice timing correction?"
     * Slice timing can be done on any fMRI data but it is particularly beneficial for studies with **longer TRs** (i.e. >2s). For studies with shorter TRs (≤2s), temporal derivative may be a better option.
