@@ -69,6 +69,8 @@ Currently not used but something to consider is the [MkDocs plugin for citation 
 
 * British English
 
+[OptiPNG](https://optipng.sourceforge.net/) should be applied on PNG files before commit.
+
 ## :bug: Testing
 
 ### :hammer_and_wrench: Build
