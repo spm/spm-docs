@@ -155,7 +155,7 @@ We are using a [Centralised Workflow](https://www.atlassian.com/git/tutorials/co
 
 <figure markdown>
   ![Git clone](../assets/figures/git_pull_rebase.svg)
-  <figcaption>`git pull` is used to incorporate upstream changes into the repository. The `--rebase` option tells Git to move all of the local commits to the tip of the `main` branch after synchronising it with the changes from the central repository. From [Atlassian documentation](https://www.atlassian.com/git/tutorials/comparing-workflows#centralized-workflow)</figcaption>
+  <figcaption><code>git pull</code> is used to incorporate upstream changes into the repository. The <code>--rebase</code> option tells Git to move all of the local commits to the tip of the <code>main</code> branch after synchronising it with the changes from the central repository. From <a href="https://www.atlassian.com/git/tutorials/comparing-workflows#centralized-workflow">Atlassian documentation</a>]()</figcaption>
 </figure>
 
 ## Pull Requests
