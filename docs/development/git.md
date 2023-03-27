@@ -153,6 +153,11 @@ Longer description that might contain bullet points:
 
 We are using a [Centralised Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#centralized-workflow). This is also called [Trunk Based Development](https://trunkbaseddevelopment.com/) (see this [article](https://medium.com/@mattia.battiston/why-i-love-trunk-based-development-641fcf0b94a0) for a discussion). Popular other workflows include [GitHub Flow](https://githubflow.github.io/) and [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
 
+<figure markdown>
+  ![Git clone](../assets/figures/git_pull_rebase.svg)
+  <figcaption>`git pull` is used to incorporate upstream changes into the repository. The `--rebase` option tells Git to move all of the local commits to the tip of the `main` branch after synchronising it with the changes from the central repository. From [Atlassian documentation](https://www.atlassian.com/git/tutorials/comparing-workflows#centralized-workflow)</figcaption>
+</figure>
+
 ## Pull Requests
 
 Recommendation for pull request reviewers: When merging, we generally like `squash+merge`. Unless it is the rare case of a PR with carefully staged individual commits that you want in the history separately, in which case `merge` is acceptable, but usually prefer `squash+merge`.
