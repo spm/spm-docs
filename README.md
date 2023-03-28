@@ -67,9 +67,76 @@ Currently not used but something to consider is the [MkDocs plugin for citation 
 
 ## :lion: Style guide
 
-* British English
+### 1. British English
 
+### 2. Code
+Format any code included in the documentation as code chunks.
+
+Raw text:
+
+\```
+
+code
+
+\```
+
+Display text:
+```
+code
+```
+
+Format any file names, paths, functions, input variables, etc. as in-line code. 
+
+Raw text: \`code`
+
+Display text:
+`code`
+
+### 3. Abbreviations
+All abbreviations should be defined alphabetically in `addons/abbreviations.md` in the following format:
+	
+	*[BOLD]: Blood Oxygen Level Dependent 
+
+To use the abbreviations file on the page you’re creating, add the below at the end of your markdown file:
+
+	--8<-- "addons/abbreviations.md"
+
+### 4. Images    
 [OptiPNG](https://optipng.sourceforge.net/) should be applied on PNG files before commit.
+
+### 5. Information boxes
+Additional information can be highlighted using information boxes. 
+
+Boxes can be expanded:
+```
+!!! tip “Title of your box”
+    Text of your box
+```
+
+Or collapsible:
+```
+??? tip "Title of your box"
+    Text of your box
+```
+Use expanded boxes for crucial succinct information. For anything additional or lengthy, use collapsible boxes. 
+
+Various icons and colour-coding are available, please use:
+- `tip` 	for top tips on SPM things
+- `info` 	for core information not covered in the main text
+- `note`	for additional non-essential information
+- `failure` 	for help on troubleshooting
+
+Full list of icons is available [here](https://squidfunk.github.io/mkdocs-material/reference/admonitions/).
+
+### 6. Symbols
+
+A selection of symbols can be used. 
+Currently used:
+- `++return++` enter/return key
+- `:material-arrow-right-bold:` right facing arrow
+- `:material-play:` play icon
+
+Full list of symbols is available [here](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/). 
 
 ## :bug: Testing
 
