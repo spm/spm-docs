@@ -32,7 +32,7 @@ Your job is now estimating the 6-parameter (rigid body) spatial transformation t
 The data used to generate these plots are also saved to a text file `rp_sub-01_task-auditory_bold.txt`, so that these variables can be later used as regressors when fitting GLMs. This allows movement effects to be accounted for when estimating brain function.
 
 !!! info "Understanding `rp_*.txt` files"
-    In `rp_sub-01_task-auditory_bold.txt`, columns 1-3 represent `x`, `y` and `z` translations, while columns 4-6 correspond to `pitch`, `roll` and `yaw` rotations. 
+    In `rp_sub-01_task-auditory_bold.txt`, columns 1-3 represent `x`, `y` and `z` translations in mm, while columns 4-6 correspond to `pitch`, `roll` and `yaw` rotations in radians. 
 
 SPM will also create a mean image `meansub-01_task-auditory_bold.nii` which will be used in [coregistration](./coregistration.md). 
 

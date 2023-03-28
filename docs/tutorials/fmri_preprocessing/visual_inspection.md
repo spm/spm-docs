@@ -26,7 +26,7 @@ An important step of any imaging analysis is to visually check your data for any
 
 We will first look at the anatomical image `sub-01_T1w.nii` stored in `sub-01/anat`. 
 
-From your terminal or Matlab window open SPM by typing:
+From your terminal or MATLAB window open SPM by typing:
 
 ```matlab
 spm fmri

@@ -53,14 +53,12 @@ The SPM suite and associated theory was originally developed by [Karl Friston](h
 
 SPM'94 was the first major revision of the SPM software. SPM'94 was written primarily by [Karl Friston](https://www.fil.ion.ucl.ac.uk/~karl/) during the summer of 1994, with invaluable conceptual and technical help from [John Ashburner](https://www.fil.ion.ucl.ac.uk/~john/), Jon Heather, Andrew Holmes and Jean-Baptiste Poline. SPM'95, [SPM'96](https://www.fil.ion.ucl.ac.uk/spm/software/spm96/), [SPM'99](https://www.fil.ion.ucl.ac.uk/spm/software/spm99/), [SPM2](https://www.fil.ion.ucl.ac.uk/spm/software/spm2/), [SPM5](https://www.fil.ion.ucl.ac.uk/spm/software/spm5/), [SPM8](https://www.fil.ion.ucl.ac.uk/spm/software/spm8/) and [SPM12](https://www.fil.ion.ucl.ac.uk/spm/software/spm12/) are based on SPM'94, and represent the ongoing theoretical advances and technical improvements.
 
-[**Read more about SPM history here.**](https://www.fil.ion.ucl.ac.uk/spm/doc/history.html)
-
 ## Further reading
 
-[Ashburner, J., Friston, K., & Penny, W. (2003). *Human brain function* (2nd ed.).](https://www.fil.ion.ucl.ac.uk/spm/doc/books/hbf2/)
+[Penny, W., Friston, K., Ashburner, J., Kiebel, S., & Nichols, T. (2006). *Statistical parametric mapping: The analysis of functional brain images*.](https://www.fil.ion.ucl.ac.uk/spm/doc/#books)
 
-[Friston, K. (2003). Introduction: Experimental design and statistical parametric mapping. In Frackowiak et al. (Eds.) *Human brain function* (2nd ed.).](https://www.fil.ion.ucl.ac.uk/spm/doc/intro/)
+[Friston, K.J. *A short history of statistical parametric mapping in functional neuroimaging*](https://www.fil.ion.ucl.ac.uk/spm/doc/history.html)
 
-[Penny, W., Friston, K., Ashburner, J., Kiebel, S., & Nichols, T. (2006). *Statistical parametric mapping: The analysis of functional brain images* (1st ed.).](http://www.elsevierdirect.com/product.jsp?isbn=9780123725608&srccode=89660)
+[Ashburner, J. (2012). *SPM: A history*](https://doi.org/10.1016/j.neuroimage.2011.10.025)
 
 --8<-- "addons/abbreviations.md"
