@@ -57,8 +57,8 @@ SPM'94 was the first major revision of the SPM software. SPM'94 was written prim
 
 [Penny, W., Friston, K., Ashburner, J., Kiebel, S., & Nichols, T. (2006). *Statistical parametric mapping: The analysis of functional brain images*.](https://www.fil.ion.ucl.ac.uk/spm/doc/#books)
 
-[Friston, K.J. *A short history of statistical parametric mapping in functional neuroimaging*](https://www.fil.ion.ucl.ac.uk/spm/doc/history.html)
+[Friston, K.J. *A short history of statistical parametric mapping in functional neuroimaging*.](https://www.fil.ion.ucl.ac.uk/spm/doc/history.html)
 
-[Ashburner, J. (2012). *SPM: A history*](https://doi.org/10.1016/j.neuroimage.2011.10.025)
+[Ashburner, J. (2012). *SPM: A history*.](https://doi.org/10.1016/j.neuroimage.2011.10.025)
 
 --8<-- "addons/abbreviations.md"

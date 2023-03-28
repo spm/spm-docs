@@ -13,17 +13,18 @@
     2. Unzip spm12.zip in a folder of your choice, such as `C:\Users\login\Documents\MATLAB\spm12`.
     3. Start MATLAB and add SPM into your path, either using:
 
-        `File` :material-arrow-right-bold: `Set Path` :material-arrow-right-bold: `Add Folder...` 
+        `Home` :material-arrow-right-bold: `Set Path` :material-arrow-right-bold: `Add Folder...`: select the directory containing your SPM installation then click on `Save` and `Close`.
 
-        or typing:
+        or type the following at the MATLAB prompt:
 
+        ```matlab
+        addpath('C:\Users\login\Documents\MATLAB\spm12')
         ```
-        addpath C:\Users\login\Documents\MATLAB\spm12
-        ```
-        
-        in MATLAB's workspace.
 
-    4. Launch SPM by typing `spm`.
+    !!! danger
+        If using the graphical interface, make sure to use the `Add Folder...` button and not `Add with Subfolders...`. SPM will automatically add the appropriate subfolders to the MATLAB path.
+
+    You can then launch SPM by typing `spm` at the MATLAB prompt.
 
     ## Update
 
@@ -131,7 +132,7 @@
         
         or change PATH accordingly. 
 
-=== "Unix/Linux"
+=== "Linux"
 
     ## Installation
 
