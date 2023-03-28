@@ -16,9 +16,9 @@ All the features of Material for MkDocs are described in its [reference document
 
 ### :bookmark_tabs: File layout
 
-`MkDocs` is configured using the [mkdocs.yml](mkdocs.yml) file at the root of the git repository.
+`MkDocs` is configured using the [`mkdocs.yml`](mkdocs.yml) file at the root of the git repository.
 
-The [mkdocs.yml](mkdocs.yml) file defines the top level navigation for the site. The `nav` configuration setting in this file defines which pages are included in the global site navigation menu as well as the structure of that menu.
+The [`mkdocs.yml`](mkdocs.yml) file defines the top level navigation for the site. The `nav` configuration setting in this file defines which pages are included in the global site navigation menu as well as the structure of that menu.
 
 See [MkDocs documentation](https://www.mkdocs.org/user-guide/writing-your-docs/#file-layout) for more details.
 
@@ -74,7 +74,7 @@ Format any code included in the documentation as code chunks.
 
 Raw text:
 
-\```
+\```matlab
 
 code
 
@@ -93,7 +93,7 @@ Display text:
 `code`
 
 ### 3. Abbreviations
-All abbreviations should be defined alphabetically in `addons/abbreviations.md` in the following format:
+All abbreviations should be defined alphabetically in [`addons/abbreviations.md`](addons/abbreviations.md) in the following format:
 	
 	*[BOLD]: Blood Oxygen Level Dependent 
 
@@ -102,7 +102,17 @@ To use the abbreviations file on the page you’re creating, add the below at th
 	--8<-- "addons/abbreviations.md"
 
 ### 4. Images    
-[OptiPNG](https://optipng.sourceforge.net/) should be applied on PNG files before commit.
+Illustrations should be saved as PNG or SVG files in the [`docs/assets/figures/`
+](docs/assets/figures/) directory. [OptiPNG](https://optipng.sourceforge.net/) should be applied on PNG files before commit.
+
+To display images with captions, use:
+
+```html
+<figure markdown>
+  ![Image title](docs/assets/figures/image.png){}
+  <figcaption>Image caption</figcaption>
+</figure>
+```
 
 ### 5. Information boxes
 Additional information can be highlighted using information boxes. 
