@@ -17,12 +17,22 @@ Once installed, you need to authenticate with your [GitHub account](https://docs
 !!! tip "Two-factor authentication (2FA)"
     Two-factor authentication (2FA) is not required yet but might be by the [end of 2023](https://github.blog/2023-03-09-raising-the-bar-for-software-security-github-2fa-begins-march-13/). See [here](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa) for instructions on how to configure 2FA on your account.
 
+You also need to install a Git command line tool. On Windows, we recommend:
+
+* [Git for Windows](https://gitforwindows.org/)
+
+During installation, you can accept most defaults. There are three options to be careful about ("PATH environment", "line ending conversions" and "default behavior of `git pull`"), and you should select the choices as below:
+
+![Image 1](../assets/figures/git_windows_cmd.png){ width="45%" }
+![Image 2](../assets/figures/git_windows_eol.png){ width="45%" }
+![Image 3](../assets/figures/git_windows_rebase.png){ width="45%" }
+
+If you do not have the administrative permissions to install Git as described above, try and install [64-bit Git for Windows Portable](https://git-scm.com/download/win) to `C:\wtcnapps\` and add the directory containing `git.exe` to the `Path` environment variable for your account.
+
 <!--
-You can also, optionally, install the Git command line tool and TortoiseGit:
+TortoiseGit is another graphical interface for Git on Windows:
 
-* [Git](https://git-scm.com/downloads) or [Git for Windows](https://gitforwindows.org/)
 * [TortoiseGit](https://tortoisegit.org/)
-
 -->
 
 <!--
