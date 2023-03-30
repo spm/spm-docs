@@ -23,9 +23,9 @@ You also need to install a Git command line tool. On Windows, we recommend:
 
 During installation, you can accept most defaults. There are three options to be careful about ("PATH environment", "line ending conversions" and "default behavior of `git pull`"), and you should select the choices as below:
 
-![Image 1](../assets/figures/git_windows_cmd.png){ width="45%" }
-![Image 2](../assets/figures/git_windows_eol.png){ width="45%" }
-![Image 3](../assets/figures/git_windows_rebase.png){ width="45%" }
+![PATH environment](../assets/figures/git_windows_cmd.png){ width="45%" }
+![line ending conversions](../assets/figures/git_windows_eol.png){ width="45%" }
+![default behavior of `git pull`](../assets/figures/git_windows_rebase.png){ width="45%" }
 
 If you do not have the administrative permissions to install Git as described above, try and install [64-bit Git for Windows Portable](https://git-scm.com/download/win) to `C:\wtcnapps\` and add the directory containing `git.exe` to the `Path` environment variable for your account.
 
@@ -174,7 +174,7 @@ Recommendation for pull request reviewers: When merging, we generally like `squa
 
 ## References
 
+* [Pro Git](https://git-scm.com/book/en/v2)
+* [Building Git](https://shop.jcoglan.com/building-git/)
 * [Dangit, Git!?!](https://dangitgit.com/)
-* [On Git and Cognitive Load](https://dzone.com/articles/on-git-and-cognitive-load)
-* [xkcd 1296](https://xkcd.com/1296/)
 * [xkcd 1597](https://xkcd.com/1597/)

@@ -16,7 +16,7 @@ All the features of Material for MkDocs are described in its [reference document
 
 ### :bookmark_tabs: File layout
 
-`MkDocs` is configured using the [`mkdocs.yml`](mkdocs.yml) file at the root of the git repository.
+`MkDocs` is configured using the [`mkdocs.yml`](mkdocs.yml) file at the root of the Git repository.
 
 The [`mkdocs.yml`](mkdocs.yml) file defines the top level navigation for the site. The `nav` configuration setting in this file defines which pages are included in the global site navigation menu as well as the structure of that menu.
 
@@ -40,7 +40,7 @@ If you want to edit and build the documentation yourself, you first need to clon
 git clone git@github.com:spm/spm-docs.git
 ```
 
-Then create a virtual environment for python and install [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) and its dependencies:
+Then create a virtual environment for Python and install [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) and its dependencies:
 
 ```shell
 python3 -m venv venv
@@ -67,7 +67,8 @@ Currently not used but something to consider is the [MkDocs plugin for citation 
 
 ## :lion: Style guide
 
-### 1. British English
+### 1. Language
+Use British English.
 
 ### 2. Code
 Format any code included in the documentation as code chunks.
@@ -113,6 +114,8 @@ To display images with captions, use:
   <figcaption>Image caption</figcaption>
 </figure>
 ```
+
+Videos should be saved as MP4 in the [`docs/assets/videos/`](docs/assets/videos/) directory. Videos encoded in other formats can be converted to MP4 with [FFmpeg](https://www.ffmpeg.org/).
 
 ### 5. Information boxes
 Additional information can be highlighted using information boxes. 
