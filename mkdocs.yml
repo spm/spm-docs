@@ -76,6 +76,10 @@ nav:
     - 'OPM':
       - 'Preprocessing':
         - 'Introduction to preprocessing': 'tutorials/opm_preprocessing/introduction.md'
+    - 'VBM':
+        - 'Getting started':      'tutorials/vbm/VBM-getting-started.md'
+        - 'Image processing':     'tutorials/vbm/VBM-image-processing.md'
+        - 'Statistical analysis': 'tutorials/vbm/VBM-statistical-analysis.md'
   - 'Manual':
     - 'Auditory fMRI data': manual/auditory/auditory.md
     - 'Face fMRI data':
