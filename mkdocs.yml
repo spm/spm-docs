@@ -197,8 +197,9 @@ nav:
     - wikibooks/Working_with_4D_data.md
   - 'Reference': 'reference/index.md'
   - 'Development':
-    - 'Git':     'development/git.md'
-    - 'Testing': 'development/testing.md'
+    - 'Introduction': 'development/index.md'
+    - 'Git':          'development/git.md'
+    - 'Testing':      'development/testing.md'
 
 markdown_extensions:
   - abbr
