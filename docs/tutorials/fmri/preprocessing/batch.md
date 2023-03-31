@@ -6,7 +6,7 @@ The SPM batch interface allows you to create workflows for executing multiple pr
 
 1. From the SPM menu panel, select `Batch`. You will see a pop-up window of an empty batch interface looking like this:
 
-    ![](../../assets/figures/batch.png)
+    ![](../../../assets/figures/batch.png)
 
 2. Now we will start adding each of our preprocessing steps in the order we want them to be executed, starting with **realignment**. 
 3. From to top panel of the batch window, select `SPM` :material-arrow-right-bold: `Spatial` :material-arrow-right-bold: `Realign` :material-arrow-right-bold: `Realign: estimate & reslice)`. 
