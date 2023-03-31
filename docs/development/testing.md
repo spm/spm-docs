@@ -25,7 +25,7 @@ Some tests require input data that can be downloaded from [here](https://www.fil
 
 ## Continuous integration
 
-[Continuous integration on GitHub](https://www.mathworks.com/help/matlab/matlab_prog/continuous-integration-with-matlab-on-ci-platforms.html#mw_6cb5114e-198f-48b2-9d94-e1efd7bf653c) takes place with [MATLAB GitHub Actions](https://github.com/matlab-actions). The configuration file for the testing workflow is available [here](https://github.com/spm/spm/blob/main/.github/workflows/matlab.yml) and the outcomes are available [from the GitHub Actions tag](https://github.com/spm/spm/actions).
+[Continuous integration on GitHub](https://www.mathworks.com/help/matlab/matlab_prog/continuous-integration-with-matlab-on-ci-platforms.html#mw_6cb5114e-198f-48b2-9d94-e1efd7bf653c) takes place with [MATLAB GitHub Actions](https://github.com/matlab-actions). The configuration file for the testing workflow is available [here](https://github.com/spm/spm/blob/main/.github/workflows/matlab.yml) and the outcomes are available from the [GitHub Actions tab](https://github.com/spm/spm/actions).
 
 ## Adding unit tests
 

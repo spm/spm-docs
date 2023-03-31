@@ -60,26 +60,26 @@ nav:
       - 'Preprocessing':
         - 'Introduction to preprocessing': 'tutorials/fmri_preprocessing/introduction.md'
         - 'Visual inspection of the data': 'tutorials/fmri_preprocessing/visual_inspection.md'
-        - 'Removal of dummy scans': 'tutorials/fmri_preprocessing/dummy_scans.md'
-        - 'Realignment': 'tutorials/fmri_preprocessing/realignment.md'
-        - 'Slice timing correction': 'tutorials/fmri_preprocessing/slice_timing.md'
-        - 'Coregistration': 'tutorials/fmri_preprocessing/coregistration.md'
-        - 'Segmentation': 'tutorials/fmri_preprocessing/segmentation.md'
-        - 'Normalisation': 'tutorials/fmri_preprocessing/normalisation.md'
-        - 'Smoothing': 'tutorials/fmri_preprocessing/smoothing.md'
-        - 'Batch interface': 'tutorials/fmri_preprocessing/batch.md'
-        - 'Scripting': 'tutorials/fmri_preprocessing/scripting.md'
+        - 'Removal of dummy scans':        'tutorials/fmri_preprocessing/dummy_scans.md'
+        - 'Realignment':                   'tutorials/fmri_preprocessing/realignment.md'
+        - 'Slice timing correction':       'tutorials/fmri_preprocessing/slice_timing.md'
+        - 'Coregistration':                'tutorials/fmri_preprocessing/coregistration.md'
+        - 'Segmentation':                  'tutorials/fmri_preprocessing/segmentation.md'
+        - 'Normalisation':                 'tutorials/fmri_preprocessing/normalisation.md'
+        - 'Smoothing':                     'tutorials/fmri_preprocessing/smoothing.md'
+        - 'Batch interface':               'tutorials/fmri_preprocessing/batch.md'
+        - 'Scripting':                     'tutorials/fmri_preprocessing/scripting.md'
       - 'Statistical modelling':
-        - 'First-level modelling - block design': 'tutorials/fmri_modelling/block_design.md'
+        - 'First-level modelling - block design':         'tutorials/fmri_modelling/block_design.md'
         - 'First-level modelling - event-related design': 'tutorials/fmri_modelling/event_related_design.md'
-        - 'Group-level modelling': 'tutorials/fmri_modelling/group_level.md'
-    - 'OPM':
-      - 'Preprocessing':
-        - 'Introduction to preprocessing': 'tutorials/opm_preprocessing/introduction.md'
+        - 'Group-level modelling':                        'tutorials/fmri_modelling/group_level.md'
     - 'VBM':
         - 'Getting started':      'tutorials/vbm/VBM-getting-started.md'
         - 'Image processing':     'tutorials/vbm/VBM-image-processing.md'
         - 'Statistical analysis': 'tutorials/vbm/VBM-statistical-analysis.md'
+    - 'OPM':
+      - 'Preprocessing':
+        - 'Introduction to preprocessing': 'tutorials/opm_preprocessing/introduction.md'
   - 'Manual':
     - 'Auditory fMRI data': manual/auditory/auditory.md
     - 'Face fMRI data':
@@ -197,7 +197,8 @@ nav:
     - wikibooks/Working_with_4D_data.md
   - 'Reference': 'reference/index.md'
   - 'Development':
-    - 'Git': 'development/git.md'
+    - 'Git':     'development/git.md'
+    - 'Testing': 'development/testing.md'
 
 markdown_extensions:
   - abbr
