@@ -8,7 +8,7 @@ To start your script we will use the `_job.m` file generated when we saved the b
 
 First, open this your `preprocessing_batch_job.m` file in Matlab/Octave and inspect it's contents. It should look something like this:
 
-```
+```matlab
 %-----------------------------------------------------------------------
 % Job saved on 22-Feb-2023 18:02:23 by cfg_util (rev $Rev: 7345 $)
 % spm SPM - SPM12 (7771)
