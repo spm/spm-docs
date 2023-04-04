@@ -1,3 +1,5 @@
+# Key generation for Linux users
+
 _In case someone needs help with this, here we describe how to do it!_
 
 You must generate a key to be able to clone and work with the SPM repository. To do this, in your GitHub account go to “**Organizations**” and then in the left panel press “**SSH and GPG keys**”. In “**SSH keys**”, press the green button “**New SSH key**”
