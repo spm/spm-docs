@@ -6,12 +6,12 @@ site_description: >-
   Documentation of the SPM Software for neuroimaging
 
 # Repository
-repo_url: https://github.com/spm/spm-docs
+repo_url: https://github.com/spm/spm
 repo_name: spm/spm
-edit_uri: blob/main/docs/
+edit_uri: https://github.com/spm/spm-docs/blob/main/docs/
 
 # Copyright
-copyright: Copyright &copy; 1991 - 2023 SPM Team
+copyright: Copyright &copy; 1991 - 2023 SPM Team and Collaborators
 
 # Configuration
 theme:
@@ -242,7 +242,9 @@ plugins:
         width: "100%"
         height: "42.172vw"
       is_video: True
-      video_autoplay: False 
+      video_autoplay: False
+  - bibtex:
+      bib_file: "docs/assets/bib/spm.bib"
   - search:
       lang: en
 

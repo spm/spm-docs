@@ -1,4 +1,5 @@
 mkdocs-material
 mkdocs-video
+mkdocs-bibtex
 codespell
 pyspelling
