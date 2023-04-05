@@ -1,5 +1,5 @@
 [codespell]
 ignore-words = .wordlist.txt
 ignore-regex = (FWE|TE|ans|Unser|theses|PhLEM|whos)
-skip = *.pdf,*env*/*,.git,site
+skip = *.pdf,*.bib,*env*/*,.git,site
 quiet-level = 2
