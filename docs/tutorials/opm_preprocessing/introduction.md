@@ -9,7 +9,7 @@ This page goes through an example pipeline for OPM data preprocessing.
 
 ## Data import 
 
-Curently SPM supports a file format that has the raw data stored in a binary file and all the metadata stored in 'TSV' and '.json' files. This is desiged to be as alligned as possible to the BIDS file sructure. Cerca magnetics data is stored in a simlar format and we will analyse such a dataset in this tutorial.
+Currently SPM supports a file format that has the raw data stored in a binary file and all the metadata stored in 'TSV' and '.json' files. This is desiged to be as aligned as possible to the BIDS file structure. Cerca magnetics data is stored in a similar format and we will analyse such a dataset in this tutorial.
 
 
 !!! note
