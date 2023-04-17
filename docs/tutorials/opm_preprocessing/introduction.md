@@ -4,7 +4,7 @@
 
 OPM data is inherently noisy and in order to make sense of it, we first have to clean it. The process of cleaning OPM data is referred to as **preprocessing** and its goal is to minimise the impact of variables unrelated to your experimental protocol on the data. These extraneous variables typically include participant's head movements, equipment-related artefacts and physiological processes such as breathing and heartbeats. In simple terms, preprocessing aims to separate the neuronal signal from other signals acquired during the experiment.
 
-This page goes through an example preprocssing pipeline for a sensor-level evoked repsonse analysis. 
+This page goes through an example preprocssing pipeline for a sensor-level evoked response analysis. 
 
 
 ## Data import 
@@ -23,7 +23,7 @@ D = spm_opm_create(S);
 
 ## Identifying bad channels
 
-Once OPM data is imporated the first step should be to identify any bad channels by looking at the PSD (power spectral density). This plot tells us if any channels are deviating notably from their manafacturer specifications or are clear outlier channels. 
+Once OPM data is imporated the first step should be to identify any bad channels by looking at the PSD (power spectral density). This plot tells us if any channels are deviating notably from their manufacturer specifications or are clear outlier channels. 
 
 ```matlab
 S=[];
@@ -42,12 +42,12 @@ D = badchannels(D,[51,52],1);
 D.save();
 ```
 !!! note
-    If you change an M/EEG object(`D`) you should call the `save` method to make your changes permenant.
+    If you change an M/EEG object(`D`) you should call the `save` method to make your changes permanent.
 
 ## Filtering 
 
 We can also filter our data to remove very low frequency interference and very high frequency interference. 
-The key arguments are `S.freq` which set the cutoff frequency and `S.band` which sets the tpye of filter(high-pass or low-pass)
+The key arguments are `S.freq` which set the cutoff frequency and `S.band` which sets the type of filter(high-pass or low-pass)
 
 ```matlab
 S=[];
