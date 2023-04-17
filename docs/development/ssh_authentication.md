@@ -6,7 +6,7 @@ You must generate a key to be able to clone and work with the SPM repository. To
 
 Add a title to your key in the field “**Title**”. Then, in the field “**Key**”, copy-paste the key you will generate with the following steps: 
 
-1. - Open a terminal and in your home directory type:
+1. Open a terminal and in your home directory type:
 
 ```bash
 ssh-keygen -t ed25519 -C *your_email*
@@ -38,13 +38,13 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-2. - In the repertory /home/*your_user*/.ssh now you will have 2 new files similar to these:
+2. In the repertory /home/*your_user*/.ssh now you will have 2 new files similar to these:
 
 ```bash
 id_ed25519  id_ed25519.pub
 ```
 
-3. - The public key is in the file with extension .pub. To read it, open the file or type:
+3. The public key is in the file with extension .pub. To read it, open the file or type:
 
 ```bash
 cat .ssh/id_ed25519.pub_
@@ -54,7 +54,7 @@ The output/key should be something similar to this:
 ```bash
 ssh-ed25519 AAAAC5NzaC1lZDI1NTE4AAAANI/iaJJ7eHWs+i2hxxQTX+xcalwd+QlhDSwgIkh3cvEc *your_email_here*
 ```
-4.- Copy this key and paste it in the field “**Key**” in your GitHub account.
+4. Copy this key and paste it in the field “**Key**” in your GitHub account.
 
 Finally, to clone the GitHub repository, create a new work repertory for SPM in your computer and move there in a terminal. Then type:
 
