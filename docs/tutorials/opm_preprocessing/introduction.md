@@ -99,8 +99,6 @@ S.L=1;
 ### Spatial models of interference and brain signal 
 If you have a an OPM array with more than 120 channels it is possible to not only fit a model of the interference but also a compact model of the brain signal using spheroidal harmonics. The advantage of fitting both these models is that as you spatially oversample the data the white noise will reduce increasing the SNR of the data. Fitting the brain signal model also helps minimise the impact of interference that may be common to just a few channels. 
 
-
-
 ```matlab
 S=[];
 S.D= fD;
@@ -108,7 +106,7 @@ mD = spm_opm_amm(S);
 
 ``` 
 ### Spatio-temporal models of interference and brain signal 
-if you still have remaining inteference in your data 
+if you still have remaining interference in your data 
 
 ```matlab
 S=[];
