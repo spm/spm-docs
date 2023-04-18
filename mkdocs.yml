@@ -82,8 +82,7 @@ nav:
         - 'Image processing':     'tutorials/vbm/VBM-image-processing.md'
         - 'Statistical analysis': 'tutorials/vbm/VBM-statistical-analysis.md'
     - 'OPM':
-      - 'Preprocessing':
-        - 'Introduction to preprocessing': 'tutorials/opm_preprocessing/introduction.md'
+      - 'Evoked response pipeline': 'tutorials/opm_preprocessing/introduction.md'
   - 'Manual':
     - 'Auditory fMRI data': manual/auditory/auditory.md
     - 'Face fMRI data':
