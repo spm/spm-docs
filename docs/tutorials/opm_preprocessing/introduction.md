@@ -33,18 +33,11 @@ spm_opm_psd(S);
 ylim([1,1e5])         % set y axis limits between 1fT and 100,000 fT
 ```
 
-<figure markdown>
-  ![](../../../docs/assets/figures/raw_psd.png){}
-  <figcaption>Power Spectral Density</figcaption>
-</figure>
-
+  ![](../../../docs/assets/figures/raw_psd.png)
 
 We can now interactively identify the bad channels by clicking on the plot. We can then set then set the bad channels with the following code. 
 
-<figure markdown>
-  ![](../../../docs/assets/figures/badchannel_psd.png){}
-  <figcaption>Bad Channels</figcaption>
-</figure>
+  ![](../../../docs/assets/figures/badchannel_psd.png)
 
 ```matlab 
 D = badchannels(D,[51,52],1);
