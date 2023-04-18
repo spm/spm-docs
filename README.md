@@ -45,15 +45,32 @@ Then create a virtual environment for Python and install [Material for MkDocs](h
 ```shell
 python3 -m venv venv
 source venv/bin/activate
-pip  install --requirement requirements.txt
+pip install --requirement requirements.txt
 ```
 
-Preview your changes in the documentation with `mkdocs serve` and build a static site (in `site`) with `mkdocs build`.
+On Windows, install [Python from the Microsoft Store](https://apps.microsoft.com/store/detail/python-311/9NRWMJP3717K) then type the following in a Command Prompt or PowerShell window:
+
+```shell
+python3 -m venv venv
+.\venv\Scripts\activate
+pip install --requirement requirements.txt
+```
+
+You can preview the documentation as you work on it thanks to a built-in web server. When you are in the same directory as the `mkdocs.yml` configuration file, start the server with the command:
 
 ```shell
 mkdocs serve
+```
+
+You can then browse the documentation in your web browser at [http://127.0.0.1:8000/](http://127.0.0.1:8000/). Each time a change is made, the documentation is rebuilt and the page auto-reloaded.
+
+To deploy the documentation, use the following command:
+
+```shell
 mkdocs build
 ```
+
+The documentation is then built as a static site in `site`.
 
 The _Insiders_-only features will be here ignored but available in the public build on the SPM website.
 
@@ -63,7 +80,7 @@ To deactivate the virtual environment when you finished working, use:
 deactivate
 ```
 
-Currently not used but something to consider is the [MkDocs plugin for citation management using bibtex](https://github.com/shyamd/mkdocs-bibtex).
+Currently two [MkDocs plugins](https://github.com/pawamoy/best-of-mkdocs) are used: [`mkdocs-bibtex`](https://github.com/shyamd/mkdocs-bibtex), a plugin for citation management using bibtex, and [`MkDocs Video`](https://github.com/soulless-viewer/mkdocs-video), a plugin to embed videos in the documentation pages.
 
 ## :lion: Style guide
 
@@ -71,7 +88,7 @@ Currently not used but something to consider is the [MkDocs plugin for citation 
 Use British English.
 
 ### 2. Code
-Format any code included in the documentation as code chunks.
+Format any code included in the documentation as [code blocks](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/).
 
 Raw text:
 
@@ -94,7 +111,7 @@ Display text:
 `code`
 
 ### 3. Abbreviations
-All abbreviations should be defined alphabetically in [`addons/abbreviations.md`](addons/abbreviations.md) in the following format:
+All [abbreviations](https://squidfunk.github.io/mkdocs-material/reference/tooltips/#adding-abbreviations) should be defined alphabetically in [`addons/abbreviations.md`](addons/abbreviations.md) in the following format:
 	
 	*[BOLD]: Blood Oxygen Level Dependent 
 
@@ -106,11 +123,11 @@ To use the abbreviations file on the page you’re creating, add the below at th
 Illustrations should be saved as PNG or SVG files in the [`docs/assets/figures/`
 ](docs/assets/figures/) directory. [OptiPNG](https://optipng.sourceforge.net/) should be applied on PNG files before commit.
 
-To display images with captions, use:
+To display [images with captions](https://squidfunk.github.io/mkdocs-material/reference/images/#image-captions), use:
 
 ```html
 <figure markdown>
-  ![Image title](docs/assets/figures/image.png){}
+  ![Image title](../../../assets/figures/image.png){ width="300" }
   <figcaption>Image caption</figcaption>
 </figure>
 ```
@@ -118,7 +135,7 @@ To display images with captions, use:
 Videos should be saved as MP4 in the [`docs/assets/videos/`](docs/assets/videos/) directory. Videos encoded in other formats can be converted to MP4 with [FFmpeg](https://www.ffmpeg.org/).
 
 ### 5. Information boxes
-Additional information can be highlighted using information boxes. 
+Additional information can be highlighted using [information boxes](https://squidfunk.github.io/mkdocs-material/reference/admonitions/). 
 
 Boxes can be expanded:
 ```
