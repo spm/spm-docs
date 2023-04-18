@@ -62,6 +62,7 @@ You can preview the documentation as you work on it thanks to a built-in web ser
 mkdocs serve
 ```
 
+<!-- markdown-link-check-disable-next-line -->
 You can then browse the documentation in your web browser at [http://127.0.0.1:8000/](http://127.0.0.1:8000/). Each time a change is made, the documentation is rebuilt and the page auto-reloaded.
 
 To deploy the documentation, use the following command:
@@ -70,7 +71,7 @@ To deploy the documentation, use the following command:
 mkdocs build
 ```
 
-The documentation is then built as a static site in `site`.
+The documentation is then built as a static site in a directory called `site`.
 
 The _Insiders_-only features will be here ignored but available in the public build on the SPM website.
 
