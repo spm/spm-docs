@@ -88,7 +88,7 @@ While OPM sensors are sensitive to brain signal they are also incredibly sensiti
 
 ### Spatial models of interference
 
-By solving Laplace's equation in spherical coordinates we can model OPM interference as a linear combination of vector spherical harmonics. The key arguments are the M/EEG object argument `S.D` and the order argument `S.L`. The order argument reflects how complicated the model of interference is. The number of regressors used in the interference model scales as `S.L^2+2*S.L`. As such, for this method it is recommended to have many more channels than this number. It is only not recommended to increase the order above `S.L=1` for radial samplings of the magnetic field. It is also strongly recommended that higher orders are only used for multi-axis OPM systems.
+By solving Laplace's equation in spherical coordinates we can model OPM interference as a linear combination of vector spherical harmonics. The key arguments are the M/EEG object argument `S.D` and the order argument `S.L`. The order argument reflects how complicated the model of interference is. The number of regressors used in the interference model scales as `S.L^2+2*S.L`. As such, for this method it is recommended to have many more channels than this number. It is generally not recommended to increase the order above `S.L=1` for radial samplings of the magnetic field. It is strongly recommended that higher orders are only used for multi-axis OPM systems.
 
 ```matlab
 S = [];
@@ -98,7 +98,7 @@ S.L = 1;
 ``` 
 ### Spatial models of interference and brain signal
 
-If you have an OPM array with more than 120 channels it is possible to not only fit a model of the interference but also a compact model of the brain signal using spheroidal harmonics. The advantage of fitting both these models is that as you spatially oversample the data the white noise will reduce increasing the SNR of the data. Fitting the brain signal model also helps minimise the impact of interference that may be common to just a few channels. 
+If you have an OPM array with more than 120 channels it is possible to not only fit a model of the interference but also a compact model of the brain signal using spheroidal harmonics. The advantage of fitting this additional brain signal  model is that as you spatially oversample the data the white noise component of your data will reduce increasing the SNR of the data. Fitting the brain signal model also helps minimise the impact of interference that may be common to just a few channels. 
 
 ```matlab
 S = [];
@@ -108,7 +108,11 @@ mD = spm_opm_amm(S);
 ``` 
 ### Spatio-temporal models of interference and brain signal 
 
-If you still have remaining interference in your data 
+If the source of magnetic interference is quite near the array then the low order spatial models will not be able to remove the interference. This problem is further exacerbated by the presence of sensor non-linearities such as calibration and orientation errors. This kind of interference can be identified using a temporal subspace intersection (implemented using CCA). This step requires setting the argument `S.corrLim` which is the the threshold(value between 0 and 1) at which one considers two subspaces to have intersected. 
+
+??? info "How does subspace intersection work?" 
+	`spm_opm_amm` defines 3 subspaces. A brain space using internal spheroidal harmonics (of default order `S.li=9`), an interference space using external spheroidal harmonics (of default order `S.li=2`) and an intermediate space that contains the data that is not well modelled by the internal or external harmonics. If the origin of magnetic interference is spatially close by it will not be well modelled by the external harmonics and will be present in the intermediate space. However, due to partial spatial correlation between complex interference and brain signal part of this interference will also be present in the brain signal space. If we assume that over long time scales (5-10s) brain signals(as observed by OPMs) are poorly temporally correlated any high temporal correlations (temporal subspace intersection) between the brain space and the intermediate space are most likely a reflection of magnetic interference. This interference is then readily removed using linear regression. 
+
 
 ```matlab
 S = [];
@@ -116,7 +120,36 @@ S.D = fD;
 S.corrLim = .95;
 mD = spm_opm_amm(S);
 ``` 
+??? info "How do I pick a value for S.corrLim?"
+	Setting a lower value for `S.corrLim` will result in more aggressive cleaning of the data but will increase the risk of removing interesting brain signal. The factors that influence this decision are the order of the internal harmonics (`S.li`), the SNR of the brain response, the time scale at which physiological correlations exist, the length of the time window analysed and the number of channels in your array. As such it is not possible to extrapolate any heuristics one might have developed from using other temporal subspace intersection methods such as TSSS. However, the code has been developed so that generally values greater than `0.95` are generally safe for arrays of less than 200 channels. 
 
+
+We can now also examine what the impact of our preprocessing has been by creating another PSD. Note that this time we have excluded the bad channels identified earlier by passing the labels of the good channels to `S.channels`.
+
+```matlab
+cinds= setdiff(indchantype(mD,'MEG'),badchannels(mD));
+chans = chanlabels(mD,cinds);
+S=[];
+S.triallength = 3000; 
+S.plot=1;
+S.D=mD;
+S.channels=chans;
+[~,freq]=spm_opm_psd(S);
+ylim([1,1e5])
+```
+
+<figure markdown>
+  ![](../../../assets/figures/opm/processed_psd.png)
+  <figcaption>processed PSD</figcaption>
+</figure>
+
+!!! note "How do I choose which model to use?"
+	1. If you have less than 120 channels use `spm_opm_hfc`.
+	2. If you have radial only samplings do not increase `S.L` beyond 1.
+	3. If you have more than 120 channels use `spm_opm_amm`.
+	4. If you have more than 120 channels and have spatially complex interference  use `spm_opm_amm` with `S.corrLim` set between `0.95` and `1`.
+	
+	
 ## Epoching
 
 ```matlab

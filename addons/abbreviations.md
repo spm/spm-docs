@@ -13,3 +13,5 @@
 *[TR]: Repetition Time
 *[TRs]: Repetition Times
 *[TSV]: Tab-Separated Values
+*[CCA]: Canonical Correlations Analysis
+*[TSSS]: Temporal Signal Space Separation. 
