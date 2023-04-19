@@ -151,7 +151,7 @@ ylim([1,1e5])
 	
 	
 ## Epoching
-Now that we have modelled the interference in our data we can cut our data up into the time periods we are interested in. To do this we require that a trigger channel exists in our data set  when some stimuli was presented to a participant. In this case we are interested in the 50ms before the stimuli up untill 250ms after the stimuli. This time window is specified with the `S.timewin` argument. The channel that encodes when the stimuli is presented is channel `Trigger 6 Z` and we can specify this with the `S.triggerChannels` argument.
+Now that we have modelled the interference in our data we can cut our data up into the time periods we are interested in. To do this we require that a trigger channel exists in our data set  when some stimuli was presented to a participant. In this case we are interested in the 50ms before the stimuli up until 250ms after the stimuli. This time window is specified with the `S.timewin` argument. The channel that encodes when the stimuli is presented is channel `Trigger 6 Z` and we can specify this with the `S.triggerChannels` argument.
 
 ```matlab
 S =[];
