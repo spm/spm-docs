@@ -151,22 +151,101 @@ ylim([1,1e5])
 	
 	
 ## Epoching
+Now that we have modelled the interference in our data we can cut our data up into the time periods we are interested in. To do this we require that a trigger channel exists in our data set  when some stimuli was presented to a participant. In this case we are interested in the 50ms before the stimuli up untill 250ms after the stimuli. This time window is specified with the `S.timewin` argument. The channel that encodes when the stimuli is presented is channel `Trigger 6 Z` and we can specify this with the `S.triggerChannels` argument.
 
 ```matlab
-
+S =[];
+S.D=mD;
+S.timewin=[-50 250];
+S.triggerChannels ={'Trigger 6 Z'};
+eD= spm_opm_epoch_trigger(S);
 ``` 
+!!! note
+    SPM automatically baseline corrects data that has a negative time window. if you do not have a negative time window you will need to do baseline correction separately( see `spm_eeg_bc`).
 
-## Averaging 
+## Averaging and t-statistics
+
+We can now average across our trials and compute our t-statistic. The function `spm_eeg_average` has 1 key argument: `S.D`. We can then plot the average response for all channels trivially. 
 
 ```matlab
+S=[];
+S.D=eD;
+muD = spm_eeg_average(S);
 
+
+MEGind = indchantype(eD,'MEGMAG');
+used = setdiff(MEGind,badchannels(muD));
+pl =muD(used,:,:)';
+figure();
+plot(muD.time(),pl)
+xlabel('Time (s)')
+ylabel('B (fT)')
+grid on
+ax = gca; % current axes
+ax.FontSize = 13;
+ax.TickLength = [0.02 0.02];
+fig= gcf;
+fig.Color=[1,1,1];
+xlim([0,.250])
+```
+<figure markdown>
+  ![](../../../assets/figures/opm/evoked_field.png)
+  <figcaption>Evoked field</figcaption>
+</figure>
+
+We can see there are some channels not behaving like the others in the baseline so it is worth computing a t-statistic across trials to see if these changes are meaningful. The evoked response is now nice and clean showing clear peaks that that reverse  in polarity across the sensors. 
+
+```matlab
+se = std(eD(used,:,:),[],3)./sqrt(size(eD,3));
+mu = muD(used,:,:);
+tstat = mu./se;
+
+figure()
+plot(muD.time(),tstat')
+xlabel('Time (s)')
+ylabel('t-statistic')
+grid on
+ax = gca; % current axes
+ax.FontSize = 13;
+ax.TickLength = [0.02 0.02];
+fig= gcf;
+fig.Color=[1,1,1];
+xlim([0,.250])
+ylim([-20,20])
 ``` 
+
+<figure markdown>
+  ![](../../../assets/figures/opm/t-stat.png)
+  <figcaption>t-statistic</figcaption>
+</figure>
+
+
 
 ## Topoplots
 
+Displaying OPM topographies is non trivial for 2 reasons:
+  1. For small channel arrays 2D representations of 3D may not look very good.
+  2. OPMs measure multiple components of the magnetic field at the same point in space and the sampled  field pattern is not necessarily smooth. 
+  
+ As such for now we will only display the radial component of the magnetic field measurement(which is a smooth interpretable field). We can do this with `spm_opm_plotScalpData` and we will initially look at the peak around 90ms. 
+  
+  !!! note
+    If you think OPM scalp data should be displayed differently please [open an issue on GitHub](https://github.com/spm/spm/issues).
+
 ```matlab
 
-``` 
+muD(:,:,:)=zeros(size(muD));
+muD(used,:,:)=tstat;
 
+S=[];
+S.D = muD;
+S.T = .085; 
+spm_opm_plotScalpData(S);
+caxis([-10,10])
+``` 
+<figure markdown>
+  ![](../../../assets/figures/opm/90ms.png)
+  <figcaption>Radial evoked field pattern</figcaption>
+</figure>
 
 --8<-- "addons/abbreviations.md"
