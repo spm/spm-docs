@@ -14,6 +14,12 @@
 
     [Voxel-Based Morphometry](./vbm/VBM-getting-started.md)
 
+-   :material-monitor:{ .lg .middle } __DCM__
+
+    ---
+
+    [Dynamic Causal Modelling](./dcm/introduction.md)
+
 -   :material-monitor:{ .lg .middle } __OPM__
 
     ---
