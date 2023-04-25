@@ -56,6 +56,12 @@ python3 -m venv venv
 pip install --requirement requirements.txt
 ```
 
+Still on Windows, if you have issues with the above commands due to restrictions on your system, please run the following after creating the virtual environment:
+
+```shell
+Powershell.exe -NoProfile -ExecutionPolicy Bypass -File <the full path of the activate.ps1 file>
+```
+
 You can preview the documentation as you work on it thanks to a built-in web server. When you are in the same directory as the `mkdocs.yml` configuration file, start the server with the command:
 
 ```shell
