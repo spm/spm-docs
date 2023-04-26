@@ -85,6 +85,14 @@ nav:
         - 'Introduction': 'tutorials/dcm/introduction.md'
     - 'OPM':
       - 'Evoked response pipeline': 'tutorials/opm_preprocessing/introduction.md'
+    - 'Multimodal, multisubject data fusion':
+        - 'Overview':                      'tutorials/multi/overview.md'  
+        - 'Preprocessing':                 'tutorials/multi/preprocessing.md'  
+        - 'Evoked analysis':               'tutorials/multi/evoked.md'  
+        - 'Time-frequency analysis':       'tutorials/multi/timefrequency.md'  
+        - 'fMRI':                          'tutorials/multi/fmri.md'  
+        - 'Source':                        'tutorials/multi/source.md'  
+        - 'References':                    'tutorials/multi/references.md'  
   - 'Manual':
     - 'Auditory fMRI data': manual/auditory/auditory.md
     - 'Face fMRI data':
