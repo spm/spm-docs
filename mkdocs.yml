@@ -86,7 +86,7 @@ nav:
     - 'OPM':
       - 'Evoked response pipeline': 'tutorials/opm_preprocessing/introduction.md'
     - 'Multimodal, multisubject data fusion':
-        - 'Overview':                      'tutorials/multi/overview.md'  
+        - 'Overview':                      'tutorials/multi/index.md'  
         - 'Preprocessing':                 'tutorials/multi/preprocessing.md'  
         - 'Evoked analysis':               'tutorials/multi/evoked.md'  
         - 'Time-frequency analysis':       'tutorials/multi/timefrequency.md'  

@@ -109,3 +109,5 @@ Module Window and Current Item Windows are identified. The cursor
 highlights how to save the pipeline as a batch and script. <span
 id="multi:fig:1" label="multi:fig:1"></span></em></figcaption>
 </figure>
+
+--8<-- "addons/abbreviations.md"

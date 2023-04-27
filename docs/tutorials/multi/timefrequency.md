@@ -328,3 +328,5 @@ faces than scrambled faces across subjects, thresholded at <span
 class="math inline"><em>p</em> &lt; .05</span> FWE corrected. <span
 id="multi:fig:10" label="multi:fig:10"></span></em></figcaption>
 </figure>
+
+--8<-- "addons/abbreviations.md"

@@ -439,3 +439,5 @@ a clearer image of suprathreshold voxels within the scalp-time-volume.
 Or you can of course examine other contrasts, such as the difference
 between famous and unfamiliar faces, which you will see is a much weaker
 and slightly later effect.
+
+--8<-- "addons/abbreviations.md"

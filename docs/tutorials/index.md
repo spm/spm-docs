@@ -42,7 +42,7 @@
 
     ---
 
-    [Group multimodal dataset](./multi/multi.md)
+    [Group multimodal dataset](./multi/index.md)
 
     :material-monitor:{ .lg .middle } __MMN__
 

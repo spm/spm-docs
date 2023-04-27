@@ -364,3 +364,5 @@ To view the output, press "Display" on the main SPM menu pane, select
 "M/EEG", then select `Mcbdspmeeg_run_01_sss.mat`. Again, you will be
 able to review the preprocessing steps from the "History" section of the
 "Info" tab.
+
+--8<-- "addons/abbreviations.md"

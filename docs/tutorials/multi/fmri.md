@@ -286,3 +286,5 @@ Results window, and select the "all clusters (binary)" option. The
 window will now prompt you for an output filename, in which you can type
 in `fac-scr_fmri_05_cor`. This image will be output in the `BOLD`
 directory, and we will use it later.
+
+--8<-- "addons/abbreviations.md"

@@ -39,3 +39,5 @@ and Vladimir Litvak for their help.
     of the F-contrast with `C = kron(eye(3),[1 0 0])`, and then enter
     `C`, `0.5*C(1,:)+0.5*C(2,:)-C(3,:)`, `C(1,:)`, `C(2,:)` and `C(3,:)`
     respectively for the 5 contrasts specified above.
+
+--8<-- "addons/abbreviations.md"

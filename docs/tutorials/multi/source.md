@@ -516,3 +516,5 @@ class="math inline"><em>p</em> &lt; .001</span> uncorrected, using
 Group-optimised MSP and fMRI priors. <span id="multi:fig:16"
 label="multi:fig:16"></span></em></figcaption>
 </figure>
+
+--8<-- "addons/abbreviations.md"
