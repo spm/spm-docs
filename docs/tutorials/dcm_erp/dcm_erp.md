@@ -29,26 +29,27 @@ consists of two different conditions: the novel image condition and the
 repeated image condition. The single-participant data used here is that
 of a healthy aged control participant in this visual recognition task.
 
-DCM is a hypothesis-driven method, and can be used to test specific
-hypotheses about the activity between sources in a network rather than
-simply being limited to asking questions about the strengths of the
-sources individually. DCM estimates effective connectivity as opposed to
-structural or functional connectivity, which is context-dependent.
-Rather than asking questions such as \"How does one source increase the
-activity in another source?\", with DCM you can ask context-dependent
-questions such as \"How does one source have an influence over another
-source in a particular condition within a task?\". DCM estimates this
-effective connectivity both within and between sources of activity, and
-these connections are examined in the context of regional activity
-changes, and also in a task-dependent fashion, so you can derive the way
-in which any experimental conditions that forms part of a task recruit
-or modulate any specific connections.
+!!! note
+    DCM is a hypothesis-driven method, and can be used to test specific
+    hypotheses about the activity between sources in a network rather than
+    simply being limited to asking questions about the strengths of the
+    sources individually. DCM estimates effective connectivity as opposed to
+    structural or functional connectivity, which is context-dependent.
+    Rather than asking questions such as \"How does one source increase the
+    activity in another source?\", with DCM you can ask context-dependent
+    questions such as \"How does one source have an influence over another
+    source in a particular condition within a task?\". DCM estimates this
+    effective connectivity both within and between sources of activity, and
+    these connections are examined in the context of regional activity
+    changes, and also in a task-dependent fashion, so you can derive the way
+    in which any experimental conditions that forms part of a task recruit
+    or modulate any specific connections.
 
-A further characteristic of DCM is that, through inversion of the model
-according to a Variational Bayesian scheme, this yields an approximation
-to the log-model evidence, which one can use to compare alternative
-models of the same data and make statistical inferences about which
-model best represents the data, i.e. has the highest model evidence.
+    A further characteristic of DCM is that, through inversion of the model
+    according to a Variational Bayesian scheme, this yields an approximation
+    to the log-model evidence, which one can use to compare alternative
+    models of the same data and make statistical inferences about which
+    model best represents the data, i.e. has the highest model evidence.
 
 ## Data
 
@@ -162,15 +163,19 @@ data file you have selected. For the two conditions in this task, enter
 respectively. To see which index is assigned to which trial condition,
 type into the command line:
 
+```matlab
     D = spm_eeg_load(`mfaeffspmeeg_examplecontrolsubject.mat');
     D.condlist
+```
 
 This will display the list of condition labels and their associated
 indices. SPM should therefore display the following:
 
+```matlab
     ans =
 
     `novel' `repeated'
+```
 
 indicating that index 1 corresponds to the presentation of novel images
 and index 2 corresponds to the presentation of repeated images. The
@@ -558,11 +563,11 @@ label="dcm-erp:fig:5"></span></em></figcaption>
 
 ## References
 
-Moran RJ, Stephan KE, Dolan RJ, Friston KJ. Consistent spectral
+* Moran RJ, Stephan KE, Dolan RJ, Friston KJ. Consistent spectral
 predictors for dynamic causal models of steady-state responses.
 Neuroimage 2011; 55: 1694-708.
 
-Tyrer A, Gilbert JR, Adams S, Stiles AB, Bankole AO, Gilchrist ID*, et
+* Tyrer A, Gilbert JR, Adams S, Stiles AB, Bankole AO, Gilchrist ID*, et
 al.* Lateralized memory circuit dropout in alzheimer's disease patients.
 Brain Communications 2020; 2: fcaa212.
 
