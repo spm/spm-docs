@@ -92,7 +92,21 @@ nav:
         - 'Time-frequency analysis':       'tutorials/multi/timefrequency.md'  
         - 'fMRI':                          'tutorials/multi/fmri.md'  
         - 'Source':                        'tutorials/multi/source.md'  
-        - 'References':                    'tutorials/multi/references.md'  
+        - 'References':                    'tutorials/multi/references.md' 
+    - 'MEG Source Localisation': tutorials/meg_sloc/meg_sloc.md
+    - 'EEG Mismatch negativity data': tutorials/mmn/mmn.md
+    - 'Multimodal, Multisubject data fusion': tutorials/multi/multi.md
+    - 'Multimodal':
+        - 'Introduction': tutorials/multimodal/multimodal.md
+        - 'EEG': tutorials/multimodal/eeg.md
+        - 'MEG': tutorials/multimodal/meg.md
+        - 'fMRI': tutorials/multimodal/fmri.md
+        - 'Fusion': tutorials/multimodal/fusion.md
+    - 'DCM for Evoked Responses': tutorials/dcm_erp/dcm_erp.md
+    - 'DCM for Induced Responses': tutorials/dcm_ir/dcm_ir.md
+    - 'DCM for Phase Coupling': tutorials/dcm_phase/dcm_phase.md
+    - 'DCM for Steady State Responses': tutorials/dcm_ssr/dcm_ssr.md
+    - 'DCM for Cross-Spectral Densities': tutorials/dcm_csd/dcm_csd.md         
   - 'Manual':
     - 'Auditory fMRI data': manual/auditory/auditory.md
     - 'Face fMRI data':
@@ -117,21 +131,7 @@ nav:
       - 'Localization of Equivalent Current Dipoles ': manual/meeg/eeg_VBECD.md
       - 'Dynamic Causal Modelling': manual/meeg/eeg_DCM.md      
     - 'Advanced topics in M/EEG artefact removal': manual/meeg_artefact/meeg_artefact.md
-    - 'MEG Source Localisation': manual/meg_sloc/meg_sloc.md
-    - 'EEG Mismatch negativity data': manual/mmn/mmn.md
-    - 'Multimodal, Multisubject data fusion': manual/multi/multi.md
-    - 'Multimodal':
-      - 'Introduction': manual/multimodal/multimodal.md
-      - 'EEG': manual/multimodal/eeg.md
-      - 'MEG': manual/multimodal/meg.md
-      - 'fMRI': manual/multimodal/fmri.md
-      - 'Fusion': manual/multimodal/fusion.md
-    - 'DCM for Evoked Responses': manual/dcm_erp/dcm_erp.md
-    - 'DCM for Induced Responses': manual/dcm_ir/dcm_ir.md
-    - 'DCM for Phase Coupling': manual/dcm_phase/dcm_phase.md
-    - 'DCM for Cross-Spectral Densities': manual/dcm_csd/dcm_csd.md
-    - 'DCM for fNIRS': manual/dcm_fnirs/dcm_fnirs.md
-    - 'DCM for Steady State Responses': manual/dcm_ssr/dcm_ssr.md
+    - 'DCM for fNIRS': manual/dcm_fnirs/dcm_fnirs.md    
     - 'PET': manual/pet/pet.md
     - 'Batch Interface':
       - 'Batch Tutorial': manual/batch/batch.md
