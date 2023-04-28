@@ -32,7 +32,7 @@ used to demonstrate:
     priors.
 
 For the formal basis of these steps, see SPM publications, most
-specifically \[Henson et al. (2011)\][^1].
+specifically [Henson et al. (2011)](https://doi.org/10.3389/fnhum.2011.00076).
 
 The raw data can be found here (see `README.txt` there for more
 details):
@@ -65,19 +65,21 @@ details):
     visit). (The FTP site also contains ME-FLASH data from the same
     subjects, plus DWI data from a subset, which could be used for improved
     head modelling for example, but these are not used here.) For full
-    description of the data and paradigm, see \[Wakeman and Henson
-    (2015)\][^2].
+    description of the data and paradigm, see [Wakeman and Henson
+    (2015)](https://doi.org/10.1038/sdata.2015.1).
 
-Versions of the SPM12 batch job files and scripts used in this chapter
+Versions of the SPM12 batch job files and scripts used in this tutorial
 can be found here:
 
 - <ftp://ftp.mrc-cbu.cam.ac.uk/personal/rik.henson/SPMScripts/>
 
-It should be noted that the pipeline described below is just one
-possible sequence of processing steps, designed to illustrate some of
-the options available in SPM12. It is not necessarily the optimal
-preprocessing sequence, which really depends on the question being asked
-of the data.
+!!! note
+
+    It should be noted that the pipeline described below is just one
+    possible sequence of processing steps, designed to illustrate some of
+    the options available in SPM12. It is not necessarily the optimal
+    preprocessing sequence, which really depends on the question being asked
+    of the data.
 
 ## Getting Started
 
@@ -95,19 +97,16 @@ Open SPM12 and ensure it is set to the EEG modality. To do this, type
 `spm eeg` into the MATLAB command window. For this to work, SPM12 root
 folder must be in your MATLAB path.
 
-Open the batch editor window by pressing "Batch" from the SPM Menu
-window. This opens the window shown in
-Figure <a href="#multi:fig:1" data-reference-type="ref"
-data-reference="multi:fig:1">1.1</a>.
+Open the batch editor window by pressing ++"Batch"++ from the SPM Menu
+window. This opens the window shown below.
 
-<figure id="multi:fig:1">
+<figure>
 <div class="center">
 <img src="../../../assets/figures/manual/multi/figure1.png" style="width:120mm" />
 </div>
 <figcaption><em>Screenshot of the Batch Editor. The Module List, Current
 Module Window and Current Item Windows are identified. The cursor
-highlights how to save the pipeline as a batch and script. <span
-id="multi:fig:1" label="multi:fig:1"></span></em></figcaption>
+highlights how to save the pipeline as a batch and script.</em></figcaption>
 </figure>
 
 --8<-- "addons/abbreviations.md"

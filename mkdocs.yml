@@ -95,7 +95,6 @@ nav:
         - 'References':                    'tutorials/multi/references.md' 
     - 'MEG Source Localisation': tutorials/meg_sloc/meg_sloc.md
     - 'EEG Mismatch negativity data': tutorials/mmn/mmn.md
-    - 'Multimodal, Multisubject data fusion': tutorials/multi/multi.md
     - 'Multimodal':
         - 'Introduction': tutorials/multimodal/multimodal.md
         - 'EEG': tutorials/multimodal/eeg.md

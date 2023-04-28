@@ -321,12 +321,11 @@ a decrease in the beta range,  22Hz, 475ms).
 
 <figure id="multi:fig:10">
 <div class="center">
-<img src="../../../assets/figures/manual/multi/figure10.png" style="width:120mm" />
+<img src="../../assets/figures/manual/multi/figure10.png" style="width:120mm" />
 </div>
 <figcaption><em>Time-Frequency SPM for T-contrast of greater power for
 faces than scrambled faces across subjects, thresholded at <span
-class="math inline"><em>p</em> &lt; .05</span> FWE corrected. <span
-id="multi:fig:10" label="multi:fig:10"></span></em></figcaption>
+class="math inline"><em>p</em> &lt; .05</span> FWE corrected.</em></figcaption>
 </figure>
 
 --8<-- "addons/abbreviations.md"
