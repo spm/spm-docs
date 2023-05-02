@@ -84,7 +84,7 @@ nav:
     - 'DCM':
         - 'Introduction': 'tutorials/dcm/introduction.md'
     - 'OPM':
-      - 'Evoked response pipeline': 'tutorials/opm_preprocessing/introduction.md'
+        - 'Evoked response pipeline': 'tutorials/opm_preprocessing/introduction.md'
     - 'Multimodal, multisubject data fusion':
         - 'Overview':                      'tutorials/multi/index.md'  
         - 'Preprocessing':                 'tutorials/multi/preprocessing.md'  
