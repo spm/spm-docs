@@ -1,227 +1,121 @@
-# DCM for Phase Coupling <span id="Chap:data:dcm_phase" label="Chap:data:dcm_phase"></span>
+# DCM for Phase Coupling
 
-This chapter presents an extension of the Dynamic Causal Modelling (DCM)
-framework to the analysis of phase-coupled data. A weakly coupled
-oscillator approach is used to describe dynamic phase changes in a
-network of oscillators. The influence that the phase of one oscillator
-has on the change of phase of another is characterised in terms of a
-Phase Interaction Function (PIF) as described in (Penny et al. 2009).
-SPM supports PIFs specified using arbitrary order Fourier series.
-However, to simplify the interface, one is restricted to simple
-sinusoidal PIFs with the GUI.
+This tutorial presents an extension of the Dynamic Causal Modelling (DCM) framework for analyzing phase-coupled data. A weakly coupled oscillator approach is employed to describe dynamic phase changes in a network of oscillators. The influence of one oscillator's phase on another's phase change is characterized using a Phase Interaction Function (PIF), as described in Penny et al. (2009). Although SPM supports PIFs specified with arbitrary order Fourier series, the interface is simplified by restricting users to simple sinusoidal PIFs when using the GUI.
 
 ## Data
 
-We will use the merged epoched MEG face-evoked dataset[^1] saved in the
-files:
+We will use the merged epoched MEG face-evoked dataset[^1], which is saved in the following files:
+
+```
 
     cdbespm12_SPM_CTF_MEG_example_faces1_3D.mat
     cdbespm12_SPM_CTF_MEG_example_faces1_3D.dat
+```
 
-DCM-Phase requires a head model and coregistration. If you have been
-following the previous chapters of this tutorial, these should already
-be available in the dataset. Otherwise, you should perform the 'Prepare'
-and '3D Source reconstruction' steps described earlier in the chapter,
-with the latter comprising the MRI, Co-register, Forward and Save
-sub-steps.
+DCM-Phase requires a head model and coregistration. If you have been following the previous tutorials, these should already be available in the dataset. Otherwise, you should perform the 'Prepare' and '3D Source reconstruction' steps described in the "Imaging source reconstruction" chapter. The latter includes the MRI, Co-register, Forward, and Save sub-steps.
 
 ## Getting Started
 
-You need to start SPM and toggle "EEG" as the modality (bottom-right of
-SPM main window), or start SPM with `spm eeg`. In order for this to work
-you need to ensure that the main SPM directory is on your MATLAB path.
-After calling `spm eeg`, you see SPM's graphical user interface, the
-top-left window. The button for calling the DCM-GUI is found in the
-second partition from the top, on the right hand side. When pressing the
-button, the GUI pops up
-(Figure <a href="#dcm-ir:fig:1" data-reference-type="ref"
-data-reference="dcm-ir:fig:1">[dcm-ir:fig:1]</a>).
+To get started, follow these steps:
 
-## Data and design
+1. Launch SPM and select "EEG" as the modality (located at the bottom-right of the SPM main window), or start SPM with the `spm eeg` command. Ensure that the main SPM directory is on your MATLAB path.
+2. After calling `spm eeg`, you will see SPM's graphical user interface (GUI) in the top-left window.
+3. Find the button for calling the DCM-GUI in the second partition from the top, on the right-hand side.
+4. Press the button to open the DCM-GUI (Figure [dcm-ir:fig:1](#dcm-ir:fig:1)).
 
-You should switch the DCM model type to "PHASE" which is the option for
-DCM-Phase. Press "new data" and select the data file
-`cdbespm12_SPM_CTF_MEG_example_faces1_3D.mat`. This is an epoched data
-file with multiple trials per condition. On the right-hand side enter
-the trial indices
+## Data and Design
 
-    1 2
+Follow these steps to set up the data and design for DCM-Phase:
 
-for the 'face' and 'scrambled' evoked responses (we will model both
-trial types). The box below this list allows for specifying experimental
-effects on connectivity. Enter
+1. Switch the DCM model type to "PHASE".
+2. Press "new data" and select the data file `cdbespm12_SPM_CTF_MEG_example_faces1_3D.mat`. This file contains epoched data with multiple trials per condition.
+3. On the right-hand side, enter the trial indices `1 2` for the 'face' and 'scrambled' evoked responses.
+4. In the box below the trial indices, specify experimental effects on connectivity by entering `1 0` in the first row. This indicates that "face" trial types can have different connectivity parameters than "scrambled" trial types.
+5. Click outside the box to assign a default name, "effect1", to this effect. You can change this name to something more descriptive, such as "face".
+6. Set the peristimulus time window to `1 300` ms.
+7. Select `1` for "detrend" to remove the mean from each data record.
+8. Optionally, use the `sub-trials` option to select a subset of trials for analysis. For example, selecting `2` would analyze every second trial, and `3` would analyze every third trial. This can be helpful since DCM-Phase takes a long time to invert for all trials. In this example, we assume you used all trials (sub-trials set to 1).
+9. Click the forward button ($>$) to proceed to the next stage, the *electromagnetic model*. You can press the red backward button ($<$) to return to the data and design part if needed.
 
-    1 0
+## Electromagnetic Model
 
-in the first row of the box. This means that "face" trial types can have
-different connectivity parameters than "scrambled" trial types. If we
-now click somewhere outside the box, a default name will be assigned to
-this effect - "effect1". It will appear in the small text box next to
-the coefficients box. It is possible to change this name to something
-else e.g. "face". Now we can select the peristimulus time window we want
-to model. Set it to:
+DCM-Phase offers two options for extracting source data:
 
-    1 300
+1. **ECD option**: Use 3 orthogonal single equivalent current dipoles (ECD) for each source, invert the source model to get 3 source waveforms, and take the first principal component. This is suitable for multichannel EEG or MEG data.
+2. **LFP option**: Treat each channel as a source. This is appropriate for channels that already contain source data, either recorded directly with intracranial electrodes or extracted (e.g., using a beamformer).
 
-ms. Select `1` for "detrend", to remove the mean from each data record.
-The `sub-trials` option makes it possible to select just a subset of
-trials for the analysis (select 2 for every second trial, 3 - for every
-third etc.). This is useful because DCM-Phase takes quite a long time to
-invert for all the trials and you might want to first try a smaller
-subset to get an idea about the possible results. Here we will assume
-that you used all the trials (sub-trials was set to 1). You can now
-click on the $>$ (forward) button, which will bring you to the next
-stage *electromagnetic model*. From this part, you can press the red $<$
-button to get back to the data and design part.
+In this example, we will use the ECD option and specify two source regions:
 
-## Electromagnetic model
+1. In the left large text box, enter the source names:
 
-With DCM-Phase, there are two options for how to extract the source
-data. Firstly, you can use 3 orthogonal single equivalent current
-dipoles (ECD) for each source, invert the resulting source model to get
-3 source waveforms and take the first principal component. This option
-is suitable for multichannel EEG or MEG data. Alternatively, you can
-treat each channel as a source (LFP option). This is appropriate when
-the channels already contain source data either recorded directly with
-intracranial electrodes or extracted (e.g. using a beamformer).
-
-Note that a difference to DCM for evoked responses is that the
-parameters of the spatial model are not optimized. This means that
-DCM-Phase (like DCM-IR) will project the data into source space using
-the spatial locations you provide.
-
-We will use the ECD option and specify just two source regions. This
-requires specifying a list of source names in the left large text box
-and a list of MNI coordinates for the sources in the right large text
-box. Enter the following in the left box:
-
+```
     LOFA
     LFFA
+```
+These correspond to Left Occipital Face Area and Left Fusiform Face Area.
 
-Now enter in the right text box:
+2. In the right large text box, enter the MNI coordinates for the sources:
 
+```
     -39 -81 -15
     -39 -51 -24
+```
 
-These correspond to left Occipital Face Area, and left Fusiform Face
-Area. The onset-parameter is irrelevant for DCM-Phase. Now hit the $>$
-(forward) button and proceed to the *neuronal model*. Generally, if you
-have not used the input dataset for 3D source reconstruction before you
-will be asked to specify the parameters of the head model at this stage.
+Note that unlike DCM for evoked responses, DCM-Phase (like DCM-IR) does not optimize the parameters of the spatial model. It will project the data into source space using the spatial locations you provide.
 
-## Neuronal model
+After specifying the source names and coordinates, click the forward button ($>$) to proceed to the *neuronal model*. If you have not used the input dataset for 3D source reconstruction before, you may be asked to specify the parameters of the head model at this stage.
 
-We will now define a coupled oscillator model for investigating network
-synchronization of alpha activity. To this end, we first enter the
-values 8 and 12 to define the frequency window. The wavelet number is
-irrelevant for DCM-Phase. After source reconstruction (using a
-pseudo-inverse approach), source data is bandpass filtered and then the
-Hilbert transform is used to extract the instantaneous phase. The
-DCM-Phase model is then fitted used standard routines as described in
-(Penny et al. 2009).
+## Neuronal Model
 
-Figure  <a href="#dcm-phase:fig:1" data-reference-type="ref"
-data-reference="dcm-phase:fig:1">1.1</a> shows the four models we will
-apply to the M/EEG data. We will first fit model 4. This model proposes
-that alpha activity in region LOFA changes its phase so as to
-synchronize with activity in region LFFA. In this network LFFA is the
-master and LOFA is the slave. Moreover, the connection from LFFA to LOFA
-is allowed to be different for scrambled versus unscrambled faces.
+In this example, we will define a coupled oscillator model for investigating network synchronization of alpha activity:
 
-<figure id="dcm-phase:fig:1">
-<div class="center">
-<img src="../../../assets/figures/manual/dcm_phase/phase_models.png" style="width:160mm" />
-</div>
-<figcaption><em>Four different DCM-Phase models <span
-id="dcm-phase:fig:1" label="dcm-phase:fig:1"></span></em></figcaption>
-</figure>
+1. Enter the values `8` and `12` to define the frequency window. The wavelet number is irrelevant for DCM-Phase.
 
-The connectivity for Model 4 can be set up by configuring the radio
-buttons as shown in
-Figure <a href="#dcm-phase:fig:2" data-reference-type="ref"
-data-reference="dcm-phase:fig:2">1.2</a>. You can now press the
-`Invert DCM` button. It can take up to an hour to estimate the model
-parameters depending on the speed of your computer.
+After source reconstruction (using a pseudo-inverse approach), source data is bandpass filtered and the Hilbert transform is used to extract the instantaneous phase. The DCM-Phase model is then fitted using standard routines as described in (Penny et al. 2009).
 
-<figure id="dcm-phase:fig:2">
-<div class="center">
-<img src="../../../assets/figures/manual/dcm_phase/model4_conn.png" style="width:50mm" />
-</div>
-<figcaption><em>Radio button configurations for DCM-Phase model 4 <span
-id="dcm-phase:fig:2" label="dcm-phase:fig:2"></span></em></figcaption>
-</figure>
+![Four different DCM-Phase models](../../../assets/figures/manual/dcm_phase/phase_models.png)
+
+*Figure 1.1: Four different DCM-Phase models.*
+
+We will first fit Model 4, which proposes that alpha activity in region LOFA changes its phase to synchronize with activity in region LFFA. In this network, LFFA is the master and LOFA is the slave. The connection from LFFA to LOFA is allowed to be different for scrambled versus unscrambled faces.
+
+![Radio button configurations for DCM-Phase model 4](../../../assets/figures/manual/dcm_phase/model4_conn.png)
+
+*Figure 1.2: Radio button configurations for DCM-Phase model 4.*
+
+Configure the radio buttons as shown in Figure 1.2 and press the `Invert DCM` button. Estimating the model parameters may take up to an hour, depending on your computer's speed.
 
 ## Results
 
-After estimation is finished, you can assess the results by choosing
-from the pull-down menu at the bottom (middle). The `Sin(Data)-Region i`
-option will show the sin of the phase data in region $i$, for the first
-16 trials. The blue line corresponds to the data and the red to the
-DCM-Phase model fit. The `Coupling(As)` and `Coupling(Bs)` buttons
-display the estimated endogenous and modulatory activity shown in
-Figure <a href="#dcm-phase:fig:3" data-reference-type="ref"
-data-reference="dcm-phase:fig:3">1.3</a>.
+After estimation is finished, you can assess the results by choosing from the pull-down menu at the bottom (middle). The `Sin(Data)-Region i` option will show the sin of the phase data in region $i$, for the first 16 trials. The blue line corresponds to the data, and the red line represents the DCM-Phase model fit. The `Coupling(As)` and `Coupling(Bs)` buttons display the estimated endogenous and modulatory activity shown in Figure 1.3.
 
-<figure id="dcm-phase:fig:3">
-<div class="center">
-<img src="../../../assets/figures/manual/dcm_phase/modulatory.png" style="width:50mm" />
-</div>
-<figcaption><em>The figure shows the estimated parameters for endogenous
-coupling (left column) and modulatory parameters (right column) for the
-4th DCM. <span id="dcm-phase:fig:3"
-label="dcm-phase:fig:3"></span></em></figcaption>
-</figure>
+![The figure shows the estimated parameters for endogenous coupling (left column) and modulatory parameters (right column) for the 4th DCM.](../../../assets/figures/manual/dcm_phase/modulatory.png)
 
-If one fits all the four models shown in
-Figure <a href="#dcm-phase:fig:1" data-reference-type="ref"
-data-reference="dcm-phase:fig:1">1.1</a> then they can be formally
-compared using Bayesian Model Selection. This is implemented by pressing
-the `BMS` button. You will need to first create a directory for the
-results to go in e.g. `BMS-results`. For 'Inference Method' select FFX
-(the RFX option is only viable if you have models from a group of
-subjects). Under 'Data', Select 'New Subject' and under 'Subject' select
-'New Session'. Then under 'Models' select the `DCM.mat` files you have
-created. Then press the green play button. This will produce the results
-plot shown in
-Figure <a href="#dcm-phase:fig:4" data-reference-type="ref"
-data-reference="dcm-phase:fig:4">1.4</a>. This leads us to conclude that
-LFFA and LOFA act in master slave arrangement with LFFA as the master.
+*Figure 1.3: The figure shows the estimated parameters for endogenous coupling (left column) and modulatory parameters (right column) for the 4th DCM.*
 
-<figure id="dcm-phase:fig:4">
-<div class="center">
-<img src="../../../assets/figures/manual/dcm_phase/bms_phase.png" style="width:50mm" />
-</div>
-<figcaption><em>Bayesian comparison of the four DCM-Phase models shown
-in Figure <a href="#dcm-phase:fig:1" data-reference-type="ref"
-data-reference="dcm-phase:fig:1">1.1</a>.<span id="dcm-phase:fig:4"
-label="dcm-phase:fig:4"></span></em></figcaption>
-</figure>
+If you fit all four models shown in Figure 1.1, you can formally compare them using Bayesian Model Selection. To do this:
+
+1. Press the `BMS` button.
+2. Create a directory for the results (e.g., `BMS-results`).
+3. For 'Inference Method,' select FFX (the RFX option is only viable if you have models from a group of subjects).
+4. Under 'Data,' select 'New Subject,' and under 'Subject,' select 'New Session.'
+5. Then, under 'Models,' select the `DCM.mat` files you have created.
+6. Press the green play button.
+
+This process will produce the results plot shown in Figure 1.4. Based on these results, we can conclude that LFFA and LOFA act in a master-slave arrangement with LFFA as the master.
+
+![Bayesian comparison of the four DCM-Phase models shown in Figure 1.1.](../../../assets/figures/manual/dcm_phase/bms_phase.png)
+
+*Figure 1.4: Bayesian comparison of the four DCM-Phase models shown in Figure 1.1.*
 
 ## Extensions
 
-In the DCM-Phase model accessible from the GUI, it is assumed that the
-phase interaction functions are of simple sinusoidal form ie.
-$a_{ij} \sin(\phi_j - \phi_i)$. The coefficients $a_{ij}$ are the values
-shown in the endogenous parameter matrices in eg.
-Figure <a href="#dcm-phase:fig:3" data-reference-type="ref"
-data-reference="dcm-phase:fig:3">1.3</a>. These can then be changed by
-an amount $b_{ij}$ as shown in the modulatory parameter matrices. It is
-also possible to specify and estimate DCM-Phase models using matlab
-scripts. In this case it is possible to specify more generic phase
-interaction functions, such as arbitrary order Fourier series. Examples
-are given in (Penny et al. 2009).
+In the DCM-Phase model accessible from the GUI, it is assumed that the phase interaction functions are of simple sinusoidal form, i.e., $a_{ij} \sin(\phi_j - \phi_i)$. The coefficients $a_{ij}$ are the values shown in the endogenous parameter matrices, for example, in Figure 1.3. These can then be changed by an amount $b_{ij}$, as shown in the modulatory parameter matrices. It is also possible to specify and estimate DCM-Phase models using MATLAB scripts. In this case, it is possible to specify more generic phase interaction functions, such as arbitrary order Fourier series. Examples are given in Penny et al. (2009).
 
-<div id="refs" class="references csl-bib-body hanging-indent">
 
-<div id="ref-dcm_phase" class="csl-entry">
+### References
 
-Penny, W. D., V. Litvak, L. Fuentemilla, E. Duzel, and K. J. Friston.
-2009. "Dynamic Causal Models for Phase Coupling." *Journal of
-Neuroscience Methods* 183 (1): 19--30.
+Penny, W. D., Litvak, V., Fuentemilla, L., Duzel, E., & Friston, K. J. (2009). Dynamic Causal Models for Phase Coupling. *Journal of Neuroscience Methods*, 183(1), 19–30.
 
-</div>
+[^1]: Multimodal face-evoked dataset: <http://www.fil.ion.ucl.ac.uk/spm/data/mmfaces/>
 
-</div>
-
-[^1]: Multimodal face-evoked dataset:
-    <http://www.fil.ion.ucl.ac.uk/spm/data/mmfaces/>
