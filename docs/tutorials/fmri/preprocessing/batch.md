@@ -16,7 +16,6 @@ The SPM batch interface allows you to create workflows for executing multiple pr
     3. Use the filter box to load the full time series - type `NaN` underneath `Filter` button and press ++return++.
     4. In the right-hand panel, select `sub-01_task-auditory_bold.nii` and press `Done`.
     5. Back in the batch window, navigate to `Resliced images` under `Reslice options` and select `Mean image only`. 
-    6. Save this batch for future reference - `File` :material-arrow-right-bold: `Save batch`. Give the file a meaningful name, such as `realignment_batch.mat`.
 5. Next, add the **slice timing correction** module to your batch file -  `SPM` :material-arrow-right-bold: `Temporal` :material-arrow-right-bold: `Slice timing`.
 6. Complete the slice timing module:
     1. Select `Data` :material-arrow-right-bold: `Session`.
