@@ -2,28 +2,28 @@
 
 ## Specification
 
-Press the <span class="smallcaps">Specify 1st-level</span> button. This
+Press the `Specify 1st-level` button. This
 will call up an fMRI specification job in the batch editor window. Then
 
 - Load the `categorical_spec.mat` job file created for the classical
   analysis.
 
-- Open "Subject/Session", highlight "Scans".
+- Open `Subject/Session`, highlight `Scans`.
 
-- Deselect the smoothed functional images using the 'unselect all'
+- Deselect the smoothed functional images using the `unselect all`
   option available from a right mouse click in the SPM file selector
   (bottom window).
 
 - Select the unsmoothed functional images using the `^wa.*` filter and
-  "select all" option available from a right mouse click in the SPM file
+  `select all` option available from a right mouse click in the SPM file
   selector (top right window). The Bayesian analysis uses a spatial
   prior where the spatial regularity in the signal is estimated from the
   data. It is therefore not necessary to create smoothed images if you
   are only going to do a Bayesian analysis.
 
-- Press "Done".
+- Press `Done`.
 
-- Highlight "Directory" and select the `DIR/bayesian` directory you
+- Highlight `Directory` and select the `DIR/bayesian` directory you
   created earlier (you will first need to deselect the `DIR/categorical`
   directory).
 
@@ -31,24 +31,23 @@ will call up an fMRI specification job in the batch editor window. Then
 
 ## Estimation
 
-Press the <span class="smallcaps">Estimate</span> button. This will call
+Press the `Estimate` button. This will call
 up the specification of an fMRI estimation job in the batch editor
 window. Then
 
-- Highlight the "Select SPM.mat" option and then choose the `SPM.mat`
+- Highlight the `Select SPM.mat` option and then choose the `SPM.mat`
   file saved in the `DIR/bayesian` subdirectory
 
-- Highlight "Method" and select the "Choose Bayesian 1st-level" option.
+- Highlight `Method` and select the `Choose Bayesian 1st-level` option.
 
 - Save the job as `estimate_bayesian.job` and press the `Run` button.
 
-<figure id="face_ar1">
+<figure>
 <div class="center">
 <img src="../../../assets/figures/manual/faces/face_ar1.png" style="width:100mm" />
 </div>
-<figcaption><em>Bayesian analysis: Estimated AR(1) coefficient image
-indicating heterogeneity near the circle of Willis <span id="face_ar1"
-label="face_ar1"></span></em> </figcaption>
+<figcaption>Bayesian analysis: Estimated AR(1) coefficient image
+indicating heterogeneity near the circle of Willis </figcaption>
 </figure>
 
 SPM will write a number of files into the output directory including
@@ -69,8 +68,7 @@ SPM will write a number of files into the output directory including
   analysis.
 
 - Images `Sess1_AR_p.nii` where $p$ indexes the $p$th AR coefficient.
-  See eg. Figure <a href="#face_ar1" data-reference-type="ref"
-  data-reference="face_ar1">1.19</a>.
+  See eg. figure above.
 
 - Images `con_i.nii` and `con_sd_i.nii` which are the mean and standard
   deviation of the $i$th pre-defined contrast.
@@ -90,9 +88,9 @@ concerning the scaling of the parameter estimates. The parameter
 estimates themselves have arbitrary scaling, since they depend on the
 scaling of the regressors. The scaling of the regressors in the present
 examples depends on the scaling of the basis functions. To determine
-this scaling, load the "SPM.mat" file and type in MATLAB
+this scaling, load the `SPM.mat` file and type in MATLAB
 `sf = max(SPM.xBF.bf(:,1))/SPM.xBF.dt` (alternatively, press
-"Design:Explore:Session 1" and select any of the conditions, then read
+`Design:Explore:Session 1` and select any of the conditions, then read
 off the peak height of the canonical HRF basis function (bottom left)).
 
 Then, if you want a size threshold of 1% peak signal change, the value
@@ -109,48 +107,44 @@ calculates the SUM of the parameter estimates for the canonical HRF
 across conditions (the average vs sum makes no difference for the
 classical statistics).
 
-- Press "Results".
+- Press `Results`.
 
 - Select the `SPM.mat` file created in the last section.
 
-- Press "Define new contrast", enter the name "AVERAGE Canonical HRF:
-  Faces $>$ Baseline", press the "T-contrast" radio button, enter the
-  contrast \[1 0 0 1 0 0 1 0 0 1 0 0\]/4, press "submit", "OK" and
-  "Done".
+- Press `Define new contrast`, enter the name `AVERAGE Canonical HRF:
+  Faces $>$ Baseline`, press the `T-contrast` radio button, enter the
+  contrast \[`1 0 0 1 0 0 1 0 0 1 0 0`\]/4, press `submit`, `OK` and
+  `Done`.
 
 - *Apply masking ? \[None/Contrast/Image\]*
 
-- Specify None
+  * Specify `None`.
 
 - *Effect size threshold for PPM*
 
-- Enter the value
+  * Enter the value
 
 - *Log Odds Threshold for PPM*
 
-- Enter the value 10
+  * Enter the value `10`.
 
 - *Extent threshold \[0\]*
 
-- Accept the default value
+  * Accept the default value.
 
 SPM will then plot a map of effect sizes at voxels where it is 95% sure
 that the effect size is greater than 1% of the global mean. Then use
 overlays, sections, select the normalised structural image created
 earlier and move the cursor to the activation in the left hemisphere.
-This should create the plot shown in
-Figure <a href="#face_bayes" data-reference-type="ref"
-data-reference="face_bayes">1.20</a>.
+This should create the plot below.
 
-<figure id="face_bayes">
+<figure>
 <div class="center">
 <img src="../../../assets/figures/manual/faces/face_bayes.png" style="width:100mm" />
 </div>
-<figcaption><em>Bayesian analysis: MIP and overlay of effect sizes at
+<figcaption>Bayesian analysis: MIP and overlay of effect sizes at
 voxels where PPM is 95% sure that the effect size is greater than 1% of
-the global mean. The cursor is at the location <span
-class="math inline"><em>x</em> = 30, <em>y</em> =  − 82, <em>z</em> =  − 17</span>mm<span
-id="face_bayes" label="face_bayes"></span></em> </figcaption>
+the global mean. The cursor is at the location x=30, y=-82, z=-17 mm</figcaption>
 </figure>
 
 [^1]: Face Repetition dataset:

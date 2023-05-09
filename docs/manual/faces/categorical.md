@@ -146,19 +146,19 @@ categorical design.</figcaption>
 
 - *Apply masking ? \[None/Contrast/Image\]*
 
-- Specify `None`.
+  * Specify `None`.
 
 - *p value adjustment to control: \[FWE/none\]*
 
-- Select `FWE`.
+  *Select `FWE`.
 
 - *Corrected p value(family-wise error)*
 
-- Accept the default value, `0.05`
+  * Accept the default value, `0.05`
 
 - *Extent threshold {voxels} \[0\]*
 
-- Accept the default value, `0`.
+  * Accept the default value, `0`.
 
 SPM will then produce the MIP shown below.
 
@@ -226,31 +226,31 @@ have been created automatically - it is number 3.
 
 - *Apply masking ? \[None/Contrast/Image\]*.
 
-- Specify `Contrast`.
+  * Specify `Contrast`.
 
-- Select contrast 5 - `Positive effect of condition_1` (the T-contrast
+  * Select contrast 5 - `Positive effect of condition_1` (the T-contrast
   of activation versus baseline, collapsed across conditions, that we
   evaluated above)
 
 - *uncorrected mask p-value ?*
 
-- Change to `0.001`.
+  * Change to `0.001`.
 
 - *nature of mask?*
 
-- Select `inclusive`.
+  * Select `inclusive`.
 
 - *p value adjustment to control: \[FWE/none\]*
 
-- Select `none`.
+  * Select `none`.
 
 - *threshold (F or p value)*
 
-- Accept the default value, `0.001`.
+  * Accept the default value, `0.001`.
 
 - *Extent threshold {voxels} \[0\]*
 
-- Accept the default value, `0`.
+  * Accept the default value, `0`.
 
 A MIP should then appear, the top half of which should look like
 the figure below.
