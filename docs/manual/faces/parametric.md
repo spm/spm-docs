@@ -60,7 +60,7 @@ of lag. Regressors 6,7 and 8 play the same roles, but for famous faces.
 </figcaption>
 </figure>
 
-### Model estimation
+## Model estimation
 
 Press the `Estimate` button. This will call
 up the specification of an fMRI estimation job in the batch editor
@@ -74,7 +74,7 @@ window. Then
 SPM will write a number of files into the selected directory including
 an `SPM.mat` file.
 
-### Plotting parametric responses
+## Plotting parametric responses
 
 We will look at the effect of lag (up to second order, ie using linear
 and quadratic terms) on the response to repeated Famous faces, within

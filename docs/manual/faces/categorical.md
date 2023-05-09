@@ -113,7 +113,7 @@ are shown in grey - in this model we accepted the default HPF cut-off of
 128s or 0.008Hz).</figcaption>
 </figure>
 
-### Model estimation
+## Model estimation
 
 Press the `Estimate` button. This will call
 up the specification of an fMRI estimation job in the batch editor
@@ -127,7 +127,7 @@ window. Then
 SPM will write a number of files into the selected directory including
 an `SPM.mat` file.
 
-### Inference for categorical design
+## Inference for categorical design
 
 Press "Results" and select the SPM.mat file from `DIR/categorical`. This
 will again invoke the contrast manager. Because we specified that our

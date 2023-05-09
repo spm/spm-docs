@@ -47,7 +47,7 @@ design matrices and models estimated using classical or Bayesian methods.
 
 As well as the classical/Bayesian distinction we will show how this data can be analysed from a parametric as well as a categorical perspective. We will look at the main effects of fame and repetition and in the parametric analysis we will look at responses as a function of “lag”, that is, the number of faces intervening between repetition of a specific face.
 
-Start up MATLAB, enter your jobs directory and type `spm fmri` at the
+Start up MATLAB, enter your `jobs` directory and type `spm fmri` at the
 MATLAB prompt. SPM will then open in fMRI mode with three windows (1)
 the top-left or "Menu" window, (2) the bottom-left or "Interactive"
 window and (3) the right-hand or "Graphics" window. Analysis then takes
@@ -64,7 +64,7 @@ pre-processing, (ii) model specification, review and estimation and
 (iii) inference.</figcaption>
 </figure>
 
-!!! info References
+!!! info "Reference"
     [Henson, R. N. A., T. Shallice, M. L. Gorno-Tempini, and R. Dolan. 2002.
     Face Repetition Effects in Implicit and Explicit Memory Tests as
     Measured by fMRI. Cerebral Cortex. 12: 178--86.](https://doi.org/10.1093/cercor/12.2.178)
