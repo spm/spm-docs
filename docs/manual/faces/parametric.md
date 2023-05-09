@@ -1,5 +1,7 @@
 # Modelling parametric responses
 
+## Parametric modulators
+
 Before setting up the design matrix, we must first load into MATLAB the
 Stimulus Onsets Times (SOTs), as before, and also the "Lags", which are
 specific to this experiment, and which will be used as parametric
@@ -10,6 +12,8 @@ are represented by MATLAB cell arrays, stored in the `sots.mat` file.
 
 - At the MATLAB command prompt type `load sots`. This loads the stimulus
   onset times and the lags (the latter in a cell array called `itemlag`.
+
+## Model specification
 
 Now press the `Specify 1st-level` button.
 This will call up the specification of a fMRI specification job in the
@@ -56,7 +60,7 @@ of lag. Regressors 6,7 and 8 play the same roles, but for famous faces.
 </figcaption>
 </figure>
 
-### Estimate
+### Model estimation
 
 Press the `Estimate` button. This will call
 up the specification of an fMRI estimation job in the batch editor
@@ -87,25 +91,25 @@ those regions generally activated by faces versus baseline. To do this
 
 - *Apply masking ? \[None/Contrast/Image\]*
 
-  * Specify `Contrast`.
+    * Specify `Contrast`.
 
 - Select the `Positive Effect of Condition 1` T contrast.
 
-  * Change to an `0.05` uncorrected mask p-value.
+    * Change to an `0.05` uncorrected mask p-value.
 
 - Nature of Mask ? `inclusive`.
 
 - *p value adjustment to control: \[FWE/none\]*
 
-  * Select `None`.
+    * Select `None`.
 
 - *Threshold {F or p value}*
 
-  * Accept the default value, `0.001`.
+    * Accept the default value, `0.001`.
 
 - *Extent threshold {voxels} \[0\]*
 
-  * Accept the default value, `0`.
+    * Accept the default value, `0`.
 
 The figure below shows the MIP and an overlay of
 this parametric effect using overlays, sections and selecting the

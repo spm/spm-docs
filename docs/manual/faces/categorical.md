@@ -1,5 +1,7 @@
 # Modelling categorical responses
 
+## Onset times
+
 Before setting up the design matrix we must first load the Stimulus
 Onsets Times (SOTs) into MATLAB . SOTs are stored in the `sots.mat` file
 in a cell array such that eg. `sot{1}` contains stimulus onset times in
@@ -7,6 +9,8 @@ TRs for event type 1, which is `N1`. Event-types 2, 3 and 4 are `N2`, `F1` and
 `F2`.[^6]
 
 - At the MATLAB command prompt type `load sots`
+
+## Model specification
 
 Now press the `Specify 1st-level` button.
 This will call up the specification of a fMRI specification job in the
@@ -109,7 +113,7 @@ are shown in grey - in this model we accepted the default HPF cut-off of
 128s or 0.008Hz).</figcaption>
 </figure>
 
-### Estimate
+### Model estimation
 
 Press the `Estimate` button. This will call
 up the specification of an fMRI estimation job in the batch editor
