@@ -1,52 +1,150 @@
-# Modelling and plotting parametric responses
+## Modelling parametric responses
 
-In addition to analysing the data in the above \"categorical\" design,
-we now illustrate an alternative \"parametric\" design in which
-repetition is viewed as a continuum. In this case, the response to each
-presentation of famous and non-famous faces is modulated by the time
-interval (lag) since the previous presentation of that face (for first
-presentations, this lag is infinite).
+Before setting up the design matrix, we must first load into MATLAB the
+Stimulus Onsets Times (SOTs), as before, and also the "Lags", which are
+specific to this experiment, and which will be used as parametric
+modulators. The Lags code, for each second presentation of a face (N2
+and F2), the number of other faces intervening between this (repeated)
+presentation and its previous (first) presentation. Both SOTs and Lags
+are represented by Matlab cell arrays, stored in the `sots.mat` file.
 
-## Specification and estimation
+- At the MATLAB command prompt type `load sots`. This loads the stimulus
+  onset times and the lags (the latter in a cell array called `itemlag`.
 
-Finally, consider the effects of the interval between first and second
-presentations of famous and non-famous faces. For this purpose, an
-alternative statistical model needs to be estimated, with four trial
-types. (1) First and second presentation of a non-famous face (N1 and N2
-collapsed). (2) First and second presentation of a famous face (F1 and
-F2 collapsed). (3) Errors in judging non-famous faces. (4) Errors in
-judging famous faces. These are modelled with the canonical hrf alone,
-with two parametric (exponential) modulations added for second
-presentations of non-famous and famous faces. See the README.txt for
-details of design specification.
+Now press the <span class="smallcaps">Specify 1st-level</span> button.
+This will call up the specification of a fMRI specification job in the
+batch editor window. Then
 
-## Inference and plotting
+- Press "Load" and select the `categorical_spec.mat` job file you
+  created earlier.
 
-After completion of model estimation, press 'Results' and select the
-SPM.mat file. When the Contrast Manager appears, define an F-contrast
-'Effect of Lag (on canonical N+F)' (name) and '0 1 0 1', and a
-t-contrast 'Canonical: Faces $>$ Baseline' (name) and '1 0 1 0'. Select
-the F-contrast, specify 'mask with other contrasts' (yes), select
-'Canonical: Faces $>$ Baseline', specify 'uncorrected mask p-value'
-(accept default), 'nature of mask (inclusive), 'title for comparison'
-(accept default), 'corrected height threshold' (no), and 'corrected
-p-value' (accept default). When the MIP appears, press 'Volume'.
+- Open "Conditions" and then open the second "Condition".
 
-The table displays all clusters where the exponential change in
-activation between first and second presentations for famous OR
-non-famous faces for the canonical hrf is significantly different from
-zero AND the canonical hrf for the first two conditions is significantly
-larger than zero (baseline). We can now plot these parametric effects at
-particular voxels.
+- Highlight "Parametric Modulations", select "New Parameter".
 
-To plot these parametric effects, select the R fusiform region (45 -60
--18, similar to the region identified in the previous categorical
-analysis for repetition effects), and press 'plot'. Select 'Plots of
-parametric responses' and select 'F' (or 'N'). Note that the 'attrib'
-option does not allow adjustment of the scale of the Z-axis; therefore,
-to change the scale for all axes, type e.g. 'figure (1), axis (\[0 30 0
-100 0 1\])' in the Matlab window.
+- Highlight "Name" and enter "Lag", highlight values and enter
+  `itemlag{2}`, highlight polynomial expansion and "2nd order".
 
-Note that these repetition effects are transient (decrease with
-increasing intervals between first and second presentations), especially
-for famous faces.
+- Now open the fourth "Condition" under "Conditions".
+
+- Highlight "Parametric Modulations", select "New Parameter".
+
+- Highlight "Name" and enter "Lag", highlight values and enter
+  `itemlag{4}`, highlight polynomial expansion and "2nd order".
+
+- Open "Canonical HRF" under "Basis Functions", highlight "Model
+  derivatives" and select "No derivatives" (to make the design matrix a
+  bit simpler for present purposes!).
+
+- Highlight "Directory" and select `DIR/parametric` (having "unselected"
+  the current definition of directory from the Categorical analysis).
+
+- Save the job as `parametric_spec` and press the `Run` button.
+
+This should produce the design matrix shown in
+Figure <a href="#par_design" data-reference-type="ref"
+data-reference="par_design">1.16</a>.
+
+<figure id="par_design">
+<div class="center">
+<img src="../../../assets/figures/manual/faces/par_design.png" style="width:100mm" />
+</div>
+<figcaption><em><strong>Design matrix for testing repetition effects
+parametrically.</strong> Regressor 2 indicates the second occurrence of
+a nonfamous face. Regressor 3 modulates this linearly as a function of
+lag (ie. how many faces have been shown since that face was first
+presented), and regressor 4 modulates this quadratically as a function
+of lag. Regressors 6,7 and 8 play the same roles, but for famous faces.
+<span id="par_design" label="par_design"></span></em> </figcaption>
+</figure>
+
+### Estimate
+
+Press the <span class="smallcaps">Estimate</span> button. This will call
+up the specification of an fMRI estimation job in the batch editor
+window. Then
+
+- Highlight the "Select SPM.mat" option and then choose the `SPM.mat`
+  file saved in the `DIR/parametric` directory.
+
+- Save the job as `parametric_est.job` and press the `Run` button.
+
+SPM will write a number of files into the selected directory including
+an `SPM.mat` file.
+
+### Plotting parametric responses
+
+We will look at the effect of lag (up to second order, ie using linear
+and quadratic terms) on the response to repeated Famous faces, within
+those regions generally activated by faces versus baseline. To do this
+
+- Press "Results" and select the `SPM.mat` file in the `DIR/parametric`
+  directory.
+
+- Press "Define new contrast", enter the name "Famous Lag", press the
+  "F-contrast" radio button, enter "1:6 9:15" in the "columns in reduced
+  design" window, press "submit", "OK" and "Done".
+
+- Select the "Famous Lag" contrast.
+
+- *Apply masking ? \[None/Contrast/Image\]*
+
+- Specify "Contrast".
+
+- Select the "Positive Effect of Condition 1" T contrast.
+
+- Change to an 0.05 uncorrected mask p-value.
+
+- Nature of Mask ? inclusive.
+
+- *p value adjustment to control: \[FWE/none\]*
+
+- Select None
+
+- *Threshold {F or p value}*
+
+- Accept the default value, 0.001
+
+- *Extent threshold {voxels} \[0\]*
+
+- Accept the default value, 0.
+
+Figure <a href="#famous_lag_mip" data-reference-type="ref"
+data-reference="famous_lag_mip">1.17</a> shows the MIP and an overlay of
+this parametric effect using overlays, sections and selecting the
+`wmsM03953_0007.nii` image.
+
+<figure id="famous_lag_mip">
+<div class="center">
+<img src="../../../assets/figures/manual/faces/famous_lag_mip.png" style="width:100mm" />
+</div>
+<figcaption><em>MIP and overlay of parametric lag effect in parietal
+cortex. <span id="famous_lag_mip" label="famous_lag_mip"></span></em>
+</figcaption>
+</figure>
+
+The effect is plotted in the time domain in
+figure <a href="#famous_lag" data-reference-type="ref"
+data-reference="famous_lag">1.18</a>. This was obtained by
+
+- Right clicking on the MIP and selecting "global maxima".
+
+- Pressing Plot, and selecting "parametric responses" from the pull-down
+  menu.
+
+- Which effect ? select "F2".
+
+This shows a quadratic effect of lag, in which the response appears
+negative for short-lags, but positive and maximal for lags of about 40
+intervening faces (note that this is a very approximate fit, since there
+are not many trials, and is also confounded by time during the session,
+since longer lags necessarily occur later (for further discussion of
+this issue, see the SPM2 example analysis of these data on the webpage).
+
+<figure id="famous_lag">
+<div class="center">
+<img src="../../../assets/figures/manual/faces/famous_lag.png" style="width:150mm" />
+</div>
+<figcaption><em>Response as a function of lag. <span id="famous_lag"
+label="famous_lag"></span></em> </figcaption>
+</figure>
