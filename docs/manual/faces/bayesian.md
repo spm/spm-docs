@@ -1,6 +1,6 @@
-## Bayesian analysis
+# Bayesian analysis
 
-### Specification
+## Specification
 
 Press the <span class="smallcaps">Specify 1st-level</span> button. This
 will call up an fMRI specification job in the batch editor window. Then
@@ -29,7 +29,7 @@ will call up an fMRI specification job in the batch editor window. Then
 
 - Save the job as `specify_bayesian.mat` and press the `Run` button.
 
-### Estimation
+## Estimation
 
 Press the <span class="smallcaps">Estimate</span> button. This will call
 up the specification of an fMRI estimation job in the batch editor
@@ -75,7 +75,7 @@ SPM will write a number of files into the output directory including
 - Images `con_i.nii` and `con_sd_i.nii` which are the mean and standard
   deviation of the $i$th pre-defined contrast.
 
-### Inference
+## Inference
 
 After estimation, we can make a posterior inference using a PPM.
 Basically, we identify regions in which we have a high probability
@@ -200,3 +200,5 @@ id="face_bayes" label="face_bayes"></span></em> </figcaption>
     component of the best fitting BOLD impulse response: the peak of the
     complete fit would need to take into account all three basis
     functions and their parameter estimates.
+
+--8<-- "addons/abbreviations.md"

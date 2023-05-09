@@ -1,4 +1,4 @@
-## Modelling parametric responses
+# Modelling parametric responses
 
 Before setting up the design matrix, we must first load into MATLAB the
 Stimulus Onsets Times (SOTs), as before, and also the "Lags", which are
@@ -148,3 +148,5 @@ this issue, see the SPM2 example analysis of these data on the webpage).
 <figcaption><em>Response as a function of lag. <span id="famous_lag"
 label="famous_lag"></span></em> </figcaption>
 </figure>
+
+--8<-- "addons/abbreviations.md"

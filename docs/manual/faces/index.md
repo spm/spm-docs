@@ -68,3 +68,5 @@ pre-processing, (ii) model specification, review and estimation and
     [Henson, R. N. A., T. Shallice, M. L. Gorno-Tempini, and R. Dolan. 2002.
     Face Repetition Effects in Implicit and Explicit Memory Tests as
     Measured by fMRI. Cerebral Cortex. 12: 178--86.](https://doi.org/10.1093/cercor/12.2.178)
+
+--8<-- "addons/abbreviations.md"
