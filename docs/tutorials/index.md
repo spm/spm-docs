@@ -30,7 +30,7 @@
 
     ---
 
-   [MEG source localisation](./meg_sloc/meg_sloc.md)
+    [MEG source localisation](./meg_sloc/meg_sloc.md)
 
 -   :material-monitor:{ .lg .middle } __MULTIMODAL__
 
