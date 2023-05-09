@@ -118,19 +118,19 @@ classical statistics).
 
 - *Apply masking ? \[None/Contrast/Image\]*
 
-  * Specify `None`.
+    * Specify `None`.
 
 - *Effect size threshold for PPM*
 
-  * Enter the value
+    * Enter the value
 
 - *Log Odds Threshold for PPM*
 
-  * Enter the value `10`.
+    * Enter the value `10`.
 
 - *Extent threshold \[0\]*
 
-  * Accept the default value.
+    * Accept the default value.
 
 SPM will then plot a map of effect sizes at voxels where it is 95% sure
 that the effect size is greater than 1% of the global mean. Then use

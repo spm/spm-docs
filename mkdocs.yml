@@ -111,9 +111,9 @@ nav:
     - 'Face fMRI data':
       - 'Introduction': manual/faces/index.md
       - 'Preprocessing': manual/faces/preprocessing.md
-      - 'Categorical': manual/faces/categorical.md
-      - 'Parametric': manual/faces/parametric.md
-      - 'Bayesian': manual/faces/bayesian.md
+      - 'Categorical Modelling': manual/faces/categorical.md
+      - 'Parametric Modelling': manual/faces/parametric.md
+      - 'Bayesian Analysis': manual/faces/bayesian.md
     - 'Face group fMRI data': manual/faces_group/face_group.md
     - 'fMRI Model Specification': manual/fmri_spec/fmri_spec.md
     - 'fMRI Model Estimation': manual/fmri_est/fmri_est.md
