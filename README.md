@@ -87,7 +87,9 @@ To deactivate the virtual environment when you finished working, use:
 deactivate
 ```
 
-Currently two [MkDocs plugins](https://github.com/pawamoy/best-of-mkdocs) are used: [`mkdocs-bibtex`](https://github.com/shyamd/mkdocs-bibtex), a plugin for citation management using bibtex, and [`MkDocs Video`](https://github.com/soulless-viewer/mkdocs-video), a plugin to embed videos in the documentation pages.
+[MkDocs plugins](https://github.com/pawamoy/best-of-mkdocs) currently used:
+* [`mkdocs-bibtex`](https://github.com/shyamd/mkdocs-bibtex): a plugin for citation management using bibtex
+* [`MkDocs Video`](https://github.com/soulless-viewer/mkdocs-video): a plugin to embed videos in the documentation pages
 
 ## :lion: Style guide
 

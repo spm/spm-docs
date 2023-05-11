@@ -1,5 +1,16 @@
 # Tutorials
 
+For the practical sessions of this SPM course, we invite you to follow the instructions from one or more of the following tutorials:
+
+* [Block design fMRI](./fmri/index.md)
+
+* [Event-related fMRI](./faces/index.md)
+
+* [Voxel-Based Morphometry](./vbm/VBM-getting-started.md)
+
+* [Dynamic Causal Modelling](./dcm/introduction.md)
+
+<!--
 <div class="grid cards" markdown>
 
 -   :material-monitor:{ .lg .middle } __fMRI__
@@ -81,3 +92,4 @@
     [DCM for cross-spectral densities](./dcm_csd/dcm_csd.md)
 
 </div>
+-->
