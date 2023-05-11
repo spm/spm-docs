@@ -34,14 +34,18 @@ ylim([1,1e5])         % set y axis limits between 1fT and 100,000 fT
 ```
 
 <figure markdown>
-  ![](../../../assets/figures/opm/raw_psd.png)
+  <div class="center">
+    <img src="../../../assets/figures/opm/raw_psd.png" style="width:160mm" />
+  </div>
   <figcaption>Power Spectral Density</figcaption>
 </figure>
 
 We can now interactively identify the bad channels by clicking on the plot. We can then set the bad channels with the following code. 
 
 <figure markdown>
-  ![](../../../assets/figures/opm/badchannel_psd.png)
+  <div class="center">
+    <img src="../../../assets/figures/opm/badchannel_psd.png" style="width:160mm" />
+  </div>
   <figcaption>Bad Channels</figcaption>
 </figure>
 
@@ -139,7 +143,9 @@ ylim([1,1e5])
 ```
 
 <figure markdown>
-  ![](../../../assets/figures/opm/processed_psd.png)
+  <div class="center">
+    <img src="../../../assets/figures/opm/processed_psd.png" style="width:160mm" />
+  </div>
   <figcaption>processed PSD</figcaption>
 </figure>
 
@@ -189,7 +195,9 @@ fig.Color=[1,1,1];
 xlim([0,.250])
 ```
 <figure markdown>
-  ![](../../../assets/figures/opm/evoked_field.png)
+  <div class="center">
+    <img src="../../../assets/figures/opm/evoked_field.png" style="width:160mm" />
+  </div>
   <figcaption>Evoked field</figcaption>
 </figure>
 
@@ -215,7 +223,9 @@ ylim([-20,20])
 ``` 
 
 <figure markdown>
-  ![](../../../assets/figures/opm/t-stat.png)
+  <div class="center">
+    <img src="../../../assets/figures/opm/t-stat.png" style="width:160mm" />
+  </div>
   <figcaption>t-statistic</figcaption>
 </figure>
 
@@ -244,7 +254,9 @@ spm_opm_plotScalpData(S);
 caxis([-10,10])
 ``` 
 <figure markdown>
-  ![](../../../assets/figures/opm/90ms.png)
+  <div class="center">
+    <img src="../../../assets/figures/opm/90ms.png" style="width:160mm" />
+  </div>
   <figcaption>Radial evoked field pattern</figcaption>
 </figure>
 

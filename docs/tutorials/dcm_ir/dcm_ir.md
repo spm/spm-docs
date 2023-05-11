@@ -121,11 +121,21 @@ The matrix (matrices) in the second row specify which of the connections defined
 
 Figure 1.3 is taken from the paper of Chen et al. (Chen et al. 2009) and shows several alternative models that could apply to the data. We will start by specifying the model with nonlinear forward and backward connections (FnBn) and with the effect of condition on these connections. The corresponding button configuration is shown in Figure 1.4. Compare the depiction of FnBn model in Figure 1.3 with the specification in Figure 1.4 to see the correspondence. Note that the effect of condition is not shown in Figure 1.3. Now copy the specification to the DCM GUI.
 
-![Four different DCM-IR models proposed by Chen et al. (Chen et al. 2009)](../../../assets/figures/manual/dcm_ir/irfigure3.png)
+<figure>
+<div class="center">
+<img src="../../../assets/figures/manual/dcm_ir/irfigure3.png" style="width:160mm" />
+</div>
+<figcaption>Four different DCM-IR models proposed by Chen et al. (Chen et al. 2009)</figcaption>
+</figure>
 
 *Four different DCM-IR models proposed by Chen et al. (Chen et al. 2009)*
 
-![Connectivity configuration for the FnBn model](../../../assets/figures/manual/dcm_ir/irfigure4.png)
+<figure>
+<div class="center">
+<img src="../../../assets/figures/manual/dcm_ir/irfigure4.png" style="width:160mm" />
+</div>
+<figcaption>Connectivity configuration for the FnBn model</figcaption>
+</figure>
 
 *Connectivity configuration for the FnBn model*
 
@@ -186,11 +196,21 @@ Here you can save the cross-frequency coupling matrices as images. If you are an
 
 You can now compare the fully nonlinear model with alternative models (eg. those shown in [Figure 1.3](#dcm-ir:fig:3)). You can start by saving the DCM you have already specified under a different name using the *Save* button. Then just modify the connectivity matrices and reinvert the DCM by pressing the "Estimated" button (but not using previous posterior or prior estimates). As an exercise, you can specify the other models from [Figure 1.3](#dcm-ir:fig:3) yourself. If in doubt look at [Figure 1.5](#dcm-ir:fig:5) for the three alternative models. Once you have specified and inverted the three additional models, you can perform Bayesian model comparison.
 
-![Connectivity configurations for the alternative models. Left to right: FlBl, FlBn, FnBl.](../../../assets/figures/manual/dcm_ir/irfigure5_FlBl.png)
+<figure>
+<div class="center">
+<img src="../../../assets/figures/manual/dcm_ir/irfigure5_FlBl.png" style="width:160mm" />
+</div>
+<figcaption>Connectivity configurations for the alternative models. Left to right: FlBl, FlBn, FnBl.</figcaption>
+</figure>
 
 Press the <span class="smallcaps">BMS</span> button. This will open the SPM batch tool for model selection. Specify a directory to write the output file to. For the "Inference method" select "Fixed effects" (see (Stephan et al. 2009) for additional explanations). Then click on "Data" and in the box below click on "New: Subject". Click on "Subject" and in the box below on "New: Session". Click on models and in the selection window that comes up select the DCM mat files for all the models (remember the order in which you select the files as this is necessary for interpreting the results). Then run the model comparison by pressing the green "Run" button. You will see, at the top, a bar plot of the log-model evidences for all models [1.6](#dcm-ir:fig:6). At the bottom, you will see the posterior probability, for each model, given the data. By convention, a model can be said to be the best among a selection of other models, with strong evidence, if its log-model evidence exceeds all other log-model evidences by at least 3. In our case the FnBn model is superior to the other models as was found in the original paper (Chen et al. 2009) for a different group of subjects.
 
-![Bayesian comparison of the four DCM-IR models shown in Figure 1.3.](../../../assets/figures/manual/dcm_ir/irfigure6.png)
+<figure>
+<div class="center">
+<img src="../../../assets/figures/manual/dcm_ir/irfigure6.png" style="width:160mm" />
+</div>
+<figcaption>Bayesian comparison of the four DCM-IR models shown in Figure 1.3.</figcaption>
+</figure>
 
 ### References
 

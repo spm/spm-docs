@@ -73,15 +73,21 @@ In this example, we will define a coupled oscillator model for investigating net
 
 After source reconstruction (using a pseudo-inverse approach), source data is bandpass filtered and the Hilbert transform is used to extract the instantaneous phase. The DCM-Phase model is then fitted using standard routines as described in (Penny et al. 2009).
 
-![Four different DCM-Phase models](../../../assets/figures/manual/dcm_phase/phase_models.png)
-
-*Figure 1.1: Four different DCM-Phase models.*
+<figure>
+<div class="center">
+<img src="../../../assets/figures/manual/dcm_phase/phase_models.png" style="width:160mm" />
+</div>
+<figcaption>Four different DCM-Phase models.</figcaption>
+</figure>
 
 We will first fit Model 4, which proposes that alpha activity in region LOFA changes its phase to synchronize with activity in region LFFA. In this network, LFFA is the master and LOFA is the slave. The connection from LFFA to LOFA is allowed to be different for scrambled versus unscrambled faces.
 
-![Radio button configurations for DCM-Phase model 4](../../../assets/figures/manual/dcm_phase/model4_conn.png)
-
-*Figure 1.2: Radio button configurations for DCM-Phase model 4.*
+<figure>
+<div class="center">
+<img src="../../../assets/figures/manual/dcm_phase/model4_conn.png" style="width:160mm" />
+</div>
+<figcaption>Radio button configurations for DCM-Phase model 4</figcaption>
+</figure>
 
 Configure the radio buttons as shown in Figure 1.2 and press the `Invert DCM` button. Estimating the model parameters may take up to an hour, depending on your computer's speed.
 
@@ -89,9 +95,13 @@ Configure the radio buttons as shown in Figure 1.2 and press the `Invert DCM` bu
 
 After estimation is finished, you can assess the results by choosing from the pull-down menu at the bottom (middle). The `Sin(Data)-Region i` option will show the sin of the phase data in region $i$, for the first 16 trials. The blue line corresponds to the data, and the red line represents the DCM-Phase model fit. The `Coupling(As)` and `Coupling(Bs)` buttons display the estimated endogenous and modulatory activity shown in Figure 1.3.
 
-![The figure shows the estimated parameters for endogenous coupling (left column) and modulatory parameters (right column) for the 4th DCM.](../../../assets/figures/manual/dcm_phase/modulatory.png)
+<figure>
+<div class="center">
+<img src="../../../assets/figures/manual/dcm_phase/modulatory.png" style="width:160mm" />
+</div>
+<figcaption>The figure shows the estimated parameters for endogenous coupling (left column) and modulatory parameters (right column) for the 4th DCM.</figcaption>
+</figure>
 
-*Figure 1.3: The figure shows the estimated parameters for endogenous coupling (left column) and modulatory parameters (right column) for the 4th DCM.*
 
 If you fit all four models shown in Figure 1.1, you can formally compare them using Bayesian Model Selection. To do this:
 
@@ -104,9 +114,12 @@ If you fit all four models shown in Figure 1.1, you can formally compare them us
 
 This process will produce the results plot shown in Figure 1.4. Based on these results, we can conclude that LFFA and LOFA act in a master-slave arrangement with LFFA as the master.
 
-![Bayesian comparison of the four DCM-Phase models shown in Figure 1.1.](../../../assets/figures/manual/dcm_phase/bms_phase.png)
-
-*Figure 1.4: Bayesian comparison of the four DCM-Phase models shown in Figure 1.1.*
+<figure>
+<div class="center">
+<img src="../../../assets/figures/manual/dcm_phase/bms_phase.png" style="width:160mm" />
+</div>
+<figcaption>Bayesian comparison of the four DCM-Phase models shown in Figure 1.1.</figcaption>
+</figure>
 
 ## Extensions
 
