@@ -77,6 +77,12 @@ nav:
         - 'First-level modelling - block design':         'tutorials/fmri/modelling/block_design.md'
         - 'First-level modelling - event-related design': 'tutorials/fmri/modelling/event_related_design.md'
         - 'Group-level modelling':                        'tutorials/fmri/modelling/group_level.md'
+    - 'Event-related fMRI':
+      - 'Introduction':          'tutorials/faces/index.md'
+      - 'Preprocessing':         'tutorials/faces/preprocessing.md'
+      - 'Categorical Modelling': 'tutorials/faces/categorical.md'
+      - 'Parametric Modelling':  'tutorials/faces/parametric.md'
+      - 'Bayesian Analysis':     'tutorials/faces/bayesian.md'
     - 'VBM':
         - 'Getting started':      'tutorials/vbm/VBM-getting-started.md'
         - 'Image processing':     'tutorials/vbm/VBM-image-processing.md'
@@ -108,12 +114,6 @@ nav:
     - 'DCM for Cross-Spectral Densities': tutorials/dcm_csd/dcm_csd.md         
   - 'Manual':
     - 'Auditory fMRI data': manual/auditory/auditory.md
-    - 'Face fMRI data':
-      - 'Introduction': manual/faces/index.md
-      - 'Preprocessing': manual/faces/preprocessing.md
-      - 'Categorical Modelling': manual/faces/categorical.md
-      - 'Parametric Modelling': manual/faces/parametric.md
-      - 'Bayesian Analysis': manual/faces/bayesian.md
     - 'Face group fMRI data': manual/faces_group/face_group.md
     - 'fMRI Model Specification': manual/fmri_spec/fmri_spec.md
     - 'fMRI Model Estimation': manual/fmri_est/fmri_est.md
