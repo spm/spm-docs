@@ -18,9 +18,9 @@ Perceptual blocks were similar, except participants had to indicate which of the
 The original aim of the experiment was to investigate why people differ in their laterality for semantic processing of words – i.e., why some people’s neural responses are more lateralized to the left hemisphere and others to the right.
 
 ### Previous SPM results
-A group-level SPM analysis by Seghier et al. showed that four regions of interest (ROIs) had a significant main effect of [semantic matching > perceptual matching]. For the example participant that we will model, their nearest co-ordinates to the group average are shown in the table below.
+A group-level SPM analysis by Seghier et al. showed that four regions of interest (ROIs) had a significant main effect of [semantic matching > perceptual matching]. For the example participant that we will model, their nearest coordinates to the group average are shown in the table below.
 
-| ROI	|	Name	|	Description					|	Peak MNI co-coordinates	|
+| ROI	|	Name	|	Description					|	Peak MNI coordinates	|
 | ----- | --------- | ----------------------------- | ------------------------- |
 |	1	|	lvF		|	Left ventral frontal		|	-34, 34, -10			|
 |	2	|	ldF		|	Left dorsal frontal			|	-50, 16, 34				|
