@@ -88,7 +88,8 @@ nav:
         - 'Image processing':     'tutorials/vbm/VBM-image-processing.md'
         - 'Statistical analysis': 'tutorials/vbm/VBM-statistical-analysis.md'
     - 'DCM':
-        - 'Introduction': 'tutorials/dcm/introduction.md'
+        - 'Overview of DCM':          'tutorials/dcm/index.md'
+        - 'DCM for fMRI - 1st level': 'tutorials/dcm/dcm_fmri_first_level.md'
     - 'OPM':
         - 'Evoked response pipeline': 'tutorials/opm_preprocessing/introduction.md'
     - 'Multimodal, multisubject data fusion':

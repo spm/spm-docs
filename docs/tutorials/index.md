@@ -8,7 +8,7 @@ For the practical sessions of this SPM course, we invite you to follow the instr
 
 * [Voxel-Based Morphometry](./vbm/VBM-getting-started.md)
 
-* [Dynamic Causal Modelling](./dcm/introduction.md)
+* [Dynamic Causal Modelling](./dcm/index.md)
 
 <!--
 <div class="grid cards" markdown>
@@ -29,7 +29,7 @@ For the practical sessions of this SPM course, we invite you to follow the instr
 
     ---
 
-    [Dynamic Causal Modelling](./dcm/introduction.md)
+    [Dynamic Causal Modelling](./dcm/index.md)
 
 -   :material-monitor:{ .lg .middle } __OPM__
 
