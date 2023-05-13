@@ -56,7 +56,7 @@ We will specify a DCM for each hypothesis. These models will differ only terms o
 3.	Run the run_glm.m script by pressing the green “Run” button at the top. This will specify a General Linear Model (GLM), fit it to each voxel producing statistical maps, and generate contrast images.
 
 ### Viewing the SPM results
-Before we can perform the DCM analysis, we will need to extract a representative timeseries from each region. We will identify voxels that show an effect of semantic > perceptual trials, as close as possible to the group average co-ordinates in the table above.
+Before we can perform the DCM analysis, we will need to extract a representative timeseries from each region. We will identify voxels that show an effect of semantic > perceptual trials, as close as possible to the group average coordinates in the table above.
 
 1.	Open SPM by typing: **spm fmri** and press enter.
 2.	View the results of the General Linear Model (GLM) analysis. To do this, click **Results** in the main SPM window. Then navigate up one directory by clicking “..” on the left-hand side, then click “GLM”, then click “sub-01”, then click “SPM.mat” on the right-hand side, and press Done.
