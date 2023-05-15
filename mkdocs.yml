@@ -59,7 +59,7 @@ nav:
     - 'Installation': 'installation.md'
   - 'Tutorials':
     - 'tutorials/index.md'
-    - 'fMRI':
+    - 'Block Design fMRI':
       - 'Getting started':                 'tutorials/fmri/index.md'
       - 'Preprocessing':
         - 'Introduction':                  'tutorials/fmri/preprocessing/introduction.md'
@@ -75,8 +75,8 @@ nav:
         - 'Scripting':                     'tutorials/fmri/preprocessing/scripting.md'
       - 'Statistical modelling':
         - 'First-level modelling - block design':         'tutorials/fmri/modelling/block_design.md'
-        - 'First-level modelling - event-related design': 'tutorials/fmri/modelling/event_related_design.md'
-        - 'Group-level modelling':                        'tutorials/fmri/modelling/group_level.md'
+        #- 'First-level modelling - event-related design': 'tutorials/fmri/modelling/event_related_design.md'
+        #- 'Group-level modelling':                        'tutorials/fmri/modelling/group_level.md'
     - 'Event-related fMRI':
       - 'Introduction':          'tutorials/faces/index.md'
       - 'Preprocessing':         'tutorials/faces/preprocessing.md'
