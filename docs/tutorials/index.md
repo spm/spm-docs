@@ -60,7 +60,7 @@ For the practical sessions of this SPM course, we invite you to follow the instr
     ---
 
     [EEG mismatch negativity](./mmn/mmn.md)
-
+    
 -   :material-monitor:{ .lg .middle } __DCMERP__
 
     ---
@@ -90,6 +90,12 @@ For the practical sessions of this SPM course, we invite you to follow the instr
     ---
 
     [DCM for cross-spectral densities](./dcm_csd/dcm_csd.md)
+
+-   :material-monitor:{ .lg .middle } __MEEGCONV__
+
+    ---
+
+    [Convolution modelling of MEEG data](./meeg_firstlevel/meeg_firstlevel.md)
 
 </div>
 -->
