@@ -47,7 +47,7 @@ The convolution GLM provides a way to deconvolve the responses using a standard 
 
     2. Prepare the data
         
-        The data has already been converted to SPM and downsampled to 128Hz. This is single subject data with the following tag and prefix ("d" for downsampled). Download the files and put them in the data folder. We then move them programatically to the analysis folder (this makes sure that the original data files are kept intact). 
+        The data has already been converted to SPM and downsampled to 128Hz. This is single subject data with the following tag and prefix ("d" for downsampled). Download the files and put them in the data folder. We then move them programmatically to the analysis folder (this makes sure that the original data files are kept intact). 
         ```matlab 
         tag    = 'pil02';
         prefix = 'd';
@@ -56,7 +56,7 @@ The convolution GLM provides a way to deconvolve the responses using a standard 
 
 ### Rereferencing
 
-Lets reference the EEG channels agaist the common average. 
+Lets reference the EEG channels against the common average. 
 === "GUI"
 
     *   Start SPM in EEG mode.
