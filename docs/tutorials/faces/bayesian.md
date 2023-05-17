@@ -96,7 +96,7 @@ off the peak height of the canonical HRF basis function (bottom left)).
 Then, if you want a size threshold of 1% peak signal change, the value
 you need to enter for the PPM threshold (ie the number in the units of
 the parameter estimates) is `1/sf` (which should be 4.75 in the present
-case).[^10]
+case).[^1]
 
 Finally, if we want to ask where is there a signal greater than 1% (with
 a certain confidence) to faces versus baseline, we need to create a new
@@ -147,50 +147,7 @@ voxels where PPM is 95% sure that the effect size is greater than 1% of
 the global mean. The cursor is at the location x=30, y=-82, z=-17 mm</figcaption>
 </figure>
 
-[^1]: Face Repetition dataset:
-    <http://www.fil.ion.ucl.ac.uk/spm/data/face_rep/>
-
-[^2]: Segmentation can sometimes fail if the source (structural) image
-    is not close in orientation to the MNI templates. It is generally
-    advisable to manually orient the structural to match the template
-    (ie MNI space) as close as possible by using the "Display" button,
-    adjusting x/y/z/pitch/roll/yaw, and then pressing the "Reorient"
-    button.
-
-[^3]: This step is not strictly necessary. It will write images out at a
-    resolution closer to that at which they were acquired. This will
-    speed up subsequent analysis and is necessary, for example, to make
-    Bayesian fMRI analysis computationally efficient.
-
-[^4]: Beginners may wish to skip this step, and instead just superimpose
-    functional activations on an "canonical structural image".
-
-[^5]: The smoothing step is unnecessary if you are only interested in
-    Bayesian analysis of your functional data.
-
-[^6]: Unlike previous analyses of these data in SPM99 and SPM2, we will
-    not bother with extra event-types for the (rare) error trials.
-
-[^7]: It is also possible to enter information about all of the
-    conditions in one go. This requires much less button pressing and
-    can be implemented by highlighting the "Multiple conditions" option
-    and then selecting the `all-conditions.mat` file, which is also
-    provided on the webpage.
-
-[^8]: It is also possible to enter regressors one by one by highlighting
-    "Regressors" and selecting "New Regressor" for each one. Here, we
-    benefit from the fact that the realignment stage produced a text
-    file with the correct number of rows (351) and columns (6) for SPM
-    to add 6 regressors to model (linear) rigid-body movement effects.
-
-[^9]: The order of naming these factors is important - the factor to be
-    specified first is the one that "changes slowest" ie. as we go
-    through the list of conditions N1, N2, F1, F2 the factor
-    "repetition" changes every condition and the factor "fame" changes
-    every other condition. So "Fam" changes slowest and is entered
-    first.
-
-[^10]: Strictly speaking, this is the peak height of the canonical
+[^1]: Strictly speaking, this is the peak height of the canonical
     component of the best fitting BOLD impulse response: the peak of the
     complete fit would need to take into account all three basis
     functions and their parameter estimates.

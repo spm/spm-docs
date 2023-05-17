@@ -59,14 +59,14 @@ considered problematic.</figcaption>
 
 Press the `Slice timing` button. This will
 call up the specification of a slice timing job in the batch editor
-window. Note that these data consist of N=24 axial slices acquired
+window. Note that these data consist of `N=24` axial slices acquired
 continuously with a TR=2s (ie `TA = TR - TR/N`, where TA is the time
 between the onset of the first and last slice of one volume, and the TR
 is the time between the onset of the first slice of one volume and the
 first slice of next volume) and in a descending order (ie, most superior
 slice was sampled first). The data however are ordered within the file
 such that the first slice (slice number 1) is the most inferior slice,
-making the slice acquisition order \[`24 23 22 \... 1`\].
+making the slice acquisition order \[`24 23 22 ... 1`\].
 
 - Highlight `Data` and select `New Sessions`
 
@@ -130,7 +130,7 @@ the `Run` button. SPM will segment the structural image using the
 default tissue probability maps as priors. SPM will create, by default,
 gray and white matter images and bias-field corrected structural image.
 These can be viewed using the `CheckReg` facility as described in the
-previous section.
+previous section [^1].
 
 <figure>
 <div class="center">
@@ -164,7 +164,7 @@ up the specification of a normalise job in the batch editor window.
   correction), i.e, the `meansM03953_0005_006.img`. Then press `Done`.
 
 - Open `Writing Options`, and change `Voxel sizes` from \[`2 2 2`\] to \[`3
-  3 3`\][^3].
+  3 3`\][^2].
 
 - Press `Save`, save the job as normalise.mat and then press the `Run`
   button.
@@ -173,7 +173,7 @@ SPM will then write spatially normalised files to the functional data
 directory. These files have the prefix `w`.
 
 If you wish to superimpose a subject's functional activations on their
-own anatomy[^4] you will also need to apply the spatial normalisation
+own anatomy [^3] you will also need to apply the spatial normalisation
 parameters to their (bias-corrected) anatomical image. To do this
 
 - Select `Normalise (Write)`, highlight `Data`, select `New Subject`.
@@ -192,7 +192,7 @@ parameters to their (bias-corrected) anatomical image. To do this
 
 ## Smoothing
 
-Press the `Smooth` button[^5]. This will
+Press the `Smooth` button [^4]. This will
 call up the specification of a smooth job in the batch editor window.
 
 - Select `Images to Smooth` and then select the spatially normalised
@@ -211,5 +211,23 @@ default smoothing kernel width.
 (bottom). These images were plotted using SPM’s "CheckReg" facility.
 </figcaption>
 </figure>
+
+[^1]: Segmentation can sometimes fail if the source (structural) image
+    is not close in orientation to the MNI templates. It is generally
+    advisable to manually orient the structural to match the template
+    (ie MNI space) as close as possible by using the "Display" button,
+    adjusting x/y/z/pitch/roll/yaw, and then pressing the "Reorient"
+    button.
+
+[^2]: This step is not strictly necessary. It will write images out at a
+    resolution closer to that at which they were acquired. This will
+    speed up subsequent analysis and is necessary, for example, to make
+    Bayesian fMRI analysis computationally efficient.
+
+[^3]: Beginners may wish to skip this step, and instead just superimpose
+    functional activations on an "canonical structural image".
+
+[^4]: The smoothing step is unnecessary if you are only interested in
+    Bayesian analysis of your functional data.
 
 --8<-- "addons/abbreviations.md"

@@ -6,7 +6,7 @@ Before setting up the design matrix we must first load the Stimulus
 Onsets Times (SOTs) into MATLAB . SOTs are stored in the `sots.mat` file
 in a cell array such that eg. `sot{1}` contains stimulus onset times in
 TRs for event type 1, which is `N1`. Event-types 2, 3 and 4 are `N2`, `F1` and
-`F2`.[^6]
+`F2`.[^1]
 
 - At the MATLAB command prompt type `load sots`
 
@@ -39,7 +39,7 @@ batch editor window. Then
   images ie `swarsM.img`. These can be selected easily using the
   `^swar.*` filter, and select all. Then press `Done`.
 
-- Highlight `Conditions` and select `New condition`[^7].
+- Highlight `Conditions` and select `New condition`[^2].
 
 - Open the newly created `Condition` option. Highlight `Name` and enter
   `N1`. Highlight `Onsets` and enter `sot{1}`. Highlight `Durations` and
@@ -63,7 +63,7 @@ batch editor window. Then
 - Highlight `Multiple Regressors` and select the realignment parameter
   file `rp_sM03953_0005_0006.txt` file that was saved during the
   realignment preprocessing step in the folder containing the fMRI
-  data[^8].
+  data[^3].
 
 - Highlight `Factorial Design`, select `New Factor`, open the newly
   created `Factor` option, highlight `Name` and enter `Fam`, highlight
@@ -71,7 +71,7 @@ batch editor window. Then
 
 - Highlight `Factorial Design`, select `New Factor`, open the newly
   created `Factor` option, highlight `Name` and enter `Rep`, highlight
-  `Levels` and enter 2[^9].
+  `Levels` and enter 2[^4].
 
 - Open `Canonical HRF` under `Basis Functions`. Select `Model
   derivatives` and select `Time and Dispersion derivatives`.
@@ -353,5 +353,27 @@ and non-brain, as this is where contrast differences are greatest.
 Including these regressors in the design matrix means these effects
 cannot be falsely attributed to neuronal activity.</figcaption>
 </figure>
+
+[^1]: Unlike previous analyses of these data in SPM99 and SPM2, we will
+    not bother with extra event-types for the (rare) error trials.
+
+[^2]: It is also possible to enter information about all of the
+    conditions in one go. This requires much less button pressing and
+    can be implemented by highlighting the "Multiple conditions" option
+    and then selecting the `all-conditions.mat` file, which is also
+    provided on the webpage.
+
+[^3]: It is also possible to enter regressors one by one by highlighting
+    "Regressors" and selecting "New Regressor" for each one. Here, we
+    benefit from the fact that the realignment stage produced a text
+    file with the correct number of rows (351) and columns (6) for SPM
+    to add 6 regressors to model (linear) rigid-body movement effects.
+
+[^4]: The order of naming these factors is important - the factor to be
+    specified first is the one that "changes slowest" ie. as we go
+    through the list of conditions N1, N2, F1, F2 the factor
+    "repetition" changes every condition and the factor "fame" changes
+    every other condition. So "Fam" changes slowest and is entered
+    first.
 
 --8<-- "addons/abbreviations.md"
