@@ -100,9 +100,10 @@ nav:
         - 'fMRI':                          'tutorials/multi/fmri.md'  
         - 'Source':                        'tutorials/multi/source.md'  
         - 'References':                    'tutorials/multi/references.md' 
-    - 'MEG Source localisation': tutorials/meg_sloc/meg_sloc.md
-    - 'EEG Mismatch negativity data': tutorials/mmn/mmn.md
-    - 'M/EEG Convolution modelling': tutorials/meeg_firstlevel/meeg_firstlevel.md
+    - 'M/EEG':
+      - 'MEG Source localisation': tutorials/meg_sloc/meg_sloc.md
+      - 'EEG Mismatch negativity data': tutorials/mmn/mmn.md
+      - 'M/EEG Convolution modelling': tutorials/meeg_firstlevel/meeg_firstlevel.md
     - 'Multimodal':
         - 'Introduction': tutorials/multimodal/multimodal.md
         - 'EEG': tutorials/multimodal/eeg.md
