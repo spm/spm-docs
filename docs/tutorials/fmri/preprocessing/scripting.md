@@ -6,15 +6,14 @@ If you are processing data from multiple subjects or sessions, you might want to
 
 To start your script we will use the `_job.m` file generated when we saved the batch we put together in the previous tutorial on [the batch interface](./batch.md). 
 
-First, open this your `preprocessing_batch_job.m` file in Matlab/Octave and inspect it's contents. It should look something like this:
+First, open this your `preprocessing_batch_job.m` file in MATLAB and inspect its contents. It should look something like this:
 
 ```matlab
 %-----------------------------------------------------------------------
-% Job saved on 22-Feb-2023 18:02:23 by cfg_util (rev $Rev: 7345 $)
 % spm SPM - SPM12 (7771)
 % cfg_basicio BasicIO - Unknown
 %-----------------------------------------------------------------------
-matlabbatch{1}.spm.spatial.realign.estwrite.data = {{'/Users/olivia/OneDrive - King''s College London/spm/spm_tutorials/preprocessing/MoAEpilot/sub-01/func/sub-01_task-auditory_bold.nii'}};
+matlabbatch{1}.spm.spatial.realign.estwrite.data = {{'/Users/spm/spm_tutorials/preprocessing/MoAEpilot/sub-01/func/sub-01_task-auditory_bold.nii'}};
 matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.quality = 0.9;
 matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.sep = 4;
 matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.fwhm = 5;
@@ -35,7 +34,7 @@ matlabbatch{2}.spm.temporal.st.so = [64 63 62 61 60 59 58 57 56 55 54 53 52 51 5
 matlabbatch{2}.spm.temporal.st.refslice = 32;
 matlabbatch{2}.spm.temporal.st.prefix = 'a';
 matlabbatch{3}.spm.spatial.coreg.estimate.ref(1) = cfg_dep('Realign: Estimate & Reslice: Mean Image', substruct('.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','rmean'));
-matlabbatch{3}.spm.spatial.coreg.estimate.source = {'/Users/olivia/OneDrive - King''s College London/spm/spm_tutorials/preprocessing/MoAEpilot/sub-01/anat/sub-01_T1w.nii,1'};
+matlabbatch{3}.spm.spatial.coreg.estimate.source = {'/Users/spm/spm_tutorials/preprocessing/MoAEpilot/sub-01/anat/sub-01_T1w.nii,1'};
 matlabbatch{3}.spm.spatial.coreg.estimate.other = {''};
 matlabbatch{3}.spm.spatial.coreg.estimate.eoptions.cost_fun = 'nmi';
 matlabbatch{3}.spm.spatial.coreg.estimate.eoptions.sep = [4 2];
@@ -95,7 +94,7 @@ matlabbatch{6}.spm.spatial.smooth.prefix = 's';
 
 We will now add a `for` loop around this script. This will tell SPM to perform the same operation on all datasets that we specify in our loop. 
 
-The basic structure of a `for` loop in Matlab/Octave is:
+The basic structure of a `for` loop in MATLAB is:
 ```matlab
 for i = 1:10
     # your operations
@@ -108,22 +107,22 @@ We will now use this structure to ask SPM to perform all preprocessing steps spe
 clear all % clear all variables
 clc % clear command window
 
-root = "/Users/olivia/Library/CloudStorage/OneDrive-King'sCollegeLondon/spm/spm_tutorials/preprocessing/MoAEpilot/" % specify the directory where your data lives
+root = '/Users/spm/spm_tutorials/preprocessing/MoAEpilot/' % specify the directory where your data lives
 sub = {'sub-01'} % specify a list of subjects you want to process
 
 % this loop will perform preprocessing steps for all subjects specified in the list sub
-for i = 1:length(sub)
+for i = 1:numel(sub)
     
-    disp(['Starting preprocessing for ', sub{i}]) % add a print statement for Matlab/Octave to tell you which subject is being processed
+    disp(['Starting preprocessing for ', sub{i}]) % add a print statement to tell you which subject is being processed
     
-    anat_dir = append(root, sub{i}, '/anat/') % this combines the root with a specific subject directory to create the full path to the folder containing anatomical data
-    func_dir = append(root, sub{i}, '/func/') % this combines the root with a specific subject directory to create the full path to the folder containign functional data
+    anat_dir = fullfile(root, sub{i}, 'anat') % this combines the root with a specific subject directory to create the full path to the folder containing anatomical data
+    func_dir = fullfile(root, sub{i}, 'func') % this combines the root with a specific subject directory to create the full path to the folder containing functional data
 
     % find the structural file
-    anat = spm_select('FPList', anat_dir, '^sub-*.*_T1w.nii$') % this will return the full path(FP) to the T1 file in the current directory
+    anat = spm_select('FPList', anat_dir, '^sub-*.*_T1w.nii$') % this will return the full path (FP) to the T1 file from the anat directory
     
     %find and select the functional data
-    func = spm_select('ExtFPList', func_dir, '^sub-*.*_task-auditory_bold.nii$', NaN) % this will give the full path to the task data, NaN will ensure you are loading all volumes present
+    func = spm_select('ExtFPList', func_dir, '^sub-*.*_task-auditory_bold.nii$', NaN) % this will give the full path to the task data, NaN will ensure you are loading all volumes present (i.e. consider the 4D file as a whole)
     
     cd(func_dir) % move into the subject specific folder containing the functional data
     
@@ -158,27 +157,27 @@ for i = 1:length(sub)
     matlabbatch{4}.spm.spatial.preproc.channel.biasreg = 0.001;
     matlabbatch{4}.spm.spatial.preproc.channel.biasfwhm = 60;
     matlabbatch{4}.spm.spatial.preproc.channel.write = [0 1];
-    matlabbatch{4}.spm.spatial.preproc.tissue(1).tpm = {'/Applications/spm12/tpm/TPM.nii,1'};
+    matlabbatch{4}.spm.spatial.preproc.tissue(1).tpm = {fullfile(spm('Dir'),'tpm','TPM.nii,1')};
     matlabbatch{4}.spm.spatial.preproc.tissue(1).ngaus = 1;
     matlabbatch{4}.spm.spatial.preproc.tissue(1).native = [1 0];
     matlabbatch{4}.spm.spatial.preproc.tissue(1).warped = [0 0];
-    matlabbatch{4}.spm.spatial.preproc.tissue(2).tpm = {'/Applications/spm12/tpm/TPM.nii,2'};
+    matlabbatch{4}.spm.spatial.preproc.tissue(2).tpm = {fullfile(spm('Dir'),'tpm','TPM.nii,2')};
     matlabbatch{4}.spm.spatial.preproc.tissue(2).ngaus = 1;
     matlabbatch{4}.spm.spatial.preproc.tissue(2).native = [1 0];
     matlabbatch{4}.spm.spatial.preproc.tissue(2).warped = [0 0];
-    matlabbatch{4}.spm.spatial.preproc.tissue(3).tpm = {'/Applications/spm12/tpm/TPM.nii,3'};
+    matlabbatch{4}.spm.spatial.preproc.tissue(3).tpm = {fullfile(spm('Dir'),'tpm','TPM.nii,3')};
     matlabbatch{4}.spm.spatial.preproc.tissue(3).ngaus = 2;
     matlabbatch{4}.spm.spatial.preproc.tissue(3).native = [1 0];
     matlabbatch{4}.spm.spatial.preproc.tissue(3).warped = [0 0];
-    matlabbatch{4}.spm.spatial.preproc.tissue(4).tpm = {'/Applications/spm12/tpm/TPM.nii,4'};
+    matlabbatch{4}.spm.spatial.preproc.tissue(4).tpm = {fullfile(spm('Dir'),'tpm','TPM.nii,4')};
     matlabbatch{4}.spm.spatial.preproc.tissue(4).ngaus = 3;
     matlabbatch{4}.spm.spatial.preproc.tissue(4).native = [1 0];
     matlabbatch{4}.spm.spatial.preproc.tissue(4).warped = [0 0];
-    matlabbatch{4}.spm.spatial.preproc.tissue(5).tpm = {'/Applications/spm12/tpm/TPM.nii,5'};
+    matlabbatch{4}.spm.spatial.preproc.tissue(5).tpm = {fullfile(spm('Dir'),'tpm','TPM.nii,5')};
     matlabbatch{4}.spm.spatial.preproc.tissue(5).ngaus = 4;
     matlabbatch{4}.spm.spatial.preproc.tissue(5).native = [1 0];
     matlabbatch{4}.spm.spatial.preproc.tissue(5).warped = [0 0];
-    matlabbatch{4}.spm.spatial.preproc.tissue(6).tpm = {'/Applications/spm12/tpm/TPM.nii,6'};
+    matlabbatch{4}.spm.spatial.preproc.tissue(6).tpm = {fullfile(spm('Dir'),'tpm','TPM.nii,6')};
     matlabbatch{4}.spm.spatial.preproc.tissue(6).ngaus = 2;
     matlabbatch{4}.spm.spatial.preproc.tissue(6).native = [0 0];
     matlabbatch{4}.spm.spatial.preproc.tissue(6).warped = [0 0];
