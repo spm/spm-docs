@@ -101,7 +101,7 @@ We can now specify the structure of the model, in particular, the timing of the 
     +   We will set the event times manually. Under "How to define events", select "Manually"
     +   Under "Onset", type "events{1}". This corresponds to the event onsets times from the "events.mat" file for event 1
     +   Under "Duration", set 0. This will cause SPM to create stick functions at event onset.
-    +   Leave over parameters of that section to their defauls
+    +   Leave over parameters of that section to their defaults
 -   Repeat the previous steps for "auditory" and "tactile" events, whose onsets are stored in "events{2}" and "events{3}".
 
 <figure markdown>
