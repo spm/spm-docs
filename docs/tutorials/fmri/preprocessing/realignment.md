@@ -19,7 +19,7 @@ Realignment refers to correcting the functional data for movement that has occur
 3. In the pop-up window, use the left-hand panel to navigate to `sub-01/func/`. 
 4. Use the filter box to load the full time series - type `NaN` underneath `Filter` button and press ++return++.
 5. In the right-hand panel, select `sub-01_task-auditory_bold.nii` - this is a 4D file containing the fMRI time series - and press `Done`.
-6. Back in the batch window, navigate to `Resliced images` under `Reslice options` and select `Mean image only`. 
+6. Back in the batch window, navigate to `Resliced images` under `Reslice options` and select `All imaged + mean image`. 
 7. Save this batch for future reference - `File` :material-arrow-right-bold: `Save batch`. Give the file a meaningful name, such as `realignment_batch.mat`. 
 8. Now run your batch by pressing :material-play: in the top left corner. The button will be green if all required fields have specified inputs.
 
