@@ -1,14 +1,37 @@
-# Tutorials
+# SPM Workshop for EEG/MEG
 
-For the practical sessions of this SPM course, we invite you to follow the instructions from one or more of the following tutorials:
+## Data for the course demos
 
-* [Block design fMRI](./fmri/index.md)
+### Responses to faces
 
-* [Event-related fMRI](./faces/index.md)
+[Preprocessing and source analysis demo](https://www.fil.ion.ucl.ac.uk/spm/data/fusion/Preprocessing_demo.zip)
 
-* [Voxel-Based Morphometry](./vbm/VBM-getting-started.md)
+Group M/EEG dataset analysis - demo
+* [Processed single-subject data](https://www.fil.ion.ucl.ac.uk/spm/data/fusion/Processed_single_subject.zip)
+* [Source estimation - single subject](https://www.fil.ion.ucl.ac.uk/spm/data/fusion/For_source_estimation.zip)
+* Images for group analysis: [As a single large file](https://www.fil.ion.ucl.ac.uk/spm/data/fusion/Images_all_subjects.zip) or as 4 smaller files [1](https://www.fil.ion.ucl.ac.uk/spm/data/fusion/Images_all_subjects1.zip), [2](https://www.fil.ion.ucl.ac.uk/spm/data/fusion/Images_all_subjects2.zip), [3](https://www.fil.ion.ucl.ac.uk/spm/data/fusion/Images_all_subjects3.zip), [4](https://www.fil.ion.ucl.ac.uk/spm/data/fusion/Images_all_subjects4.zip)
+* [Group fMRI results](https://www.fil.ion.ucl.ac.uk/spm/data/fusion/fMRI_group_results_images.zip)
 
-* [Dynamic Causal Modelling](./dcm/index.md)
+### DCM demo
+
+[DCM for CSD](https://github.com/Frederikvdsteen/SPM_course_MEEG_2022)
+
+## Tutorial datasets
+
+### BEM file for source reconstruction
+BEM file to copy in spm12/canonical: [single_subj_T1_EEG_BEM.mat](https://www.fil.ion.ucl.ac.uk/spm/course/material/single_subj_T1_EEG_BEM.mat)
+
+### EEG Single Subject Mismatch Negativity dataset
+This is an 128-channel EEG single subject example data set which is used for demonstrating the usage of scripts in M/EEG pre-processing and DCM for evoked responses.
+
+* [Dataset](https://www.fil.ion.ucl.ac.uk/spm/data/eeg_mmn/)
+
+### Multi-modal faces dataset
+This archive contains EEG, MEG and fMRI data on the same subject within the same paradigm. It can be used to examine how various measures of face perception, such as the "N170" ERP (EEG), the "M170" ERF (MEG) and fusiform activation (fMRI), are related. For example, the localisation of the generator(s) of the N170 and/or M170 can be constrained by the fMRI activations. It also includes a high resolution anatomical MRI image (aMRI) for construction of a head-model for the EEG and MEG data, together with data from a Polhemus digitizer that can be used to coregister the EEG and MEG data with the aMRI.
+
+* [Dataset](https://www.fil.ion.ucl.ac.uk/spm/data/mmfaces/)
+
+
 
 <!--
 <div class="grid cards" markdown>
