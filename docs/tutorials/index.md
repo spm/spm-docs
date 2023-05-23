@@ -1,5 +1,8 @@
 # SPM Course for MEG/EEG : May 30 - June 2, 2023
 
+!!! info "Note"
+    This page is under constructions and we'll add additionals materials prior to and during the course.
+
 The course will present instruction on the analysis of EEG and MEG data. The first three days will combine theoretical presentations with practical demonstrations of the different data analysis methods implemented in SPM. On the last day participants will have the opportunity to work on SPM tutorial data sets under the supervision of the course faculty. We also invite students to use their own data for analysis. The course is suitable for both beginners and more advanced users. We advise students to gain at least some minimal familiarity with the methodology, for example, from reading introductory articles available from the [SPM web page](https://www.fil.ion.ucl.ac.uk/spm/doc/) or by scanning through [Litvak et al. (2011)](https://doi.org/10.1155/2011/852961) or [Henson et al. (2019)](https://doi.org/10.3389/fnins.2019.00300).
 
 ## Programme {#programme}
@@ -17,6 +20,8 @@ Each lecture will be followed by some **time for questions** from the audience a
 Please do not share the link to this webpage publicly as it contains information for the participants of the course only (Zoom login).-->
 
 ### Tuesday 30 May
+
+Location: **12 Queen Square, 4th floor Seminar Room**
 
 <!--Join us on **Zoom** (Chair: Meaghan Spedden) -->
 
@@ -36,6 +41,7 @@ Please do not share the link to this webpage publicly as it contains information
 
 ### Wednesday 31 May
 
+Location: **12 Queen Square, 4th floor Seminar Room**
 <!--Join us on **Zoom** (Chair: Heather Payne)-->
 
 | Time         | Event                             | Speaker            |
@@ -53,6 +59,8 @@ Please do not share the link to this webpage publicly as it contains information
 | 18:30 -       | Social event (FIL Conservatory)||
 
 ### Thursday 1 June
+
+Location: **12 Queen Square, 4th floor Seminar Room**
 
 <!--Join us on **Zoom** (Chair: Dorothea Hämmerer)-->
 
@@ -90,12 +98,12 @@ SPM is designed to work with MATLAB from versions 7.4 (R2007a) to 9.14 (R2023a).
 [Download](https://github.com/spm/spm)  
 [Installation instructions](https://www.fil.ion.ucl.ac.uk/spm/docs/installation/)
 
-### Installation without MATLAB
+<!--### Installation without MATLAB
 
 A standalone version of SPM is also available. Its installation does not require the availability of a MATLAB licence but you need to have administrative rights on your computer in order to install the MATLAB Compiler Runtime (MCR):
 
 [Download: SPM standalone](https://www.fil.ion.ucl.ac.uk/spm/software/download/)  
-[Installation instructions](https://en.wikibooks.org/wiki/SPM/Standalone)
+[Installation instructions](https://en.wikibooks.org/wiki/SPM/Standalone)-->
 
 ## Data for the course demos
 
