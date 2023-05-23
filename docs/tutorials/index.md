@@ -1,4 +1,4 @@
-# SPM Course for MEG/EEG :: May 30 - June 2, 2023
+# SPM Course for MEG/EEG : May 30 - June 2, 2023
 
 The course will present instruction on the analysis of EEG and MEG data. The first three days will combine theoretical presentations with practical demonstrations of the different data analysis methods implemented in SPM. On the last day participants will have the opportunity to work on SPM tutorial data sets under the supervision of the course faculty. We also invite students to use their own data for analysis. The course is suitable for both beginners and more advanced users. We advise students to gain at least some minimal familiarity with the methodology, for example, from reading introductory articles available from the [SPM web page](https://www.fil.ion.ucl.ac.uk/spm/doc/) or by scanning through [Litvak et al. (2011)](https://doi.org/10.1155/2011/852961) or [Henson et al. (2019)](https://doi.org/10.3389/fnins.2019.00300).
 
