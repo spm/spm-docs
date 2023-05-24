@@ -185,10 +185,7 @@ This repository from Richard Rosch contains data and code that can be used to re
 * [Github repository](https://github.com/roschkoenig/Ketamine_DCM)
 
 ### OPM Tutorial
-Example data and toolbox for OPM analyses from Tim Tierney
-
-* [Optically Pumped Magnetometers tutorial](./opm_preprocessing/introduction.md)
-* [Github repository](https://github.com/tierneytim/OPM)
+under construction
 
 ### Materials from the joint SPM-Fieldtrip workshop MEG-UK 2015
 
