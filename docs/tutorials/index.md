@@ -84,10 +84,31 @@ Practical hands-on session will take place in the computer lab. Participants can
 | Time         | Event           |Location                              |
 |--------------|-----------------|--------------------------------------|
 | 09:30 - 10:00 | Practical day welcome and registration|Registration (Conservatory) Refreshments  (Boardroom) 12 Queen Square|
-| 10:00 - 12:00 |Practical session |RM SR7, 7 Queen Square|
-| 12:00 - 13:00 |DAiSS special interest group|TR7, 7 Queen Square|
+| 10:00 - 12:00 | Practical session |RM SR7, 7 Queen Square|
+| 12:00 - 13:00 | DAiSS special interest group|TR7, 7 Queen Square|
 | 13:00 - 14:00 | Lunch break    |Boardroom, 12 Queen Square|
 | 14:00 - 18:00 | Practical Session and Closing Remarks |RM SR7, 7 Queen Square|
+
+## Recorded online talks from previous years
+
+|Title         | Speaker |
+|--------------|-----------------------------------|
+| SPM introduction and resources| [Guillaume Flandin](https://mediacentral.ucl.ac.uk/Play/63322)|
+| What are we measuring with M/EEG|[Mansoureh Fahimi](https://mediacentral.ucl.ac.uk/Play/84821)|
+| Data pre-processing |[Robert Seymour](https://mediacentral.ucl.ac.uk/Play/85023)|
+| Data pre-processing demo |[Lydia Mardell](https://mediacentral.ucl.ac.uk/Play/84822)|
+| General linear model and classical inference |[Martin Dietz](https://mediacentral.ucl.ac.uk/Play/63328)|
+| Multiple comparisons problems and solutions|[Andreea Diaconescu](https://mediacentral.ucl.ac.uk/Play/71870)|
+| Group M/EEG dataset analysis - demo|[Jason Taylor](https://mediacentral.ucl.ac.uk/Play/63330)|
+| Analysis of Optically Pumped Magnetometers (OPM) data|[Tim Tierney](https://mediacentral.ucl.ac.uk/Play/63331)|
+| Bayesian inference|[Peter Zeidman](https://mediacentral.ucl.ac.uk/Play/63334)|
+| M/EEG source analysis |[Ryan Timms](https://mediacentral.ucl.ac.uk/Play/84826)|
+| M/EEG source analysis -demo |[Stephanie Mellor](https://mediacentral.ucl.ac.uk/Play/84828)|
+| The principles of dynamic causal modelling|[Bernadette van Wijk](https://mediacentral.ucl.ac.uk/Play/63373)|
+| DCM for evoked responses|[Ryszard Auksztulewicz](https://mediacentral.ucl.ac.uk/Play/63377)|
+| DCM for Cross-Spectral Densities |[Dimitris Pinotsis](https://mediacentral.ucl.ac.uk/Play/84831)|
+| DCM demo|[Frederik Van de Steen](https://mediacentral.ucl.ac.uk/Play/84834)|
+| Bayesian model selection and averaging|[Ulrich Stoof](https://mediacentral.ucl.ac.uk/Play/84835)|
 
 ## Installation of SPM software
 
@@ -125,38 +146,52 @@ BEM file to copy in spm/canonical: [single_subj_T1_EEG_BEM.mat](https://www.fil.
 ### EEG Single Subject Mismatch Negativity dataset
 This is an 128-channel EEG single subject example data set which is used for demonstrating the usage of scripts in M/EEG pre-processing and DCM for evoked responses.
 
+* [EEG mismatch negativity tutorial](./mmn/mmn.md)
 * [Dataset](https://www.fil.ion.ucl.ac.uk/spm/data/eeg_mmn/)
 
 ### Multi-modal faces dataset
 This archive contains EEG, MEG and fMRI data on the same subject within the same paradigm. It can be used to examine how various measures of face perception, such as the "N170" ERP (EEG), the "M170" ERF (MEG) and fusiform activation (fMRI), are related. For example, the localisation of the generator(s) of the N170 and/or M170 can be constrained by the fMRI activations. It also includes a high resolution anatomical MRI image (aMRI) for construction of a head-model for the EEG and MEG data, together with data from a Polhemus digitizer that can be used to coregister the EEG and MEG data with the aMRI.
 
+* [Multimodal responses to faces tutorial](./multimodal/multimodal.md)
 * [Dataset](https://www.fil.ion.ucl.ac.uk/spm/data/mmfaces/)
 
-
 ### Anaesthesia Depth in Rodent Data
+This tutorial describes the analysis of a 2-channel Local Field Potential (LFPs) data set using dynamic causal modelling. The LFPs were recorded from a single rodent using intracranial electrodes. 
+
+* [DCM for steady state responses tutorial](./dcm_ssr/dcm_ssr.md)
+* [DCM for cross-spectral densities tutorial](./dcm_csd/dcm_csd.md)
 * [Dataset](https://www.fil.ion.ucl.ac.uk/spm/data/dcm_csd/)
 
 ### Multimodal, multisubject data fusion
-* [SPM manual (Chapter 42)](https://www.fil.ion.ucl.ac.uk/spm/doc/manual.pdf#Chap:data:multi)
+This dataset contains EEG, MEG, functional MRI and structural MRI data from 16 subjects who undertook multiple runs of a simple task performed on a large number of Famous, Unfamiliar and Scrambled faces.
+
+* [Group multimodal tutorial](./multi/index.md)
 * [Dataset](https://www.fil.ion.ucl.ac.uk/spm/data/fusion/)
 * [Full dataset including the raw data](ftp://ftp.mrc-cbu.cam.ac.uk/personal/rik.henson/wakemandg_hensonrn/)
-
-### Multimodal Integration of M/EEG and fMRI Data in SPM
-* [Multimodal Integration of M/EEG and fMRI Data in SPM](https://www.frontiersin.org/articles/10.3389/fnins.2019.00300/full)
-* [Dataset](https://openneuro.org/datasets/ds000117/versions/1.0.2)
-* [Code](https://figshare.com/collections/Multimodal_integration_of_M_EEG_and_f_MRI_data_in_SPM12/4367120)
+***
+* [Multimodal Integration of M/EEG and fMRI Data in SPM paper](https://www.frontiersin.org/articles/10.3389/fnins.2019.00300/full)
+* [BIDS version of the dataset](https://openneuro.org/datasets/ds000117/versions/1.0.2)
+* [BIDS-based code corresponding to the paper](https://figshare.com/collections/Multimodal_integration_of_M_EEG_and_f_MRI_data_in_SPM12/4367120)
 
 ### DCM for ERP Tutorial
-* [SPM manual](https://www.fil.ion.ucl.ac.uk/spm/doc/manual.pdf#Chap:DCM_ERP)
+This tutorial data from a DCM for EEG study in Alzheimer’s disease patients and healthy aged controls by Ashley Tyrer and colleagues.
+
+* [DCM for evoked responses tutorial](./dcm_erp/dcm_erp.md)
 * [Dataset](https://www.fil.ion.ucl.ac.uk/spm/data/dcm_erp/)
 
 ### PEB Tutorial
-* [PEB Tutorial](https://github.com/roschkoenig/Ketamine_DCM)
+This repository from Richard Rosch contains data and code that can be used to reproduce a dynamic causal modelling analysis for mismatch negativity and repetition suppression event related potentials measured with EEG in healthy probands under the influence of the NMDA receptor blocker ketamine. 
+
+* [Github repository](https://github.com/roschkoenig/Ketamine_DCM)
 
 ### OPM Tutorial
-* [OPM Tutorial](https://github.com/tierneytim/OPM)
+Example data and toolbox for OPM analyses from Tim Tierney
+
+* [Optically Pumped Magnetometers tutorial](./opm_preprocessing/introduction.md)
+* [Github repository](https://github.com/tierneytim/OPM)
 
 ### Materials from the joint SPM-Fieldtrip workshop MEG-UK 2015
+
 * [Sensor-level stats demo](http://www.fieldtriptoolbox.org/workshop/meg-uk-2015/spm_stats) (data: [PapMcbdspmeeg_run_01_sss.zip](PapMcbdspmeeg_run_01_sss.zip))
 * [Source reconstruction demo](http://www.fieldtriptoolbox.org/workshop/meg-uk-2015/spm_source)
 * [DCM demo](http://www.fieldtriptoolbox.org/workshop/meg-uk-2015/dcm_tutorial) (data: [DCMdemo.zip](DCMdemo.zip))
