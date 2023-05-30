@@ -33,10 +33,10 @@ Location: **12 Queen Square, 4th floor Seminar Room**
 | 11:30 - 12:45 | [Data pre-processing](https://liveuclac-my.sharepoint.com/:b:/g/personal/skaalit_ucl_ac_uk/EZ27y6vy6HRDpAei5cEC0H8B2a7OQJiaIkACGkLC3IO6cQ?e=j5T1qH) | Catharina Zich |
 | 12:45 - 13:30 | Lunch break                                          |
 | 13:30 - 14:40 | Data pre-processing demo |Ryan Timms           |
-| 14:40 - 15:45 | [General linear model and classical inference](https://liveuclac-my.sharepoint.com/:b:/g/personal/skaalit_ucl_ac_uk/EX5w0ixtUsdKkJgN6J7fBv4BdpjviZ-DWogn19j8s3i3vQ?e=NS4i96) |Christophe Phillips|
+| 14:40 - 15:45 | [General linear model and classical inference](https://liveuclac-my.sharepoint.com/:p:/g/personal/skaalit_ucl_ac_uk/EdFCt986rCFAnOC3v6tIRe4B5IAXKSD37Z-iIn2sI81xbw?e=oelFrF) |Christophe Phillips|
 | 15:45 - 16:15 | Break    ||
 | 16:15 - 16:45 | [Convolutional GLM](https://liveuclac-my.sharepoint.com/:p:/g/personal/skaalit_ucl_ac_uk/ESJsj0dk1cxLokSUgLJo3c4BmqlQlBxX687m5bPsFDK5fQ?e=3EIQZ2)|Johan Medrano|
-| 16:45 - 17:45 | Multiple comparisons problems and solutions|Tim Tierney|
+| 16:45 - 17:45 | [Multiple comparisons problems and solutions](https://liveuclac-my.sharepoint.com/:p:/g/personal/skaalit_ucl_ac_uk/EbLWm7cuHp9PiCsgUwgOwxYB11qCPUkrURJXRistb57bQg?e=asf2Th)|Tim Tierney|
 | 17:45 - 18:30 | General Q&A (All faculty)                        |
 
 ### Wednesday 31 May
