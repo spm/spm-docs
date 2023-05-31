@@ -33,7 +33,7 @@ Location: **12 Queen Square, 4th floor Seminar Room**
 | 11:30 - 12:45 | [Data pre-processing](https://liveuclac-my.sharepoint.com/:b:/g/personal/skaalit_ucl_ac_uk/EZ27y6vy6HRDpAei5cEC0H8B2a7OQJiaIkACGkLC3IO6cQ?e=j5T1qH) | Catharina Zich |
 | 12:45 - 13:30 | Lunch break                                          |
 | 13:30 - 14:40 | Data pre-processing demo |Ryan Timms           |
-| 14:40 - 15:45 | [General linear model and classical inference](https://liveuclac-my.sharepoint.com/:p:/g/personal/skaalit_ucl_ac_uk/EdFCt986rCFAnOC3v6tIRe4B5IAXKSD37Z-iIn2sI81xbw?e=oelFrF) |Christophe Phillips|
+| 14:40 - 15:45 | [General linear model and classical inference](https://liveuclac-my.sharepoint.com/:p:/g/personal/skaalit_ucl_ac_uk/EdFCt986rCFAnOC3v6tIRe4B5IAXKSD37Z-iIn2sI81xbw?e=7jUPcO) |Christophe Phillips|
 | 15:45 - 16:15 | Break    ||
 | 16:15 - 16:45 | [Convolutional GLM](https://liveuclac-my.sharepoint.com/:p:/g/personal/skaalit_ucl_ac_uk/ESJsj0dk1cxLokSUgLJo3c4BmqlQlBxX687m5bPsFDK5fQ?e=3EIQZ2)|Johan Medrano|
 | 16:45 - 17:45 | [Multiple comparisons problems and solutions](https://liveuclac-my.sharepoint.com/:p:/g/personal/skaalit_ucl_ac_uk/EbLWm7cuHp9PiCsgUwgOwxYB11qCPUkrURJXRistb57bQg?e=asf2Th)|Tim Tierney|
@@ -48,8 +48,8 @@ Location: **12 Queen Square, 4th floor Seminar Room**
 |--------------|-----------------------------------|--------------------|
 | 09:30 - 10:00 | Welcome and registration    |  |
 | 10:00 - 12:00 | Group M/EEG dataset analysis - demo|Jason Taylor|
-| 12:00 - 12:40 | Analysis of Optically Pumped Magnetometers (OPM) data|Stephanie Mellor|
-| 12:40 - 13:15 | OPM data analysis - demo | Robert Seymour |
+| 12:00 - 12:40 | [Analysis of Optically Pumped Magnetometers (OPM) data](https://liveuclac-my.sharepoint.com/:p:/g/personal/skaalit_ucl_ac_uk/EaXqyH4VhCBPid2IthL-PeQBgGNIFkAH_DFR4--6GfGkKQ?e=ffqHNv)|Stephanie Mellor|
+| 12:40 - 13:15 | [OPM data analysis - demo](https://liveuclac-my.sharepoint.com/:p:/g/personal/skaalit_ucl_ac_uk/EcN8EElxyF1HtThdd87hUyABAGOLkcOfxn2TGZWaA6FOlA?e=cgosaw) | Robert Seymour |
 | 13:15 - 14:15 | Lunch break                                          |
 | 14:15 - 15:15 | Bayesian inference|Noor Sajid|
 | 15:15 - 16:15 | [M/EEG source analysis](https://liveuclac-my.sharepoint.com/:b:/g/personal/skaalit_ucl_ac_uk/EfY5p2Cvk5hJkatjx5MaVpUBZyYtX5kUwZXEDiputj5WLA?e=bGJxkp) |Jose David Lopez|
@@ -68,7 +68,7 @@ Location: **12 Queen Square, 4th floor Seminar Room**
 |--------------|-----------------------------------|--------------------|
 | 09:30 - 10:00 | Welcome and registration    |  |
 | 10:00 - 11:30 | The principles of dynamic causal modelling|Amirhossein Jafarian|
-| 11:30 - 12:35 | DCM for evoked responses|Daniel Hauke|
+| 11:30 - 12:35 | [DCM for evoked responses](https://liveuclac-my.sharepoint.com/:b:/g/personal/skaalit_ucl_ac_uk/EUSc1EBWMoNLs7iK2QxgmhMBIRR2ymgO9JjO3rGB6qxF1w?e=QT7Jjd)|Daniel Hauke|
 | 12:35 - 13:35 | [DCM for Cross-Spectral Densities](https://liveuclac-my.sharepoint.com/:p:/g/personal/skaalit_ucl_ac_uk/EacUV_09kt5Os5BJfMSdQVoB-ZDBT9SknPJJdyBPKP0ACA?e=uP66ac) |Dimitris Pinotsis|
 | 13:35 - 14:35 | Lunch break                                          |
 | 14:35 - 15:20 | DCM demo|Julia Rodriguez-Sanchez|
