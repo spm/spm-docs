@@ -47,11 +47,11 @@ Location: **12 Queen Square, 4th floor Seminar Room**
 | Time         | Event                             | Speaker            |
 |--------------|-----------------------------------|--------------------|
 | 09:30 - 10:00 | Welcome and registration    |  |
-| 10:00 - 12:00 | Group M/EEG dataset analysis - demo|Jason Taylor|
+| 10:00 - 12:00 | [Group M/EEG dataset analysis - demo](https://liveuclac-my.sharepoint.com/:p:/g/personal/skaalit_ucl_ac_uk/EflFWMvXPT9Pjmj9Ikj2JK0BgkwzMC2HkNzzhYAwdIA3pg?e=Rlgq68)|Jason Taylor|
 | 12:00 - 12:40 | [Analysis of Optically Pumped Magnetometers (OPM) data](https://liveuclac-my.sharepoint.com/:p:/g/personal/skaalit_ucl_ac_uk/EaXqyH4VhCBPid2IthL-PeQBgGNIFkAH_DFR4--6GfGkKQ?e=ffqHNv)|Stephanie Mellor|
 | 12:40 - 13:15 | [OPM data analysis - demo](https://liveuclac-my.sharepoint.com/:p:/g/personal/skaalit_ucl_ac_uk/EcN8EElxyF1HtThdd87hUyABAGOLkcOfxn2TGZWaA6FOlA?e=cgosaw) | Robert Seymour |
 | 13:15 - 14:15 | Lunch break                                          |
-| 14:15 - 15:15 | Bayesian inference|Noor Sajid|
+| 14:15 - 15:15 | [Bayesian inference](https://liveuclac-my.sharepoint.com/:b:/g/personal/skaalit_ucl_ac_uk/EV8OGHvsw0tHtANCC7Mo4HIBhlOLTGKTyEvYsO86ywp2ZA?e=gVFCKj)|Noor Sajid|
 | 15:15 - 16:15 | [M/EEG source analysis](https://liveuclac-my.sharepoint.com/:b:/g/personal/skaalit_ucl_ac_uk/EfY5p2Cvk5hJkatjx5MaVpUBZyYtX5kUwZXEDiputj5WLA?e=bGJxkp) |Jose David Lopez|
 | 16:15 - 16:45 | Break    ||
 | 16:15 - 16:45 | [M/EEG source analysis -demo](https://liveuclac-my.sharepoint.com/:p:/g/personal/skaalit_ucl_ac_uk/EdtBQKV8yL9PsEbLF8z93gEBJgQ0vvHypQaV7r7lnI_mZg?e=3pormH) |Mansoureh Fahimi|
@@ -67,12 +67,12 @@ Location: **12 Queen Square, 4th floor Seminar Room**
 | Time         | Event                             | Speaker            |
 |--------------|-----------------------------------|--------------------|
 | 09:30 - 10:00 | Welcome and registration    |  |
-| 10:00 - 11:30 | The principles of dynamic causal modelling|Amirhossein Jafarian|
+| 10:00 - 11:30 | [The principles of dynamic causal modelling](https://liveuclac-my.sharepoint.com/:b:/g/personal/skaalit_ucl_ac_uk/EUaGeMDt-IRBo6zmEWS87ccBDjM7Ni7tuZ-_PA3BVzPf-w?e=e220A0)|Amirhossein Jafarian|
 | 11:30 - 12:35 | [DCM for evoked responses](https://liveuclac-my.sharepoint.com/:b:/g/personal/skaalit_ucl_ac_uk/EUSc1EBWMoNLs7iK2QxgmhMBIRR2ymgO9JjO3rGB6qxF1w?e=QT7Jjd)|Daniel Hauke|
 | 12:35 - 13:35 | [DCM for Cross-Spectral Densities](https://liveuclac-my.sharepoint.com/:p:/g/personal/skaalit_ucl_ac_uk/EacUV_09kt5Os5BJfMSdQVoB-ZDBT9SknPJJdyBPKP0ACA?e=uP66ac) |Dimitris Pinotsis|
 | 13:35 - 14:35 | Lunch break                                          |
-| 14:35 - 15:20 | DCM demo|Julia Rodriguez-Sanchez|
-| 15:20 - 16:35 | Bayesian model selection and averaging|Peter Zeidman|
+| 14:35 - 15:20 | [DCM demo](https://liveuclac-my.sharepoint.com/:p:/g/personal/skaalit_ucl_ac_uk/EevaM5cgeStNrZmXMJipV38BFFJlFy8_k0MDnfCXB9Y4tg?e=JVi0O4)|Julia Rodriguez-Sanchez|
+| 15:20 - 16:35 | [Bayesian model selection and averaging](https://liveuclac-my.sharepoint.com/:p:/g/personal/skaalit_ucl_ac_uk/EQTyPWTQLoNGttxBX73aoHwBCAWmJVYmcntgjhAxmTuiRA?e=DRKQSI)|Peter Zeidman|
 | 16:35 - 17:35 | Q&A clinic |Karl Friston|   
 
 ### Friday 2 June
