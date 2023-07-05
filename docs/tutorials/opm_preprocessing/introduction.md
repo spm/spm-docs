@@ -10,27 +10,28 @@ Currently SPM supports a file format that has the raw data stored in a binary fi
 
 ```matlab
 S = [];
-S.data = '20230320_115853_meg_001.cMEG';
-S.positions = '20230320_115853_HelmConfig.tsv';
+S.data ='20230417_114328_meg_001.cMEG';
+S.positions= '20230417_114328_HelmConfig.tsv';
 D = spm_opm_create(S);
+
 ```
 
 !!! note
     If you would like your file format to be supported by SPM please [open an issue on GitHub](https://github.com/spm/spm/issues).
 
-## Identifying bad channels
+## Power Spectral Density
 
-Once OPM data is imported the first step should be to identify any bad channels by looking at the PSD (power spectral density). This plot tells us if any channels are deviating notably from their manufacturer specifications or are clear outlier channels. 
+Once OPM data is imported the first step should be to look at the PSD (power spectral density). This plot tells us if any channels are deviating notably from their manufacturer specifications or are clear outlier channels. 
 
 
 ```matlab
-S = [];
-S.D = D;
-S.triallength = 3000; % time in ms: longer windows provide more frequency resolution but are noisier
-S.plot = 1;
-S.channels = 'MEG';   % select only MEG channels
+S=[];
+S.triallength = 3000; 
+S.plot=1;
+S.D=D;
+S.channels='MEG';
 spm_opm_psd(S);
-ylim([1,1e5])         % set y axis limits between 1fT and 100,000 fT
+ylim([1,1e5])
 ```
 
 <figure markdown>
@@ -40,21 +41,6 @@ ylim([1,1e5])         % set y axis limits between 1fT and 100,000 fT
   <figcaption>Power Spectral Density</figcaption>
 </figure>
 
-We can now interactively identify the bad channels by clicking on the plot. We can then set the bad channels with the following code. 
-
-<figure markdown>
-  <div class="center">
-    <img src="../../../assets/figures/opm/badchannel_psd.png" style="width:160mm" />
-  </div>
-  <figcaption>Bad Channels</figcaption>
-</figure>
-
-```matlab 
-D = badchannels(D,[51,52],1);
-D.save();
-```
-!!! note
-    If you change an M/EEG object(`D`) you should call the `save` method to make your changes permanent.
 
 ## Filtering 
 
@@ -62,9 +48,9 @@ We can also filter our data to remove very low frequency interference and very h
 The key arguments are `S.freq` which sets the cut-off frequency and `S.band` which sets the type of filter (high-pass or low-pass)
 
 ```matlab
-S = [];
-S.D = D;
-S.freq = [2];
+S=[];
+S.D=cD;
+S.freq=[10];
 S.band = 'high';
 fD = spm_eeg_ffilter(S);
 
@@ -75,7 +61,7 @@ S.band = 'low';
 fD = spm_eeg_ffilter(S);
 
 ```
-We can also optionally apply a stop-band filter for removing the line noise by changing the `S.band` argument.
+We can also optionally apply a stop-band filter for removing the line noise by changing the `S.band` argument but we won't run that here. 
 
 ```matlab
 S = [];
@@ -121,18 +107,24 @@ If the source of magnetic interference is quite near the array then the low orde
 ```matlab
 S = [];
 S.D = fD;
-S.corrLim = .95;
+S.corrLim = .98;
 mD = spm_opm_amm(S);
 ``` 
 ??? info "How do I pick a value for S.corrLim?"
-	Setting a lower value for `S.corrLim` will result in more aggressive cleaning of the data but will increase the risk of removing interesting brain signal. The factors that influence this decision are the order of the internal harmonics (`S.li`), the SNR of the brain response, the time scale at which physiological correlations exist, the length of the time window analysed and the number of channels in your array. As such it is not possible to extrapolate any heuristics one might have developed from using other temporal subspace intersection methods such as TSSS. However, the code has been developed so that generally values greater than `0.95` are generally safe for arrays of less than 200 channels. 
+	Setting a lower value for `S.corrLim` will result in more aggressive cleaning of the data but will increase the risk of removing interesting brain signal. The factors that influence this decision are the order of the internal harmonics (`S.li`), the SNR of the brain response, the time scale at which physiological correlations exist, the length of the time window analysed and the number of channels in your array. As such it is not possible to extrapolate any heuristics one might have developed from using other temporal subspace intersection methods such as TSSS. However, the code has been developed so that  values greater than `0.98` are generally safe for arrays of less than 200 channels. 
 
 
-We can now also examine what the impact of our preprocessing has been by creating another PSD. Note that this time we have excluded the bad channels identified earlier by passing the labels of the good channels to `S.channels`.
+!!! note "How do I choose which model to use?"
+	1. If you have less than 120 channels use `spm_opm_hfc`.
+	2. If you have radial only samplings do not increase `S.L` beyond 1.
+	3. If you have more than 120 channels use `spm_opm_amm`.
+	4. If you have more than 120 channels and have spatially complex interference  use `spm_opm_amm` with `S.corrLim` set between `0.95` and `1`.
+	
+## Examining processed data 
+
+We can now also examine what the impact of our preprocessing has been by creating another PSD. 
 
 ```matlab
-cinds= setdiff(indchantype(mD,'MEG'),badchannels(mD));
-chans = chanlabels(mD,cinds);
 S=[];
 S.triallength = 3000; 
 S.plot=1;
@@ -149,27 +141,47 @@ ylim([1,1e5])
   <figcaption>processed PSD</figcaption>
 </figure>
 
-!!! note "How do I choose which model to use?"
-	1. If you have less than 120 channels use `spm_opm_hfc`.
-	2. If you have radial only samplings do not increase `S.L` beyond 1.
-	3. If you have more than 120 channels use `spm_opm_amm`.
-	4. If you have more than 120 channels and have spatially complex interference  use `spm_opm_amm` with `S.corrLim` set between `0.95` and `1`.
+
 	
+
+If you can spot any channels in the PSD that are behaving differently to other channels we can interactively identify them by clicking on the plot. We can then set the bad channels with the following code. 
+
+<figure markdown>
+  <div class="center">
+    <img src="../../../assets/figures/opm/badchannel_psd.png" style="width:160mm" />
+  </div>
+  <figcaption>Bad Channels</figcaption>
+</figure>
+
+As all channels appear to be behaving fairly similarly we won't mark any as bad but the code should you wish to do so is below.
+```matlab 
+mD = badchannels(mD,[88],1);
+mD.save();
+```
+!!! note
+    If you change an M/EEG object(`D`) you should call the `save` method to make your changes permanent.
+
+
 	
-## Epoching
-Now that we have modelled the interference in our data we can cut our data up into the time periods we are interested in. To do this we require that a trigger channel exists in our data set  when some stimuli was presented to a participant. In this case we are interested in the 50ms before the stimuli up until 250ms after the stimuli. This time window is specified with the `S.timewin` argument. The channel that encodes when the stimuli is presented is channel `Trigger 6 Z` and we can specify this with the `S.triggerChannels` argument.
+## Epoching and baseline correction
+Now that we have modelled the interference in our data we can cut our data up into the time periods we are interested in. To do this we require that a trigger channel exists in our data set  when some stimuli was presented to a participant. In this case we are interested in the 50ms before the stimuli up until 200ms after the stimuli. This time window is specified with the `S.timewin` argument. The channel that encodes when the stimuli is presented is channel `Trigger 6 Z` and we can specify this with the `S.triggerChannels` argument.
 
 ```matlab
 S =[];
 S.D=mD;
-S.timewin=[-50 250];
+S.timewin=[-50 200];
 S.triggerChannels ={'Trigger 6 Z'};
 eD= spm_opm_epoch_trigger(S);
+
+S=[];
+S.D = eD;
+S.timewin = [-50 0];
+eD = spm_eeg_bc(S);
 ``` 
 !!! note
     SPM automatically baseline corrects data that has a negative time window. if you do not have a negative time window you will need to do baseline correction separately( see `spm_eeg_bc`).
 
-## Averaging and t-statistics
+## Averaging
 
 We can now average across our trials and compute our t-statistic. The function `spm_eeg_average` has 1 key argument: `S.D`. We can then plot the average response for all channels trivially. 
 
@@ -201,34 +213,6 @@ xlim([0,.250])
   <figcaption>Evoked field</figcaption>
 </figure>
 
-We can see there are some channels not behaving like the others in the baseline so it is worth computing a t-statistic across trials to see if these changes are meaningful. The evoked response is now nice and clean showing clear peaks that that reverse  in polarity across the sensors. 
-
-```matlab
-se = std(eD(used,:,:),[],3)./sqrt(size(eD,3));
-mu = muD(used,:,:);
-tstat = mu./se;
-
-figure()
-plot(muD.time(),tstat')
-xlabel('Time (s)')
-ylabel('t-statistic')
-grid on
-ax = gca; % current axes
-ax.FontSize = 13;
-ax.TickLength = [0.02 0.02];
-fig= gcf;
-fig.Color=[1,1,1];
-xlim([0,.250])
-ylim([-20,20])
-``` 
-
-<figure markdown>
-  <div class="center">
-    <img src="../../../assets/figures/opm/t-stat.png" style="width:160mm" />
-  </div>
-  <figcaption>t-statistic</figcaption>
-</figure>
-
 
 
 ## Topoplots
@@ -237,21 +221,19 @@ Displaying OPM topographies is non trivial for 2 reasons:
   1. For small channel arrays 2D representations of 3D may not look very good.
   2. OPMs measure multiple components of the magnetic field at the same point in space and the sampled  field pattern is not necessarily smooth. 
   
- As such for now we will only display the radial component of the magnetic field measurement(which is a smooth interpretable field). We can do this with `spm_opm_plotScalpData` and we will initially look at the peak around 90ms. 
+ As such for now we will only display the radial component of the magnetic field measurement(which is a smooth interpretable field). We can do this with `spm_opm_plotScalpData` and we will initially look at the peak around 70ms. 
   
   !!! note
     If you think OPM scalp data should be displayed differently please [open an issue on GitHub](https://github.com/spm/spm/issues).
 
 ```matlab
 
-muD(:,:,:)=zeros(size(muD));
-muD(used,:,:)=tstat;
-
 S=[];
 S.D = muD;
-S.T = .085; 
+S.T=.066
+%S.display='NORM';
 spm_opm_plotScalpData(S);
-caxis([-10,10])
+caxis([-150, 150])
 ``` 
 <figure markdown>
   <div class="center">
