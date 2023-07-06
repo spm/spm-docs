@@ -102,9 +102,9 @@ nav:
         - 'Source':                        'tutorials/multi/source.md'  
         - 'References':                    'tutorials/multi/references.md' 
     - 'M/EEG':
-      - 'MEG Source localisation': tutorials/meg_sloc/meg_sloc.md
-      - 'EEG Mismatch negativity data': tutorials/mmn/mmn.md
-      - 'M/EEG Convolution modelling': tutorials/meeg_firstlevel/meeg_firstlevel.md
+      - 'MEG Source localisation': tutorials/MEEG/meg_sloc/meg_sloc.md
+      - 'EEG Mismatch negativity data': tutorials/MEEG/mmn/mmn.md
+      - 'M/EEG Convolution modelling': tutorials/MEEG/meeg_firstlevel/meeg_firstlevel.md
     - 'DAiSS':
       - 'Overview of DAiSS':                'tutorials/daiss/index.md'
       - 'Beamforming':             'tutorials/daiss/daiss_beamforming.md'
