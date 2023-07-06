@@ -27,7 +27,7 @@ The SPM software package has been designed for the analysis of brain imaging dat
 
     We provide a curated list of tutorials for different imaging analyses.
 
-    [:octicons-arrow-right-24: Tutorials](tutorials/fmri_preprocessing/introduction/)
+    [:octicons-arrow-right-24: Tutorials](tutorials/)
 
 -   :fontawesome-solid-graduation-cap:{ .lg .middle } __Courses__
 
