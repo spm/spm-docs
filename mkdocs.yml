@@ -91,6 +91,11 @@ nav:
         - 'Overview of DCM':          'tutorials/dcm/index.md'
         - 'DCM for fMRI - 1st level': 'tutorials/dcm/dcm_fmri_first_level.md'
         - 'DCM for fMRI - 2nd level': 'tutorials/dcm/dcm_fmri_second_level.md'
+        - 'DCM for Evoked Responses': tutorials/dcm/dcm_erp.md
+        - 'DCM for Induced Responses': tutorials/dcm_dcm_ir.md
+        - 'DCM for Phase Coupling': tutorials/dcm/dcm_phase.md
+        - 'DCM for Steady State Responses': tutorials/dcm/dcm_ssr.md
+        - 'DCM for Cross-Spectral Densities': tutorials/dcm/dcm_csd.md   
     - 'OPM':
         - 'Getting Started': 'tutorials/opm_preprocessing/index.md'
         - 'Evoked response pipeline': 'tutorials/opm_preprocessing/evoked/introduction.md'
@@ -115,11 +120,7 @@ nav:
         - 'MEG': tutorials/multimodal/meg.md
         - 'fMRI': tutorials/multimodal/fmri.md
         - 'Fusion': tutorials/multimodal/fusion.md
-    - 'DCM for Evoked Responses': tutorials/dcm_erp/dcm_erp.md
-    - 'DCM for Induced Responses': tutorials/dcm_ir/dcm_ir.md
-    - 'DCM for Phase Coupling': tutorials/dcm_phase/dcm_phase.md
-    - 'DCM for Steady State Responses': tutorials/dcm_ssr/dcm_ssr.md
-    - 'DCM for Cross-Spectral Densities': tutorials/dcm_csd/dcm_csd.md         
+          
   - 'Manual':
     - 'Auditory fMRI data': manual/auditory/auditory.md
     - 'Face group fMRI data': manual/faces_group/face_group.md

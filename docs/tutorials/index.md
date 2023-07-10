@@ -22,13 +22,13 @@
 
     ---
 
-    [Optically Pumped Magnetometers](./opm/index.md)
+    [Optically Pumped Magnetometers](./opm_preprocessing/index.md)
 
 -   :material-monitor:{ .lg .middle } __SLOC__
 
     ---
 
-    [MEG source localisation](./meg_sloc/meg_sloc.md)
+    [MEG source localisation](./MEEG/meg_sloc/meg_sloc.md)
 
 -   :material-monitor:{ .lg .middle } __MULTIMODAL__
 
@@ -46,42 +46,12 @@
 
     ---
 
-    [EEG mismatch negativity](./mmn/mmn.md)
-    
--   :material-monitor:{ .lg .middle } __DCMERP__
-
-    ---
-
-    [DCM for evoked responses](./dcm_erp/dcm_erp.md)
-
--   :material-monitor:{ .lg .middle } __DCMIR__
-
-    ---
-
-    [DCM for induced responses](./dcm_ir/dcm_ir.md)
-
--   :material-monitor:{ .lg .middle } __DCMPHASE__
-
-    ---
-
-    [DCM for phase coupling](./dcm_phase/dcm_phase.md)
-
--   :material-monitor:{ .lg .middle } __DCMSSR__
-
-    ---
-
-    [DCM for steady state responses](./dcm_ssr/dcm_ssr.md)
-
--   :material-monitor:{ .lg .middle } __DCMCSD__
-
-    ---
-
-    [DCM for cross-spectral densities](./dcm_csd/dcm_csd.md)
+    [EEG mismatch negativity](./MEEG/mmn/mmn.md)
 
 -   :material-monitor:{ .lg .middle } __MEEGCONV__
 
     ---
 
-    [Convolution modelling of MEEG data](./meeg_firstlevel/meeg_firstlevel.md)
+    [Convolution modelling of MEEG data](./MEEG/meeg_firstlevel/meeg_firstlevel.md)
 
 </div>
