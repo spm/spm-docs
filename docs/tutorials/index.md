@@ -12,6 +12,12 @@
 
     [Voxel-Based Morphometry](./vbm/VBM-getting-started.md)
 
+-   :material-monitor:{ .lg .middle } __MEEG__
+
+    ---
+
+    [MEEG](./MEEG/index.md)
+
 -   :material-monitor:{ .lg .middle } __DCM__
 
     ---
