@@ -92,7 +92,8 @@ nav:
         - 'DCM for fMRI - 1st level': 'tutorials/dcm/dcm_fmri_first_level.md'
         - 'DCM for fMRI - 2nd level': 'tutorials/dcm/dcm_fmri_second_level.md'
     - 'OPM':
-        - 'Evoked response pipeline': 'tutorials/opm_preprocessing/introduction.md'
+        - 'Getting Started': 'tutorials/opm_preprocessing/index.md'
+          - 'Evoked response pipeline': 'tutorials/opm_preprocessing/evoked/introduction.md'
     - 'Multimodal, multisubject data fusion':
         - 'Overview':                      'tutorials/multi/index.md'  
         - 'Preprocessing':                 'tutorials/multi/preprocessing.md'  

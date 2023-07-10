@@ -22,11 +22,12 @@
 
     ---
 
-    [Optically Pumped Magnetometers](./opm_preprocessing/introduction.md)
+    [Optically Pumped Magnetometers](./opm/index.md)
 
 -   :material-monitor:{ .lg .middle } __SLOC__
 
     ---
+	
 
     [MEG source localisation](./meg_sloc/meg_sloc.md)
 
