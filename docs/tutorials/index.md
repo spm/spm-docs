@@ -10,7 +10,7 @@
 
     ---
 
-    [Voxel-Based Morphometry](./vbm/VBM-getting-started.md)
+    [Voxel-Based Morphometry](./vbm/index.md)
 
 -   :material-monitor:{ .lg .middle } __MEEG__
 
@@ -34,7 +34,7 @@
 
     ---
 
-    [Multimodal responses to faces](./multimodal/multimodal.md)
+    [Multimodal responses to faces](./multimodal/index.md)
 
 -   :material-monitor:{ .lg .middle } __MULTIGROUP__
 
