@@ -24,12 +24,6 @@
 
     [Optically Pumped Magnetometers](./opm_preprocessing/index.md)
 
--   :material-monitor:{ .lg .middle } __SLOC__
-
-    ---
-
-    [MEG source localisation](./MEEG/meg_sloc.md)
-
 -   :material-monitor:{ .lg .middle } __MULTIMODAL__
 
     ---
@@ -42,16 +36,5 @@
 
     [Group multimodal dataset](./multi/index.md)
 
--   :material-monitor:{ .lg .middle } __MMN__
-
-    ---
-
-    [EEG mismatch negativity](./MEEG/mmn.md)
-
--   :material-monitor:{ .lg .middle } __MEEGCONV__
-
-    ---
-
-    [Convolution modelling of MEEG data](./MEEG/meeg_firstlevel.md)
 
 </div>
