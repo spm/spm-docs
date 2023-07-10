@@ -84,7 +84,7 @@ nav:
       - 'Parametric Modelling':  'tutorials/faces/parametric.md'
       - 'Bayesian Analysis':     'tutorials/faces/bayesian.md'
     - 'VBM':
-        - 'Getting started':      'tutorials/vbm/VBM-getting-started.md'
+        - 'Getting started':      'tutorials/vbm/index.md'
         - 'Image processing':     'tutorials/vbm/VBM-image-processing.md'
         - 'Statistical analysis': 'tutorials/vbm/VBM-statistical-analysis.md'
     - 'M/EEG':
@@ -116,7 +116,7 @@ nav:
       - 'Overview of DAiSS':                'tutorials/daiss/index.md'
       - 'Beamforming':             'tutorials/daiss/daiss_beamforming.md'
     - 'Multimodal':
-        - 'Introduction': tutorials/multimodal/multimodal.md
+        - 'Introduction': tutorials/multimodal/index.md
         - 'EEG': tutorials/multimodal/eeg.md
         - 'MEG': tutorials/multimodal/meg.md
         - 'fMRI': tutorials/multimodal/fmri.md
