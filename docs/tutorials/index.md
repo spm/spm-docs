@@ -28,7 +28,7 @@
 
     ---
 
-    [MEG source localisation](./MEEG/meg_sloc/meg_sloc.md)
+    [MEG source localisation](./MEEG/meg_sloc.md)
 
 -   :material-monitor:{ .lg .middle } __MULTIMODAL__
 
@@ -46,12 +46,12 @@
 
     ---
 
-    [EEG mismatch negativity](./MEEG/mmn/mmn.md)
+    [EEG mismatch negativity](./MEEG/mmn.md)
 
 -   :material-monitor:{ .lg .middle } __MEEGCONV__
 
     ---
 
-    [Convolution modelling of MEEG data](./MEEG/meeg_firstlevel/meeg_firstlevel.md)
+    [Convolution modelling of MEEG data](./MEEG/meeg_firstlevel.md)
 
 </div>

@@ -87,18 +87,22 @@ nav:
         - 'Getting started':      'tutorials/vbm/VBM-getting-started.md'
         - 'Image processing':     'tutorials/vbm/VBM-image-processing.md'
         - 'Statistical analysis': 'tutorials/vbm/VBM-statistical-analysis.md'
+    - 'M/EEG':
+      - 'MEG Source localisation': tutorials/MEEG/meg_sloc.md
+      - 'EEG Mismatch negativity data': tutorials/MEEG/mmn.md
+      - 'M/EEG Convolution modelling': tutorials/MEEG/meeg_firstlevel.md
+    - 'OPM':
+        - 'Getting Started': 'tutorials/opm_preprocessing/index.md'
+        - 'Evoked response pipeline': 'tutorials/opm_preprocessing/evoked/introduction.md'
     - 'DCM':
         - 'Overview of DCM':          'tutorials/dcm/index.md'
         - 'DCM for fMRI - 1st level': 'tutorials/dcm/dcm_fmri_first_level.md'
         - 'DCM for fMRI - 2nd level': 'tutorials/dcm/dcm_fmri_second_level.md'
         - 'DCM for Evoked Responses': tutorials/dcm/dcm_erp.md
-        - 'DCM for Induced Responses': tutorials/dcm_dcm_ir.md
+        - 'DCM for Induced Responses': tutorials/dcm_ir.md
         - 'DCM for Phase Coupling': tutorials/dcm/dcm_phase.md
         - 'DCM for Steady State Responses': tutorials/dcm/dcm_ssr.md
         - 'DCM for Cross-Spectral Densities': tutorials/dcm/dcm_csd.md   
-    - 'OPM':
-        - 'Getting Started': 'tutorials/opm_preprocessing/index.md'
-        - 'Evoked response pipeline': 'tutorials/opm_preprocessing/evoked/introduction.md'
     - 'Multimodal, multisubject data fusion':
         - 'Overview':                      'tutorials/multi/index.md'  
         - 'Preprocessing':                 'tutorials/multi/preprocessing.md'  
@@ -107,10 +111,6 @@ nav:
         - 'fMRI':                          'tutorials/multi/fmri.md'  
         - 'Source':                        'tutorials/multi/source.md'  
         - 'References':                    'tutorials/multi/references.md' 
-    - 'M/EEG':
-      - 'MEG Source localisation': tutorials/MEEG/meg_sloc/meg_sloc.md
-      - 'EEG Mismatch negativity data': tutorials/MEEG/mmn/mmn.md
-      - 'M/EEG Convolution modelling': tutorials/MEEG/meeg_firstlevel/meeg_firstlevel.md
     - 'DAiSS':
       - 'Overview of DAiSS':                'tutorials/daiss/index.md'
       - 'Beamforming':             'tutorials/daiss/daiss_beamforming.md'
