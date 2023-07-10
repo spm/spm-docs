@@ -88,6 +88,7 @@ nav:
         - 'Image processing':     'tutorials/vbm/VBM-image-processing.md'
         - 'Statistical analysis': 'tutorials/vbm/VBM-statistical-analysis.md'
     - 'M/EEG':
+      - 'Getting Started': 'tutorials/MEEG/index.md'
       - 'EEG Mismatch negativity data': tutorials/MEEG/mmn.md
       - 'M/EEG Convolution modelling': tutorials/MEEG/meeg_firstlevel.md
       - 'MEG Source localisation': tutorials/MEEG/meg_sloc.md
