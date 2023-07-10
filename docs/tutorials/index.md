@@ -27,7 +27,6 @@
 -   :material-monitor:{ .lg .middle } __SLOC__
 
     ---
-	
 
     [MEG source localisation](./meg_sloc/meg_sloc.md)
 
