@@ -1,10 +1,11 @@
-# OPM tutorial
+# OPM tutorials
 
-## About the data
+## About the tutorials
 
 
-The OPM system used here has 64 sensors (128 channels). The participant was presented with a reversing checker-board reversing at ~ 4 repetitions per second resulting in  800 trials.
+These tutorials cover the following areas in OPM analysis. 
 
+1. [Sensor level: Evoked response pipeline](evoked/introduction.md)
 
 
 --8<-- "addons/abbreviations.md"
