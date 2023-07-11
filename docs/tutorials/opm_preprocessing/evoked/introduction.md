@@ -10,8 +10,8 @@ Currently SPM supports a file format that has the raw data stored in a binary fi
 
 ```matlab
 S = [];
-S.data ='20230417_114328_meg_001.cMEG';
-S.positions= '20230417_114328_HelmConfig.tsv';
+S.data ='OPM_meg_001.cMEG';
+S.positions= 'OPM_HelmConfig.tsv';
 D = spm_opm_create(S);
 
 ```
@@ -49,7 +49,7 @@ The key arguments are `S.freq` which sets the cut-off frequency and `S.band` whi
 
 ```matlab
 S=[];
-S.D=cD;
+S.D=D;
 S.freq=[10];
 S.band = 'high';
 fD = spm_eeg_ffilter(S);
@@ -129,7 +129,6 @@ S=[];
 S.triallength = 3000; 
 S.plot=1;
 S.D=mD;
-S.channels=chans;
 [~,freq]=spm_opm_psd(S);
 ylim([1,1e5])
 ```
@@ -231,7 +230,6 @@ Displaying OPM topographies is non trivial for 2 reasons:
 S=[];
 S.D = muD;
 S.T=.066
-%S.display='NORM';
 spm_opm_plotScalpData(S);
 caxis([-150, 150])
 ``` 
@@ -242,4 +240,104 @@ caxis([-150, 150])
   <figcaption>Radial evoked field pattern</figcaption>
 </figure>
 
+## A complete script 
+Below we include the whole script required to reproduce the figures in this tutorial.
+
+```matlab
+
+%- read data 
+%--------------------------------------------------------------------------
+S = [];
+S.data ='OPM_meg_001.cMEG';
+S.positions= 'OPM_HelmConfig.tsv';
+D = spm_opm_create(S);
+
+%- PSD
+%--------------------------------------------------------------------------
+S=[];
+S.triallength = 3000; 
+S.plot=1;
+S.D=D;
+S.channels='MEG';
+spm_opm_psd(S);
+ylim([1,1e5])
+
+%- highpass
+%--------------------------------------------------------------------------
+S=[];
+S.D=D;
+S.freq=[10];
+S.band = 'high';
+fD = spm_eeg_ffilter(S);
+
+%- lowpass
+%--------------------------------------------------------------------------
+S = [];
+S.D = fD;
+S.freq = [70];
+S.band = 'low';
+fD = spm_eeg_ffilter(S);
+
+%- adaptive multipole models
+%--------------------------------------------------------------------------
+S = [];
+S.D = fD;
+S.corrLim = .98;
+mD = spm_opm_amm(S);
+
+%-  psd
+%--------------------------------------------------------------------------
+S=[];
+S.triallength = 3000; 
+S.plot=1;
+S.D=mD;
+S.channels='MEG';
+[~,freq]=spm_opm_psd(S);
+ylim([1,1e5])
+
+%- epoch 
+%--------------------------------------------------------------------------
+S =[];
+S.D=mD;
+S.timewin=[-50 200];
+S.triggerChannels ={'Trigger 6 Z'};
+eD= spm_opm_epoch_trigger(S);
+
+S=[];
+S.D = eD;
+S.timewin = [-50 0];
+eD = spm_eeg_bc(S);
+
+%- average
+%--------------------------------------------------------------------------
+S=[];
+S.D=eD;
+muD = spm_eeg_average(S);
+
+
+MEGind = indchantype(eD,'MEGMAG');
+used = setdiff(MEGind,badchannels(muD));
+pl =muD(used,:,:)';
+figure();
+plot(muD.time(),pl)
+xlabel('Time (s)')
+ylabel('B (fT)')
+grid on
+ax = gca; % current axes
+ax.FontSize = 13;
+ax.TickLength = [0.02 0.02];
+fig= gcf;
+fig.Color=[1,1,1];
+xlim([0,.20])
+
+
+%- topoplot
+%--------------------------------------------------------------------------
+S=[];
+S.D = muD;
+S.T=.066
+spm_opm_plotScalpData(S);
+caxis([-150, 150])
+
+```
 --8<-- "addons/abbreviations.md"
