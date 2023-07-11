@@ -109,7 +109,7 @@ nav:
     - 'OPM':
         - 'Getting Started': 'tutorials/opm_preprocessing/index.md'
         - 'Sensor Level: Evoked response': 'tutorials/opm_preprocessing/evoked/introduction.md'
-        #- 'Source Level: Evoked response': 'tutorials/opm_preprocessing/e_source/e_source.md'       
+        - 'Optical Co-registration': 'tutorials/opm_preprocessing/e_source/e_source.md'       
     - 'DCM':
         - 'Overview of DCM':          'tutorials/dcm/index.md'
         - 'DCM for fMRI - 1st level': 'tutorials/dcm/dcm_fmri_first_level.md'
