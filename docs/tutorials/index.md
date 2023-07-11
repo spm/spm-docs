@@ -30,12 +30,6 @@
 
     [Optically Pumped Magnetometers](./opm_preprocessing/index.md)
 
--   :material-monitor:{ .lg .middle } __MULTIMODAL__
-
-    ---
-
-    [Multimodal responses to faces](./multimodal/index.md)
-
 -   :material-monitor:{ .lg .middle } __MULTIGROUP__
 
     ---

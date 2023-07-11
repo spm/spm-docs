@@ -100,7 +100,7 @@ covariance terms for each modality.
 
 <figure id="multimodal:fusion:fig:1">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/fused_eeg_meg_msp.png"
+<img src="../../../../assets/figures/manual/multimodal/fused_eeg_meg_msp.png"
 style="width:90mm" />
 </div>
 <figcaption><em>Graphical output of an MSP estimation of the
@@ -124,7 +124,7 @@ previous sections of this chapter. For a fairer comparison:
 
   <figure id="multimodal:fusion:fig:2">
   <div class="center">
-  <img src="../../../assets/figures/manual/multimodal/fused_eeg_msp.png" style="width:90mm" />
+  <img src="../../../../assets/figures/manual/multimodal/fused_eeg_msp.png" style="width:90mm" />
   </div>
   <figcaption><em>Graphical output of an MSP estimation of the
   differential evoked response between faces and scrambled faces at 180ms,
@@ -142,7 +142,7 @@ previous sections of this chapter. For a fairer comparison:
 
   <figure id="multimodal:fusion:fig:3">
   <div class="center">
-  <img src="../../../assets/figures/manual/multimodal/fused_meg_msp.png" style="width:90mm" />
+  <img src="../../../../assets/figures/manual/multimodal/fused_meg_msp.png" style="width:90mm" />
   </div>
   <figcaption><em>Graphical output of an MSP estimation of the
   differential evoked response between faces and scrambled faces at 180ms,
@@ -249,7 +249,7 @@ Now we can use this cluster image in a new inversion:
 
   <figure id="multimodal:fusion:fig:4">
   <div class="center">
-  <img src="../../../assets/figures/manual/multimodal/fused_eeg_meg_msp_fmri.png"
+  <img src="../../../../assets/figures/manual/multimodal/fused_eeg_meg_msp_fmri.png"
   style="width:90mm" />
   </div>
   <figcaption><em>Graphical output of an MSP estimation of the

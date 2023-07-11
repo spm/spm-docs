@@ -53,7 +53,7 @@ blink while the fixation cross was present on the screen.
 
 <figure id="multimodal:fig:1">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/paradigm.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/multimodal/paradigm.png" style="width:100mm" />
 </div>
 <figcaption><em>One trial in the experiment. Trials involved either a
 Face (F) or Scrambled face (S). <span id="multimodal:fig:1"
@@ -563,7 +563,7 @@ data-reference="multimodal:fig:4">1.2</a>.
 
 <figure id="multimodal:fig:4">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/eeg_erp.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/multimodal/eeg_erp.png" style="width:100mm" />
 </div>
 <figcaption><em>Average (green) and differential (blue) ERPs for faces
 and scrambled faces at channel B9 in
@@ -592,7 +592,7 @@ screen).
 
 <figure id="multimodal:fig:5">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/eeg_topo.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/multimodal/eeg_topo.png" style="width:100mm" />
 </div>
 <figcaption><em>2D topography for faces minus scrambled faces at 180ms.
 <span id="multimodal:fig:5"
@@ -650,7 +650,7 @@ data-reference="multimodal:fig:6">1.4</a>.
 
 <figure id="multimodal:fig:6">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/eeg_scalptime.png" style="width:120mm" />
+<img src="../../../../assets/figures/manual/multimodal/eeg_scalptime.png" style="width:120mm" />
 </div>
 <figcaption><em>3D image for trial 2 of
 <code>aceMdspm8_faces_run1.mat</code>. The bottom image is a 2D x-y
@@ -750,7 +750,7 @@ effect around 100ms).
 
 <figure id="multimodal:fig:7">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/eeg_scalptime_results.png"
+<img src="../../../../assets/figures/manual/multimodal/eeg_scalptime_results.png"
 style="width:120mm" />
 </div>
 <figcaption><em>3D sensor-time SPM<span>F</span> at <span
@@ -805,7 +805,7 @@ right of window to update the corresponding `mat` file on disk.
 
 <figure id="multimodal:fig:3">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/eeg_meshing.png" style="width:90mm" />
+<img src="../../../../assets/figures/manual/multimodal/eeg_meshing.png" style="width:90mm" />
 </div>
 <figcaption><em>Cortex (blue), inner skull (red), outer skull (orange)
 and scalp (pink) meshes with transverse slices of the subject’s MRI.
@@ -855,7 +855,7 @@ right of window to update the corresponding mat file on disk.
 
 <figure id="multimodal:fig:8">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/eeg_coreg.png" style="width:70mm" />
+<img src="../../../../assets/figures/manual/multimodal/eeg_coreg.png" style="width:70mm" />
 </div>
 <figcaption><em>Graphical output of Co-registration of EEG data, showing
 (upper panel) cortex (blue), inner skull (red) and scalp (black) meshes,
@@ -885,7 +885,7 @@ quality control before the model is used for lead field computation.
 
 <figure id="multimodal:fig:2">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/eeg_forward.png" style="width:70mm" />
+<img src="../../../../assets/figures/manual/multimodal/eeg_forward.png" style="width:70mm" />
 </div>
 <figcaption><em>BEM meshes with the EEG sensors marked as
 asterisks.<span id="multimodal:fig:2"
@@ -955,7 +955,7 @@ subjects).
 
 <figure id="multimodal:fig:9">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/eeg_msp.png" style="width:90mm" />
+<img src="../../../../assets/figures/manual/multimodal/eeg_msp.png" style="width:90mm" />
 </div>
 <figcaption><em>Graphical output of an MSP estimation of the
 differential ERP between faces and scrambled faces at 180ms. <span
@@ -1001,7 +1001,7 @@ described earlier in the chapter.
 
 <figure id="multimodal:fig:eegrecon">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/eeg_recon.png" style="width:90mm" />
+<img src="../../../../assets/figures/manual/multimodal/eeg_recon.png" style="width:90mm" />
 </div>
 <figcaption><em>3D reconstruction saved as a smoothed NIfTI image of the
 differential evoked response for faces vs scrambled faces around the
@@ -1256,7 +1256,7 @@ data-reference="multimodal:fig:10">1.11</a>).
 
 <figure id="multimodal:fig:10">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/meg_scalp_erf.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/multimodal/meg_scalp_erf.png" style="width:100mm" />
 </div>
 <figcaption><em>SPM Display window for mean, smoothed ERF
 (<code>mcdbespm8_SPM_CTF_MEG_example_faces1_3D.mat</code>) for all 275
@@ -1287,7 +1287,7 @@ M170 over time.
 
 <figure id="multimodal:fig:12">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/meg_topo180.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/multimodal/meg_topo180.png" style="width:100mm" />
 </div>
 <figcaption><em>2D topography of the ERF of faces minus scrambled faces
 at 180ms. <span id="multimodal:fig:12"

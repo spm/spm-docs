@@ -92,6 +92,12 @@ nav:
       - 'EEG Mismatch negativity data': tutorials/MEEG/mmn.md
       - 'M/EEG Convolution modelling': tutorials/MEEG/meeg_firstlevel.md
       - 'MEG Source localisation': tutorials/MEEG/meg_sloc.md
+        - 'Multimodal':
+          - 'Introduction': tutorials/multimodal/overview.md
+          - 'EEG': tutorials/MEEG/multimodal/eeg.md
+          - 'MEG': tutorials/MEEG/multimodal/meg.md
+          - 'fMRI': tutorials/MEEG/multimodal/fmri.md
+          - 'Fusion': tutorials/MEEG/multimodal/fusion.md   
     - 'OPM':
         - 'Getting Started': 'tutorials/opm_preprocessing/index.md'
         - 'Evoked response pipeline': 'tutorials/opm_preprocessing/evoked/introduction.md'
@@ -115,12 +121,6 @@ nav:
     - 'DAiSS':
       - 'Overview of DAiSS':                'tutorials/daiss/index.md'
       - 'Beamforming':             'tutorials/daiss/daiss_beamforming.md'
-    - 'Multimodal':
-        - 'Introduction': tutorials/multimodal/index.md
-        - 'EEG': tutorials/multimodal/eeg.md
-        - 'MEG': tutorials/multimodal/meg.md
-        - 'fMRI': tutorials/multimodal/fmri.md
-        - 'Fusion': tutorials/multimodal/fusion.md
           
   - 'Manual':
     - 'Auditory fMRI data': manual/auditory/auditory.md

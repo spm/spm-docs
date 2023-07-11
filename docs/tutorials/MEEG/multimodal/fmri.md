@@ -136,7 +136,7 @@ revision).
 
 <figure id="multimodal:fig:22">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/fmri_faces_vs_scrambled.png"
+<img src="../../../../assets/figures/manual/multimodal/fmri_faces_vs_scrambled.png"
 style="width:150mm" />
 </div>
 <figcaption><em>SPM{F} for faces vs scrambled faces.<span

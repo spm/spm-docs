@@ -245,7 +245,7 @@ data-reference="multimodal:fig:10">1</a>).
 
 <figure id="multimodal:fig:10">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/meg_scalp_erf.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/multimodal/meg_scalp_erf.png" style="width:100mm" />
 </div>
 <figcaption><em>SPM Display window for mean, smoothed ERF
 (<code>mcdbespm8_SPM_CTF_MEG_example_faces1_3D.mat</code>) for all 275
@@ -276,7 +276,7 @@ M170 over time.
 
 <figure id="multimodal:fig:12">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/meg_topo180.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/multimodal/meg_topo180.png" style="width:100mm" />
 </div>
 <figcaption><em>2D topography of the ERF of faces minus scrambled faces
 at 180ms. <span id="multimodal:fig:12"
@@ -341,8 +341,8 @@ again.
 
 <figure id="multimodal:fig:13">
 <div class="center">
-<p><img src="../../../assets/figures/manual/multimodal/meg_pow_faces.png" style="width:60mm"
-alt="image" /> <img src="../../../assets/figures/manual/multimodal/meg_pow_scrambled.png"
+<p><img src="../../../../assets/figures/manual/multimodal/meg_pow_faces.png" style="width:60mm"
+alt="image" /> <img src="../../../../assets/figures/manual/multimodal/meg_pow_scrambled.png"
 style="width:60mm" alt="image" /></p>
 </div>
 <figcaption><em>Total power spectra for faces (left) and scrambled faces
@@ -385,8 +385,8 @@ range (Henson et al, 2005b).
 
 <figure id="multimodal:fig:14">
 <div class="center">
-<p><img src="../../../assets/figures/manual/multimodal/meg_plv_faces.png" style="width:60mm"
-alt="image" /> <img src="../../../assets/figures/manual/multimodal/meg_plv_scrambled.png"
+<p><img src="../../../../assets/figures/manual/multimodal/meg_plv_faces.png" style="width:60mm"
+alt="image" /> <img src="../../../../assets/figures/manual/multimodal/meg_plv_scrambled.png"
 style="width:60mm" alt="image" /></p>
 </div>
 <figcaption><em>Phase-Locking Values for faces (left) and scrambled
@@ -420,7 +420,7 @@ the subdirectories `1ROI_TF_trialtype_faces` and
 
 <figure id="multimodal:fig:15">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/meg_TFimage.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/multimodal/meg_TFimage.png" style="width:100mm" />
 </div>
 <figcaption><em>3D image for trial 2 within
 <code>1ROI_TF_trialtype_faces</code> subdirectory. The bottom left
@@ -469,7 +469,7 @@ data-reference="multimodal:fig:16">6</a>.
 
 <figure id="multimodal:fig:16">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/meg_TF_results.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/multimodal/meg_TF_results.png" style="width:100mm" />
 </div>
 <figcaption><em>2D time-frequency SPM<span>T</span> at <span
 class="math inline"><em>p</em> &lt; .05</span> FWE-corrected for the
@@ -556,7 +556,7 @@ the X and Y dimensions are swapped relative to MNI space.
 
 <figure id="multimodal:fig:17">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/meg_coreg.png" style="width:70mm" />
+<img src="../../../../assets/figures/manual/multimodal/meg_coreg.png" style="width:70mm" />
 </div>
 <figcaption><em>Graphical output of registration of MEG and sMRI data,
 showing (upper panel) cortex (blue) and scalp (black) meshes, sensor
@@ -598,7 +598,7 @@ faces).
 
 <figure id="multimodal:fig:18">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/meg_msp.png" style="width:90mm" />
+<img src="../../../../assets/figures/manual/multimodal/meg_msp.png" style="width:90mm" />
 </div>
 <figcaption><em>Graphic output for MSP-estimated activity at 159ms for
 faces.<span id="multimodal:fig:18"
