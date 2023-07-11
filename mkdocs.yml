@@ -99,13 +99,13 @@ nav:
         - 'fMRI': tutorials/MEEG/multimodal/fmri.md
         - 'Fusion': tutorials/MEEG/multimodal/fusion.md
       - 'Multimodal, multisubject data fusion':
-        - 'Overview':                      'tutorials/multi/index.md'  
-        - 'Preprocessing':                 'tutorials/multi/preprocessing.md'  
-        - 'Evoked analysis':               'tutorials/multi/evoked.md'  
-        - 'Time-frequency analysis':       'tutorials/multi/timefrequency.md'  
-        - 'fMRI':                          'tutorials/multi/fmri.md'  
-        - 'Source':                        'tutorials/multi/source.md'  
-        - 'References':                    'tutorials/multi/references.md'        
+        - 'Overview':                      'tutorials/MEEG/multi/overview.md'  
+        - 'Preprocessing':                 'tutorials/MEEG/multi/preprocessing.md'  
+        - 'Evoked analysis':               'tutorials/MEEG/multi/evoked.md'  
+        - 'Time-frequency analysis':       'tutorials/MEEG/multi/timefrequency.md'  
+        - 'fMRI':                          'tutorials/MEEG/multi/fmri.md'  
+        - 'Source':                        'tutorials/MEEG/multi/source.md'  
+        - 'References':                    'tutorials/MEEG/multi/references.md'        
     - 'OPM':
         - 'Getting Started': 'tutorials/opm_preprocessing/index.md'
         - 'Evoked response pipeline': 'tutorials/opm_preprocessing/evoked/introduction.md'
