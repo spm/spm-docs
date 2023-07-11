@@ -102,7 +102,7 @@ window. This opens the window shown below.
 
 <figure>
 <div class="center">
-<img src="../../../assets/figures/manual/multi/figure1.png" style="width:120mm" />
+<img src="../../../../assets/figures/manual/multi/figure1.png" style="width:120mm" />
 </div>
 <figcaption><em>Screenshot of the Batch Editor. The Module List, Current
 Module Window and Current Item Windows are identified. The cursor

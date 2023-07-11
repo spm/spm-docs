@@ -30,11 +30,5 @@
 
     [Optically Pumped Magnetometers](./opm_preprocessing/index.md)
 
--   :material-monitor:{ .lg .middle } __MULTIGROUP__
-
-    ---
-
-    [Group multimodal dataset](./multi/index.md)
-
 
 </div>

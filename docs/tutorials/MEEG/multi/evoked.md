@@ -132,7 +132,7 @@ potentials (relative to average over channels) at the back of the head.
 
 <figure id="multi:fig:2">
 <div class="center">
-<img src="../../../assets/figures/manual/multi/figure2.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/multi/figure2.png" style="width:100mm" />
 </div>
 <figcaption><em>Trial-averaged ERPs for each condition over all EEG
 channel positions on the scalp. <span id="multi:fig:2"
@@ -151,7 +151,7 @@ stage of face processing.
 
 <figure id="multi:fig:3">
 <div class="center">
-<img src="../../../assets/figures/manual/multi/figure3.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/multi/figure3.png" style="width:100mm" />
 </div>
 <figcaption><em>Trial-averaged ERPs for each condition from EEG channel
 70 (right posterior). <span id="multi:fig:3"
@@ -172,7 +172,7 @@ data-reference="multi:fig:4">1.4</a>).
 
 <figure id="multi:fig:4">
 <div class="center">
-<img src="../../../assets/figures/manual/multi/figure4.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/multi/figure4.png" style="width:100mm" />
 </div>
 <figcaption><em>Topography of differential ERP for faces (famous and
 unfamiliar) vs scrambled at 155ms. <span id="multi:fig:4"
@@ -256,7 +256,7 @@ see the changes in topography over time.
 
 <figure id="multi:fig:5">
 <div class="center">
-<img src="../../../assets/figures/manual/multi/figure5.png" style="width:150mm" />
+<img src="../../../../assets/figures/manual/multi/figure5.png" style="width:150mm" />
 </div>
 <figcaption><em>3D Scalp-Time image for 296th trial in the Unfamiliar
 condition. <span id="multi:fig:5"
@@ -393,7 +393,7 @@ data-reference="multi:fig:6">1.6</a>.
 
 <figure id="multi:fig:6">
 <div class="center">
-<img src="../../../assets/figures/manual/multi/figure6.png" style="width:150mm" />
+<img src="../../../../assets/figures/manual/multi/figure6.png" style="width:150mm" />
 </div>
 <figcaption><em>Scalp-Time SPM for F-contrast, thresholded at p&lt;.05
 FWE corrected, for faces vs scrambled faces across trials for one
@@ -422,7 +422,7 @@ further contrasts).
 
 <figure id="multi:fig:7">
 <div class="center">
-<img src="../../../assets/figures/manual/multi/figure7.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/multi/figure7.png" style="width:100mm" />
 </div>
 <figcaption><em>Effects of interest from sub-peak +38mm -62mm +150ms.
 First three bars are mean evoked response amplitude vs baseline for

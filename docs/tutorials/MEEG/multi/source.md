@@ -101,7 +101,7 @@ disks.
 
 <figure id="multi:fig:12">
 <div class="center">
-<img src="../../../assets/figures/manual/multi/figure12.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/multi/figure12.png" style="width:100mm" />
 </div>
 <figcaption><em>Coregistration of meshes with MRI (left) and meshes with
 MEG (right). <span id="multi:fig:12"
@@ -212,7 +212,7 @@ version.
 
 <figure id="multi:fig:13">
 <div class="center">
-<img src="../../../assets/figures/manual/multi/figure13.png" style="width:150mm" />
+<img src="../../../../assets/figures/manual/multi/figure13.png" style="width:150mm" />
 </div>
 <figcaption><em>Maximal Intensity Projection (MIP) for Minimum Norm
 (IID) inversion of Subject 15’s fused EEG and MEG data. <span
@@ -326,7 +326,7 @@ section.
 
 <figure id="multi:fig:14">
 <div class="center">
-<img src="../../../assets/figures/manual/multi/figure14.png" style="width:150mm" />
+<img src="../../../../assets/figures/manual/multi/figure14.png" style="width:150mm" />
 </div>
 <figcaption><em>Group SPM for Faces vs Scrambled power on cortical mesh
 between 10-20Hz and 100-250ms across all 16 subjects at <span
@@ -413,7 +413,7 @@ that for the individual MSP inversions the `MEEG/IndMSPStats` directory
 
 <figure id="multi:fig:15">
 <div class="center">
-<img src="../../../assets/figures/manual/multi/figure15.png" style="width:150mm" />
+<img src="../../../../assets/figures/manual/multi/figure15.png" style="width:150mm" />
 </div>
 <figcaption><em>Group SPM for Faces vs Scrambled power on cortical mesh
 between 10-20Hz and 100-250ms across all 16 subjects at <span
@@ -508,7 +508,7 @@ data-reference="multi:fig:11">1.11</a>, at $p<.001$ uncorrected).
 
 <figure id="multi:fig:16">
 <div class="center">
-<img src="../../../assets/figures/manual/multi/figure16.png" style="width:150mm" />
+<img src="../../../../assets/figures/manual/multi/figure16.png" style="width:150mm" />
 </div>
 <figcaption><em>Group SPM for Faces vs Scrambled power on cortical mesh
 between 10-20Hz and 100-250ms across all 16 subjects at <span

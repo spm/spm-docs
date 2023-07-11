@@ -272,7 +272,7 @@ medial temporal lobe.
 
 <figure id="multi:fig:11">
 <div class="center">
-<img src="../../../assets/figures/manual/multi/figure11.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/multi/figure11.png" style="width:100mm" />
 </div>
 <figcaption><em>Group SPM for Faces vs Scrambled fMRI data at <span
 class="math inline"><em>p</em> &lt; .05</span> FWE-corrected. <span

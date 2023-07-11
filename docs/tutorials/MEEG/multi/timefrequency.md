@@ -119,7 +119,7 @@ well as their power).
 
 <figure id="multi:fig:8">
 <div class="center">
-<img src="../../../assets/figures/manual/multi/figure8.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/multi/figure8.png" style="width:100mm" />
 </div>
 <figcaption><em>Trial-averaged power for faces &gt; scrambled in EEG
 channel 70 (right posterior). <span id="multi:fig:8"
@@ -128,7 +128,7 @@ label="multi:fig:8"></span></em></figcaption>
 
 <figure id="multi:fig:9">
 <div class="center">
-<img src="../../../assets/figures/manual/multi/figure9.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/multi/figure9.png" style="width:100mm" />
 </div>
 <figcaption><em>Trial-averaged PLV for faces &gt; scrambled in EEG
 channel 70 (right posterior). <span id="multi:fig:9"
@@ -321,7 +321,7 @@ a decrease in the beta range,  22Hz, 475ms).
 
 <figure id="multi:fig:10">
 <div class="center">
-<img src="../../assets/figures/manual/multi/figure10.png" style="width:120mm" />
+<img src="../../../../assets/figures/manual/multi/figure10.png" style="width:120mm" />
 </div>
 <figcaption><em>Time-Frequency SPM for T-contrast of greater power for
 faces than scrambled faces across subjects, thresholded at <span
