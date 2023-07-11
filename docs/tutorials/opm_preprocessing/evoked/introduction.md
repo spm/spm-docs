@@ -1,4 +1,4 @@
-# Evoked response pipeline
+# Sensor level: Evoked response pipeline
 
 ## Introduction
 
