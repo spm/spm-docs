@@ -1352,8 +1352,8 @@ M170 again.
 
 <figure id="multimodal:fig:13">
 <div class="center">
-<p><img src="../../../assets/figures/manual/multimodal/meg_pow_faces.png" style="width:60mm"
-alt="image" /> <img src="../../../assets/figures/manual/multimodal/meg_pow_scrambled.png"
+<p><img src="../../../../assets/figures/manual/multimodal/meg_pow_faces.png" style="width:60mm"
+alt="image" /> <img src="../../../../assets/figures/manual/multimodal/meg_pow_scrambled.png"
 style="width:60mm" alt="image" /></p>
 </div>
 <figcaption><em>Total power spectra for faces (left) and scrambled faces
@@ -1396,8 +1396,8 @@ the alpha range (Henson et al, 2005b).
 
 <figure id="multimodal:fig:14">
 <div class="center">
-<p><img src="../../../assets/figures/manual/multimodal/meg_plv_faces.png" style="width:60mm"
-alt="image" /> <img src="../../../assets/figures/manual/multimodal/meg_plv_scrambled.png"
+<p><img src="../../../../assets/figures/manual/multimodal/meg_plv_faces.png" style="width:60mm"
+alt="image" /> <img src="../../../../assets/figures/manual/multimodal/meg_plv_scrambled.png"
 style="width:60mm" alt="image" /></p>
 </div>
 <figcaption><em>Phase-Locking Values for faces (left) and scrambled
@@ -1431,7 +1431,7 @@ in the subdirectories `1ROI_TF_trialtype_faces` and
 
 <figure id="multimodal:fig:15">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/meg_TFimage.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/multimodal/meg_TFimage.png" style="width:100mm" />
 </div>
 <figcaption><em>3D image for trial 2 within
 <code>1ROI_TF_trialtype_faces</code> subdirectory. The bottom left
@@ -1480,7 +1480,7 @@ data-reference="multimodal:fig:16">1.16</a>.
 
 <figure id="multimodal:fig:16">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/meg_TF_results.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/multimodal/meg_TF_results.png" style="width:100mm" />
 </div>
 <figcaption><em>2D time-frequency SPM<span>T</span> at <span
 class="math inline"><em>p</em> &lt; .05</span> FWE-corrected for the
@@ -1567,7 +1567,7 @@ which the X and Y dimensions are swapped relative to MNI space.
 
 <figure id="multimodal:fig:17">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/meg_coreg.png" style="width:70mm" />
+<img src="../../../../assets/figures/manual/multimodal/meg_coreg.png" style="width:70mm" />
 </div>
 <figcaption><em>Graphical output of registration of MEG and sMRI data,
 showing (upper panel) cortex (blue) and scalp (black) meshes, sensor
@@ -1609,7 +1609,7 @@ faces).
 
 <figure id="multimodal:fig:18">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/meg_msp.png" style="width:90mm" />
+<img src="../../../../assets/figures/manual/multimodal/meg_msp.png" style="width:90mm" />
 </div>
 <figcaption><em>Graphic output for MSP-estimated activity at 159ms for
 faces.<span id="multimodal:fig:18"
@@ -1816,7 +1816,7 @@ revision).
 
 <figure id="multimodal:fig:22">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/fmri_faces_vs_scrambled.png"
+<img src="../../../../assets/figures/manual/multimodal/fmri_faces_vs_scrambled.png"
 style="width:150mm" />
 </div>
 <figcaption><em>SPM{F} for faces vs scrambled faces.<span
@@ -1941,7 +1941,7 @@ covariance terms for each modality.
 
 <figure id="multimodal:fusion:fig:1">
 <div class="center">
-<img src="../../../assets/figures/manual/multimodal/fused_eeg_meg_msp.png"
+<img src="../../../../assets/figures/manual/multimodal/fused_eeg_meg_msp.png"
 style="width:90mm" />
 </div>
 <figcaption><em>Graphical output of an MSP estimation of the
@@ -1965,7 +1965,7 @@ previous sections of this chapter. For a fairer comparison:
 
   <figure id="multimodal:fusion:fig:2">
   <div class="center">
-  <img src="../../../assets/figures/manual/multimodal/fused_eeg_msp.png" style="width:90mm" />
+  <img src="../../../../assets/figures/manual/multimodal/fused_eeg_msp.png" style="width:90mm" />
   </div>
   <figcaption><em>Graphical output of an MSP estimation of the
   differential evoked response between faces and scrambled faces at 180ms,
@@ -1983,7 +1983,7 @@ previous sections of this chapter. For a fairer comparison:
 
   <figure id="multimodal:fusion:fig:3">
   <div class="center">
-  <img src="../../../assets/figures/manual/multimodal/fused_meg_msp.png" style="width:90mm" />
+  <img src="../../../../assets/figures/manual/multimodal/fused_meg_msp.png" style="width:90mm" />
   </div>
   <figcaption><em>Graphical output of an MSP estimation of the
   differential evoked response between faces and scrambled faces at 180ms,
@@ -2090,7 +2090,7 @@ Now we can use this cluster image in a new inversion:
 
   <figure id="multimodal:fusion:fig:4">
   <div class="center">
-  <img src="../../../assets/figures/manual/multimodal/fused_eeg_meg_msp_fmri.png"
+  <img src="../../../../assets/figures/manual/multimodal/fused_eeg_meg_msp_fmri.png"
   style="width:90mm" />
   </div>
   <figcaption><em>Graphical output of an MSP estimation of the
