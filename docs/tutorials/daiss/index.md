@@ -1,6 +1,6 @@
 # DAiSS
 ## Introduction
-DAiSS (**D**ata **A**nalysis **i**n **S**ource **S**pace) is an SPM M/EEG toolbox which allows users perform source analyses using "classical" source methods (such as Minimum Norm Estimation, Beamforming etc). DAiSS supplements the [variational Bayesian source methods](../meg_sloc/meg_sloc.md) found in the core of SPM and might be useful for users who have a specific methodology they want to apply to their data, rather than use a prescribed generative model.
+DAiSS (**D**ata **A**nalysis **i**n **S**ource **S**pace) is an SPM M/EEG toolbox which allows users perform source analyses using "classical" source methods (such as Minimum Norm Estimation, Beamforming etc). DAiSS supplements the [variational Bayesian source methods](../MEEG/meg_sloc.md) found in the core of SPM and might be useful for users who have a specific methodology they want to apply to their data, rather than use a prescribed generative model.
 
 ### DAiSS Workflow
 

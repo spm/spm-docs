@@ -55,9 +55,11 @@ Now we have an empty MEG dataset, we need to simulate the activity originating f
 
     Start the batch editor (`Batch` button) on main panel. Then from the dropdown menu SPM: select `M/EEG -> Source reconstruction -> Simulation of sources`. You will see the following menu:
 
-    <figure id="daiss_beamfrorm:fig:1">
-    ![](../../../assets/figures/daiss/beamforming/opm_data_sim_batch.png){width=75%}
-    <figcaption><em>The simulation batch options</em></figcaption>
+    <figure>
+        <div class="center">
+        <img src="../../../assets/figures/daiss/beamforming/opm_data_sim_batch.png" style="width:100mm" />
+        </div>
+        <figcaption>The simulation batch options</figcaption>
     </figure>
 
     In this example, most of the settings can be left on their defaults for this exercise, but a few have been edited. First the time window has been set to `[0 500]` ms and the SNR has been lowered to `-20` dB. 
@@ -97,9 +99,11 @@ After preprocessing the data, it is ready to enter the DAiSS pipeline. We want t
 
     Most of the options can be left on their defaults for this example. 
 
-    <figure id="daiss_beamfrorm:fig:2">
-    ![](../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_data.png){width=75%}
-    <figcaption><em>The DAiSS Data batch options</em></figcaption>
+    <figure>
+        <div class="center">
+        <img src="../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_data.png" style="width:100mm" />
+        </div>
+        <figcaption>The DAiSS Data batch options</figcaption>
     </figure>
 
 === "Script"
@@ -132,9 +136,11 @@ The `sources` module of DAiSS has two roles. First to specify where our sources 
     
     Start the batch editor (`Batch` button) on main panel. Then from the dropdown menu `SPM` select `Tools -> DAiSS (beamforming) -> Define sources`. You will see the following menu:
 
-    <figure id="daiss_beamfrorm:fig:3">
-    ![](../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_sources.png){width=75%}
-    <figcaption><em>The DAiSS Sources batch options</em></figcaption>
+    <figure>
+        <div class="center">
+        <img src="../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_sources.png" style="width:100mm" />
+        </div>
+        <figcaption>The DAiSS Sources batch options</figcaption>
     </figure>
 
 === "Script"
@@ -164,9 +170,11 @@ With the forward model computed, (the $l$ in our beamformer equation) we can now
 
     Start the batch editor (`Batch` button) on main panel. Then from the dropdown menu `SPM` select `Tools -> DAiSS (beamforming) -> Covariance features`. You will see the following menu:
 
-    <figure id="daiss_beamfrorm:fig:4">
-    ![](../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_features.png){width=75%}
-    <figcaption><em>The DAiSS Features batch options</em></figcaption>
+    <figure>
+        <div class="center">
+        <img src="../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_features.png" style="width:100mm" />
+        </div>
+        <figcaption>The DAiSS Features batch options</figcaption>
     </figure>
 
 === "Script"
@@ -200,9 +208,11 @@ This is the point where the beamforming calculation happens. Having calculated o
 
     Start the batch editor (`Batch` button) on main panel. Then from the dropdown menu `SPM` select `Tools -> DAiSS (beamforming) -> Inverse solution`. You will see the following menu:
 
-    <figure id="daiss_beamfrorm:fig:5">
-    ![](../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_inverse.png){width=75%}
-    <figcaption><em>The DAiSS Inverse batch options</em></figcaption>
+    <figure>
+        <div class="center">
+        <img src="../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_inverse.png" style="width:100mm" />
+        </div>
+        <figcaption>The DAiSS Inverse batch options</figcaption>
     </figure>
 
 === "Script"
@@ -225,9 +235,11 @@ With the source weight vectors calculated, we can now estimate the power for a g
 
     Start the batch editor (`Batch` button) on main panel. Then from the dropdown menu `SPM` select `Tools -> DAiSS (beamforming) -> Output`. You will see the following menu:
 
-    <figure id="daiss_beamfrorm:fig:5">
-    ![](../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_output.png){width=75%}
-    <figcaption><em>The DAiSS Output batch options</em></figcaption>
+    <figure>
+        <div class="center">
+        <img src="../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_output.png" style="width:100mm" />
+        </div>
+        <figcaption>The DAiSS Output batch options</figcaption>
     </figure>
 
 === "Script"
@@ -258,9 +270,11 @@ Before writing out the results to disk, it is possible to plot some outputs. `im
 
     Start the batch editor (`Batch` button) on main panel. Then from the dropdown menu `SPM` select `Tools -> DAiSS (beamforming) -> View`. You will see the following menu:
 
-    <figure id="daiss_beamfrorm:fig:5">
-    ![](../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_view.png){width=75%}
-    <figcaption><em>The DAiSS View options</em></figcaption>
+    <figure>
+        <div class="center">
+        <img src="../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_view.png" style="width:100mm" />
+        </div>
+        <figcaption>The DAiSS View options</figcaption>
     </figure>
 
 === "Code"
@@ -280,20 +294,20 @@ Before writing out the results to disk, it is possible to plot some outputs. `im
 If all has gone well, then we should see two sources originating from apprimately the primary auditory cortices!
 
 
-<figure markdown>
-<p align="center">
-<img width="75%" src="../../../assets/figures/daiss/beamforming/view_glass_brain.png">
-</p>
-<figcaption><em>Glass brain plot of reconstructed power</em></figcaption>
+<figure>
+    <div class="center">
+    <img src="../../../assets/figures/daiss/beamforming/view_glass_brain.png" style="width:100mm" />
+    </div>
+    <figcaption>Glass brain plot of reconstructed power</figcaption>
 </figure>
 
 ??? failure "Help! All my power is in the centre of the brain!"
     Does your power image look like below?
 
-    <figure markdown>
-    <p align="center">
-    <img width="50%" src="../../../assets/figures/daiss/beamforming/view_glass_brain_bad.png">
-    </p>
+    <figure>
+    <div class="center">
+    <img src="../../../assets/figures/daiss/beamforming/view_glass_brain_bad.png" style="width:100mm" />
+    </div>
     </figure>
 
     This can happen if you do not depth normalise your beamformed data. When generating the power image, ensure the depth correction is turned on using `S.image_power.scale = 1;` when using code or set the option of `unit-noise-gain` to `yes` in the batch.
@@ -301,7 +315,7 @@ If all has gone well, then we should see two sources originating from apprimatel
 
 ## Exporting results 
 
-We can now export the power image as a NIFTI file so it can be shared with other software, or entered into a second-level group analysis in SPM with other subjects.
+We can now export the power image as a NIfTI file so it can be shared with other software, or entered into a second-level group analysis in SPM with other subjects.
 
 === "GUI"
 

@@ -88,40 +88,40 @@ nav:
         - 'Image processing':     'tutorials/vbm/VBM-image-processing.md'
         - 'Statistical analysis': 'tutorials/vbm/VBM-statistical-analysis.md'
     - 'M/EEG':
-      - 'Getting Started': 'tutorials/MEEG/index.md'
-      - 'EEG Mismatch negativity data': tutorials/MEEG/mmn.md
-      - 'M/EEG Convolution modelling': tutorials/MEEG/meeg_firstlevel.md
-      - 'MEG Source localisation': tutorials/MEEG/meg_sloc.md
+      - 'Getting Started':              'tutorials/MEEG/index.md'
+      - 'EEG Mismatch negativity data': 'tutorials/MEEG/mmn/index.md'
+      - 'M/EEG Convolution modelling':  'tutorials/MEEG/meeg_firstlevel.md'
+      - 'MEG Source localisation':      'tutorials/MEEG/meg_sloc.md'
       - 'Multimodal':
-        - 'Introduction': tutorials/MEEG/multimodal/overview.md
-        - 'EEG': tutorials/MEEG/multimodal/eeg.md
-        - 'MEG': tutorials/MEEG/multimodal/meg.md
-        - 'fMRI': tutorials/MEEG/multimodal/fmri.md
-        - 'Fusion': tutorials/MEEG/multimodal/fusion.md
+        - 'Introduction': 'tutorials/MEEG/multimodal/index.md'
+        - 'EEG':          'tutorials/MEEG/multimodal/eeg.md'
+        - 'MEG':          'tutorials/MEEG/multimodal/meg.md'
+        - 'fMRI':         'tutorials/MEEG/multimodal/fmri.md'
+        - 'Fusion':       'tutorials/MEEG/multimodal/fusion.md'
       - 'Multimodal, multisubject data fusion':
-        - 'Overview':                      'tutorials/MEEG/multi/overview.md'  
-        - 'Preprocessing':                 'tutorials/MEEG/multi/preprocessing.md'  
-        - 'Evoked analysis':               'tutorials/MEEG/multi/evoked.md'  
-        - 'Time-frequency analysis':       'tutorials/MEEG/multi/timefrequency.md'  
-        - 'fMRI':                          'tutorials/MEEG/multi/fmri.md'  
-        - 'Source':                        'tutorials/MEEG/multi/source.md'  
-        - 'References':                    'tutorials/MEEG/multi/references.md'        
+        - 'Overview':                'tutorials/MEEG/multi/index.md'  
+        - 'Preprocessing':           'tutorials/MEEG/multi/preprocessing.md'  
+        - 'Evoked analysis':         'tutorials/MEEG/multi/evoked.md'  
+        - 'Time-frequency analysis': 'tutorials/MEEG/multi/timefrequency.md'  
+        - 'fMRI':                    'tutorials/MEEG/multi/fmri.md'  
+        - 'Source':                  'tutorials/MEEG/multi/source.md'  
+        - 'References':              'tutorials/MEEG/multi/references.md'        
     - 'OPM':
-        - 'Getting Started': 'tutorials/opm_preprocessing/index.md'
+        - 'Getting Started':               'tutorials/opm_preprocessing/index.md'
         - 'Sensor Level: Evoked response': 'tutorials/opm_preprocessing/evoked/introduction.md'
-        - 'Optical Co-registration': 'tutorials/opm_preprocessing/e_source/e_source.md'       
+        - 'Optical Co-registration':       'tutorials/opm_preprocessing/e_source/e_source.md'       
     - 'DCM':
-        - 'Overview of DCM':          'tutorials/dcm/index.md'
-        - 'DCM for fMRI - 1st level': 'tutorials/dcm/dcm_fmri_first_level.md'
-        - 'DCM for fMRI - 2nd level': 'tutorials/dcm/dcm_fmri_second_level.md'
-        - 'DCM for Evoked Responses': tutorials/dcm/dcm_erp.md
-        - 'DCM for Induced Responses': tutorials/dcm/dcm_ir.md
-        - 'DCM for Phase Coupling': tutorials/dcm/dcm_phase.md
-        - 'DCM for Steady State Responses': tutorials/dcm/dcm_ssr.md
-        - 'DCM for Cross-Spectral Densities': tutorials/dcm/dcm_csd.md    
+        - 'Overview of DCM':                  'tutorials/dcm/index.md'
+        - 'DCM for fMRI - 1st level':         'tutorials/dcm/dcm_fmri_first_level.md'
+        - 'DCM for fMRI - 2nd level':         'tutorials/dcm/dcm_fmri_second_level.md'
+        - 'DCM for Evoked Responses':         'tutorials/dcm/dcm_erp.md'
+        - 'DCM for Induced Responses':        'tutorials/dcm/dcm_ir.md'
+        - 'DCM for Phase Coupling':           'tutorials/dcm/dcm_phase.md'
+        - 'DCM for Steady State Responses':   'tutorials/dcm/dcm_ssr.md'
+        - 'DCM for Cross-Spectral Densities': 'tutorials/dcm/dcm_csd.md'    
     - 'DAiSS':
-      - 'Overview of DAiSS':                'tutorials/daiss/index.md'
-      - 'Beamforming':             'tutorials/daiss/daiss_beamforming.md'
+      - 'Overview of DAiSS': 'tutorials/daiss/index.md'
+      - 'Beamforming':       'tutorials/daiss/daiss_beamforming.md'
           
   - 'Manual':
     - 'Auditory fMRI data': manual/auditory/auditory.md
