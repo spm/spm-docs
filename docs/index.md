@@ -13,13 +13,13 @@ The SPM software package has been designed for the analysis of brain imaging dat
 
 <div class="grid cards" markdown>
 
--   :material-lock-open:{ .lg .middle } __Open-access__
+-   :material-lock-open:{ .lg .middle } __Open Source__
 
     ---
 
     SPM is an academic free and open source software, released under the terms of the GPL.
 
-    [:octicons-arrow-right-24: Download here ](https://www.fil.ion.ucl.ac.uk/spm/software/download/)
+    [:octicons-arrow-right-24: Installation ](installation/)
 
 -   :material-monitor:{ .lg .middle } __Educational materials__
 
@@ -53,12 +53,12 @@ The SPM suite and associated theory was originally developed by [Karl Friston](h
 
 SPM'94 was the first major revision of the SPM software. SPM'94 was written primarily by [Karl Friston](https://www.fil.ion.ucl.ac.uk/~karl/) during the summer of 1994, with invaluable conceptual and technical help from [John Ashburner](https://www.fil.ion.ucl.ac.uk/~john/), Jon Heather, Andrew Holmes and Jean-Baptiste Poline. SPM'95, [SPM'96](https://www.fil.ion.ucl.ac.uk/spm/software/spm96/), [SPM'99](https://www.fil.ion.ucl.ac.uk/spm/software/spm99/), [SPM2](https://www.fil.ion.ucl.ac.uk/spm/software/spm2/), [SPM5](https://www.fil.ion.ucl.ac.uk/spm/software/spm5/), [SPM8](https://www.fil.ion.ucl.ac.uk/spm/software/spm8/) and [SPM12](https://www.fil.ion.ucl.ac.uk/spm/software/spm12/) are based on SPM'94, and represent the ongoing theoretical advances and technical improvements.
 
-## Further reading
+!!! abstract "Further reading"
 
-[Penny, W., Friston, K., Ashburner, J., Kiebel, S., & Nichols, T. (2006). *Statistical parametric mapping: The analysis of functional brain images*.](https://www.fil.ion.ucl.ac.uk/spm/doc/#books)
+    [Penny, W., Friston, K., Ashburner, J., Kiebel, S., & Nichols, T. (2006). *Statistical parametric mapping: The analysis of functional brain images*.](https://www.fil.ion.ucl.ac.uk/spm/doc/#books)
 
-[Friston, K.J. *A short history of statistical parametric mapping in functional neuroimaging*.](https://www.fil.ion.ucl.ac.uk/spm/doc/history.html)
+    [Friston, K.J. *A short history of statistical parametric mapping in functional neuroimaging*.](https://www.fil.ion.ucl.ac.uk/spm/doc/history.html)
 
-[Ashburner, J. (2012). *SPM: A history*.](https://doi.org/10.1016/j.neuroimage.2011.10.025)
+    [Ashburner, J. (2012). *SPM: A history*.](https://doi.org/10.1016/j.neuroimage.2011.10.025)
 
 --8<-- "addons/abbreviations.md"
