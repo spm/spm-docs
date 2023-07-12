@@ -23,7 +23,7 @@ We now must mark a number of fiducial points on our meshes. We will need to mark
 4. 3 point on the corresponding mesh file with the head and helmet present
 
 
-##  optical co-registration 
+##  Optical co-registration 
 The optical co-registration requires that the head shape file `S.headfile` be provided in any format that the `gifti` function supports as well as the 4 sets of fiducial points. Note that the fiducial points are provided to the functions in row order.
  
 ```matlab
