@@ -85,8 +85,8 @@ nav:
       - 'Bayesian Analysis':     'tutorials/faces/bayesian.md'
     - 'VBM':
         - 'Getting started':      'tutorials/vbm/index.md'
-        - 'Image processing':     'tutorials/vbm/VBM-image-processing.md'
-        - 'Statistical analysis': 'tutorials/vbm/VBM-statistical-analysis.md'
+        - 'Image processing':     'tutorials/vbm/image_processing.md'
+        - 'Statistical analysis': 'tutorials/vbm/statistical_analysis.md'
     - 'M/EEG':
       - 'Getting Started':              'tutorials/MEEG/index.md'
       - 'EEG Mismatch negativity data': 'tutorials/MEEG/mmn/index.md'
