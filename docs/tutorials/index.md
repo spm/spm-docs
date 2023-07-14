@@ -28,7 +28,7 @@
 
     ---
 
-    [Optically Pumped Magnetometers](./opm_preprocessing/index.md)
+    [Optically Pumped Magnetometers](./opm/index.md)
 
 
 </div>
