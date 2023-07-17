@@ -36,7 +36,7 @@ ylim([1,1e5])
 
 <figure markdown>
   <div class="center">
-    <img src="../../../../assets/figures/opm/raw_psd.png" style="width:160mm" />
+    <img src="../../../assets/figures/opm/raw_psd.png" style="width:160mm" />
   </div>
   <figcaption>Power Spectral Density</figcaption>
 </figure>
@@ -135,7 +135,7 @@ ylim([1,1e5])
 
 <figure markdown>
   <div class="center">
-    <img src="../../../../assets/figures/opm/processed_psd.png" style="width:160mm" />
+    <img src="../../../assets/figures/opm/processed_psd.png" style="width:160mm" />
   </div>
   <figcaption>processed PSD</figcaption>
 </figure>
@@ -147,7 +147,7 @@ If you can spot any channels in the PSD that are behaving differently to other c
 
 <figure markdown>
   <div class="center">
-    <img src="../../../../assets/figures/opm/badchannel_psd.png" style="width:160mm" />
+    <img src="../../../assets/figures/opm/badchannel_psd.png" style="width:160mm" />
   </div>
   <figcaption>Bad Channels</figcaption>
 </figure>
@@ -207,7 +207,7 @@ xlim([0,.250])
 ```
 <figure markdown>
   <div class="center">
-    <img src="../../../../assets/figures/opm/evoked_field.png" style="width:160mm" />
+    <img src="../../../assets/figures/opm/evoked_field.png" style="width:160mm" />
   </div>
   <figcaption>Evoked field</figcaption>
 </figure>
@@ -235,7 +235,7 @@ caxis([-150, 150])
 ``` 
 <figure markdown>
   <div class="center">
-    <img src="../../../../assets/figures/opm/90ms.png" style="width:160mm" />
+    <img src="../../../assets/figures/opm/90ms.png" style="width:160mm" />
   </div>
   <figcaption>Radial evoked field pattern</figcaption>
 </figure>

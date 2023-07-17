@@ -23,7 +23,7 @@ We now must mark a number of fiducial points on our meshes. We will need to mark
 4. 3 point on the corresponding mesh file with the head and helmet present
 
 
-##  Optical co-registration 
+##  Optical Co-registration to a template
 The optical co-registration requires that the head shape file `S.headfile` be provided in any format that the `gifti` function supports as well as the 4 sets of fiducial points. Note that the fiducial points are provided to the functions in row order.
  
 ```matlab
@@ -58,7 +58,7 @@ If the co-registration works we should get an image of a brain within the sensor
 
 <figure markdown>
   <div class="center">
-    <img src="../../../../assets/figures/opm/coreg.png" style="width:160mm" />
+    <img src="../../../assets/figures/opm/coreg.png" style="width:160mm" />
   </div>
   <figcaption>Template Coregistration</figcaption>
 </figure>
