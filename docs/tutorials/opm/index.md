@@ -4,7 +4,7 @@ An optically pumped magnetometer is a type of MEG sensor that does not require c
 
 <figure markdown>
   <div class="center">
-    <img src="../../assets/figures/opm/Logo.png" style="width:160mm" />
+    <img src="../../assets/figures/opm/Logo.png" style="width:120mm" />
   </div>
 </figure>
 
