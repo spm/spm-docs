@@ -109,7 +109,7 @@ nav:
     - 'OPM':
         - 'Getting Started':               'tutorials/opm/index.md'
         - 'Sensor Level: Evoked response': 'tutorials/opm/evoked/index.md'
-        - 'Coregisration':       'tutorials/opm/coreg/index.md'       
+        - 'Coregistration':                'tutorials/opm/coreg/index.md'       
     - 'DCM':
         - 'Overview of DCM':                  'tutorials/dcm/index.md'
         - 'DCM for fMRI - 1st level':         'tutorials/dcm/dcm_fmri_first_level.md'
