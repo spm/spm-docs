@@ -182,7 +182,7 @@ eD = spm_eeg_bc(S);
 
 ## Averaging
 
-We can now average across our trials and compute our t-statistic. The function `spm_eeg_average` has 1 key argument: `S.D`. We can then plot the average response for all channels trivially. 
+We can now compute our evoked response by averaging across trials. The function `spm_eeg_average` has 1 key argument: `S.D`. We can then plot the average response for all channels. 
 
 ```matlab
 S=[];
@@ -217,7 +217,7 @@ xlim([0,.250])
 ## Topoplots
 
 Displaying OPM topographies is non trivial for 2 reasons:
-  1. For small channel arrays 2D representations of 3D may not look very good.
+  1. For small channel arrays 2D representations of 3D data may not look very good.
   2. OPMs measure multiple components of the magnetic field at the same point in space and the sampled  field pattern is not necessarily smooth. 
   
  As such for now we will only display the radial component of the magnetic field measurement(which is a smooth interpretable field). We can do this with `spm_opm_plotScalpData` and we will initially look at the peak around 70ms. 
