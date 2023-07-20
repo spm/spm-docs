@@ -1,7 +1,8 @@
-# Optical Co-registration 
-When we do not have an MRI for a participant we can register the MNI template scalp to the participant's head shape. We will then register the  head shape to the helmet and subsequently to the sensor positions.
+# Co-registration 
+Co-registration refers to the process of working out the position of the OPM sensors relative to the brain. There are many factors that influence this process. For instance, are you using a generic helmet or a subject specific helmet? Do you have an MRI of the participant or do you wish to use a template MRI? Do you have fiducial points or do have head-shape points from an optical scan?  
 
-## Reading the data 
+## Co-registration to a template with an optical scanner 
+When we do not have an MRI for a participant we can register the MNI template scalp to the participant's head shape. We will then register the  head shape to the helmet and subsequently to the sensor positions.
 We first start by reading the data as we normally would.
 
 ```matlab
@@ -13,8 +14,6 @@ S.data ='OPM_meg_001.cMEG';
 S.positions= 'OPM_HelmConfig.tsv';
 D = spm_opm_create(S);
 ```
-
-## Reading and marking the meshes 
 We now must mark a number of fiducial points on our meshes. We will need to mark 
 
 1. 3 points on the helmet file (which contains sensor positions) 
@@ -22,9 +21,7 @@ We now must mark a number of fiducial points on our meshes. We will need to mark
 3. 3 points on the head shape mesh 
 4. 3 point on the corresponding mesh file with the head and helmet present
 
-
-##  Optical Co-registration to a template
-The optical co-registration requires that the head shape file `S.headfile` be provided in any format that the `gifti` function supports as well as the 4 sets of fiducial points. Note that the fiducial points are provided to the functions in row order.
+Once the points are marked we can do the registration. The  co-registration requires that the head shape file `S.headfile` be provided in any format that the `gifti` function supports as well as the 4 sets of fiducial points we have marked. Note that the fiducial points are provided to the functions in row order.
  
 ```matlab
 S=[];
@@ -62,6 +59,11 @@ If the co-registration works we should get an image of a brain within the sensor
   </div>
   <figcaption>Template Coregistration</figcaption>
 </figure>
+
+
+## Co-registration to an MRI with an optical scanner 
+
+## Co-registration using subject specific helmets
 
 
 --8<-- "addons/abbreviations.md"
