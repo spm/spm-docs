@@ -2,7 +2,16 @@
 Co-registration refers to the process of working out the position of the OPM sensors relative to the brain. There are many factors that influence this process. For instance, are you using a generic helmet or a subject specific helmet? Do you have an MRI of the participant or do you wish to use a template MRI? Do you have fiducial points or do have head-shape points from an optical scan?  
 
 ## Co-registration to a template with an optical scanner 
-When we do not have an MRI for a participant we can register the MNI template scalp to the participant's head shape. We will then register the  head shape to the helmet and subsequently to the sensor positions.
+When we do not have an MRI for a participant we can register the MNI template scalp to the participant's head shape. We will then register the  head shape to the helmet and subsequently to the sensor positions. The figure below graphically shows the order of registration.
+
+<figure markdown>
+  <div class="center">
+    <img src="../../../assets/figures/opm/coreg_template.png" style="width:160mm" />
+  </div>
+</figure>
+
+
+
 We first start by reading the data as we normally would.
 
 ```matlab
