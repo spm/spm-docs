@@ -171,6 +171,5 @@ or change PATH accordingly.
 
 ### Slowdown when using graphical inputs
 
-This can be due to a window manager for Mac called
-[Magnet](https://magnet.crowdcafe.com/), see
+This seems to happen when a window manager for macOS is installed ([Magnet](https://magnet.crowdcafe.com/) or [Tiles](https://freemacsoft.net/tiles/)), see also
 [this](https://www.mathworks.com/matlabcentral/answers/475682).
