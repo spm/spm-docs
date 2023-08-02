@@ -6,11 +6,11 @@
 [![Tests](https://github.com/spm/spm-docs/actions/workflows/linting.yml/badge.svg)](https://github.com/spm/spm-docs/actions/workflows/linting.yml)
 [![Tests](https://github.com/spm/spm-docs/actions/workflows/linkcheck.yml/badge.svg)](https://github.com/spm/spm-docs/actions/workflows/linkcheck.yml)
 
-This repository contains the documentation of the [SPM software](https://github.com/spm/spm). It is built using [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), a theme for the static site generator [MkDocs](https://www.mkdocs.org/).
+This repository contains the [documentation](https://www.fil.ion.ucl.ac.uk/spm/docs/) of the [SPM software](https://github.com/spm/spm). It is built using [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), a theme for the static site generator [MkDocs](https://www.mkdocs.org/).
 
 All the features of Material for MkDocs are described in its [reference documentation](https://squidfunk.github.io/mkdocs-material/reference/). We are [sponsoring](https://github.com/orgs/spm/sponsoring) the project and therefore have access to all of the [Insiders features](https://squidfunk.github.io/mkdocs-material/insiders/).
 
-> :warning: This repository contains all the files used to generate the SPM documentation. This is therefore the place to make some edits and modifications to the documentation. If you only want to read the documentation, please have a look at [TBA](#).
+> :warning: This repository contains all the files used to generate the SPM documentation. This is therefore the place to make some edits and modifications to the documentation. If you only want to read the documentation, please have a look [here](https://www.fil.ion.ucl.ac.uk/spm/docs/).
 
 ## :skier: Getting started
 
