@@ -1,5 +1,6 @@
 # :notebook_with_decorative_cover: SPM Documentation :wave:
 
+[![SPM: docs](https://img.shields.io/badge/SPM-docs-blue.svg)](https://www.fil.ion.ucl.ac.uk/spm/docs/)
 [![License: CC-BY-SA-4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [![Tests](https://github.com/spm/spm-docs/actions/workflows/build.yml/badge.svg)](https://github.com/spm/spm-docs/actions/workflows/build.yml)
 [![Tests](https://github.com/spm/spm-docs/actions/workflows/spelling.yml/badge.svg)](https://github.com/spm/spm-docs/actions/workflows/spelling.yml)
