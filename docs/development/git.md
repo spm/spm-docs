@@ -107,6 +107,18 @@ To apply this setting from GitHub Desktop, you need to open the command prompt b
 !!! note "Enforcing a linear commit history"
     Note that the option to [require a linear history](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches#require-linear-history) has been enabled on the SPM repository. This prevents from pushing merge commits to the main branch.
 
+### Git autostash
+
+Pull with rebase will fail if you have unstaged changes. One way around this if you're not ready to commit your changes is to stash the changed before doing a pull (`git stash`) and then restore then (`git stash pop`) afterwards. This can be automated by using the `autostash` option of `git rebase`.
+
+```
+git config --global rebase.autoStash true
+```
+
+This is equivalent to using `git fetch` followed by `git rebase --autostash` (or `git stash`, `git pull`, `git stash pop`).
+
+As before, to apply this setting from GitHub Desktop, you need to open the command prompt by selecting ++"Repository"++ then ++"Open in Command Prompt"++ from the top menu and enter the above command line.
+
 ## Clone the SPM repository
 
 Follow [these instructions](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop) with the SPM repository: [https://github/spm/spm](https://github/spm/spm)
@@ -121,6 +133,8 @@ From the command line, the equivalent is:
 ```
 git clone git@github.com:spm/spm.git
 ```
+
+For Linux users, authentication will require [SSH key generation](ssh_authentication.md).
 
 ## Git Commits
 
