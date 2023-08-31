@@ -16,7 +16,39 @@ In short the general formatting guidelines are:
 * Comments are good, especially when they explain the algorithm.
 * Try to adhere to a 76 character line length limit.
 * Use lower case with underscores for function names.
-* Avoid padding brackets with spaces. ex. `fcn(value)` preferred over `fcn( value )`.
+* Avoid padding brackets with spaces. ex. `spm_fcn(value)` preferred over `spm_fcn( value )`.
+
+New functions should follow this overall format:
+
+```
+function [R1,...] = spm_fcn(P1,...)
+% <- H1 line : Single line description using the imperative ->
+% FORMAT [R1,...] = spm_fcn(P1,...)
+%
+% P1 - <-Argument/parameter description, including ranges->
+%
+% R1 - <-Description of returned values->
+%__________________________________________________________________________
+%
+% HELP text
+% Long description of function, including i/o details, algorithms and refs.
+%__________________________________________________________________________
+
+% AUTHOR
+% Copyright (C) YEAR Wellcome Centre for Human Neuroimaging
+
+
+%==========================================================================
+% - B A N N E R   S E C T I O N   H E A D I N G
+%==========================================================================
+
+%-MAJOR section heading
+%==========================================================================
+
+%-MINOR section heading
+%--------------------------------------------------------------------------
+
+```
 
 ### Pull Requests
 

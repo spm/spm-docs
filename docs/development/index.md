@@ -2,7 +2,7 @@
 
 ## Git and GitHub
 
-THe development of SPM take place on [GitHub](https://github.com/spm/) and you will find below a short introduction to Git for SPM developers:
+The development of SPM take place on [GitHub](https://github.com/spm/) and you will find below a short introduction to Git for SPM developers:
 
 * [Git](git/)
 

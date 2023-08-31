@@ -160,6 +160,7 @@ Use the imperative and prefix the commit message with one of:
 * ++"Bug fix"++
 * ++"Documentation"++
 * ++"Refactoring"++
+* ++"Maintenance"++
 
 You should be able to suffix a commit message to the phrase "If applied, this code will ...".
 
