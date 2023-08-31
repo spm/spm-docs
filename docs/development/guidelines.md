@@ -1,7 +1,7 @@
 # Developer Guidelines for SPM
 
 These guidelines are designed to make it as easy as possible to get involved.
-If you have any questions that are not discussed in our documentation, or it is
+If you have any questions that are not discussed in our documentation, or if it is
 difficult to find what you are looking for, please let us know by opening an
 [issue](https://github.com/spm/spm/issues).
 
@@ -16,7 +16,7 @@ In short the general formatting guidelines are:
 * Comments are good, especially when they explain the algorithm.
 * Try to adhere to a 76 character line length limit.
 * Use lower case with underscores for function names.
-* Avoid padding brackets with spaces. ex. `spm_fcn(value)` preferred over `spm_fcn( value )`.
+* Avoid padding brackets with spaces. For example, `spm_fcn(value)` is preferred over `spm_fcn( value )`.
 
 New functions should follow this overall format:
 
@@ -50,7 +50,7 @@ function [R1,...] = spm_fcn(P1,...)
 
 ```
 
-### Pull Requests
+## Pull Requests
 
 Git recommendations for pull requests:
 
@@ -61,7 +61,7 @@ Git recommendations for pull requests:
 * Using `git add -p` or `git add -i` can be useful to avoid accidentally committing unrelated changes.
 * GitHub does not send notifications when you push a new commit to a pull request, so please add a comment to the pull request thread to let reviewers know when you've made changes.
 
-### Merges
+## Merges
 
 Git recommendations for pull request reviewers:
 
