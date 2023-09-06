@@ -1,4 +1,4 @@
-# Getting Started
+# Voxel-Based Morphometry
 
 ??? info "For MSc Advanced Neuroimaging students"
     These notes were originally written for the MSc in Advanced Neuroimaging students at UCL.

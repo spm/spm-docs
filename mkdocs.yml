@@ -126,6 +126,7 @@ nav:
   - 'Development':
     - 'Introduction': 'development/index.md'
     - 'Git':          'development/git.md'
+    - 'Guidelines':   'development/guidelines.md'
     - 'Testing':      'development/testing.md'
 
 markdown_extensions:

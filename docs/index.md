@@ -17,7 +17,7 @@ The SPM software package has been designed for the analysis of brain imaging dat
 
     ---
 
-    SPM is an academic free and open source software, released under the terms of the GPL.
+    SPM is an academic free and open source software.
 
     [:octicons-arrow-right-24: Installation ](installation/)
 
@@ -33,15 +33,15 @@ The SPM software package has been designed for the analysis of brain imaging dat
 
     ---
 
-    Regular SPM courses run every autumn and spring.
+    Regular SPM courses run every autumn and spring, both online and in-person in London.
 
-    [:octicons-arrow-right-24: Course information](https://www.fil.ion.ucl.ac.uk/spm/course/)
+    [:octicons-arrow-right-24: Courses information](https://www.fil.ion.ucl.ac.uk/spm/course/)
 
 -   :material-account-question:{ .lg .middle } __Support__
 
     ---
 
-    SPM discussion list provides live support to your queries.
+    The SPM discussion list provides live support to your queries.
 
     [:octicons-arrow-right-24: SPM discussion list](https://www.fil.ion.ucl.ac.uk/spm/support/)
 
@@ -58,6 +58,8 @@ SPM'94 was the first major revision of the SPM software. SPM'94 was written prim
     [Penny, W., Friston, K., Ashburner, J., Kiebel, S., & Nichols, T. (2006). *Statistical parametric mapping: The analysis of functional brain images*.](https://www.fil.ion.ucl.ac.uk/spm/doc/#books)
 
     [Friston, K.J. *A short history of statistical parametric mapping in functional neuroimaging*.](https://www.fil.ion.ucl.ac.uk/spm/doc/history.html)
+
+    [Flandin, G. and Friston, K.J. *Statistical parametric mapping (SPM)*.](http://www.scholarpedia.org/article/Statistical_parametric_mapping_(SPM))
 
     [Ashburner, J. (2012). *SPM: A history*.](https://doi.org/10.1016/j.neuroimage.2011.10.025)
 

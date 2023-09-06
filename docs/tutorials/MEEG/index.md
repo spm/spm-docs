@@ -1,7 +1,6 @@
-# MEEG tutorial
+# M/EEG Tutorials
 
 ## About the tutorials
-
 
 These tutorials cover the following areas in M/EEG analysis. 
 

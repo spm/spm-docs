@@ -1,3 +1,11 @@
+# SPM Tutorials
+
+The tutorials are organised by data modality and illustrate how to use SPM to analyse exemplar data sets.
+
+!!! tip "Getting started"
+
+    Please make sure to first follow the [instructions to download and install the SPM software](../installation/) on your computer.
+
 <div class="grid cards" markdown>
 
 -   :material-monitor:{ .lg .middle } __fMRI__
