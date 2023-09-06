@@ -26,19 +26,17 @@ The convolution GLM provides a way to deconvolve the responses using a standard 
         
         In this tutorial, we will have a standard folder layout for SPM
         analysis:
+
             +   the original data will be in a `data/` folder
             +   the intermediate and final datasets will be in an `analysis/`
                 folder
         
         ```matlab
         clear;
-        scriptpath = fileparts(matlab.desktop.editor.getActiveFilename);
-        root       = spm_file(scriptpath, 'path');
-        workpath   = [root filesep 'analysis'];
-        datapath   = [root filesep 'data'];
-        if ~exist(workpath, 'dir')
-            mkdir(workpath);
-        end
+        cwd      = pwd;
+        workpath = fullfile(cwd, 'analysis');
+        datapath = fullfile(cwd, 'data');
+        spm_mkdir(workpath);
         ```
         Then, warm up SPM: 
         ```matlab 
@@ -47,11 +45,11 @@ The convolution GLM provides a way to deconvolve the responses using a standard 
 
     2. Prepare the data
         
-        The data has already been converted to SPM and downsampled to 128Hz. This is single subject data with the following tag and prefix ("d" for downsampled). Download the files and put them in the data folder. We then move them programmatically to the analysis folder (this makes sure that the original data files are kept intact). 
+        The data has already been converted to SPM and downsampled to 128Hz. This is single subject data with the following name and prefix ("`d`" for downsampled). Download the files and put them in the data folder. We then move them programmatically to the analysis folder (this makes sure that the original data files are kept intact). 
         ```matlab 
-        tag    = 'pil02';
+        name   = 'pil02';
         prefix = 'd';
-        copyfile([datapath filesep prefix tag '.\*'], workpath);
+        copyfile(fullfile(datapath, [prefix name '.*']), workpath);
         ```
 
 ### Rereferencing
@@ -74,7 +72,7 @@ Lets reference the EEG channels against the common average.
     
     First, load the data:
     ```matlab
-    D = spm_eeg_load([workpath filesep prefix tag '.mat']);
+    D = spm_eeg_load(fullfile(workpath, [prefix name '.mat']));
     ```
     Then, define the transform to apply to make the new (rereferenced) montage: 
     ```matlab
@@ -89,7 +87,7 @@ Lets reference the EEG channels against the common average.
     ```matlab
     S = []; 
     
-    S.D                = [workpath filesep D.fname];
+    S.D                = fullfile(workpath, D.fname);
     S.montage.tra      = tra;
     S.montage.labelnew = [D.chanlabels(1:64) 'VEOG' 'HEOG'];
     S.montage.labelorg = D.chanlabels;
@@ -122,7 +120,7 @@ We high-pass filter the data at 0.5Hz:
     ```matlab
     S = [];
      
-    S.D    = [workpath filesep D.fname];
+    S.D    = fullfile(workpath, D.fname);
     S.type = 'butterworth';
     S.band = 'high';
     S.freq = 0.5;
@@ -161,7 +159,7 @@ We will now mark the artefacts. Note that we are working with continuous data so
     ```matlab
     S = [];
     
-    S.D                          = [workpath filesep D.fname];
+    S.D                          = fullfile(workpath, D.fname);
     S.mode                       = 'mark';
     S.badchanthresh              = 0.2;
     S.methods.channels           = {'all'};
@@ -178,7 +176,7 @@ We will now mark the artefacts. Note that we are working with continuous data so
     Finally, mark the channel 'T8' as bad:
     
     ```matlab
-    D = spm_eeg_load([workpath filesep prefix tag '.mat']);
+    D = spm_eeg_load(fullfile(workpath, [prefix name '.mat']));
     D = D.badchannels(D.indchannel('T8'), 1);
     save(D);
     ```
@@ -197,7 +195,7 @@ We shall first load the file called "events.mat". It contains the events onset t
 === "Script"
 
     ```matlab
-    load([datapath filesep 'events.mat'], 'events');
+    load(fullfile(datapath, 'events.mat'), 'events');
     condnames = {'visual'; 'auditory'; 'tactile'};
     ```
 
@@ -228,7 +226,7 @@ The first step is to tell SPM that we want to model the response on our EEG chan
     ```matlab
     convmodel = [];
     
-    convmodel.sess.D           = {[workpath filesep D.fname]};
+    convmodel.sess.D           = {fullfile(workpath, D.fname)};
     convmodel.channels{1}.type = 'EEG';
     convmodel.timing.timewin   = [-300 700];
     ```
@@ -318,7 +316,7 @@ Here, we use a Fourier basis set of order 12, which will consist of 12 pairs of 
 
     xBF = spm_get_bf(xBF);
 
-    weights   = normrnd(0,1,[25, 4]);
+    weights   = randn(25, 4);
     bfs       = xBF.bf;
     responses = bfs * weights;
 
@@ -368,12 +366,12 @@ Here, we use a Fourier basis set of order 12, which will consist of 12 pairs of 
         convmodel.prefix         = 'C';
         ```
     
-    2.  Put everything in a matlabbatch and run it
+    2.  Put everything in a `matlabbatch` structure and run it
         ```matlab 
         matlabbatch = {};
         matlabbatch{1}.spm.meeg.modelling.convmodel = convmodel;
 
-        spm_jobman('serial', matlabbatch);
+        spm_jobman('run', matlabbatch);
         
         prefix = ['C' prefix];
         ```
@@ -382,7 +380,7 @@ Here, we use a Fourier basis set of order 12, which will consist of 12 pairs of 
 
         ```matlab
         coords = D.coor2D;
-        D      = spm_eeg_load([workpath filesep prefix tag '.mat']);
+        D      = spm_eeg_load(fullfile(workpath, [prefix name '.mat']));
         D      = coor2D(D, 1:64, coords);
         D      = chantype(D, ':', 'EEG');
         save(D);
@@ -424,7 +422,7 @@ The results can be visualized in the SPM's M/EEG viewer.
 Selecting EEG and then clicking on the scalp image shows the deconvolved response over the scalp. By positioning the peristimulus time cursor tenth to hundreds of milliseconds after stimulus onset, we can observe the stereo-typical scalp maps of visual, auditory, and tactile stimuli (Figure [1.8](#fig:meeg-firstlevel:scalp){reference-type="ref" reference="fig:meeg-firstlevel:scalp"}). 
 
 <figure markdown>
-  [Scalp maps of deconvolved responses to the different stimuli at particular time of interest](../../assets/figures/tutorials/meeg/meeg_firstlevel/scalp.png){#fig:meeg-firstlevel:scalp width:"75%"}
+  ![Scalp maps of deconvolved responses to the different stimuli at particular time of interest](../../assets/figures/tutorials/meeg/meeg_firstlevel/scalp.png){#fig:meeg-firstlevel:scalp width:"75%"}
   <figcaption>Scalp maps of deconvolved responses to the different stimuli at particular time of interest.</figcaption>
 </figure>
 
@@ -449,7 +447,7 @@ We look at the average response on the fronto-central channels in the 3 differen
     
     figure; hold on;
     plot(t, y, 'LineWidth', 2);
-    plot([0 0], [-1 1], 'k', 'LineWidth',2);
+    plot([0 0], [-1 1], 'k', 'LineWidth', 2);
     legend(D.condlist); box on; grid on;
     xlim([min(t), max(t)]); ylim([-1.2 1.2]);
     xlabel('Time (s)'); ylabel('Amplitude');
