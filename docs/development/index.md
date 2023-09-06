@@ -23,3 +23,11 @@ SPM testing is performed using the [MATLAB Unit Testing Framework](https://www.m
 !!! tip "Testing"
 
     [Software Testing](testing/)
+
+## Compilation of MEX files
+
+Platform-specific instructions to compile SPM MEX files are provided in the link below should you need to.
+
+!!! tip "MEX Compilation"
+
+    [Compilation of MEX files](compilation/)

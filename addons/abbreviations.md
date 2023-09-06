@@ -4,6 +4,7 @@
 *[DCM]: Dynamic Causal Modelling
 *[EEG]: Electroencephalography
 *[EPI]: Echo-Planar Imaging
+*[fMRI]: functional Magnetic Resonance Imaging
 *[FWHM]: Full Width at Half Maximum
 *[GLM]: General Linear Model
 *[GLMs]: General Linear Models
@@ -12,9 +13,11 @@
 *[MEG]: Magnetoencephalography
 *[MRI]: Magnetic Resonance Imaging
 *[OPM]: Optically Pumped Magnetometers
+*[PET]: Positron Emission Tomography
 *[PSD]: Power Spectral Density
+*[SPECT]: Single-Photon Emission Computed Tomography
 *[TR]: Repetition Time
 *[TRs]: Repetition Times
 *[TSV]: Tab-Separated Values
-*[CCA]: Canonical Correlations Analysis
+*[CVA]: Canonical Variate Analysis
 *[TSSS]: Temporal Signal Space Separation. 
