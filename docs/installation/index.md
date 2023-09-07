@@ -133,7 +133,7 @@
         savepath % if you want to save the current MATLAB path
         ```
 
-![](../../../assets/figures/matlab_setpath.png)
+![](../assets/figures/matlab_setpath.png)
 
 You can then launch SPM by typing `spm` at the MATLAB prompt.
 

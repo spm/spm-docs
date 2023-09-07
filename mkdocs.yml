@@ -54,7 +54,11 @@ theme:
     - navigation.top
 
 nav:
-  - 'Home': 'index.md'
+  - 'Home':
+    - 'index.md'
+    - 'Installation':  'installation/index.md'
+    - 'Tutorials':     'tutorials/index.md'
+    - 'Development':   'development/index.md'
   - 'Getting started':
     - 'installation/index.md'
     - 'Installation':  'installation/index.md'
@@ -126,7 +130,7 @@ nav:
     - 'DAiSS':
       - 'Overview of DAiSS': 'tutorials/daiss/index.md'
       - 'Beamforming':       'tutorials/daiss/daiss_beamforming.md'
-  - 'Reference': 'reference/index.md'
+  #- 'Reference': 'reference/index.md'
   - 'Development':
     - 'Introduction': 'development/index.md'
     - 'Git':          'development/git.md'

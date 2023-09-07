@@ -38,13 +38,13 @@ Compatibility status from other neuroimaging MATLAB packages:
 SPM is currently **not** officially supported under Octave but many
 modules are effectively compatible. Feedbacks about further evaluation
 and validation are very welcome. In most situations, the [standalone
-version of SPM](SPM/Standalone "wikilink") might be a sufficient
+version of SPM](standalone.md) might be a sufficient
 alternative.
 
 Feel free to contact <fil.spm@ucl.ac.uk> if this is something you are
 interested in. You need to use the latest versions of
 [SPM12](https://www.fil.ion.ucl.ac.uk/spm/software/spm12/) and [GNU
-Octave (8.1)](https://octave.org/download.html).
+Octave (8.3)](https://octave.org/download.html).
 
 ### Compilation
 

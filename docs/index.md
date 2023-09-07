@@ -1,7 +1,7 @@
 # Statistical Parametric Mapping
 
 <figure markdown>
-  ![spm logo](https://www.fil.ion.ucl.ac.uk/spm/images/spm.svg){ width="300" }
+  ![spm logo](assets/figures/spm_interface.png){ width="700" }
   <figcaption></figcaption>
 </figure>
 
