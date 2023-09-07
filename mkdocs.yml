@@ -56,7 +56,11 @@ theme:
 nav:
   - 'Home': 'index.md'
   - 'Getting started':
-    - 'Installation': 'installation.md'
+    - 'installation/index.md'
+    - 'Installation':  'installation/index.md'
+    - 'Standalone':    'installation/standalone.md'
+    - 'Containers':    'installation/containers.md'
+    - 'Octave':        'installation/octave.md'
   - 'Tutorials':
     - 'tutorials/index.md'
     - 'Block Design fMRI':
