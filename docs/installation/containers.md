@@ -14,6 +14,7 @@ operating-system-level virtualization. One of the main uses of
 Singularity is to bring containers and reproducibility to scientific
 computing and HPC.
 
+<!-- markdown-link-check-disable-next-line -->
 [`https://sylabs.io/singularity/`](https://sylabs.io/singularity/)  
 [`https://apptainer.org/`](https://apptainer.org/)
 
@@ -61,7 +62,8 @@ If the container\'s root filesystem is mounted as read only
 
 ### Singularity
 
-[SingularityCE User Guide](https://sylabs.io/guides/3.8/user-guide/)
+<!-- markdown-link-check-disable-next-line -->
+[SingularityCE User Guide](https://docs.sylabs.io/guides/latest/user-guide/)
 
 ```
 sudo singularity build spm12.sif spm12-octave.def
