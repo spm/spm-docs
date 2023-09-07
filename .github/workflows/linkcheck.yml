@@ -17,6 +17,6 @@ jobs:
           use-quiet-mode: 'yes'
           use-verbose-mode: 'no'
           config-file: '.markdown-link-check.json'
-          folder-path: 'docs/tutorials'
-          file-path: './README.md, ./docs/index.md, ./docs/installation.md'
+          folder-path: 'docs/installation, docs/tutorials'
+          file-path: './README.md, ./docs/index.md'
           base-branch: main
