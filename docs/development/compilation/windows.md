@@ -1,7 +1,7 @@
 # Compilation of SPM on Windows
 
-This page describes the compilation of SPM12 MEX files on **Windows 10**
-with **MATLAB R2018b (9.5)** and **MSYS2 MinGW-w64 GCC**. It also provides instructions to compile SPM for the Octave package of MSYS2.
+This page describes the compilation of SPM MEX files on **Windows 10**
+with **MATLAB R2018b (9.5)** and **MSYS2 MinGW-w64 GCC**; identical or very similar instructions should work with newer versions of Windows, MATLAB and MSYS2 MinGW. It also provides instructions to compile SPM for the Octave package of MSYS2.
 
 !!! tip
     If you use other versions of MATLAB and/or compiler, make sure that they are compatible by checking the list of [supported compilers](https://www.mathworks.com/support/requirements/previous-releases.html) and adjust the MATLAB path accordingly in the commands below.
@@ -28,18 +28,20 @@ mex -setup
 % MEX configured to use 'MinGW64 Compiler (C)' for C language compilation.
 ```
 
-Do not worry if there is a warning:
+Do not worry if this warning is displayed:
 
 ```
 Warning: The MATLAB C and Fortran API has changed to support MATLAB
+	 variables with more than 2^32-1 elements. You will be required
+	 to update your code to utilize the new API.
 ```
 
 ## Compilation
 
-In MSYS2, move to the SPM12 source directory with
+In MSYS2, move to the SPM source directory (`./src/`) with
 
 ```
-cd  /c/Documents and Settings/`*`login`*`/Documents/MATLAB/spm12/src
+cd  /c/Documents and Settings/<login>/Documents/MATLAB/spm/src
 ```
 
 then set the PATH appropriately
@@ -59,6 +61,8 @@ make external-distclean
 make external && make external-install
 ```
 
+This will generate `*.mexw64` MEX files.
+
 ## Notes for compilation with MSYS2 for Octave
 
 Install
@@ -77,9 +81,11 @@ then start Octave with:
 and compile with:
 
 ```bash
-cd('/c/Documents and Settings/<login>/Documents/MATLAB/spm12/src');
+cd('/c/Documents and Settings/<login>/Documents/MATLAB/spm/src');
 system('make distclean PLATFORM=octave');
 system('make PLATFORM=octave && make install PLATFORM=octave');
 system('make external-distclean PLATFORM=octave');
 system('make external PLATFORM=octave && make external-install PLATFORM=octave');
 ```
+
+This will generate `*.mex` MEX files.

@@ -128,6 +128,7 @@ nav:
     - 'Git':          'development/git.md'
     - 'Guidelines':   'development/guidelines.md'
     - 'Testing':      'development/testing.md'
+    - 'Compilation':  'development/compilation/index.md'
 
 markdown_extensions:
   - abbr
