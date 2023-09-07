@@ -28,7 +28,7 @@ GNU Octave is mostly compatible with MATLAB:
 
 Compatibility status from other neuroimaging MATLAB packages:
 
-- EEGLAB: <https://sccn.ucsd.edu/wiki/Running_EEGLAB_on_Octave>
+- EEGLAB: <https://eeglab.org/others/Running_EEGLAB_on_Octave.html>
 - FieldTrip:
   <http://www.fieldtriptoolbox.org/faq/can_i_use_octave_instead_of_matlab/>
 - Psychtoolbox: <http://psychtoolbox.org/>
@@ -121,17 +121,15 @@ several ways:
   function name that does not exist (eg, x = @crash fails).~~
   [fixed](https://savannah.gnu.org/bugs/?31821)
 - ~~Line continuation "**...**" does not ignore anything that
-  appears after it, unless there is a comment sign **%** (MATLAB
-  [does](http://www.mathworks.com/help/techdoc/matlab_env/f0-5789.html#f0-5857)).~~
+  appears after it, unless there is a comment sign **%**~~
   [fixed](https://savannah.gnu.org/bugs/?38653)
 - ~~**strrep.m** works on strings but not cell arrays.~~
-  [fixed](https://mailman.cae.wisc.edu/pipermail/bug-octave/2010-January/016627.html)
+  [fixed](#)
 - ~~**isdeployed.m** does not exist (function X=isdeployed,
   X=false;).~~ [fixed](https://savannah.gnu.org/bugs/?32151)
 - ~~**textscan.m**, **strread.m** and **textread.m** do not exist (in
   3.2.4; available in devel, see
-  [this](http://octave.1599824.n4.nabble.com/textscan-wanted-td3002808.html)
-  and [this](https://savannah.gnu.org/bugs/index.php?31380)). Note that
+  [this](https://savannah.gnu.org/bugs/index.php?31380)). Note that
   in MATLAB, textscan should be preferred and replace strread and
   textread. The devel function crashes on
   *textscan('aaa.bbb','%s','delimiter','.')*~~
