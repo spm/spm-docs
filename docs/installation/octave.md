@@ -5,32 +5,31 @@
 
 ## Octave
 
-- Octave website: <https://octave.org/>
-- Octave project: <http://hg.savannah.gnu.org/hgweb/octave/>
-- Octave Help mailing list:
-  <https://lists.gnu.org/mailman/listinfo/help-octave>
-- Octave Maintainers mailing list:
-  <https://lists.gnu.org/mailman/listinfo/octave-maintainers>
-- Octave bug tracker: <http://savannah.gnu.org/bugs/?group=octave>
+- Octave Website: <https://octave.org/>
+- Octave Project: <https://hg.savannah.gnu.org/hgweb/octave/>
+- Octave Forum:
+  <https://octave.discourse.group/>
+- Octave Bug Tracker: <https://savannah.gnu.org/bugs/?group=octave>
 - Octave GitHub: <https://github.com/gnu-octave>
-- Octave-Forge: <http://octave.sourceforge.net/>
+- Octave Space: <https://octave.space/>
+- Octave-Forge: <https://octave.sourceforge.net/>
 - [GNU Octave and reproducible
-  research](http://dx.doi.org/10.1016/j.jprocont.2012.04.006) by John W.
+  research](https://dx.doi.org/10.1016/j.jprocont.2012.04.006) by John W.
   Eaton
 
 ## MATLAB/Octave compatibility
 
 GNU Octave is mostly compatible with MATLAB:
 
-- <http://wiki.octave.org/FAQ#Differences_between_Octave_and_Matlab>
+- <https://wiki.octave.org/FAQ#Differences_between_Octave_and_Matlab>
 - <https://en.wikibooks.org/wiki/MATLAB_Programming/Differences_between_Octave_and_MATLAB>
-- <http://wiki.octave.org/Compatibility>
+- <https://wiki.octave.org/Compatibility>
 
 Compatibility status from other neuroimaging MATLAB packages:
 
 - EEGLAB: <https://eeglab.org/others/Running_EEGLAB_on_Octave.html>
 - FieldTrip:
-  <http://www.fieldtriptoolbox.org/faq/can_i_use_octave_instead_of_matlab/>
+  <https://www.fieldtriptoolbox.org/faq/can_i_use_octave_instead_of_matlab/>
 - Psychtoolbox: <http://psychtoolbox.org/>
 
 ## Current status for SPM/Octave compatibility

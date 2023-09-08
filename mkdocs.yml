@@ -56,37 +56,37 @@ theme:
 nav:
   - 'Home':
     - 'index.md'
-    - 'Installation':  'installation/index.md'
-    - 'Tutorials':     'tutorials/index.md'
-    - 'Development':   'development/index.md'
+    - 'Installation': 'installation/index.md'
+    - 'Tutorials':    'tutorials/index.md'
+    - 'Development':  'development/index.md'
   - 'Getting started':
     - 'installation/index.md'
-    - 'Installation':  'installation/index.md'
-    - 'Standalone':    'installation/standalone.md'
-    - 'Containers':    'installation/containers.md'
-    - 'Octave':        'installation/octave.md'
+    - 'Installation': 'installation/index.md'
+    - 'Standalone':   'installation/standalone.md'
+    - 'Containers':   'installation/containers.md'
+    - 'Octave':       'installation/octave.md'
   - 'Tutorials':
     - 'tutorials/index.md'
     - 'Block Design fMRI':
-      - 'Getting started':                 'tutorials/fmri/index.md'
+      - 'Getting started':           'tutorials/fmri/index.md'
       - 'Preprocessing':
-        - 'Introduction':                  'tutorials/fmri/preprocessing/introduction.md'
-        - 'Visual inspection of the data': 'tutorials/fmri/preprocessing/visual_inspection.md'
-        - 'Removal of dummy scans':        'tutorials/fmri/preprocessing/dummy_scans.md'
-        - 'Realignment':                   'tutorials/fmri/preprocessing/realignment.md'
-        - 'Slice timing correction':       'tutorials/fmri/preprocessing/slice_timing.md'
-        - 'Coregistration':                'tutorials/fmri/preprocessing/coregistration.md'
-        - 'Segmentation':                  'tutorials/fmri/preprocessing/segmentation.md'
-        - 'Normalisation':                 'tutorials/fmri/preprocessing/normalisation.md'
-        - 'Smoothing':                     'tutorials/fmri/preprocessing/smoothing.md'
-        - 'Batch interface':               'tutorials/fmri/preprocessing/batch.md'
-        - 'Scripting':                     'tutorials/fmri/preprocessing/scripting.md'
+        - 'Introduction':            'tutorials/fmri/preprocessing/introduction.md'
+        - 'Visual inspection':       'tutorials/fmri/preprocessing/visual_inspection.md'
+        - 'Removal of dummy scans':  'tutorials/fmri/preprocessing/dummy_scans.md'
+        - 'Realignment':             'tutorials/fmri/preprocessing/realignment.md'
+        - 'Slice timing correction': 'tutorials/fmri/preprocessing/slice_timing.md'
+        - 'Coregistration':          'tutorials/fmri/preprocessing/coregistration.md'
+        - 'Segmentation':            'tutorials/fmri/preprocessing/segmentation.md'
+        - 'Normalisation':           'tutorials/fmri/preprocessing/normalisation.md'
+        - 'Smoothing':               'tutorials/fmri/preprocessing/smoothing.md'
+        - 'Batch interface':         'tutorials/fmri/preprocessing/batch.md'
+        - 'Scripting':               'tutorials/fmri/preprocessing/scripting.md'
       - 'Statistical modelling':
         - 'First-level modelling - block design':         'tutorials/fmri/modelling/block_design.md'
         #- 'First-level modelling - event-related design': 'tutorials/fmri/modelling/event_related_design.md'
         #- 'Group-level modelling':                        'tutorials/fmri/modelling/group_level.md'
     - 'Event-related fMRI':
-      - 'Introduction':          'tutorials/faces/index.md'
+      - 'Getting started':       'tutorials/faces/index.md'
       - 'Preprocessing':         'tutorials/faces/preprocessing.md'
       - 'Categorical Modelling': 'tutorials/faces/categorical.md'
       - 'Parametric Modelling':  'tutorials/faces/parametric.md'
@@ -107,17 +107,17 @@ nav:
         - 'fMRI':         'tutorials/MEEG/multimodal/fmri.md'
         - 'Fusion':       'tutorials/MEEG/multimodal/fusion.md'
       - 'Multimodal, multisubject data fusion':
-        - 'Overview':                'tutorials/MEEG/multi/index.md'  
-        - 'Preprocessing':           'tutorials/MEEG/multi/preprocessing.md'  
-        - 'Evoked analysis':         'tutorials/MEEG/multi/evoked.md'  
-        - 'Time-frequency analysis': 'tutorials/MEEG/multi/timefrequency.md'  
-        - 'fMRI':                    'tutorials/MEEG/multi/fmri.md'  
-        - 'Source':                  'tutorials/MEEG/multi/source.md'  
-        - 'References':              'tutorials/MEEG/multi/references.md'        
+        - 'Overview':                'tutorials/MEEG/multi/index.md'
+        - 'Preprocessing':           'tutorials/MEEG/multi/preprocessing.md'
+        - 'Evoked analysis':         'tutorials/MEEG/multi/evoked.md'
+        - 'Time-frequency analysis': 'tutorials/MEEG/multi/timefrequency.md'
+        - 'fMRI':                    'tutorials/MEEG/multi/fmri.md'
+        - 'Source':                  'tutorials/MEEG/multi/source.md'
+        - 'References':              'tutorials/MEEG/multi/references.md'
     - 'OPM':
         - 'Getting Started':               'tutorials/opm/index.md'
         - 'Sensor Level: Evoked response': 'tutorials/opm/evoked/index.md'
-        - 'Coregistration':                'tutorials/opm/coreg/index.md'       
+        - 'Coregistration':                'tutorials/opm/coreg/index.md'
     - 'DCM':
         - 'Overview of DCM':                  'tutorials/dcm/index.md'
         - 'DCM for fMRI - 1st level':         'tutorials/dcm/dcm_fmri_first_level.md'
@@ -126,7 +126,7 @@ nav:
         - 'DCM for Induced Responses':        'tutorials/dcm/dcm_ir.md'
         - 'DCM for Phase Coupling':           'tutorials/dcm/dcm_phase.md'
         - 'DCM for Steady State Responses':   'tutorials/dcm/dcm_ssr.md'
-        - 'DCM for Cross-Spectral Densities': 'tutorials/dcm/dcm_csd.md'    
+        - 'DCM for Cross-Spectral Densities': 'tutorials/dcm/dcm_csd.md'
     - 'DAiSS':
       - 'Overview of DAiSS': 'tutorials/daiss/index.md'
       - 'Beamforming':       'tutorials/daiss/daiss_beamforming.md'
@@ -162,7 +162,7 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde

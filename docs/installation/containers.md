@@ -15,7 +15,7 @@ Singularity is to bring containers and reproducibility to scientific
 computing and HPC.
 
 <!-- markdown-link-check-disable-next-line -->
-[`https://sylabs.io/singularity/`](https://sylabs.io/singularity/)  
+[`https://sylabs.io/singularity/`](https://sylabs.io/singularity/)
 [`https://apptainer.org/`](https://apptainer.org/)
 
 ## SPM Containers
@@ -23,9 +23,9 @@ computing and HPC.
 Official SPM12 `Dockerfile` and `singularity.def` (using the [Standalone
 SPM](standalone.md)):
 
-[`https://github.com/spm/spm-docker`](https://github.com/spm/spm-docker)  
-  
-[`https://github.com/spm/spm-docker/pkgs/container/spm-docker`](https://github.com/spm/spm-docker/pkgs/container/spm-docker)  
+[`https://github.com/spm/spm-docker`](https://github.com/spm/spm-docker)
+
+[`https://github.com/spm/spm-docker/pkgs/container/spm-docker`](https://github.com/spm/spm-docker/pkgs/container/spm-docker)
 [`https://hub.docker.com/r/spmcentral/spm/`](https://hub.docker.com/r/spmcentral/spm/)
 
 For example, to start SPM with its graphical user interface:
@@ -48,12 +48,12 @@ If the container\'s root filesystem is mounted as read only
 
 ### Neurodocker
 
-[`https://github.com/ReproNim/neurodocker`](https://github.com/ReproNim/neurodocker)  
+[`https://github.com/ReproNim/neurodocker`](https://github.com/ReproNim/neurodocker)
 [`https://hub.docker.com/r/kaczmarj/neurodocker/`](https://hub.docker.com/r/kaczmarj/neurodocker/)
 
 ### SPM BIDS-App
 
-[`https://github.com/BIDS-Apps/SPM`](https://github.com/BIDS-Apps/SPM)  
+[`https://github.com/BIDS-Apps/SPM`](https://github.com/BIDS-Apps/SPM)
 [`https://hub.docker.com/r/bids/spm/`](https://hub.docker.com/r/bids/spm/)
 
 ### MATLAB Dockerfile

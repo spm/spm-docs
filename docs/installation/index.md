@@ -39,9 +39,9 @@
         unzip spm12.zip
         ```
 
-    3. Start MATLAB and add SPM to your path, either using: 
-        `File` :material-arrow-right-bold: `Set Path` :material-arrow-right-bold: `Add Folder...` 
-        
+    3. Start MATLAB and add SPM to your path, either using:
+        `File` :material-arrow-right-bold: `Set Path` :material-arrow-right-bold: `Add Folder...`
+
         or typing the following at the MATLAB prompt:
 
         ```matlab
@@ -51,38 +51,38 @@
 
     ??? failure "Troubleshooting"
         **macOS Catalina**
-        
+
         If you have issues with MEX files on macOS Catalina such as:
-        
-        "`*.mexmaci64` cannot be opened because the developer cannot be verified. macOS cannot verify that this app is free from malware" 
-        
+
+        "`*.mexmaci64` cannot be opened because the developer cannot be verified. macOS cannot verify that this app is free from malware"
+
         or:
-        
+
         "Code signature not valid for use in process using Library Validation: library load disallowed by system policy"
-        
+
         Open a terminal, `cd` to the SPM directory and type:
-        
+
         ```bash
         find . -name "*.mexmaci64" -exec xattr -d com.apple.quarantine {} \;
         ```
-        
+
         **macOS Big Sur**
-        
-        If you have issues with MEX files on macOS Big Sur such as: 
-        
+
+        If you have issues with MEX files on macOS Big Sur such as:
+
         "`*.mexmaci64` cannot be opened because the developer cannot be verified. macOS cannot verify that this app is free from malware"
-        
-        or: 
-        
+
+        or:
+
         "Code signature not valid for use in process using Library Validation: library load disallowed by system policy"
-        
+
         Open a terminal, and type the following whilst replacing `SPM_PATH` with the path of your spm installation:
 
         ```bash
         sudo xattr -r -d com.apple.quarantine SPM_PATH
         sudo find SPM_PATH -name "*.mexmaci64" -exec spctl --add {} \;
         ```
-        
+
         **Java Exception and abrupt exit on Mac OS X version 10.10 Yosemite**
 
         If you get MATLAB issues with Yosemite, see [this bug report](http://www.mathworks.com/support/bugreports/1098655) for a patch.
@@ -92,7 +92,7 @@
         If you get an error message such as:
 
         ```bash
-        mex -O -c spm_vol_utils.c -DSPM_UNSIGNED_CHAR 
+        mex -O -c spm_vol_utils.c -DSPM_UNSIGNED_CHAR
         mex: unrecognized option '-O'
         mex: unrecognized option '-c'
         This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011)
@@ -102,14 +102,14 @@
         This is MeX  Version 1.05  18 XII 1993  (B. Jackowski & M. Ry\'cko)
         ! You can't use 'macro parameter character #' in vertical mode.
         ```
-        
+
         This is due to a conflict between MATLAB mex and a LaTeX command with the same name. Edit `src/Makefile.var` and mention the full path when referring to MEXBIN.
-        
+
         ```bash
         MEXBIN = /Applications/MATLAB_R2012a.app/bin/mex
         ```
-        
-        or change PATH accordingly. 
+
+        or change PATH accordingly.
 
 === "Linux"
 
@@ -124,8 +124,8 @@
 
     3. Start MATLAB and add SPM into your path, either using:
 
-        `File` :material-arrow-right-bold: `Set Path` :material-arrow-right-bold: `Add Folder...` 
-        
+        `File` :material-arrow-right-bold: `Set Path` :material-arrow-right-bold: `Add Folder...`
+
         or typing the following at the MATLAB prompt:
 
         ```matlab
