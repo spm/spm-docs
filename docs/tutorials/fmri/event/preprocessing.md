@@ -10,7 +10,7 @@ window.
 
 <figure>
 <div class="center">
-<img src="../../../assets/figures/manual/faces/dropout.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/faces/dropout.png" style="width:100mm" />
 </div>
 <figcaption>Signal dropout in EPI images.</figcaption>
 </figure>
@@ -48,7 +48,7 @@ coregistration.
 
 <figure>
 <div class="center">
-<img src="../../../assets/figures/manual/faces/realign.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/faces/realign.png" style="width:100mm" />
 </div>
 <figcaption><strong>Realignment of face data</strong>: Movement less
 than the size of a voxel, which for this data set is 3mm, is not
@@ -112,7 +112,7 @@ this case is the structural image `sM03953_0007.hdr`.
 
 <figure>
 <div class="center">
-<img src="../../../assets/figures/manual/faces/coreg.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/faces/coreg.png" style="width:100mm" />
 </div>
 <figcaption>Mutual Information Coregistration of Face data.</figcaption>
 </figure>
@@ -134,7 +134,7 @@ previous section [^1].
 
 <figure>
 <div class="center">
-<img src="../../../assets/figures/manual/faces/gray.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/faces/gray.png" style="width:100mm" />
 </div>
 <figcaption>Grey matter (top) produced by segmentation of structural
 image (below).</figcaption>
@@ -205,7 +205,7 @@ default smoothing kernel width.
 
 <figure>
 <div class="center">
-<img src="../../../assets/figures/manual/faces/smooth.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/faces/smooth.png" style="width:100mm" />
 </div>
 <figcaption>Functional image (top) and 8mm-smoothed functional image
 (bottom). These images were plotted using SPM’s "CheckReg" facility.

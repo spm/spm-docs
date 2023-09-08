@@ -12,7 +12,7 @@ and F2. The experimental stimuli and timings of events are shown the next two fi
 
 <figure>
 <div class="center">
-<img src="../../assets/figures/manual/faces/face_stim.png" style="width:120mm" />
+<img src="../../../assets/figures/manual/faces/face_stim.png" style="width:120mm" />
 </div>
 <figcaption><strong>Face repetition paradigm</strong>: There were 2
 presentations of 26 Famous and 26 Nonfamous Greyscale photographs, for
@@ -24,7 +24,7 @@ thought the face was famous.</figcaption>
 
 <figure>
 <div class="center">
-<img src="../../assets/figures/manual/faces/face_timing.png" style="width:140mm" />
+<img src="../../../assets/figures/manual/faces/face_timing.png" style="width:140mm" />
 </div>
 <figcaption>Time series of events.</figcaption>
 </figure>
@@ -57,7 +57,7 @@ organise the buttons in SPM's base window.
 
 <figure>
 <div class="center">
-<img src="../../assets/figures/manual/faces/command.png" style="width:100mm" />
+<img src="../../../assets/figures/manual/faces/command.png" style="width:100mm" />
 </div>
 <figcaption>The SPM base window comprises three sections (i) spatial
 pre-processing, (ii) model specification, review and estimation and

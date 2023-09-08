@@ -44,7 +44,7 @@ window. Then
 
 <figure>
 <div class="center">
-<img src="../../../assets/figures/manual/faces/face_ar1.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/faces/face_ar1.png" style="width:100mm" />
 </div>
 <figcaption>Bayesian analysis: Estimated AR(1) coefficient image
 indicating heterogeneity near the circle of Willis </figcaption>
@@ -140,7 +140,7 @@ This should create the plot below.
 
 <figure>
 <div class="center">
-<img src="../../../assets/figures/manual/faces/face_bayes.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/faces/face_bayes.png" style="width:100mm" />
 </div>
 <figcaption>Bayesian analysis: MIP and overlay of effect sizes at
 voxels where PPM is 95% sure that the effect size is greater than 1% of

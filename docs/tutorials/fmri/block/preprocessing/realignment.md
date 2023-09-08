@@ -13,7 +13,7 @@ Realignment refers to correcting the functional data for movement that has occur
 
 1. From the SPM menu panel, select `Realign (Estimate & Reslice)`. You will see a pop-up window appear looking like this:
 
-    ![](../../../assets/figures/realignment_batch.png)
+    ![](../../../../assets/figures/realignment_batch.png)
 
 2. Select `Data` :material-arrow-right-bold: `Session`. 
 3. In the pop-up window, use the left-hand panel to navigate to `sub-01/func/`. 
@@ -27,7 +27,7 @@ Realignment refers to correcting the functional data for movement that has occur
         In the SPM batch window, all fields marked with `X` require user input. Before running any SPM job make sure that you have specified inputs/parameters for all `X`'s. 
 
 Your job is now estimating the 6-parameter (rigid body) spatial transformation that will realign the time series. SPM will also plot the estimated time series of translations and rotations shown below:
-![](../../../assets/figures/realignment_plot.png)
+![](../../../../assets/figures/realignment_plot.png)
 
 The data used to generate these plots are also saved to a text file `rp_sub-01_task-auditory_bold.txt`, so that these variables can be later used as regressors when fitting GLMs. This allows movement effects to be accounted for when estimating brain function.
 
@@ -38,6 +38,6 @@ SPM will also create a mean image `meansub-01_task-auditory_bold.nii` which will
 
 ## Video walk-through
 
-![type:video](../../../assets/videos/realignment.mp4)
+![type:video](../../../../assets/videos/realignment.mp4)
 
 --8<-- "addons/abbreviations.md"

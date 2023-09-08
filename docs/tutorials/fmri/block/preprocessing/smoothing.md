@@ -13,7 +13,7 @@ Smoothing is the process of averaging the signal in each voxel with a weighted a
 
 1. From the SPM menu panel, select `Smooth`. You will see a pop-up window appear looking like this:
 
-    ![](../../../assets/figures/smoothing_batch.png)
+    ![](../../../../assets/figures/smoothing_batch.png)
 
 2. Select `Images to smooth`.
 3. In the pop-up window, navigate to `sub-01/func/`.

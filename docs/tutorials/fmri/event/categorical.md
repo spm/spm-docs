@@ -86,7 +86,7 @@ directory. It will also plot the design matrix, as shown below
 
 <figure>
 <div class="center">
-<img src="../../../assets/figures/manual/faces/cat_design.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/faces/cat_design.png" style="width:100mm" />
 </div>
 <figcaption>Design matrix</figcaption>
 </figure>
@@ -100,7 +100,7 @@ SPM will produce the image shown above. If you select `Explore` then
 
 <figure>
 <div class="center">
-<img src="../../../assets/figures/manual/faces/cat_explore.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/faces/cat_explore.png" style="width:100mm" />
 </div>
 <figcaption><strong>Exploring the design matrix</strong>. This shows the time series
 of the "N1" regressor (top left), the three basis functions used to
@@ -136,7 +136,7 @@ specified automatically, as shown below.
 
 <figure>
 <div class="center">
-<img src="../../../assets/figures/manual/faces/cat_contrasts.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/faces/cat_contrasts.png" style="width:100mm" />
 </div>
 <figcaption>Contrast Manager containing default contrasts for
 categorical design.</figcaption>
@@ -176,7 +176,7 @@ significance thresholds and search volume underneath.
 
 <figure>
 <div class="center">
-<img src="../../../assets/figures/manual/faces/cat5_volume.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/faces/cat5_volume.png" style="width:100mm" />
 </div>
 <figcaption><strong>MIP and Volume table for Canonical HRF</strong>:
 Faces &gt; Baseline.</figcaption>
@@ -261,7 +261,7 @@ the figure below.
 
 <figure>
 <div class="center">
-<img src="../../../assets/figures/manual/faces/cat3_contrast.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/faces/cat3_contrast.png" style="width:100mm" />
 </div>
 <figcaption>Contrast manager showing selection of the first contrast
 "Main effect of Rep" (repetition: F1 and N1 vs F2 and N2)</figcaption>
@@ -269,7 +269,7 @@ the figure below.
 
 <figure>
 <div class="center">
-<img src="../../../assets/figures/manual/faces/cat3_psth.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/faces/cat3_psth.png" style="width:100mm" />
 </div>
 <figcaption>MIP for Main effect of Rep, masked inclusively with
 Canonical HRF: Faces &gt; Baseline at
@@ -344,7 +344,7 @@ for the effects of interest.
 
 <figure>
 <div class="center">
-<img src="../../../assets/figures/manual/faces/movements.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/faces/movements.png" style="width:100mm" />
 </div>
 <figcaption>Movement-related activations. These spurious
 ‘activations’ are due to residual movement of the head during scanning.

@@ -17,7 +17,7 @@ Normalisation refers to bringing your data into a standard template space to all
 
 1. From the SPM menu panel, select `Normalise (Write)`. You will see a pop-up window appear looking like this:
 
-    ![](../../../assets/figures/normalisation_batch.png)
+    ![](../../../../assets/figures/normalisation_batch.png)
 
 2. Select `Data` :material-arrow-right-bold: `New: Subject`.
 3. Select `Deformation field`.

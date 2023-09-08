@@ -67,30 +67,30 @@ nav:
     - 'Octave':       'installation/octave.md'
   - 'Tutorials':
     - 'tutorials/index.md'
-    - 'Block Design fMRI':
-      - 'Getting started':           'tutorials/fmri/index.md'
-      - 'Preprocessing':
-        - 'Introduction':            'tutorials/fmri/preprocessing/introduction.md'
-        - 'Visual inspection':       'tutorials/fmri/preprocessing/visual_inspection.md'
-        - 'Removal of dummy scans':  'tutorials/fmri/preprocessing/dummy_scans.md'
-        - 'Realignment':             'tutorials/fmri/preprocessing/realignment.md'
-        - 'Slice timing correction': 'tutorials/fmri/preprocessing/slice_timing.md'
-        - 'Coregistration':          'tutorials/fmri/preprocessing/coregistration.md'
-        - 'Segmentation':            'tutorials/fmri/preprocessing/segmentation.md'
-        - 'Normalisation':           'tutorials/fmri/preprocessing/normalisation.md'
-        - 'Smoothing':               'tutorials/fmri/preprocessing/smoothing.md'
-        - 'Batch interface':         'tutorials/fmri/preprocessing/batch.md'
-        - 'Scripting':               'tutorials/fmri/preprocessing/scripting.md'
-      - 'Statistical modelling':
-        - 'First-level modelling - block design':         'tutorials/fmri/modelling/block_design.md'
-        #- 'First-level modelling - event-related design': 'tutorials/fmri/modelling/event_related_design.md'
-        #- 'Group-level modelling':                        'tutorials/fmri/modelling/group_level.md'
-    - 'Event-related fMRI':
-      - 'Getting started':       'tutorials/faces/index.md'
-      - 'Preprocessing':         'tutorials/faces/preprocessing.md'
-      - 'Categorical Modelling': 'tutorials/faces/categorical.md'
-      - 'Parametric Modelling':  'tutorials/faces/parametric.md'
-      - 'Bayesian Analysis':     'tutorials/faces/bayesian.md'
+    - 'fMRI':
+      - 'tutorials/fmri/index.md'
+      - 'Block Design fMRI':
+        - 'Getting started':         'tutorials/fmri/block/index.md'
+        - 'Preprocessing':
+          - 'Introduction':            'tutorials/fmri/block/preprocessing/introduction.md'
+          - 'Visual inspection':       'tutorials/fmri/block/preprocessing/visual_inspection.md'
+          - 'Removal of dummy scans':  'tutorials/fmri/block/preprocessing/dummy_scans.md'
+          - 'Realignment':             'tutorials/fmri/block/preprocessing/realignment.md'
+          - 'Slice timing correction': 'tutorials/fmri/block/preprocessing/slice_timing.md'
+          - 'Coregistration':          'tutorials/fmri/block/preprocessing/coregistration.md'
+          - 'Segmentation':            'tutorials/fmri/block/preprocessing/segmentation.md'
+          - 'Normalisation':           'tutorials/fmri/block/preprocessing/normalisation.md'
+          - 'Smoothing':               'tutorials/fmri/block/preprocessing/smoothing.md'
+          - 'Batch interface':         'tutorials/fmri/block/preprocessing/batch.md'
+          - 'Scripting':               'tutorials/fmri/block/preprocessing/scripting.md'
+        - 'Statistical modelling':
+          - 'First-level modelling - block design': 'tutorials/fmri/block/modelling/block_design.md'
+      - 'Event-related fMRI':
+        - 'Getting started':       'tutorials/fmri/event/index.md'
+        - 'Preprocessing':         'tutorials/fmri/event/preprocessing.md'
+        - 'Categorical Modelling': 'tutorials/fmri/event/categorical.md'
+        - 'Parametric Modelling':  'tutorials/fmri/event/parametric.md'
+        - 'Bayesian Analysis':     'tutorials/fmri/event/bayesian.md'
     - 'VBM':
         - 'Getting started':      'tutorials/vbm/index.md'
         - 'Image processing':     'tutorials/vbm/image_processing.md'

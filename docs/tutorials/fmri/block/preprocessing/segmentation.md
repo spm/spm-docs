@@ -13,7 +13,7 @@ Segmentation splits an image into individual tissue types.
 
 1. From the SPM menu panel, select `Segment`. You will see a pop-up window appear looking like this:
 
-    ![](../../../assets/figures/segmentation_batch.png)
+    ![](../../../../assets/figures/segmentation_batch.png)
 
 2. Select `Data` :material-arrow-right-bold: `Volumes`. 
 3. In the pop-up window, use the left-hand panel to navigate to `sub-01/anat/`. 

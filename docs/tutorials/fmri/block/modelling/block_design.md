@@ -4,7 +4,7 @@
 
 This tutorial uses the same auditory data described in the [fMRI preprocessing tutorial](../preprocessing/introduction.md). Before attempting this tutorial you will need a copy of the preprocessed data. Either follow the steps in the [fMRI preprocessing tutorial](../preprocessing/introduction.md) or download a copy of the preprocessed data from [here](). 
 
-Before starting to analyse your data, set up a directory where you will save your results and give it a meaningful name, e.g. `first_level_analysis`. Then launch SPM by typing `spm fmri` in your Matlab/Octave command window and begin your analysis.
+Before starting to analyse your data, set up a directory where you will save your results and give it a meaningful name, e.g. `first_level_analysis`. Then launch SPM by typing `spm fmri` in your MATLAB command window and begin your analysis.
 
 1. Press the `Specify 1st-level` button. This will call up the
 specification of an fMRI specification job in the batch editor.
@@ -34,18 +34,18 @@ specification of an fMRI specification job in the batch editor.
 
 SPM will now write an `SPM.mat` file to your chosen directory. It will also plot the design matrix:
 
-![](../../../assets/figures/manual/auditory/design.png)
+![](../../../../assets/figures/manual/auditory/design.png)
 
 At this stage it is advisable to check your model specification using
 SPM's review facility which is accessed via the `Review` button. Select the `SPM.mat` file you just created. Now click on the `Design` tab on the interactive window. If you select the first item `Design matrix`,
 SPM will produce the image shown above. If you select `Explore` :material-arrow-right-bold: `Session 1` :material-arrow-right-bold: `listening`, SPM will produce the plots shown below:
 
-![](../../../assets/figures/manual/auditory/explore.png)
+![](../../../../assets/figures/manual/auditory/explore.png)
 
 If you select the second item on the `Design` tab, `Design
 orthogonality`, SPM will produce this plot: 
 
-![](../../../assets/figures/manual/auditory/aud_orth.png)
+![](../../../../assets/figures/manual/auditory/aud_orth.png)
 
 Columns $x_1$ and $x_2$ are orthogonal if the inner product $x_1^T x_2=0$. The inner product can also be written $x_1^T x_2 = |x_1||x_2| cos \theta$, where $|x|$ denotes the length of $x$ and $\theta$ is the angle between the two vectors. So, the vectors will be orthogonal if $cos \theta=0$. The upper-diagonal elements in the matrix at the bottom of the figure plot $cos\theta$ for each pair of columns in the design matrix. Here we have a single entry. A degree of non-orthogonality or collinearity is indicated by the gray shading.
 
@@ -66,7 +66,7 @@ an `SPM.mat` file.
 
 2. Select the `SPM.mat` file created in the last section. This will bring up the contrast manager:
 
-![](../../../assets/figures/manual/auditory/con_man.png)
+![](../../../../assets/figures/manual/auditory/con_man.png)
 
 The contrast manager displays the design matrix (surfable) in the right
 panel and lists specified contrasts in the left panel. Either `t-contrast` or `F-contrast` can be selected. To examine statistical results for condition effects:
@@ -83,7 +83,7 @@ window in green, incorrect ones are displayed in red.
 
 4. Press `Done`.
 
-![](../../../assets/figures/manual/auditory/con_man3.png)
+![](../../../../assets/figures/manual/auditory/con_man3.png)
 
 ## Masking
 
@@ -117,7 +117,7 @@ Accept the default value, `0`.
 
 Entering a value $k$ here will produce SPMs with clusters containing at least $k$ voxels. SPM will then produce the following map: 
 
-![](../../../assets/figures/manual/auditory/spm1.png)
+![](../../../../assets/figures/manual/auditory/spm1.png)
 
 ## Files
 
@@ -135,7 +135,7 @@ orthogonal planes. The MIP is surfable: right-clicking in the MIP will
 activate a pulldown menu, left-clicking on the red cursor will allow it
 to be dragged to a new position.
 
-![](../../../assets/figures/manual/auditory/interactive.png)
+![](../../../../assets/figures/manual/auditory/interactive.png)
 
 ## Design matrix
 
@@ -148,7 +148,7 @@ option.
 
 To get a summary of local maxima, press the `whole brain` button in the *p*-values section of the Interactive window. This will list all clusters above the chosen level of significance as well as separate (>8mm apart) maxima within a cluster, with details of significance thresholds and search volume underneath.
 
-![](../../../assets/figures/manual/auditory/volume.png)
+![](../../../../assets/figures/manual/auditory/volume.png)
 
 The columns in volume table show, from right to left:
 
@@ -188,10 +188,10 @@ It is also possible to produce tables of statistical information for a single cl
 A voxel can be chosen with coordinates corresponding to those in the interactive window. The responses at this voxel can then be plotted using the `Plot` button in the visualisation section of the interactive window. This will provide you with five further options:
 
 1. **Contrast estimates and 90% CI:** SPM will prompt for a specific contrast (e.g. `listening > rest`). The plot will show effect size and 90% confidence intervals:
-    ![](../../../assets/figures/manual/auditory/contrast.png)
+    ![](../../../../assets/figures/manual/auditory/contrast.png)
 
 2. **Fitted responses:** Plots adjusted data and fitted response across session/subject. SPM will prompt for a specific contrast and provides the option to choose different ordinates ()`an explanatory variable`, `scan or time`, or `user specified`). If `scan or time`, the plot will show adjusted or fitted data with errors added:
-    ![](../../../assets/figures/manual/auditory/fitted.png)
+    ![](../../../../assets/figures/manual/auditory/fitted.png)
 
 3. **Event-related responses:** Plots adjusted data and fitted response across peri-stimulus time.
 
@@ -225,9 +225,9 @@ The visualisation section of the interactive window also provides an overlay fac
 
 Thresholded SPMs can be saved as NIfTI image files in the working directory by using the "Save" button in the Interactive window. In the figures below the `listening > rest` activation has been superimposed on a spatially normalised, bias-corrected anatomical image.
 
-![](../../../assets/figures/manual/auditory/slices.png)
+![](../../../../assets/figures/manual/auditory/slices.png)
 
-![](../../../assets/figures/manual/auditory/sections.png) 
+![](../../../../assets/figures/manual/auditory/sections.png) 
 
 For the `Render` option, we first created a rendering for this subject.
 
@@ -246,7 +246,7 @@ This was implemented by:
 
 SPM plots the rendered anatomical image in the graphics window and saves it as `render_wc1sub-01_T1w.mat`. The surface image is saved as `surf_wc1sub-01_T1w.mat`.
 
-![](../../../assets/figures/manual/auditory/render.png)
+![](../../../../assets/figures/manual/auditory/render.png)
 
 It is also possible to project and display the results on a surface mesh, we are going to use here one of the canonical mesh distributed with SPM (in MNI space). Press `Overlays` and choose `Render`, then go in the `canonical` folder of your SPM installation and select file `cortex_20484.surf.gii` (this is a surface mesh stored using the GIfTI format) and you will obtain a figure similar to the one above.
 

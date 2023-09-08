@@ -13,7 +13,7 @@ Coregistration brings two images into alignment. In this case this we will be wo
 
 1. From the SPM menu panel, select `Coregister (Estimate)`. You will see a pop-up window appear looking like this:
 
-    ![](../../../assets/figures/coregistration_batch.png)
+    ![](../../../../assets/figures/coregistration_batch.png)
 
 2. Select `Reference image`. 
 3. In the pop-up window, use the left-hand panel to navigate to `sub-01/func/`. 
@@ -26,7 +26,7 @@ Coregistration brings two images into alignment. In this case this we will be wo
 
 SPM will now implement a coregistration between the structural and functional data that maximises the mutual information. In the process, the header of the source file (in this case the structural image) will be changed. Once finished, SPM will display the results of coregistration shown below. You can use the crosshair to navigate the image and check the quality of coregistration. Pay particular attention to the outline of the brain and ventricles.
 
-![](../../../assets/figures/coregistration_plot.png)
+![](../../../../assets/figures/coregistration_plot.png)
 
 
 ### Video walk-through

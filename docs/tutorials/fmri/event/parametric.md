@@ -49,7 +49,7 @@ This should produce the design matrix shown below.
 
 <figure>
 <div class="center">
-<img src="../../../assets/figures/manual/faces/par_design.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/faces/par_design.png" style="width:100mm" />
 </div>
 <figcaption><strong>Design matrix for testing repetition effects
 parametrically.</strong> Regressor 2 indicates the second occurrence of
@@ -117,7 +117,7 @@ this parametric effect using overlays, sections and selecting the
 
 <figure>
 <div class="center">
-<img src="../../../assets/figures/manual/faces/famous_lag_mip.png" style="width:100mm" />
+<img src="../../../../assets/figures/manual/faces/famous_lag_mip.png" style="width:100mm" />
 </div>
 <figcaption>MIP and overlay of parametric lag effect in parietal
 cortex.</figcaption>
@@ -141,7 +141,7 @@ this issue, see the SPM2 example analysis of these data on the webpage).
 
 <figure>
 <div class="center">
-<img src="../../../assets/figures/manual/faces/famous_lag.png" style="width:150mm" />
+<img src="../../../../assets/figures/manual/faces/famous_lag.png" style="width:150mm" />
 </div>
 <figcaption>Response as a function of lag.</figcaption>
 </figure>

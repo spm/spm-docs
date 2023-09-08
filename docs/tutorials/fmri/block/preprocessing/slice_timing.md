@@ -7,7 +7,7 @@ Slice timing correction aims to account for the differences in timing of data ac
 ??? info "Why use slice timing correction?"
     fMRI data is often collected in slices, with one or several slices acquired at a time. Slices can be acquired top-to-bottom (descending) or bottom-to-top (ascending) and be either contiguous/sequential or interleaved:
 
-    ![](../../../assets/figures/slice_timing_figure.png){ width="500" }
+    ![](../../../../assets/figures/slice_timing_figure.png){ width="500" }
     
     This means that depending on the TR, there is a delay between the acquisition of the first and the last slice/group of slices. To fix this issue, information about the time of acquitision of each slice can be used to interpolate the signal of each slice in a volume to the same timepoint (referred to as the *reference slice*). It is thus important to know your data's TR and slice order acquisition or slice timings. 
     
@@ -32,7 +32,7 @@ Slice timing correction aims to account for the differences in timing of data ac
 
 1. From the SPM menu panel, select `Slice timing`. A pop-up window will open:
 
-    ![](../../../assets/figures/slice_timing_batch.png)
+    ![](../../../../assets/figures/slice_timing_batch.png)
 
 2. Select `Data` :material-arrow-right-bold: `Session`.
 3. In the pop-up window, use the left-hand panel to navigate to `sub-01/func/`. 
