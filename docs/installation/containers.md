@@ -26,6 +26,7 @@ SPM](standalone.md)):
 [`https://github.com/spm/spm-docker`](https://github.com/spm/spm-docker)
 
 [`https://github.com/spm/spm-docker/pkgs/container/spm-docker`](https://github.com/spm/spm-docker/pkgs/container/spm-docker)
+
 [`https://hub.docker.com/r/spmcentral/spm/`](https://hub.docker.com/r/spmcentral/spm/)
 
 For example, to start SPM with its graphical user interface:
@@ -40,26 +41,6 @@ If the container\'s root filesystem is mounted as read only
 -v /tmp/.matlab:/root/.matlab
 ```
 
-## See also
-
-### Neurodesk
-
-[`https://www.neurodesk.org/`](https://www.neurodesk.org/)
-
-### Neurodocker
-
-[`https://github.com/ReproNim/neurodocker`](https://github.com/ReproNim/neurodocker)
-[`https://hub.docker.com/r/kaczmarj/neurodocker/`](https://hub.docker.com/r/kaczmarj/neurodocker/)
-
-### SPM BIDS-App
-
-[`https://github.com/BIDS-Apps/SPM`](https://github.com/BIDS-Apps/SPM)
-[`https://hub.docker.com/r/bids/spm/`](https://hub.docker.com/r/bids/spm/)
-
-### MATLAB Dockerfile
-
-[`https://github.com/mathworks-ref-arch/matlab-dockerfile`](https://github.com/mathworks-ref-arch/matlab-dockerfile)
-
 ### Singularity
 
 <!-- markdown-link-check-disable-next-line -->
@@ -73,3 +54,25 @@ singularity exec spm12.sif
 
 ([how to install singularity on
 Ubuntu](https://github.com/hpcng/singularity/issues/5390#issuecomment-899111181))
+
+## See also
+
+### Neurodesk
+
+[`https://www.neurodesk.org/`](https://www.neurodesk.org/)
+
+### Neurodocker
+
+[`https://github.com/ReproNim/neurodocker`](https://github.com/ReproNim/neurodocker)
+
+[`https://hub.docker.com/r/repronim/neurodocker`](https://hub.docker.com/r/repronim/neurodocker)
+
+### SPM BIDS-App
+
+[`https://github.com/BIDS-Apps/SPM`](https://github.com/BIDS-Apps/SPM)
+
+[`https://hub.docker.com/r/bids/spm/`](https://hub.docker.com/r/bids/spm/)
+
+### MATLAB Dockerfile
+
+[`https://github.com/mathworks-ref-arch/matlab-dockerfile`](https://github.com/mathworks-ref-arch/matlab-dockerfile)

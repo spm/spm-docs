@@ -113,6 +113,13 @@ several ways:
   [this](http://www.gnu.org/software/octave/doc/interpreter/Getting-Started-with-Mex_002dFiles.html)
 - **cd** does not return current directory in Octave.
   Call **pwd** beforehand instead.
+- `mkoctfile`'s option to define output file name is `-o` or
+  `--output` while `mex`'s option is `-output`. If used, no file
+  extension (`.mex`) is appended.
+- **computer.m** returns different strings than on MATLAB (`PCWIN`,
+  `GLNX86`, `PCWIN64`, `GLNXA64`, `MACI64`), e.g. `x86_64-unknown-linux-gnu`.
+- **load.m** and **save.m** automatically add a `.mat` file extension if
+  not provided with MATLAB (Octave doesn't).
 
 ### Requires changes in Octave
 
@@ -617,16 +624,6 @@ several ways:
   progress](https://savannah.gnu.org/bugs/?55908)
 - **dbup** and **dbdown** not working as expected, [in
   progress](https://savannah.gnu.org/bugs/?56020)
-
-### Undecided yet
-
-- `mkoctfile`'s option to define output file name is `-o` or
-  `--output` while `mex`'s option is `-output`. If used, no file
-  extension (`.mex`) is appended.
-- **computer.m** returns different strings than on MATLAB (`PCWIN`,
-  `GLNX86`, `PCWIN64`, `GLNXA64`, `MACI64`), e.g. `x86_64-unknown-linux-gnu`.
-- **load.m** and **save.m** automatically add a `.mat` file extension if
-  not provided with MATLAB (Octave doesn't).
 
 ### Miscellaneous
 

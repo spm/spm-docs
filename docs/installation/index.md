@@ -20,7 +20,7 @@
         or type the following at the MATLAB prompt:
 
         ```matlab
-        addpath('C:\Users\login\Documents\MATLAB\spm12')
+        addpath('C:\Users\<login>\Documents\MATLAB\spm12')
         savepath % if you want to save the current MATLAB path
         ```
 
@@ -68,7 +68,7 @@
     2. Uncompress the archive by typing the following in a terminal:
 
         ```bash
-        cd /home/login
+        cd /home/<login>
         unzip spm12.zip
         ```
 
@@ -79,7 +79,7 @@
         or typing the following at the MATLAB prompt:
 
         ```matlab
-        addpath /home/login/spm12
+        addpath /home/<login>/spm12
         savepath % if you want to save the current MATLAB path
         ```
 
