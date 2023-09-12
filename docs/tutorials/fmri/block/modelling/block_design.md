@@ -250,20 +250,7 @@ SPM plots the rendered anatomical image in the graphics window and saves it as `
 
 It is also possible to project and display the results on a surface mesh, we are going to use here one of the canonical mesh distributed with SPM (in MNI space). Press `Overlays` and choose `Render`, then go in the `canonical` folder of your SPM installation and select file `cortex_20484.surf.gii` (this is a surface mesh stored using the GIfTI format) and you will obtain a figure similar to the one above.
 
-<div id="refs" class="references csl-bib-body hanging-indent">
-
-<div id="ref-ashburner05" class="csl-entry">
-
-Ashburner, J., and K. J. Friston. 2005. "Unified Segmentation."
-*NeuroImage* 26: 839--51.
-<https://doi.org/doi:10.1016/j.neuroimage.2005.02.018>.
-
-</div>
-
-</div>
-
 [^1]: Auditory fMRI dataset:
-    <http://www.fil.ion.ucl.ac.uk/spm/data/auditory/>
+    <https://www.fil.ion.ucl.ac.uk/spm/data/auditory/>
 
-[^2]: Beginners may wish to skip this step, and instead just superimpose
-    functional activations on an "average structural image".
+[^2]: Beginners may wish to skip this step, and instead just superimpose functional activations on an "average structural image".
