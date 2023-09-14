@@ -37,4 +37,5 @@ Running this code snippet should generate a figure like this.
 </figure>
 
 
-8<-- "addons/abbreviations.md"
+--8<-- "addons/abbreviations.md"
+
