@@ -71,13 +71,13 @@ If the co-registration works we should get an image of a brain within the sensor
 
 ## Manually Marking fiducials on meshes
 
-To mark the fiducials we use the function `spm_mesh_select`. The function supports any file format supported by gifti mehtod used to read meshes('.vtk', '.obj', '.ply', '.off', '.stl', '.mz3'). 
+To mark the fiducials we use the function `spm_mesh_select`. The function supports any file format supported by gifti mehtod used to read meshes ('.vtk', '.obj', '.ply', '.off', '.stl', '.mz3'). 
 
 ```matlab
 g = gifti('headshape.obj');
 spm_mesh_select(g);
 ```
-This code will create an interactive figure of the mesh. When you have rotated the mesh so that a fiducial of interest is in view you can press the P1,P2 or P3. This will lock the mesh in place. When you single click on the figure a red sphere will be placed at the location, an associated text box will appear with the coordinate and you will once again be able to rotate the mesh. If you wish to change a selected point just click the associated  button again. 
+This code will create an interactive figure of the mesh. When you have rotated the mesh so that a fiducial of interest is in view you can press the P1, P2 or P3 button. This will lock the mesh in place. Now when you single click on the figure a red sphere will be placed at the location, an associated text box will appear with the coordinate. After you have selected the fiducial point you will once again be able to rotate the mesh. If you wish to change a selected point just click the associated  button again. 
 
 <figure markdown>
   <div class="center">
