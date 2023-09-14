@@ -71,7 +71,7 @@ If the co-registration works we should get an image of a brain within the sensor
 
 ## Manually Marking fiducials on meshes
 
-To mark the fiducials we use the function `spm_mesh_select`. The function supports any file format supported by gifti mehtod used to read meshes ('.vtk', '.obj', '.ply', '.off', '.stl', '.mz3'). 
+To mark the fiducials we use the function `spm_mesh_select`. The function supports any file format supported by gifti method used to read meshes ('.vtk', '.obj', '.ply', '.off', '.stl', '.mz3'). 
 
 ```matlab
 g = gifti('headshape.obj');
