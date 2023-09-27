@@ -72,7 +72,7 @@
         for information about how to compile MEX files for MACA64
         in MATLAB 23.2.0.2365128 (R2023b).
         ```
-        this is because you are running [native Apple silicon MATLAB (R2023b onwards)](https://uk.mathworks.com/support/requirements/apple-silicon.html) and the MEX files are not available for that platform in SPM12. Instead download and install the [development version of SPM](https://github.com/spm/spm) where the `*.mexmaca64` MEX files have been compiled.
+        this is because you are running [native Apple silicon MATLAB (R2023b onwards)](https://uk.mathworks.com/support/requirements/apple-silicon.html) and the MEX files are not available for that platform in SPM12. Instead download and install the [development version of SPM](https://github.com/spm/spm) or the [maintenance branch of SPM12](https://github.com/spm/spm12/tree/maint) where the `*.mexmaca64` MEX files have been compiled.
 
 === "Linux"
 
@@ -95,6 +95,33 @@
         addpath /home/<login>/spm12
         savepath % if you want to save the current MATLAB path
         ```
+
+    !!! failure "`Crash at startup`"
+
+    The following concerns a situation where MATLAB generates a segmentation fault when opening the SPM interface with errors like:
+    ```
+    BadWindow (invalid Window parameter)
+    ``` 
+    ```
+    serial 20133 error_code 3 request_code 20 minor_code 0
+    ```
+    ```
+    Pango-CRITICAL **: pango_font_description_from_string: assertion 'str != NULL' failed
+    ```
+    ```
+    GLib-CRITICAL **: g_once_init_leave: assertion 'result != 0' failed
+    ``` 
+    ```
+    GLib-GObject-CRITICAL **: g_type_register_dynamic: assertion 'parent_type > 0' failed
+    ```
+
+    This is likely to be an issue with the display of the welcoming message in the Graphics window as a web document.
+
+    One fix is to [comment one line in spm.m.](https://github.com/spm/spm12/blob/r7771/spm.m#L352). Another fix not requiring to modify the SPM source code is to [define an environment variable.](https://github.com/spm/spm12/blob/r7771/spm_browser.m#L54):
+    ```
+    setenv('SPM_HTML_BROWSER','0')
+    ```
+
 
 !!! danger
     If using the graphical interface, make sure to use the `Add Folder...` button and not `Add with Subfolders...`. SPM will automatically add the appropriate subfolders to the MATLAB path at runtime.
