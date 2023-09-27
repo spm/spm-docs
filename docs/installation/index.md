@@ -47,7 +47,7 @@
         ```
 
     !!! failure "Troubleshooting"
-        If, after installation, you have issues with *MEX files on macOS* such as:
+        If, after installation, you have validation issues with the **MEX files on macOS** such as:
         ```
         "`*.mexmaci64` cannot be opened because the developer cannot be verified. 
         macOS cannot verify that this app is free from malware"
@@ -60,7 +60,7 @@
         please follow the instructions detailed [here](../development/compilation/macos/#troubleshooting); you do not need to recompile the MEX files but they have to be approved beforehand.
 
     !!! failure "Troubleshooting"
-        If, after installation, you get an error that the *MEX files for MACA64 are missing*:
+        If, after installation, you get an error indicating that the **MEX files for MACA64 are missing**:
         ```
         >> spm
         Error using spm_check_installation>check_basic
@@ -72,7 +72,7 @@
         for information about how to compile MEX files for MACA64
         in MATLAB 23.2.0.2365128 (R2023b).
         ```
-        this is because you are running native Apple silicon MATLAB (R2023b onwards) and the MEX files are not available for that platform in SPM12. Instead download and install the [development version of SPM](https://github.com/spm/spm) where the `*.mexmaca64` MEX files are available.
+        this is because you are running [native Apple silicon MATLAB (R2023b onwards)](https://uk.mathworks.com/support/requirements/apple-silicon.html) and the MEX files are not available for that platform in SPM12. Instead download and install the [development version of SPM](https://github.com/spm/spm) where the `*.mexmaca64` MEX files have been compiled.
 
 === "Linux"
 
