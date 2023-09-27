@@ -28,7 +28,7 @@
 
 === "macOS"
 
-    1. [Download  `spm12.zip` from the [SPM website](https://www.fil.ion.ucl.ac.uk/spm/software/download/) in your home directory.
+    1. Download  `spm12.zip` from the [SPM website](https://www.fil.ion.ucl.ac.uk/spm/software/download/) in your home directory.
 
     2. Uncompress the archive by typing the following in a Terminal:
         ```bash
@@ -47,9 +47,7 @@
         ```
 
     !!! failure "Troubleshooting"
-        **Issues with MEX files**
-
-        If you have issues with MEX files on macOS such as:
+        If, after installation, you have issues with *MEX files on macOS* such as:
         ```
         "`*.mexmaci64` cannot be opened because the developer cannot be verified. 
         macOS cannot verify that this app is free from malware"
@@ -59,7 +57,22 @@
         "Code signature not valid for use in process using Library Validation: 
         library load disallowed by system policy"
         ```
-        follow the instructions detailed [here](../development/compilation/macos/#troubleshooting)
+        please follow the instructions detailed [here](../development/compilation/macos/#troubleshooting); you do not need to recompile the MEX files but they have to be approved beforehand.
+
+    !!! failure "Troubleshooting"
+        If, after installation, you get an error that the *MEX files for MACA64 are missing*:
+        ```
+        >> spm
+        Error using spm_check_installation>check_basic
+        SPM uses a number of MEX files, which are compiled functions.
+        These need to be compiled for the various platforms on which SPM
+        is run. It seems that the compiled files for your computer platform
+        are missing or not compatible. See
+            https://en.wikibooks.org/wiki/SPM/Installation_on_64bit_Mac_OS_(Intel)
+        for information about how to compile MEX files for MACA64
+        in MATLAB 23.2.0.2365128 (R2023b).
+        ```
+        this is because you are running native Apple silicon MATLAB (R2023b onwards) and the MEX files are not available for that platform in SPM12. Instead download and install the [development version of SPM](https://github.com/spm/spm) where the `*.mexmaca64` MEX files are available.
 
 === "Linux"
 
