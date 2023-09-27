@@ -98,29 +98,29 @@
 
     !!! failure "`Crash at startup`"
 
-    The following concerns a situation where MATLAB generates a segmentation fault when opening the SPM interface with errors like:
-    ```
-    BadWindow (invalid Window parameter)
-    ``` 
-    ```
-    serial 20133 error_code 3 request_code 20 minor_code 0
-    ```
-    ```
-    Pango-CRITICAL **: pango_font_description_from_string: assertion 'str != NULL' failed
-    ```
-    ```
-    GLib-CRITICAL **: g_once_init_leave: assertion 'result != 0' failed
-    ``` 
-    ```
-    GLib-GObject-CRITICAL **: g_type_register_dynamic: assertion 'parent_type > 0' failed
-    ```
+        The following concerns a situation where MATLAB generates a segmentation fault when opening the SPM interface with errors like:
+        ```
+        BadWindow (invalid Window parameter)
+        ``` 
+        ```
+        serial 20133 error_code 3 request_code 20 minor_code 0
+        ```
+        ```
+        Pango-CRITICAL **: pango_font_description_from_string: assertion 'str != NULL' failed
+        ```
+        ```
+        GLib-CRITICAL **: g_once_init_leave: assertion 'result != 0' failed
+        ``` 
+        ```
+        GLib-GObject-CRITICAL **: g_type_register_dynamic: assertion 'parent_type > 0' failed
+        ```
 
-    This is likely to be an issue with the display of the welcoming message in the Graphics window as a web document.
+        This is likely to be an issue with the display of the welcoming message in the Graphics window as a web document.
 
-    One fix is to [comment one line in spm.m.](https://github.com/spm/spm12/blob/r7771/spm.m#L352). Another fix not requiring to modify the SPM source code is to [define an environment variable.](https://github.com/spm/spm12/blob/r7771/spm_browser.m#L54):
-    ```
-    setenv('SPM_HTML_BROWSER','0')
-    ```
+        One fix is to [comment one line in spm.m.](https://github.com/spm/spm12/blob/r7771/spm.m#L352). Another fix not requiring to modify the SPM source code is to [define an environment variable.](https://github.com/spm/spm12/blob/r7771/spm_browser.m#L54):
+        ```
+        setenv('SPM_HTML_BROWSER','0')
+        ```
 
 
 !!! danger
