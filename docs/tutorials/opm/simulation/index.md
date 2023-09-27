@@ -32,7 +32,7 @@ Running this code snippet should generate a figure like this.
 
 <figure markdown>
   <div class="center">
-    <img src="../../../assets/figures/opm/mni15Whole.PNG" style="width:160mm" />
+    <img src="../../../assets/figures/opm/mni15Whole.png" style="width:160mm" />
   </div>
 </figure>
 
