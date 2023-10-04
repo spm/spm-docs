@@ -1,4 +1,4 @@
-# DCM for fMRI - 1st level (GUI)
+# DCM for fMRI - 1st level (Attention)
 
 Dynamic Causal Modelling (DCM) involves specifying a model for each participant (first-level analysis) and then specifying a model of between-subjects effects (second-level analysis). 
 This tutorial works through first level analysis using data from the classic study of [Buchel et al. (1998)](https://doi.org/10.1093/brain/121.7.1281) using the Graphical User Interface (GUI). 
