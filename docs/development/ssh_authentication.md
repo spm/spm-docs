@@ -1,4 +1,4 @@
-# Key generation for Linux users
+# SSH key generation for authentication
 
 You must generate a key to be able to clone and work with the SPM repository. To do this, in your GitHub account go to “**Organizations**” and then in the left panel press “**SSH and GPG keys**”. In “**SSH keys**”, press the green button “**New SSH key**”
 
@@ -36,7 +36,7 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-2. In the repertory `/home/*your_user*/.ssh` now you will have 2 new files similar to these:
+2. In the directory `~/.ssh` now you will have 2 new files similar to these:
 
 ```bash
 id_ed25519  id_ed25519.pub
@@ -45,7 +45,7 @@ id_ed25519  id_ed25519.pub
 3. The public key is in the file with extension `.pub`. To read it, open the file or type:
 
 ```bash
-cat .ssh/id_ed25519.pub_
+cat ~/.ssh/id_ed25519.pub
 ```
 The output/key should be something similar to this:
 
@@ -54,10 +54,12 @@ ssh-ed25519 AAAAC5NzaC1lZDI1NTE4AAAANI/iaJJ7eHWs+i2hxxQTX+xcalwd+QlhDSwgIkh3cvEc
 ```
 4. Copy this key and paste it in the field “**Key**” in your GitHub account.
 
-Finally, to clone the GitHub repository, create a new work directory for SPM in your computer and move there in a terminal. Then type:
+Finally, to clone the GitHub repository, type in a Terminal:
 
 ```bash
 git clone git@github.com:spm/spm.git
 ```
 
-You will have to enter the passphrase you created previously. And that’s all!
+You will have to enter the passphrase you created previously.
+
+See also [GitHub Documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
