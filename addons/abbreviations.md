@@ -20,4 +20,5 @@
 *[TRs]: Repetition Times
 *[TSV]: Tab-Separated Values
 *[CVA]: Canonical Variate Analysis
-*[TSSS]: Temporal Signal Space Separation. 
+*[TSSS]: Temporal Signal Space Separation
+*[DAiSS]: Data Analysis in Source Space

@@ -14,8 +14,9 @@ An optically pumped magnetometer is a type of MEG sensor that does not require c
 These tutorials cover the following areas in OPM analysis.
 
 1. [Sensor Level: Evoked Response Pipeline](evoked/index.md)
-2. [Coregistration](coreg/index.md)
-3. [Simulation](simulation/index.md)
+2. [Source Level: Evoked Response Pipeline](evoked_source/index.md)
+3. [Coregistration](coreg/index.md)
+4. [Simulation](simulation/index.md)
 
 
 --8<-- "addons/abbreviations.md"
