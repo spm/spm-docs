@@ -10,7 +10,7 @@ To compile SPM MEX files, you need to have Apple's development environment [Xcod
 You also need to have the `mex` executable in your system path. To do
 so, type the following in a Terminal:
 ```
-export PATH=/Applications/MATLAB_R2017a.app/bin:$PATH
+export PATH=/Applications/MATLAB_R2023b.app/bin:$PATH
 ```
 with the appropriate path where MATLAB is installed
 
@@ -18,7 +18,12 @@ If you get errors such as `Bad : modifier in $ (/)`, this is because
 the instructions are given for a `bash` Terminal while you are using a
 `tcsh` Terminal. The equivalent commands are:
 ```
-setenv PATH /Applications/MATLAB_R2017a.app/bin:${PATH}
+setenv PATH /Applications/MATLAB_R2023b.app/bin:${PATH}
+```
+
+An alternative is to use the `MEXBIN` environment variable when invoking `make`:
+```
+make MEXBIN=/Applications/MATLAB_R2023b.app/bin/mex
 ```
 
 ## Instructions
@@ -33,7 +38,7 @@ make external-distclean
 make external && make external-install
 ```
 
-This will generate `*.mexmaci64` or `*.mexmaca64` MEX files.
+This will generate `*.mexmaci64` MEX files. To generate `*.mexmaca64` MEX files, add `PLATFORM=arm64` to the commands above.
 
 ## Troubleshooting
 
