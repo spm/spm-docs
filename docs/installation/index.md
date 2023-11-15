@@ -57,7 +57,7 @@
         "Code signature not valid for use in process using Library Validation: 
         library load disallowed by system policy"
         ```
-        please follow the instructions detailed [here](../development/compilation/macos/#troubleshooting); you do not need to recompile the MEX files but they have to be approved beforehand.
+        please follow the instructions detailed [here](../development/compilation/macos.md/#troubleshooting); you do not need to recompile the MEX files but they have to be approved beforehand.
 
     !!! failure "Troubleshooting"
         If, after installation, you get an error indicating that the **MEX files for MACA64 are missing**:

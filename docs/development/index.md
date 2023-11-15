@@ -6,7 +6,7 @@ The development of SPM take place on [GitHub](https://github.com/spm/) and you w
 
 !!! tip "Git"
 
-    [Introduction to Git for SPM developers](git/)
+    [Introduction to Git for SPM developers](git/index.md)
 
 ## Developer Guidelines
 
@@ -14,7 +14,7 @@ These guidelines are designed to make it as easy as possible to get involved. If
 
 !!! tip "Guidelines"
 
-    [Developer Guidelines](guidelines/)
+    [Developer Guidelines](guidelines/index.md)
 
 ## Software testing
 
@@ -22,7 +22,7 @@ SPM testing is performed using the [MATLAB Unit Testing Framework](https://www.m
 
 !!! tip "Testing"
 
-    [Software Testing](testing/)
+    [Software Testing](testing/index.md)
 
 ## Compilation of MEX files
 
@@ -30,4 +30,4 @@ Platform-specific instructions to compile SPM MEX files are provided in the link
 
 !!! tip "MEX Compilation"
 
-    [Compilation of MEX files](compilation/)
+    [Compilation of MEX files](compilation/index.md)

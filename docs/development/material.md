@@ -19,9 +19,9 @@
     - [Analysis in sensor space ](../manual/meeg/eeg_sensoranalysis.md)
     - [3D Source Reconstruction](../manual/meeg/eeg_imaging.md)
     - [Localization of Equivalent Current Dipoles ](../manual/meeg/eeg_VBECD.md)
-    - [Dynamic Causal Modelling](../manual/meeg/eeg_DCM)     .md 
+    - [Dynamic Causal Modelling](../manual/meeg/eeg_DCM.md)
 - [Advanced topics in M/EEG artefact removal](../manual/meeg_artefact/meeg_artefact.md)
-- [DCM for fNIRS](../manual/dcm_fnirs/dcm_fnirs)   .md 
+- [DCM for fNIRS](../manual/dcm_fnirs/dcm_fnirs.md)
 - [PET](../manual/pet/pet.md)
 - Batch Interface
     - [Batch Tutorial](../manual/batch/batch.md)

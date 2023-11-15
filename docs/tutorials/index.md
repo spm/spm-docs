@@ -4,7 +4,7 @@ The tutorials are organised by data modality and illustrate how to use SPM to an
 
 !!! tip "Getting started"
 
-    Please make sure to first follow the [instructions to download and install the SPM software](../installation/) on your computer.
+    Please make sure to first follow the [instructions to download and install the SPM software](../installation/index.md) on your computer.
 
 <div class="grid cards" markdown>
 

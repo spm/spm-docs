@@ -9,17 +9,17 @@
 
 Statistical Parametric Mapping refers to the construction and assessment of spatially extended statistical processes used to test hypotheses about functional imaging data. These ideas have been instantiated in a free and open source software that is called **SPM**.
 
-The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject. The current release is designed for the analysis of [fMRI](https://www.fil.ion.ucl.ac.uk/spm/doc/biblio/Keyword/FMRI.html), [PET](https://www.fil.ion.ucl.ac.uk/spm/doc/biblio/Keyword/PET.html), [SPECT](https://www.fil.ion.ucl.ac.uk/spm/doc/biblio/Keyword/PET.html), [EEG](https://www.fil.ion.ucl.ac.uk/spm/doc/biblio/Keyword/EEG.html) and [MEG](https://www.fil.ion.ucl.ac.uk/spm/doc/biblio/Keyword/MEG.html).
+The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject. The current release is designed for the analysis of **fMRI**, **PET**, **SPECT**, **EEG** and **MEG**.
 
 <div class="grid cards" markdown>
 
--   :material-lock-open:{ .lg .middle } __Open Source__
+-   :material-lock-open:{ .lg .middle } __Open Source Software__
 
     ---
 
     SPM is an academic free and open source software.
 
-    [:octicons-arrow-right-24: Installation ](installation/)
+    [:octicons-arrow-right-24: **Installation** ](installation/index.md)
 
 -   :material-monitor:{ .lg .middle } __Educational materials__
 
@@ -27,7 +27,7 @@ The SPM software package has been designed for the analysis of brain imaging dat
 
     We provide a curated list of tutorials for different imaging analyses.
 
-    [:octicons-arrow-right-24: Tutorials](tutorials/)
+    [:octicons-arrow-right-24: **Tutorials**](tutorials/index.md)
 
 -   :fontawesome-solid-graduation-cap:{ .lg .middle } __Courses__
 
@@ -35,7 +35,7 @@ The SPM software package has been designed for the analysis of brain imaging dat
 
     Regular SPM courses run every autumn and spring, both online and in-person in London.
 
-    [:octicons-arrow-right-24: Courses information](https://www.fil.ion.ucl.ac.uk/spm/course/)
+    [:octicons-arrow-right-24: **Courses information**](https://www.fil.ion.ucl.ac.uk/spm/course/)
 
 -   :material-account-question:{ .lg .middle } __Support__
 
@@ -43,7 +43,7 @@ The SPM software package has been designed for the analysis of brain imaging dat
 
     The SPM discussion list provides live support to your queries.
 
-    [:octicons-arrow-right-24: SPM discussion list](https://www.fil.ion.ucl.ac.uk/spm/support/)
+    [:octicons-arrow-right-24: **SPM discussion list**](https://www.fil.ion.ucl.ac.uk/spm/support/)
 
 </div>
 
