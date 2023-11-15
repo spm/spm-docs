@@ -8,45 +8,45 @@ This page goes through an example pipeline for a source-level evoked response an
 %- read data 
 %--------------------------------------------------------------------------
 S = [];
-S.data ='OPM_meg_001.cMEG';
-S.positions= 'OPM_HelmConfig.tsv';
+S.data = 'OPM_meg_001.cMEG';
+S.positions = 'OPM_HelmConfig.tsv';
 D = spm_opm_create(S);
 
 %- highpass
 %--------------------------------------------------------------------------
-S=[];
-S.D=D;
-S.freq=[10];
+S = [];
+S.D = D;
+S.freq = [10];
 S.band = 'high';
 fD = spm_eeg_ffilter(S);
-fr =S.freq;
+fr = S.freq;
 
 %- lowpass
 %--------------------------------------------------------------------------
-S=[];
-S.D=fD;
-S.freq=[70];
+S = [];
+S.D = fD;
+S.freq = [70];
 S.band = 'low';
 fD = spm_eeg_ffilter(S);
 
 %- adaptive multipole models
 %--------------------------------------------------------------------------
-S=[];
-S.D= fD;
-S.corrLim=.98;
+S = [];
+S.D = fD;
+S.corrLim = .98;
 mD = spm_opm_amm(S);
 
 %- epoch 
 %--------------------------------------------------------------------------
-S =[];
-S.D=mD;
-S.timewin=[-50 200];
-S.triggerChannels ={'Trigger 6 Z'};
-eD= spm_opm_epoch_trigger(S);
+S = [];
+S.D = mD;
+S.timewin = [-50 200];
+S.triggerChannels = {'Trigger 6 Z'};
+eD = spm_opm_epoch_trigger(S);
 
 %- baseline correction 
 %--------------------------------------------------------------------------
-S=[];
+S = [];
 S.D = eD;
 S.timewin = [-50 0];
 eD = spm_eeg_bc(S);
@@ -75,11 +75,11 @@ To mark these points we can use [`spm_mesh_selct`](https://www.fil.ion.ucl.ac.uk
 Once the points are marked we can do the registration. The  co-registration requires that the head shape file `S.headfile` be provided in any format that the `gifti` function supports as well as the 4 sets of fiducial points we have marked. Note that the fiducial points are provided to the functions in row order. 
 
 ```matlab
-S=[];
+S = [];
 S.D = eD;
-S.headfile  ='head.obj';
+S.headfile = 'head.obj';
 
- S.helmetref= ...
+ S.helmetref = ...
 [0,133.9,-24;...     %point 1 
 -114,30.5,-61;...    %point 2
 116,29,-59];         %point 3
@@ -94,7 +94,7 @@ S.headfid = ...
 97, 54, 551;...     % lpa
 84, -67, 548];      % rpa 
 
-S.headhelmetfid  = ... 
+S.headhelmetfid = ... 
 [33,-22.6,654;...   % nas
 14.7, 38.9, 699;... % lpa
 5,-82,693];         %rpa
@@ -146,10 +146,10 @@ We can now specify the type of source reconstruction algorithm we want to use (t
 	We can understand this parameter as a regularisation parameter. Bigger values will make the result more focal but with lower SNR. Smaller values will improve SNR but compromise resolution. A rule of thumb is set this value to the be the square of your sensor level SNR. So if you have t-values of about 10 at sensor level set this value to 10^2.
 
 ```matlab	
-S =[];
-S.BF=BF;
+S = [];
+S.BF = BF;
 S.method = 'minimumnorm';
-S.(S.method).snr=10^2;
+S.(S.method).snr = 10^2;
 BF = bf_wizard_inverse(S);
 ```
 
@@ -157,10 +157,10 @@ BF = bf_wizard_inverse(S);
 The final step of source reconstruction is to decided on the statistical analysis that will be conducted in the source space. There are a myriad of analyses that could be conducted but we will conduct a t-contrast comparing the magnitude of the signal at  ~90ms to the baseline time point (1ms).  
 
 ```matlab
-S= [];
-S.BF=BF;
+S = [];
+S.BF = BF;
 S.act = 90;
-S.base=1;
+S.base = 1;
 bf_stat_evoked_t(S);
 ```
 ??? info "Can I use a different condition for my baseline and activation period?"
@@ -182,54 +182,54 @@ Below we include the whole script required to perform the source space modelling
 %- read data 
 %--------------------------------------------------------------------------
 S = [];
-S.data ='OPM_meg_001.cMEG';
-S.positions= 'OPM_HelmConfig.tsv';
+S.data = 'OPM_meg_001.cMEG';
+S.positions = 'OPM_HelmConfig.tsv';
 D = spm_opm_create(S);
 
 %- highpass
 %--------------------------------------------------------------------------
-S=[];
-S.D=D;
-S.freq=[10];
+S = [];
+S.D = D;
+S.freq = [10];
 S.band = 'high';
 fD = spm_eeg_ffilter(S);
-fr =S.freq;
+fr = S.freq;
 %- lowpass
 %--------------------------------------------------------------------------
-S=[];
-S.D=fD;
-S.freq=[70];
+S = [];
+S.D = fD;
+S.freq = [70];
 S.band = 'low';
 fD = spm_eeg_ffilter(S);
 
 
 %- adaptive multipole models
 %--------------------------------------------------------------------------
-S=[];
-S.D= fD;
-S.corrLim=.98;
+S = [];
+S.D = fD;
+S.corrLim = .98;
 mD = spm_opm_amm(S);
 
 %- epoch 
 %--------------------------------------------------------------------------
-S =[];
-S.D=mD;
-S.timewin=[-50 200];
-S.triggerChannels ={'Trigger 6 Z'};
-eD= spm_opm_epoch_trigger(S);
+S = [];
+S.D = mD;
+S.timewin = [-50 200];
+S.triggerChannels = {'Trigger 6 Z'};
+eD = spm_opm_epoch_trigger(S);
 
-S=[];
+S = [];
 S.D = eD;
 S.timewin = [-50 0];
 eD = spm_eeg_bc(S);
 
 %- read and mark meshes
 %--------------------------------------------------------------------------
-S=[];
+S = [];
 S.D = eD;
-S.headfile  ='head.obj';
+S.headfile = 'head.obj';
 
- S.helmetref= ...
+ S.helmetref = ...
 [0,133.9,-24;...   %nas
 -114,30.5,-61;...    %lpa
 116,29,-59];      %rpa
@@ -244,7 +244,7 @@ S.headfid = ...
 97, 54, 551;...% lpa
 84, -67, 548];    % rpa 
 
-S.headhelmetfid  = ... 
+S.headhelmetfid = ... 
 [33,-22.6,654;... % nas
 14.7, 38.9, 699;...% lpa
 5,-82,693];   %rpa
@@ -277,21 +277,22 @@ BF = bf_wizard_features(S);
 
 % daiss inverse
 %--------------------------------------------------------------------------
-S =[];
-S.BF=BF;
+S = [];
+S.BF = BF;
 S.method = 'minimumnorm';
-S.(S.method).snr=10^2;
+S.(S.method).snr = 10^2;
 BF = bf_wizard_inverse(S);
 
 %- stats
 %--------------------------------------------------------------------------
 
-S= [];
-S.BF=BF;
+S = [];
+S.BF = BF;
 S.act = 90;
-S.base=1;
+S.base = 1;
 bf_stat_evoked_t(S);
 
 ```
 
 --8<-- "addons/abbreviations.md"
+s
