@@ -49,7 +49,7 @@ orthogonality`, SPM will produce this plot:
 
 Columns $x_1$ and $x_2$ are orthogonal if the inner product $x_1^T x_2=0$. The inner product can also be written $x_1^T x_2 = |x_1||x_2| cos \theta$, where $|x|$ denotes the length of $x$ and $\theta$ is the angle between the two vectors. So, the vectors will be orthogonal if $cos \theta=0$. The upper-diagonal elements in the matrix at the bottom of the figure plot $cos\theta$ for each pair of columns in the design matrix. Here we have a single entry. A degree of non-orthogonality or collinearity is indicated by the gray shading.
 
-## Model estimatimation
+## Model estimation
 
 1. Press the `Estimate` button. This will call up the specification of an fMRI estimation job in the batch editor.
 

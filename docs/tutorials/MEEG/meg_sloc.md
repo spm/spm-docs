@@ -103,7 +103,7 @@ different implicit assumptions. Under `Inversion parameters` select
 Select `IID` for minimum norm assumptions for now. For the
 `Time window of interest` select from 0 to 600ms. For the
 `frequency window of interest` select 0 to 80 Hz (our data were
-simulated at 10 and 20Hz between 100 and 400ms). All the other settngs
+simulated at 10 and 20Hz between 100 and 400ms). All the other settings
 should remain as default.
 
 <figure id="meg_sloc:fig:3">
@@ -141,7 +141,7 @@ data - so value of the log evidence you see may be different but it is
 this value relative to those following which is important). The top
 panel shows two time-series extracted from the mesh vertex (location
 given at the top of the panel) with highest posterior probability. The
-red line corresponds to the first condition (faces). Note the sinsuoidal
+red line corresponds to the first condition (faces). Note the sinusuoidal
 time-series which should correspond in frequency to the source simulated
 on that side of the brain. The grey line corresponds to the other
 condition (scrambled) in which no data were simulated.
@@ -196,7 +196,7 @@ shows the time-series of the source with the largest amplitude. Again
 the source reconstruction is compact with log evidence is 2150944. Note
 both that the source reconstruction is more compact and that the log
 evidence has increased over the IID and COH solutions. There are two
-more options in the basic MSP implementaion- ARD- based on the removal
+more options in the basic MSP implementation- ARD- based on the removal
 of patches that contribute little to the model evidence; and the use of
 both schemes 'ARD and GS' in which both methods provide candidate source
 covariance estimates which are then combined. You can try out these
@@ -212,7 +212,7 @@ to produce such an output. .
 From the `SPM` drop down menu click `M/EEG`/ `Source reconstruction`/
 `Inversion results`. Now for `M/EEG dataset`, click `Dependency`- and
 press OK to link the output of the previous function (the inversion) to
-the inpput of this one. We can now produce power images per condition
+the input of this one. We can now produce power images per condition
 based on a 0 to 600ms time window and a 0 to 80Hz frequency window. For
 `Contrast type` select `Evoked` and for output space and format select
 `MNI` and `Mesh` .
@@ -248,8 +248,8 @@ the `SPM` drop-down menu select `M/EEG` / `source reconstruction` /
 
 Select `Classic` as the custom source reconstruction algorithm- this is
 basically the original version of the MSP algorithm without any
-re-scaling factors to allow mixing of modalies or group imaging. It is
-advanatageous in many cases as the lack of these scaling factors means
+re-scaling factors to allow mixing of modalities or group imaging. It is
+advantageous in many cases as the lack of these scaling factors means
 that it is a true generative model of the data (and it becomes possible
 to test between different head positions etc). Note however that these
 differences in pre-processing mean that at the moment the data entering
@@ -265,8 +265,8 @@ fit. Alternatively, having lots of patches initially will mean the
 computation time is spent on pruning this set (with ARD or GS etc). You
 also have control over the number of temporal and spatial modes which
 will be used here (this makes it easier to compare between models where
-the lead field matrix has changed). The alogorithm returns the current
-distribution based on the patch set with maxmum free energy.
+the lead field matrix has changed). The algorithm returns the current
+distribution based on the patch set with maximum free energy.
 
 <figure id="meg_sloc:fig:8">
 <div class="center">
@@ -285,7 +285,7 @@ regularized (in much the same way as IID and COH matrices are) in the
 Bayesian framework. You can access this by selecting `EBB` (Empirical
 Bayes Beamformer) as the inversion type; but you should set the number
 of iterations here to 1 (as there is only a single prior and it will not
-change over repetiitions).
+change over repetitions).
 
 <figure id="meg_sloc:fig:9">
 <div class="center">

@@ -488,6 +488,6 @@ In summary, convolution modelling proves to be a powerful tool to disentangle re
 
 In practice, convolution modelling can replace the classical "epoching and averaging" steps of an evoked response pipeline. As such, it produces an evoked response dataset that can be used in second-level analysis. 
 
-## Acknowledgments
+## Acknowledgements
 
 We thank Bernhard Spitzer for putting up the code from which this tutorial derives and for kindly allowing us to share the data analysed in this chapter.

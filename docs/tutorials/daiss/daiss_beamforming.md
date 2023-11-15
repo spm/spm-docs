@@ -10,7 +10,7 @@ For a given source $\theta$, the vector $w$ which represents the weighted sum of
 
 $$w^T_{\theta} = [l^T_{\theta}C^{-1}l_{\theta}]^{-1}l^{T}_{\theta}C^{-1},$$
 
-where $C$ is the covariance matrix of the sensor level recordings, and $l$ is a vector representing the modelled dipole field pattern for a unit-source at $\theta$. In DAiSS we need to calculate both the dipole patterns and the covariance matrix before assembling the source reconstruciton weights.
+where $C$ is the covariance matrix of the sensor level recordings, and $l$ is a vector representing the modelled dipole field pattern for a unit-source at $\theta$. In DAiSS we need to calculate both the dipole patterns and the covariance matrix before assembling the source reconstruction weights.
 
 ??? info "Where beamformers might be bad for your data"
     The mathematic description of beamformers imply there are situations where their use can lead to poor source estimates, the main examples are.
@@ -229,7 +229,7 @@ This is the point where the beamforming calculation happens. Having calculated o
 
 ## Source power estimation
 
-With the source weight vectors calculated, we can now estimate the power for a given source in and time-freqency window of our choosing. In this case this will be during the "stimulus" period and within the frequency bands we calculated our covariance matrix with. We shall also perform a depth correction, as beamformers tend to bias their variance towards the centre of the brain without it.
+With the source weight vectors calculated, we can now estimate the power for a given source in and time-frequency window of our choosing. In this case this will be during the "stimulus" period and within the frequency bands we calculated our covariance matrix with. We shall also perform a depth correction, as beamformers tend to bias their variance towards the centre of the brain without it.
 
 === "GUI"
 
@@ -291,7 +291,7 @@ Before writing out the results to disk, it is possible to plot some outputs. `im
     spm_jobman('run',matlabbatch)
     ```
 
-If all has gone well, then we should see two sources originating from apprimately the primary auditory cortices!
+If all has gone well, then we should see two sources originating from approximately the primary auditory cortices!
 
 
 <figure>
