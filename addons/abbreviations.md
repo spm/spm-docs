@@ -1,6 +1,8 @@
 *[BOLD]: Blood Oxygen Level Dependent 
 *[BIDS]: Brain Imaging Data Structure
 *[CSV]: Comma-Separated Values
+*[CVA]: Canonical Variate Analysis
+*[DAiSS]: Data Analysis in Source Space
 *[DCM]: Dynamic Causal Modelling
 *[EEG]: Electroencephalography
 *[EPI]: Echo-Planar Imaging
@@ -18,7 +20,6 @@
 *[SPECT]: Single-Photon Emission Computed Tomography
 *[TR]: Repetition Time
 *[TRs]: Repetition Times
-*[TSV]: Tab-Separated Values
-*[CVA]: Canonical Variate Analysis
 *[TSSS]: Temporal Signal Space Separation
-*[DAiSS]: Data Analysis in Source Space
+*[TSV]: Tab-Separated Values
+*[VBM]: Voxel-Based Morphometry
