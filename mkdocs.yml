@@ -65,6 +65,20 @@ nav:
     - 'Standalone':   'installation/standalone.md'
     - 'Containers':   'installation/containers.md'
     - 'Octave':       'installation/octave.md'
+  - 'Courses':
+    - 'courses/index.md'
+    - 'fMRI/VBM':
+      - 'Spatial preprocessing':            'courses/fmri_vbm/preprocessing.md'
+      - 'General linear model':             'courses/fmri_vbm/glm.md'
+      - 'Contrasts & classical inference':  'courses/fmri_vbm/contrasts_classical_inference.md'
+      - 'Group analysis':                   'courses/fmri_vbm/group_analysis.md'
+      - 'Random field theory':              'courses/fmri_vbm/random_field_theory.md'
+      - 'Voxel-based morphometry':          'courses/fmri_vbm/vbm.md'
+      - 'Experimental design':              'courses/fmri_vbm/experimental_design.md'
+      - 'Event-related fMRI':               'courses/fmri_vbm/event_related_fmri.md'
+      - 'Bayesian inference':               'courses/fmri_vbm/bayesian_inference.md'
+      - 'Introduction to DCM':              'courses/fmri_vbm/dcm_introduction.md'
+      - 'DCM: Testing hypotheses':          'courses/fmri_vbm/dcm_hypothesis_testing.md'
   - 'Tutorials':
     - 'tutorials/index.md'
     - 'fMRI':
