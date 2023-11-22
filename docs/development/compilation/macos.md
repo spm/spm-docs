@@ -3,7 +3,7 @@
 This page describes the compilation of SPM MEX files on macOS.
 
 !!! tip
-    If you are using macOS Catalina, Big Sur, Monterey or Ventura and have apparent problems with the MEX files provided with SPM, check the [Troubleshooting section](#troubleshooting) first as it is very likely you do not need to recompile the MEX files.
+    If you are using macOS Catalina, Big Sur, Monterey, Ventura or Sonoma and have apparent problems with the MEX files provided with SPM, check the [Troubleshooting section](#troubleshooting) first as it is very likely you do not need to recompile the MEX files.
 
 To compile SPM MEX files, you need to have Apple's development environment [Xcode](http://developer.apple.com/tools/xcode/) installed.
 
@@ -42,7 +42,7 @@ This will generate `*.mexmaci64` MEX files. To generate `*.mexmaca64` MEX files,
 
 ## Troubleshooting
 
-!!! failure "macOS Catalina, Big Sur, Monterey, Ventura"
+!!! failure "macOS Catalina, Big Sur, Monterey, Ventura, Sonoma"
 
     If you have issues with MEX files on macOS with one of these errors:
 
@@ -65,6 +65,8 @@ This will generate `*.mexmaci64` MEX files. To generate `*.mexmaca64` MEX files,
     sudo xattr -r -d com.apple.quarantine SPM_PATH
     sudo find SPM_PATH -name "*.mexmaci64" -exec spctl --add {} \;
     ```
+
+    If you are using Apple Silicon (ARM), make sure to edit the command lines so that it targets `.mexmaca64` files.
 
 !!! failure "`xcrun: error: SDK "macosx10.14.1" cannot be located` error"
 
