@@ -1,7 +1,7 @@
 # SPM Course - fMRI & VBM
 
 !!! info inline end "Course recordings"
-    Recordings of course lectures are available [here](./recordings/).
+    Select topics from the menu to view recordings from a previous fMRI & VBM course.
     
 This three-day course introduces the analysis of neuroimaging data, including Magnetic Resonance Imaging (MRI) and functional MRI (fMRI). It covers:
 
