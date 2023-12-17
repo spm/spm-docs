@@ -1,7 +1,7 @@
 # SPM Course
 
 !!! info inline end "Course recordings"
-    Recordings of course lectures from the fMRI & VBM course are available [here](./recordings/).
+    Select topics from the menu to view recordings from a previous fMRI & VBM course. 
 
 The FIL SPM course on using Statistical Parametric Mapping for neuroimaging is held each May and October as part of the [Institute of Neurology's short course programme](https://www.ucl.ac.uk/ion/education).
 
