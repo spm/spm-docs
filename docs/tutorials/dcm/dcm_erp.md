@@ -164,7 +164,7 @@ respectively. To see which index is assigned to which trial condition,
 type into the command line:
 
 ```matlab
-    D = spm_eeg_load(`mfaeffspmeeg_examplecontrolsubject.mat');
+    D = spm_eeg_load('mfaeffspmeeg_examplecontrolsubject.mat');
     D.condlist
 ```
 
@@ -174,7 +174,7 @@ indices. SPM should therefore display the following:
 ```matlab
     ans =
 
-    `novel' `repeated'
+    'novel' 'repeated'
 ```
 
 indicating that index 1 corresponds to the presentation of novel images
