@@ -2,13 +2,13 @@
 
 <div class="grid cards" markdown>
 
-- :material-laptop:{ .lg .middle } __SPM for M/EEG__
+- :material-laptop:{ .lg .middle } [__SPM for M/EEG__](./eeg_meg/)
 
     ---
 
     7th-10th May 2024, **online** only. 
 
-    <div style="text-align: right"><u>*Registration opens soon.*</u></div>
+    <div style="text-align: right"><u>*[Click here to register.](https://onlinestore.ucl.ac.uk/conferences-and-events/faculty-of-brain-sciences-c07/ucl-institute-of-neurology-d07/d07-statistical-parametric-mapping-for-megeeg-2024)*</u></div>
 </div>
 <div class="grid cards" markdown>
 - :fontawesome-solid-brain:{ .lg .middle } [__SPM for fMRI & VBM__](./fmri_vbm/index.md)
@@ -17,7 +17,7 @@
 
     13th-15th May 2024, in person in **London**. 
 
-    <div style="text-align: right"><u>*Registration opens soon.*</u></div>
+    <div style="text-align: right"><u>*[Click here to register.](https://onlinestore.ucl.ac.uk/conferences-and-events/faculty-of-brain-sciences-c07/ucl-institute-of-neurology-d07/d07-statistical-parametric-mapping-for-fmri-and-mrivbm-2024)*</u></div>
 </div>
 
 
