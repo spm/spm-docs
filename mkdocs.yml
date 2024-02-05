@@ -67,6 +67,8 @@ nav:
     - 'Octave':       'installation/octave.md'
   - 'Courses':
     - 'courses/index.md'
+    - 'M/EEG':
+      - 'courses/eeg_meg/index.md'
     - 'fMRI/VBM': 
       - 'courses/fmri_vbm/index.md'
       - 'Lecture recordings':
