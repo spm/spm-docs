@@ -1,10 +1,10 @@
 # SPM Courses
-We are delighted to welcome visitors to our SPM courses in May and October each year. They are taught by an international faculty of SPM developers and collaborators, either online or in-person at the Functional Imaging Laboratory (FIL) in London. The courses form part of the [UCL Queen Square Institute of Neurology's short course programme](https://www.ucl.ac.uk/ion/education).
-
 <figure markdown>
   ![london skyline](../assets/images/London_skyline_700b.jpg)
   <figcaption></figcaption>
 </figure>
+
+We are delighted to welcome visitors to our SPM courses in May and October each year. They are taught by an international faculty of SPM developers and collaborators, either online or in-person at the Functional Imaging Laboratory (FIL) in London. The courses form part of the [UCL Queen Square Institute of Neurology's short course programme](https://www.ucl.ac.uk/ion/education).
 
 ## Registration
 <div class="grid cards" markdown>
@@ -34,3 +34,30 @@ Read more about the [SPM for M/EEG course](./eeg_meg/index.md) or the [SPM for f
 
 ## Previous recordings
 The SPM courses consist of interactive workshops and lectures. To view videos recordings of the lectures from a previous fMRI & VBM course, please select topics from the menu.
+
+## FAQ
+
+??? note "How often does the SPM courses run?"
+    The SPM courses are run in May and October each year.
+
+??? note "Do you teach PET as part of the programme?"
+    We sometimes provide teaching on PET on the workshop day, however this is subject to the availability of staff. Most of the statistical concepts and techniques, which are taught on the course, are similar for both technologies.
+
+??? note "Is the content of the May fMRI/MRI/VBM course different from the course offered in October?"
+    They are the same.
+
+??? note "Where can I access the materials for previous SPM courses?"
+    Information and course material can be accessed at the following link: https://www.fil.ion.ucl.ac.uk/spm/course/
+
+??? note "Does the course count towards any credits for my MSc or postgraduate course?"
+    Yes, if you are a UCL student. Students, however, must ensure they attend each session to claim these credits.
+
+??? note "Can I pay for the course other than by credit or debit card?"
+    Payment for the course is by debit or credit card only.
+
+??? note "Can I get a refund of my fees if I am unable to attend?"
+    You may be able to get a refund if you notify us at least two weeks before the start date of the course.
+
+??? note "Can I get a discount if I am unemployed?"
+    We regret we are not able to offer any discounts other than the discounted rate for students.
+
