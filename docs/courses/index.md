@@ -1,6 +1,6 @@
 # SPM Courses
 
-We run courses twice per year: in-person SPM courses in London in May and online SPM courses in October. They are taught by the developers of SPM and collaborators, at the Functional Imaging Laboratory (FIL) in London as part of the [UCL Queen Square Institute of Neurology's short course programme](https://www.ucl.ac.uk/ion/education).
+We are delighted to welcome visitors to our SPM courses in May and October each year. They are taught by the developers of SPM and international collaborators, at the Functional Imaging Laboratory (FIL) in London. They form part of the [UCL Queen Square Institute of Neurology's short course programme](https://www.ucl.ac.uk/ion/education).
 
 <div class="grid cards" markdown>
 
