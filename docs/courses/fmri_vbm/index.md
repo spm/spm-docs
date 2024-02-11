@@ -17,3 +17,13 @@ The course is divided into theoretical and practical sessions, in which the SPM 
 The course is suitable for beginners and more advanced users.
 
 Please [contact us](mailto:o.kowalczyk@ucl.ac.uk) if you have any questions.
+
+<div class="grid cards" markdown>
+- :fontawesome-solid-brain:{ .lg .middle } Upcoming course
+
+    ---
+
+    13th-15th May 2024, in person in **London**. 
+
+    <div style="text-align: right"><u>*[Click here to register.](https://onlinestore.ucl.ac.uk/conferences-and-events/faculty-of-brain-sciences-c07/ucl-institute-of-neurology-d07/d07-statistical-parametric-mapping-for-fmri-and-mrivbm-2024)*</u></div>
+</div>

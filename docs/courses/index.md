@@ -23,7 +23,7 @@ We are delighted to welcome visitors to our SPM courses in May and October each 
 </div>
 
 ## About
-Since 2010, we have provided two separate SPM courses reflecting the different imaging modalities. There is a three-day course on SPM for EEG/MEG followed by the long-established three-day course on [SPM for fMRI/VBM](./fmri_vbm/index.md). Both courses are suitable for beginners and more advanced users. We advise students to gain at least some minimal familiarity with the methodology, for example, from reading introductory articles available from the SPM webpage or by following data analysis examples in the [SPM tutorials](../tutorials/index.md).
+Since 2010, we have provided two separate SPM courses reflecting the different imaging modalities. There is a four-day course on [SPM for EEG/MEG](./eeg_meg/index.md) followed by the long-established three-day course on [SPM for fMRI/VBM](./fmri_vbm/index.md). Both courses are suitable for beginners and more advanced users. We advise students to gain at least some minimal familiarity with the methodology, for example, from reading introductory articles available from the SPM webpage or by following data analysis examples in the [SPM tutorials](../tutorials/index.md).
 
 Read more about the [SPM for M/EEG course](./eeg_meg/index.md) or the [SPM for fMRI & VBM course](./fmri_vbm/index.md).
 
