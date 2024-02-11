@@ -4,7 +4,7 @@
   <figcaption></figcaption>
 </figure>
 
-We are delighted to welcome visitors to our SPM courses in May and October each year. They are taught by an international faculty of SPM developers and collaborators, either online or in-person at the Functional Imaging Laboratory (FIL) in London. The courses form part of the [UCL Queen Square Institute of Neurology's short course programme](https://www.ucl.ac.uk/ion/education).
+We are delighted to welcome visitors to our SPM courses every May and October. They are taught by an international faculty of SPM developers and collaborators, either online or in-person at the Functional Imaging Laboratory (FIL) in London. They form part of the [UCL Queen Square Institute of Neurology's short course programme](https://www.ucl.ac.uk/ion/education).
 
 ## Registration
 <div class="grid cards" markdown>
@@ -28,16 +28,24 @@ We are delighted to welcome visitors to our SPM courses in May and October each 
 </div>
 
 ## About
-Since 2010, we have provided two separate SPM courses reflecting the different imaging modalities. There is a four-day course on [SPM for EEG/MEG](./eeg_meg/index.md) followed by the long-established three-day course on [SPM for fMRI/VBM](./fmri_vbm/index.md). Both courses are suitable for beginners and more advanced users. We advise students to gain at least some minimal familiarity with the methodology, for example, from reading introductory articles available from the SPM webpage or by following data analysis examples in the [SPM tutorials](../tutorials/index.md).
+Since 2010, we have provided two separate SPM courses reflecting the different imaging modalities. There is a four-day course on [SPM for EEG/MEG](./eeg_meg/index.md) followed by the three-day course on [SPM for fMRI/VBM](./fmri_vbm/index.md). Both courses are suitable for beginners and more advanced users. We advise students to gain at least some minimal familiarity with the methodology, for example, from reading introductory articles available from the SPM webpage or by following data analysis examples in the [SPM tutorials](../tutorials/index.md).
 
 Read more about the [SPM for M/EEG course](./eeg_meg/index.md) or the [SPM for fMRI & VBM course](./fmri_vbm/index.md).
 
 ## Previous recordings
 The SPM courses consist of interactive workshops and lectures. To view videos recordings of the lectures from a previous fMRI & VBM course, please select topics from the menu.
 
+## Contact us
+For administrative questions please contact the [FIL admin team](mailto:ion.fil.reception@ucl.ac.uk) who are based at the:
+
+Wellcome Centre for Human Neuroimaging  
+UCL Institute of Neurology  
+12 Queen Square  
+London WC1N 3AR
+
 ## FAQ
 
-??? note "How often does the SPM courses run?"
+??? note "How often do the SPM courses run?"
     The SPM courses are run in May and October each year.
 
 ??? note "Do you teach PET as part of the programme?"
@@ -60,4 +68,3 @@ The SPM courses consist of interactive workshops and lectures. To view videos re
 
 ??? note "Can I get a discount if I am unemployed?"
     We regret we are not able to offer any discounts other than the discounted rate for students.
-
