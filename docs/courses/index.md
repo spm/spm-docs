@@ -2,7 +2,7 @@
 We are delighted to welcome visitors to our SPM courses in May and October each year. They are taught by an international faculty of SPM developers and collaborators, either online or in-person at the Functional Imaging Laboratory (FIL) in London. The courses form part of the [UCL Queen Square Institute of Neurology's short course programme](https://www.ucl.ac.uk/ion/education).
 
 <figure markdown>
-  ![london skyline](../assets/images/London_skyline_700_cropped.jpg)
+  ![london skyline](../assets/images/London_skyline_700b.jpg)
   <figcaption></figcaption>
 </figure>
 
