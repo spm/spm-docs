@@ -35,7 +35,7 @@ The SPM software package has been designed for the analysis of brain imaging dat
 
     Regular SPM courses run every autumn and spring, both online and in-person in London.
 
-    [:octicons-arrow-right-24: **Courses information**](https://www.fil.ion.ucl.ac.uk/spm/course/)
+    [:octicons-arrow-right-24: **Courses information**](courses/index.md)
 
 -   :material-account-question:{ .lg .middle } __Support__
 
