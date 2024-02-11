@@ -57,6 +57,7 @@ nav:
   - 'Home':
     - 'index.md'
     - 'Installation': 'installation/index.md'
+    - 'Courses':      'courses/index.md'
     - 'Tutorials':    'tutorials/index.md'
     - 'Development':  'development/index.md'
   - 'Getting started':

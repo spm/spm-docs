@@ -35,6 +35,9 @@ Read more about the [SPM for M/EEG course](./eeg_meg/index.md) or the [SPM for f
 ## Previous recordings
 The SPM courses consist of interactive workshops and lectures. To view videos recordings of the lectures from a previous fMRI & VBM course, please select topics from the menu.
 
+## Code of conduct
+We would like all attendees, speakers, hosts and volunteers at our conference to read and be familiar with our [Code of Conduct](conduct.md).
+
 ## Contact us
 For administrative questions please contact the [FIL admin team](mailto:ion.fil.reception@ucl.ac.uk) who are based at the:
 
