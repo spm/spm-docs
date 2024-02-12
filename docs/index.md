@@ -1,5 +1,9 @@
 # Statistical Parametric Mapping
 
+Statistical Parametric Mapping is the construction and assessment of spatially extended statistical processes used to test hypotheses about functional imaging data. These ideas have been instantiated in a free and open source software that is called **SPM**.
+
+The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject. The current release is designed for the analysis of **fMRI**, **PET**, **SPECT**, **EEG** and **MEG**.
+
 <figure markdown>
   ![spm logo](assets/images/spm_front.png)
   <figcaption></figcaption>
@@ -7,17 +11,13 @@
 
 ## Getting started
 
-Statistical Parametric Mapping refers to the construction and assessment of spatially extended statistical processes used to test hypotheses about functional imaging data. These ideas have been instantiated in a free and open source software that is called **SPM**.
-
-The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject. The current release is designed for the analysis of **fMRI**, **PET**, **SPECT**, **EEG** and **MEG**.
-
 <div class="grid cards" markdown>
 
--   :material-lock-open:{ .lg .middle } __Open Source Software__
+-   :material-lock-open:{ .lg .middle } __Software__
 
     ---
 
-    SPM is an academic free and open source software.
+    SPM is free and open source academic software.
 
     [:octicons-arrow-right-24: **Installation** ](installation/index.md)
 
