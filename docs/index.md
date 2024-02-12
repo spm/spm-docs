@@ -1,7 +1,7 @@
 # Statistical Parametric Mapping
 
 <figure markdown>
-  ![spm logo](assets/figures/spm_interface.png){ width="700" }
+  ![spm logo](assets/images/spm_front_700.png)
   <figcaption></figcaption>
 </figure>
 
