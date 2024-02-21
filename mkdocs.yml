@@ -72,6 +72,7 @@ nav:
       - 'courses/eeg_meg/index.md'
     - 'fMRI/VBM': 
       - 'courses/fmri_vbm/index.md'
+      - 'Course schedule':                    'courses/fmri_vbm/programme.md'
       - 'Lecture recordings':
         - 'Spatial preprocessing':            'courses/fmri_vbm/recordings/preprocessing.md'
         - 'General linear model':             'courses/fmri_vbm/recordings/glm.md'
@@ -192,6 +193,7 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
   - smarty
+  - tables
   - toc:
       permalink: true
 
@@ -214,6 +216,9 @@ extra:
       link: https://github.com/spm
     - icon: fontawesome/solid/brain
       link: https://www.fil.ion.ucl.ac.uk/spm/
+
+extra_css:
+    - assets/css/extra.css
 
 extra_javascript:
   - assets/javascripts/mathjax.js
