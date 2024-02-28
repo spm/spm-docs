@@ -43,7 +43,7 @@ and selecting `fMRI` in the SPM window.
 To view an image, click on `Display` from the SPM menu and select the image you want to inspect from the pop-up window. The selected image will now be shown in the SPM graphics window. 
 
 !!! tip "File extensions"
-    SPM can read uncompressed NIfTI files in single (`.nii`) and dual (`.hdr`/`.img`) formats. If your files are compressed with `gzip` and end in `.gz`, make sure to uncompress them first, e.g.:
+    SPM can read uncompressed image files in NIfTI (`.nii`) and Analyze (`.hdr`/`.img`) formats. If your files are compressed with `gzip` and end in `.gz`, make sure to uncompress them first, e.g.:
     ```matlab
     gunzip your_file.nii.gz
     ```
@@ -53,7 +53,7 @@ Browse through the image using your mouse or arrow keys. The crosshair will help
 !!! info "What to look for in anatomical data?"
     A few things that are worth paying particular attention to when reviewing anatomical images:
 
-    * overall quality of the image (good contrast, no ring-like artefacts which can indicate excessive motion or image reconstructions issues),
+    * overall quality of the image (good contrast, no ring-like artefacts which can indicate excessive motion or image reconstruction issues),
 
     * correct image orientation,
 
@@ -66,7 +66,7 @@ Browse through the image using your mouse or arrow keys. The crosshair will help
 
 ## Inspecting functional data
 
-Similarly to how we checked the anatomical data, we will now inspect the functional image. 
+Similarly to how we checked the anatomical data, we will now inspect a functional image. 
 
 Select `Check Reg` from the SPM menu and choose the functional data you want to view - in this case `sub-01_task-auditory_bold.nii` stored in `sub-01/func`. Browse through the image with your mouse or arrow keys just like you did with the anatomical data. 
 
