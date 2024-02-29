@@ -13,7 +13,7 @@ Slice timing correction aims to account for the differences in timing of data ac
     
     Slice timing has been shown to reliably increase sensitivity and statistical power without adverse effects, particularly for studies with longer TRs (>2s; [Sladky et al., 2011](https://doi.org/10.1016/j.neuroimage.2011.06.078)). However, it is important to remember that slice timing is an interpolation method, which means it modifies the original data. As a general rule in imaging analysis, interpolation should be avoided unless necessary. In the case of slice timing, there is a risk of artifacts from one volume being propagated to other volumes in the time series,  which can be particularly problematic for data with large amounts of motion. 
     
-    An alternative to slice timing for task fMRI is the use of a *temporal derivative*, i.e. additional regressors in the first-level model which can shift the model in time to get the best fit. This avoids modyfying the original data and has an additional benefit of accounting for variations in the HRF. Temporal derivative can be particularly useful for studies with shorter TRs (≤2s), where slice timining issues are not as problematic. 
+    An alternative to slice timing for task fMRI is the use of a *temporal derivative*, i.e. additional regressors in the first-level model which can shift the model in time to get the best fit. This avoids modifying the original data and has an additional benefit of accounting for variations in the HRF. Temporal derivatives can be particularly useful for studies with shorter TRs (≤2s), where slice timining issues are not as problematic. 
 
     For a thorough overview of issues related to slice timing in fMRI, see the SPM book:
 
@@ -24,30 +24,30 @@ Slice timing correction aims to account for the differences in timing of data ac
     [Sladky, R., Friston, K.j., Trostl J., Cunnington, R., Moser, E, Windischberger, C. (2011). *Slice-timing effects and their correction in functional MRI*.](https://doi.org/10.1016/j.neuroimage.2011.06.078)
 
 ??? info "When to use slice timing correction?"
-    * Slice timing can be done on any fMRI data but it is particularly beneficial for studies with **longer TRs** (i.e. >2s). For studies with shorter TRs (≤2s), temporal derivative may be a better option.
+    * Slice timing can be done on any fMRI data but it is particularly beneficial for studies with **longer TRs** (i.e. >2s). For studies with shorter TRs (≤2s), temporal derivatives may be a better option.
 
     * Slice timing can be performed on **multiband acquisition data**, however, with multiband data and a short TR, slice timing correction can usually be skipped without much impact. If you decide to run slice timing correction on multiband data, it is necessary to use slice timings instead of slice order, since a slice order cannot represent multiple slices acquired at the same time in a vector. If you don't know your slice timings, you can artificially create a slice timing values manually. Generate artificial values from the slice order with equal temporal spacing and then scale the numbers to the TR, so that the last temporal slice's timing = `TR - TR/(nslices/multiband_channels)`.
 
-    * If you plan to use **DCM**, slice timing correction is necessary.
+    * If you plan to use **DCM**, slice timing correction is advised.
 
 1. From the SPM menu panel, select `Slice timing`. A pop-up window will open:
 
     ![](../../../../assets/figures/slice_timing_batch.png)
 
-2. Select `Data` :material-arrow-right-bold: `Session`.
+2. Select `Data` :material-arrow-right-bold: `New Session` :material-arrow-right-bold: `Session`.
 3. In the pop-up window, use the left-hand panel to navigate to `sub-01/func/`. 
-4. Identify the realigned time series - this will be the file with an `r` prefix, i.e. `rsub-01_task-auditory_bold.nii`. Use the box underneath the `Filter` button to show a 4D file by typing in `NaN` and pressing ++return++. You can do this in combination with filtering for files starting with `r` by typing in `^r.*` in the `Filter` box and pressing ++return++. 
+4. Identify the realigned time series - this will be the file with an `r` prefix, i.e. `rsub-01_task-auditory_bold.nii`. Use the box underneath the `Filter` button to show a 4D file by replacing `1` with `NaN` and pressing ++return++. You can do this in combination with filtering for files starting with `r` by typing in `^r.*` in the `Filter` box and pressing ++return++. 
 
     !!! tip "Top tip"
         The `Filter` box allows you to filter files based on a specific combination of characters. The syntax used in filtering file is based on regular expressions. Below are some useful expressions for selecting files:
 
-        * `.` - a period indicates any character. Filtering for `...` would show all files containing at least 3 characters. To filter for files containing a period in their name, use `\.`.
+        * `.` a period indicates any character. Filtering for `...` would show all files containing at least 3 characters. To filter for files containing a period in their name, use `\.`
 
-        * `*` - an asterisk indicates 0 or more instances of the preceding character. SPM's default filter is `.*`, meaning filter for any number of any characters, i.e. show all files present in a directory.
+        * `*` an asterisk indicates 0 or more instances of the preceding character. SPM's default filter is `.*`, meaning filter for any number of any characters, i.e. show all files present in a directory.
 
-        * `^` - a caret indicates a string that begins with the indicated characters. Filtering for `^r` would show all files starting with `r`. 
+        * `^` a caret indicates a string that begins with the indicated characters. Filtering for `^r` would show all files starting with `r`. 
 
-        * `$` - a dollar sign indicates that the preceding characters end the file name. Filering for `\.nii$` will show all files with the extension `.nii`.
+        * `$` a dollar sign indicates that the preceding characters end the file name. Filering for `\.nii$` will show all files with the extension `.nii`.
 
         These expressions can be combined to create more powerful filters. For example, using `^r.*\.nii$` will filter for all files starting with `r`, having any number of characters, and ending in `.nii`.   
 
