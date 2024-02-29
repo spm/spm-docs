@@ -23,7 +23,7 @@
 
 | Time              | Title                           | Faculty                                |
 | ----------------- | ------------------------------- | -------------------------------------- |
-| 09:15 - 10:05     | Experimenal design              | Dr Carolin Moessnang                   |
+| 09:15 - 10:05     | Experimental design             | Dr Carolin Moessnang                   |
 | *Comfort break*               	                                                           |
 | 10:15 - 11:00     | Event-related fMRI 	          | Dr Sonia Medina                        |
 | *Tea & coffee*                                                                        	   |
