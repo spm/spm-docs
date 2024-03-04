@@ -14,12 +14,14 @@ This three-day course introduces the analysis of neuroimaging data, including Ma
 
 The course is divided into theoretical and practical sessions, in which the SPM software package is used to analyse exemplar data sets. The SPM course is taught by an international faculty of neuroimaging experts from the Functional Imaging Laboratory (FIL) and collaborators. 
 
-The course is suitable for beginners and more advanced users.
+The course is suitable for beginners and more advanced users. 
+
+Course programme is available [here](./programme.md).
 
 Please [contact us](mailto:o.kowalczyk@ucl.ac.uk) if you have any questions.
 
 <div class="grid cards" markdown>
-- :fontawesome-solid-brain:{ .lg .middle } Upcoming course
+- :fontawesome-solid-brain:{ .lg .middle } [Upcoming course](./programme.md)
 
     ---
 
