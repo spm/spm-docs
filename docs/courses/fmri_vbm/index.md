@@ -1,7 +1,7 @@
 # SPM Course - fMRI & VBM
 
 <div class="grid cards" markdown>
-- :fontawesome-solid-brain:{ .lg .middle } [Upcoming course](./programme.md)
+- :fontawesome-solid-brain:{ .lg .middle } [__Upcoming course__](./programme.md)
 
     ---
 
