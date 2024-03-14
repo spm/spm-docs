@@ -2,6 +2,8 @@
 
 ## Course programme
 
+This is a draft programme of the upcoming in-person [SPM course for fMRI and VBM](./index.md). The course will consist of lectures and practical workshops where attendees will be guided through analyses of different neuroimaging datasets. To give you a taste of the course content, recordings of past course talks are linked on the programme. 
+
 ### Day 1
 
 | Time              | Title                           | Faculty                                |
