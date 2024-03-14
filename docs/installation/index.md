@@ -30,6 +30,8 @@
 
     1. Download  `spm12.zip` from the [SPM website](https://www.fil.ion.ucl.ac.uk/spm/software/download/) in your home directory.
 
+        If using Apple Silicon and Matlab 2023b or higher, download the [development version of SPM](https://github.com/spm/spm) or the [maintenance branch of SPM12](https://github.com/spm/spm12/tree/maint) from GitHub.
+
     2. Uncompress the archive by typing the following in a Terminal:
         ```bash
         cd /Users/<login>
@@ -46,33 +48,69 @@
         savepath % if you want to save the current MATLAB path
         ```
 
-    !!! failure "Troubleshooting"
-        If, after installation, you have validation issues with the **MEX files on macOS** such as:
+    ??? failure "Troubleshooting (Apple Silicon and Matlab 2023b onwards)"
+        
+        If, after installation, you get an error indicating that the MEX files for MACA64 are **missing**:
         ```
-        "`*.mexmaci64` cannot be opened because the developer cannot be verified. 
-        macOS cannot verify that this app is free from malware"
-        ```
-        or:
-        ```
-        "Code signature not valid for use in process using Library Validation: 
-        library load disallowed by system policy"
-        ```
-        please follow the instructions detailed [here](../development/compilation/macos.md/#troubleshooting); you do not need to recompile the MEX files but they have to be approved beforehand.
-
-    !!! failure "Troubleshooting"
-        If, after installation, you get an error indicating that the **MEX files for MACA64 are missing**:
-        ```
-        >> spm
         Error using spm_check_installation>check_basic
         SPM uses a number of MEX files, which are compiled functions.
         These need to be compiled for the various platforms on which SPM
         is run. It seems that the compiled files for your computer platform
         are missing or not compatible. See
-            https://en.wikibooks.org/wiki/SPM/Installation_on_64bit_Mac_OS_(Intel)
+        https://en.wikibooks.org/wiki/SPM/Installation_on_64bit_Mac_OS_(Intel)
         for information about how to compile MEX files for MACA64
         in MATLAB 23.2.0.2365128 (R2023b).
         ```
-        this is because you are running [native Apple silicon MATLAB (R2023b onwards)](https://uk.mathworks.com/support/requirements/apple-silicon.html) and the MEX files are not available for that platform in SPM12. Instead download and install the [development version of SPM](https://github.com/spm/spm) or the [maintenance branch of SPM12](https://github.com/spm/spm12/tree/maint) where the `*.mexmaca64` MEX files have been compiled.
+        This is because you are running [native Apple silicon MATLAB (R2023b onwards)](https://uk.mathworks.com/support/requirements/apple-silicon.html) and the MEX files are not available for that platform in SPM12. Instead download and install the [development version of SPM](https://github.com/spm/spm) or the [maintenance branch of SPM12](https://github.com/spm/spm12/tree/maint) where the `*.mexmaca64` MEX files have been compiled.
+        
+        Then complete the steps detailed below if you receive a MEX file **validation error**, such as:
+
+        ```
+        "*.mexmaca64" cannot be opened because the developer cannot be verified.
+        macOS cannot verify that this app is free from malware
+        ```
+        or:
+        ```
+        Code signature not valid for use in process using Library Validation: library load disallowed by system policy
+        ```
+        Open a Terminal, `cd` to the SPM directory and type:
+
+        ```
+        find . -name "*.mexmaca64" -exec xattr -d com.apple.quarantine {} \;
+        ```
+
+        If it doesn't work, please try this equivalent alternative, replacing `SPM_PATH` with the path of your SPM installation:
+
+        ```
+        sudo xattr -r -d com.apple.quarantine SPM_PATH
+        sudo find SPM_PATH -name "*.mexmaca64" -exec spctl --add {} \;
+        ```
+
+    ??? failure "Troubleshooting (all other Mac and Matlab version combinations)"
+        If you have **validation issues** with MEX files with one of these errors:
+
+        ```
+        "*.mexmaci64" cannot be opened because the developer cannot be verified.
+        macOS cannot verify that this app is free from malware
+        ```
+        or:
+        ```
+        Code signature not valid for use in process using Library Validation: library load disallowed by system policy
+        ```
+        Open a Terminal, `cd` to the SPM directory and type:
+
+        ```
+        find . -name "*.mexmaci64" -exec xattr -d com.apple.quarantine {} \;
+        ```
+
+        If it doesn't work, please try this equivalent alternative, replacing `SPM_PATH` with the path of your SPM installation:
+
+        ```
+        sudo xattr -r -d com.apple.quarantine SPM_PATH
+        sudo find SPM_PATH -name "*.mexmaci64" -exec spctl --add {} \;
+        ```
+
+
 
 === "Linux"
 
