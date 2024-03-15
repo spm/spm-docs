@@ -48,7 +48,7 @@
         savepath % if you want to save the current MATLAB path
         ```
 
-    ??? failure "Troubleshooting (Apple Silicon and Matlab 2023b onwards)"
+    ??? info "Using Apple Silicon with Matlab 2023b (onwards)"
         
         If, after installation, you get an error indicating that the MEX files for MACA64 are **missing**:
         ```
@@ -86,7 +86,7 @@
         sudo find SPM_PATH -name "*.mexmaca64" -exec spctl --add {} \;
         ```
 
-    ??? failure "Troubleshooting (all other Mac and Matlab version combinations)"
+    ??? info "Using any other Mac and Matlab version combination"
         If you have **validation issues** with MEX files with one of these errors:
 
         ```
