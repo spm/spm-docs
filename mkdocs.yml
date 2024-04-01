@@ -153,6 +153,7 @@ nav:
     - 'DAiSS':
       - 'Overview of DAiSS': 'tutorials/daiss/index.md'
       - 'Beamforming':       'tutorials/daiss/daiss_beamforming.md'
+    - 'Manual': 'https://www.fil.ion.ucl.ac.uk/spm/doc/spm12_manual.pdf'
   #- 'Reference': 'reference/index.md'
   - 'Development':
     - 'Introduction': 'development/index.md'
