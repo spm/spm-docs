@@ -73,6 +73,7 @@ nav:
     - 'fMRI/VBM': 
       - 'courses/fmri_vbm/index.md'
       - 'Course schedule':                    'courses/fmri_vbm/programme.md'
+      - 'Preparatory materials':              'courses/fmri_vbm/preparatory_materials.md'
       - 'Lecture recordings':
         - 'Spatial preprocessing':            'courses/fmri_vbm/recordings/preprocessing.md'
         - 'General linear model':             'courses/fmri_vbm/recordings/glm.md'
