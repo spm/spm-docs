@@ -91,7 +91,7 @@ nav:
     - 'tutorials/index.md'
     - 'fMRI':
       - 'tutorials/fmri/index.md'
-      - 'Block Design fMRI':
+      - 'Block design fMRI':
         - 'Getting started':         'tutorials/fmri/block/index.md'
         - 'Preprocessing':
           - 'Introduction':            'tutorials/fmri/block/preprocessing/introduction.md'
@@ -113,15 +113,20 @@ nav:
         - 'Categorical Modelling': 'tutorials/fmri/event/categorical.md'
         - 'Parametric Modelling':  'tutorials/fmri/event/parametric.md'
         - 'Bayesian Analysis':     'tutorials/fmri/event/bayesian.md'
+      - 'Group-level fMRI': 
+        - 'Getting started':        'tutorials/fmri/group/index.md'
+        - 'One-sample t-test':      'tutorials/fmri/group/one_sample_ttest.md'
+        - 'Two-sample t-test':      'tutorials/fmri/group/two_sample_ttest.md'
+      # - 'Factorial':              'tutorials/fmri/group/factorial.md'
     - 'VBM':
         - 'Getting started':      'tutorials/vbm/index.md'
         - 'Image processing':     'tutorials/vbm/image_processing.md'
         - 'Statistical analysis': 'tutorials/vbm/statistical_analysis.md'
     - 'M/EEG':
-      - 'Getting Started':              'tutorials/MEEG/index.md'
-      - 'EEG Mismatch negativity data': 'tutorials/MEEG/mmn/index.md'
-      - 'M/EEG Convolution modelling':  'tutorials/MEEG/meeg_firstlevel.md'
-      - 'MEG Source localisation':      'tutorials/MEEG/meg_sloc.md'
+      - 'Getting started':              'tutorials/MEEG/index.md'
+      - 'EEG mismatch negativity data': 'tutorials/MEEG/mmn/index.md'
+      - 'M/EEG convolution modelling':  'tutorials/MEEG/meeg_firstlevel.md'
+      - 'MEG source localisation':      'tutorials/MEEG/meg_sloc.md'
       - 'Multimodal':
         - 'Introduction': 'tutorials/MEEG/multimodal/index.md'
         - 'EEG':          'tutorials/MEEG/multimodal/eeg.md'
@@ -137,9 +142,9 @@ nav:
         - 'Source':                  'tutorials/MEEG/multi/source.md'
         - 'References':              'tutorials/MEEG/multi/references.md'
     - 'OPM':
-        - 'Getting Started':               'tutorials/opm/index.md'
-        - 'Sensor Level: Evoked Response': 'tutorials/opm/evoked/index.md'
-        - 'Source Level: Evoked Response': 'tutorials/opm/evoked_source/index.md'
+        - 'Getting started':               'tutorials/opm/index.md'
+        - 'Sensor level: Evoked response': 'tutorials/opm/evoked/index.md'
+        - 'Source level: Evoked response': 'tutorials/opm/evoked_source/index.md'
         - 'Coregistration':                'tutorials/opm/coreg/index.md'
         - 'Simulation':                    'tutorials/opm/simulation/index.md'
     - 'DCM':
@@ -147,11 +152,11 @@ nav:
         - 'DCM for fMRI - 1st level (Attention)': 'tutorials/dcm/dcm_fmri_first_level_gui.md'       
         - 'DCM for fMRI - 1st level (Language)':  'tutorials/dcm/dcm_fmri_first_level.md'
         - 'DCM for fMRI - 2nd level (Language)':  'tutorials/dcm/dcm_fmri_second_level.md'
-        - 'DCM for Evoked Responses':         'tutorials/dcm/dcm_erp.md'
-        - 'DCM for Induced Responses':        'tutorials/dcm/dcm_ir.md'
-        - 'DCM for Phase Coupling':           'tutorials/dcm/dcm_phase.md'
-        - 'DCM for Steady State Responses':   'tutorials/dcm/dcm_ssr.md'
-        - 'DCM for Cross-Spectral Densities': 'tutorials/dcm/dcm_csd.md'
+        - 'DCM for evoked responses':         'tutorials/dcm/dcm_erp.md'
+        - 'DCM for induced responses':        'tutorials/dcm/dcm_ir.md'
+        - 'DCM for phase coupling':           'tutorials/dcm/dcm_phase.md'
+        - 'DCM for steady state responses':   'tutorials/dcm/dcm_ssr.md'
+        - 'DCM for cross-spectral densities': 'tutorials/dcm/dcm_csd.md'
     - 'DAiSS':
       - 'Overview of DAiSS': 'tutorials/daiss/index.md'
       - 'Beamforming':       'tutorials/daiss/daiss_beamforming.md'
