@@ -70,6 +70,7 @@ nav:
     - 'courses/index.md'
     - 'M/EEG':
       - 'courses/eeg_meg/index.md'
+      - 'Course schedule':                    'courses/eeg_meg/programme.md'
     - 'fMRI/VBM': 
       - 'courses/fmri_vbm/index.md'
       - 'Course schedule':                    'courses/fmri_vbm/programme.md'
