@@ -16,7 +16,7 @@ Statistics form the backbone of neuroimaging analysis and how we make inferences
 
 ### Introduction to MATLAB 
 
-SPM is a collection of MATLAB functions and thus, while not necessary, basic familiarity with MATLAB can be very useful. If you're new to MATLAB, we recommed the below tutorials. 
+SPM is a collection of MATLAB functions and thus, while not necessary, basic familiarity with MATLAB can be very useful. If you're new to MATLAB, we recommend the below tutorials. 
 
 - [MATLAB for psychologists](https://www.antoniahamilton.com/matlab_for_psychologists.pdf) by [Antonia Hamilton](https://www.antoniahamilton.com/)
 - [MATLAB for neuroimagers](https://andysbrainbook.readthedocs.io/en/latest/Matlab/Matlab_Overview.html) by [Andy's Brain Book](https://andysbrainbook.readthedocs.io/en/latest/index.html)

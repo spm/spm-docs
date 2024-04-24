@@ -45,7 +45,7 @@ SPM will now let you select masking and multiple comparisons correction. Select 
 - `Extent threshold (voxels)` :material-arrow-right-bold: `0`
 
 ??? info "A bit more about SPM results options"
-    - `Apply masking` - this option allows you examine your results within a specific region, spcified either from a contrast, predefined image, or atlas. To interrogate all voxels in the brain, select `none`. 
+    - `Apply masking` - this option allows you examine your results within a specific region, specified either from a contrast, predefined image, or atlas. To interrogate all voxels in the brain, select `none`. 
     - `P-value adjustment to control` - this lets you select whether you want to display the results as uncorrected for multiple comparisons(`none`) or with a FWE voxel/peak-level correction (`FWE`).
     - `P-value` - here you can specify your p-threshold.
     - `Extent threshold (voxels)` - this allows you set a threshold of the minimum number of contiguous voxels in a cluster to be displayed. This can be used in cluster correction. 
