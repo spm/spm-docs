@@ -88,6 +88,14 @@ nav:
         - 'Bayesian inference':               'courses/fmri_vbm/recordings/bayesian_inference.md'
         - 'Introduction to DCM':              'courses/fmri_vbm/recordings/dcm_introduction.md'
         - 'DCM: Testing hypotheses':          'courses/fmri_vbm/recordings/dcm_hypothesis_testing.md'
+  - 'Reference documentation':
+    - 'reference/index.md'
+    - 'M/EEG':
+      - 'Getting started':              'reference/MEEG/index.md'
+      - 'M/EEG preprocessing':          'reference/MEEG/eeg_preprocessing.md'
+      - 'Sensor-level analysis':        'reference/MEEG/eeg_sensoranalysis.md'
+      - 'Source imaging':               'reference/MEEG/eeg_imaging.md'
+      - 'DCM for evoked responses':     'reference/MEEG/eeg_DCM.md'
   - 'Tutorials':
     - 'tutorials/index.md'
     - 'fMRI':
@@ -126,6 +134,7 @@ nav:
     - 'M/EEG':
       - 'Getting started':              'tutorials/MEEG/index.md'
       - 'EEG mismatch negativity data': 'tutorials/MEEG/mmn/index.md'
+      - 'Advanced topics in artefact removal':  'tutorials/MEEG/artefact.md'
       - 'M/EEG convolution modelling':  'tutorials/MEEG/meeg_firstlevel.md'
       - 'MEG source localisation':      'tutorials/MEEG/meg_sloc.md'
       - 'Multimodal':
