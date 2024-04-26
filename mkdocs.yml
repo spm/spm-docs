@@ -71,6 +71,7 @@ nav:
     - 'M/EEG':
       - 'courses/eeg_meg/index.md'
       - 'Course schedule':                    'courses/eeg_meg/programme.md'
+      - 'Datasets':                           'courses/eeg_meg/eeg_datasets.md'
     - 'fMRI/VBM': 
       - 'courses/fmri_vbm/index.md'
       - 'Course schedule':                    'courses/fmri_vbm/programme.md'
