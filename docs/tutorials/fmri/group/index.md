@@ -6,9 +6,9 @@ Second-level fMRI analysis (also known as group-level analysis) is a critical st
 
 In this section, we will go through different second-level models:
 
-- **One-sample t-test**: what is the average brain response across all participants?
-- **Two-sample t-test**: are there differences between the two groups studies? 
-- **Factorial**: are there any interactions driving the findings? 
+- [**One-sample t-test**](./one_sample_ttest.md): what is the average brain response across all participants?
+- [**Two-sample t-test**](./two_sample_ttest.md): are there differences between the two groups studies? 
+- [**Factorial**](factorial.md): are there any interactions driving the findings? 
 
 ## About the data
 
