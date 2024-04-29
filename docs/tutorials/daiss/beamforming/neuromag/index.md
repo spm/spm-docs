@@ -232,7 +232,7 @@ We shall use the same time-frequency window as the [multi-modal tutorial](../../
         <figcaption>The DAiSS output module</figcaption>
     </figure>
 
-=== "Code"
+=== "Script"
 
     ```matlab
 
@@ -268,7 +268,7 @@ With the power images calculated we need to export the NIFTI files for the group
         <figcaption>The DAiSS write module</figcaption>
     </figure>
 
-=== "Code"
+=== "Script"
 
     ```matlab
 
@@ -342,7 +342,7 @@ In this example, we are going to pool all the sources we reconstructed within a 
         <figcaption>The DAiSS output module</figcaption>
     </figure>
 
-=== "Code"
+=== "Script"
 
     ```matlab
 
@@ -373,7 +373,7 @@ Now we export the results back into an SPM dataset, where each location specifie
         <figcaption>The DAiSS write module</figcaption>
     </figure>
 
-=== "Code"
+=== "Script"
 
     ```matlab
 
