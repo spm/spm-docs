@@ -127,7 +127,7 @@ nav:
         - 'Getting started':        'tutorials/fmri/group/index.md'
         - 'One-sample t-test':      'tutorials/fmri/group/one_sample_ttest.md'
         - 'Two-sample t-test':      'tutorials/fmri/group/two_sample_ttest.md'
-      # - 'Factorial':              'tutorials/fmri/group/factorial.md'
+        - 'Factorial':              'tutorials/fmri/group/factorial.md'
     - 'VBM':
         - 'Getting started':      'tutorials/vbm/index.md'
         - 'Image processing':     'tutorials/vbm/image_processing.md'
