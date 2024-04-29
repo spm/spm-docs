@@ -2,7 +2,7 @@
 
 In this tutorial we will look at investigating interactions in our data. We will do this using a flexible factorial design.
 
-We will use the contrast corresponding to overall task activation (`con_0009.nii`) and explore whether there is an interaction between participants' handedness and the hand used to execute a task reponse. As you may remember from the [data description](./index.md), we have four groups of participants here: (1) right handed responding with their right hand, (2) right handed responding with their left hand, (3) left handed responding with their right hand, and (4) left handed responding with their left hand.  
+We will use the contrast corresponding to overall task activation (`con_0009.nii`) and explore whether there is an interaction between participants' handedness and the hand used to execute a task response. As you may remember from the [data description](./index.md), we have four groups of participants here: (1) right handed responding with their right hand, (2) right handed responding with their left hand, (3) left handed responding with their right hand, and (4) left handed responding with their left hand.  
 
 ## Specifying the model
 
