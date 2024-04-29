@@ -170,7 +170,8 @@ nav:
         - 'DCM for cross-spectral densities': 'tutorials/dcm/dcm_csd.md'
     - 'DAiSS':
       - 'Overview of DAiSS': 'tutorials/daiss/index.md'
-      - 'Beamforming':       'tutorials/daiss/daiss_beamforming.md'
+      - 'Beamforming: MEGIN/Elekta/Neuromag': 'tutorials/daiss/beamforming/neuromag/index.md'
+      - 'Beamforming: Simulated Data':       'tutorials/daiss/beamforming/simulated/index.md'
     - 'Manual': 'https://www.fil.ion.ucl.ac.uk/spm/doc/spm12_manual.pdf'
   #- 'Reference': 'reference/index.md'
   - 'Development':

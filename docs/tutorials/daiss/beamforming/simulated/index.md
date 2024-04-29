@@ -1,4 +1,4 @@
-# Beamforming OPM Data
+# Beamforming Simulated OPM Data
 
 ## About 
 
@@ -57,7 +57,7 @@ Now we have an empty MEG dataset, we need to simulate the activity originating f
 
     <figure>
         <div class="center">
-        <img src="../../../assets/figures/daiss/beamforming/opm_data_sim_batch.png" style="width:100mm" />
+        <img src="../../../../assets/figures/daiss/beamforming/opm_data_sim_batch.png" style="width:100mm" />
         </div>
         <figcaption>The simulation batch options</figcaption>
     </figure>
@@ -101,7 +101,7 @@ After preprocessing the data, it is ready to enter the DAiSS pipeline. We want t
 
     <figure>
         <div class="center">
-        <img src="../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_data.png" style="width:100mm" />
+        <img src="../../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_data.png" style="width:100mm" />
         </div>
         <figcaption>The DAiSS Data batch options</figcaption>
     </figure>
@@ -121,9 +121,8 @@ After preprocessing the data, it is ready to enter the DAiSS pipeline. We want t
     S.dir = spm_file(path_BF,'path');
     S.overwrite = 1;
 
-    matlabbatch = bf_wizard_data(S);
+    bf_wizard_data(S);
 
-    spm_jobman('run',matlabbatch)
     ```
 
 Upon a successful import a file called `BF.mat` will be created in the target directory. 
@@ -138,7 +137,7 @@ The `sources` module of DAiSS has two roles. First to specify where our sources 
 
     <figure>
         <div class="center">
-        <img src="../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_sources.png" style="width:100mm" />
+        <img src="../../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_sources.png" style="width:100mm" />
         </div>
         <figcaption>The DAiSS Sources batch options</figcaption>
     </figure>
@@ -154,9 +153,8 @@ The `sources` module of DAiSS has two roles. First to specify where our sources 
     S.method = 'grid';
     S.(S.method).resolution = 5;
 
-    matlabbatch = bf_wizard_sources(S);
+    bf_wizard_sources(S);
 
-    spm_jobman('run',matlabbatch)
     ```
 
 ??? info "What dipole model are we using?"
@@ -172,7 +170,7 @@ With the forward model computed, (the $l$ in our beamformer equation) we can now
 
     <figure>
         <div class="center">
-        <img src="../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_features.png" style="width:100mm" />
+        <img src="../../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_features.png" style="width:100mm" />
         </div>
         <figcaption>The DAiSS Features batch options</figcaption>
     </figure>
@@ -189,9 +187,8 @@ With the forward model computed, (the $l$ in our beamformer equation) we can now
     S.reg = 'manual'; 
     S.(S.reg).lambda = 5; % 5 percent regularisation.
 
-    matlabbatch = bf_wizard_features(S);
+    bf_wizard_features(S);
     
-    spm_jobman('run',matlabbatch)
     ```
 
 ??? info "Why regularisation can be important"
@@ -210,7 +207,7 @@ This is the point where the beamforming calculation happens. Having calculated o
 
     <figure>
         <div class="center">
-        <img src="../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_inverse.png" style="width:100mm" />
+        <img src="../../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_inverse.png" style="width:100mm" />
         </div>
         <figcaption>The DAiSS Inverse batch options</figcaption>
     </figure>
@@ -222,9 +219,8 @@ This is the point where the beamforming calculation happens. Having calculated o
     S.BF = path_BF;
     S.method = 'lcmv';
 
-    matlabbatch = bf_wizard_inverse(S);
+    bf_wizard_inverse(S);
     
-    spm_jobman('run',matlabbatch)
     ```
 
 ## Source power estimation
@@ -237,7 +233,7 @@ With the source weight vectors calculated, we can now estimate the power for a g
 
     <figure>
         <div class="center">
-        <img src="../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_output.png" style="width:100mm" />
+        <img src="../../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_output.png" style="width:100mm" />
         </div>
         <figcaption>The DAiSS Output batch options</figcaption>
     </figure>
@@ -254,9 +250,9 @@ With the source weight vectors calculated, we can now estimate the power for a g
     S.contrast = 1;
     S.method = 'image_power';
     S.(S.method).scale = 1; 
-    matlabbatch = bf_wizard_output(S);
+
+    bf_wizard_output(S);
     
-    spm_jobman('run',matlabbatch)
     ```
 
 ??? info "How beamformer power is calculated"
@@ -272,7 +268,7 @@ Before writing out the results to disk, it is possible to plot some outputs. `im
 
     <figure>
         <div class="center">
-        <img src="../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_view.png" style="width:100mm" />
+        <img src="../../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_view.png" style="width:100mm" />
         </div>
         <figcaption>The DAiSS View options</figcaption>
     </figure>
@@ -286,9 +282,8 @@ Before writing out the results to disk, it is possible to plot some outputs. `im
     S.(S.method).classic = 0; % set to 0 for new plotter
     S.(S.method).threshold = 0.2;
 
-    matlabbatch = bf_wizard_view(S);
+    bf_wizard_view(S);
 
-    spm_jobman('run',matlabbatch)
     ```
 
 If all has gone well, then we should see two sources originating from approximately the primary auditory cortices!
@@ -296,7 +291,7 @@ If all has gone well, then we should see two sources originating from approximat
 
 <figure>
     <div class="center">
-    <img src="../../../assets/figures/daiss/beamforming/view_glass_brain.png" style="width:100mm" />
+    <img src="../../../../assets/figures/daiss/beamforming/view_glass_brain.png" style="width:100mm" />
     </div>
     <figcaption>Glass brain plot of reconstructed power</figcaption>
 </figure>
@@ -306,7 +301,7 @@ If all has gone well, then we should see two sources originating from approximat
 
     <figure>
     <div class="center">
-    <img src="../../../assets/figures/daiss/beamforming/view_glass_brain_bad.png" style="width:100mm" />
+    <img src="../../../../assets/figures/daiss/beamforming/view_glass_brain_bad.png" style="width:100mm" />
     </div>
     </figure>
 
@@ -323,7 +318,7 @@ We can now export the power image as a NIfTI file so it can be shared with other
 
     <figure markdown>
     <p align="center">
-    <img width="75%" src="../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_write.png">
+    <img width="75%" src="../../../../assets/figures/daiss/beamforming/daiss_beamformer_batch_write.png">
     </p>
     <figcaption>The DAiSS Write options</figcaption>
     </figure>
@@ -335,14 +330,13 @@ We can now export the power image as a NIfTI file so it can be shared with other
     S.BF = path_BF;
     S.method = 'nifti';
 
-    matlabbatch = bf_wizard_write(S);
+    bf_wizard_write(S);
 
-    spm_jobman('run',matlabbatch)
     ```
 
 <figure markdown>
 <p align="center">
-<img width="50%" src="../../../assets/figures/daiss/beamforming/daiss_beamformer_overlay.png">
+<img width="50%" src="../../../../assets/figures/daiss/beamforming/daiss_beamformer_overlay.png">
 </p>
 <figcaption>Overlaid power image on a template anatomical in MRIcron</figcaption>
 </figure>
