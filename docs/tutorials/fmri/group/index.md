@@ -7,19 +7,18 @@ Second-level fMRI analysis (also known as group-level analysis) is a critical st
 In this section, we will go through different second-level models:
 
 - [**One-sample t-test**](./one_sample_ttest.md): what is the average brain response across all participants?
-- [**Two-sample t-test**](./two_sample_ttest.md): are there differences between the two groups studies? 
-- [**Factorial**](factorial.md): are there any interactions driving the findings? 
+- [**Two-sample t-test**](./two_sample_ttest.md): are there differences between two groups of participants? 
+- [**Factorial**](factorial.md): do multiple factors and their interaction(s) explain differences between participants? 
 
 ## About the data
 
-To demonstrate these analyses, we will use a semantic matching task from [Seghier et al. (2010)](https://doi.org/10.1523/JNEUROSCI.3377-10.2010) where both left and right handed participants were instructed to respond either with their left or right hand. Consequently, the dataset consists of the following groups: (1) right handed responding with their right hand, (2) right handed responding with their left hand, (3) left handed responding with their right hand, and (4) left handed responding with their left hand. In the examples described here we will only focus on the effects of response hand and handedness, but if you are interested in other analyses that can be performed with this data, please refer to [the accompanying publication](https://doi.org/10.1523/JNEUROSCI.3377-10.2010). 
+To demonstrate these analyses, we will use a semantic matching task from [Seghier et al. (2010)](https://doi.org/10.1523/JNEUROSCI.3377-10.2010) where both left and right handed participants were instructed to respond either with their left or right hand. Consequently, the dataset consists of the following groups: (1) right handed responding with their right hand, (2) right handed responding with their left hand, (3) left handed responding with their right hand, and (4) left handed responding with their left hand. In the examples described here we will only focus on the effects of response hand and handedness, but if you are interested in other analyses that can be performed with these data, please refer to [the accompanying publication](https://doi.org/10.1523/JNEUROSCI.3377-10.2010). 
 
 The data archive for this tutorial can be (downloaded from here)[]. The data has already been preprocessed and first-level models have been specified. The data structure of the archive is as follows:
 
 ```
 derivatives
     first_level         <- first-level models
-    preprocessed        <- preprocessed data
     second_level        <- space for your second-level models
 ```
 
@@ -27,26 +26,18 @@ Within the first-level directory, you will find estimated first-level models for
 
 ![](../../../assets/figures/tutorials/fmri/group/semantic_first_level_design_matrix.png)
 
-This design matrix includes two runs of the task with the following regressors defined:
+This design matrix includes two sessions (runs) of the task that have been concatenated into a single session, with the following regressors defined:
 
-    1.      Semantic task condition (pictures) - Run 1
-    2.      Semantic task condition (words) - Run 1
-    3.      Control task condition (non-words) - Run 1
-    4.      Control task condition (pictures) - Run 1
-    5.      Instructions - Run 1
+    1.      Semantic matching trials (picture stimuli)
+    2.      Semantic matching trials (word stimuli)
+    3.      Control trials (pseudo-word stimuli)
+    4.      Control trials (pictures stimuli)
+    5.      Instructions
     6-11.   Motion regressors - Run 1
+    12-17.  Motion regressors - Run 2
+    18-19.  Intercept (Runs 1 and 2)
 
-    12.     Semantic task condition (pictures) - Run 2
-    13.     Semantic task condition (words) - Run 2
-    14.     Control task condition (non-words) - Run 2
-    15.     Control task condition (pictures) - Run 2
-    16.     Instructions - Run 2
-    17-22.  Motion regressors - Run 2
-
-    23.     Error term - Run 1
-    24.     Error term - Run 2
-
-Based on these regressors the following task contrasts have been specified:
+Based on these regressors the following contrasts have been specified:
 
 1. Effects of interest (F-test)
 
@@ -57,16 +48,16 @@ Based on these regressors the following task contrasts have been specified:
     0 0 0 1
     ```
 
-2. Semantic - control pictures
+2. Main effect of Pictures-Words
 
     ```
-    1 0 0 -1
+    1 -1 -1 1
     ```
 
-3. Semantic - control words
+3. Main effect of Semantic-Control
 
     ```
-    0 1 -1 0
+    1 1 -1 -1
     ```
 
 4. Interaction
