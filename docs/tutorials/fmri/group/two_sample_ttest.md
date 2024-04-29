@@ -6,7 +6,7 @@ We will focus on seeing if there is a difference in overall task activation (con
 
 ## Specifying the model
 
-1. Make an empty directory for where you will save your results. Navigate to `derivatives/second_level` and make a folder for this analysis. Name it something meanigful to you, e.g. `two_sample_ttest_task`. 
+1. Make an empty directory where you will save your results. Navigate to `derivatives/second_level` and make a folder for this analysis. Name it something meanigful to you, e.g. `two_sample_ttest_task`. 
 2. Select `Specify 2nd level` from the SPM menu. 
 3. In the pop-up batch editor window, select your newly created output directory by clicking `Directory` and navigating to `derivatives/second_level/two_sample_ttest_task` in the selection box.
 4. Define your statistical model by selecting `Design` :material-arrow-right-bold: `Two-sample t-test`

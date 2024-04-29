@@ -6,7 +6,7 @@ Here we will check if there is an overall effect of the task (i.e. contrast `con
 
 ## Specifying the model
 
-1. Make an empty directory for where you will save your results. Navigate to `derivatives/second_level` and make a folder for this analysis. Name it something meanigful to you, e.g. `one_sample_ttest_task`. 
+1. Make an empty directory where you will save your results. Navigate to `derivatives/second_level` and make a folder for this analysis. Name it something meanigful to you, e.g. `one_sample_ttest_task`. 
 2. Select `Specify 2nd level` from the SPM menu. 
 3. In the pop-up batch editor window, select your newly created output directory by clicking `Directory` and navigating to `derivatives/second_level/one_sample_ttest_task` in the selection box.
 4. Define your statistical model by selecting `Design` :material-arrow-right-bold: `One-sample t-test`
