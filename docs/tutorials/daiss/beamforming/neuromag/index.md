@@ -186,13 +186,52 @@ We have to elements of the beamforming equation to calculate the first is the le
 
 In keeping with the [group analysis tutorial](../../../MEEG/multi/source/#group-statistics-on-source-reconstructions), we are going to localise 10-20 Hz power, and so we generate a covariance matrix $C$ from that frequency band alone. We also add in a couple of steps ensure that the magnetometer and gradiometer channels are fused together to create one covariance matrix for all channels. We shall also truncate our covariance matrix prior to inversion to stop the noise elements dominating and then invert to make $C^{-1}$
 
+=== "GUI"
 
+    Start the batch editor (`Batch` button) on main panel. Then from the dropdown menu `SPM` select `Tools -> DAiSS (beamforming) -> Covariance Features`. You will see the following menu:
 
-With the visualisation option turned on, we can look at the eigenspectrum of the untruncated covariance matrix and look at where we decided to truncate from (black dashed line). We can see that 60 is probably a conservative estimate with the last sensible eigenvector being the 73rd (after that the eigenvectors are about 7 orders of magnitude smaller).
+    Only edit the section about using the `grid` method.
+
+    <figure>
+        <div class="center">
+        <img src="../../../../assets/figures/daiss/beamforming/megin_batch_features.png" style="width:100mm" />
+        </div>
+        <figcaption>The DAiSS feature specification module</figcaption>
+    </figure>
+
+=== "Script"
+
+    ```matlab
+
+    S = [];
+    S.BF = path_BF;
+    S.woi = [-inf inf];
+    S.conditions = 'all';
+
+    % Generate covariance matrix
+    S.method = 'cov';
+    S.cov.taper = 'none';
+    S.cov.foi = [0 100]; % wide band matrix
+
+    % Fuse results from the different sensors - but set cross terms to 0
+    S.modality = {'MEG', 'MEGPLANAR'};
+    S.cross_terms = 'all';
+    S.fuse = 'meg';
+
+    % Regularise by truncating the matrix to after the 60th eigenvector
+    S.reg = 'mantrunc';
+    S.(S.reg).pcadim = 60;
+    S.visualise = 1;
+
+    bf_wizard_features(S);
+
+    ```
+
+With the visualisation option turned on, we can look at the eigenspectrum of the untruncated covariance matrix and look at where we decided to truncate from (black dashed line). We can see that 60 is probably a conservative estimate with the last sensible eigenvector being the 120th (after that the eigenvectors are about 15 orders of magnitude smaller).
 
 <figure>
     <div class="center">
-    <img src="../../../../assets/figures/daiss/beamforming/megin_eigenspectrum_v2.png" style="width:100mm" />
+    <img src="../../../../assets/figures/daiss/beamforming/megin_eigenspectrum_post.png" style="width:100mm" />
     </div>
     <figcaption>The eigenspectrum of the 10-20 Hz covariance matrix (blue) with the truncation line overlaid (black)</figcaption>
 </figure>
@@ -201,7 +240,30 @@ With the visualisation option turned on, we can look at the eigenspectrum of the
 
 With the lead fields and covariance matrix calculated, we finally put it all together to make our weights $w_{\theta}$ for a given source $\theta$. Earlier we generated three lead fields for each source (each oriented in one of the three cardinal directions). Here we will linearly combine them in such a way they give us maximal power in that area.
 
+=== "GUI"
 
+    Start the batch editor (`Batch` button) on main panel. Then from the dropdown menu `SPM` select `Tools -> DAiSS (beamforming) -> Inverse Solution`. You will see the following menu:
+
+    Only edit the section about using the `grid` method.
+
+    <figure>
+        <div class="center">
+        <img src="../../../../assets/figures/daiss/beamforming/megin_batch_inverse.png" style="width:100mm" />
+        </div>
+        <figcaption>The DAiSS inverse solution module</figcaption>
+    </figure>
+
+=== "Script"
+
+    ```matlab
+
+    S = [];
+    S.BF = path_BF;
+    S.method = 'lcmv';
+
+    bf_wizard_inverse(S);
+
+    ```
 
 ## Generating activation images
 
@@ -306,7 +368,7 @@ If this has worked you should see three NIFTI format images beginning with `uv_p
         S.glass.threshold = 0.8;
         bf_wizard_view(S);
     ```
-    This should result in a few clusters being displayed, including one positive one located in the right fusiform face area!
+    This should result in a cluster located approximately in the right fusiform face area!
     <figure>
         <div class="center">
         <img src="../../../../assets/figures/daiss/beamforming/megin_contrast_result.png" style="width:100mm" />
