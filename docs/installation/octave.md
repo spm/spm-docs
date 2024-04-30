@@ -11,7 +11,7 @@
   <https://octave.discourse.group/>
 - Octave Bug Tracker: <https://savannah.gnu.org/bugs/?group=octave>
 - Octave GitHub: <https://github.com/gnu-octave>
-- Octave Space: https://octave.space/
+- Octave Space: offline
 - Octave-Forge: <https://octave.sourceforge.net/>
 - [GNU Octave and reproducible
   research](https://dx.doi.org/10.1016/j.jprocont.2012.04.006) by John W.

@@ -77,7 +77,7 @@ After going through these steps, SPM will display the results as an activation m
 
 ![](../../../assets/figures/tutorials/fmri/group/semantic_two_sample_ttest_results.png)
 
-We can see that participants who used their left-hand to make responses had stronger (more postitive) activation in the contralateral (right) motor cortex. 
+We can see that participants who used their left-hand to make responses had stronger (more positive) activation in the contralateral (right) motor cortex. 
 
 !!! question "Exercise"
     Can you follow the steps above to view the second contrast we specified?    What do you expect the results will be? Can you display them as a heatmap on a standard template?
