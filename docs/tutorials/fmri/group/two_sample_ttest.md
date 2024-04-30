@@ -40,6 +40,7 @@ We will focus on testing for a difference in overall task activation (contrast `
     ```
 
     `img_group2` holds all directories pointing to right-hand responder's `con_0009.nii`.
+    
 8. Return to the main SPM menu window and select `Specify 2nd level`. 
 9. In the pop-up batch editor window, select your newly created output directory by clicking `Directory` and navigating to `derivatives/second_level/two_sample_ttest_task` in the selection box.
 10. Define your statistical model by selecting `Design` :material-arrow-right-bold: `Two-sample t-test`
