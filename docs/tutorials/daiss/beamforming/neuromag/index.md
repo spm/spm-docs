@@ -63,6 +63,9 @@ We are going to calculate the whitening transform on the pre-stimulus period dat
 
 === "GUI"
 
+    ???+ bug "Bug alert with data reduction batch options!"
+        If you have a version of SPM with a release date prior to **30/04/24** then there is a bug which means the `Time window` option is not passed to the whitening code. This means all the data is whitened rather than the baseline alone. You can get around this problem by clicking on the **Script** tab above to see code which correctly passes on the time information.
+
     Start the batch editor (`Batch` button) on main panel. Then from the dropdown menu `SPM` select `M/EEG -> Preprocessing -> Data Reduction`. You will see the following menu:
 
     <figure>
@@ -381,7 +384,7 @@ If this has worked you should see three NIFTI format images beginning with `uv_p
 When we created the above images, we had a hypothesis that the effect we were looking for existed in the 10-20 Hz frequency band and a 150-250 ms time window, but made no assumption about where in the brain we would see an effect. This is not the only way we can approach this. Alternatively, we could say we have a clear idea _where_ we see an effect but not _when_ (in time and/or frequency). Here we will extract the timeseries data from a given region of interest (right Fusiform Face Area) which then could be passed onto a time-frequency analysis of your choosing.
 
 ??? warning "A reminder about double dipping"
-    When writing up a study, one thing you should _never_ do is the following: 
+    When writing up a study, one thing you should _never_ do is the following:
 
     1. For a significant effect across the brain in a given time frequency window, find the peak location of the of the effect.
     2. Extract a virtual electrode from there
