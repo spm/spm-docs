@@ -172,7 +172,6 @@ nav:
       - 'Overview of DAiSS': 'tutorials/daiss/index.md'
       - 'Beamforming: MEGIN/Elekta/Neuromag': 'tutorials/daiss/beamforming/neuromag/index.md'
       - 'Beamforming: Simulated Data':       'tutorials/daiss/beamforming/simulated/index.md'
-    - 'Manual': 'https://www.fil.ion.ucl.ac.uk/spm/doc/spm12_manual.pdf'
   #- 'Reference': 'reference/index.md'
   - 'Development':
     - 'Introduction': 'development/index.md'
