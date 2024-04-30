@@ -14,7 +14,7 @@ In this section, we will go through different second-level models:
 
 To demonstrate these analyses, we will use a semantic matching task from [Seghier et al. (2010)](https://doi.org/10.1523/JNEUROSCI.3377-10.2010) where both left and right handed participants were instructed to respond either with their left or right hand. Consequently, the dataset consists of the following groups: (1) right handed responding with their right hand, (2) right handed responding with their left hand, (3) left handed responding with their right hand, and (4) left handed responding with their left hand. In the examples described here we will only focus on the effects of response hand and handedness, but if you are interested in other analyses that can be performed with these data, please refer to [the accompanying publication](https://doi.org/10.1523/JNEUROSCI.3377-10.2010). 
 
-The data archive for this tutorial can be (downloaded from here)[]. The data has already been preprocessed and first-level models have been specified. The data structure of the archive is as follows:
+The data archive for this tutorial can be [downloaded from here](https://www.fil.ion.ucl.ac.uk/spm/data/fmri_group_semantic/fmri_group_analysis_semantic.zip). The data has already been preprocessed and first-level models have been specified. The data structure of the archive is as follows:
 
 ```
 derivatives
@@ -22,7 +22,7 @@ derivatives
     second_level        <- space for your second-level models
 ```
 
-Within the first-level directory, you will find estimated first-level models for each participant. Below you can see the design matrix that has been specified for each of the participants. 
+Within the first-level directory, you will find estimated first-level model for the first particpant (sub-001). For the remaining participants we have included only the contrast images, which are required for group analysis, to reduce the size of the download. Below you can see the design matrix that was specified for each of the participants. 
 
 ![](../../../assets/figures/tutorials/fmri/group/semantic_first_level_design_matrix.png)
 
