@@ -1,6 +1,6 @@
 # One-sample t-test
 
-In this this tutorial we will perform a one-sample t-test. A one-sample t-test tells us if and where in the brain our group responds to a specific task condition or experimental contrast on average. 
+In this this tutorial we will perform a one-sample t-test at each voxel in the brain. This will tell us if and where in the brain our group responds to a specific task condition or experimental contrast on average. 
 
 Here we will check if there is an overall effect of the task (i.e. contrast `con_0009.nii` - for a reminder of first-level contrasts, check [the previous page](./index.md)). 
 
