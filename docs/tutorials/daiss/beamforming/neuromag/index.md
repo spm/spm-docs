@@ -280,11 +280,7 @@ We shall use the same time-frequency window as the [multi-modal tutorial](../../
     For a given source $\theta$, the power $P_{\theta}$ is calculated using $P_{\theta} = w_{\theta}^TCw_{\theta}$
 
 ??? question "Why do we log-transform the power results?"
-    There are two reasons why we need to log transform the beamformed power data prior to a second level analysis.
-
-    1. **Gaussianity**: The GLM method for determining our group effect assumes the data across subjects follows a Gaussian distribution, performing a [power transform](https://en.wikipedia.org/wiki/Power_transform) of the data is a method to make more likely follow this assumption. Log transforming the data is one such power transform.
-    2. **Depth Correction**: A more subtle effect this corrects for is the fact that in beamforming deeper sources (whilst having lower SNR) tend to have larger variance, and therefore it can appear all power in in the centre of the brain. The log transform reduces the ratio of the difference in variance at the cortex and in the centre to a point where most group-analyses will correctly identify the large error across subjects in the middle and down-weight those areas.
-
+    **Gaussianity**: The GLM method for determining our group effect assumes the data across subjects follows a Gaussian distribution, performing a [power transform](https://en.wikipedia.org/wiki/Power_transform) of the data is a method to make more likely follow this assumption. Log transforming the data is one such power transform.
 
 === "GUI"
 
