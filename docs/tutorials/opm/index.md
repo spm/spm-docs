@@ -17,6 +17,6 @@ These tutorials cover the following areas in OPM analysis.
 2. [Source Level: Evoked Response Pipeline](evoked_source/index.md)
 3. [Coregistration](coreg/index.md)
 4. [Simulation](simulation/index.md)
-
+5. [Supported File Formats](formats/index.md)
 
 --8<-- "addons/abbreviations.md"
