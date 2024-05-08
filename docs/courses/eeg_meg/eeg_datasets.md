@@ -25,3 +25,7 @@ BEM file to copy into spm/canonical: [single_subj_T1_EEG_BEM.mat](https://www.fi
 This is an 128-channel EEG single subject example data set which is used for demonstrating the usage of scripts in M/EEG pre-processing and DCM for evoked responses.
 
 - [Dataset](https://www.fil.ion.ucl.ac.uk/spm/data/eeg_mmn/)
+
+### Convolution modelling tutorial by Bernhard Spitzer
+
+- [Materials on GitHub](https://github.com/bernspitz/convolution-models-MEEG)
