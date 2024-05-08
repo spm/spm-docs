@@ -46,4 +46,8 @@ This is a draft programme of the upcoming online [SPM course for EEG and MEG](./
 | 14:15 - 15:15     | DCM for cross-spectral densities                      | [Dr Johan Medrano](https://profiles.ucl.ac.uk/91185-johan-medrano) |
 | 15:15 - 16:00     | [DCM - Demo](https://youtu.be/oocLux1lBMI?feature=shared)                                           | [Julia Rodriguez Sanchez](https://www.researchgate.net/profile/Julia_Rodriguez-Sanchez) |
 | 16:00 - 17:15     | [Bayesian model selection and averaging](https://youtu.be/O3mAnlD4ibU?feature=shared)                | [Dr Peter Zeidman](https://peterzeidman.co.uk/) |
-| 17:15 - 18:00     | Q&A clinic with Prof Karl Friston                     | [Prof Karl Friston](https://www.fil.ion.ucl.ac.uk/~karl/) & SPM faculty                            |
+| 17:15 - 18:00     | Q&A clinic with Prof Karl Friston                     | [Prof Karl Friston](https://www.fil.ion.ucl.ac.uk/~karl/) & SPM faculty        
+
+
+### Day 4 (bonus)
+- [DAiSS - Demo](https://youtu.be/3S_VQbewl9w?feature=shared) - Dr George O'Neill 
