@@ -130,7 +130,8 @@ nav:
           - 'Supported file formats':        'tutorials/opm/formats/index.md'
       - 'DCM':
           - 'Overview of DCM':                  'tutorials/dcm/index.md'
-          - 'DCM for fMRI - 1st level (Attention)': 'tutorials/dcm/dcm_fmri_first_level_gui.md'       
+          - 'DCM for fMRI - 1st level (Attention)': 'tutorials/dcm/dcm_fmri_first_level_gui.md'
+          - 'DCM for fMRI - 2nd level (Motor)': 'tutorials/dcm/dcm_fmri_second_level_motor.md'          
           - 'DCM for fMRI - 1st level (Language)':  'tutorials/dcm/dcm_fmri_first_level.md'
           - 'DCM for fMRI - 2nd level (Language)':  'tutorials/dcm/dcm_fmri_second_level.md'
           - 'DCM for evoked responses':         'tutorials/dcm/dcm_erp.md'
