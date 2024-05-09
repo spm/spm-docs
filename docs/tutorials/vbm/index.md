@@ -29,9 +29,9 @@ The overall plan will be to
 
 * Segment the images, to identify grey and white matter (using the **Segment** button). Grey matter will eventually be warped to MNI space.  This step also generates "imported" images, which will be used in the next step.
 
-* Estimate the deformations that best align the images together by iteratively registering the imported images with their average (**SPM:material-arrow-right-bold:Tools:material-arrow-right-bold:Dartel Tools:material-arrow-right-bold:Run Dartel (create Templates)**).
+* Estimate the deformations that best align the images together by iteratively registering the imported images with their average (**SPM:material-arrow-right-bold:Tools:material-arrow-right-bold:Shoot Tools:material-arrow-right-bold:Run Shooting (create Templates)**).
 
-* Generate spatially normalised and smoothed Jacobian scaled grey matter images, using the deformations estimated in the previous step (**SPM:material-arrow-right-bold:Tools:material-arrow-right-bold:Dartel Tools:material-arrow-right-bold:Normalise to MNI Space**).
+* Generate spatially normalised and smoothed Jacobian scaled grey matter images, using the deformations estimated in the previous step (**SPM:material-arrow-right-bold:Tools:material-arrow-right-bold:Shoot Tools:material-arrow-right-bold:Write Normalised**).
 
 * Do some statistics on the smoothed images (**Basic models**, **Estimate** and **Results** options).
 

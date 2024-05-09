@@ -13,17 +13,17 @@ The sequence of jobs in the batching system would be:
 
     * **SPM:material-arrow-right-bold:Spatial:material-arrow-right-bold:Segment**: To generate the roughly (via a rigid-body) aligned grey and white matter images of the subjects.
 
-    * **SPM:material-arrow-right-bold:Tools:material-arrow-right-bold:Dartel Tools:material-arrow-right-bold:Run Dartel (create Template)**: Determine the nonlinear deformations for warping all the grey and white matter images so that they match each other.
+    * **SPM:material-arrow-right-bold:Tools:material-arrow-right-bold:Shoot Tools:material-arrow-right-bold:Run Shooting (create Template)**: Determine the nonlinear deformations for warping all the grey and white matter images so that they match each other.
 
-    * **SPM:material-arrow-right-bold:Tools:material-arrow-right-bold:Dartel Tools:material-arrow-right-bold:Normalise to MNI Space**: Actually generate the smoothed "modulated" warped grey and white matter images.
+    * **SPM:material-arrow-right-bold:Tools:material-arrow-right-bold:Shoot Tools:material-arrow-right-bold:Write normalised**: Actually generate the smoothed "modulated" warped grey and white matter images.
 
 
 ## **Segment**
 
 The objective now is to automatically identify different tissue types within the images, using **Segment** (Ashburner and Friston 2005).
-The output of the segmentation will be used for achieving more accurate inter-subject alignment using Dartel (to be explained later).
+The output of the segmentation will be used for achieving more accurate inter-subject alignment using Shoot (to be explained later).
 Segmentation can be found within **SPM:material-arrow-right-bold:Spatial:material-arrow-right-bold:Segment** in the batching system.
-It is suggested that **Native Space** versions of the tissues in which you are interested are generated, along with **Dartel imported** versions of grey and white matter.
+It is suggested that **Native Space** versions of the tissues in which you are interested are generated, along with **Imported** versions of grey and white matter.
 It is useful to also have either a native or "imported" version of the CSF, so that intra-cranial volumes may be computed (see later).
 
 For VBM, the native space images are usually the ``c1*.nii`` files, as it is these images that will eventually be warped to MNI space.
@@ -53,9 +53,9 @@ There won't be time to segment all scans, so the plan is to demonstrate how one 
 
         * **Num. Gaussians**: This can usually be left as it is.
 
-        * **Native Tissue**: We want to save **Native + Dartel imported**.  This gives images of grey matter at the resolution of the original scans, along with some lower resolution "imported" versions that can be used for the Dartel registration.
+        * **Native Tissue**: We want to save **Native + Imported**.  This gives images of grey matter at the resolution of the original scans, along with some lower resolution "imported" versions that can be used for the Shoot registration.
 
-        * **Warped Tissue**: Leave this at **None**, as grey matter images will be aligned together with Dartel to give closer alignment.
+        * **Warped Tissue**: Leave this at **None**, as grey matter images will be aligned together with Shoot to give closer alignment.
 
     * **Tissue**: The second tissue is usually white matter.
 
@@ -63,7 +63,7 @@ There won't be time to segment all scans, so the plan is to demonstrate how one 
 
         * **Num. Gaussians**: Leave alone.
 
-        *  **Native Tissue**: We want **Native + Dartel imported**.
+        *  **Native Tissue**: We want **Native + Imported**.
 
         * **Warped Tissue**: Leave at **None**.
 
@@ -122,7 +122,7 @@ There won't be time to segment all scans, so the plan is to demonstrate how one 
     * **Deformation fields**: Not needed here, so leave at **None**.
 
 <figure id="Fig:segjob" markdown>
-![](../../assets/figures/tutorials/vbm/vbm-Segment14.png){width=50%}
+![](../../assets/figures/tutorials/vbm/vbm-Segment24.png){width=50%}
 <figcaption> The form of a Segment job. </figcaption>
 </figure>
 
@@ -133,7 +133,7 @@ After the segmentation is complete, there should be a bunch of new image files g
 Files containing ``c1`` in their name are what the algorithm identifies as grey matter.
 If they have a ``c2`` then they are supposed to be white matter.
 The ``c3`` images, are CSF.
-The file names beginning with ``r`` (as in ``rc1``) are the Dartel imported versions of the tissue class images, which will be aligned together next.
+The file names beginning with ``r`` (as in ``rc1``) are the "imported" versions of the tissue class images, which will be aligned together next.
 
 I suggest that you click the **Check Reg** button, and take a look at some of the resulting images.
 For one of the subjects, select the original, the ``c1``, ``c2`` and ``c3``.  This should give an idea about which voxels the algorithm identifies as the different tissue types. Also try this for some of the other subjects.
@@ -146,13 +146,13 @@ For one of the subjects, select the original, the ``c1``, ``c2`` and ``c3``.  Th
 </figure>
 </p>
 
-## **Run Dartel (create Templates)**
+## **Run Shooting (create Templates)**
 
-The idea behind Dartel (Ashburner, 2007) is to increase the accuracy of inter-subject alignment by modelling the shape of each brain using millions of parameters (three parameters for each voxel).
-Dartel works by aligning grey matter among the images, while simultaneously aligning white matter.
+The idea behind Shoot (Ashburner, 2011) is to increase the accuracy of inter-subject alignment by modelling the shape of each brain using millions of parameters (three parameters for each voxel).
+Shoot works by aligning grey matter among the images, while simultaneously aligning white matter.
 This is achieved by generating its own increasingly crisp average template data, to which the data are iteratively aligned (Ashburner and Friston, 2008).
-This uses the imported ``rc1`` and ``rc2`` images, and generates ``u_rc1`` files, as well as a series of template images.
-The Dartel module would be set up as follows:
+This uses the imported ``rc1`` and ``rc2`` images, and generates ``y_rc1`` (deformation) files, as well as Jacobian determinant maps (``j_``), velocity fields that parameterise the deformations (``v_``), and a series of template images.
+The Run Shooting module would be set up as follows:
 
 * **Images**: Two channels of images need to be created.
 
@@ -160,17 +160,15 @@ The Dartel module would be set up as follows:
 
     * **Images**: Select the imported white matter images (``rc2*.nii``).  These should be specified in the same order as the grey matter, so that the grey matter image for any subject corresponds with the appropriate white matter image.
 
-* **Settings**: There are lots of options here, but they are set at reasonable default values.  Best to just leave them as they are.
-
 <p>
-<img src="../../../assets/figures/tutorials/vbm/vbm-Dartel14.png"  width="45%" />
+<img src="../../../assets/figures/tutorials/vbm/vbm-Shoot24.png"  width="45%" />
 <img src="../../../assets/figures/tutorials/vbm/vbm-template8.png" width="45%" />  
-<figure id="Fig:Dartel" markdown>
-<figcaption> The form of a **Dartel** job (left) and the template data after 0, 3 and 18 iterations (right).  </figcaption>
+<figure id="Fig:Shoot" markdown>
+<figcaption> The form of a **Run Shooting** job (left) and the template data after different numbers of iterations (right).  </figcaption>
 </figure>
 </p>
 
-Dartel takes a long time to run.
+Shooting takes a long time to run.
 If you were to hit the **Run** button, then the job would be executed.
 This would take a long time to finish, so I suggest you don't do it now.
 If you have actually just clicked the **Run** button, then find the main MATLAB window and type Ctrl-C to stop the job.
@@ -181,17 +179,17 @@ This will bring up a long error message, and there may be some partially generat
 
     The developers of SPM always appreciate bug reports. There are about half a million lines of code in SPM12, so it's bound to contain a few mistcakes.
 
-## **Normalise to MNI Space**
+## **Write Normalised**
 
-This step uses the resulting `u_rc1`` files (which encode the shapes), to generate smoothed, spatially normalised and Jacobian scaled grey matter images in MNI space (Mechelli et al, 2005; Ashburner, 2009).
+This step uses the resulting `y_rc1`` files (deformation fields), to generate smoothed, spatially normalised and Jacobian scaled grey matter images in MNI space (Mechelli et al, 2005; Ashburner, 2009).
 
-* **Dartel Template**: Select the final template image created in the previous step.  This is usually called Template\_6.nii.  This template is registered to MNI space (affine transform), allowing the transformations to be combined so that all the individual spatially normalised scans can also be brought into MNI space.
+* **Shoot Template**: Select the final template image created in the previous step.  This is usually called Template\_4.nii.  This template is registered to MNI space (affine transform), allowing the transformations to be combined so that all the individual spatially normalised scans can also be brought into MNI space.
 
 * **Select according to**: Choose **Many Subjects**, as this allows all flow fields to be selected at once, and then all grey matter images to be selected at once.
 
     * **Many Subjects**
 
-        * **Flow fields**: Select all the flow fields created by the previous step (``u_*.nii``).
+        * **Deformation fields**: Select all the deformation fields created by the previous step (``y_*.nii``).
 
         * **Images**: Need one channel of images if only analysing grey matter.
 
@@ -239,7 +237,7 @@ Such jobs can be re-loaded at a later time (hint: **Load** button).
 Ashburner, J., and K. J. Friston. 2005. "Unified Segmentation."
 *NeuroImage* 26: 839--51.
 <https://doi.org/doi:10.1016/j.neuroimage.2005.02.018>.
-                                                                                                                                             </div>
+</div>
 
 <div id="ref-ashburner07" class="csl-entry">
 
@@ -257,15 +255,25 @@ Templates." *NeuroImage* 45 (2): 333--41.
 
 </div>
 
-<div>
-Ashburner, J., 2009. "Computational anatomy with the SPM software". *Magnetic Resonance Imaging* 27 (8): 1163--1174.
-<https://doi.org/10.1016/j.mri.2009.01.006>.
+<div id="ref-ashburner2011diffeomorphic" class="csl-entry">
+
+Ashburner, J. and Friston, K.J., 2011. "Diffeomorphic registration using
+geodesic shooting and Gauss–Newton optimisation." *NeuroImage* 55 (3): 954--967.
+<https://doi.org/10.1016/j.neuroimage.2010.12.049>.
+
 </div>
 
 <div>
+
+Ashburner, J., 2009. "Computational anatomy with the SPM software". *Magnetic Resonance Imaging* 27 (8): 1163--1174.
+<https://doi.org/10.1016/j.mri.2009.01.006>.
+
+</div>
+
+<div>
+
 Mechelli, A., C.J. Price, K.J. Friston and J. Ashburner. 2005. "Voxel-Based Morphometry of the Human Brain: Methods and Applications." *Current Medical Imaging Reviews* 1:105--113.
 <https://doi.org/10.2174/1573405054038726>.
-<\div>
 
 </div>
 
