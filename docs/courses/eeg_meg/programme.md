@@ -43,7 +43,7 @@ This is a draft programme of the upcoming online [SPM course for EEG and MEG](./
 | 11:00 - 12:10     | [The principles of dynamic causal modelling (DCM)](https://youtu.be/tD9peFEq1KQ?feature=shared)      | [Dr Amirhossein Jafarian](https://ftd.neurology.cam.ac.uk/directory/A_Jafarian) |
 | 12:10 - 13:15     | [DCM for evoked responses](https://youtu.be/c3lrMfEHTSs?feature=shared)                              | [Dr Daniel Hauke](https://profiles.ucl.ac.uk/92790-daniel-hauke)      |
 | *Break*                                                                               |
-| 14:15 - 15:15     | DCM for cross-spectral densities                      | [Dr Johan Medrano](https://profiles.ucl.ac.uk/91185-johan-medrano) |
+| 14:15 - 15:15     | [DCM for cross-spectral densities](https://youtu.be/ZbeZmxERRho)                      | [Dr Johan Medrano](https://profiles.ucl.ac.uk/91185-johan-medrano) |
 | 15:15 - 16:00     | [DCM - Demo](https://youtu.be/oocLux1lBMI?feature=shared)                                           | [Julia Rodriguez Sanchez](https://www.researchgate.net/profile/Julia_Rodriguez-Sanchez) |
 | 16:00 - 17:15     | [Bayesian model selection and averaging](https://youtu.be/O3mAnlD4ibU?feature=shared)                | [Dr Peter Zeidman](https://peterzeidman.co.uk/) |
 | 17:15 - 18:00     | Q&A clinic with Prof Karl Friston                     | [Prof Karl Friston](https://www.fil.ion.ucl.ac.uk/~karl/) & SPM faculty        
