@@ -98,9 +98,13 @@ nav:
           - 'Two-sample t-test':      'tutorials/fmri/group/two_sample_ttest.md'
           - 'Factorial':              'tutorials/fmri/group/factorial.md'
       - 'VBM':
-          - 'Getting started':      'tutorials/vbm/index.md'
-          - 'Image processing':     'tutorials/vbm/image_processing.md'
-          - 'Statistical analysis': 'tutorials/vbm/statistical_analysis.md'
+          - 'Getting started':       'tutorials/vbm_spm_course_2024/index.md' 
+          - 'Data preparation':      'tutorials/vbm_spm_course_2024/data_prep.md' 
+          - 'Preprocessing':         'tutorials/vbm_spm_course_2024/preprocessing.md' 
+          - 'Analysis':              'tutorials/vbm_spm_course_2024/analysis.md' 
+          #- 'Getting started':      'tutorials/vbm/index.md'
+          #- 'Image processing':     'tutorials/vbm/image_processing.md'
+          #- 'Statistical analysis': 'tutorials/vbm/statistical_analysis.md'
       - 'M/EEG':
         - 'Getting started':              'tutorials/MEEG/index.md'
         - 'EEG mismatch negativity data': 'tutorials/MEEG/mmn/index.md'
