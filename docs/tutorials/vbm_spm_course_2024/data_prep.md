@@ -2,7 +2,7 @@
 
 ## 1. Setting up the directory structure
 
-Neuroimaging experiments result in complicated data that can be arranged in many different ways.  Historically, individuals have tended to use their own unique naming/directory structures. The “Brain Imaging Data Structure” (BIDS) Specification has been designed to standardise this to help others understand the data, aiding replication, data-sharing and collaborations. For more details see: https://bids.neuroimaging.io/bids_spec1.0.0-rc2.pdf
+Neuroimaging experiments result in complicated data that can be arranged in many different ways.  Historically, individuals have tended to use their own unique naming/directory structures. The “Brain Imaging Data Structure” (BIDS) Specification has been designed to standardise this to help others understand the data, aiding replication, data-sharing and collaborations. For more details see: https://bids.neuroimaging.io/
 
 For this demo, we will use the anatomical and naming convention as per BIDS:
 
