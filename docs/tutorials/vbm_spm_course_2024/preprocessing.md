@@ -150,11 +150,11 @@ To use push-forward, we need to select:
 
 This is summarized in the figure below:
 
-![](../../assets/figures/tutorials/vbm_spm_course_2024/preprocessing_warp_batch_2.png
+![](../../assets/figures/tutorials/vbm_spm_course_2024/preprocessing_warp_batch_2.png)
 
 Save the batch. When you hit go, it should output `smw[inputfilename].nii` files in the folder containing the MRI data. This is the smoothed modulated warped images that you will use for your VBM analysis:
 
-![](../../assets/figures/tutorials/vbm_spm_course_2024/preprocessing_warp_check_reg.png
+![](../../assets/figures/tutorials/vbm_spm_course_2024/preprocessing_warp_check_reg.png)
 
 Repeating this for every subject would be a bit tedious. Unfortunately there is not yet an `apply to many` option for this (though may be soon). Attached is a script to do that for you for now. Copy and paste into a blank script, save as `spm_warpshoot`, make sure it is in your path and simply type `spm_warpshoot` to run. This can also be used to create a group average brain (with adaptations, detailed later).
 
