@@ -156,6 +156,7 @@ nav:
     - 'fMRI/VBM': 
       - 'courses/fmri_vbm/index.md'
       - 'Course schedule':                    'courses/fmri_vbm/programme.md'
+      - 'Datasets':                           'courses/fmri_vbm/mri_datasets.md'
       - 'Preparatory materials':              'courses/fmri_vbm/preparatory_materials.md'
       - 'Learning objectives':                'courses/fmri_vbm/learning_objectives.md'
       - 'Lecture recordings':
