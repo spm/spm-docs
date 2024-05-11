@@ -18,7 +18,7 @@ Segmentation splits an image into individual tissue types.
 2. Select `Data` :material-arrow-right-bold: `Volumes`. 
 3. In the pop-up window, use the left-hand panel to navigate to `sub-01/anat/`. 
 4. From the right-hand panel, select the anatomical image `sub-01_T1w.nii` and press `Done`.
-5. Select `Save bias corrected` :material-arrow-right-bold: `Save bias corrected`.
+5. Select `Save bias corrected` :material-arrow-right-bold: `Save bias corrected`. (This is called `Save INU corrected` in more recent SPM versions.)
 6. Select `Deformation fields` :material-arrow-right-bold: `Forward`.
 7. Save this batch for future reference - `File` :material-arrow-right-bold: `Save batch` and name it, e.g. `segmentation_batch.mat.`
 8. Run your batch by pressing :material-play:.
