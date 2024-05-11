@@ -15,10 +15,10 @@ Coregistration brings two images into alignment. In this case this we will be wo
 
     ![](../../../../assets/figures/coregistration_batch.png)
 
-2. Select `Reference image`. 
+2. Select `Reference image` (called `Fixed image` in newer SPM versions). 
 3. In the pop-up window, use the left-hand panel to navigate to `sub-01/func/`. 
 4. From the right-hand panel, select the mean image generated during [realignment](./realignment.md) - `meansub-01_task-auditory_bold.nii` and press `Done`.
-5. Select `Source image`.
+5. Select `Source image` (called `Moved image` in newer SPM versions).
 6. In the pop-up window, navigate to `sub-01/anat/`. 
 7. Select the anatomical image - `sub-01_T1w.nii` and press `Done`.
 8. Save this batch for future reference - `File` :material-arrow-right-bold: `Save batch` and name it, e.g. `coregistration_batch.mat.`
