@@ -60,13 +60,13 @@ Before processing the data, it is a good idea to save the batch in-case you need
 ![](../../assets/figures/tutorials/vbm_spm_course_2024/preprocessing_segment_batch_3.png)
 
 This may take a little while to complete, depending on the size of your dataset and computer. The output in each file directory will be:
-- `c1[filename].nii` – Native space grey matter segmentation
-- `c2[filename].nii` – Native space white matter segmentation
-- `c3[filename].nii` – Native space CSF segmentation
-- `rc1[filename].nii` – Dartel import space grey matter segmentation
-- `rc2[filename].nii` – Dartel import space white matter segmentation
-- `rc3[filename].nii` – Dartel import space CSF segmentation
-- `m[filename].nii` – Native space bias corrected T1w
+- `c1[filename].nii` – Native space grey matter segmentation  
+- `c2[filename].nii` – Native space white matter segmentation  
+- `c3[filename].nii` – Native space CSF segmentation  
+- `rc1[filename].nii` – Dartel import space grey matter segmentation  
+- `rc2[filename].nii` – Dartel import space white matter segmentation  
+- `rc3[filename].nii` – Dartel import space CSF segmentation  
+- `m[filename].nii` – Native space bias corrected T1w  
 - `[filename]_seg8.mat` – Various normalization transform data
 
 Below is a figure showing native `c1` (left) and `dartel import` (right) segmentations. Basically, `dartel import` is orientated (rigidly aligned) with MNI space, meaning every subject’s data is in reasonably close alignment with one another which will help produce better results using the warping algorithms. 
@@ -136,17 +136,17 @@ From here we need to select `SPM` :material-arrow-right-bold: `Util` :material-a
 This will provide a menu with a lot of options for normalizing data. The approach we will use is called `push-forward`. This has the advantage that we can also simultaneously modulate and smooth the data, cutting down the number of steps we have to do.
 
 To use push-forward, we need to select:
-- `Composition` :material-arrow-right-bold: `New Inverse` (this will add a new submenu)
-- `Inverse` :material-arrow-right-bold: `Composition: New deformation`:material-arrow-right-bold: `Deformation Field` 
-- Input the `y_[filename].nii`
-- `Image to base inverse on` :material-arrow-right-bold: Input `Template_4.nii`
-- `Output` :material-arrow-right-bold: `New pushforward` (this will add a new submenu)
-- `Pushforward`:material-arrow-right-bold: `Apply to` :material-arrow-right-bold: Put in image(s) to be warped (i.e. `c1` and `c2`, **not** dartel import)
-- `Output destination` :material-arrow-right-bold: `Source directory`
-- `Field of view` :material-arrow-right-bold: `Image defined` (this will add a new submenu)
-- `Image defined` :material-arrow-right-bold: Input `Template_4.nii`
-- `Preserve` :material-arrow-right-bold: `Preserve amount (“modulation”)`
-- `Gaussian FWHM` :material-arrow-right-bold: `[6 6 6]` (smoothing kernel)
+- `Composition` :material-arrow-right-bold: `New Inverse` (this will add a new submenu)  
+- `Inverse` :material-arrow-right-bold: `Composition: New deformation`:material-arrow-right-bold: `Deformation Field`   
+- Input the `y_[filename].nii`  
+- `Image to base inverse on` :material-arrow-right-bold: Input `Template_4.nii`  
+- `Output` :material-arrow-right-bold: `New pushforward` (this will add a new submenu)  
+- `Pushforward`:material-arrow-right-bold: `Apply to` :material-arrow-right-bold: Put in image(s) to be warped (i.e. `c1` and `c2`, **not** dartel import)  
+- `Output destination` :material-arrow-right-bold: `Source directory`  
+- `Field of view` :material-arrow-right-bold: `Image defined` (this will add a new submenu)  
+- `Image defined` :material-arrow-right-bold: Input `Template_4.nii`  
+- `Preserve` :material-arrow-right-bold: `Preserve amount (“modulation”)`  
+- `Gaussian FWHM` :material-arrow-right-bold: `[6 6 6]` (smoothing kernel)  
 
 This is summarized in the figure below:
 
