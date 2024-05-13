@@ -17,7 +17,7 @@ D = spm_opm_create(S);
 ```
 
 !!! note
-    If you would like your file format to be supported by SPM please [open an issue on GitHub](https://github.com/spm/spm/issues).
+    If you would like your file format to be supported by SPM please [open an issue on GitHub](https://github.com/spm/spm/issues). Currently supported data formats are documented [here](https://www.fil.ion.ucl.ac.uk/spm/docs/tutorials/opm/formats/).
 
 ## Power Spectral Density
 
