@@ -18,7 +18,7 @@ The tutorials are organised by data modality and illustrate how to use SPM to an
 
     ---
 
-    [Voxel-Based Morphometry](./vbm/index.md)
+    [Voxel-Based Morphometry](./vbmcourse24/index.md)
 
 -   :material-monitor:{ .lg .middle } __MEEG__
 
