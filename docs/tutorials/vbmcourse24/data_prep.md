@@ -1,6 +1,6 @@
 # Data preparation
 
-## 1. Setting up the directory structure
+## Setting up the directory structure
 
 Neuroimaging experiments result in complicated data that can be arranged in many different ways.  Historically, individuals have tended to use their own unique naming/directory structures. The “Brain Imaging Data Structure” (BIDS) Specification has been designed to standardise this to help others understand the data, aiding replication, data-sharing and collaborations. For more details see: https://bids.neuroimaging.io/
 
@@ -10,7 +10,7 @@ For this demo, we will use the anatomical and naming convention as per BIDS:
 
 See the end of this section for a code snippit to combine this with dicom import.
 
-## 2. DICOM import
+## DICOM import
 
 Normally, MRI data comes from the scanner in dicom file format (`.dcm`). To use this we first need to import the data and convert it into nifti file format. It is preferable to use “single file nifti format” rather than two-file (`.img` and `.hdr`).
 
@@ -72,3 +72,4 @@ end
  
 clear X group sub bidsanatomy data matlabbatch target study
 ```
+

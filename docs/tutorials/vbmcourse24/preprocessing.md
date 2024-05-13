@@ -2,7 +2,7 @@
 
 Here is an overview of the structural pre-processing steps we are aiming to achieve:
 
-![](../../assets/figures/tutorials/vbm_spm_course_2024/preprocessing_workflow.png)
+#![](../../assets/figures/tutorials/vbm_spm_course_2024/preprocessing_workflow.png)
 
 !!! tip "Important before starting"
     While the SPM pipelines do an excellent job of combining and realigning data, they do rely on the source data (i.e. all of the T1w MRIs in native subject space) being in reasonably close alignment to one another.
