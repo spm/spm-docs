@@ -185,7 +185,7 @@ This step uses the resulting `y_rc1`` files (deformation fields), to generate sm
 
 * **Shoot Template**: Select the final template image created in the previous step.  This is usually called Template\_4.nii.  This template is registered to MNI space (affine transform), allowing the transformations to be combined so that all the individual spatially normalised scans can also be brought into MNI space.
 
-* **Select according to**: Choose **Many Subjects**, as this allows all flow fields to be selected at once, and then all grey matter images to be selected at once.
+* **Select according to**: Choose **Many Subjects**, as this allows all deformation fields to be selected at once, and then all grey matter images to be selected at once.
 
     * **Many Subjects**
 
@@ -193,7 +193,7 @@ This step uses the resulting `y_rc1`` files (deformation fields), to generate sm
 
         * **Images**: Need one channel of images if only analysing grey matter.
 
-            * **Images**: Select all the grey matter images (``c1*.nii``), in the same order as the flow fields.
+            * **Images**: Select all the grey matter images (``c1*.nii``), in the same order as the deformation fields.
 
 * **Voxel Sizes**: Specify voxel sizes for spatially normalised images.  Leave as is ```NaN NaN NaN```, to have 1.5 mm voxels.
 
