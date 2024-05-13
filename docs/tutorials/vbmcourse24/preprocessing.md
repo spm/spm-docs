@@ -78,7 +78,7 @@ Below is a figure showing native `c1` (left) and `dartel import` (right) segment
 
 ## Shoot
 
-Geodesic shooting is a diffeomorphic warping algorithm designed to non-linearly align the brain data. It has recently been developed building on the earlier Dartel pipeline. As such, it does not yet have as many additional functions compared to Dartel (e.g. normalise to MNI space, warp many etc.,), and therefore requires some additional manual steps to use (covered here). However, the overall impression is that it is better than Dartel and will be increasingly used in the future, therefore it is the pipeline used here. 
+Geodesic shooting is a diffeomorphic warping algorithm designed to non-linearly align the brain data. It has recently been developed building on the earlier Dartel pipeline. As such, it does not yet have as many additional functions compared to Dartel, so requires some additional manual steps to use (covered here). However, the overall impression is that it is better than Dartel and will be increasingly used in the future, therefore it is the pipeline used here. 
 
 To use, first open the SPM batch window:
 
@@ -122,88 +122,50 @@ Importantly, this process estimates a population average template. This is a typ
     You can do and publish your entire analysis in your specific population average space.
     
     If you really want your results in MNI space (e.g. for data-sharing results maps/coordinates), you can do this using the `Co-registration` function (MNI = reference, population average = source, other = any results/data you want to move to MNI).
+
+
+## **Write Normalised**
+
+This step uses the resulting `y_rc1` files (deformation fields), to generate smoothed, spatially normalised and Jacobian scaled grey matter images in MNI space.
+From here we need to select `SPM` :material-arrow-right-bold: `Tools` :material-arrow-right-bold: `Shoot tools` :material-arrow-right-bold: `Write normalised`
+
+* **Shoot Template**: Select the final template image created in the previous step.  This is usually called Template\_4.nii.  This template is registered to MNI space (affine transform), allowing the transformations to be combined so that all the individual spatially normalised scans can also be brought into MNI space.
+
+* **Select according to**: Choose **Many Subjects**, as this allows all deformation fields to be selected at once, and then all grey matter images to be selected at once.
+
+    * **Many Subjects**
+
+        * **Deformation fields**: Select all the deformation fields created by the previous step (``y_*.nii``).
+
+        * **Images**: Need one channel of images if only analysing grey matter.
+
+            * **Images**: Select all the grey matter images (``c1*.nii``), in the same order as the deformation fields.
+
+* **Voxel Sizes**: Specify voxel sizes for spatially normalised images.  Leave as is ```NaN NaN NaN```, to have 1.5 mm voxels.
+
+* **Bounding box**: The field of view to be included in the spatially normalised images can be specified here.  For now though, just leave at the default settings.
+
+* **Preserve**: For VBM, this should be set to **Preserve Amount ("modulation")**, so that tissue volumes are compared.
+
+* **Gaussian FWHM**: Specify the size of the Gaussian (in mm) for smoothing the processed data by.  This is typically between about 4mm and 12mm.  Use 6mm for now.
+
+The optimal value for FWHM depends on many things, but one of the main ones is the accuracy with which the images can be registered.
+If spatial normalisation (inter-subject alignment to some reference space) is done using a simple model with fewer than a few thousand parameters, then more smoothing (eg about 12 mm FWHM) would be suggested.
+For more accurately aligned images, the amount of smoothing can be decreased.
+About 8mm may be suitable, but I don't much have empirical evidence to suggest appropriate values.
+The optimal value is likely to vary from region to region: lower for subcortical regions with less variability, and more for the highly variable cortex.
+
+<figure id="Fig:Processed" markdown>
+![](../../assets/figures/tutorials/vbm/vbm-Processed14.png){width=50%}
+<figcaption> Processed grey and white matter data for three subjects, which are smoothed by 8 mm FWHM. Note that all data are shown scaled the same, which illustrates the effect of different global brain sizes (darker for smaller brains because structures are smaller).  </figcaption>
+</figure>
+
+The smoothed images represent the regional volume of tissue.
+Statistical analysis is done using these data, so one would hope that differences among the processed data actually reflect differences among the regional volumes of grey matter.
+
+<figure id="Fig:interpretation" markdown>
+![](../../assets/figures/tutorials/vbm/vbm-interpretation.png){width=90%}
+<figcaption> We generally hope that the results of VBM analyses can be interpreted as systematic volumetric differences (such as folding or thickness), rather than artifacts (such as misclassification or misregistration).  Because of this, it is essential that the processing be as accurate as possible. Note that exactly the same argument can be made of the results of manual volumetry, which depend on the accuracy with which the regions are defined, and on whether there is any systematic error made.  </figcaption>
+</figure>
+
  
-## Warping
-
-To analyse our brain data, we need to warp it to the group average space. To do this, we will use the deformation fields (`y_[filename].nii`) we have just generated using the Shoot Toobox.
-
-To do this, we need to open the SPM batch menu again
-
-From here we need to select `SPM` :material-arrow-right-bold: `Util` :material-arrow-right-bold: `Deformations`
-
-![](../../assets/figures/tutorials/vbm_spm_course_2024/preprocessing_warp_batch_1.png)
-
-This will provide a menu with a lot of options for normalizing data. The approach we will use is called `push-forward`. This has the advantage that we can also simultaneously modulate and smooth the data, cutting down the number of steps we have to do.
-
-To use push-forward, we need to select:
-- `Composition` :material-arrow-right-bold: `New Inverse` (this will add a new submenu)  
-- `Inverse` :material-arrow-right-bold: `Composition: New deformation`:material-arrow-right-bold: `Deformation Field`   
-- Input the `y_[filename].nii`  
-- `Image to base inverse on` :material-arrow-right-bold: Input `Template_4.nii`  
-- `Output` :material-arrow-right-bold: `New pushforward` (this will add a new submenu)  
-- `Pushforward`:material-arrow-right-bold: `Apply to` :material-arrow-right-bold: Put in image(s) to be warped (i.e. `c1` and `c2`, **not** dartel import)  
-- `Output destination` :material-arrow-right-bold: `Source directory`  
-- `Field of view` :material-arrow-right-bold: `Image defined` (this will add a new submenu)  
-- `Image defined` :material-arrow-right-bold: Input `Template_4.nii`  
-- `Preserve` :material-arrow-right-bold: `Preserve amount (“modulation”)`  
-- `Gaussian FWHM` :material-arrow-right-bold: `[6 6 6]` (smoothing kernel)  
-
-This is summarized in the figure below:
-
-![](../../assets/figures/tutorials/vbm_spm_course_2024/preprocessing_warp_batch_2.png)
-
-Save the batch. When you hit go, it should output `smw[inputfilename].nii` files in the folder containing the MRI data. This is the smoothed modulated warped images that you will use for your VBM analysis:
-
-![](../../assets/figures/tutorials/vbm_spm_course_2024/preprocessing_warp_check_reg.png)
-
-Repeating this for every subject would be a bit tedious. Unfortunately there is not yet an `apply to many` option for this (though may be soon). Attached is a script to do that for you for now. Copy and paste into a blank script, save as `spm_warpshoot`, make sure it is in your path and simply type `spm_warpshoot` to run. This can also be used to create a group average brain (with adaptations, detailed later).
-
-```Matlab
-function spm_warpshoot
-%Geodesic shooting does not currently have a GUI for warping many subjects
-%This is a simple wrapper script to help. 
-%--------------------------------------------------------------------------
-%C.Lambert, July 2018
-%--------------------------------------------------------------------------
- 
-%Just check number of tissue classes to normalise
-answer = inputdlg('Number of tissue classes (default 2)','INPUT');
-if isempty(str2num(answer{1})),classes=2;else classes=str2num(answer{1});end
- 
-%Modulate or not
-answer = inputdlg('Modulate (0 = No, 1 = Yes, default YES)','INPUT');
-if isempty(str2num(answer{1})),mod=1;else mod=str2num(answer{1});end
-if mod~=1,mod=0;end %Make sure no silly inputs
- 
-answer = inputdlg('Smoothing FWHM (default 0 0 0)','INPUT');
-if isempty(str2num(answer{1})),fwhm=[0 0 0];else fwhm=str2num(answer{1});end
- 
-%SELECT WARP FIELDS:
-W=spm_select(inf,'any','INPUT WARP FIELDS');Sw=size(W,1);
-T=spm_select(1,'any','TARGET TEMPLATE');
- 
-%Now select INPUTS SEGMENTATIONS:
-for i=1:classes
-    S{i}=spm_select(inf,'any',char(strcat('Input tissue class',32,num2str(i))));
-end
- 
-for i=1:Sw,
-    INPUT=deblank(S{1}(i,:));[OP,~,~]=fileparts(INPUT);clear matlabbatch
-    
-    if classes>1
-        for j=2:classes,INPUT=char(INPUT,deblank(S{j}(i,:)));end
-    end
-    
-    matlabbatch{1}.spm.util.defs.comp{1}.inv.comp{1}.def = cellstr(deblank(W(i,:)));
-    matlabbatch{1}.spm.util.defs.comp{1}.inv.space = cellstr(T);
-    matlabbatch{1}.spm.util.defs.out{1}.push.fnames = cellstr(INPUT);
-    matlabbatch{1}.spm.util.defs.out{1}.push.weight = {''};
-    matlabbatch{1}.spm.util.defs.out{1}.push.savedir.saveusr = cellstr(OP);
-    matlabbatch{1}.spm.util.defs.out{1}.push.fov.file = cellstr(T);
-    matlabbatch{1}.spm.util.defs.out{1}.push.preserve = mod;
-    matlabbatch{1}.spm.util.defs.out{1}.push.fwhm = fwhm;
-    matlabbatch{1}.spm.util.defs.out{1}.push.prefix = '';
-    spm_jobman('run',matlabbatch);
-end
-end
-```

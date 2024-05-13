@@ -13,8 +13,7 @@ This tutorial will go through the full processing pipeline for a two group VBM a
 ![](../../assets/figures/tutorials/vbm_spm_course_2024/index_workflow.png)
 
 ## Notes on the SPM VBM demo data
-For the SPM workshop, a demo analysis looking for left-right brain asymmetry will be performed. This data consists of 12 R1 maps (1/T1) that have also been left-right flipped providing a total cohort size of 24. These have already been dicom imported and are supplied as native space .nii files. Note the DICOM import will not be covered in the workshop but is detailed below for reference.  
-
+For the SPM workshop, a demo analysis looking for left-right brain asymmetry will be performed. This data consists of 12 R1 maps (1/T1) that have also been left-right flipped providing a total cohort size of 24. These have already been dicom imported and are supplied as native space .nii files.
 To speed up the demo, folders are organized into:
 
 -	day_1/02_preprocessing_asymmetry/01-Start: This is where you begin to run the whole thing
@@ -23,5 +22,5 @@ To speed up the demo, folders are organized into:
 
 To note, if you just run the pipeline on all the data in “start”, that will output all of the data in the raw folder, for each subject. You can then double check what you find with the actual end result.
 
-In the <!--‘middle’ and--> ‘end’ folder I have re-organised the data to more closely follow how it would be structured in a BIDS dataset. This means all the various outputs can be found in the derivatives folder.
+The <!--‘middle’ and--> ‘end’ folder has data re-organised to more closely follow how it would be structured in a BIDS dataset. This means all the various outputs can be found in the derivatives folder.
  

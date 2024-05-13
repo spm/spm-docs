@@ -34,11 +34,27 @@ Again save your batch before proceeding. If you have done everything right, you 
 
 ## Analysis and visualisation
 
-Before we finish, it is a good idea to generate a population average brain for projecting our data onto (because it is not precisely MNI). To do this, we simply warp the bias corrected T1s to our group average space. You can do this using `spm_warpshoot` script described on [the preprocessing page](./preprocessing.md). Make sure to input the following options: 
+Before we finish, it is a good idea to generate a population average brain for projecting our data onto (because it is not precisely MNI). To do this, we simply warp the bias corrected T1s to our group average space. You can do this using `SPM` :material-arrow-right-bold: `Tools` :material-arrow-right-bold: `Shoot tools` :material-arrow-right-bold: `Write normalised`
 
-- `Tissue class` :material-arrow-right-bold: `1`
-- `Modulation` :material-arrow-right-bold: `0` (i.e. no modulation)
-- `FWHM` :material-arrow-right-bold: `0 0 0`
+* **Shoot Template**: As before, select the final template image created in the previous step (`Template_4.nii`).
+
+* **Select according to**: Choose **Many Subjects**.
+
+    * **Many Subjects**
+
+        * **Deformation fields**: Select all the ``y_*.nii``.
+
+        * **Images**: Need one channel of images for warping the bias corrected scans.
+
+            * **Images**: Select the bias corrected images (``m*.nii``), in the same order as the deformation fields.
+
+* **Voxel Sizes**: Specify voxel sizes for spatially normalised images (1mm might be a good choice).
+
+* **Bounding box**: The field of view to be included in the spatially normalised images can be specified here.  For now though, just leave at the default settings.
+
+* **Preserve**: For warping images, this should be set to **Preserve concentrations (no "modulation")**.
+
+* **Gaussian FWHM**: We don't want to smooth, so choose 0 mm.
 
 All being well, this will generate a `w[filename].nii` in each folder.
 
