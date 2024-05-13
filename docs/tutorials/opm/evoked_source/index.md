@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This page goes through an example pipeline for a source-level evoked response analysis. Some of the steps will be similar to the [Sensor Level: evoked response tutorial](../evoked/index.md) and will not be covered here. We will therefore not xver these steps in depth.
+This page goes through an example pipeline for a source-level evoked response analysis. Some of the steps will be similar to the [Sensor Level: evoked response tutorial](../evoked/index.md) and will not be covered here. We will therefore not cover these steps in depth.
 
 ```matlab
 %- read data 
