@@ -13,7 +13,7 @@ Realignment refers to correcting the functional data for movement that has occur
 
 1. From the SPM main window, select `Realign (Estimate & Reslice)`. You will see a pop-up window called the Batch Editor appear, looking like this:
 
-    ![](../../../../assets/figures/realignment_batch.png)
+    ![](../../../../assets/figures/realignment_batch_2.png)
 
 2. Select `Data` :material-arrow-right-bold: `New: Session`. 
 3. In the pop-up window, use the left-hand panel to navigate to `sub-01/func/`. 
