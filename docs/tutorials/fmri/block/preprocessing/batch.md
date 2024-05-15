@@ -53,6 +53,6 @@ The SPM batch interface allows you to create workflows for executing multiple pr
     1. Select `Images to smooth` :material-arrow-right-bold: `Dependency`.
     2. In the pop-up window, select the realigned, slice time corrected, and normalised time series - `Normalise: write: normalised images (subj 1)` and press `OK`.
     3. Select `FWHM` and change `[8 8 8]` to `[6 6 6]`.
-15. Now that all your preprocessing steps have been specified, save this batch - `File` :material-arrow-right-bold: `Save batch and script` and name it, e.g. `preprocessing_batch.mat`. **Make sure you select `Save batch and script` not `Save batch`. This will be important for the next step.
+15. Now that all your preprocessing steps have been specified, save this batch - `File` :material-arrow-right-bold: `Save batch and script` and name it, e.g. `preprocessing_batch.mat`. **Make sure you select `Save batch and script` not `Save batch`. This will be important for the next step.**
 
 You can now run this batch to execute all selected preprocessing steps for this subject by clicking :material-play: or use it to create a matlab script to process data from multiple subjects. 
