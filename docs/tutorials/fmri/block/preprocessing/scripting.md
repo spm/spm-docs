@@ -10,18 +10,18 @@ First, open this your `preprocessing_batch_job.m` file in MATLAB and inspect its
 
 ```matlab
 %-----------------------------------------------------------------------
-% spm SPM - SPM12 (7771)
+% spm SPM - SPM (dev)
 % cfg_basicio BasicIO - Unknown
 %-----------------------------------------------------------------------
 matlabbatch{1}.spm.spatial.realign.estwrite.data = {{'/Users/spm/spm_tutorials/preprocessing/MoAEpilot/sub-01/func/sub-01_task-auditory_bold.nii'}};
-matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.quality = 0.9;
-matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.sep = 4;
-matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.fwhm = 5;
+matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.quality = 0.95;
+matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.sep = 1.5;
+matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.fwhm = 1;
 matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.rtm = 1;
 matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.interp = 2;
 matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.wrap = [0 0 0];
 matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.weight = '';
-matlabbatch{1}.spm.spatial.realign.estwrite.roptions.which = [0 1];
+matlabbatch{1}.spm.spatial.realign.estwrite.roptions.which = [2 1];
 matlabbatch{1}.spm.spatial.realign.estwrite.roptions.interp = 4;
 matlabbatch{1}.spm.spatial.realign.estwrite.roptions.wrap = [0 0 0];
 matlabbatch{1}.spm.spatial.realign.estwrite.roptions.mask = 1;
@@ -41,7 +41,7 @@ matlabbatch{3}.spm.spatial.coreg.estimate.eoptions.sep = [4 2];
 matlabbatch{3}.spm.spatial.coreg.estimate.eoptions.tol = [0.02 0.02 0.02 0.001 0.001 0.001 0.01 0.01 0.01 0.001 0.001 0.001];
 matlabbatch{3}.spm.spatial.coreg.estimate.eoptions.fwhm = [7 7];
 matlabbatch{4}.spm.spatial.preproc.channel.vols(1) = cfg_dep('Coregister: Estimate: Coregistered Images', substruct('.','val', '{}',{3}, '.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','cfiles'));
-matlabbatch{4}.spm.spatial.preproc.channel.biasreg = 0.001;
+matlabbatch{4}.spm.spatial.preproc.channel.biasreg = 0.0001;
 matlabbatch{4}.spm.spatial.preproc.channel.biasfwhm = 60;
 matlabbatch{4}.spm.spatial.preproc.channel.write = [0 0];
 matlabbatch{4}.spm.spatial.preproc.tissue(1).tpm = {'/Applications/spm12/tpm/TPM.nii,1'};
@@ -74,7 +74,7 @@ matlabbatch{4}.spm.spatial.preproc.warp.reg = [0 0.001 0.5 0.05 0.2];
 matlabbatch{4}.spm.spatial.preproc.warp.affreg = 'mni';
 matlabbatch{4}.spm.spatial.preproc.warp.fwhm = 0;
 matlabbatch{4}.spm.spatial.preproc.warp.samp = 3;
-matlabbatch{4}.spm.spatial.preproc.warp.write = [0 1];
+matlabbatch{4}.spm.spatial.preproc.warp.write = [0 0];
 matlabbatch{4}.spm.spatial.preproc.warp.vox = NaN;
 matlabbatch{4}.spm.spatial.preproc.warp.bb = [NaN NaN NaN
                                               NaN NaN NaN];
@@ -127,14 +127,14 @@ for i = 1:numel(sub)
     cd(func_dir) % move into the subject specific folder containing the functional data
     
     matlabbatch{1}.spm.spatial.realign.estwrite.data {1} = cellstr(func); % point the batch to the func variable
-    matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.quality = 0.9;
-    matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.sep = 4;
-    matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.fwhm = 5;
+    matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.quality = 0.95;
+    matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.sep = 1.5;
+    matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.fwhm = 1;
     matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.rtm = 1;
     matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.interp = 2;
     matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.wrap = [0 0 0];
     matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.weight = '';
-    matlabbatch{1}.spm.spatial.realign.estwrite.roptions.which = [0 1];
+    matlabbatch{1}.spm.spatial.realign.estwrite.roptions.which = [2 1];
     matlabbatch{1}.spm.spatial.realign.estwrite.roptions.interp = 4;
     matlabbatch{1}.spm.spatial.realign.estwrite.roptions.wrap = [0 0 0];
     matlabbatch{1}.spm.spatial.realign.estwrite.roptions.mask = 1;
@@ -154,9 +154,9 @@ for i = 1:numel(sub)
     matlabbatch{3}.spm.spatial.coreg.estimate.eoptions.tol = [0.02 0.02 0.02 0.001 0.001 0.001 0.01 0.01 0.01 0.001 0.001 0.001];
     matlabbatch{3}.spm.spatial.coreg.estimate.eoptions.fwhm = [7 7];
     matlabbatch{4}.spm.spatial.preproc.channel.vols(1) = cfg_dep('Coregister: Estimate: Coregistered Images', substruct('.','val', '{}',{3}, '.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1}), substruct('.','cfiles'));
-    matlabbatch{4}.spm.spatial.preproc.channel.biasreg = 0.001;
+    matlabbatch{4}.spm.spatial.preproc.channel.biasreg = 0.0001;
     matlabbatch{4}.spm.spatial.preproc.channel.biasfwhm = 60;
-    matlabbatch{4}.spm.spatial.preproc.channel.write = [0 1];
+    matlabbatch{4}.spm.spatial.preproc.channel.write = [0 0];
     matlabbatch{4}.spm.spatial.preproc.tissue(1).tpm = {fullfile(spm('Dir'),'tpm','TPM.nii,1')};
     matlabbatch{4}.spm.spatial.preproc.tissue(1).ngaus = 1;
     matlabbatch{4}.spm.spatial.preproc.tissue(1).native = [1 0];
@@ -187,7 +187,7 @@ for i = 1:numel(sub)
     matlabbatch{4}.spm.spatial.preproc.warp.affreg = 'mni';
     matlabbatch{4}.spm.spatial.preproc.warp.fwhm = 0;
     matlabbatch{4}.spm.spatial.preproc.warp.samp = 3;
-    matlabbatch{4}.spm.spatial.preproc.warp.write = [0 1];
+    matlabbatch{4}.spm.spatial.preproc.warp.write = [0 0];
     matlabbatch{4}.spm.spatial.preproc.warp.vox = NaN;
     matlabbatch{4}.spm.spatial.preproc.warp.bb = [NaN NaN NaN
                                                   NaN NaN NaN];
