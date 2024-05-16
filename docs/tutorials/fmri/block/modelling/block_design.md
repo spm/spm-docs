@@ -17,7 +17,7 @@ specification of an fMRI specification job in the batch editor.
 
 5. Select `Data and Design` :material-arrow-right-bold: `New subject/session` :material-arrow-right-bold: `Subject/session` :material-arrow-right-bold: `Scans`.
 
-6. In the SPM file selector pop-up, select the preprocessed functional data, i.e. `swasub-01_task-auditory_bold.nii`. These can be selected easily by typing `^swas.*` in the filter box and `NaN` underneath it. Select the data and press `Done`.
+6. In the SPM file selector pop-up, select the preprocessed functional data, i.e. `swarsub-01_task-auditory_bold.nii`. These can be selected easily by typing `^swars.*` in the filter box and `NaN` underneath it. Select the data and press `Done`.
 
 7. Highlight `Condition` and select `New: condition`.
 
