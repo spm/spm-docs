@@ -17,9 +17,9 @@ are represented by MATLAB cell arrays, stored in the `sots.mat` file.
 
 Now press the `Specify 1st-level` button.
 This will call up the specification of a fMRI specification job in the
-batch editor window. Then
+batch editor window. Then:
 
-- Press `Load` and select the `categorical_spec.mat` job file you
+- Press `File` and `Load batch`, select the `categorical_spec.mat` job file you
   created earlier.
 
 - Open `Conditions` and then open the second `Condition`.
