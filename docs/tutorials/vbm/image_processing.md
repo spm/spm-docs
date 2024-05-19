@@ -273,7 +273,7 @@ Ashburner, J., 2009. "Computational anatomy with the SPM software". *Magnetic Re
 <div>
 
 Mechelli, A., C.J. Price, K.J. Friston and J. Ashburner. 2005. "Voxel-Based Morphometry of the Human Brain: Methods and Applications." *Current Medical Imaging Reviews* 1:105--113.
-<https://doi.org/10.2174/1573405054038726>.
+<https://www.fil.ion.ucl.ac.uk/spm/doc/papers/am_vbmreview.pdf>.
 
 </div>
 
