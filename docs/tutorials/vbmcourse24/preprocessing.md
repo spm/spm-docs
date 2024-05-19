@@ -48,14 +48,14 @@ First double click on volumes. This will open a file select box, where we will s
 
 Rather than selecting each file manually, you can speed this up using recursive search (shown above). At the end of the filter add `.nii` (to specify you want to look for all of the nifti files within the directories above) and then hit `Rec` (arrow). We will use this again later with other file specifiers. 
 
-You will now need to modify the following options (summarized on the figure over):
-- `Save bias corrected` :material-arrow-right-bold: `Save bias corrected` (for making group average brain to project results on later).
-- `Native tissue` :material-arrow-right-bold: `Native and Dartel imported` for tissue classes 1-3
+You will now need to modify the following options (summarized in the next figure):  
+- `Save bias corrected` :material-arrow-right-bold: `Save bias corrected` (for making group average brain to project results on later).  
+- `Native tissue` :material-arrow-right-bold: `Native and Dartel imported` for tissue classes 1-3  
 - `Native tissue` :material-arrow-right-bold: `None` for tissue classes 4-6
 
 ![](../../assets/figures/tutorials/vbm_spm_course_2024/preprocessing_segment_batch_2.png)
 
-Before processing the data, it is a good idea to save the batch in-case you need to re-do/check again later: 
+Before processing the data, it is a good idea to save the batch in case you need to re-do/check again later: 
 
 ![](../../assets/figures/tutorials/vbm_spm_course_2024/preprocessing_segment_batch_3.png)
 
@@ -107,9 +107,9 @@ When you inputted the data correctly, the arrow should go green. Again it is sen
 !!! info "Time considerations"
     This is the slowest part of the entire pipeline, and may take hours-days depending on data size/computer.  
 
-The output in each file directory will be:
-- `y_rc1[filename].nii` – Deformation field
-- `j_rc1[filename].nii` – Jacobian determinants
+The output in each file directory will be:  
+- `y_rc1[filename].nii` – Deformation field  
+- `j_rc1[filename].nii` – Jacobian determinants  
 - `v_rc1[filename].nii` – Velocity field
 
 Additionally, in the first directory you will find five template images (0-4). These are 4D files (containing GM, WM, CSF, other) showing various stages in estimating the population average:
@@ -119,9 +119,9 @@ Additionally, in the first directory you will find five template images (0-4). T
 Importantly, this process estimates a population average template. This is a type of group average space that is unique to your study population. This is **not** MNI space (MNI is a type of population average space), however it will be very close. 
 
 !!! info "Template spaces"
-    You can do and publish your entire analysis in your specific population average space.
+    You can conduct and publish your entire analysis in your specific population average space.
     
-    If you really want your results in MNI space (e.g. for data-sharing results maps/coordinates), you can do this using the `Co-registration` function (MNI = reference, population average = source, other = any results/data you want to move to MNI).
+    If you want your results in MNI space (e.g. for data-sharing results maps/coordinates), you can do this using the `Co-registration` function (MNI = reference, population average = source, other = any results/data you want to move to MNI).
 
 
 ## **Write Normalised**
@@ -152,7 +152,7 @@ From here we need to select `SPM` :material-arrow-right-bold: `Tools` :material-
 The optimal value for FWHM depends on many things, but one of the main ones is the accuracy with which the images can be registered.
 If spatial normalisation (inter-subject alignment to some reference space) is done using a simple model with fewer than a few thousand parameters, then more smoothing (eg about 12 mm FWHM) would be suggested.
 For more accurately aligned images, the amount of smoothing can be decreased.
-About 8mm may be suitable, but I don't much have empirical evidence to suggest appropriate values.
+About 8mm may be suitable, but there is not much empirical evidence to suggest appropriate values.
 The optimal value is likely to vary from region to region: lower for subcortical regions with less variability, and more for the highly variable cortex.
 
 <figure id="Fig:Processed" markdown>
