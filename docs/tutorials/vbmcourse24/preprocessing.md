@@ -49,8 +49,8 @@ First double click on volumes. This will open a file select box, where we will s
 Rather than selecting each file manually, you can speed this up using recursive search (shown above). At the end of the filter add `.nii` (to specify you want to look for all of the nifti files within the directories above) and then hit `Rec` (arrow). We will use this again later with other file specifiers. 
 
 You will now need to modify the following options (summarized in the next figure):  
-- `Save bias corrected` :material-arrow-right-bold: `Save bias corrected` (for making group average brain to project results on later).  
-- `Native tissue` :material-arrow-right-bold: `Native and Dartel imported` for tissue classes 1-3  
+- `Save INU corrected` :material-arrow-right-bold: `Save INU corrected` (for making group average brain to project results on later).  
+- `Native tissue` :material-arrow-right-bold: `Native and imported` for tissue classes 1-3  
 - `Native tissue` :material-arrow-right-bold: `None` for tissue classes 4-6
 
 ![](../../assets/figures/tutorials/vbm_spm_course_2024/preprocessing_segment_batch_2.png)
