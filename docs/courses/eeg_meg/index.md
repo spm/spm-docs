@@ -10,7 +10,5 @@ The course is suitable for both beginners and more advanced users. We advise stu
 
     ---
 
-    7th-10th May 2024, **online** only. 
-
-    <div style="text-align: right"><u>*[Click here to register.](https://onlinestore.ucl.ac.uk/conferences-and-events/faculty-of-brain-sciences-c07/ucl-institute-of-neurology-d07/d07-statistical-parametric-mapping-for-megeeg-2024)*</u></div>
+    Our next course will take place in May 2025. More details will be announced soon. 
 </div>
