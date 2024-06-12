@@ -11,7 +11,7 @@ repo_name: spm/spm
 edit_uri: https://github.com/spm/spm-docs/blob/main/docs/
 
 # Copyright
-copyright: Copyright &copy; 1991 - 2023 SPM Team and Collaborators
+copyright: Copyright &copy; 1991 - 2024 SPM Team and Collaborators
 
 # Configuration
 theme:
@@ -146,6 +146,7 @@ nav:
       - 'DAiSS':
         - 'Overview of DAiSS': 'tutorials/daiss/index.md'
         - 'Beamforming: MEGIN/Elekta/Neuromag': 'tutorials/daiss/beamforming/neuromag/index.md'
+        - 'Beamforming: OPM':                   'tutorials/daiss/beamforming/opm/index.md'
         - 'Beamforming: Simulated Data':       'tutorials/daiss/beamforming/simulated/index.md'
   - 'Courses':
     - 'courses/index.md'
