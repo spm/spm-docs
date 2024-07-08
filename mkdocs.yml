@@ -160,7 +160,7 @@ nav:
       - 'Datasets':                           'courses/fmri_vbm/mri_datasets.md'
       - 'Preparatory materials':              'courses/fmri_vbm/preparatory_materials.md'
       - 'Learning objectives':                'courses/fmri_vbm/learning_objectives.md'
-      - 'Lecture recordings':
+      - 'Lecture recordings':                 'courses/fmri_vbm/recordings/index.md'
         - 'Spatial preprocessing':            'courses/fmri_vbm/recordings/preprocessing.md'
         - 'General linear model':             'courses/fmri_vbm/recordings/glm.md'
         - 'Contrasts & classical inference':  'courses/fmri_vbm/recordings/contrasts_classical_inference.md'
