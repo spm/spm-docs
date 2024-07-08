@@ -20,9 +20,9 @@ where $C$ is the covariance matrix of the sensor level recordings, and $l$ is a 
 
 ### The challenges of beamforming OPM data
 
-The M in OPM stands magnetometer, meaning that unlike the gradiometers seen in CTF and Elekta systems more environmental interference is not rejected on acquisition. A lot more pre-processing than (for example) CTF-MEG data will be applied to remove this interference prior to analysis. Denoising methods designed for OPMs such as [Homogenous Field Correction (HFC)](https://doi.org/10.1016/j.neuroimage.2021.118484) and [Adaptive Multipole Modelling (AMM)](https://doi.org/10.1002/hbm.26596) leave the data rank deficient (i.e. there are fewer components in the data than number of recordings). 
+The M in OPM stands magnetometer, meaning that unlike the gradiometers seen in CTF and Elekta systems more environmental interference is not rejected on acquisition. A lot more pre-processing than (for example) CTF-MEG data will be applied to remove this interference prior to analysis. Denoising methods designed for OPMs such as [Homogeneous Field Correction (HFC)](https://doi.org/10.1016/j.neuroimage.2021.118484) and [Adaptive Multipole Modelling (AMM)](https://doi.org/10.1002/hbm.26596) leave the data rank deficient (i.e. there are fewer components in the data than number of recordings). 
 
-If we look at the data covariance $C$ for an OPM recording which has had the homogenous fields and linear gradients projected out with HFC, we can see the rank deficiency in the eigenspectrum below. We see the final 8 singular values are several orders of magnitude smaller than the rest the values. In this case it represents the 3 homogenous field components and 5 linear gradients projected out of the data.
+If we look at the data covariance $C$ for an OPM recording which has had the homogeneous fields and linear gradients projected out with HFC, we can see the rank deficiency in the eigenspectrum below. We see the final 8 singular values are several orders of magnitude smaller than the rest the values. In this case it represents the 3 homogeneous field components and 5 linear gradients projected out of the data.
 
  <figure>
         <div class="center">
@@ -71,7 +71,7 @@ If this has successfully run then a 3D plot of the sensor/anatomy registration s
 
 ### Denoising with HFC
 
-We employ [Homogenous Field Correction (HFC)](https://doi.org/10.1016/j.neuroimage.2021.118484) to project out any data which which has the spatial topography of a homogenous field or a linear gradient across the sensors, as these topographies are assumed to originate from sources far away from the brain.
+We employ [Homogeneous Field Correction (HFC)](https://doi.org/10.1016/j.neuroimage.2021.118484) to project out any data which which has the spatial topography of a homogeneous field or a linear gradient across the sensors, as these topographies are assumed to originate from sources far away from the brain.
 
 ```matlab
 
@@ -162,7 +162,7 @@ If the `visualise` option is set to 1 then you should see the eigenspectrum of t
 ??? failure "Help! The rank has not be estimated correctly!"
     This can occasionally happen if extra denoising steps (such as ICA) have been applied to the data, as the projection out of those components may not make its respective singular value drop to the same extent as HFC or AMM. 
 
-    However we can manually specifiy the rank of the data. Instead of `clifftrunc` use the `mantrunc` option
+    However we can manually specify the rank of the data. Instead of `clifftrunc` use the `mantrunc` option
 
     ```matlab
     S.reg = 'mantrunc';
