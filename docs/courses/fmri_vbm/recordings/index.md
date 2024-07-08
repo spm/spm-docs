@@ -12,7 +12,7 @@ Our SPM courses include both lectures and interactive workshops. We make videos 
 - [Experimental design](./experimental_design.md)
 - [Event-related fMRI](./event_related_fmri.md)
 - [Bayesian inference](./bayesian_inference.md)
-- [Introduction to DCM](./dcm_introduction.md')
+- [Introduction to DCM](./dcm_introduction.md)
 - [DCM: Testing hypotheses](./dcm_hypothesis_testing.md)
 
 ## Older recordings
