@@ -27,34 +27,6 @@ During installation, you can accept most defaults. There are three options to be
 ![line ending conversions](../assets/figures/git_windows_eol.png){ width="45%" }
 ![default behavior of `git pull`](../assets/figures/git_windows_rebase.png){ width="45%" }
 
-If you do not have the administrative permissions to install Git as described above, try and install [64-bit Git for Windows Portable](https://git-scm.com/download/win) to `C:\wtcnapps\` and add the directory containing `git.exe` to the `Path` environment variable for your account.
-
-<!--
-TortoiseGit is another graphical interface for Git on Windows:
-
-* [TortoiseGit](https://tortoisegit.org/)
--->
-
-<!--
-
-It is also recommended to install the Visual Studio Code text editor and WinMerge:
-
-* [Visual Studio Code](https://code.visualstudio.com/)
-* [WinMerge](https://winmerge.org/)
-
-### Visual Studio Code Extensions
-
-Visual Studio Code has a native support of Git:
-
-* [Git Support in Visual Studio Code](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)
-
-but some extra extensions are worth considering for MATLAB development:
-
-* [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
-* [MATLAB](https://marketplace.visualstudio.com/items?itemName=Gimly81.matlab)
-* [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
-
--->
 
 ## Git Configuration
 
@@ -114,8 +86,6 @@ Pull with rebase will fail if you have unstaged changes. One way around this if 
 ```
 git config --global rebase.autoStash true
 ```
-
-This is equivalent to using `git fetch` followed by `git rebase --autostash` (or `git stash`, `git pull`, `git stash pop`).
 
 As before, to apply this setting from GitHub Desktop, you need to open the command prompt by selecting ++"Repository"++ then ++"Open in Command Prompt"++ from the top menu and enter the above command line.
 

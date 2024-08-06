@@ -52,6 +52,30 @@ S.positions = 'positions.tsv';
 D =spm_opm_create(S);
 ```
 
+## MAG4Health 
+MAG4Health also uses the existing  `.fif` format  and can take advantage of existing fileio available in SPM.
+
+```matlab
+S = [];
+S.data = 'raw.fif';
+D =spm_opm_create(S);
+```
+
+The channel types may not be listed correctly in the file. If so we can manually set the channel type with SPM. This sets all channels to the type `MEGMAG`
+
+```matlab
+D = chantype(D,1:size(D,1),'MEGMAG');
+D.save();
+```
+
+Currently, the second tangential axis of these sensors has a higher noise floor than the other 2. We can identify and mark these channels as bad using he following code. 
+
+```matlab
+badinds = D.selectchannels('regexp_(.*tang2$)');
+D = badchannels(D,[badinds],1);
+D.save();
+```
+
 ## Neuro-1
 The Neuro-1 system developed by QuSpin currently records data in `.lvm` files. just as with the other data files we can provide additional metadata in the form of `.tsv` and .json files 
 
