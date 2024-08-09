@@ -50,5 +50,5 @@ function [R1,...] = spm_fcn(P1,...)
 
 ```
 ## Dependencies
-SPM is designed to be as designed to rely on as few extra toolboxes as possible. As such we advise against including code that is not available in base matlab. There is an exception to this rule for M/EEG development as SPM bundles fieldtrip with in its distribution so developers may call fieldtrip funcitons. 
+SPM is designed to be as designed to rely on as few extra toolboxes as possible. As such we advise against including code that is not available in base MATLAB. There is an exception to this rule for M/EEG development as SPM bundles Fieldtrip with in its distribution, so developers may call Fieldtrip functions. 
  
