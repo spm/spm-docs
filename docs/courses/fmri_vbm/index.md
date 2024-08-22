@@ -5,7 +5,9 @@
 
     ---
 
-    Our next course will take place online in October. More details will be announced soon. 
+    14th-16th October 2024, **online**.
+    
+    [To register, follow this link.](https://onlinestore.ucl.ac.uk/conferences-and-events/faculty-of-brain-sciences-c07/ucl-institute-of-neurology-d07/d07-statistical-parametric-mapping-for-fmri-mrivbm-oct-2024). 
 </div>
 
 !!! info inline end "Course recordings"
