@@ -1,4 +1,4 @@
-# SPM Course - fMRI & VBM
+# SPM Course - fMRI & VBM - 14th-16th October 2024
 
 !!! info "Overview"
 
@@ -73,6 +73,6 @@ Joining in requires a Zoom account, you can quickly [sign up here](https://zoom.
 | 10:55 - 11:40     | [Introduction to DCM](./recordings/dcm_introduction.md)             | [Dr Edda Bilek](https://www.zi-mannheim.de/en/research/people/person/5186.html)|
 | *Lunch*                                                                        	   |
 | 12:40 - 13:40	    | [DCM: Testing hypotheses](./recordings/dcm_hypothesis_testing.md)  	      | [Dr Peter Zeidman](https://peterzeidman.co.uk) |
-| 13:40 - 14:20	    | Q&A clinic            	      | SPM faculty                            |
+| 13:40 - 14:20	    | Q&A clinic            	      | [Prof Karl Friston](https://www.fil.ion.ucl.ac.uk/~karl/) & SPM faculty                            |
 | *Break*	                                                                                   |
-| 14:50 - 17:20     | Practical session III	          | [Prof Karl Friston](https://www.fil.ion.ucl.ac.uk/~karl/) & SPM faculty                            |
+| 14:50 - 17:20     | Practical session III	          | SPM faculty                            |
