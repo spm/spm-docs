@@ -1,8 +1,34 @@
 # SPM Course - fMRI & VBM
 
+!!! info "Overview"
+
+    This is the programme of the 2025 online [SPM course for fMRI and VBM](./index.md). The course consists of lectures and practical workshops where you will be guided through analyses of different neuroimaging datasets. The course covers:
+    - Experimental design
+    - Preprocessing neuroimaging data
+    - Quantifying structural changes in the brain (Voxel-Based Morphometry, VBM)
+    - Quantifying brain function (using the General Linear Model, GLM)
+    - Statistics for neuroimaging (frequentist and Bayesian)
+    - Connectivity analysis (Dynamic Causal Modelling, DCM)
+
 ## Course programme
 
-This is the programme of the 2025 online [SPM course for fMRI and VBM](./index.md). The course will consist of lectures and practical workshops where attendees will be guided through analyses of different neuroimaging datasets. To give you a taste of the course content, recordings of past course talks are linked on the programme. 
+All times are local **London** (United Kingdom) time (**BST**).
+
+The course will take place on **Zoom**. We will send you an email with instructions on how to join in (or see below). 
+
+Each lecture will be streamed at the indicated time. Recordings are also available on-demand through the links in the programme below.
+
+Each lecture will be followed by some **time for questions** from the audience and a **short break** before the next lecture.
+
+Questions can be asked at any time during the lectures using Slack or the chat window: we will aim at answering them at the end of each lecture or during one of the Q&A sessions.
+
+Please do not share the link to this webpage publicly as it contains information for the participants of the course only (Zoom login).
+
+Zoom Meeting link: 
+Zoom Meeting ID: 
+Zoom Meeting Passcode: 
+
+Joining in requires a Zoom account, you can quickly [sign up here](https://zoom.us/signup) if you don't already have an account. Make sure to use the most up-to-date version of Zoom, you might have to update ahead of the course.
 
 ### Day 1
 
@@ -49,4 +75,4 @@ This is the programme of the 2025 online [SPM course for fMRI and VBM](./index.m
 | 12:40 - 13:40	    | [DCM: Testing hypotheses](./recordings/dcm_hypothesis_testing.md)  	      | [Dr Peter Zeidman](https://peterzeidman.co.uk) |
 | 13:40 - 14:20	    | Q&A clinic            	      | SPM faculty                            |
 | *Break*	                                                                                   |
-| 14:50 - 17:20     | Practical session III	          | SPM faculty                            |
+| 14:50 - 17:20     | Practical session III	          | [Prof Karl Friston](https://www.fil.ion.ucl.ac.uk/~karl/) & SPM faculty                            |
