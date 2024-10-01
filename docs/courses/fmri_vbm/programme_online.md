@@ -2,7 +2,9 @@
 
 !!! info "Overview"
 
-    This is the programme of the 2025 online [SPM course for fMRI and VBM](./index.md). The course consists of lectures and practical workshops where you will be guided through analyses of different neuroimaging datasets. The course covers:
+    This is the programme of the 2025 online [SPM course for fMRI and VBM](./index.md). The course consists of lectures and practical workshops where you will be guided through analyses of different neuroimaging datasets. 
+    
+    The course covers:
 
     * Experimental design
 
@@ -30,7 +32,7 @@ Questions can be asked at any time during the lectures using Slack or the chat w
 
 Please do not share the link to this webpage publicly as it contains information for the participants of the course only (Zoom login).
 
-!!! note ""
+!!! info ""
     Zoom Meeting link: TBC
 
     Zoom Meeting ID: TBC
