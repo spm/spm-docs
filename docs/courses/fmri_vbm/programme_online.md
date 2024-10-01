@@ -3,12 +3,18 @@
 !!! info "Overview"
 
     This is the programme of the 2025 online [SPM course for fMRI and VBM](./index.md). The course consists of lectures and practical workshops where you will be guided through analyses of different neuroimaging datasets. The course covers:
-    - Experimental design
-    - Preprocessing neuroimaging data
-    - Quantifying structural changes in the brain (Voxel-Based Morphometry, VBM)
-    - Quantifying brain function (using the General Linear Model, GLM)
-    - Statistics for neuroimaging (frequentist and Bayesian)
-    - Connectivity analysis (Dynamic Causal Modelling, DCM)
+
+    * Experimental design
+
+    * Preprocessing neuroimaging data
+    
+    * Quantifying structural changes in the brain (Voxel-Based Morphometry, VBM)
+
+    * Quantifying brain function (using the General Linear Model, GLM)
+    
+    * Statistics for neuroimaging (frequentist and Bayesian)
+    
+    * Connectivity analysis (Dynamic Causal Modelling, DCM)
 
 ## Course programme
 
@@ -24,6 +30,7 @@ Questions can be asked at any time during the lectures using Slack or the chat w
 
 Please do not share the link to this webpage publicly as it contains information for the participants of the course only (Zoom login).
 
+!!! note ""
     Zoom Meeting link: TBC
 
     Zoom Meeting ID: TBC
