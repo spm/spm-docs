@@ -292,6 +292,9 @@ processed as following:
   *SPM:material-arrow-right-bold:Tools:material-arrow-right-bold:Dartel Tools:material-arrow-right-bold:Run Dartel
   (create Templates)* in order to generate a series of templates and a
   flow field for each subject.
+  Previous steps processed each subject's data individually, but this stage requires
+  imported data for all subjects in a study to be processed together.
+  The idea is to align all subject's data to the average anatomy of the study population.
 
 In principle (for a random effects model), you could run the first level
 analysis using the native space data of each subject. All you need are
