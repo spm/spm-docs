@@ -34,11 +34,11 @@ Please do not share the link to this webpage publicly as it contains information
 
 !!! info ""
     
-    Zoom Meeting link: [https://ucl.zoom.us/j/95164914953?pwd=aCpY2Ie42Q9nbmaxcvpbvN5yrgeGRY.1](https://ucl.zoom.us/j/95164914953?pwd=aCpY2Ie42Q9nbmaxcvpbvN5yrgeGRY.1)
+    *Zoom Meeting link*: [https://ucl.zoom.us/j/95164914953?pwd=aCpY2Ie42Q9nbmaxcvpbvN5yrgeGRY.1](https://ucl.zoom.us/j/95164914953?pwd=aCpY2Ie42Q9nbmaxcvpbvN5yrgeGRY.1)
     
-    Zoom Meeting ID: 951 6491 4953
+    *Zoom Meeting ID*: 951 6491 4953
 
-    Zoom Meeting Passcode: SPM2024
+    *Zoom Meeting Passcode*: SPM2024
 
 Joining in requires a Zoom account, you can quickly [sign up here](https://zoom.us/signup) if you don't already have an account. Make sure to use the most up-to-date version of Zoom, you might have to update ahead of the course.
 
