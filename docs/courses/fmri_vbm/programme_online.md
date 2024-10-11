@@ -28,16 +28,16 @@ Each lecture will be streamed at the indicated time. Recordings are also availab
 
 Each lecture will be followed by some **time for questions** from the audience and a **short break** before the next lecture.
 
-Questions can be asked at any time during the lectures using Slack or the chat window: we will aim at answering them at the end of each lecture or during one of the Q&A sessions.
+Questions can be asked at any time during the lectures using [Slack](https://join.slack.com/t/spmcoursefmri-put5820/shared_invite/zt-2sdquk69e-o9yanUUmytwbmvshZpPBxQ) or the Q&A window within Zoom: we will aim at answering them at the end of each lecture or during one of the Q&A sessions.
 
 Please do not share the link to this webpage publicly as it contains information for the participants of the course only (Zoom login).
 
 !!! info ""
-    Zoom Meeting link: TBC
+    Zoom Meeting link: [https://ucl.zoom.us/j/95164914953?pwd=aCpY2Ie42Q9nbmaxcvpbvN5yrgeGRY.1](https://ucl.zoom.us/j/95164914953?pwd=aCpY2Ie42Q9nbmaxcvpbvN5yrgeGRY.1)
+    
+    Zoom Meeting ID: 951 6491 4953
 
-    Zoom Meeting ID: TBC
-
-    Zoom Meeting Passcode: TBC
+    Zoom Meeting Passcode: SPM2024
 
 Joining in requires a Zoom account, you can quickly [sign up here](https://zoom.us/signup) if you don't already have an account. Make sure to use the most up-to-date version of Zoom, you might have to update ahead of the course.
 
