@@ -42,7 +42,7 @@ Please do not share the link to this webpage publicly as it contains information
 
 Joining in requires a Zoom account, you can quickly [sign up here](https://zoom.us/signup) if you don't already have an account. Make sure to use the most up-to-date version of Zoom, you might have to update ahead of the course.
 
-### Day 1
+### Monday 14th October
 
 | Time              | Title                           | Faculty                                |
 | ----------------- | ------------------------------- | -------------------------------------- |
@@ -59,7 +59,7 @@ Joining in requires a Zoom account, you can quickly [sign up here](https://zoom.
 | 15:20 - 17:20     | Practical session I	          | SPM faculty                            |
 
 
-### Day 2
+### Tuesday 15th October
 
 
 | Time              | Title                           | Faculty                                |
@@ -76,7 +76,7 @@ Joining in requires a Zoom account, you can quickly [sign up here](https://zoom.
 | 15:20 - 17:20     | Practical session II	          | SPM faculty                            |
 
 
-### Day 3
+### Wednesday 16th October
 
 | Time              | Title                           | Faculty                                |
 | ----------------- | ------------------------------- | -------------------------------------- |
