@@ -47,7 +47,7 @@ Joining in requires a Zoom account, you can quickly [sign up here](https://zoom.
 | Time              | Title                           | Faculty                                |
 | ----------------- | ------------------------------- | -------------------------------------- |
 | 09:30 - 09:45     | Welcome                                                             |
-| 09:45 - 10:00     | Introduction & overview         |	[Dr Peter Zeidman](https://peterzeidman.co.uk) & [Dr Olivia Kowalczyk](https://oliviakowalczyk.co.uk/) |
+| 09:45 - 10:00     | Introduction & overview         |	[Prof Peter Zeidman](https://peterzeidman.co.uk) & [Dr Olivia Kowalczyk](https://oliviakowalczyk.co.uk/) |
 | 10:00 - 11:05     | [Spatial preprocessing](./recordings/preprocessing.md)	          | [Prof John Ashburner](https://www.fil.ion.ucl.ac.uk/~john/) |
 | *Break*                                                                               |
 | 11:25 - 11:50     | [The general linear model](./recordings/glm.md)	      | [Dr Nadège Corbin](https://scholar.google.com/citations?user=TjIzldkAAAAJ&hl=fr) |
@@ -84,7 +84,7 @@ Joining in requires a Zoom account, you can quickly [sign up here](https://zoom.
 | 09:35 - 10:55     | [Bayesian inference](./recordings/bayesian_inference.md)              | [Prof Chris Mathys](https://chrismathys.com/)  |
 | 10:55 - 11:40     | [Introduction to DCM](./recordings/dcm_introduction.md)             | [Dr Edda Bilek](https://www.zi-mannheim.de/en/research/people/person/5186.html)|
 | *Lunch*                                                                        	   |
-| 12:40 - 13:40	    | [DCM: Testing hypotheses](./recordings/dcm_hypothesis_testing.md)  	      | [Dr Peter Zeidman](https://peterzeidman.co.uk) |
+| 12:40 - 13:40	    | [DCM: Testing hypotheses](./recordings/dcm_hypothesis_testing.md)  	      | [Prof Peter Zeidman](https://peterzeidman.co.uk) |
 | 13:40 - 14:20	    | Q&A clinic            	      | [Prof Karl Friston](https://www.fil.ion.ucl.ac.uk/~karl/) & SPM faculty                            |
 | *Break*	                                                                                   |
 | 14:50 - 17:20     | Practical session III	          | SPM faculty                            |
