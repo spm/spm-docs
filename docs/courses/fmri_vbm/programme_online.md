@@ -65,11 +65,11 @@ Joining in requires a Zoom account, you can quickly [sign up here](https://zoom.
 | Time              | Title                           | Faculty                                |
 | ----------------- | ------------------------------- | -------------------------------------- |
 | 09:30 - 09:35     | Welcome                                                                  |
-| 09:35 - 10:25     | [Experimental design](./recordings/experimental_design.md)             | [Dr Carolin Moessnang](https://www.zi-mannheim.de/en/research/people/person/6741.html) |
+| 09:35 - 10:25     | [Experimental design](./recordings/experimental_design.md)             | [Prof Carolin Moessnang](https://www.zi-mannheim.de/en/research/people/person/6741.html) |
 | *Break*               	                                                           |
 | 10:40 - 11:50     | [Event-related fMRI](./recordings/event_related_fmri.md) 	          | [Dr Sonia Medina](https://medicine.exeter.ac.uk/clinical-biomedical/people/profile/index.php?web_id=Sonia_Medina) |
 | *Lunch*                                                                        	   |
-| 12:50 - 13:35     | [Group level analysis](./recordings/group_analysis.md)            | [Dr Emma Holmes](https://emmaholmes.co.uk) |
+| 12:50 - 13:35     | [Group level analysis](./recordings/group_analysis.md)            | [Prof Emma Holmes](https://emmaholmes.co.uk) |
 | 13:35 - 14:10     | [Random field theory](./recordings/random_field_theory.md)             | [Prof Tom Nichols](https://www.bdi.ox.ac.uk/Team/t-e-nichols) |
 | 14:10 - 14:50	    | Q&A clinic            	      | SPM faculty                            |
 | *Break*	                                                                                   |
