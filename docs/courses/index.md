@@ -20,8 +20,11 @@ We are delighted to welcome visitors to our SPM courses every May and October. T
 
     ---
 
-    October 2024, **online**. 
-    More details will be announced soon. 
+    April 2025, **in-person**.
+
+    October 2025, **online**.
+
+    More details will be announced soon.  
     
 </div>
 

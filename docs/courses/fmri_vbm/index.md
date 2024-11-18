@@ -5,7 +5,9 @@
 
     ---
 
-    Our next course will take place online in October. More details will be announced soon. 
+    14th-16th October 2024, **registration closed**.
+
+    The next SPM for fMRI/VBM courses will be in-person in London in April 2025 and online in October 2025. Details will be provided in due course.
 </div>
 
 !!! info inline end "Course recordings"

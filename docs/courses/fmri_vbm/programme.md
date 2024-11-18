@@ -2,14 +2,14 @@
 
 ## Course programme
 
-This is a draft programme of the upcoming in-person [SPM course for fMRI and VBM](./index.md). The course will consist of lectures and practical workshops where attendees will be guided through analyses of different neuroimaging datasets. To give you a taste of the course content, recordings of past course talks are linked on the programme. 
+This is a sample programme of the [SPM course for fMRI and VBM](./index.md). The course will consist of lectures and practical workshops where attendees will be guided through analyses of different neuroimaging datasets. To give you a taste of the course content, recordings of past course talks are linked on the programme. 
 
 ### Day 1
 
 | Time              | Title                           | Faculty                                |
 | ----------------- | ------------------------------- | -------------------------------------- |
 | 08:45 - 09:00     | Registration                                                             |
-| 09:00 - 09:15     | Introduction & overview         |	[Dr Peter Zeidman](https://peterzeidman.co.uk) & [Dr Olivia Kowalczyk](https://oliviakowalczyk.co.uk/) |
+| 09:00 - 09:15     | Introduction & overview         |	[Prof Peter Zeidman](https://peterzeidman.co.uk) & [Dr Olivia Kowalczyk](https://oliviakowalczyk.co.uk/) |
 | 09:15 - 10:00     | [Spatial preprocessing](./recordings/preprocessing.md)	          | [Prof John Ashburner](https://www.fil.ion.ucl.ac.uk/~john/) |
 | 10:00 - 10:20     | [The general linear model](./recordings/glm.md)	      | [Dr Nadège Corbin](https://scholar.google.com/citations?user=TjIzldkAAAAJ&hl=fr) |
 | *Tea & coffee*                                                                               |
@@ -40,10 +40,10 @@ This is a draft programme of the upcoming in-person [SPM course for fMRI and VBM
 | Time              | Title                           | Faculty                                |
 | ----------------- | ------------------------------- | -------------------------------------- |
 | 09:15 - 10:00     | [Bayesian inference](./recordings/bayesian_inference.md)              | [Prof Chris Mathys](https://chrismathys.com/)  |
-| 10:00 - 10:20     | Introduction to connectivity    | [Dr Peter Zeidman](https://peterzeidman.co.uk) |
+| 10:00 - 10:20     | Introduction to connectivity    | [Prof Peter Zeidman](https://peterzeidman.co.uk) |
 | *Tea & coffee*                                                                        	   |
 | 10:50 - 11:35     | [Introduction to DCM](./recordings/dcm_introduction.md)             | [Dr Edda Bilek](https://www.zi-mannheim.de/en/research/people/person/5186.html)|
-| 11:35 - 12:20	    | [DCM: Testing hypotheses](./recordings/dcm_hypothesis_testing.md)  	      | [Dr Peter Zeidman](https://peterzeidman.co.uk) |
+| 11:35 - 12:20	    | [DCM: Testing hypotheses](./recordings/dcm_hypothesis_testing.md)  	      | [Prof Peter Zeidman](https://peterzeidman.co.uk) |
 | 12:20 - 13:00	    | Q&A clinic            	      | SPM faculty                            |
 | *Lunch*	                                                                                   |
 | 14:00 - 17:00     | Practical session III	          | SPM faculty                            |

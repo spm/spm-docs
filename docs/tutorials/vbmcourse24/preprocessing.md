@@ -129,7 +129,7 @@ Importantly, this process estimates a population average template. This is a typ
 This step uses the resulting `y_rc1` files (deformation fields), to generate smoothed, spatially normalised and Jacobian scaled grey matter images in MNI space.
 From here we need to select `SPM` :material-arrow-right-bold: `Tools` :material-arrow-right-bold: `Shoot tools` :material-arrow-right-bold: `Write normalised`
 
-* **Shoot Template**: Select the final template image created in the previous step.  This is usually called Template\_4.nii.  This template is registered to MNI space (affine transform), allowing the transformations to be combined so that all the individual spatially normalised scans can also be brought into MNI space.
+* **Shoot Template**: Select the final template image created in the previous step.  This is usually called Template\_4.nii and can be found in the first subject's directory.  This template is registered to MNI space (affine transform), allowing the transformations to be combined so that all the individual spatially normalised scans can also be brought into MNI space.
 
 * **Select according to**: Choose **Many Subjects**, as this allows all deformation fields to be selected at once, and then all grey matter images to be selected at once.
 
@@ -149,11 +149,12 @@ From here we need to select `SPM` :material-arrow-right-bold: `Tools` :material-
 
 * **Gaussian FWHM**: Specify the size of the Gaussian (in mm) for smoothing the processed data by.  This is typically between about 4mm and 12mm.  Use 6mm for now.
 
-The optimal value for FWHM depends on many things, but one of the main ones is the accuracy with which the images can be registered.
-If spatial normalisation (inter-subject alignment to some reference space) is done using a simple model with fewer than a few thousand parameters, then more smoothing (eg about 12 mm FWHM) would be suggested.
-For more accurately aligned images, the amount of smoothing can be decreased.
-About 8mm may be suitable, but there is not much empirical evidence to suggest appropriate values.
-The optimal value is likely to vary from region to region: lower for subcortical regions with less variability, and more for the highly variable cortex.
+??? info "How much to smooth?"
+    The optimal value for FWHM depends on many things, but one of the main ones is the accuracy with which the images can be registered.
+    If spatial normalisation (inter-subject alignment to some reference space) is done using a simple model with fewer than a few thousand parameters, then more smoothing (e.g. about 12 mm FWHM) would be suggested.
+    For more accurately aligned images, the amount of smoothing can be decreased.
+    About 8mm may be suitable, but there is not much empirical evidence to suggest appropriate values.
+    The optimal value is likely to vary from region to region: lower for subcortical regions with less variability, and more for the highly variable cortex.
 
 <figure id="Fig:Processed" markdown>
 ![](../../assets/figures/tutorials/vbm/vbm-Processed14.png){width=50%}
