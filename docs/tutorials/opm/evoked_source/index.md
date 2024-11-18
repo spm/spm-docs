@@ -59,16 +59,17 @@ When we do not have an MRI for a participant we can register the MNI template sc
 
 <figure markdown>
   <div class="center">
-    <img src="../../../assets/figures/opm/coreg_template.png" style="width:160mm" />
+    <img src="../../../assets/figures/opm/coreg_template_new.png" style="width:160mm" />
   </div>
 </figure>
 
 Before we run the coregistration code we need to mark a number of fiducial points on our meshes. We will need to mark 
 
-1. 3 points on the helmet file (`S.helmetref`). 
-2. 3 corresponding points on the mesh with the head and helmet present (`S.headhelmetref`).
-3. 3 points on the head shape mesh (`S.headfid`).
-4. 3 point on the corresponding mesh file with the head and helmet present (`S.headhelmetfid`).
+1. 3 points on the helmet file (`S.helmetref1`). 
+2. 3 corresponding points on the mesh with the head and helmet present (`S.headhelmetref1`).
+3. 3 points on the head shape mesh (`S.headref2`).
+4. 3 point on the corresponding mesh file with the head and helmet present (`S.headhelmetref2`).
+5. 3 fiducial points, should be in order nas - lpa - rpa (`S.fiducials`).
 
 
 To mark these points we can use [`spm_mesh_selct`](https://www.fil.ion.ucl.ac.uk/spm/docs/tutorials/opm/coreg/#manually-marking-fiducials-on-meshes).
@@ -79,32 +80,37 @@ S = [];
 S.D = eD;
 S.headfile = 'head.obj';
 
- S.helmetref = ...
-[0,133.9,-24;...     %point 1 
--114,30.5,-61;...    %point 2
-116,29,-59];         %point 3
+ S.helmetref1 = ...
+[0,133.9,-24;...   % point 1 
+-114,30.5,-61;...  % point 2
+116,29,-59];       % point 3
 
-S.headhelmetref = ...
-[77,-23,608;...    %point 1
-31,90,715;...      %point 2
-26,-141,692];      %point 3
+S.headhelmetref2 = ...
+[77,-23,608;...    % point 1
+31,90,715;...      % point 2
+26,-141,692];      % point 3
 
-S.headfid = ...
+S.headref2 = ...
+[105, -60, 530.6;... % point 4
+120.2, -10, 503.8;...     % point 5
+122.3, 44.7, 533.5];      % point 6 
+
+S.headhelmetref2 = ... 
+[29.8, -66.5, 670.6;...   % point 4
+40.8, -19.4, 653.9;... % point 5
+37.7, 32.7, 689];         % point 6
+
+S.fiducials = ... 
 [111.626,-9,504;... % nas
 97, 54, 551;...     % lpa
-84, -67, 548];      % rpa 
-
-S.headhelmetfid = ... 
-[33,-22.6,654;...   % nas
-14.7, 38.9, 699;... % lpa
-5,-82,693];         %rpa
+84, -67, 548];      % rpa
 
 cD = spm_opm_opreg(S);
 ```
 
 <figure markdown>
   <div class="center">
-    <img src="../../../assets/figures/opm/coreg.png" style="width:160mm" />
+    <img src="../../../assets/figures/opm/coreg_new.png" style="width:160mm" />
   </div>
   <figcaption>Template Coregistration</figcaption>
 </figure>
@@ -170,7 +176,7 @@ The output, by default, is in MNI space and  you can now view the result in your
 
 <figure markdown>
   <div class="center">
-    <img src="../../../assets/figures/opm/source_evoked_t.png" style="width:160mm" />
+    <img src="../../../assets/figures/opm/source_evoked_t_new.png" style="width:160mm" />
   </div>
   <figcaption>Source level evoked response</figcaption>
 </figure>
@@ -229,33 +235,39 @@ S = [];
 S.D = eD;
 S.headfile = 'head.obj';
 
- S.helmetref = ...
-[0,133.9,-24;...   %nas
--114,30.5,-61;...    %lpa
-116,29,-59];      %rpa
+ S.helmetref1 = ...
+[0,133.9,-24;...   % point 1 
+-114,30.5,-61;...  % point 2
+116,29,-59];       % point 3
 
-S.headhelmetref = ...
-[77,-23,608;...   %nas
-31,90,715;...    %lpa
-26,-141,692];      %rpa
+S.headhelmetref2 = ...
+[77,-23,608;...    % point 1
+31,90,715;...      % point 2
+26,-141,692];      % point 3
 
-S.headfid = ...
+S.headref2 = ...
+[105, -60, 530.6;... % point 4
+120.2, -10, 503.8;...     % point 5
+122.3, 44.7, 533.5];      % point 6 
+
+S.headhelmetref2 = ... 
+[29.8, -66.5, 670.6;...   % point 4
+40.8, -19.4, 653.9;... % point 5
+37.7, 32.7, 689];         % point 6
+
+S.fiducials = ... 
 [111.626,-9,504;... % nas
-97, 54, 551;...% lpa
-84, -67, 548];    % rpa 
+97, 54, 551;...     % lpa
+84, -67, 548];      % rpa
 
-S.headhelmetfid = ... 
-[33,-22.6,654;... % nas
-14.7, 38.9, 699;...% lpa
-5,-82,693];   %rpa
-eD = spm_opm_opreg(S);
+cD = spm_opm_opreg(S);
 
 % daiss data setup
 %--------------------------------------------------------------------------
 bfDir = 'C:\Users\path\to\folder';
 
 S = [];
-S.D = fname(eD);
+S.D = fname(cD);
 S.dir = bfDir;
 S.space = 'Head';
 [BF] = bf_wizard_data(S);
@@ -295,4 +307,3 @@ bf_stat_evoked_t(S);
 ```
 
 --8<-- "addons/abbreviations.md"
-s
