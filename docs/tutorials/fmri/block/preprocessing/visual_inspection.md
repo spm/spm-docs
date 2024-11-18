@@ -59,7 +59,7 @@ Browse through the image using your mouse or arrow keys. The crosshair will help
 
     * abnormalities in the tissues (often showing as bright or dark spots where there shouldn't be any).
 
-    Although initially, checking your data visually might seem daunting, you will notice that with practice you will quickly pick up this skill. [mrishark.com](http://www.mrishark.com/brain.html) has a rich repository of MRI data with various [scanner-related artefacts](http://www.mrishark.com/artifact.html) and [pathologies](http://www.mrishark.com/brain2.html) which can be a helpful resource when learning to distinguish between good and poor quality data. 
+    Although initially, checking your data visually might seem daunting, you will notice that with practice you will quickly pick up this skill. 
 
 ### Video walk-through 
 ![type:video](../../../../assets/videos/inspecting_anatomical_data.mp4)
