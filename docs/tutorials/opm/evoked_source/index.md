@@ -59,7 +59,7 @@ When we do not have an MRI for a participant we can register the MNI template sc
 
 <figure markdown>
   <div class="center">
-    <img src="../../../assets/figures/opm/coreg_template_new.png" style="width:160mm" />
+    <img src="../../../assets/figures/opm/coreg_template_new.PNG" style="width:160mm" />
   </div>
 </figure>
 
@@ -110,7 +110,7 @@ cD = spm_opm_opreg(S);
 
 <figure markdown>
   <div class="center">
-    <img src="../../../assets/figures/opm/coreg_new.png" style="width:160mm" />
+    <img src="../../../assets/figures/opm/coreg_new.PNG" style="width:160mm" />
   </div>
   <figcaption>Template Coregistration</figcaption>
 </figure>
