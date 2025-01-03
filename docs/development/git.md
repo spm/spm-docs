@@ -4,7 +4,7 @@ We use the [Git](https://git-scm.com/) version control system for the developmen
 
 We provide here instructions to interact with the SPM repository using the [GitHub Desktop](https://desktop.github.com/). This mainly concerns Windows developers -- we also mention the command line equivalents when relevant. For Linux users, [additional steps](https://www.fil.ion.ucl.ac.uk/spm/docs/development/ssh_authentication/) are required to enable SSH authentication.
 
-##  Git Installation
+## Git Installation
 
 First, please install the GitHub Desktop:
 
@@ -26,7 +26,6 @@ During installation, you can accept most defaults. There are three options to be
 ![PATH environment](../assets/figures/git_windows_cmd.png){ width="45%" }
 ![line ending conversions](../assets/figures/git_windows_eol.png){ width="45%" }
 ![default behavior of `git pull`](../assets/figures/git_windows_rebase.png){ width="45%" }
-
 
 ## Git Configuration
 
@@ -81,7 +80,7 @@ To apply this setting from GitHub Desktop, you need to open the command prompt b
 
 ### Git autostash
 
-Pull with rebase will fail if you have unstaged changes. One way around this if you're not ready to commit your changes is to stash the changed before doing a pull (`git stash`) and then restore then (`git stash pop`) afterwards. This can be automated by using the `autostash` option of `git rebase`.
+Pull with rebase will fail if you have unstaged changes. One way around this if you're not ready to commit your changes is to stash the changes before doing a pull (`git stash`) and then restore them (`git stash pop`) afterwards. This can be automated by using the `autostash` option of `git rebase`.
 
 ```
 git config --global rebase.autoStash true
