@@ -5,112 +5,64 @@
 !!! note "What is Standalone SPM?"
     A standalone SPM is a version of SPM that has been compiled using the [MATLAB Compiler](https://www.mathworks.com/products/compiler.html) so that it does not require the availability of a MATLAB licence (you might want to check first [here](https://www.mathworks.com/academia/tah-support-program/eligibility.html) whether you have access to a MATLAB campus license).
 
-A standalone version of SPM is [available for download from the SPM
-website](https://www.fil.ion.ucl.ac.uk/spm/software/download/) (select
-`SPM Standalone` as `SPM Version`).
+- The **MATLAB Runtime**: it contains a set of libraries that enables the execution of compiled MATLAB applications. The version has to match the one that was used to compile SPM.
+- The **SPM Standalone** itself containing the compiled SPM, as a ZIP file.
 
 ## Installation
 
-Following your request, you will be given instructions to download the
-following components:
+1. Download the spm standalone ZIP file from the newest [GitHub release](https://github.com/spm/spm/releases/latest/) for your OS
 
-- The **MATLAB Runtime**: it contains a set of libraries that enables
-  the execution of compiled MATLAB applications. You need to install the
-  one that corresponds to your platform (Windows, Linux or macOS) and to
-  the version that was used to compile SPM. The default SPM standalone
-  requires the MATLAB Compiler Runtime (MCR) 7.13 of MATLAB R2010a
-  available from the `MCR` folder from the link you will have been
-  given. Otherwise more recent MATLAB Runtimes are downloadable from
-  [here](https://www.mathworks.com/products/compiler/matlab-runtime.html).
-- The **SPM Standalone** itself containing the compiled SPM, as a ZIP
-  file.
+2. Unzip `spm_standalone_<version>_<OS>.zip` in a folder of your choice, such as `C:\Users\login\Documents\MATLAB\spm_standalone`
 
-### Installation of the MATLAB Runtime
+3. Install the MATLAB Runtime via the provided installer in the ZIP file under `runtime_installer`. It will install the minimal MATLAB Runtime that is required to run SPM (~2.5GB). This can be optionally performed without a GUI via the command line with e.g.:
 
-You need to do this operation only once, even if you use several
-versions of standalone SPM.
+    ```bash
+    chmod 755 runtime_installer/Runtime_R2024b_for_spm_standalone_24.11.install
+    runtime_installer/Runtime_R2024b_for_spm_standalone_24.11.install -agreeToLicense yes
+    ```
 
-Run the MCRInstaller executable you downloaded and follow the
-instructions.
+### First Run
 
-Windows installation requires to have administrative privileges and you
-might also have to install the Visual C++ Redistributable Package
-(`vcredist_*.exe`), that can be found in the same folder as the
-MCRInstaller. We also recommend you restart Windows at this point.
-
-If you run into problems, or want to learn more, see:
-
-- <https://www.mathworks.com/help/compiler/install-the-matlab-runtime.html>
-
-To install the MCR on Linux from the command line, type:
-
-```
-chmod 755 MCRInstaller.bin
-./MCRInstaller.bin -P bean421.installLocation="MCR" -silent
-```
-
-### Installation of the SPM Standalone
-
-- Unzip the `spm12_rxxx.zip` archive containing the SPM Standalone in an
-  appropriate folder. It contains a number of small executables for each
-  supported platform and a large `spm12.ctf` file containing the
-  compiled version of SPM12 itself.
-
-- The first time the standalone application will be executed, the CTF
-  file will be unpacked in a subfolder so if you installed the CTF in a
-  folder that requires administrative permission for write access, you
-  should execute the application once under those privileges -- see
-  below.
-
-- On `macOS`, you also need to unzip the `spm12_maci64.zip` archive.
+- The first time the standalone application will be executed, the CTF file will be unpacked in a subfolder so if you installed the CTF in a folder that requires administrative permission for write access, you should execute the application once under those privileges -- see below.
 
 ## Usage
 
 To start SPM graphical user interface:
 
-- on Windows: double-click on `spm12_wxx.exe`
-- on Linux, type
+=== "Windows"
 
-```
-./run_spm12.sh /usr/local/MATLAB/MATLAB_Compiler_Runtime/v713/
-```
+    Double-click on `spmxx.exe`
 
-where the argument is the path to your MCR installation.
+=== "Linux/macOS"
 
-- on macOS, type
+    Type in bash:
 
-```
-./run_spm12.sh /Applications/MATLAB/MATLAB_Compiler_Runtime/v713/
-```
+    ```bash
+    ./run_spmxx.sh /usr/local/MATLAB/MATLAB_Runtime/<matlab_version>/
+    ```
 
-where the argument is the path to your MCR installation.
+    where the argument is the path to your Matlab Runtime installation. On macOS this might be under `/Applications/MATLAB/MATLAB_Runtime/<matlab_version>/`
 
-The first execution should take longer to start as the CTF file will be
-unpacked. When installing SPM system-wide, you should do the first
-unpacker execution as root, i.e.
+    The first execution should take longer to start as the CTF file will be unpacked. When installing SPM system-wide, you should do the first unpacker execution as root, i.e.
 
-```
-./run_spm12.sh /usr/local/MATLAB/MATLAB_Compiler_Runtime/v713/ quit
-```
+    ```bash
+    ./run_spmxx.sh /usr/local/MATLAB/MATLAB_Runtime/<matlab_version>/ quit
+    ```
 
-On Linux/Mac, you can edit the Shell script `run_spm12.sh` to hardcode the
-location of the MCR installation, thus removing the need of providing it
-on the command line.
+    For more conveniently running SPM, you can create an alias in `~/.bashrc` or edit the Shell script `run_spmxx.sh` to hardcode the location of the MCR installation, thus removing the need of providing it on the command line.
 
-The other arguments that can be used are the modality (as in `spm
-fmri`) or the keyword `batch` to start directly the batch system
-window, e.g.:
 
-```
-./run_spm12.sh /Applications/MATLAB/MATLAB_Compiler_Runtime/v713/ fmri
-./run_spm12.sh /Applications/MATLAB/MATLAB_Compiler_Runtime/v713/ batch
+When run via the command line, other arguments that can be used are the modality (as in `spm fmri`) or the keyword `batch` to start directly the batch system window, e.g.:
+
+```bash
+./run_spmxx.sh /Applications/MATLAB/MATLAB_Runtime/<matlab_version>/ fmri
+./run_spmxx.sh /Applications/MATLAB/MATLAB_Runtime/<matlab_version>/ batch
 ```
 
-Furthermore, `batch` followed by a batch filename (`*.mat` or
-`*.m`) will start SPM, execute the batch and quit:
+Furthermore, `batch` followed by a batch filename (`*.mat` or `*.m`) will start SPM, execute the batch and quit:
 
-```
-./run_spm12.sh /Applications/MATLAB/MATLAB_Compiler_Runtime/v713/ batch mybatch.mat
+```bash
+./run_spmxx.sh /Applications/MATLAB/MATLAB_Compiler_Runtime/<matlab_version>/ batch mybatch.mat
 ```
 
 ## Troubleshooting
@@ -125,7 +77,7 @@ Furthermore, `batch` followed by a batch filename (`*.mat` or
 
 !!! failure "What to do if I get the error `readlink: illegal option -- f` on a Mac?"
 
-    Change the last line of `run_spm12.sh` so that it reads:
+    Change the last line of `run_spmxx.sh` so that it reads:
     ```
     dirname $0`/${MACAPP}spm12_${MWE_ARCH} $*
     ```
@@ -169,7 +121,7 @@ Furthermore, `batch` followed by a batch filename (`*.mat` or
 
 !!! failure "Why does standalone SPM crash when starting the GUI?"
 
-    This is discussed [here](../development/compilation/linux.md) and can be fixed by adding the following in `run_spm12.sh`:
+    This is discussed [here](../development/compilation/linux.md) and can be fixed by adding the following in `run_spmxx.sh`:
     ```
     SPM_HTML_BROWSER=0
     ```
@@ -189,6 +141,8 @@ Furthermore, `batch` followed by a batch filename (`*.mat` or
     Have a look at `config/spm_make_standalone.m` and `spm_standalone.m` in your SPM installation.
 
     Open MATLAB, at the command line, addpath the SPM directory (if not done already), run `spm_jobman('initcfg')`, then run `spm_make_standalone`. The compilation process takes several minutes. By default, the newly compiled standalone SPM will be saved in a `standalone` directory.
+
+    The [GitHub release action](https://github.com/spm/spm/blob/main/.github/workflows/release.yml) might also be an interesting reference.
 
 !!! question "How to create a shortcut on your Desktop for a faster launch?"
 
