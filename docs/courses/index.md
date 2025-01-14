@@ -20,7 +20,7 @@ We are delighted to welcome visitors to our SPM courses every May and October. T
 
     ---
 
-    April 2025, **in-person**. | [Registration is now open.](https://onlinestore.ucl.ac.uk/conferences-and-events/faculty-of-brain-sciences-c07/ucl-institute-of-neurology-d07/d07-statistical-parametric-mapping-for-fmri-mrivbm-april-2025)
+    23-25 April 2025, **in-person**. | [Registration is now open.](https://onlinestore.ucl.ac.uk/conferences-and-events/faculty-of-brain-sciences-c07/ucl-institute-of-neurology-d07/d07-statistical-parametric-mapping-for-fmri-mrivbm-april-2025)
 
     October 2025, **online**. | More details will be announced soon.  
     
