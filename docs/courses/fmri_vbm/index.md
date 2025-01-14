@@ -5,10 +5,10 @@
 
     ---
 
-    14th-16th October 2024, **registration closed**.
+    April 2025, **in-person**. | [Registration is now open.](https://onlinestore.ucl.ac.uk/conferences-and-events/faculty-of-brain-sciences-c07/ucl-institute-of-neurology-d07/d07-statistical-parametric-mapping-for-fmri-mrivbm-april-2025)
 
-    The next SPM for fMRI/VBM courses will be in-person in London in April 2025 and online in October 2025. Details will be provided in due course.
-</div>
+    October 2025, **online**. | More details will be announced soon.
+    </div>
 
 !!! info inline end "Course recordings"
     Select topics from the menu to view recordings from a previous fMRI & VBM course.
