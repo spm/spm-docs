@@ -3,7 +3,7 @@
 !!! info "Prerequisites"
     The SPM software is a collection of [MATLAB](https://www.mathworks.com/products/matlab.html) functions and thus requires the MATLAB (or GNU Octave) software to be installed on your computer in order to run. SPM requires only core MATLAB to run (no special toolboxes are required - unless stated otherwise).
 
-    Each SPM version was written for a particular MATLAB version and will not work with earlier versions. MATLAB versions released after SPM can have some peculiarities but SPM developers try to provide compatibility fixes in the updates.
+    SPM is tested against MATLAB 2020a and newer but may work with earlier versions.
 
 ## Installation
 

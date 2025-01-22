@@ -10,7 +10,7 @@
 
 ## Installation
 
-1. Download the spm standalone ZIP file from the newest [GitHub release](https://github.com/spm/spm/releases/latest/) for your OS
+1. Download the SPM Standalone ZIP file from the newest [GitHub release](https://github.com/spm/spm/releases/latest/) for your OS
 
 2. Unzip `spm_standalone_<version>_<OS>.zip` in a folder of your choice, such as `C:\Users\login\Documents\MATLAB\spm_standalone`
 
