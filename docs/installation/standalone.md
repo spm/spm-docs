@@ -3,18 +3,20 @@
 ## Introduction
 
 !!! note "What is Standalone SPM?"
-    A standalone SPM is a version of SPM that has been compiled using the [MATLAB Compiler](https://www.mathworks.com/products/compiler.html) so that it does not require the availability of a MATLAB licence (you might want to check first [here](https://www.mathworks.com/academia/tah-support-program/eligibility.html) whether you have access to a MATLAB campus license).
+    Standalone SPM is a version of SPM that has been compiled using the [MATLAB Compiler](https://www.mathworks.com/products/compiler.html) so that it does not require a MATLAB licence (you might want to check first [here](https://www.mathworks.com/academia/tah-support-program/eligibility.html) whether you have access to a MATLAB campus license).
 
-- The **MATLAB Runtime**: it contains a set of libraries that enables the execution of compiled MATLAB applications. The version has to match the one that was used to compile SPM.
+The download contains:
+
+- The **MATLAB Runtime**: a set of libraries that enables the execution of compiled MATLAB applications. The version has to match the one that was used to compile SPM.
 - The **SPM Standalone** itself containing the compiled SPM, as a ZIP file.
 
 ## Installation
 
 1. Download the SPM Standalone ZIP file from the newest [GitHub release](https://github.com/spm/spm/releases/latest/) for your OS
 
-2. Unzip `spm_standalone_<version>_<OS>.zip` in a folder of your choice, such as `C:\Users\login\Documents\MATLAB\spm_standalone`
+2. Unzip `spm_standalone_<version>_<OS>.zip` in a folder of your choice, such as `C:\Users\login\Documents\spm_standalone`
 
-3. Install the MATLAB Runtime via the provided installer in the ZIP file under `runtime_installer`. It will install the minimal MATLAB Runtime that is required to run SPM (~2.5GB). This can be optionally performed without a GUI via the command line with e.g.:
+3. Install the MATLAB Runtime via the provided installer in the ZIP file under `runtime_installer`. It will install the minimal MATLAB Runtime that is required to run SPM (~2.5GB). This can be optionally performed without a GUI via the command line, e.g. on Linux/Mac:
 
     ```bash
     chmod 755 runtime_installer/Runtime_R2024b_for_spm_standalone_24.11.install
