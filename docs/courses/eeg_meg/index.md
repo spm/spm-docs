@@ -6,7 +6,7 @@ The course is suitable for both beginners and more advanced users. We advise stu
 
 <div class="grid cards" markdown>
 
-- :material-laptop:{ .lg .middle } Upcoming course
+- :material-laptop:{ .lg .middle } [Upcoming course](./programme.md)
 
     ---
 
