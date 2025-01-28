@@ -46,7 +46,31 @@
         savepath % if you want to save the current MATLAB path
         ```
 
-    ??? info "MEX file validation issues"
+    ??? info "MEX file validation issues (Apple Silicon)"
+        If you have **validation issues** with MEX files with one of these errors:
+
+        ```
+        "*.mexmaca64" cannot be opened because the developer cannot be verified.
+        macOS cannot verify that this app is free from malware
+        ```
+        or:
+        ```
+        Code signature not valid for use in process using Library Validation: library load disallowed by system policy
+        ```
+        Open a Terminal, `cd` to the SPM directory and type:
+
+        ```
+        find . -name "*.mexmaca64" -exec xattr -d com.apple.quarantine {} \;
+        ```
+
+        If it doesn't work, please try this equivalent alternative, replacing `SPM_PATH` with the path of your SPM installation:
+
+        ```
+        sudo xattr -r -d com.apple.quarantine SPM_PATH
+        sudo find SPM_PATH -name "*.mexmaca64" -exec spctl --add {} \;
+        ```
+        
+    ??? info "MEX file validation issues (Intel Mac)"
         If you have **validation issues** with MEX files with one of these errors:
 
         ```
