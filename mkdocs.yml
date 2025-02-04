@@ -206,6 +206,7 @@ nav:
     - 'Testing':      'development/testing.md'
     - 'Compilation':  'development/compilation/index.md'
     - 'Versioning':   'development/versioning.md'
+    - 'Release':      'development/release.md'
 
 markdown_extensions:
   - abbr

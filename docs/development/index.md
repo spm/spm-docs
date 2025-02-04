@@ -31,3 +31,9 @@ Platform-specific instructions to compile SPM MEX files are provided in the link
 !!! tip "MEX Compilation"
 
     [Compilation of MEX files](compilation/index.md)
+
+## Release Process
+
+!!! tip "Release"
+
+    [Triggering a new Release](release.md)
