@@ -1,4 +1,4 @@
-# SPM Courses' code of conduct
+# SPM code of conduct
 
 ## Why do we have a code of conduct?
 We believe our spaces, both online and physical, should be free from harassment, bullying or hate. Our spaces should be safe for all those using them, and everyone who participates in an event has a responsibility to help us achieve this.
