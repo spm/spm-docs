@@ -29,7 +29,7 @@ This is a sample programme of the [SPM course for fMRI and VBM](./index.md). The
 | *Comfort break*               	                                                           |
 | 10:15 - 11:00     | [Event-related fMRI](./recordings/event_related_fmri.md) 	          | [Dr Anjali Bhat](https://www.anjalibhat.org) |
 | *Tea & coffee*                                                                        	   |
-| 11:30 - 12:00     | [Group level analysis](./recordings/group_analysis.md)            | [Dr Nadine Dijkstra](https://sites.google.com/view/nadinedijkstra) |
+| 11:30 - 12:00     | [Group level analysis](./recordings/group_analysis.md)            | [Prof Emma Holmes](https://emmaholmes.co.uk) |
 | 12:00 - 13:00	    | Q&A clinic            	      | SPM faculty                            |
 | *Lunch*	                                                                                   |
 | 14:00 - 17:00     | Practical session II	          | SPM faculty                            |
