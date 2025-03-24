@@ -33,7 +33,7 @@ This is a sample programme of the [SPM course for fMRI and VBM](./index.md). The
 | 12:00 - 13:00	    | Q&A clinic            	      | SPM faculty                            |
 | *Lunch*	                                                                                   |
 | 14:00 - 17:00     | Practical session II	          | SPM faculty                            |
-
+| *Social event* |
 
 ### Day 3
 
