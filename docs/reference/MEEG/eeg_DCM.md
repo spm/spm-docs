@@ -371,7 +371,7 @@ are not sure. Then click on "Data" and in the box below click on "New:
 Subject". Click on "Subject" and in the box below on "New: Session".
 Click on models and in the selection window that comes up select the DCM
 mat files for all the models (remember the order in which you select the
-files as this is necessary for interpretating the results). Then run the
+files as this is necessary for interpreting the results). Then run the
 model comparison by pressing the green "Run" button. You will see, at
 the top, a bar plot of the log-model evidences for all models. At the
 bottom, you will see the probability, for each model, that it produced

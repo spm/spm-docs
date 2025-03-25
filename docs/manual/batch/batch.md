@@ -51,7 +51,7 @@ data-reference="Chap:data:faces">[Chap:data:faces]</a>). To follow this
 tutorial, it is not necessary to download the example dataset, except
 for the last step (entering subject dependent data).
 
-To create a batch which can be re-used for multiple subjects in this
+To create a batch which can be reused for multiple subjects in this
 study, it is necessary to collect/define
 
 - study specific input data (e.g. MRI measurement parameters, time
@@ -120,7 +120,7 @@ necessary:
 
 - Results report (`SPM > Stats > Results Report`)
 
-Note that this examplar analysis pipeline is ancient and the
+Note that this exemplar analysis pipeline is ancient and the
 `SPM > Tools > Old Segment` and
 `SPM > Tools > Old Normalise > Old Normalise: Write` modules could be
 replaced by a single `SPM > Spatial > Normalise: Estimate & Write` one.

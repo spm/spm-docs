@@ -13,7 +13,7 @@ DAiSS is composed of a series of blocks which allow the users to import their da
 
 1. **Data:** imports preprocessed data from SPM into the DAiSS pipeline, and sets whether we want to work in MNI space or the subjects native space. 
 2. **Sources:** Sets how the source space will be defined, either by using the canonical/individual mesh, a volumetric grid or some other cases. This module also calculates the dipole models for each source.
-3. **Features:** Generates and regularises feature matricies (such as a data covariance matrix) in preparation for source inversion.
+3. **Features:** Generates and regularises feature matrices (such as a data covariance matrix) in preparation for source inversion.
 4. **Inverse:** performs the source inversion (whether that is beamformer or MNE etc) and generates the weights vectors for virtual electrode calculation.
 5. **Output:** generates summary images about features in the data (e.g. power or coherence between brain and EMG recording) or allows the user to specify which regions of interest to export as virtual electrodes.
 6. **Write:** write out NIFTIs/GIFTIs/SPM MEEG datasets.

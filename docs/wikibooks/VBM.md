@@ -265,7 +265,7 @@ segmentation. The seg1 and seg2 images are entered into the program, and
 the result is a brain\_\*.img, which has values of 1 for brain, and 0
 for non-brain. The resulting brain\_\*.img is used to remove a few
 misclassified voxels from the \*\_seg1.img file. This is done using
-ImCalc, selecting the seg1\_, seg2\_, seg3\_, abd brain\_ images,
+ImCalc, selecting the seg1\_, seg2\_, seg3\_, and brain\_ images,
 entering an output filename, and the following expression:
 
 `       `*`i1.*i4./(i1+i2+i3+eps)`*

@@ -1616,7 +1616,7 @@ Press the `Batch` button and then:
   list and set the `Deformation fields` to `Forward`.
 
 - Add a `Spatial` :material-arrow-right-bold: `Normalise` :material-arrow-right-bold: `Normalise: Write` 
-  module, make a `New: Subject`, and for the `Deformation Feild`, select a
+  module, make a `New: Subject`, and for the `Deformation Field`, select a
   `Dependency` of the `Segment: Forward Deformations` (from the prior
   segmentation module). For the "Images to Write", select a `Dependency`
   on the `Coreg: Estimate: Coregistered Images` (which will be all the

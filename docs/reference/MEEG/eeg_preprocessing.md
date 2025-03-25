@@ -330,7 +330,7 @@ of 'Prepare', see below).
 The "Channel types" submenu allows reviewing and changing the channel
 types. Use the "Review" option to examine the presently set channel
 types. During conversion, SPM will make an informed *guess* at the
-correct channel types but this can sometimes go wrong, especiallly for
+correct channel types but this can sometimes go wrong, especially for
 EEG data. To set a particular channel group to some channel type, select
 this type from the menu. A list of all channels will appear. Select the
 subset whose type you would like to set. `Ctrl` and `Shift` buttons can
@@ -1486,7 +1486,7 @@ which, when run, repeats the analysis. The script can also be obtained
 by directly calling the function `spm_eeg_history`.  
   
 Of course, this script can not only be used to repeat an analysis, but
-the script can also be seen as a template that can be re-used for other
+the script can also be seen as a template that can be reused for other
 analyses. One needs minimal MATLAB knowledge for these changes. For
 example, you can replace the filenames to preprocess a different
 subject. Or you can change parameters and then re-run the analysis. We

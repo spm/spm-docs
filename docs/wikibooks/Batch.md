@@ -23,7 +23,7 @@ Any batch script should follow the template:
 
 ## Batch Script for SPM8
 
-SPM12\'s advices also apply to SPM8.
+SPM12\'s advice also apply to SPM8.
 
 The Batch Scripts for SPM5 below can also be used in SPM8.
 

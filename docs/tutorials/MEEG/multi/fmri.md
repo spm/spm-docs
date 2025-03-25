@@ -236,7 +236,7 @@ condition (averaged across 9 runs).
 Now we have a new set of 16$\times$<!-- -->3 NIfTI images for each
 subject and each condition, we can put them into the same
 repeated-measures ANOVA that we used to test for differences in power
-across sensors in the time-frequency analysis above, i.e, re-use the
+across sensors in the time-frequency analysis above, i.e, reuse the
 `batch_stats_rmANOVA_job.m` file created above. This can be scripted as:
 
 ```matlab

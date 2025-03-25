@@ -451,7 +451,7 @@ The result of this should be a dataset written out labelled `MRapMcbdspmeeg_run_
 
 ### Visualising conditional differences
 
-How you process the end reults after this is down to you, but to quickly visualise the time-series differences between the three conditions, you can load in the dataset and take a subject average.
+How you process the end results after this is down to you, but to quickly visualise the time-series differences between the three conditions, you can load in the dataset and take a subject average.
 
 ```matlab
 
