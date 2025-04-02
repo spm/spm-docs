@@ -32,18 +32,15 @@ please note that when using the development version of SPM the release string wi
 If you use the development version of SPM you will need to be able to uniquely identify what version of SPM that you are using. This is important when you either write papers or share code with others. By way of example let's say you were using the development version that was available on the 18th of February 2025. To uniquely identify this version of SPM you must first locate the commit associated with the version you are using. This can easily be done by pressing the commits button in the repository 
 
 <figure markdown>
-  <div class="center">
-    <img src="../assets/figures/development/commit.png" />
-  </div>
+![Commit](../assets/figures/development/commit.png)
+	
 </figure>
 
 When you press this button you will be redirected to the list of commits over time. Hovering your mouse over the two  angular brackets next to the appropriate commit will allow you to explore the repository at that point in time. 
 
 
 <figure markdown>
-  <div class="center">
-    <img src="../assets/figures/development/browse.png" />
-  </div>
+  ![Commit](../assets/figures/development/browse.png)
 </figure>
 
 When you click on these brackets you will be redirected to the repository at that point in time. You can now 
@@ -54,9 +51,7 @@ When you click on these brackets you will be redirected to the repository at tha
 
 
 <figure markdown>
-  <div class="center">
-    <img src="../assets/figures/development/download.png" />
-  </div>
+ ![Commit](../assets/figures/development/download.png)
 </figure>
 
 You should now have the correct code for your project and a link that you can share in scripts or in papers. An example of what you might put in a script is given below. 
