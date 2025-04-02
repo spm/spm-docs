@@ -26,3 +26,43 @@ where v is the version and r is the release. For convenience, to return the vers
 ```Matlab 
 spm('version')
 ```
+please note that when using the development version of SPM the release string will be 00.00
+
+## Uniquely identifying the development version of SPM 
+If you use the development version of SPM you will need to be able to uniquely identify what version of SPM that you are using. This is important when you either write papers or share code with others. By way of example let's say you were using the development version that was available on the 18th of February 2025. To uniquely identify this version of SPM you must first locate the commit associated with the version you are using. This can easily be done by pressing the commits button in the repository 
+
+<figure markdown>
+  <div class="center">
+    <img src="../assets/figures/development/commit.png" />
+  </div>
+</figure>
+
+When you press this button you will be redirected to the list of commits over time. Hovering your mouse over the two  angular brackets next to the appropriate commit will allow you to explore the repository at that point in time. 
+
+
+<figure markdown>
+  <div class="center">
+    <img src="../assets/figures/development/browse.png" />
+  </div>
+</figure>
+
+When you click on these brackets you will be redirected to the repository at that point in time. You can now 
+
+1. Hover over the code button
+2. Click download ZIP
+3. Save the link to the repository 
+
+
+<figure markdown>
+  <div class="center">
+    <img src="../assets/figures/development/download.png" />
+  </div>
+</figure>
+
+You should now have the correct code for your project and a link that you can share in scripts or in papers. An example of what you might put in a script is given below. 
+
+
+```matlab
+% code runs with SPM development version
+% https://github.com/spm/spm/tree/94924bf0bed4656fb4ef5945f98cb0cf74eb51df
+```
