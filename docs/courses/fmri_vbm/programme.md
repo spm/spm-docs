@@ -8,7 +8,7 @@ This is a sample programme of the [SPM course for fMRI and VBM](./index.md). The
 
 | Time              | Title                           | Faculty                                |
 | ----------------- | ------------------------------- | -------------------------------------- |
-| 08:45 - 09:00     | Registration                                                             |
+| 08:30 - 09:00     | Registration                                                             |
 | 09:00 - 09:15     | Introduction & overview         |	[Prof Peter Zeidman](https://peterzeidman.co.uk) & [Dr Olivia Kowalczyk](https://oliviakowalczyk.co.uk/) |
 | 09:15 - 10:00     | [Spatial preprocessing](./recordings/preprocessing.md)	          | [Prof John Ashburner](https://www.fil.ion.ucl.ac.uk/~john/) |
 | 10:00 - 10:20     | [The general linear model](./recordings/glm.md)	      | [Dr Nadège Corbin](https://scholar.google.com/citations?user=TjIzldkAAAAJ&hl=fr) |
