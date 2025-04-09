@@ -55,7 +55,7 @@ This is a draft programme of the upcoming online [SPM course for EEG and MEG](./
 | ----------------- | ------------------------------- | -------------------------------------- |
 | 10:00 - 12:00     | 1on1 Sessions with Students                    | SPM faculty                         |
 | 12:00 - 13:15 (parallel)     | Beginners refresh - Practical session      | SPM faculty             |
-| 12:00 - 13:15 (parallel)    | [DCM for evoked responses - Practical session](x)      | [Dr Ashley Tyrer](https://www.au.dk/en/ashley.tyrer@cfin.au.dk) |
+| 12:00 - 13:15 (parallel)    | DCM for evoked responses - Practical session      | [Dr Ashley Tyrer](https://www.au.dk/en/ashley.tyrer@cfin.au.dk) |
 | *Break*                                                                               |
 | 14:00 - 15:00     | OP-MEG group meeting                      | [Dr Alberto Mariola](https://profiles.ucl.ac.uk/103112-pranay-yadav/about) |
 | 15:00 - 16:15     | [SPM-Python](https://github.com/spm/spm-python) | [Dr Johan Medrano](https://profiles.ucl.ac.uk/91185-johan-medrano) |
