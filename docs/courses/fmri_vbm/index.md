@@ -5,7 +5,7 @@
 
     ---
 
-    23-25 April 2025, **in-person**. | [Registration is closed.]
+    23-25 April 2025, **in-person**. | Registration is closed.
 
     October 2025, **online**. | More details will be announced soon.
     </div>
