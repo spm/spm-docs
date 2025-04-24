@@ -11,6 +11,7 @@ Index of the cell in D.inv where the inversion results are be stored.
 Specify sources to extract data from
 
     * **Source**   
+    .
 
         * **Source label** (enter text)  
         Label for the source channel in the output file

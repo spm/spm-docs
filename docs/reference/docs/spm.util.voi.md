@@ -35,21 +35,28 @@ Region(s) of Interest
         For Intermediate, enter the number of selected contrasts minus the number of effects under the Null.
 
         * **Threshold type** (choose from the menu)  
+        .
 
         * **Threshold** (enter text)  
+        .
 
         * **Extent (voxels)** (enter text)  
+        .
 
         * **Masking** (create a list of items)  
+        .
 
             * **Mask definition**   
+            .
 
                 * **Contrast** (enter text)  
                 Indices of contrast(s).
 
                 * **Uncorrected mask p-value** (enter text)  
+                .
 
                 * **Nature of mask** (choose from the menu)  
+                .
 
     * **Sphere**   
     Sphere.

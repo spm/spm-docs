@@ -5,8 +5,10 @@ Write out results
 Select BF.mat file.
 
 * **What to write out** (choose an option)  
+.
 
     * **GIfTI**   
+    .
 
         * **Global normalisation** (choose from the menu)  
         Normalise image values by the mean
@@ -18,6 +20,7 @@ Select BF.mat file.
         Visualise the outputs in the graphics window.
 
     * **NIfTI**   
+    .
 
         * **Global normalisation** (choose from the menu)  
         Normalise image values by the mean
@@ -26,6 +29,7 @@ Select BF.mat file.
         Specify image space
 
     * **SPM M/EEG dataset**   
+    .
 
         * **Writing mode** (choose from the menu)  
         How to generate the output
@@ -34,13 +38,16 @@ Select BF.mat file.
         What modality to output
 
         * **Extra channels to add** (choose an option)  
+        .
 
             * **None**   
+            .
 
             * **Channel selection** (create a list of items)  
             Channel selection.
 
                 * **All**   
+                .
 
                 * **Select channels by type** (choose from the menu)  
                 Select channels by type.
@@ -52,6 +59,7 @@ Select BF.mat file.
                 Enter a regular expression for matching multiple channel labels.
 
                 * **Channel file** (select files)  
+                .
 
         * **Filename Prefix** (enter text)  
         Specify the string to be prepended to the output (if relevant).

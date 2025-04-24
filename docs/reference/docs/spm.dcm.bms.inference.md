@@ -1,6 +1,8 @@
 # Model Inference  
 Bayesian Model Selection for Dynamic Causal Modelling (DCM) for fMRI or MEEG.
+.
 Input: DCM files (.mat) for each model, session and subject. Note that there must be identical numbers of models for all each sessions, and identical numbers of sessions for all subjects. 
+.
 Output: For the fixed effects analysis, the log-evidence for each model (relative to the worst model) is plotted in the graphics window, as well as the posterior probability for each model. In addition, the corresponding values are saved in the directory specified (BMS.mat). For the random effects analysis, the expected posterior probability and exceedance probability of each model (i.e. the probability that this model is more likely than any other model) are plotted in the graphics window, and the corresponding values are saved in the directory specified. If there are multiple sessions per subject, the random effects analysis operates on the subject-specific sums of log evidences across sessions.
 
 * **Directory** (select files)  
@@ -10,8 +12,10 @@ Select the directory where the files containing the results from BMS (BMS.mat) w
 Select the DCM_*.mat file for each model, session and subject.
 
     * **Subject** (create a list of items)  
+    .
 
         * **Session**   
+        .
 
             * **Models** (select files)  
             Select the DCM_*.mat file for each model. DCM_*.mat files (models) should be specified in the same order for each subject and session.

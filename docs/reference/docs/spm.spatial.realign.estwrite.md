@@ -1,6 +1,8 @@
 # Realign: Estimate & Reslice  
 Realign a time-series of images acquired from the same subject using a least squares approach and a 6 parameter (rigid body) spatial transformation.
+.
 The first image in the list specified by the user is used as a reference to which all subsequent scans are realigned. The reference scan does not have to be the first chronologically and it may be wise to chose a "representative scan" in this role.
+.
 The aim is primarily to remove movement artefact in fMRI and PET time-series (or more generally longitudinal studies). The headers are modified for each of the input images, such that. they reflect the relative orientations of the data. The details of the transformation are displayed in the results window as plots of translation and rotation. A set of realignment parameters are saved for each session, named rp_*.txt. After realignment, the images are resliced such that they match the first image selected voxel-for-voxel. The resliced images are named the same as the originals, except that they are prefixed by ``r``.
 
 * **Data** (create a list of items)  

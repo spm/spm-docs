@@ -5,6 +5,7 @@ M/EEG convolution modelling
 Channel selection.
 
     * **All**   
+    .
 
     * **Select channels by type** (choose from the menu)  
     Select channels by type.
@@ -16,6 +17,7 @@ Channel selection.
     Enter a regular expression for matching multiple channel labels.
 
     * **Channel file** (select files)  
+    .
 
 * **Timing parameters**   
 Timing parameters
@@ -49,6 +51,7 @@ The design matrix consists of one or more separable, session-specific partitions
             Choose the way to specify events for building regressors.
 
                 * **Specify manually**   
+                .
 
                     * **Onsets** (enter text)  
                     Specify a vector of onset times for this condition type. 
@@ -57,11 +60,14 @@ The design matrix consists of one or more separable, session-specific partitions
                     Specify the event durations. Epoch and event-related responses are modeled in exactly the same way but by specifying their different durations.  Events are specified with a duration of 0.  If you enter a single number for the durations it will be assumed that all trials conform to this duration. If you have multiple different durations, then the number must match the number of onset times.
 
                 * **Take from dataset** (create a list of items)  
+                .
 
                     * **Event**   
+                    .
 
             * **Time Modulation** (choose from the menu)  
             This option allows for the characterisation of linear or nonlinear time effects. For example, 1st order modulation would model the stick functions and a linear change of the stick function heights over time. Higher order modulation will introduce further columns that contain the stick functions scaled by time squared, time cubed etc.
+            .
             Interactions or response modulations can enter at two levels.  Firstly the stick function itself can be modulated by some parametric variate (this can be time or some trial-specific variate like reaction time) modeling the interaction between the trial and the variate or, secondly interactions among the trials themselves can be modeled using a Volterra series formulation that accommodates interactions over time (and therefore within and between trial types).
 
             * **Parametric Modulations** (create a list of items)  
@@ -69,6 +75,7 @@ The design matrix consists of one or more separable, session-specific partitions
 
                 * **Parameter**   
                 Model interactions with user specified parameters. This allows nonlinear effects relating to some other measure to be modelled in the design matrix.
+                .
                 Interactions or response modulations can enter at two levels.  Firstly the stick function itself can be modulated by some parametric variate (this can be time or some trial-specific variate like reaction time) modeling the interaction between the trial and the variate or, secondly interactions among the trials themselves can be modeled using a Volterra series formulation that accommodates interactions over time (and therefore within and between trial types).
 
                     * **Name** (enter text)  
@@ -85,11 +92,17 @@ The design matrix consists of one or more separable, session-specific partitions
 
     * **Multiple conditions** (select files)  
     Select the *.mat file containing details of your multiple experimental conditions. 
+    .
     If you have multiple conditions then entering the details a condition at a time is very inefficient. This option can be used to load all the required information in one go. You will first need to create a *.mat file containing the relevant information. 
+    .
     This *.mat file must include the following cell arrays (each 1 x n): names, onsets and durations. eg. names=cell(1,5), onsets=cell(1,5), durations=cell(1,5), then names{2}='SSent-DSpeak', onsets{2}=[3 5 19 222], durations{2}=[0 0 0 0], contain the required details of the second condition. These cell arrays may be made available by your stimulus delivery program, eg. COGENT. The duration vectors can contain a single entry if the durations are identical for all events. Optionally, a (1 x n) cell array named orth can also be included, with a 1 or 0 for each condition to indicate whether parameteric modulators should be orthogonalised.
+    .
     Time and Parametric effects can also be included. For time modulation include a cell array (1 x n) called tmod. It should have a have a single number in each cell. Unused cells may contain either a 0 or be left empty. The number specifies the order of time modulation from 0 = No Time Modulation to 6 = 6th Order Time Modulation. eg. tmod{3} = 1, modulates the 3rd condition by a linear time effect.
+    .
     For parametric modulation include a structure array, which is up to 1 x n in size, called pmod. n must be less than or equal to the number of cells in the names/onsets/durations cell arrays. The structure array pmod must have the fields: name, param and poly.  Each of these fields is in turn a cell array to allow the inclusion of one or more parametric effects per column of the design. The field name must be a cell array containing strings. The field param is a cell array containing a vector of parameters. Remember each parameter must be the same length as its corresponding onsets vector. The field poly is a cell array (for consistency) with each cell containing a single number specifying the order of the polynomial expansion from 1 to 6.
+    .
     Note that each condition is assigned its corresponding entry in the structure array (condition 1 parametric modulators are in pmod(1), condition 2 parametric modulators are in pmod(2), etc. Within a condition multiple parametric modulators are accessed via each fields cell arrays. So for condition 1, parametric modulator 1 would be defined in  pmod(1).name{1}, pmod(1).param{1}, and pmod(1).poly{1}. A second parametric modulator for condition 1 would be defined as pmod(1).name{2}, pmod(1).param{2} and pmod(1).poly{2}. If there was also a parametric modulator for condition 2, then remember the first modulator for that condition is in cell array 1: pmod(2).name{1}, pmod(2).param{1}, and pmod(2).poly{1}. If some, but not all conditions are parametrically modulated, then the non-modulated indices in the pmod structure can be left blank. For example, if conditions 1 and 3 but not condition 2 are modulated, then specify pmod(1) and pmod(3). Similarly, if conditions 1 and 2 are modulated but there are 3 conditions overall, it is only necessary for pmod to be a 1 x 2 structure array.
+    .
     EXAMPLE:
     Make an empty pmod structure: 
       pmod = struct('name',{''},'param',{},'poly',{});
@@ -104,6 +117,7 @@ The design matrix consists of one or more separable, session-specific partitions
       pmod(2).name{2}  = 'regressor2-2';
       pmod(2).param{2} = [2 4 6 8 10];
       pmod(2).poly{2}  = 1;
+    .
     The parametric modulator should be mean corrected if appropriate. Unused structure entries should have all fields left empty.
 
     * **Convolution regressors** (create a list of items)  
@@ -120,7 +134,9 @@ The design matrix consists of one or more separable, session-specific partitions
 
     * **Multiple convolution regressors** (select files)  
     Select the *.mat/*.txt file containing details of your multiple regressors. 
+    .
     If you have multiple regressors eg. realignment parameters, then entering the details a regressor at a time is very inefficient. This option can be used to load all the required information in one go. 
+    .
     You will first need to create a *.mat file containing a matrix R or a *.txt file containing the regressors. Each column of R will contain a different regressor. When SPM creates the design matrix the regressors will be named R1, R2, R3, ..etc.
 
     * **Regressors** (create a list of items)  
@@ -137,7 +153,9 @@ The design matrix consists of one or more separable, session-specific partitions
 
     * **Multiple regressors** (select files)  
     Select the *.mat/*.txt file containing details of your multiple regressors. 
+    .
     If you have multiple regressors eg. realignment parameters, then entering the details a regressor at a time is very inefficient. This option can be used to load all the required information in one go. 
+    .
     You will first need to create a *.mat file containing a matrix R or a *.txt file containing the regressors. Each column of R will contain a different regressor. When SPM creates the design matrix the regressors will be named R1, R2, R3, ..etc.
 
     * **Save regressor coefficients** (choose from the menu)  
@@ -176,6 +194,7 @@ Choose the basis set
 
 * **Model Interactions (Volterra)** (choose from the menu)  
 Generalized convolution of inputs (U) with basis set (bf).
+.
 For first order expansions the causes are simply convolved (e.g. stick functions) in U.u by the basis functions in bf to create a design matrix X.  For second order expansions new entries appear in ind, bf and name that correspond to the interaction among the original causes. The basis functions for these efects are two dimensional and are used to assemble the second order kernel. Second order effects are computed for only the first column of U.u.
 Interactions or response modulations can enter at two levels.  Firstly the stick function itself can be modulated by some parametric variate (this can be time or some trial-specific variate like reaction time) modeling the interaction between the trial and the variate or, secondly interactions among the trials themselves can be modeled using a Volterra series formulation that accommodates interactions over time (and therefore within and between trial types).
 

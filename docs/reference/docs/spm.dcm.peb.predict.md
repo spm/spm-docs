@@ -19,6 +19,7 @@ If each subject has multiple DCMs, select which DCM to use for this analysis (or
 
 * **Covariates** (choose an option)  
 Specify between-subjects effects (covariates). The covariates may be entered all at once as a design matrix or individually. Note that if performing bayesian model comparison, only the first covariate will be treated as being of experimental interest.
+.
 Each parameter in the estimated PEB model will represent the influence of a covariate on a connection. If none is set, only the group mean will be estimated.
 
     * **Specify design matrix**   
@@ -51,6 +52,7 @@ Each parameter in the estimated PEB model will represent the influence of a cova
 
 * **Fields** (choose an option)  
 Select the fields of the DCM to include in the model.
+.
 A- and B-matrix: Includes all A- and B- connections
 All: Includes all fields
 Enter manually: Enter a cell array e.g. {'A','C'}
@@ -66,6 +68,7 @@ Enter manually: Enter a cell array e.g. {'A','C'}
 
 * **Between-subjects variability**   
 Between-subjects variability over second-level parameters.
+.
 A multi-component model is used. Each component is a [p x p] precision matrix given p DCM parameters, where elements on the diagonal represent the precision (inverse variance) across subjects of each DCM connection. These precisions are set via the Within:between ratio, below. Each precision component is scaled by a hyper-parameter, which is estimated from the data. The prior expectation and uncertainty of these hyper-parameters are also set below.
 
     * **Precision components** (choose from the menu)  
@@ -78,6 +81,7 @@ A multi-component model is used. Each component is a [p x p] precision matrix gi
     * **Within:between ratio** (enter text)  
     Within:between variance ratio (M.beta). 
     This ratio controls the expected between-subjects variability for each connection (DCM parameter). The default is 16, meaning we expect the variability in connection strengths across subjects to be 1/16 of our uncertainty about connection strengths at the first level.
+    .
     Internally, the prior second level covariance of DCM parameters (M.pC) is set to DCM{1}.M.pC / M.beta, where DCM{1} is the first DCM provided.
 
     * **Expectation** (enter text)  
@@ -91,6 +95,7 @@ Priors on the expected values of the second level General Linear Model (GLM) par
 
     * **Group ratio** (enter text)  
     The group ratio (M.alpha) expresses our prior uncertainty about second-level (group level GLM) parameters. The default is 1, meaning our uncertainty about the connection strengths at the second level is the same as our uncertainty about the connection strengths at the first level. 
+    .
     Internally, the prior covariance of second level parameters is set to DCM{1}.M.pC / alpha, where DCM{1} is the first DCM provided.
 
 * **Estimation**   

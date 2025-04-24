@@ -1,5 +1,6 @@
 # Search nested PEB models  
 Optimises a PEB model by trying different combinations of switching off parameters (fixing them at their prior value), where doing so does not reduce the model evidence. Any parameters not contributing will be set to zero.
+.
 This is equivalent to the function of spm_dcm_post_hoc but on the second level (PEB) parameters.
 
 * **Select PEB file** (select files)  

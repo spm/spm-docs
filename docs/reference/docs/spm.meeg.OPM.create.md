@@ -26,6 +26,7 @@ Parameters for simulating OPM data. will be ignored if a dataset has already bee
     Scalp to sensor Distance, units are mm
 
     * **Number of samples** (enter text)  
+    .
 
 * **Source level info**   
 Input arguments necessary for performing source space analysis

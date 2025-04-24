@@ -11,11 +11,13 @@ Index of the cell in D.inv where the forward model can be found and the results 
 What conditions to include?
 
     * **All**   
+    .
 
     * **Conditions** (create a list of items)  
     Specify the labels of the conditions to be included in the inversion
 
         * **Condition label** (enter text)  
+        .
 
 * **Fit current dipole (in volume conductor) or magnetic dipole (in free space) ** (choose from the menu)  
 Fitting field due to an electrical current within the head or a coil (magnetic dipole) outside of the head ?

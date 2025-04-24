@@ -8,8 +8,10 @@ Select the M/EEG mat file.
 choose between using standard and robust averaging.
 
     * **Standard**   
+    .
 
     * **Robust**   
+    .
 
         * **Offset of the weighting function** (enter text)  
         Parameter determining the how far the values should be from the median, 
