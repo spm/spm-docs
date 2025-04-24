@@ -5,27 +5,27 @@ Statistical inference.
 Select the SPM.mat file that contains the design specification.  
 
 * **Contrasts** (create a list of items)  
-.  
+  
 
     * **Contrast query**   
-    .  
+      
 
         * **Results Title** (enter text)  
         Heading on results page - determined automatically if left empty  
 
         * **Contrast(s)** (enter text)  
         Index of contrast(s). If more than one number is entered, analyse a conjunction hypothesis.  
-        .  
+          
         If only one number is entered, and this number is "Inf", then results are printed for all contrasts found in the SPM.mat file.  
 
         * **Threshold type** (choose from the menu)  
-        .  
+          
 
         * **Threshold** (enter text)  
-        .  
+          
 
         * **Extent (voxels)** (enter text)  
-        .  
+          
 
         * **Conjunction number** (enter text)  
         Conjunction number. Unused if a simple contrast is entered.  
@@ -34,7 +34,7 @@ Select the SPM.mat file that contains the design specification.
         For Intermediate, enter the number of selected contrasts minus the number of effects under the Null.  
 
         * **Masking** (choose an option)  
-        .  
+          
 
             * **None**   
             No masking.  
@@ -46,19 +46,19 @@ Select the SPM.mat file that contains the design specification.
                 Index of contrast(s) for masking.  
 
                 * **Mask threshold** (enter text)  
-                .  
+                  
 
                 * **Nature of mask** (choose from the menu)  
-                .  
+                  
 
             * **Image**   
             Masking using image(s).  
 
                 * **Mask image(s)** (select files)  
-                .  
+                  
 
                 * **Nature of mask** (choose from the menu)  
-                .  
+                  
 
 * **Data type** (choose from the menu)  
 Data type. This option is only meaningful for M/EEG data. Keep the default 'Volumetric' for any other kind of data.  

@@ -1,6 +1,6 @@
 # Serial Longitudinal Registration  
 Longitudinal registration of series of anatomical MRI scans for a single subject.  It is based on groupwise alignment among each of the subject's scans, and incorporates an intensity nonuniformity (INU) correction .  Prior to running the registration, the scans should already be in very rough alignment, although because the model incorporates a rigid-body transform, this need not be extremely precise.  Note that there are a bunch of hyper-parameters to be specified.  If you are unsure what values to take, then the defaults should be a reasonable guess of what works.  Note that changes to these hyper-parameters will impact the results obtained.  
-.  
+  
 The alignment assumes that all scans have similar resolutions and dimensions, and were collected on the same (or very similar) MR scanner using the same pulse sequence.  If these assumption are not correct, then the approach will not work as well.  There are a number of settings (noise estimate, regularisation etc). Default settings often work well, but it can be very helpful to try some different values, as these can have a large effect on the results.  
 
 * **Volumes** (select files)  
@@ -23,7 +23,7 @@ Note that regularisation is specified based on what is believed to be appropriat
 
 * **INU Regularisation** (enter text)  
 MR images are usually corrupted by a smooth, spatially varying artifact that modulates the intensity of the image (intensity nonuniformity). These artifacts, although not usually a problem for visual inspection, can impede automated processing of the images.  
-.  
+  
 An important issue relates to the distinction between variations in the difference between the images that arise because of the differential INU artifact due to the physics of MR scanning, and those that arise due to shape differences.  The objective is to model the latter by deformations, while modelling the former with an INU field. We know a priori that intensity variations due to MR physics tend to be spatially smooth. A more accurate estimate of an INU field can be obtained by including prior knowledge about the distribution of the fields likely to be encountered by the correction algorithm. For example, if it is known that there is little or no intensity non-uniformity, then it would be wise to penalise large estimates of the intensity non-uniformity.  
 Knowing what works best should be a matter of empirical exploration, as it depends on the scans themselves.  For example, if your data has very little of the artifact, then the INU regularisation should be increased.  This effectively tells the algorithm that there is very little INU in your data, so it does not try to model it.  
 

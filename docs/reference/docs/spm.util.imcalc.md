@@ -49,7 +49,7 @@ Options for image calculator
 
     * **Interpolation** (choose from the menu)  
     With images of different sizes and orientations, the size and orientation of the first is used for the output image. A warning is given in this situation. Images are sampled into this orientation using the interpolation specified by the hold parameter.  
-    .  
+      
     The method by which the images are sampled when being written in a different space.  
         0. **Nearest Neighbour**  
            Fastest, but not normally recommended.  

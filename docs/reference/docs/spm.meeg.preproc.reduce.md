@@ -11,7 +11,7 @@ Start and stop of the time window [ms].
 Channel selection.  
 
     * **All**   
-    .  
+      
 
     * **Select channels by type** (choose from the menu)  
     Select channels by type.  
@@ -23,28 +23,28 @@ Channel selection.
     Enter a regular expression for matching multiple channel labels.  
 
     * **Channel file** (select files)  
-    .  
+      
 
 * **Reduction method** (choose an option)  
 Reduction method  
 
     * **CVA**   
-    .  
+      
 
         * **Channel sets** (create a list of items)  
-        .  
+          
 
             * **Set**   
-            .  
+              
 
                 * **Channels to reduce**   
-                .  
+                  
 
                     * **Channel selection** (create a list of items)  
                     Channel selection.  
 
                 * **Reference channels**   
-                .  
+                  
 
                     * **Channel selection** (create a list of items)  
                     Channel selection.  
@@ -66,22 +66,22 @@ Reduction method
                 Time shift resolution (ms)  
 
     * **Imaginary part of CSD**   
-    .  
+      
 
         * **Channel sets** (create a list of items)  
-        .  
+          
 
             * **Set**   
-            .  
+              
 
                 * **Channels to reduce**   
-                .  
+                  
 
                     * **Channel selection** (create a list of items)  
                     Channel selection.  
 
                 * **Reference channels**   
-                .  
+                  
 
                     * **Channel selection** (create a list of items)  
                     Channel selection.  
@@ -93,7 +93,7 @@ Reduction method
                 Frequency window to optimize for  
 
     * **PCA data reduction**   
-    .  
+      
 
         * **Number of components** (enter text)  
         Number of PCA components  
@@ -102,13 +102,13 @@ Reduction method
         Threshold (1 > u > 0) for normalized eigenvalues  
 
     * **Adaptive PCA**   
-    .  
+      
 
         * **Number of components** (enter text)  
         Number of PCA components  
 
     * **Whiten the data**   
-    .  
+      
 
         * **Noise dataset (optional)** (select files)  
         Optional noise dataset for covariance covariance computation  

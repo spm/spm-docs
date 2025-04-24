@@ -28,7 +28,7 @@ Specify the regularisation settings for the diffeomorphic registration. These co
     3. The *bending energy* is penalised (3rd element). This penalises the sum of squares of the 2nd derivatives of the velocity.  
     4. Linear elasticity regularisation is also included. This parameter ($\mu$) is similar to that for linear elasticity, except it penalises the sum of squares of the Jacobian tensors after they have been made symmetric (by averaging with the transpose). This term essentially penalises length changes, without penalising rotations.  
     5. The final term also relates to linear elasticity, and is the weight that denotes how much to penalise changes to the divergence of the velocities ($\lambda$). This divergence is a measure of the rate of volumetric expansion or contraction.  
-.  
+  
 The default settings work reasonably well for most cases.  
 
 * **Output name** (enter text)  

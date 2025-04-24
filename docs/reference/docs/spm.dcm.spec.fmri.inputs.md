@@ -1,6 +1,6 @@
 # Input specification  
 Insert new inputs into a DCM model.  
-.  
+  
 This functionality can be used, for example, to replace subject X's inputs by subject Y's. The model can then be re-estimated without having to go through model specification again.  
 
 * **Select DCM_*.mat** (select files)  

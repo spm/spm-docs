@@ -11,25 +11,25 @@ Choose one of the two options how to define trials.
     Select the trialfile mat file.  
 
     * **Define trial**   
-    .  
+      
 
         * **Time window** (enter text)  
         Start and end of epoch [ms].  
 
         * **Trial definitions** (create a list of items)  
-        .  
+          
 
             * **Trial**   
-            .  
+              
 
                 * **Condition label** (enter text)  
-                .  
+                  
 
                 * **Event type** (enter text)  
-                .  
+                  
 
                 * **Event value** (enter text)  
-                .  
+                  
 
                 * **Shift** (enter text)  
                 shift the triggers by a fixed amount (ms)  
@@ -42,7 +42,7 @@ Choose one of the two options how to define trials.
         Arbitary trial length [ms].  
 
         * **Condition label** (enter text)  
-        .  
+          
 
 * **Baseline correction** (choose from the menu)  
 Perform baseline correction when epoching, or not.  

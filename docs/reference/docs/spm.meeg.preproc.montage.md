@@ -14,7 +14,7 @@ Choose between writing a new dataset or online montage operation
         Choose how to specify the montage  
 
             * **Load montage from file**   
-            .  
+              
 
                 * **Montage file name** (select files)  
                 Select a montage file.  
@@ -42,7 +42,7 @@ Choose between writing a new dataset or online montage operation
         Choose how to specify the montage  
 
             * **Load montage from file**   
-            .  
+              
 
                 * **Montage file name** (select files)  
                 Select a montage file.  
@@ -60,7 +60,7 @@ Choose between writing a new dataset or online montage operation
     Add montage to the set of online montages without applying  
 
         * **Load montage from file**   
-        .  
+          
 
             * **Montage file name** (select files)  
             Select a montage file.  

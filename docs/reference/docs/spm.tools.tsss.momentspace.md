@@ -8,16 +8,16 @@ Select the M/EEG mat file.
 Threshold on condition number applied for basis regularisation  
 
 * **Extra channels to add** (choose an option)  
-.  
+  
 
     * **None**   
-    .  
+      
 
     * **Channel selection** (create a list of items)  
     Channel selection.  
 
         * **All**   
-        .  
+          
 
         * **Select channels by type** (choose from the menu)  
         Select channels by type.  
@@ -29,4 +29,4 @@ Threshold on condition number applied for basis regularisation
         Enter a regular expression for matching multiple channel labels.  
 
         * **Channel file** (select files)  
-        .  
+          

@@ -5,19 +5,19 @@ Compute inverse projectors
 Select BF.mat file.  
 
 * **Inverse method** (choose an option)  
-.  
+  
 
     * **Champagne**   
-    .  
+      
 
         * **Number of EM iterations** (enter text)  
-        .  
+          
 
         * **Voxel covariance structure** (choose from the menu)  
-        .  
+          
 
         * **Noise covariance** (choose from the menu)  
-        .  
+          
 
     * **DeFleCT**   
     DeFleCT spatial filter design framework by Matti Stenroos and Olaf Hauk  
@@ -28,19 +28,19 @@ Select BF.mat file.
     Human Brain Mapping 2013  
 
         * **Filters** (create a list of items)  
-        .  
+          
 
             * **Filter**   
-            .  
+              
 
                 * **Label** (enter text)  
                 Label for the output source  
 
                 * **Passband sources** (create a list of items)  
-                .  
+                  
 
                     * **VOI**   
-                    .  
+                      
 
                     * **List vertex indices** (enter text)  
                     Specify sources of interest by listing vertex indices.  
@@ -53,10 +53,10 @@ Select BF.mat file.
                 Forces the output for all passband components   
 
                 * **Stopband sources** (create a list of items)  
-                .  
+                  
 
                     * **VOI**   
-                    .  
+                      
 
                     * **List vertex indices** (enter text)  
                     Specify sources of interest by listing vertex indices.  
@@ -78,16 +78,16 @@ Select BF.mat file.
         components projected away.  
 
     * **DICS**   
-    .  
+      
 
         * **Optimise for maximal power** (choose from the menu)  
         Optimise dipole orientation for maximal power  
 
     * **EBB**   
-    .  
+      
 
         * **Keep oriented leadfields** (choose from the menu)  
-        .  
+          
 
         * **Identity source covariance** (choose from the menu)  
         Assumes sources are indepedent and identically distributed, equivalent to a Bayesian minimum norm estimation. This option bypasses correlated source mode  
@@ -124,22 +124,22 @@ Select BF.mat file.
         to 5% of the average of the eigenvalues of some matrix to be inverted.)  
 
     * **LCMV**   
-    .  
+      
 
         * **Orient to maximum power** (choose from the menu)  
-        .  
+          
 
         * **Keep oriented leadfields** (choose from the menu)  
-        .  
+          
 
     * **LCMV use multiple covariance and PCA order**   
-    .  
+      
 
         * **PCA order** (enter text)  
-        .  
+          
 
         * **Do bilateral beamformer** (enter text)  
-        .  
+          
 
         * **Beamformer type** (choose from the menu)  
         Select Scalar or Vector  
