@@ -10,9 +10,9 @@ Specify reorientation parameters - 12 parameters, a 4x4 transformation matrix or
 
     * **Reorientation Matrix** (enter text)  
     Enter a valid 4x4 matrix for reorientation.   
-
+    .   
     Example: This will L-R flip the images.   
-
+    .   
        -1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1   
 
     * **Reorientation Parameters** (enter text)  
@@ -30,11 +30,11 @@ Specify reorientation parameters - 12 parameters, a 4x4 transformation matrix or
     P(11) - y affine   
     P(12) - z affine   
     Parameters are entered as listed above and then processed by spm_matrix.   
-
+    .   
     Example: This will L-R flip the images (extra spaces are inserted between each group for illustration purposes).   
-
+    .   
        0 0 0   0 0 0   -1 1 1   0 0 0   
-
+    .   
 
     * **Saved reorientation matrix** (select files)  
     Select mat file containing saved reorientation (e.g. after using reorient from Display or Check Reg and saving when prompted).   

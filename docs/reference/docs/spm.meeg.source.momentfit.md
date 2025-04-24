@@ -14,13 +14,13 @@ Fitting field due to an electrical current within the head or a coil (magnetic d
 What conditions to include?   
 
     * **All**   
-
+    .   
 
     * **Conditions** (create a list of items)  
     Specify the labels of the conditions to be included in the inversion   
 
         * **Condition label** (enter text)  
-
+        .   
 
 * **Time window of interest** (enter text)  
 Time window to include in the inversion (ms)   

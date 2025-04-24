@@ -11,13 +11,13 @@ Select the mode for conversion to images.
 Specify the labels of the conditions to be converted.   
 
     * **Condition label** (enter text)  
-
+    .   
 
 * **Channel selection** (create a list of items)  
 Channel selection.   
 
     * **All**   
-
+    .   
 
     * **Select channels by type** (choose from the menu)  
     Select channels by type.   
@@ -29,7 +29,7 @@ Channel selection.
     Enter a regular expression for matching multiple channel labels.   
 
     * **Channel file** (select files)  
-
+    .   
 
 * **Optimise 2D locations** (choose from the menu)  
 Scale and centre channel locations to use more image space.Turn off e.g. to look at channel subsets.   

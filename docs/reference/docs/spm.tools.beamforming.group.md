@@ -9,7 +9,7 @@ Specify the string to be prepended to the output directory name
 This is only used for batches starting with the Data module.   
 
 * **Group analysis ** (choose an option)  
-
+.   
 
     * **GALA**   
     bla bla bla   
@@ -18,7 +18,7 @@ This is only used for batches starting with the Data module.
         Number of iteration   
 
     * **Batch**   
-
+    .   
 
         * **Batch .mat or .m file** (select files)  
         Select batch specification file.   
@@ -48,16 +48,16 @@ This is only used for batches starting with the Data module.
         bla bla bla   
 
         * **Cluster method** (choose an option)  
-
+        .   
 
             * **Maxclust**   
-
+            .   
 
                 * **Maxclust size** (enter text)  
                 bla bla bla   
 
             * **Cutoff**   
-
+            .   
 
                 * **Cutoff threshold** (enter text)  
                 bla bla bla   

@@ -8,7 +8,7 @@ Select the M/EEG mat file.
 Channel selection.   
 
     * **All**   
-
+    .   
 
     * **Select channels by type** (choose from the menu)  
     Select channels by type.   
@@ -20,13 +20,13 @@ Channel selection.
     Enter a regular expression for matching multiple channel labels.   
 
     * **Channel file** (select files)  
-
+    .   
 
 * **Conditions** (create a list of items)  
 Specify the labels of the conditions to be converted.   
 
     * **Condition label** (enter text)  
-
+    .   
 
 * **Frequency window** (enter text)  
 Start and stop of the frequency window (Hz).   
@@ -38,7 +38,7 @@ Time window length (ms). Only used for continuous data.
 Regressors of interest   
 
     * **Time-frequency power**   
-
+    .   
 
         * **TF power dataset name** (select files)  
         Select the M/EEG mat file containing TF power data   
@@ -47,7 +47,7 @@ Regressors of interest
         Channel selection.   
 
             * **All**   
-
+            .   
 
             * **Select channels by type** (choose from the menu)  
             Select channels by type.   
@@ -59,7 +59,7 @@ Regressors of interest
             Enter a regular expression for matching multiple channel labels.   
 
             * **Channel file** (select files)  
-
+            .   
 
         * **Time window** (enter text)  
         Start and stop of the time window [ms]. (Used only for summarised epoched cases)   
@@ -78,7 +78,7 @@ Regressors of interest
         Specify the string to be used as regressor name.   
 
     * **Time-frequency phase**   
-
+    .   
 
         * **TF phase dataset name** (select files)  
         Select the M/EEG mat file containing TF phase data   
@@ -87,7 +87,7 @@ Regressors of interest
         Channel selection.   
 
             * **All**   
-
+            .   
 
             * **Select channels by type** (choose from the menu)  
             Select channels by type.   
@@ -99,7 +99,7 @@ Regressors of interest
             Enter a regular expression for matching multiple channel labels.   
 
             * **Channel file** (select files)  
-
+            .   
 
         * **Time window** (enter text)  
         Start and stop of the time window [ms]. (Used only for the epoched case)   
@@ -121,7 +121,7 @@ Regressors of interest
 Confounds   
 
     * **Channel data**   
-
+    .   
 
         * **Regressor dataset name** (select files)  
         Select the M/EEG mat file containing regressor data   
@@ -130,7 +130,7 @@ Confounds
         Channel selection.   
 
             * **All**   
-
+            .   
 
             * **Select channels by type** (choose from the menu)  
             Select channels by type.   
@@ -142,20 +142,20 @@ Confounds
             Enter a regular expression for matching multiple channel labels.   
 
             * **Channel file** (select files)  
-
+            .   
 
         * **Time window** (enter text)  
         Start and stop of the time window [ms]. (Used only for the epoched case)   
 
     * **CTF head movements**   
-
+    .   
 
         * **Movement dataset name** (select files)  
         Select the M/EEG mat file containing continuous head localisation data.   
         This might or might not be the same as the dataset being analysed.   
 
     * **Time-frequency phase**   
-
+    .   
 
         * **TF phase dataset name** (select files)  
         Select the M/EEG mat file containing TF phase data   
@@ -164,7 +164,7 @@ Confounds
         Channel selection.   
 
             * **All**   
-
+            .   
 
             * **Select channels by type** (choose from the menu)  
             Select channels by type.   
@@ -176,7 +176,7 @@ Confounds
             Enter a regular expression for matching multiple channel labels.   
 
             * **Channel file** (select files)  
-
+            .   
 
         * **Time window** (enter text)  
         Start and stop of the time window [ms]. (Used only for the epoched case)   
@@ -195,7 +195,7 @@ Confounds
         Specify the string to be used as regressor name.   
 
     * **Time-frequency power**   
-
+    .   
 
         * **TF power dataset name** (select files)  
         Select the M/EEG mat file containing TF power data   
@@ -204,7 +204,7 @@ Confounds
         Channel selection.   
 
             * **All**   
-
+            .   
 
             * **Select channels by type** (choose from the menu)  
             Select channels by type.   
@@ -216,7 +216,7 @@ Confounds
             Enter a regular expression for matching multiple channel labels.   
 
             * **Channel file** (select files)  
-
+            .   
 
         * **Time window** (enter text)  
         Start and stop of the time window [ms]. (Used only for summarised epoched cases)   

@@ -17,7 +17,7 @@ Select methods for defining spatial confounds.
         Specify the labels of the conditions to include in the SVD.   
 
             * **Condition label** (enter text)  
-
+            .   
 
         * **Threshold** (enter text)  
         Threshold for data amplitude after correction.   
