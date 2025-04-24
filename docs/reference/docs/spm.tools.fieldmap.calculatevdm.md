@@ -1,142 +1,141 @@
 # Calculate VDM  
-Generate unwrapped field maps which are converted to voxel displacement maps (VDM) that can be used to unwarp geometrically distorted EPI images.  
-For references and an explanation of the theory behind the field map based unwarping, see FieldMap_principles.md. The resulting VDM files are saved with the prefix ``vdm`` and can be applied to images using **Apply VDM** or in combination with **Realign & Unwarp** to calculate and correct for the combined effects of static and movement-related susceptibility induced distortions.  
+Generate unwrapped field maps which are converted to voxel displacement maps (VDM) that can be used to unwarp geometrically distorted EPI images.
+For references and an explanation of the theory behind the field map based unwarping, see FieldMap_principles.md. The resulting VDM files are saved with the prefix ``vdm`` and can be applied to images using **Apply VDM** or in combination with **Realign & Unwarp** to calculate and correct for the combined effects of static and movement-related susceptibility induced distortions.
 
 * **Data** (create a list of items)  
-Subjects or sessions for which individual field map data has been acquired.  
+Subjects or sessions for which individual field map data has been acquired.
 
     * **Subject**   
-    Data for this subject or field map session.  
+    Data for this subject or field map session.
 
         * **Field map** (choose an option)  
-          
 
             * **Presubtracted Phase and Magnitude Data**   
-            Calculate a voxel displacement map (VDM) from presubtracted phase and magnitude field map data. This option expects a single magnitude image and a single phase image resulting from the subtraction of two phase images (where the subtraction is usually done automatically by the scanner software). The phase image will be scaled between +/- PI.  
+            Calculate a voxel displacement map (VDM) from presubtracted phase and magnitude field map data. This option expects a single magnitude image and a single phase image resulting from the subtraction of two phase images (where the subtraction is usually done automatically by the scanner software). The phase image will be scaled between +/- PI.
 
                 * **Phase Image** (select files)  
-                Select a single phase image. This should be the result from the subtraction of two phase images (where the subtraction is usually done automatically by the scanner software). The phase image will be scaled between +/- PI.  
+                Select a single phase image. This should be the result from the subtraction of two phase images (where the subtraction is usually done automatically by the scanner software). The phase image will be scaled between +/- PI.
 
                 * **Magnitude Image** (select files)  
-                Select a single magnitude image. This is used for masking the phase information and coregistration with the EPI data. If two magnitude images are available, select the one acquired at the shorter echo time because it will have greater signal  
+                Select a single magnitude image. This is used for masking the phase information and coregistration with the EPI data. If two magnitude images are available, select the one acquired at the shorter echo time because it will have greater signal
 
             * **Real and Imaginary Data**   
-            Calculate a voxel displacement map (VDM) from real and imaginary field map data. This option expects two real and imaginary pairs of data of two different echo times. The phase images will be scaled between +/- PI.  
+            Calculate a voxel displacement map (VDM) from real and imaginary field map data. This option expects two real and imaginary pairs of data of two different echo times. The phase images will be scaled between +/- PI.
 
                 * **Short Echo Real Image** (select files)  
-                Select short echo real image.  
+                Select short echo real image.
 
                 * **Short Echo Imaginary Image** (select files)  
-                Select short echo imaginary image.  
+                Select short echo imaginary image.
 
                 * **Long Echo Real Image** (select files)  
-                Select long echo real image.  
+                Select long echo real image.
 
                 * **Long Echo Imaginary Image** (select files)  
-                Select long echo imaginary image.  
+                Select long echo imaginary image.
 
             * **Phase and Magnitude Data**   
-            Calculate a voxel displacement map (VDM) from double phase and magnitude field map data. This option expects two phase and magnitude pairs of data of two different echo times.  
+            Calculate a voxel displacement map (VDM) from double phase and magnitude field map data. This option expects two phase and magnitude pairs of data of two different echo times.
 
                 * **Short Echo Phase Image** (select files)  
-                Select short echo phase image.  
+                Select short echo phase image.
 
                 * **Short Echo Magnitude Image** (select files)  
-                Select short echo magnitude image.  
+                Select short echo magnitude image.
 
                 * **Long Echo Phase Image** (select files)  
-                Select long echo phase image.  
+                Select long echo phase image.
 
                 * **Long Echo Magnitude Image** (select files)  
-                Select long echo magnitude image.  
+                Select long echo magnitude image.
 
             * **Precalculated FieldMap (in Hz)**   
-            Calculate a voxel displacement map (VDM) from a precalculated field map. This option expects a processed field map (ie phase unwrapped, masked if necessary and scaled to Hz). Precalculated field maps can be generated by the FieldMap toolbox and stored as fpm_* files.  
+            Calculate a voxel displacement map (VDM) from a precalculated field map. This option expects a processed field map (ie phase unwrapped, masked if necessary and scaled to Hz). Precalculated field maps can be generated by the FieldMap toolbox and stored as fpm_* files.
 
                 * **Precalculated field map** (select files)  
-                Select a precalculated field map. This should be a processed field map (ie phase unwrapped, masked if necessary and scaled to Hz), for example as generated by the FieldMap toolbox and are stored with fpm_* prefix.  
+                Select a precalculated field map. This should be a processed field map (ie phase unwrapped, masked if necessary and scaled to Hz), for example as generated by the FieldMap toolbox and are stored with fpm_* prefix.
 
                 * **Magnitude image in same space as field map** (select files)  
-                Select magnitude image which is in the same space as the field map to do matching to EPI.  
+                Select magnitude image which is in the same space as the field map to do matching to EPI.
 
         * **FieldMap defaults** (choose an option)  
-        FieldMap default values can be entered as a file or set of values.  
+        FieldMap default values can be entered as a file or set of values.
 
             * **Defaults values**   
-            Defaults values  
+            Defaults values
 
                 * **Echo times [short TE long TE]** (enter text)  
-                Enter the short and long echo times (in ms) of the data used to acquire the field map.  
+                Enter the short and long echo times (in ms) of the data used to acquire the field map.
 
                 * **Mask brain** (choose from the menu)  
-                Select masking or no masking of the brain. If masking is selected,  
-                the magnitude image is used to generate a mask of the brain.  
+                Select masking or no masking of the brain. If masking is selected,
+                the magnitude image is used to generate a mask of the brain.
 
                 * **Blip direction** (choose from the menu)  
-                Enter the blip direction. This is the polarity of the phase-encode blips describing the direction in which k-space is traversed along the y-axis during EPI acquisition with respect to the coordinate system used in SPM. In this coordinate system, the phase encode direction corresponds with the y-direction and is defined as positive from the posterior to the anterior of the head.  
+                Enter the blip direction. This is the polarity of the phase-encode blips describing the direction in which k-space is traversed along the y-axis during EPI acquisition with respect to the coordinate system used in SPM. In this coordinate system, the phase encode direction corresponds with the y-direction and is defined as positive from the posterior to the anterior of the head.
 
                 * **Total EPI readout time** (enter text)  
-                Enter the total EPI readout time (in ms). This is the time taken to acquire all of the phase encode steps required to cover k-space (ie one image slice). For example, if the EPI sequence has 64 phase encode steps, the total readout time is the time taken to acquire 64 echoes, e.g. total readout time = number of echoes x echo spacing. This time does not include i) the duration of the excitation, ii) the delay between, the excitation and the start of the acquisition or iii) time for fat saturation etc.  
+                Enter the total EPI readout time (in ms). This is the time taken to acquire all of the phase encode steps required to cover k-space (ie one image slice). For example, if the EPI sequence has 64 phase encode steps, the total readout time is the time taken to acquire 64 echoes, e.g. total readout time = number of echoes x echo spacing. This time does not include i) the duration of the excitation, ii) the delay between, the excitation and the start of the acquisition or iii) time for fat saturation etc.
 
                 * **EPI-based field map?** (choose from the menu)  
-                Select non-EPI or EPI based field map. The field map data may be acquired using a non-EPI sequence (typically a gradient echo sequence) or an EPI sequence. The processing will be slightly different for the two cases. If using an EPI-based field map, the resulting Voxel Displacement Map will be inverted since the field map was acquired in distorted space.  
+                Select non-EPI or EPI based field map. The field map data may be acquired using a non-EPI sequence (typically a gradient echo sequence) or an EPI sequence. The processing will be slightly different for the two cases. If using an EPI-based field map, the resulting Voxel Displacement Map will be inverted since the field map was acquired in distorted space.
 
                 * **Jacobian modulation?** (choose from the menu)  
-                Select whether or not to use Jacobian modulation. This will adjust the intensities of voxels that have been stretched or compressed but in general is not recommended for EPI distortion correction  
+                Select whether or not to use Jacobian modulation. This will adjust the intensities of voxels that have been stretched or compressed but in general is not recommended for EPI distortion correction
 
                 * **uflags**   
-                Different options for phase unwrapping and field map processing  
+                Different options for phase unwrapping and field map processing
 
                     * **Unwrapping method** (choose from the menu)  
-                    Select method for phase unwrapping  
+                    Select method for phase unwrapping
 
                     * **FWHM** (enter text)  
-                    FWHM of Gaussian filter used to implement weighted smoothing of unwrapped maps.  
+                    FWHM of Gaussian filter used to implement weighted smoothing of unwrapped maps.
 
                     * **pad** (enter text)  
-                    Size of padding kernel if required.  
+                    Size of padding kernel if required.
 
                     * **Weighted smoothing** (choose from the menu)  
-                    Select normal or weighted smoothing.  
+                    Select normal or weighted smoothing.
 
                 * **mflags**   
-                Different options used for the segmentation and creation of the brain mask.  
+                Different options used for the segmentation and creation of the brain mask.
 
                     * **FWHM** (enter text)  
-                    FWHM of Gaussian filter for smoothing brain mask.  
+                    FWHM of Gaussian filter for smoothing brain mask.
 
                     * **Number of erosions** (enter text)  
-                    Number of erosions used to create brain mask.  
+                    Number of erosions used to create brain mask.
 
                     * **Number of dilations** (enter text)  
-                    Number of dilations used to create brain mask.  
+                    Number of dilations used to create brain mask.
 
                     * **Threshold** (enter text)  
-                    Threshold used to create brain mask from segmented data.  
+                    Threshold used to create brain mask from segmented data.
 
             * **Defaults File** (select files)  
-            Select the 'pm_defaults*.m' file containing the parameters for the field map data. Please make sure that the parameters defined in the defaults file are correct for your field map and EPI sequence. To create your own customised defaults file, either edit the distributed version and/or save it with the name 'pm_defaults_yourname.m'.  
+            Select the 'pm_defaults*.m' file containing the parameters for the field map data. Please make sure that the parameters defined in the defaults file are correct for your field map and EPI sequence. To create your own customised defaults file, either edit the distributed version and/or save it with the name 'pm_defaults_yourname.m'.
 
         * **EPI Sessions** (create a list of items)  
-        If a single set of field map data will be used for multiple EPI runs/sessions, select the first EPI in each run/session. A VDM file will created for each run/session, matched to the first EPI in each run/session and saved with a unique name extension.  
+        If a single set of field map data will be used for multiple EPI runs/sessions, select the first EPI in each run/session. A VDM file will created for each run/session, matched to the first EPI in each run/session and saved with a unique name extension.
 
             * **Session**   
-            Data for this session.  
+            Data for this session.
 
                 * **Select EPI to Unwarp** (select files)  
-                Select a single image to distortion correct. The corrected image will be saved with the prefix u. Note that this option is mainly for quality control of correction so that the original and distortion corrected images can be displayed for comparison. To unwarp multiple images please use either Realign & Unwarp or Apply VDM.  
+                Select a single image to distortion correct. The corrected image will be saved with the prefix u. Note that this option is mainly for quality control of correction so that the original and distortion corrected images can be displayed for comparison. To unwarp multiple images please use either Realign & Unwarp or Apply VDM.
 
         * **Match VDM to EPI?** (choose from the menu)  
-        Match VDM file to EPI image. This will coregister the field map data to the selected EPI for each run/session.  
+        Match VDM file to EPI image. This will coregister the field map data to the selected EPI for each run/session.
 
         * **VDM filename extension** (enter text)  
-        Filename extension for run/session specific VDM files. The extension will be followed by an incremented integer for run/session number.  
+        Filename extension for run/session specific VDM files. The extension will be followed by an incremented integer for run/session number.
 
         * **Write unwarped EPI?** (choose from the menu)  
-        Write out distortion corrected EPI image. The image is saved with the prefix u. Note that this option is mainly for quality control of correction so that the original and distortion corrected images can be displayed for comparison. To unwarp multiple images please use either Realign & Unwarp or Apply VDM.  
+        Write out distortion corrected EPI image. The image is saved with the prefix u. Note that this option is mainly for quality control of correction so that the original and distortion corrected images can be displayed for comparison. To unwarp multiple images please use either Realign & Unwarp or Apply VDM.
 
         * **Anatomical image for comparison** (select files)  
-        Select an anatomical image for comparison with the distortion corrected EPI or leave empty. Note that this option is mainly for quality control of correction.  
+        Select an anatomical image for comparison with the distortion corrected EPI or leave empty. Note that this option is mainly for quality control of correction.
 
         * **Match anatomical image to EPI?** (choose from the menu)  
-        Match the anatomical image to the distortion corrected EPI. Note that this option is mainly for quality control of correction allowing for visual inspection and comparison of the distortion corrected EPI.  
+        Match the anatomical image to the distortion corrected EPI. Note that this option is mainly for quality control of correction allowing for visual inspection and comparison of the distortion corrected EPI.

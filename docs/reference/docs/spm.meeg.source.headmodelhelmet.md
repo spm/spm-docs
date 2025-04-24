@@ -1,83 +1,79 @@
 # MEG helmet head model specification  
-Specify MEG head model for forward computation using helmet  
+Specify MEG head model for forward computation using helmet
 
 * **M/EEG datasets** (select files)  
-Select the M/EEG mat files.  
+Select the M/EEG mat files.
 
 * **Inversion index** (enter text)  
-Index of the cell in D.inv where the results will be stored.  
+Index of the cell in D.inv where the results will be stored.
 
 * **Comment** (enter text)  
-User-specified information about this inversion  
+User-specified information about this inversion
 
 * **Meshes**   
-Create head meshes for building the head model  
+Create head meshes for building the head model
 
     * **Mesh source** (choose an option)  
-      
 
         * **Template**   
-          
 
         * **Individual structural image** (select files)  
-        Select the subject's structural image  
+        Select the subject's structural image
 
         * **Custom meshes**   
-        Provide custom individual meshes as GIfTI files  
+        Provide custom individual meshes as GIfTI files
 
             * **Individual structural image** (select files)  
-            Select the subject's structural image  
+            Select the subject's structural image
 
             * **Custom cortical mesh** (select files)  
-            Select the subject's cortical mesh. Leave empty for default  
+            Select the subject's cortical mesh. Leave empty for default
 
             * **Custom inner skull mesh** (select files)  
-            Select the subject's inner skull mesh. Leave empty for default  
+            Select the subject's inner skull mesh. Leave empty for default
 
             * **Custom outer skull mesh** (select files)  
-            Select the subject's outer skull mesh. Leave empty for default  
+            Select the subject's outer skull mesh. Leave empty for default
 
             * **Custom scalp mesh** (select files)  
-            Select the subject's scalp mesh. Leave empty for default  
+            Select the subject's scalp mesh. Leave empty for default
 
     * **Mesh resolution** (choose from the menu)  
-    Specify the resolution of the cortical mesh  
+    Specify the resolution of the cortical mesh
 
 * **Coregistration** (choose an option)  
-Coregistration  
+Coregistration
 
     * **Specify coregistration parameters**   
-      
 
         * **Fiducials** (create a list of items)  
-        Specify fiducials for coregistration (at least 3 fiducials need to be specified)  
+        Specify fiducials for coregistration (at least 3 fiducials need to be specified)
 
             * **Fiducial**   
-            Specify fiducial for coregistration  
+            Specify fiducial for coregistration
 
                 * **M/EEG fiducial label** (enter text)  
-                Label of a fiducial point (as specified in the M/EEG dataset)  
+                Label of a fiducial point (as specified in the M/EEG dataset)
 
                 * **How to specify?** (choose an option)  
-                  
 
                     * **Select from a list** (choose from the menu)  
-                    Select the corresponding fiducial point from a pre-specified list.  
+                    Select the corresponding fiducial point from a pre-specified list.
 
                     * **Type MRI coordinates** (enter text)  
-                    Type the coordinates (in MNI or native space depending on the MRI supplied) corresponding to the fiducial in the structural image.  
+                    Type the coordinates (in MNI or native space depending on the MRI supplied) corresponding to the fiducial in the structural image.
 
         * **Use headshape points?** (choose from the menu)  
-        Use headshape points (if available)  
+        Use headshape points (if available)
 
     * **Custom native to dewar transform for subject's coregdefault** (select files)  
-    Select the subject's helmet to MEG dewar transform  
+    Select the subject's helmet to MEG dewar transform
 
 * **Forward model**   
-Forward model  
+Forward model
 
     * **EEG head model** (choose from the menu)  
-    Select the head model type to use for EEG (if present)  
+    Select the head model type to use for EEG (if present)
 
     * **MEG head model** (choose from the menu)  
-    Select the head model type to use for MEG (if present)  
+    Select the head model type to use for MEG (if present)

@@ -1,28 +1,24 @@
 
 
 * **SPM**  
-  
-Statistical Parametric Mapping refers to the construction and assessment of spatially extended statistical processes used to test hypotheses about functional imaging data. These ideas have been instantiated in software that is called SPM.  
-  
-The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject.  
-  
-The current release is designed for the analysis of fMRI, PET, SPECT, EEG and MEG.  
-  
+Statistical Parametric Mapping refers to the construction and assessment of spatially extended statistical processes used to test hypotheses about functional imaging data. These ideas have been instantiated in software that is called SPM.
+The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject.
+The current release is designed for the analysis of fMRI, PET, SPECT, EEG and MEG.
 
 
     * **Temporal**  
-    Temporal pre-processing functions.  
+    Temporal pre-processing functions.
 
 
         * [**Slice Timing**](./spm.temporal.st.md)  
 
 
     * **Spatial**  
-    Spatial pre-processing functions.  
+    Spatial pre-processing functions.
 
 
         * **Realign**  
-        Within-subject registration of image time series for correcting (some of the) head motion artifacts.  
+        Within-subject registration of image time series for correcting (some of the) head motion artifacts.
 
 
             * [**Realign: Estimate**](./spm.spatial.realign.estimate.md)  
@@ -38,7 +34,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **Coregister**  
-        Within-subject registration using a rigid-body model. There are the options of estimating the transformation, reslicing images according to some rigid-body transformations, or both estimating and applying rigid-body transformations.  
+        Within-subject registration using a rigid-body model. There are the options of estimating the transformation, reslicing images according to some rigid-body transformations, or both estimating and applying rigid-body transformations.
 
 
             * [**Coregister: Estimate**](./spm.spatial.coreg.estimate.md)  
@@ -54,7 +50,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **Normalise**  
-        There are two components to spatial normalisation: There is the estimation part, whereby a deformation is estimated by deforming template data to match an individual scan; And there is the actual writing of the spatially normalised images, using the previously estimated deformation.  
+        There are two components to spatial normalisation: There is the estimation part, whereby a deformation is estimated by deforming template data to match an individual scan; And there is the actual writing of the spatially normalised images, using the previously estimated deformation.
 
 
             * [**Normalise: Estimate**](./spm.spatial.normalise.est.md)  
@@ -70,7 +66,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
     * **Stats**  
-    Statistical modelling and inference functions.  
+    Statistical modelling and inference functions.
 
 
         * [**fMRI model specification**](./spm.stats.fmri_spec.md)  
@@ -98,7 +94,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **Mixed-effects (MFX) analysis**  
-        Mixed-effects (MFX) analysis  
+        Mixed-effects (MFX) analysis
 
 
             * [**FFX Specification**](./spm.stats.mfx.ffx.md)  
@@ -108,7 +104,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **Bayesian Model Selection**  
-        Bayesian Model Selection for group studies (fixed effects and random effects analysis).  
+        Bayesian Model Selection for group studies (fixed effects and random effects analysis).
 
 
             * [**BMS: Maps (Inference)**](./spm.stats.bms_map.inference.md)  
@@ -124,15 +120,14 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
     * **DCM**  
-    Dynamic Causal Modelling.  
+    Dynamic Causal Modelling.
 
 
         * **DCM specification**  
-          
 
 
             * **DCM for fMRI**  
-            Dynamic Causal Modelling for fMRI  
+            Dynamic Causal Modelling for fMRI
 
 
                 * [**Specify group**](./spm.dcm.spec.fmri.group.md)  
@@ -151,7 +146,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **Bayesian Model Selection**  
-        Bayesian Model Selection for group studies (fixed effects and random effects analysis).  
+        Bayesian Model Selection for group studies (fixed effects and random effects analysis).
 
 
             * [**Model Inference**](./spm.dcm.bms.inference.md)  
@@ -161,7 +156,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **Second level**  
-        Parametric Empirical Bayes for DCM.  
+        Parametric Empirical Bayes for DCM.
 
 
             * [**Specify / Estimate PEB**](./spm.dcm.peb.specify.md)  
@@ -180,14 +175,14 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
     * **M/EEG**  
-    M/EEG functions.  
+    M/EEG functions.
 
 
         * [**Conversion**](./spm.meeg.convert.md)  
 
 
         * **Preprocessing**  
-        M/EEG Preprocessing.  
+        M/EEG Preprocessing.
 
 
             * [**Epoching**](./spm.meeg.preproc.epoch.md)  
@@ -236,7 +231,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **Averaging**  
-        M/EEG Averaging.  
+        M/EEG Averaging.
 
 
             * [**Averaging**](./spm.meeg.averaging.average.md)  
@@ -249,7 +244,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **Images**  
-        M/EEG Images.  
+        M/EEG Images.
 
 
             * [**Convert2Images**](./spm.meeg.images.convert2images.md)  
@@ -259,7 +254,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **Time-frequency**  
-        M/EEG Time-Frequency.  
+        M/EEG Time-Frequency.
 
 
             * [**Time-frequency analysis**](./spm.meeg.tf.tf.md)  
@@ -278,7 +273,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **Source reconstruction**  
-        M/EEG source reconstruction.  
+        M/EEG source reconstruction.
 
 
             * [**Head model specification**](./spm.meeg.source.headmodel.md)  
@@ -324,7 +319,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **Modelling**  
-        M/EEG Modelling.  
+        M/EEG Modelling.
 
 
             * [**Convolution modelling**](./spm.meeg.modelling.convmodel.md)  
@@ -334,7 +329,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **OPM Preprocessing**  
-        OPM Preprocessing.  
+        OPM Preprocessing.
 
 
             * [**Create OPM object**](./spm.meeg.OPM.create.md)  
@@ -347,7 +342,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **Other**  
-        M/EEG Other.  
+        M/EEG Other.
 
 
             * [**Display**](./spm.meeg.other.review.md)  
@@ -360,7 +355,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
     * **Util**  
-    Utility tools.  
+    Utility tools.
 
 
         * [**Display Image**](./spm.util.disp.md)  
@@ -370,7 +365,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **Rendering**  
-        Rendering utilities.  
+        Rendering utilities.
 
 
             * [**Extract Surface**](./spm.util.render.extract.md)  
@@ -380,7 +375,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **Import**  
-        Import.  
+        Import.
 
 
             * [**DICOM Import**](./spm.util.import.dicom.md)  
@@ -438,13 +433,13 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
     * **Tools**  
-    Other tools.  
-    Toolbox configuration files should be placed in the toolbox directory, with their own *_cfg_*.m files. If you write a toolbox, then you can include it in this directory - but remember to try to keep the function names unique (to reduce  clashes with other toolboxes).  
-    See spm_cfg.m or MATLABBATCH documentation for information about the form of SPM's configuration files.  
+    Other tools.
+    Toolbox configuration files should be placed in the toolbox directory, with their own *_cfg_*.m files. If you write a toolbox, then you can include it in this directory - but remember to try to keep the function names unique (to reduce  clashes with other toolboxes).
+    See spm_cfg.m or MATLABBATCH documentation for information about the form of SPM's configuration files.
 
 
         * **Dartel Tools**  
-        This toolbox is based around the "A Fast Diffeomorphic Registration Algorithm" paper. The idea is to register images by computing a "flow field", which can then be exponentiated to generate both forward and backward deformations.  
+        This toolbox is based around the "A Fast Diffeomorphic Registration Algorithm" paper. The idea is to register images by computing a "flow field", which can then be exponentiated to generate both forward and backward deformations.
 
 
             * [**Run Dartel (create Templates)**](./spm.tools.dartel.warp.md)  
@@ -469,7 +464,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
             * **Kernel utilities**  
-            Dartel can be used for generating matrices of dot-products for various kernel pattern-recognition procedures.  
+            Dartel can be used for generating matrices of dot-products for various kernel pattern-recognition procedures.
 
 
                 * [**Kernel from Images**](./spm.tools.dartel.kernfun.reskern.md)  
@@ -479,7 +474,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **DAiSS (beamforming)**  
-        Data analysis in source space toolbox  
+        Data analysis in source space toolbox
 
 
             * [**Group analysis**](./spm.tools.beamforming.group.md)  
@@ -510,7 +505,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **FieldMap**  
-        The FieldMap toolbox generates unwrapped field maps which are converted to voxel displacement maps (VDM) that can be used to unwarp geometrically distorted EPI images.  
+        The FieldMap toolbox generates unwrapped field maps which are converted to voxel displacement maps (VDM) that can be used to unwarp geometrically distorted EPI images.
 
 
             * [**Calculate VDM**](./spm.tools.fieldmap.calculatevdm.md)  
@@ -520,7 +515,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **Longitudinal Registration**  
-        Longitudinal registration of (typically) T1-weighted MRI to identify volumetric changes (e.g., atrophy).  
+        Longitudinal registration of (typically) T1-weighted MRI to identify volumetric changes (e.g., atrophy).
 
 
             * [**Pairwise Longitudinal Registration**](./spm.tools.longit.pairwise.md)  
@@ -530,7 +525,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **Multi-Brain toolbox**  
-        The Multi-Brain (MB) toolbox has the general aim of integrating a number of disparate image analysis components within a single unified generative modelling framework (segmentation, nonlinear registration, image translation, etc.).  
+        The Multi-Brain (MB) toolbox has the general aim of integrating a number of disparate image analysis components within a single unified generative modelling framework (segmentation, nonlinear registration, image translation, etc.).
 
 
             * [**Fit Multi-Brain model**](./spm.tools.mb.run.md)  
@@ -549,7 +544,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **Old Normalise**  
-        These ancient tools  are for spatially normalising MRI, PET or SPECT images into a standard space defined by some template image[s]. The transformation can also be applied to any other image that has been coregistered with these scans.  
+        These ancient tools  are for spatially normalising MRI, PET or SPECT images into a standard space defined by some template image[s]. The transformation can also be applied to any other image that has been coregistered with these scans.
 
 
             * [**Old Normalise: Estimate**](./spm.tools.oldnorm.est.md)  
@@ -565,7 +560,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **Rendering**  
-        This toolbox provides a limited range of surface rendering options. The idea is to first extract surfaces from image data, which are saved in ``surf_*.gii`` files. These can then be loaded and displayed as surfaces.  
+        This toolbox provides a limited range of surface rendering options. The idea is to first extract surfaces from image data, which are saved in ``surf_*.gii`` files. These can then be loaded and displayed as surfaces.
 
 
             * [**Surface extraction**](./spm.tools.render.SExtract.md)  
@@ -575,7 +570,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **Shoot Tools**  
-        This toolbox is based around the "Diffeomorphic Registration using Geodesic Shooting and Gauss-Newton Optimisation" paper . The idea is to register images by estimating an initial velocity field, which can then be integrated to generate both forward and backward deformations.  
+        This toolbox is based around the "Diffeomorphic Registration using Geodesic Shooting and Gauss-Newton Optimisation" paper . The idea is to register images by estimating an initial velocity field, which can then be integrated to generate both forward and backward deformations.
 
 
             * [**Run Shooting (create Templates)**](./spm.tools.shoot.warp.md)  
@@ -588,7 +583,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
             * **Kernel Utilities**  
-            The Shoot toolbox can be used for generating matrices of dot products for various kernel pattern recognition procedures.  
+            The Shoot toolbox can be used for generating matrices of dot products for various kernel pattern recognition procedures.
 
 
                 * [**Kernel from velocities**](./spm.tools.shoot.kernfun.velkern.md)  
@@ -601,7 +596,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **Spatial Tools**  
-        A selection of work-in-progress tools for various spatial processing tasks.  
+        A selection of work-in-progress tools for various spatial processing tasks.
 
 
             * [**Slice-to-volume alignment**](./spm.tools.spatial.slice2vol.md)  
@@ -614,7 +609,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **TSSS**  
-        Temporal Signal Space Separation (TSSS) toolbox  
+        Temporal Signal Space Separation (TSSS) toolbox
 
 
             * [**TSSS denoising**](./spm.tools.tsss.tsss.md)  
