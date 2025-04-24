@@ -74,7 +74,7 @@ matlabbatch{4}.spm.spatial.preproc.warp.reg = [0 0.001 0.5 0.05 0.2];
 matlabbatch{4}.spm.spatial.preproc.warp.affreg = 'mni';
 matlabbatch{4}.spm.spatial.preproc.warp.fwhm = 0;
 matlabbatch{4}.spm.spatial.preproc.warp.samp = 3;
-matlabbatch{4}.spm.spatial.preproc.warp.write = [0 0];
+matlabbatch{4}.spm.spatial.preproc.warp.write = [0 1];
 matlabbatch{4}.spm.spatial.preproc.warp.vox = NaN;
 matlabbatch{4}.spm.spatial.preproc.warp.bb = [NaN NaN NaN
                                               NaN NaN NaN];
@@ -187,7 +187,7 @@ for i = 1:numel(sub)
     matlabbatch{4}.spm.spatial.preproc.warp.affreg = 'mni';
     matlabbatch{4}.spm.spatial.preproc.warp.fwhm = 0;
     matlabbatch{4}.spm.spatial.preproc.warp.samp = 3;
-    matlabbatch{4}.spm.spatial.preproc.warp.write = [0 0];
+    matlabbatch{4}.spm.spatial.preproc.warp.write = [0 1];
     matlabbatch{4}.spm.spatial.preproc.warp.vox = NaN;
     matlabbatch{4}.spm.spatial.preproc.warp.bb = [NaN NaN NaN
                                                   NaN NaN NaN];
