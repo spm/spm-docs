@@ -25,12 +25,9 @@ Various options for writing normalised images.
 
     * **Interpolation** (choose from the menu)  
     The method by which the images are sampled when being written in a different space. (Note that Inf or NaN values are treated as zero, rather than as missing data)   
-        Nearest Neighbour:   
-          - Fastest, but not normally recommended.   
-        Trilinear Interpolation:   
-          - OK for PET, realigned fMRI, or segmentations   
-        B-spline Interpolation:   
-          - Better quality (but slower) interpolation, especially with higher degree splines. Can produce values outside the original range (e.g. small negative values from an originally all positive image).   
+        - Nearest Neighbour       - Fastest, but not normally recommended.   
+        - Trilinear Interpolation - OK for PET, realigned fMRI, or segmentations   
+        - B-spline Interpolation  - Better quality (but slower) interpolation, especially with higher degree splines. Can produce values outside the original range (e.g. small negative values from an originally all positive image).   
 
     * **Filename Prefix** (enter text)  
-    Specify the string to be prepended to the filenames of the normalised image file(s). Default prefix is 'w'.   
+    Specify the string to be prepended to the filenames of the normalised image file(s). Default prefix is ``w``.   

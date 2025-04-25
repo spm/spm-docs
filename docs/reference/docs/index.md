@@ -7,14 +7,14 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
     * **Temporal**  
-    Temporal pre-processing functions.   
+    Temporal pre-processing functions for fMRI.   
 
 
         * [**Slice Timing**](./spm.temporal.st.md)  
 
 
     * **Spatial**  
-    Spatial pre-processing functions.   
+    Spatial pre-processing functions for image data.   
 
 
         * **Realign**  
@@ -66,7 +66,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
     * **Stats**  
-    Statistical modelling and inference functions.   
+    Statistical modelling and inference functions for image data.   
 
 
         * [**fMRI model specification**](./spm.stats.fmri_spec.md)  
@@ -376,7 +376,7 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **Import**  
-        Import.   
+        Tools for converting image data from various other file formats into NIfTI.   
 
 
             * [**DICOM Import**](./spm.util.import.dicom.md)  

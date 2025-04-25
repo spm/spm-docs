@@ -1,8 +1,8 @@
 # Get Bounding Box  
 Determine the bounding box of an image.   
-This is the [2 x 3] array of the minimum and maximum X, Y, and Z coordinates (in mm),    
-BB = [min_X min_Y min_Z   
-      max_X max_Y max_Z]   
+This is the 2 x 3 array of the minimum and maximum X, Y, and Z coordinates (in mm),    
+``BB = [min_X min_Y min_Z   
+      max_X max_Y max_Z]``   
 
 * **Image** (select files)  
 Image for which to determine bounding box.   

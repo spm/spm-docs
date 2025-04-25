@@ -29,8 +29,8 @@ Data sessions to unwarp.
         * **Images** (select files)  
         Select scans for this session. In the rigid registration step, the sessions are first realigned to each other, by aligning the first scan from each session to the first scan of the first session.  Then the images within each session are aligned to the first image of the session. The parameter estimation is performed this way because it is assumed (rightly or not) that there may be systematic differences in the images between sessions.   
 
-        * **Voxel displacement map (vdm*)** (select files)  
-        Select pre-calculated voxel displacement map, or leave empty for no  phase correction. The vdm* file is assumed to be already in alignment with the first scan of the first session.   
+        * **Voxel displacement map (vdm)** (select files)  
+        Select pre-calculated voxel displacement map, or leave empty for no  phase correction. The vdm file is assumed to be already in alignment with the first scan of the first session.   
 
 * **Estimation Options**   
 Various registration options that could be modified to improve the results. Whenever possible, the authors of SPM try to choose reasonable settings, but sometimes they can be improved.   
