@@ -49,7 +49,7 @@ How to store the estimated DCMs. The options are:
 
 * **Estimation type** (choose from the menu)  
 Full + BMR: Estimates the full (first) model for each subject then uses Bayesian Model Reduction (BMR) to rapidly infer the evidence / parameters for any subsequent nested models.   
-Full + BMR PEB: Iteratively estimates the full (first) model for each subject, then sets the priors on eacheach parameter to the group mean (from a PEB model)then re-estimates. This improves estimation by overcoming local optima, but takes longer.   
+Full + BMR PEB: Iteratively estimates the full (first) model for each subject, then sets the priors on each parameter to the group mean (from a PEB model) then re-estimates. This improves estimation by overcoming local optima, but takes longer.   
 Full: Estimates all models individually. Provided for backward compatibility.   
 None: Creates a group level DCM file without performing estimation   
 

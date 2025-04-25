@@ -37,7 +37,7 @@ Threshold on condition number applied for basis regularisation
 
 * **Output space** (choose from the menu)  
 Determines whether the output file is in sensor space   
-or has virtual montage trasforming to SSS space.   
+or has virtual montage transforming to SSS space.   
 
 * **Filename Prefix** (enter text)  
 Specify the string to be prepended to the filenames of the output dataset. Default prefix is 'tsss_'.   

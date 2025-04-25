@@ -63,7 +63,7 @@ If not then the extra dimension is physically removed.
                 Locations for the VOI in MNI coordinates   
 
                 * **Orientation** (enter text)  
-                Source orientatons (only for single points, leave zeros for unoriented)   
+                Source orientations (only for single points, leave zeros for unoriented)   
 
             * **Mask VOI**   
 
@@ -83,4 +83,4 @@ If not then the extra dimension is physically removed.
 Normalise the lead fields to yield array gain beamformer   
 
 * **Visualise head model and sources** (choose from the menu)  
-Visualise head model and sourses to verify that everythin was done correctly   
+Visualise head model and sources to verify that everything was done correctly   

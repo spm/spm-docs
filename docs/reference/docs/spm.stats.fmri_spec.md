@@ -201,7 +201,7 @@ Masking threshold, defined as proportion of globals.
 * **Explicit mask** (select files)  
 Specify an image for explicitly masking the analysis.    
 If masking is not required, you can leave this field empty.   
-A sensible option here is to use a segmention of structural images to specify a within-brain mask. If you select that image as an explicit mask then only those voxels in the brain will be analysed. This both speeds the estimation and restricts SPMs/PPMs to within-brain voxels.   
+A sensible option here is to use a segmentation of structural images to specify a within-brain mask. If you select that image as an explicit mask then only those voxels in the brain will be analysed. This both speeds the estimation and restricts SPMs/PPMs to within-brain voxels.   
 
 * **Serial correlations** (choose from the menu)  
 Serial correlations in fMRI time series due to aliased biorhythms and unmodelled neuronal activity can be accounted for using an autoregressive AR(1) model during Classical (ReML) parameter estimation.     

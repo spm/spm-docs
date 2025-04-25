@@ -33,7 +33,7 @@ Input arguments necessary for performing source space analysis
     * **Coordinate systems** (select files)  
     json file describing the coordinate systems of fiducials and sensors. The format of this file should conform to the BIDS standard for coordsystem.json files   
 
-    * **Sensor positins** (select files)  
+    * **Sensor positions** (select files)  
     tsv file giving coordinates for labelled sensors   
 
     * **Individual structural image** (select files)  
@@ -61,4 +61,4 @@ Input arguments necessary for performing source space analysis
     Select the head model type to use for MEG (if present)   
 
     * **Compute Lead Field** (enter text)  
-    If value is set to 1 then a lead field will be compted and saved   
+    If value is set to 1 then a lead field will be computed and saved   

@@ -7,7 +7,7 @@ These are the images that are used by the calculator.  They are referred to as `
 
 * **Output Filename** (enter text)  
 The output image is written to current working directory unless a valid full pathname is given. If a path name is given here, the output directory setting will be ignored.   
-If the field is left empty then the name of the 1st input image, preprended with 'i', is used (change this letter in the spm_defaults if necessary).   
+If the field is left empty then the name of the 1st input image, prepended with 'i', is used (change this letter in the spm_defaults if necessary).   
 
 * **Output Directory** (select files)  
 Files produced by this function will be written into this output directory. If no directory is given, images will be written to current working directory. If both output filename and output directory contain a directory, then output filename takes precedence.   

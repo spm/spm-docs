@@ -33,7 +33,7 @@ Choose one of the two options how to define trials.
     Epoch the data in arbitrary fixed length trials (e.g. for spectral analysis).   
 
         * **Trial length** (enter text)  
-        Arbitary trial length [ms].   
+        Arbitrary trial length [ms].   
 
         * **Condition label** (enter text)  
 

@@ -39,10 +39,10 @@ This is only used for batches starting with the Data module.
         * **Maximal size of basin** (enter text)  
         bla bla bla   
 
-        * **First ratio between correlation and geodesic based ditances** (enter text)  
+        * **First ratio between correlation and geodesic based distances** (enter text)  
         bla bla bla   
 
-        * **Second ratio between correlation and geodesic based ditances** (enter text)  
+        * **Second ratio between correlation and geodesic based distances** (enter text)  
         bla bla bla   
 
         * **Cluster method** (choose an option)  

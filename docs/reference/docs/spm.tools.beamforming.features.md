@@ -127,7 +127,7 @@ When fusing, set cross-terms between modalities to zero
             * **Minka truncation**   
             Use Bayesian algorithm to determine dimensionality   
 
-    * **Tichonov regularisation**   
+    * **Tikhonov regularisation**   
 
         * **Dimensionality** (enter text)  
         True known data rank   

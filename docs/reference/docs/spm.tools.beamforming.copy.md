@@ -1,5 +1,5 @@
 # Copy analysis  
-Make a copy of existing anallysis   
+Make a copy of existing analysis   
 
 * **BF.mat file** (select files)  
 Select BF.mat file.   

@@ -64,7 +64,7 @@ Choose whether to use standard or custom inversion parameters.
         * **Patch smoothness** (enter text)  
         Width of priors in cortex arb units (see inverse.smoothmm to see FWHM mm   
 
-        * **Selction of winning model** (choose from the menu)  
+        * **Selection of winning model** (choose from the menu)  
         How to get the final current density estimate from multiple iterations   
 
         * **Number of spatial modes** (enter text)  

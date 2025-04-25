@@ -76,10 +76,10 @@ Select BF.mat file.
         * **Keep oriented leadfields** (choose from the menu)  
 
         * **Identity source covariance** (choose from the menu)  
-        Assumes sources are indepedent and identically distributed, equivalent to a Bayesian minimum norm estimation. This option bypasses correlated source mode   
+        Assumes sources are independent and identically distributed, equivalent to a Bayesian minimum norm estimation. This option bypasses correlated source mode   
 
         * **Correlated & homologous sources** (choose from the menu)  
-        Prior matrix is modified so to account for power in a location and its correlated partner, allowing for correlated sources normally suppressed by beamformers to be reconstructed. Correlated pairs can be definied in a matrix(see below) or automatically guessed by looking for the mirror along the saggital plane.   
+        Prior matrix is modified so to account for power in a location and its correlated partner, allowing for correlated sources normally suppressed by beamformers to be reconstructed. Correlated pairs can be defined in a matrix(see below) or automatically guessed by looking for the mirror along the sagittal plane.   
 
         * **Only correlated sources** (choose from the menu)  
         Specifies whether the correlated prior should be considered on their own (yes) or in combination with the uncorrelated priors (no).   
@@ -88,10 +88,10 @@ Select BF.mat file.
         Sets the correlated pairs to be on the diagonal (default)of the prior matrix or off the diagonal, which is closer to how MSP behaves when specifying correlated priors. or both simultaneously   
 
         * **Prior combination method** (choose from the menu)  
-        How should we combine the correlated and uncorrelated priors (assuming we have both) +SUM: simple addition of the two priors to make one matrix. +REML: Two seperate priors, where the ReMLoptimisation will scale them automatically. (Default: sum)   
+        How should we combine the correlated and uncorrelated priors (assuming we have both) +SUM: simple addition of the two priors to make one matrix. +REML: Two separate priors, where the ReMLoptimisation will scale them automatically. (Default: sum)   
 
         * **Matrix of correlated pairs** (select files)  
-        [OPTIONAL] BF.mat file containing a binary adjacency matrix of correlated pairs. If a matrix is not supplied, it will automatically look for a the homologous regions.TIP: If you want a source to not be correlated, pair it with itself (i.e. put a 1 on the diaconal element.   
+        [OPTIONAL] BF.mat file containing a binary adjacency matrix of correlated pairs. If a matrix is not supplied, it will automatically look for a the homologous regions.TIP: If you want a source to not be correlated, pair it with itself (i.e. put a 1 on the diagonal element.   
 
         * **Hyperprior optimisation** (choose from the menu)  
         Model fitting via ReML. Select loose for (relatively) unrestricted sweep of the hyperpriors whereas strict mode forces the them to follow a rule of the noise being ~1/100th the magnitide of the sources   

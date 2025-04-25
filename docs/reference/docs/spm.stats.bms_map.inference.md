@@ -37,7 +37,7 @@ Second option: PPM + EPM = xppm.<ext> + epm.<ext> (Expected Posterior Probabilit
 Third option: PPM + EPM + Alpha = xppm.<ext> + epm.<ext> + alpha.<ext> (PPM, EPM and Map of Dirichlet Parameters) for each model.   
 
 * **Mask Image** (select files)  
-Specify an image for explicitly masking the analysis. (optional). A sensible option here is to use a segmention of structural images to specify a within-brain mask. If you select that image as an explicit mask then only those voxels in the brain will be analysed. This both speeds the inference process and restricts BMS to within-brain voxels. Alternatively, if such structural images are unavailble or no masking is required, then leave this field empty.   
+Specify an image for explicitly masking the analysis. (optional). A sensible option here is to use a segmentation of structural images to specify a within-brain mask. If you select that image as an explicit mask then only those voxels in the brain will be analysed. This both speeds the inference process and restricts BMS to within-brain voxels. Alternatively, if such structural images are unavailable or no masking is required, then leave this field empty.   
 
 * **Number of samples** (enter text)  
 Number of samples used to compute exceedance probabilities (default: 1e6). To make computations faster reduce the number of samples when number of models is bigger than 3.   

@@ -33,4 +33,4 @@ If can(onical), the generated surfaces will have a latent code in 0 +/- Zrange
 The random seed that defines trajectory   
 
 * **Delete random seed directory** (choose from the menu)  
-Will force delete of any existin random seed files   
+Will force delete of any existing random seed files   
