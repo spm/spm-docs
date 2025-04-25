@@ -8,52 +8,39 @@ Select data set file.
 Select whether you want to convert to continuous or epoched data.   
 
     * **Continuous** (choose an option)  
-    .   
 
         * **Time window** (enter text)  
         start and end of epoch   
 
         * **Read all**   
-        .   
 
     * **Epoched** (choose an option)  
-    .   
 
         * **Trials defined in data**   
-        .   
 
         * **Trial File** (select files)  
-        .   
 
         * **Define trial**   
-        .   
 
             * **Time window** (enter text)  
             start and end of epoch   
 
             * **Trial definitions** (create a list of items)  
-            .   
 
                 * **Trial**   
-                .   
 
                     * **Condition label** (enter text)  
-                    .   
 
                     * **Event type** (enter text)  
-                    .   
 
                     * **Event value** (enter text)  
-                    .   
 
     * **Header only**   
-    .   
 
 * **Channel selection** (create a list of items)  
 Channel selection.   
 
     * **All**   
-    .   
 
     * **Select channels by type** (choose from the menu)  
     Select channels by type.   
@@ -65,7 +52,6 @@ Channel selection.
     Enter a regular expression for matching multiple channel labels.   
 
     * **Channel file** (select files)  
-    .   
 
 * **Output filename** (enter text)  
 Choose filename. Leave empty to add 'spmeeg_' to the input file name.   

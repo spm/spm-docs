@@ -12,10 +12,8 @@ Select the directory where the files containing the results from BMS (BMS.mat) w
 Select the log. evidence maps for each model, session and subject.   
 
     * **Subject** (create a list of items)  
-    .   
 
         * **Session**   
-        .   
 
             * **Models** (select files)  
             Specify the log. evidence map for each model. Log-evidence maps should be specified in the same order for each subject and session.   

@@ -20,7 +20,6 @@ Select task(s).
         Channel selection.   
 
             * **All**   
-            .   
 
             * **Select channels by type** (choose from the menu)  
             Select channels by type.   
@@ -32,7 +31,6 @@ Select task(s).
             Enter a regular expression for matching multiple channel labels.   
 
             * **Channel file** (select files)  
-            .   
 
         * **New channel type** (choose from the menu)  
         Select the new channel type to set.   
@@ -86,7 +84,6 @@ Select task(s).
         Match EEG fiducials to MEG fiducials (only for multimodal datasets).   
 
             * **Not necessary**   
-            .   
 
             * **Fiducials** (create a list of items)  
             Specify at least 3 matching pairs of fiducials to coregister the surface points to the sensors.   
@@ -111,7 +108,6 @@ Select task(s).
             Channel selection.   
 
                 * **All**   
-                .   
 
                 * **Custom channel** (enter text)  
                 Enter a single channel name.   
@@ -120,7 +116,6 @@ Select task(s).
                 Enter a regular expression for matching multiple channel labels.   
 
                 * **Channel file** (select files)  
-                .   
 
         * **Select montage file** (select files)  
         Select montage file that specifies the referencing.   
@@ -141,7 +136,6 @@ Select task(s).
         Channel selection.   
 
             * **All**   
-            .   
 
             * **Select channels by type** (choose from the menu)  
             Select channels by type.   
@@ -153,7 +147,6 @@ Select task(s).
             Enter a regular expression for matching multiple channel labels.   
 
             * **Channel file** (select files)  
-            .   
 
         * **Status to set** (choose from the menu)  
         Select the new channel type to set.   
@@ -166,7 +159,6 @@ Select task(s).
     taking into account bad channels.   
 
         * **Output file name** (enter text)  
-        .   
 
     * **Sort conditions** (choose an option)  
     Specify conditions order.   
@@ -175,7 +167,6 @@ Select task(s).
         Specify the conditions order manually as a list.   
 
             * **Condition label** (enter text)  
-            .   
 
         * **Read from conditions file** (select files)  
         Select a mat-file with cell array of condition labels.   

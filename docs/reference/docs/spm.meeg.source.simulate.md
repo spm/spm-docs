@@ -14,13 +14,11 @@ Output file prefix
 What conditions to include?   
 
     * **All**   
-    .   
 
     * **Conditions** (create a list of items)  
     Specify the labels of the conditions to be replaced by simulated data   
 
         * **Condition label** (enter text)  
-        .   
 
 * **Use inversion or define sources** (choose an option)  
 Use existing current density estimate to generate data or generate from defined sources   

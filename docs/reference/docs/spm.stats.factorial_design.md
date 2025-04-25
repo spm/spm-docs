@@ -12,7 +12,6 @@ Various data and parameters need to be supplied to specify the design (1) the im
 Select a directory where the SPM.mat file containing the specified design matrix will be written.   
 
 * **Design** (choose an option)  
-.   
 
     * **One-sample t-test**   
     One-sample t-test.   
@@ -61,7 +60,6 @@ Select a directory where the SPM.mat file containing the specified design matrix
     Paired t-test.   
 
         * **Pairs** (create a list of items)  
-        .   
 
             * **Pair**   
             Add a new pair of scans to your experimental design.   
@@ -154,7 +152,6 @@ Select a directory where the SPM.mat file containing the specified design matrix
     One-way Analysis of Variance (ANOVA) - within subject.   
 
         * **Subjects** (create a list of items)  
-        .   
 
             * **Subject**   
             Enter data and conditions for a new subject.   
@@ -163,7 +160,6 @@ Select a directory where the SPM.mat file containing the specified design matrix
                 Select the images to be analysed.  They must all have the same image dimensions, orientation, voxel size etc.   
 
                 * **Conditions** (enter text)  
-                .   
 
         * **Independence** (choose from the menu)  
         By default, the measurements are assumed to be dependent between levels.    
@@ -310,10 +306,8 @@ Select a directory where the SPM.mat file containing the specified design matrix
                 Selecting YES will specify 'ANCOVA-by-factor' regressors. This includes eg. 'Ancova by subject' or 'Ancova by effect'. These options allow eg. different subjects to have different relationships between local and global measurements.    
 
         * **Specify Subjects or all Scans & Factors** (choose an option)  
-        .   
 
             * **Subjects** (create a list of items)  
-            .   
 
                 * **Subject**   
                 Enter data and conditions for a new subject.   
@@ -322,7 +316,6 @@ Select a directory where the SPM.mat file containing the specified design matrix
                     Select the images to be analysed.  They must all have the same image dimensions, orientation, voxel size etc.   
 
                     * **Conditions** (enter text)  
-                    .   
 
             * **Specify all**   
             Specify (i) all scans in one go and (ii) all conditions using a factor matrix, I. This option is for 'power users'. The matrix I must have four columns and as as many rows as scans. It has the same format as SPM's internal variable SPM.xX.I.    
@@ -338,7 +331,6 @@ Select a directory where the SPM.mat file containing the specified design matrix
                 Specify factor/level matrix as a nscan-by-4 matrix. Note that the first column of I is reserved for the internal replication factor and must not be used for experimental factors.   
 
         * **Main effects & Interactions** (create a list of items)  
-        .   
 
             * **Main effect**   
             Add a main effect to your design matrix.   

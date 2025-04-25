@@ -14,10 +14,8 @@ User-specified information about this inversion
 Create head meshes for building the head model   
 
     * **Mesh source** (choose an option)  
-    .   
 
         * **Template**   
-        .   
 
         * **Individual structural image** (select files)  
         Select the subject's structural image   
@@ -47,7 +45,6 @@ Create head meshes for building the head model
 Coregistration   
 
     * **Specify coregistration parameters**   
-    .   
 
         * **Fiducials** (create a list of items)  
         Specify fiducials for coregistration (at least 3 fiducials need to be specified)   
@@ -59,7 +56,6 @@ Coregistration
                 Label of a fiducial point (as specified in the M/EEG dataset)   
 
                 * **How to specify?** (choose an option)  
-                .   
 
                     * **Select from a list** (choose from the menu)  
                     Select the corresponding fiducial point from a pre-specified list.   

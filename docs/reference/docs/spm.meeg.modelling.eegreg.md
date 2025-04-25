@@ -8,7 +8,6 @@ Select the M/EEG mat file.
 Generation method   
 
     * **Channel data**   
-    .   
 
         * **Regressor dataset name** (select files)  
         Select the M/EEG mat file containing regressor data   
@@ -17,7 +16,6 @@ Generation method
         Channel selection.   
 
             * **All**   
-            .   
 
             * **Select channels by type** (choose from the menu)  
             Select channels by type.   
@@ -29,20 +27,17 @@ Generation method
             Enter a regular expression for matching multiple channel labels.   
 
             * **Channel file** (select files)  
-            .   
 
         * **Time window** (enter text)  
         Start and stop of the time window [ms]. (Used only for the epoched case)   
 
     * **CTF head movements**   
-    .   
 
         * **Movement dataset name** (select files)  
         Select the M/EEG mat file containing continuous head localisation data.   
         This might or might not be the same as the dataset being analysed.   
 
     * **Time-frequency phase**   
-    .   
 
         * **TF phase dataset name** (select files)  
         Select the M/EEG mat file containing TF phase data   
@@ -51,7 +46,6 @@ Generation method
         Channel selection.   
 
             * **All**   
-            .   
 
             * **Select channels by type** (choose from the menu)  
             Select channels by type.   
@@ -63,7 +57,6 @@ Generation method
             Enter a regular expression for matching multiple channel labels.   
 
             * **Channel file** (select files)  
-            .   
 
         * **Time window** (enter text)  
         Start and stop of the time window [ms]. (Used only for the epoched case)   
@@ -82,7 +75,6 @@ Generation method
         Specify the string to be used as regressor name.   
 
     * **Time-frequency power**   
-    .   
 
         * **TF power dataset name** (select files)  
         Select the M/EEG mat file containing TF power data   
@@ -91,7 +83,6 @@ Generation method
         Channel selection.   
 
             * **All**   
-            .   
 
             * **Select channels by type** (choose from the menu)  
             Select channels by type.   
@@ -103,7 +94,6 @@ Generation method
             Enter a regular expression for matching multiple channel labels.   
 
             * **Channel file** (select files)  
-            .   
 
         * **Time window** (enter text)  
         Start and stop of the time window [ms]. (Used only for summarised epoched cases)   

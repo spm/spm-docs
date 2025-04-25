@@ -14,7 +14,6 @@ Start and stop of the frequency window (Hz).
 Channel selection.   
 
     * **All**   
-    .   
 
     * **Select channels by type** (choose from the menu)  
     Select channels by type.   
@@ -26,7 +25,6 @@ Channel selection.
     Enter a regular expression for matching multiple channel labels.   
 
     * **Channel file** (select files)  
-    .   
 
 * **Filename Prefix** (enter text)  
 Specify the string to be prepended to the filenames of the output dataset. Default prefix is 'p'.   

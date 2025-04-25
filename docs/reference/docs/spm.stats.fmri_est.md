@@ -129,7 +129,6 @@ To use option (3) you must have already estimated the model using option (1). Th
         If you wish to use these contrast images for a second-level analysis then you will need to spatially smooth them to take into account between-subject differences in functional anatomy ie. the fact that one persons V5 may be in a different position than another's.   
 
             * **Simple contrast**   
-            .   
 
                 * **Name** (enter text)  
                 Name of contrast eg. 'Positive Effect'   

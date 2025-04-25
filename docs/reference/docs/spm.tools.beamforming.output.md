@@ -5,16 +5,13 @@ Compute output measures
 Select BF.mat file.   
 
 * **Output method** (choose an option)  
-.   
 
     * **Phase Lag Index**   
-    .   
 
         * **Summary method** (choose from the menu)  
         How to summarise sources in the reference ROI   
 
         * **Filter reconstructed sources**   
-        .   
 
             * **Highpass cutoff** (enter text)  
             Highpass filter cutoff (4th order butterworth)   
@@ -26,7 +23,6 @@ Select BF.mat file.
         Select the source VOI from which you would like to compute the PLI   
 
             * **VOI**   
-            .   
 
                 * **Label** (enter text)  
                 Label for the reference VOI   
@@ -38,7 +34,6 @@ Select BF.mat file.
                 Radius (in mm) for the reference VOIs (leave 0 for single point)   
 
             * **Mask VOI**   
-            .   
 
                 * **Label** (enter text)  
                 Label for the reference VOI   
@@ -56,19 +51,15 @@ Select BF.mat file.
                 Select the M/EEG data file   
 
     * **cross-frequency GLM image**   
-    .   
 
         * **What conditions to include?** (choose an option)  
-        .   
 
             * **All**   
-            .   
 
             * **Conditions** (create a list of items)  
             Specify the labels of the conditions to be included in the inversion   
 
                 * **Condition label** (enter text)  
-                .   
 
         * **Trials same as for filters** (choose from the menu)  
         Take the same trials as used for filter computation   
@@ -93,13 +84,11 @@ Select BF.mat file.
         Frequency resolution for amplitude computation   
 
         * **Reference type** (choose an option)  
-        .   
 
             * **Within source.**   
             Within source PAC (no reference)   
 
             * **Reference channel**   
-            .   
 
                 * **Channel name** (enter text)  
                 Reference channel name.   
@@ -120,16 +109,13 @@ Select BF.mat file.
         To specify details that will be added to the output images file names.   
 
     * **DICS image**   
-    .   
 
         * **Reference type** (choose an option)  
-        .   
 
             * **Power (no reference)**   
             Compute power image   
 
             * **Reference channel**   
-            .   
 
                 * **Channel name** (enter text)  
                 Reference channel name.   
@@ -144,16 +130,13 @@ Select BF.mat file.
         How to summarise the power for vector beamformer   
 
         * **What conditions to include?** (choose an option)  
-        .   
 
             * **All**   
-            .   
 
             * **Conditions** (create a list of items)  
             Specify the labels of the conditions to be included in the inversion   
 
                 * **Condition label** (enter text)  
-                .   
 
         * **Trials same as for filters** (choose from the menu)  
         Take the same trials as used for filter computation   
@@ -163,7 +146,6 @@ Select BF.mat file.
         Time windows (in ms)   
 
         * **Time contrast** (enter text)  
-        .   
 
         * **Take log of power** (choose from the menu)  
         Take the log of power before computing time contrast   
@@ -185,10 +167,8 @@ Select BF.mat file.
         Specify modality   
 
     * **Filter correlations image**   
-    .   
 
         * **Seed specification** (choose an option)  
-        .   
 
             * **Seed MNI coordinates** (enter text)  
             Locations for the seed in MNI coordinates (closest point is chosen   
@@ -203,7 +183,6 @@ Select BF.mat file.
         Specify modality   
 
     * **Gain image**   
-    .   
 
         * **Output type** (choose from the menu)  
         The calculation that should be performed   
@@ -212,25 +191,20 @@ Select BF.mat file.
         Specify modality   
 
     * **Kurtosis image**   
-    .   
 
         * **What conditions to include?** (choose an option)  
-        .   
 
             * **All**   
-            .   
 
             * **Conditions** (create a list of items)  
             Specify the labels of the conditions to be included in the inversion   
 
                 * **Condition label** (enter text)  
-                .   
 
         * **Modality** (choose from the menu)  
         Specify modality   
 
     * **Mv image**   
-    .   
 
         * **Design matrix parameters** (choose an option)  
         Choose whether to load custom design   
@@ -242,10 +216,8 @@ Select BF.mat file.
             Define custom settings for the inversion   
 
                 * **What conditions to include?** (choose an option)  
-                .   
 
                     * **All**   
-                    .   
 
                     * **Conditions** (create a list of items)  
                     Specify the labels of the conditions to be included in the inversion   
@@ -270,19 +242,15 @@ Select BF.mat file.
         Specify modality   
 
     * **PAC image**   
-    .   
 
         * **What conditions to include?** (choose an option)  
-        .   
 
             * **All**   
-            .   
 
             * **Conditions** (create a list of items)  
             Specify the labels of the conditions to be included in the inversion   
 
                 * **Condition label** (enter text)  
-                .   
 
         * **Trials same as for filters** (choose from the menu)  
         Take the same trials as used for filter computation   
@@ -308,13 +276,11 @@ Select BF.mat file.
         Frequency resolution for amplitude computation   
 
         * **Reference type** (choose an option)  
-        .   
 
             * **Within source.**   
             Within source PAC (no reference)   
 
             * **Reference channel**   
-            .   
 
                 * **Channel name** (enter text)  
                 Reference channel name.   
@@ -335,19 +301,15 @@ Select BF.mat file.
         To specify details that will be added to the output images file names.   
 
     * **Power correlations image**   
-    .   
 
         * **What conditions to include?** (choose an option)  
-        .   
 
             * **All**   
-            .   
 
             * **Conditions** (create a list of items)  
             Specify the labels of the conditions to be included in the inversion   
 
                 * **Condition label** (enter text)  
-                .   
 
         * **Trials same as for filters** (choose from the menu)  
         Take the same trials as used for filter computation   
@@ -386,19 +348,15 @@ Select BF.mat file.
         Specify modality   
 
     * **Power image**   
-    .   
 
         * **What conditions to include?** (choose an option)  
-        .   
 
             * **All**   
-            .   
 
             * **Conditions** (create a list of items)  
             Specify the labels of the conditions to be included in the inversion   
 
                 * **Condition label** (enter text)  
-                .   
 
         * **Trials same as for filters** (choose from the menu)  
         Take the same trials as used for filter computation   
@@ -411,7 +369,6 @@ Select BF.mat file.
         Frequency windows within which to power changes over (Hz) .N.B. Check this lies within covariance window   
 
         * **Time contrast** (enter text)  
-        .   
 
         * **Take log of power** (choose from the menu)  
         Take the log of power before computing time contrast   
@@ -430,13 +387,11 @@ Select BF.mat file.
         Specify modality   
 
     * **Sensitivity image**   
-    .   
 
         * **Channel selection** (create a list of items)  
         Channel selection.   
 
             * **All**   
-            .   
 
             * **Select channels by type** (choose from the menu)  
             Select channels by type.   
@@ -448,13 +403,11 @@ Select BF.mat file.
             Enter a regular expression for matching multiple channel labels.   
 
             * **Channel file** (select files)  
-            .   
 
         * **Modality** (choose from the menu)  
         Specify modality   
 
     * **Source montage**   
-    .   
 
         * **Summary method** (choose from the menu)  
         How to summarise sources in the ROI   
@@ -464,7 +417,6 @@ Select BF.mat file.
         Only the sources present in the original source space can be used at this stage   
 
             * **VOI**   
-            .   
 
                 * **Label** (enter text)  
                 Label for the VOI   
@@ -476,7 +428,6 @@ Select BF.mat file.
                 Radius (in mm) for the VOIs (leave 0 for single point)   
 
             * **Mask VOI**   
-            .   
 
                 * **Label** (enter text)  
                 Label for the VOI   
@@ -485,7 +436,6 @@ Select BF.mat file.
                 Select a mask image   
 
     * **Source data (robust)**   
-    .   
 
         * **Summary method** (choose from the menu)  
         How to summarise sources in the ROI   

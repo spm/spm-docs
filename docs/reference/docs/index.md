@@ -124,7 +124,6 @@ The current release is designed for the analysis of fMRI, PET, SPECT, EEG and ME
 
 
         * **DCM specification**  
-        .   
 
 
             * **DCM for fMRI**  

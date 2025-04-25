@@ -5,7 +5,6 @@ M/EEG convolution modelling
 Channel selection.   
 
     * **All**   
-    .   
 
     * **Select channels by type** (choose from the menu)  
     Select channels by type.   
@@ -17,7 +16,6 @@ Channel selection.
     Enter a regular expression for matching multiple channel labels.   
 
     * **Channel file** (select files)  
-    .   
 
 * **Timing parameters**   
 Timing parameters   
@@ -51,7 +49,6 @@ The design matrix consists of one or more separable, session-specific partitions
             Choose the way to specify events for building regressors.   
 
                 * **Specify manually**   
-                .   
 
                     * **Onsets** (enter text)  
                     Specify a vector of onset times for this condition type.    
@@ -60,10 +57,8 @@ The design matrix consists of one or more separable, session-specific partitions
                     Specify the event durations. Epoch and event-related responses are modeled in exactly the same way but by specifying their different durations.  Events are specified with a duration of 0.  If you enter a single number for the durations it will be assumed that all trials conform to this duration. If you have multiple different durations, then the number must match the number of onset times.   
 
                 * **Take from dataset** (create a list of items)  
-                .   
 
                     * **Event**   
-                    .   
 
             * **Time Modulation** (choose from the menu)  
             This option allows for the characterisation of linear or nonlinear time effects. For example, 1st order modulation would model the stick functions and a linear change of the stick function heights over time. Higher order modulation will introduce further columns that contain the stick functions scaled by time squared, time cubed etc.   

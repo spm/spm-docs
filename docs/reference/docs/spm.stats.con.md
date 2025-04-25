@@ -189,7 +189,6 @@ For an F-contrast, SPM (spm_getSPM.m) writes the Extra Sum-of-Squares (the diffe
         Name of contrast.   
 
         * **Columns list** (enter text)  
-        .   
 
         * **Specification mode** (choose from the menu)  
         How to specify the reduced model.   
@@ -235,7 +234,6 @@ For an F-contrast, SPM (spm_getSPM.m) writes the Extra Sum-of-Squares (the diffe
             Assemble your contrast column by column.   
 
                 * **Contrast entry**   
-                .   
 
                     * **Contrast weight** (enter text)  
                     The contrast weight for the selected column.   

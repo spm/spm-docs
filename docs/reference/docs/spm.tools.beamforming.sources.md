@@ -11,10 +11,8 @@ Enter rank for MEG and EEG lead fields [MEG EEG]
 If not then the extra dimension is physically removed.   
 
 * **Source space type ** (choose an option)  
-.   
 
     * **Grid**   
-    .   
 
         * **Grid resolution** (enter text)  
         Select the resolution of the grid (in mm)   
@@ -26,16 +24,13 @@ If not then the extra dimension is physically removed.
         The boundary to which the grid is confined   
 
     * **Phantom Grid**   
-    .   
 
         * **Grid resolution** (enter text)  
         Select the resolution of the grid (in mm)   
 
     * **Cortical mesh**   
-    .   
 
         * **How to orient the sources** (choose from the menu)  
-        .   
 
         * **Downsample factor** (enter text)  
         A number that determines mesh downsampling   
@@ -48,25 +43,18 @@ If not then the extra dimension is physically removed.
         Flip the mesh relative to midsagittal plane.   
 
     * **Mni Coords**   
-    .   
 
         * **Pos coords** (enter text)  
-        .   
 
     * **Scalp mesh**   
-    .   
 
         * **How to orient the sources** (choose from the menu)  
-        .   
 
     * **VOIs in MNI space**   
-    .   
 
         * **VOIs** (create a list of items)  
-        .   
 
             * **VOI**   
-            .   
 
                 * **Label** (enter text)  
                 Label for the VOI   
@@ -78,7 +66,6 @@ If not then the extra dimension is physically removed.
                 Source orientatons (only for single points, leave zeros for unoriented)   
 
             * **Mask VOI**   
-            .   
 
                 * **Label** (enter text)  
                 Label for the VOI   

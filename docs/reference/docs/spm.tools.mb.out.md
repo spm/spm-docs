@@ -15,7 +15,6 @@ Specify whether INU corrected versions of the original images (with missing valu
 Specify whether spatially normalised versions of the INU corrected images (missing values filled in) should be written out.   
 
 * **Warped INU corrected** (choose from the menu)  
-.   
 
 * **INU** (choose from the menu)  
 Specify whether the estimated INU fields should be written out.   

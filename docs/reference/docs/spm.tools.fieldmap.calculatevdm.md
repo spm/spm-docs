@@ -9,7 +9,6 @@ Subjects or sessions for which individual field map data has been acquired.
     Data for this subject or field map session.   
 
         * **Field map** (choose an option)  
-        .   
 
             * **Presubtracted Phase and Magnitude Data**   
             Calculate a voxel displacement map (VDM) from presubtracted phase and magnitude field map data. This option expects a single magnitude image and a single phase image resulting from the subtraction of two phase images (where the subtraction is usually done automatically by the scanner software). The phase image will be scaled between +/- PI.   

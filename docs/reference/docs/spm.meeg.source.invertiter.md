@@ -8,16 +8,13 @@ Select the M/EEG mat files.
 Index of the cell in D.inv where the forward model can be found and the results will be stored.   
 
 * **What conditions to include?** (choose an option)  
-.   
 
     * **All**   
-    .   
 
     * **Conditions** (create a list of items)  
     Specify the labels of the conditions to be included in the inversion   
 
         * **Condition label** (enter text)  
-        .   
 
 * **Inversion parameters** (choose an option)  
 Choose whether to use standard or custom inversion parameters.   
@@ -95,7 +92,6 @@ Choose whether to use standard or custom inversion parameters.
             Input source locations as n x 3 matrix   
 
             * **Radius of VOI (mm)** (enter text)  
-            .   
 
         * **Output prefix to save a copy of inv structure** (enter text)  
         If this is supplied the original dataset will still be updated but new inverse structure with this name created   

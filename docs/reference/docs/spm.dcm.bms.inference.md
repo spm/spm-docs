@@ -12,10 +12,8 @@ Select the directory where the files containing the results from BMS (BMS.mat) w
 Select the DCM_*.mat file for each model, session and subject.   
 
     * **Subject** (create a list of items)  
-    .   
 
         * **Session**   
-        .   
 
             * **Models** (select files)  
             Select the DCM_*.mat file for each model. DCM_*.mat files (models) should be specified in the same order for each subject and session.   

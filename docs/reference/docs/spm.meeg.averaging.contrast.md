@@ -8,7 +8,6 @@ Select the EEG mat file.
 Each contrast defines a new condition in the output file.   
 
     * **Contrast**   
-    .   
 
         * **Contrast coefficients** (enter text)  
         Enter the contrast vector.   

@@ -5,10 +5,8 @@ View results
 Select BF.mat file.   
 
 * **What to view** (choose an option)  
-.   
 
     * **Glass Brain**   
-    .   
 
         * **Classic glass brain visualisation** (choose from the menu)  
         Use the classic glass brain visualisation, set to false if you want to try a new experimental version...   
@@ -29,7 +27,6 @@ Select BF.mat file.
         Threshold to a fraction of maximum (between 0 and 1)   
 
     * **Cortical Surface**   
-    .   
 
         * **Image Number** (enter text)  
         Which image from output to show   

@@ -8,7 +8,6 @@ Select the M/EEG mat file.
 Channel selection.   
 
     * **All**   
-    .   
 
     * **Select channels by type** (choose from the menu)  
     Select channels by type.   
@@ -20,7 +19,6 @@ Channel selection.
     Enter a regular expression for matching multiple channel labels.   
 
     * **Channel file** (select files)  
-    .   
 
 * **Frequencies of interest** (enter text)  
 Frequencies of interest (as a vector), if empty 1-48 with optimal frequency bins ~1 Hz or above resolution   
@@ -32,7 +30,6 @@ Time window (ms)
 Spectral estimation   
 
     * **Hilbert transform**   
-    .   
 
         * **Frequency resolution** (enter text)  
         Frequency resolution.   
@@ -40,7 +37,6 @@ Spectral estimation
         Either a single value or a vector of the same length as frequencies can be input   
 
         * **Filter**   
-        .   
 
             * **Filter type** (choose from the menu)  
             Select the filter type.   
@@ -59,7 +55,6 @@ Spectral estimation
         Set to N to subsample the time axis to every Nth sample (to reduce the dataset size).   
 
     * **Morlet wavelet transform**   
-    .   
 
         * **Number of wavelet cycles** (enter text)  
         Number of wavelet cycles (a.k.a. Morlet wavelet factor).   
@@ -75,7 +70,6 @@ Spectral estimation
         Set to N to subsample the time axis to every Nth sample (to reduce the dataset size).   
 
     * **Multi-taper**   
-    .   
 
         * **Taper** (choose from the menu)  
         Save taper as well as power   
@@ -92,7 +86,6 @@ Spectral estimation
         Either a single value or a vector of the same length as frequencies can be input   
 
     * **Spectrum**   
-    .   
 
         * **Taper** (choose from the menu)  
         Save taper as well as power   
