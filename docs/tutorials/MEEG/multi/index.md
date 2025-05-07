@@ -100,13 +100,11 @@ folder must be in your MATLAB path.
 Open the batch editor window by pressing ++"Batch"++ from the SPM Menu
 window. This opens the window shown below.
 
-<figure>
-<div class="center">
-<img src="../../../../assets/figures/manual/multi/figure1.png" style="width:120mm" />
-</div>
-<figcaption><em>Screenshot of the Batch Editor. The Module List, Current
-Module Window and Current Item Windows are identified. The cursor
-highlights how to save the pipeline as a batch and script.</em></figcaption>
+<figure style="text-align:center">
+  <img src="../../../assets/figures/manual/multi/figure1.png" style="width:120mm;" alt="Screenshot of the Batch Editor" />
+  <figcaption><em>Screenshot of the Batch Editor. The Module List, Current
+  Module Window and Current Item Windows are identified. The cursor
+  highlights how to save the pipeline as a batch and script.</em></figcaption>
 </figure>
 
 --8<-- "addons/abbreviations.md"
