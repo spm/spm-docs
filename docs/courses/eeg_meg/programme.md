@@ -4,6 +4,8 @@
 
 This is a draft programme of the upcoming online [SPM course for EEG and MEG](./index.md). The course will consist of lectures and practical workshops where attendees will be guided through analyses of different neuroimaging datasets. 
 
+**Organisers**: [Dr Alberto Mariola](https://profiles.ucl.ac.uk/98818-alberto-mariola) and [Dr Yulia Bezsdunova](https://profiles.ucl.ac.uk/99175-yulia-bezsudnova)
+
 ### Day 1 (19/05/25)
 
 | Time              | Title                           | Faculty                                |
@@ -11,7 +13,7 @@ This is a draft programme of the upcoming online [SPM course for EEG and MEG](./
 | 10:00 - 10:45     | Pre-course chat with the attendees                  | SPM faculty                         |
 | 10:45 - 11:00     | [SPM introduction and resources](https://youtu.be/jDGTJrX8W1Y?feature=shared)                         | [Prof Vladimir Litvak](https://profiles.ucl.ac.uk/10801-vladimir-litvak) |
 | 11:00 - 12:00     | [What are we measuring with M/EEG?](https://youtu.be/FhjTkeDhZ58?feature=shared)                    | [Dr Catharina Zich](https://www.ndcn.ox.ac.uk/team/catharina-zich)      |
-| 12:00 - 13:15     | Data preprocessing	                              | [Dr Alberto Mariola](https://profiles.ucl.ac.uk/98818-alberto-mariola) |
+| 12:00 - 13:15     | Data preprocessing	                              | [Dr Nicholas Alexander](https://profiles.ucl.ac.uk/74968-nicholas-alexander) |
 | *Break*                                                                               |
 | 14:00 - 15:10     | Data preprocessing - Demo                            | [Dr Michael Motoussis](https://profiles.ucl.ac.uk/36080-michael-moutoussis) |
 | 15:10 - 16:15     | General linear model (GLM) and classical inference | [Prof Martin Dietz](https://pure.au.dk/portal/en/persons/martin%40cfin.au.dk) |
@@ -54,7 +56,7 @@ This is a draft programme of the upcoming online [SPM course for EEG and MEG](./
 | Time              | Title                           | Faculty                                |
 | ----------------- | ------------------------------- | -------------------------------------- |
 | 10:00 - 12:00     | 1on1 Sessions with Students                    | SPM faculty                         |
-| 12:00 - 13:15 (parallel)     | Beginners refresh - Practical session      | SPM faculty             |
+| 12:00 - 13:15 (parallel)     | Beginners refresh - Practical session      | [Dr Jason Taylor](https://research.manchester.ac.uk/en/persons/jason.taylor) |
 | 12:00 - 13:15 (parallel)    | DCM for evoked responses - Practical session      | [Dr Ashley Tyrer](https://www.au.dk/en/ashley.tyrer@cfin.au.dk) |
 | *Break*                                                                               |
 | 14:00 - 15:00     | OP-MEG group meeting                      | [Dr Alberto Mariola](https://profiles.ucl.ac.uk/103112-pranay-yadav/about) |
