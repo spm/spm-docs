@@ -4,7 +4,7 @@
 
 This is a draft programme of the upcoming online [SPM course for EEG and MEG](./index.md). The course will consist of lectures and practical workshops where attendees will be guided through analyses of different neuroimaging datasets. 
 
-**Organisers**: [Dr Alberto Mariola](https://profiles.ucl.ac.uk/98818-alberto-mariola) and [Dr Yulia Bezsdunova](https://profiles.ucl.ac.uk/99175-yulia-bezsudnova)
+**Organisers**: Dr Alberto Mariola and [Dr Yulia Bezsdunova](https://profiles.ucl.ac.uk/99175-yulia-bezsudnova)
 
 ### Day 1 (19/05/25)
 
