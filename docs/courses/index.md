@@ -22,7 +22,7 @@ We are delighted to welcome visitors to our SPM courses every May and October. T
 
     23-25 April 2025, **in-person**. | Registration is closed.
 
-    October 2025, **online**. | More details will be announced soon.  
+    15-17 October 2025, **online**. | More details will be announced soon.  
     
 </div>
 
