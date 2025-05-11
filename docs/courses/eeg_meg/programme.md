@@ -4,7 +4,7 @@
 
 This is a draft programme of the upcoming online [SPM course for EEG and MEG](./index.md). The course will consist of lectures and practical workshops where attendees will be guided through analyses of different neuroimaging datasets. 
 
-**Organisers**: Dr Alberto Mariola and [Dr Yulia Bezsdunova](https://profiles.ucl.ac.uk/99175-yulia-bezsudnova)
+**Organisers**: [Dr Alberto Mariola](https://profiles.ucl.ac.uk/98818-alberto-mariola) and [Dr Yulia Bezsdunova](https://profiles.ucl.ac.uk/99175-yulia-bezsudnova)
 
 ### Day 1 (19/05/25)
 
@@ -59,7 +59,7 @@ This is a draft programme of the upcoming online [SPM course for EEG and MEG](./
 | 12:00 - 13:15 (parallel)     | Beginners refresh - Practical session      | [Dr Jason Taylor](https://research.manchester.ac.uk/en/persons/jason.taylor) |
 | 12:00 - 13:15 (parallel)    | DCM for evoked responses - Practical session      | [Dr Ashley Tyrer](https://www.au.dk/en/ashley.tyrer@cfin.au.dk) |
 | *Break*                                                                               |
-| 14:00 - 15:00     | OP-MEG group meeting                      | [Dr Alberto Mariola](https://profiles.ucl.ac.uk/103112-pranay-yadav/about) |
+| 14:00 - 15:00     | OP-MEG group meeting                      | [Dr Alberto Mariola](https://profiles.ucl.ac.uk/98818-alberto-mariola) |
 | 15:00 - 16:15     | [SPM-Python](https://github.com/spm/spm-python) | [Dr Johan Medrano](https://profiles.ucl.ac.uk/91185-johan-medrano) |
 | 16:15 - 17:30    | Source reconstruction in depth       | [Prof José David López](https://www.gbhi.org/profiles/jose-david-lopez-hincapie) |
 
