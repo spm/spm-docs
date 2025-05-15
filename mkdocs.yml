@@ -131,6 +131,7 @@ nav:
           - 'Source level: Evoked response': 'tutorials/opm/evoked_source/index.md'
           - 'Coregistration':                'tutorials/opm/coreg/index.md'
           - 'Simulation':                    'tutorials/opm/simulation/index.md'
+          - 'Neuro-1 example':               'tutorials/opm/neuro1_aef/index.md'
           - 'Supported file formats':        'tutorials/opm/formats/index.md'
       - 'DCM':
           - 'Overview of DCM':                  'tutorials/dcm/index.md'
