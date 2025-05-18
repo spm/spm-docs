@@ -13,11 +13,11 @@ This is a draft programme of the upcoming online [SPM course for EEG and MEG](./
 | 10:00 - 10:45     | Pre-course chat with the attendees                  | SPM faculty                         |
 | 10:45 - 11:00     | [SPM introduction and resources](https://youtu.be/jDGTJrX8W1Y?feature=shared)                         | [Prof Vladimir Litvak](https://profiles.ucl.ac.uk/10801-vladimir-litvak) |
 | 11:00 - 12:00     | [What are we measuring with M/EEG?](https://youtu.be/FhjTkeDhZ58?feature=shared)                    | [Dr Catharina Zich](https://www.ndcn.ox.ac.uk/team/catharina-zich)      |
-| 12:00 - 13:15     | Data preprocessing	                              | [Dr Nicholas Alexander](https://profiles.ucl.ac.uk/74968-nicholas-alexander) |
+| 12:00 - 13:15     | [Data preprocessing](https://www.youtube.com/watch?v=Oxov4IfPelQ)	                              | [Dr Nicholas Alexander](https://profiles.ucl.ac.uk/74968-nicholas-alexander) |
 | *Break*                                                                               |
-| 14:00 - 15:10     | Data preprocessing - Demo                            | [Dr Michael Motoussis](https://profiles.ucl.ac.uk/36080-michael-moutoussis) |
-| 15:10 - 16:15     | General linear model (GLM) and classical inference | [Prof Martin Dietz](https://pure.au.dk/portal/en/persons/martin%40cfin.au.dk) |
-| 16:15 - 16:45     | Convolutional GLM                                   | [Dr María Herrojo-Ruiz](https://www.gold.ac.uk/psychology/staff/herrojo-ruiz-maria/) |
+| 14:00 - 15:10     | [Data preprocessing - Demo](https://www.youtube.com/watch?v=4in24tvRcas)                            | [Dr Michael Motoussis](https://profiles.ucl.ac.uk/36080-michael-moutoussis) |
+| 15:10 - 16:15     | [General linear model (GLM) and classical inference](https://www.youtube.com/watch?v=27-D-GLqo1g) | [Prof Martin Dietz](https://pure.au.dk/portal/en/persons/martin%40cfin.au.dk) |
+| 16:15 - 16:45     | [Convolutional GLM](https://www.youtube.com/watch?v=TA6V3LjM7As)                                 | [Dr María Herrojo Ruiz](https://www.gold.ac.uk/psychology/staff/herrojo-ruiz-maria/) |
 | 16:45 - 17:15     | [Multiple comparisons - Problems & solutions](https://youtu.be/ZtRKxI-RR9k?feature=shared)         | [Dr Tim Tierney](https://profiles.ucl.ac.uk/41354-tim-tierney) |
 | 17:15 - 18:00     | General Q&A                                         | SPM faculty                            |
 
@@ -29,10 +29,10 @@ This is a draft programme of the upcoming online [SPM course for EEG and MEG](./
 | 10:00 - 10:30     | General Q&A + student's show & tell                    | SPM faculty                         |
 | 10:30 - 12:30     | [Group M/EEG dataset analysis - Demo](https://youtu.be/PfRLlUTrCWA?feature=shared)                 | [Dr Jason Taylor](https://research.manchester.ac.uk/en/persons/jason.taylor) |
 | 12:30 - 13:10     | [Analysis of optically pumped magnetometers (OPM) data](https://youtu.be/clnwtTC0ZBA?feature=shared) | [Dr Stephanie Mellor](https://profiles.ucl.ac.uk/63631-stephanie-mellor)      |
-| 13:10 - 13:45     | OPM data analysis - Demo                        | [Dr Yulia Bezsdunova](https://profiles.ucl.ac.uk/99175-yulia-bezsudnova) |
+| 13:10 - 13:45     | [OPM data analysis - Demo](https://www.youtube.com/watch?v=lu1sl4fWNpM)                       | [Dr Yulia Bezsdunova](https://profiles.ucl.ac.uk/99175-yulia-bezsudnova) |
 | *Break*                                                                               |
 | 14:30 - 15:30     | [Bayesian inference](https://youtu.be/mkkAKoIIHTY?feature=shared)                                    | [Dr Dimitris Pinotsis](https://www.city.ac.uk/about/people/academics/dimitrios-pinotsis) |
-| 15:30 - 16:30     | M/EEG source analysis                                 | [Prof José David López](https://www.gbhi.org/profiles/jose-david-lopez-hincapie) |
+| 15:30 - 16:30     | [M/EEG source analysis](https://www.youtube.com/watch?v=ln-urGMs9VQ)                                 | [Prof José David López](https://www.gbhi.org/profiles/jose-david-lopez-hincapie) |
 | 16:30 - 17:15     | [M/EEG source analysis - Demo](https://youtu.be/ssmmhfHmWA8?feature=shared)                          | [Dr Meaghan Spedden](https://profiles.ucl.ac.uk/88661-meaghan-spedden) |
 | 17:15 - 18:00     | General Q&A                                           | SPM faculty                            |
 
@@ -42,11 +42,11 @@ This is a draft programme of the upcoming online [SPM course for EEG and MEG](./
 | Time              | Title                           | Faculty                                |
 | ----------------- | ------------------------------- | -------------------------------------- |
 | 10:00 - 11:00     | General Q&A + student's show & tell                    | SPM faculty                         |
-| 11:00 - 12:10     | The principles of dynamic causal modelling (DCM)     | [Dr Arthur Mitchell](https://profiles.ucl.ac.uk/75769-arthur-mitchell) |
+| 11:00 - 12:10     | [The principles of dynamic causal modelling (DCM)](https://www.youtube.com/watch?v=usWZJAPoTTs)     | [Dr Arthur Mitchell](https://profiles.ucl.ac.uk/75769-arthur-mitchell) |
 | 12:10 - 13:15     | [DCM for evoked responses](https://youtu.be/c3lrMfEHTSs?feature=shared)                              | [Dr Daniel Hauke](https://profiles.ucl.ac.uk/92790-daniel-hauke)      |
 | *Break*                                                                               |
-| 14:15 - 15:15     | DCM for cross-spectral densities                      | [Dr Pranay Yadav](https://profiles.ucl.ac.uk/103112-pranay-yadav/about) |
-| 15:15 - 16:00     | [DCM - Demo](https://youtu.be/oocLux1lBMI?feature=shared)                                           | [Julia Rodriguez Sanchez](https://profiles.ucl.ac.uk/79115-julia-rodriguez-sanchez/about) |
+| 14:15 - 15:15     | [DCM for cross-spectral densities](https://www.youtube.com/watch?v=JFHV3RmsUfg)                      | [Dr Pranay Yadav](https://profiles.ucl.ac.uk/103112-pranay-yadav/about) |
+| 15:15 - 16:00     | [DCM - Demo](https://youtu.be/oocLux1lBMI?feature=shared)                                           | [Dr Julia Rodriguez-Sanchez](https://scholar.google.co.uk/citations?user=cTstz8wAAAAJ&hl=en) |
 | 16:00 - 17:00    | [Bayesian model selection and averaging](https://youtu.be/O3mAnlD4ibU?feature=shared)                | [Prof Peter Zeidman](https://peterzeidman.co.uk/) |
 | 17:00 - 18:00     | Q&A clinic with Prof Karl Friston                     | [Prof Karl Friston](https://www.fil.ion.ucl.ac.uk/~karl/) & SPM faculty        
 
