@@ -7,7 +7,7 @@
 
     23-25 April 2025, **in-person**. | Registration is closed.
 
-    October 2025, **online**. | More details will be announced soon.
+    15-17 October 2025, **online**. | More details will be announced soon.
     </div>
 
 !!! info inline end "Course recordings"
