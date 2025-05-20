@@ -13,7 +13,7 @@ We are delighted to welcome visitors to our SPM courses every May and October. T
 
     ---
 
-    19th-22nd May 2025, **online**. | [Registration is now open.](https://onlinestore.ucl.ac.uk/conferences-and-events/faculty-of-brain-sciences-c07/ucl-institute-of-neurology-d07/d07-statistical-parametric-mapping-for-megeeg-2025) 
+    19-22 May 2025, **online**. | Registration is closed.
 </div>
 <div class="grid cards" markdown>
 - :fontawesome-solid-brain:{ .lg .middle } [__SPM for fMRI & VBM__](./fmri_vbm/index.md)
