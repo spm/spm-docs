@@ -42,8 +42,8 @@ This is a draft programme of the upcoming online [SPM course for EEG and MEG](./
 | Time              | Title                           | Faculty                                |
 | ----------------- | ------------------------------- | -------------------------------------- |
 | 10:00 - 11:00     | General Q&A + student's show & tell                    | SPM faculty                         |
-| 11:00 - 12:10     | [The principles of dynamic causal modelling (DCM)](https://www.youtube.com/watch?v=usWZJAPoTTs)     | [Dr Arthur Mitchell](https://profiles.ucl.ac.uk/75769-arthur-mitchell) |
-| 12:10 - 13:15     | [DCM for evoked responses](https://youtu.be/c3lrMfEHTSs?feature=shared)                              | [Dr Daniel Hauke](https://profiles.ucl.ac.uk/92790-daniel-hauke)      |
+| 11:00 - 12:00     | [The principles of dynamic causal modelling (DCM)](https://www.youtube.com/watch?v=usWZJAPoTTs)     | [Dr Arthur Mitchell](https://profiles.ucl.ac.uk/75769-arthur-mitchell) |
+| 12:00 - 13:15     | [DCM for evoked responses](https://youtu.be/c3lrMfEHTSs?feature=shared)                              | [Dr Daniel Hauke](https://profiles.ucl.ac.uk/92790-daniel-hauke)      |
 | *Break*                                                                               |
 | 14:15 - 15:15     | [DCM for cross-spectral densities](https://www.youtube.com/watch?v=JFHV3RmsUfg)                      | [Dr Pranay Yadav](https://profiles.ucl.ac.uk/103112-pranay-yadav/about) |
 | 15:15 - 16:00     | [DCM - Demo](https://youtu.be/oocLux1lBMI?feature=shared)                                           | [Dr Julia Rodriguez-Sanchez](https://scholar.google.co.uk/citations?user=cTstz8wAAAAJ&hl=en) |
