@@ -5,6 +5,7 @@ Merge EEG/MEG data.
 Select the M/EEG mat files.   
 
 * **Condition label recoding rules** (create a list of items)  
+
 Specify the rules for translating condition labels from the original files to the merged file. Multiple rules can be specified. The later rules have precedence. Trials not matched by any of the rules will keep their original labels. 
 
     * **Recoding rule**   

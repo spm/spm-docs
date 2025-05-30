@@ -193,7 +193,7 @@ proc_dir = spm_BIDS_file(S);
 filt_D = spm_eeg_load(proc_dir.file);
 ```
 
-To calculate the event related field, we first need to identify events in the data. Contained within the data is a trigger channel 'A10' which receieved input from the system generating the auditory tones. Process that trigger.
+To calculate the event related field, we first need to identify events in the data. Contained within the data is a trigger channel 'A10' which received input from the system generating the auditory tones. Process that trigger.
 
 ```matlab
 S = [];
