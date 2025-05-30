@@ -1,5 +1,5 @@
 # Synthetic Gradiometery  
-Denoise will regress all channels of the selected type(s) from the input dataset. Optionally the derivatives of the selected type(s) can be used as well. This function wil automatically regress on a trial by trial basis or across the whole sesison based on whether or not the dataset has been epoched.   
+Denoise will regress all channels of the selected type(s) from the input dataset. Optionally the derivatives of the selected type(s) can be used as well. This function will automatically regress on a trial by trial basis or across the whole sesison based on whether or not the dataset has been epoched.   
 
 * **File Name** (select files)  
 Select the M/EEG mat file.   
