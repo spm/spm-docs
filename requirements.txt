@@ -3,4 +3,3 @@ mkdocs-video
 mkdocs-bibtex
 codespell
 pyspelling
-pandoc
