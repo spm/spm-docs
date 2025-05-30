@@ -254,6 +254,7 @@ plugins:
       video_autoplay: False
   - bibtex:
       bib_file: "docs/assets/bib/spm.bib"
+      csl_file: "docs/assets/bib/elsevier-vancouver.csl"
   - search:
       lang: en
 

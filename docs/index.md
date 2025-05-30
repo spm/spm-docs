@@ -54,6 +54,8 @@ The SPM suite and associated theory was originally developed by [Karl Friston](h
 
 SPM'94 was the first major revision of the SPM software. SPM'94 was written primarily by [Karl Friston](https://www.fil.ion.ucl.ac.uk/~karl/) during the summer of 1994, with invaluable conceptual and technical help from [John Ashburner](https://www.fil.ion.ucl.ac.uk/~john/), Jon Heather, Andrew Holmes and Jean-Baptiste Poline. SPM'95, [SPM'96](https://www.fil.ion.ucl.ac.uk/spm/software/spm96/), [SPM'99](https://www.fil.ion.ucl.ac.uk/spm/software/spm99/), [SPM2](https://www.fil.ion.ucl.ac.uk/spm/software/spm2/), [SPM5](https://www.fil.ion.ucl.ac.uk/spm/software/spm5/), [SPM8](https://www.fil.ion.ucl.ac.uk/spm/software/spm8/) and [SPM12](https://www.fil.ion.ucl.ac.uk/spm/software/spm12/) are based on SPM'94, and represent the ongoing theoretical advances and technical improvements.
 
+[Read more about SPM history here](reading/spm_history_bandettini.md).
+
 !!! abstract "Further reading"
 
     [Penny, W., Friston, K., Ashburner, J., Kiebel, S., & Nichols, T. (2006). *Statistical parametric mapping: The analysis of functional brain images*.](https://www.fil.ion.ucl.ac.uk/spm/doc/#books)
