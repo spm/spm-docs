@@ -51,12 +51,12 @@ This will install:
     runtime that was compiled with a the most recent version of MATLAB that
     is compatible with the current version of Python.
 
-    As of May 2025, this is how version selection works:
+    As of June 2025, this is how version selection works:
 
     - Python 3.6: MATLAB R2020b
     - Python 3.7: MATLAB R2021b
     - Python 3.8: MATLAB R2023a
-    - PYthon 3.9-3.12: MATLAB R2024b
+    - Python 3.9-3.12: MATLAB R2025a
 
 !!! tip
     Instead, it is possible to install a version of SPM-Python compiled
@@ -75,7 +75,7 @@ This will install:
 
     ```
     ERROR: Ignored the following versions that require a different python
-    version: 24.10rc1 Requires-Python <3.12,>=3.9; 25.1rc1 Requires-Python <3.12,>=3.9
+    version: 25.1.2 Requires-Python <3.12,>=3.9; 25.1.2 Requires-Python <3.12,>=3.9
     ERROR: Could not find a version that satisfies the requirement spm-runtime-r2024a (from versions: none)
     ERROR: No matching distribution found for spm-runtime-r2024a
     ```
@@ -107,7 +107,6 @@ install_matlab_runtime -v $MATLAB_VERSION
 ```
 
 !!! tip
-
     - With bash, the two previous commands can be combined into
 
     ```bash
@@ -130,7 +129,6 @@ install_matlab_runtime -v $MATLAB_VERSION
 
     In this case, you should define the environment variable
     `MATLAB_RUNTIME_PATH` in your shell profile.
-
 
 !!! failure
     - `command not found: install_matlab_runtime`: if you've just installed
@@ -195,7 +193,7 @@ WARNING: package sun.awt.X11 not in java.desktop
     Initializing Matlab Runtime...
     WARNING: package sun.awt.X11 not in java.desktop
     WARNING: package sun.awt.X11 not in java.desktop
-    ___  ____  __  __
+     ___  ____  __  __
     / __)(  _ \(  \/  )
     \__ \ )___/ )    (   Statistical Parametric Mapping
     (___/(__)  (_/\/\_)  SPM25 - https://www.fil.ion.ucl.ac.uk/spm/
