@@ -202,8 +202,8 @@ nav:
   - 'Python':
     - 'python/index.md'
     - 'Installation': 'python/installation.md'
-    - 'Data Types': 'python/datatypes.md'
     - 'Getting Started': 'python/gettingstarted.md'
+    - 'Data Types': 'python/datatypes.md'
     - 'Troubleshooting': 'python/troubleshooting.md'
     # - 'Tutorials':
     #   - 'fMRI preproc': 'python/tutorial_fmri.md'

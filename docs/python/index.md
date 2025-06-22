@@ -20,15 +20,6 @@ This project is supported by the SPM team and hosted on Github [here](https://gi
 
     [:octicons-arrow-right-24: **Installation** ](installation.md)
 
--   :material-connection:{ .lg .middle } __Data types__
-
-    ---
-
-    SPM-Python implements a Python type system that allows all MATLAB
-    types to be interacted with. Get familiar with them.
-
-    [:octicons-arrow-right-24: **Type System**](datatypes.md)
-
 -   :material-run:{ .lg .middle } __Getting Started__
 
     ---
@@ -38,6 +29,15 @@ This project is supported by the SPM team and hosted on Github [here](https://gi
     SPM batches.
 
     [:octicons-arrow-right-24: **Getting Started**](gettingstarted.md)
+
+-   :material-connection:{ .lg .middle } __Data types__
+
+    ---
+
+    SPM-Python implements a Python type system that allows all MATLAB
+    types to be interacted with. Get familiar with them.
+
+    [:octicons-arrow-right-24: **Type System**](datatypes.md)
 
 -   :material-shield-bug:{ .lg .middle } __Troubleshooting__
 
@@ -57,7 +57,7 @@ This project is supported by the SPM team and hosted on Github [here](https://gi
     Read our tutorials for applying SPM-Python in different contexts
     (fMRI, VBM, EEG, MEG, _etc._).
 
-    [:octicons-arrow-right-24: **Troubleshooting**](tutorials.md)
+    [:octicons-arrow-right-24: **Tutorials**](tutorials.md)
 
 -   :material-book-cog:{ .lg .middle } __API__
 
