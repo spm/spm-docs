@@ -7,7 +7,7 @@
 
     23-25 April 2025, **in-person**. | Registration is closed.
 
-    15-17 October 2025, **online**. | More details will be announced soon.
+    15-17 October 2025, **online**. | [Registration is now open.](https://onlinestore.ucl.ac.uk/conferences-and-events/faculty-of-brain-sciences-c07/ucl-institute-of-neurology-d07/d07-statistical-parametric-mapping-for-fmri-mrivbm-oct-2025)
     </div>
 
 !!! info inline end "Course recordings"
