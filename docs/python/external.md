@@ -2,7 +2,7 @@
 
 ## External projects
 
-This page contains a list of projects that either allow SPM funcionalities
+This page contains a list of projects that either allow SPM functionalities
 to be used from python, or that reimplement some of SPM functionalities
 directly in Python. These projects **are not maintained by the SPM team**.
 

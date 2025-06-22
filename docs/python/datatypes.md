@@ -30,7 +30,7 @@ In MATLAB:
 - Cells (which can contain elements of any type), can be cell _arrays_,
   with any number of dimensions. A one dimensional cell is a cell array
   with size `[1 n]`.
-- Similary, structures can be structure _arrays_. A scalar structure is
+- Similarly, structures can be structure _arrays_. A scalar structure is
   a structure array with size `[1 1]`.
 - The fields of a structure are accessed using the dot notation (`x.field`).
   When the field of a structure array is accessed, a series of individual
@@ -147,10 +147,10 @@ in SPM-Python. Note that we use round brackets (`matlabbatch(0).spm`)
 instead of square brackets (`matlabbatch[0].spm`) to specify that `matlabbatch`
 should be a cell that contains a struct, and not a struct array.
 
-In order to implement this nesting of implicitely indexed structured,
+In order to implement this nesting of implicitly indexed structured,
 we had to delay the creation of each object in the hierarchy, as the final
 type of an object is only known after it has been indexed. To do this,
-we introducted a delayed type that is originally generic, and metamorphoses
+we introduced a delayed type that is originally generic, and metamorphoses
 itself into a `Struct` or `Cell` or `Array` as it is being used. Our logic
 is documented in the `DelayedArray` section.
 
@@ -677,7 +677,7 @@ Therefore:
 - `a(x,y).f           = any`    : `a` is a cell array containing a struct;
 - `a.f                = any`    : `a` is a struct.
 
-And explictly:
+And explicitly:
 
 - `a.as_cell[x,y]     = any`    : `a` is a cell array;
 - `a.as_struct[x,y].f = any`    : `a` is a struct array;

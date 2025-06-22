@@ -139,7 +139,7 @@ install_matlab_runtime -v $MATLAB_VERSION
 
 Alternatively, if you have MATLAB installed, and a license for the MATLAB
 Compiled, you may prefer to install the runtime as part of the MATLAB compiler.
-In MATLAB, cick on **"Add-Ons"**, then seach **"Compiler"** and select
+In MATLAB, click on **"Add-Ons"**, then search **"Compiler"** and select
 **"MATLAB Compiler"**, then **"Install"**. If your MATLAB is not installed
 in a standard location, you will need to set the environment variable
 `MATLAB_PATH` in your shell profile.

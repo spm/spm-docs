@@ -25,7 +25,7 @@ This project is supported by the SPM team and hosted on Github [here](https://gi
     ---
 
     SPM-Python implements a Python type system that allows all MATLAB
-    types to be interracted with. Get familiar with them.
+    types to be interacted with. Get familiar with them.
 
     [:octicons-arrow-right-24: **Type System**](datatypes.md)
 
@@ -48,7 +48,7 @@ This project is supported by the SPM team and hosted on Github [here](https://gi
     a list of common problems encountered when using SPM-Python, and
     their solutions.
 
-    [:octicons-arrow-right-24: **Troubelshooting**](troubleshooting.md)
+    [:octicons-arrow-right-24: **Troubleshooting**](troubleshooting.md)
 
 -   :fontawesome-solid-graduation-cap:{ .lg .middle } __Tutorials__
 
@@ -57,7 +57,7 @@ This project is supported by the SPM team and hosted on Github [here](https://gi
     Read our tutorials for applying SPM-Python in different contexts
     (fMRI, VBM, EEG, MEG, _etc._).
 
-    [:octicons-arrow-right-24: **Troubelshooting**](tutorials.md)
+    [:octicons-arrow-right-24: **Troubleshooting**](tutorials.md)
 
 -   :material-book-cog:{ .lg .middle } __API__
 
@@ -66,7 +66,7 @@ This project is supported by the SPM team and hosted on Github [here](https://gi
     The complete SPM API documentation is available. All functions
     describe here can be accessed from MATLAB or from Python.
 
-    [:octicons-arrow-right-24: **API**](api/index.md)
+    [:octicons-arrow-right-24: **API**](api/spm/index.md)
 </div>
 
 !!! warning

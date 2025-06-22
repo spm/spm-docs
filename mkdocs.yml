@@ -208,7 +208,7 @@ nav:
     # - 'Tutorials':
     #   - 'fMRI preproc': 'python/tutorial_fmri.md'
     #   - 'PEB': 'python/tutorial_peb.md'
-    - 'API': 'python/api/index.md'
+    - 'API': 'python/api/spm/index.md'
     - 'External projects': 'python/external.md'
   - 'Development':
     - 'Introduction': 'development/index.md'
