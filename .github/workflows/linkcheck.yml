@@ -29,6 +29,7 @@ jobs:
         # We do this because some publisher websites (e.g. wiley) are
         # peaky and return 403 when the website is not accessed from a
         # proper browser.
+        if: always()
         with:
           use-quiet-mode: 'yes'
           use-verbose-mode: 'no'
