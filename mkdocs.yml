@@ -92,16 +92,16 @@ nav:
           - 'Categorical Modelling': 'tutorials/fmri/event/categorical.md'
           - 'Parametric Modelling':  'tutorials/fmri/event/parametric.md'
           - 'Bayesian Analysis':     'tutorials/fmri/event/bayesian.md'
-        - 'Group-level fMRI': 
+        - 'Group-level fMRI':
           - 'Getting started':        'tutorials/fmri/group/index.md'
           - 'One-sample t-test':      'tutorials/fmri/group/one_sample_ttest.md'
           - 'Two-sample t-test':      'tutorials/fmri/group/two_sample_ttest.md'
           - 'Factorial':              'tutorials/fmri/group/factorial.md'
       - 'VBM':
-          - 'Getting started':       'tutorials/vbmcourse24/index.md' 
-            #- 'Data preparation':      'tutorials/vbmcourse24/data_prep.md' 
-          - 'Preprocessing':         'tutorials/vbmcourse24/preprocessing.md' 
-          - 'Analysis':              'tutorials/vbmcourse24/analysis.md' 
+          - 'Getting started':       'tutorials/vbmcourse24/index.md'
+            #- 'Data preparation':      'tutorials/vbmcourse24/data_prep.md'
+          - 'Preprocessing':         'tutorials/vbmcourse24/preprocessing.md'
+          - 'Analysis':              'tutorials/vbmcourse24/analysis.md'
           #- 'Getting started':      'tutorials/vbm/index.md'
           #- 'Image processing':     'tutorials/vbm/image_processing.md'
           #- 'Statistical analysis': 'tutorials/vbm/statistical_analysis.md'
@@ -136,7 +136,7 @@ nav:
       - 'DCM':
           - 'Overview of DCM':                  'tutorials/dcm/index.md'
           - 'DCM for fMRI - 1st level (Attention)': 'tutorials/dcm/dcm_fmri_first_level_gui.md'
-          - 'DCM for fMRI - 2nd level (Motor)': 'tutorials/dcm/dcm_fmri_second_level_motor.md'          
+          - 'DCM for fMRI - 2nd level (Motor)': 'tutorials/dcm/dcm_fmri_second_level_motor.md'
           - 'DCM for fMRI - 1st level (Language)':  'tutorials/dcm/dcm_fmri_first_level.md'
           - 'DCM for fMRI - 2nd level (Language)':  'tutorials/dcm/dcm_fmri_second_level.md'
           - 'DCM for evoked responses':         'tutorials/dcm/dcm_erp.md'
@@ -172,7 +172,7 @@ nav:
         - 'Bayesian model selection and averaging':                                       'courses/eeg_meg/recordings/bayesian_model_selection.md'
         - 'DAiSS: An SPM toolbox for alternate source imaging approaches (talk & demo)':  'courses/eeg_meg/recordings/daiss.md'
         - 'Group M/EEG data analysis':                                                    'courses/eeg_meg/recordings/group_analysis.md'
-    - 'fMRI/VBM': 
+    - 'fMRI/VBM':
       - 'courses/fmri_vbm/index.md'
       - 'Course schedule':                    'courses/fmri_vbm/programme.md'
       - 'Datasets':                           'courses/fmri_vbm/mri_datasets.md'
@@ -200,6 +200,17 @@ nav:
       - 'Sensor-level analysis':        'reference/MEEG/eeg_sensoranalysis.md'
       - 'Source imaging':               'reference/MEEG/eeg_imaging.md'
       - 'DCM for evoked responses':     'reference/MEEG/eeg_DCM.md'
+  - 'Python':
+    - 'python/index.md'
+    - 'Installation': 'python/installation.md'
+    - 'Getting Started': 'python/gettingstarted.md'
+    - 'Data Types': 'python/datatypes.md'
+    - 'Troubleshooting': 'python/troubleshooting.md'
+    # - 'Tutorials':
+    #   - 'fMRI preproc': 'python/tutorial_fmri.md'
+    #   - 'PEB': 'python/tutorial_peb.md'
+    - 'API': 'python/api/spm/index.md'
+    - 'External projects': 'python/external.md'
   - 'Development':
     - 'Introduction': 'development/index.md'
     - 'Git':          'development/git.md'
