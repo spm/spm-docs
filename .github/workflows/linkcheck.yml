@@ -11,12 +11,28 @@ jobs:
   check-links:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: gaurav-nelson/github-action-markdown-link-check@v1
+      - uses: actions/checkout@v4
+      - uses: tcort/github-action-markdown-link-check@v1
+        # This step does not check doi.org links
         with:
           use-quiet-mode: 'yes'
           use-verbose-mode: 'no'
           config-file: '.markdown-link-check.json'
+          folder-path: 'docs/installation, docs/tutorials'
+          file-path: './README.md, ./docs/index.md'
+          base-branch: main
+      - uses: tcort/github-action-markdown-link-check@v1
+        # This step only checks doi.org links
+        # -> for doi.org links, if the doi does not exist, 404 is returned
+        #    otherwise, it redirects to the publisher website, so any
+        #    code that is not 404 is a "success".
+        # We do this because some publisher websites (e.g. wiley) are
+        # peaky and return 403 when the website is not accessed from a
+        # proper browser.
+        with:
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'no'
+          config-file: '.markdown-link-check-doi.json'
           folder-path: 'docs/installation, docs/tutorials'
           file-path: './README.md, ./docs/index.md'
           base-branch: main
