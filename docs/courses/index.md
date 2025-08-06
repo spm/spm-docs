@@ -31,6 +31,20 @@ Since 2010, we have provided two separate SPM courses reflecting the different i
 
 Read more about the [SPM for M/EEG course](./eeg_meg/index.md) or the [SPM for MRI course](./fmri_vbm/index.md).
 
+## Modes of attendance
+The SPM courses are available in three modes: in person, online live, and online self-paced. All course formats include full access to lectures, slides, and hands-on tutorials. Choose the format that best suits your schedule and learning style
+
+| **In-Person (MRI only)**                                                                                                            | **Online – Live** (MRI or M/EEG)                                                                                         | **Online – Self-Paced** (MRI or M/EEG)                                                                                     |
+|----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| **Best For**    | **Best For**    | **Best For**    |
+| Structured learners who value face-to-face interaction                                                                     | Remote learners who want real-time interaction                                                                              | Flexible, independent learners                                                                                               |
+| **Features**    | **Features**    | **Features**    |
+|- Attend sessions at the course venue  <br> - Meet instructors and peers in person  <br> - Engage in real-time discussions  <br> - Network during breaks, informal sessions, and an evening social event | - Join live-streamed lectures and tutorials  <br> - Ask questions and get feedback in real time  <br> - Interact with instructors and participants via chat/video  <br> - No travel required | - Access all lecture recordings and materials on your own schedule  <br> - Ideal for different time zones or busy timetables  <br> - No live participation  <br> - Learn at your own pace |
+| **Fee**         | **Fee**         | **Fee**         |
+| Regular course fee                                                                                                        | Reduced course fee                                                                                                          | Free of charge                                                                                                               |
+| **Certificate** | **Certificate** | **Certificate** 
+| :octicons-check-circle-fill-12:                                                                                            | :octicons-check-circle-fill-12:                                                                                             | :octicons-x-circle-fill-12:                                                                                                   |
+
 ## Previous recordings
 The SPM courses consist of interactive workshops and lectures. To view videos recordings of the lectures from a previous courses, please select topics from the menu.
 
