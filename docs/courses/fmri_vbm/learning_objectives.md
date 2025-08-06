@@ -1,4 +1,4 @@
-# SPM Course - fMRI & VBM
+# SPM Course - MRI
 
 ## SPM course learning objectives
 
