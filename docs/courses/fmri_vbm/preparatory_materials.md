@@ -1,8 +1,8 @@
-# SPM Course - fMRI & VBM
+# SPM Course - MRI
 
 ## Pre-course materials
 
-The SPM course for fMRI & VBM is suited for both beginners and advanced users. If you are relatively new to neuroimaging and SPM, you may want to review some of the materials below to make sure you are ready for the rest of the course. 
+The SPM course for MRI is suited for both beginners and advanced users. If you are relatively new to neuroimaging and SPM, you may want to review some of the materials below to make sure you are ready for the rest of the course. 
 
 ### Introduction to statistics for neuroimaging 
 
@@ -24,6 +24,6 @@ SPM is a collection of MATLAB functions and thus, while not necessary, basic fam
 
 ### Introduction to MRI physics
 
-Although detailed understanding of MRI physics is not essential for conducting fMRI/VBM data analysis, basic familiarity with the concepts is important in modelling and interpreting findings. We recommend the below reading on the topic.
+Although detailed understanding of MRI physics is not essential for conducting (f)MRI data analysis, basic familiarity with the concepts is important in modelling and interpreting findings. We recommend the below reading on the topic.
 
 - [Short introduction to MRI physics](https://www.fmrib.ox.ac.uk/primers/appendices/mri_physics.pdf) by [Michael Chappell](https://www.nottingham.ac.uk/research/beacons-of-excellence/precision-imaging/our-experts/michael-chappell/index.aspx), [Thomas Okell](https://www.ndcn.ox.ac.uk/team/thomas-okell), and [Mark Jenkinson](https://users.fmrib.ox.ac.uk/~mark/)
