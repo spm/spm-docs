@@ -1,4 +1,4 @@
-# SPM Course - fMRI & VBM
+# SPM Course - MRI
 These datasets will be used during the course and are available to download.
 
 ## Preferred download link
