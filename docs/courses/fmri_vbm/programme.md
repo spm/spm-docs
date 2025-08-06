@@ -1,8 +1,8 @@
-# SPM Course - fMRI & VBM
+# SPM Course - MRI
 
 ## Course programme
 
-This is a sample programme of the [SPM course for fMRI and VBM](./index.md). The course will consist of lectures and practical workshops where attendees will be guided through analyses of different neuroimaging datasets. To give you a taste of the course content, recordings of past course talks are linked on the programme. 
+This is a sample programme of the [SPM course for MRI](./index.md). The course will consist of lectures and practical workshops where attendees will be guided through analyses of different neuroimaging datasets. To give you a taste of the course content, recordings of past course talks are linked on the programme. 
 
 ### Day 1
 
