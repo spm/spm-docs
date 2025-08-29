@@ -68,6 +68,21 @@ nav:
     - 'Octave':       'installation/octave.md'
   - 'Tutorials':
       - 'tutorials/index.md'
+      - 'MATLAB Beginners':
+        - 'tutorials/beginners/index.md'
+        - 'Learning MATLAB'
+          - 'Desktop Basics':             'tutorials/beginners/desktop_basics.md'
+          - 'Variables':                  'tutorials/beginners/variables.md'
+          - 'Other Types':                'tutorials/beginners/other_types.md'
+          - 'Structures and Cell Arrays': 'tutorials/beginners/cells_and_structs.md'
+          - 'Control Flow':               'tutorials/beginners/control_flow.md'
+        - 'Linear Algebra'
+          - 'Basic Linear Algebra':       'tutorials/beginners/linear_algebra.md'
+          - 'More Linear Algebra':        'tutorials/beginners/matrix_operations.md'
+        - 'SPM Statistics'
+          - 'Introducing SPM':            'tutorials/beginners/installing_spm.md'
+          - 'Statistical Tests':          'tutorials/beginners/linear_model.md'
+          - 'Haemodynamic Modelling':     'tutorials/beginners/haemodynamic_modelling.md'
       - 'fMRI':
         - 'tutorials/fmri/index.md'
         - 'Block design fMRI':

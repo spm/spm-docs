@@ -8,6 +8,12 @@ The tutorials are organised by data modality and illustrate how to use SPM to an
 
 <div class="grid cards" markdown>
 
+-   :material-monitor:{ .lg .middle } __Beginners__
+
+    ---
+
+    [MATLAB Beginners Guide](./beginners/index.md)
+
 -   :material-monitor:{ .lg .middle } __fMRI__
 
     ---
