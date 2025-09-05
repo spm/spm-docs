@@ -31,6 +31,7 @@ The ``sum(s)`` command produced a value of zero.  This is because in single prec
 Many types of whole number can be represented in MATLAB. These are determined by the number of bytes used to encode them and whether they are signed or unsigned.
 Unsigned representations don't allow negative values to be represented, whereas signed representations allow negative values.
 Available integer types are:
+
 * **uint8** Unsigned 8 bit integers. One byte. Values can range from 0 to 255.
 * **int8** Signed 8 bit integers. One byte. Values can range from -128 to 127.
 * **uint16** Unsigned 16 bit integers. Two bytes. Values range from 0 to 65535.

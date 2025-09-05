@@ -35,10 +35,12 @@ The desktop includes these areas:
 - Their names are case sensitive
 - Their names must be no longer than 31 characters in length
 - They can be:
-  - A string
-  - A scalar
-  - A vector
-  - A matrix…
+
+    - A string
+    - A scalar
+    - A vector
+    - A matrix…
+
 - Their ‘index’ starts at 1
 
 Create a string, a scalar, and a vector as follows:

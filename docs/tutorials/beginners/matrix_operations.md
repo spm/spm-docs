@@ -149,16 +149,16 @@ slightly in data that has been motion corrected.
 The least-squares fitting that we have seen previously assumes that the aim is to minimise the simple sum of squares difference between the data and the model fit.
 Sometimes though, we may know that there is more noise on some data points than on others.
 In this situation, we might want to do a weighted least squares fit so that noisy data points contribute less to the parameter estimation.
-Rather than find the value of $\boldsymbol{\beta}$ that minimises:
+Rather than find the value of ${\beta}$ that minimises:
 
 $$
-(\mathbf{X} \boldsymbol{\beta} - \mathbf{y})^T (\mathbf{X} \boldsymbol{\beta} - \mathbf{y})
+(\mathbf{X} {\beta} - \mathbf{y})^T (\mathbf{X} {\beta} - \mathbf{y})
 $$
 
 A weighted least squares fit would minimise:
 
 $$
-(\mathbf{X} \boldsymbol{\beta} - \mathbf{y})^T \mathbf{L} (\mathbf{X} \boldsymbol{\beta} - \mathbf{y})
+(\mathbf{X} {\beta} - \mathbf{y})^T \mathbf{L} (\mathbf{X} {\beta} - \mathbf{y})
 $$
 
 Here, $\mathbf{L}$ would be some form of weighting matrix, which is symmetric and positive semidefinite.

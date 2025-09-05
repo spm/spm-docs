@@ -32,12 +32,12 @@ When we fit a linear model, we consider that the model explains how the data wer
 If we assume independent and identically distributed (i.i.d.) Gaussian noise, then the model of the data ${\bf y}$ is
 
 $$
-{\bf y} = {\bf X} \boldsymbol{\beta} + \boldsymbol{\epsilon} \text{,  where } \boldsymbol{\epsilon} \sim \mathcal{N}({\bf 0}, \sigma^2 {\bf I})
+{\bf y} = {\bf X} {\beta} + {\epsilon} \text{,  where } {\epsilon} \sim \mathcal{N}({\bf 0}, \sigma^2 {\bf I})
 $$
 
-In the above, the $\boldsymbol{\epsilon} \sim \mathcal{N}({\bf 0}, \sigma^2 {\bf I})$
-indicates that $\boldsymbol{\epsilon}$ comes from a zero-mean i.i.d. Gaussian (normal) distribution where the variance is $\sigma^2$.
-We can generate some simulated data (``y``) according to this model, where we use $\boldsymbol{\beta}$ values of 30.0, 35.0 and 2.0
+In the above, the ${\epsilon} \sim \mathcal{N}({\bf 0}, \sigma^2 {\bf I})$
+indicates that ${\epsilon}$ comes from a zero-mean i.i.d. Gaussian (normal) distribution where the variance is $\sigma^2$.
+We can generate some simulated data (``y``) according to this model, where we use ${\beta}$ values of 30.0, 35.0 and 2.0
 and a variance of 4.0.
 
 In MATLAB, i.i.d. Gaussian random values with a variance of 1 can be created using the ``randn()`` function.

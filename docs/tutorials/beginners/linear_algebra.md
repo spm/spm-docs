@@ -153,7 +153,7 @@ X = [ 3 -2  1
       1 -1  1]
 ```
 
-If we consider the unknowns as a vector $\boldsymbol{\beta}$, we essentially want to find the values in $\boldsymbol{\beta}$ where $\mathbf{X} \boldsymbol{\beta} = \mathbf{y}$.
+If we consider the unknowns as a vector ${\beta}$, we essentially want to find the values in ${\beta}$ where $\mathbf{X} {\beta} = \mathbf{y}$.
 
 In MATLAB, the above simultaneous equations can be solved to give a solution $\mathbf{\beta}$ using:
 ```matlab
