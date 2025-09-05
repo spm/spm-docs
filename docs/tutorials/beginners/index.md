@@ -1,5 +1,4 @@
-# Research Methods and Data Analysis in Human Neuroscience
-Teaching material for the Research Methods and Data Analysis in Human Neuroscience module
+# Beginners Guide to MATLAB, linear algebra and SPM statistics
 
 * **Learning MATLAB**
   
