@@ -1,7 +1,7 @@
 ## Desktop Basics
 
 To start Matlab in a UCL terminal go to `UCL Applications Store`
-and type `matlab` in the search bar. Select `Matlab 2025a`.
+and type `matlab` in the search bar. Select `Matlab 2024a`.
 When you start MATLAB®, the desktop appears in its default
 layout.
 
@@ -141,16 +141,18 @@ MyArray = -4:0.01:4;
 You can run a cell by clicking the `Run Section` button in the editor toolbar or by pressing `Ctrl + Enter`.
 
 
+<!-- Commented out for now as Copilot is not available in 2024a
 ### Copilot
 
 Matlab Copilot is a built-in large language model (LLM) that can help you write code and explain bits of code that someone else wrote as well as error messages. It is available in Matlab versions 2025a and later so if you are using an older Matlab, you will not find it there. To open Copilot, click on the Copilot icon in the top right corner of the Matlab window.
 
 ![Copilot icon in the top right corner of the Matlab window.](./copilot.png)
  
- A Copilot Chat window will open that works similarly to ChatGPT and other LLMs you might already be using, except it's more knowledgeable about Matlab programming. You can ask Copilot questions about your code, and it will try to help you understand it or suggest improvements.
+A Copilot Chat window will open that works similarly to ChatGPT and other LLMs you might already be using, except it's more knowledgeable about Matlab programming. You can ask Copilot questions about your code, and it will try to help you understand it or suggest improvements.
 
- You can also select a piece of code in the editor, right-click and select `Explain code` from the `Copilot` submenu. An explanation of the code will appear in the Copilot Chat window.
+You can also select a piece of code in the editor, right-click and select `Explain code` from the `Copilot` submenu. An explanation of the code will appear in the Copilot Chat window.
 
- As you write your code, Copilot will suggest completions and improvements. You can accept these suggestions by pressing `Tab` or clicking on the suggestion. Make sure to review the suggestions carefully, as they may not always be correct or optimal.
+As you write your code, Copilot will suggest completions and improvements. You can accept these suggestions by pressing `Tab` or clicking on the suggestion. Make sure to review the suggestions carefully, as they may not always be correct or optimal.
 
- - Repeat the exercise with plotting, asking Copilot for help.
+- Repeat the exercise with plotting, asking Copilot for help.
+-->
