@@ -69,7 +69,7 @@ Joining in requires a Zoom account, you can quickly [sign up here](https://zoom.
 | *Break*               	                                                           |
 | 10:40 - 11:50     | [Event-related fMRI](./recordings/event_related_fmri.md) 	          | [Dr Sonia Medina](https://medicine.exeter.ac.uk/clinical-biomedical/people/profile/index.php?web_id=Sonia_Medina) |
 | *Lunch*                                                                        	   |
-| 12:50 - 13:35     | [Group level analysis](./recordings/group_analysis.md)            | TBC |
+| 12:50 - 13:35     | [Group level analysis](./recordings/group_analysis.md)            | [Dr Nadine Dijkstra](https://profiles.ucl.ac.uk/74410-nadine-dijkstra) |
 | 13:35 - 14:10     | [Random field theory](./recordings/random_field_theory.md)             | [Prof Tom Nichols](https://www.bdi.ox.ac.uk/Team/t-e-nichols) |
 | 14:10 - 15:00	    | Q&A clinic            	      | SPM faculty                            |
 | *Break*	                                                                                   |
@@ -85,7 +85,7 @@ Joining in requires a Zoom account, you can quickly [sign up here](https://zoom.
 | *Break*               	                                                           |
 | 11:00 - 12:00     | [Introduction to DCM](./recordings/dcm_introduction.md)             | [Prof Peter Zeidman](https://peterzeidman.co.uk)|
 | *Lunch*                                                                        	   |
-| 13:00 - 13:40	    | DCM for resting-state  	      | TBC |
-| 13:40 - 14:30	    | Q&A clinic            	      | [Prof Karl Friston](https://www.fil.ion.ucl.ac.uk/~karl/) & SPM faculty                            |
+| 13:00 - 13:40	    | DCM for resting-state  	      | [Dr George Thomas](https://profiles.ucl.ac.uk/68520-george-thomas) |
+| 13:40 - 14:30	    | Q&A clinic            	      | SPM faculty                            |
 | *Break*	                                                                                   |
 | 14:50 - 17:30     | Practical session III	          | SPM faculty                            |
