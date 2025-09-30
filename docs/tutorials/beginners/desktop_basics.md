@@ -1,6 +1,10 @@
 ## Desktop Basics
 
-To start Matlab in a UCL terminal go to `UCL Applications Store`
+For convenience, we will work with Desktop@UCL Anywhere which gives you access to the same environment
+in the classroom and on your own computers. You should be able to keep working on the same files if you save
+them on the N: drive which is the same as your UCL OneDrive. See [installation instructions](https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere).
+
+To start Matlab in a UCL terminal, go to the `UCL Applications Store`.
 and type `matlab` in the search bar. Select `Matlab 2024a`.
 When you start MATLAB®, the desktop appears in its default
 layout.
