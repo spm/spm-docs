@@ -20,12 +20,13 @@ The desktop includes these areas:
 
 # Some things to know before doing anything
 
-### How to navigate within a folder:
+## How to navigate within a folder:
 
 - `>> pwd` … present working directory
 - `>> dir` (or `>> ls`) … what folders (or files) are in this directory
 - `>> cd ..` … move up one directory from here
 - `>> mkdir Data` … make a new folder named "Data" in the current directory
+- `>> mkdir Students` … make a new folder named "Students" in the current directory
 - `>> cd Data` … change directory into the folder “Data” within this directory
 - `>> cd ../Students` … move up one directory then into “Students” within that directory
 
@@ -46,7 +47,7 @@ The desktop includes these areas:
 Create a string, a scalar, and a vector as follows:
 
 ```matlab
-MyString = 'I am learning Matlab';`
+MyString = 'I am learning Matlab';
 MyScalar = 6;
 MyVector = [1,2,3];
 MyMatrix = [1,2;3,4];
@@ -62,7 +63,7 @@ Create an array with ‘elements’ increasing from -4 to +4 in increments of 0.
 MyArray = -4:0.01:4;
 ```
 
-How many elements do you think there are in this array? Note: Each element can be ‘indexed’. By using indexing, what is the 230th element of MyArray? Use Matlab to find out the dimensions of your three vectors and this new array using the function `size` (type help size if you want to know how).
+How many elements do you think there are in this array? Note: Each element can be ‘indexed’ by entering its name followed by an index in round brackets (e.g `MyArray(1)`). By using indexing, what is the 230th element of MyArray? Use Matlab to find out the dimensions of your three vectors and this new array using the function `size` (type help size if you want to know how).
 
 ## Functions
 
@@ -104,7 +105,7 @@ command line or after you type the first few characters of a command.
 For example, to recall the command `MyInput = pi*MyArray`, type `M`,
 and then press the up-arrow key.
 
-### How to get some help
+## How to get some help
 
 - `>> help <functionName>` … gives a brief description of a function called functionName
 - `>> doc <functionName>` … returns a complete description of functionName
@@ -123,13 +124,26 @@ The Matlab editor is a powerful tool for writing and debugging scripts and funct
 - Create a new script and copy all the commands above into it.
 - Save the script with a meaningful name, such as `my_first_script.m`.
 
-### Comments
+## Running and debugging code
+
+- To run your script you can type its name (without the `.m` extension) in the Command Window and press `Enter`. For that to work, you should ensure that the current folder is the one where your script is saved (use cd command to change folder if necessary). It is possible to call scripts and functions from other folders when they are on the Matlab path. More on that later.
+- Another way to run your script is to click the `Run` button (green triangle) in the `Editor` toolbar.
+
+If your code does not work as expected, you can use the debugging tools in the editor to find and fix errors. You can set breakpoints by clicking in the left margin next to a line of code (a red dot should appear). When you run the script, execution will pause at the breakpoint, allowing you to inspect variables and step through the code line by line, using `Step` button located next to the `Run` button in the toolbar. To exit debugging mode, click the `Continue` button (green triangle with a line) or the `Stop` button (red square).
+
+Some other useful debugging commands are:
+
+- `dbstop if error` … this command will cause Matlab to enter debug mode if an error occurs, allowing you to inspect the state of your program at the point of the error.
+- `dbclear all` … this command will clear all breakpoints that you have set in your code.
+- `dbquit` … this command will exit debug mode and return to normal execution.
+
+## Comments
 
 Any line starting with % is a comment and will not be executed. Comments are useful for explaining what your code does or for leaving notes for yourself or others who may read your code later.
 
 - Add comments to your script to explain what each section of code does.
 
-### Cells
+## Cells
 
 You can divide your script into sections called cells. Each cell can be executed independently, which is useful for debugging and testing parts of your code without running the entire script.  To create a cell, add a line with `%%` at the beginning. For example:
 
