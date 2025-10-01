@@ -34,6 +34,8 @@ The desktop includes these areas:
 - `>> cd Data` … change directory into the folder “Data” within this directory
 - `>> cd ../Students` … move up one directory then into “Students” within that directory
 
+> **Tip:**  
+> You can also use the path box above the command window to navigate to a different folder. Copy the path to the folder you want to navigate to, paste it into the path box, and press Enter. This will change the current working directory to the specified folder.
 
 ## Variables
 - Their names can be a mix of letters and numbers but they begin with a letter

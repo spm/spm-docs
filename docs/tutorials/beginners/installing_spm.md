@@ -15,15 +15,17 @@ To install SPM, you need to download it from the web and let Matlab know where t
 5. Click `Clone` and wait for installation to complete which may take a few minutes.
 6. Once the installation is complete, open Matlab and type the following command in the command window:
 
-   ```
+   ```matlab
    addpath('N:\spm');
    ```
 7. To make this change permanent, you can save the path by typing:
 
+    ```matlab
+    fid = fopen('N:\Documents\MATLAB\startup.m','w');
+    fprintf(fid, 'addpath(''N:\\spm'');');
+    fclose(fid);
    ```
-   savepath(fullfile('N:\Documents\MATLAB', 'pathdef.m'));
-   ```
-8. To check that SPM is installed correctly, type the following command in the Matlab command window:
+8. To check that SPM is installed correctly, restart MATLAB and type the following command in the Matlab command window:
 
    ```
    spm fmri
