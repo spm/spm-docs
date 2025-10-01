@@ -20,7 +20,7 @@ dropdown menu select M/EEG. At the top of the new dropdown menu, select
 editor window will now list "Conversion" as the first (and only) step.
 Within the main, Current Module window will be listed several variables.
 The first variable listed is "File Name". On the right hand of this
-pane, you will see "$<$-X", this indicates that you need to update this
+pane, you will see "<-X", this indicates that you need to update this
 field. To do so, click on "File Name", this will then open up your
 current working directory. From the directory containing MEEG data of the 
 subject you are working on select the file named `run_01_sss.fif` and press "Done".
@@ -33,10 +33,10 @@ option to convert all channels. To do this, click "channel selection",
 and scroll down until you can select the "Delete All(1)" option. Then
 click the "channel selection" again, but this time choose the option
 "New: Select channels by type". This will add "Select channels by type"
-to the Current Module, and you will see "$<$-X" on the right hand side
-of this, indicating the need for user input. Click the "$<$-X" and then
+to the Current Module, and you will see "<-X" on the right hand side
+of this, indicating the need for user input. Click the "<-X" and then
 select "EEG" from the "Current Item" section. Repeat this process to
-additionally include the "MEGMAG" and "MEGPLANAR" channels.
+additionally include the "MEGMAG" channels.
 
 The remaining options for conversion can be left with their default
 values (which includes the output filename, which defaults to the input
@@ -58,7 +58,7 @@ fact used to record EOG.
 
 Press the 'New' button to clear the batch window and select "Prepare", 
 from the preprocessing menu. Again we need to complete those variables indicated by the
-"$<$-X". Select the new `spmeeg_run_01_sss.mat` file produced by the conversion stage as
+"<-X". Select the new `spmeeg_run_01_sss.mat` file produced by the conversion stage as
 the input for this stage.
 
 The next variable to define is the "task(s)". Clicking this variable
@@ -67,7 +67,7 @@ this, select "New: Set channel type", then return to the current module
 window. In here, highlight "Channel selection", which displays further
 variables within the current item window. Scroll down until you can select the "Delete All(1)" option. Then select "New: Custom channel".
 Now return to the current module box and select the variable with an
-"$<$-X". This should be "Custom channel". Selecting this and clicking on
+"<-X". This should be "Custom channel". Selecting this and clicking on
 "Specify" will open up a small text window. Within this, type `EEG061`.
 Create a new Custom channel and type `EEG062`; then select "new channel
 type" and highlight "EOG". This is because channels EEG061 and EEG062 in
@@ -126,7 +126,7 @@ Note that the order of the preprocessing steps can vary. Sometimes changing the 
 
 ### Review
 
-When analysing M/EEG data, it is a good idea to review the intermediate results at least after steps that change the data. This can help identify any potential issues or artifacts before moving on to the following steps. Go to the main SPM window  (the one with many buttons) and select "Display" (one the left, third from the bottom), then select "M/EEG". In the dialog that opens select the `fdspmeeg_run_01_sss.mat` file.  This will open the M/EEG Review window. The first thing you will see is the "Info" tab, which contains some information about the data, including the number of trials, channels, and sampling frequency. You can also see the "History" section, which lists all the preprocessing steps that have been applied to this file so far. Click on the `EEG` tab and you will see the EEG data plotted as a time series for each channel. You can scroll through the time by using the arrow keys and scroll bar at the bottom of the window. In the toolbar at the top of the window you can find buttons for changing the scale of the time and the amplitude axes. When scrolling through the data you might see vertical lines. These indicate the stimulus onset times. If any channels were marked as bad in the previous step, they will be shown as dashed lines. Try also clicking on the `MEG` and `MEGPLANAR` tabs to see the MEG data. Can you see anything obviously different between the waveforms of the three sensor types?
+When analysing M/EEG data, it is a good idea to review the intermediate results at least after steps that change the data. This can help identify any potential issues or artifacts before moving on to the following steps. Go to the main SPM window  (the one with many buttons) and select "Display" (one the left, third from the bottom), then select "M/EEG". In the dialog that opens select the `fdspmeeg_run_01_sss.mat` file.  This will open the M/EEG Review window. The first thing you will see is the "Info" tab, which contains some information about the data, including the number of trials, channels, and sampling frequency. You can also see the "History" section, which lists all the preprocessing steps that have been applied to this file so far. Click on the `EEG` tab and you will see the EEG data plotted as a time series for each channel. You can scroll through the time by using the arrow keys and scroll bar at the bottom of the window. In the toolbar at the top of the window you can find buttons for changing the scale of the time and the amplitude axes. When scrolling through the data you might see vertical lines. These indicate the stimulus onset times. If any channels were marked as bad in the previous step, they will be shown as dashed lines. Try also clicking on the `MEG` tab to see the MEG data. Can you see anything obviously different between the waveforms of the three sensor types?
 
 ![SPM M/EEG Review Window](reviewing.png)
 
@@ -254,19 +254,20 @@ spm_jobman('run', jobs, inputs{:});
 At the top of this script is listed the variable `nrun = X`: replace `X`
 with `6` for the six runs you wish to convert. You also need to complete
 the missing MATLAB code needed for each run: here, 1) the raw input file
-to convert, 2) the trial definition file for that run, and 3) the
-channel file containing the bad channels (which is actually the same for
+to convert, 2) the channel file containing the bad channels (which is actually the same for
 each run, but differs across subjects, which will matter later when we
-extend the script to loop over subjects). In order to automate selection
-of these files, you need to know some basic MATLAB . For example,
+extend the script to loop over subjects), and 3) the trial definition file for that run .
+In order to automate selection of these files, you need to know some basic MATLAB . For example,
 because the files are named systematically by run, we can complete the
 relevant lines of the script with:
 
 ```matlab
-     inputs{1, crun} = cellstr(fullfile(rawpth,'Sub15','MEEG',sprintf('run_%02d_sss.fif',crun)));
-     inputs{2, crun} = cellstr(fullfile(rawpth,'Sub15','MEEG','Trials',sprintf('run_%02d_trldef.mat',crun)));
-     inputs{3, crun} = cellstr(fullfile(rawpth,'Sub15','MEEG','bad_channels.mat'));
+     inputs{1, crun} = cellstr(fullfile(rawpth,'SubXX','MEEG',sprintf('run_%02d_sss.fif',crun)));
+     inputs{2, crun} = cellstr(fullfile(rawpth,'SubXX','MEEG','bad_channels.mat'));
+     inputs{3, crun} = cellstr(fullfile(rawpth,'SubXX','MEEG','Trials',sprintf('run_%02d_trldef.mat',crun)));
 ```
+
+> **Tip:** Replace `XX` with the subject number, e.g., use `Sub15` for subject 15 and replace "rawpth" with the path to the directory containing the subject's folder.
 
 where `rawpth` refers to your base directory, `Sub15` is the subject
 directory that contains `MEG` and `Trials` sub-directories and `%02d` refers to
@@ -285,8 +286,8 @@ number `1-6`. If you want to view any of these output files, press
 "Display" on the main SPM menu pane, select "M/EEG", then select one of
 these files. You will be able to review the preprocessing steps as a
 pipeline from the "History" section of the "Info" tab, and can view
-single trials by selecting one of the EEG, MEG (magnetometer) or MPLANAR
-(gradiometer) tabs (see other chapters for how to use the buttons in the
+single trials by selecting one of the EEG, MEG (magnetometer) tabs
+(see other chapters for how to use the buttons in the
 M/EEG Review window).
 
 ### Merging (concatenating runs)
@@ -294,7 +295,7 @@ M/EEG Review window).
 To analyse the data as one file, the six runs need to be merged. To do
 this, select "Merging" from "SPM -- M/EEG -- Preprocessing -- Merging",
 select "File Names", "specify", and select the 6 file names
-`bdspmeeg_run_%02d_sss.mat`. If you were to run this stage now, the
+`befdspmeeg_run_%02d_sss.mat`. If you were to run this stage now, the
 output file would match the first input file, but be prepended with a
 `c`, i.e, `cbefdspmeeg_run_01_sss.mat`. However, we will wait to add some
 more modules before running, as below. At this stage, you could also add
@@ -363,12 +364,12 @@ Time-Frequency analysis.
 This completes the second part of the preprocessing pipeline. At this
 point, you can run the batch. Alternatively, you can save and script,
 and run the batch from a script. The resulting script can also be
-combined with the previous script created.
+combined with the previous script created. In any case, make sure you save the batch file with a meaningful name, such as `batch_preproc_meeg_pipeline_merged`.
 Remember that, if you want to pass variables from a script to a batch,
 you need to first ensure the relevant fields in the batch file are cleared.
 
 To view the output, press "Display" on the main SPM menu pane, select
-"M/EEG", then select `Mcbdspmeeg_run_01_sss.mat`. Again, you will be
+"M/EEG", then select `Mcbefdspmeeg_run_01_sss.mat`. Again, you will be
 able to review the preprocessing steps from the "History" section of the
 "Info" tab.
 

@@ -12,6 +12,8 @@ averaging). Before averaging though, we will crop the 400ms buffer
 around each trial (which is only necessary for the time-frequency
 analysis).
 
+Previously, for instructive purposes, you ran the preprocessing steps one-by-one, saved a batch for each individual step and then chained these batches to make a pipeline. Now, when you are familiar with the idea of a dependency, we will create a single batch that contains all the preprocessing steps, which can then be run in one go.
+
 ### Crop
 
 To crop the data, select the crop option from "SPM -- M/EEG --
@@ -36,7 +38,7 @@ Next, select "New: Method" from the box titled "Current Item: How to
 look for artefacts". Back in the "Current Module" window, highlight
 "Channel selection" to list more options, choose "Select channels by
 type" and select "EOG". Then do not forget to also delete the default
-"All" option! Then press the "$<$-X" to select "threshold channels",
+"All" option! Then press the "<-X" to select "threshold channels",
 click the "Specify" button and set this to `200` (in units of
 microvolts). The result of this thresholding will be to mark a number of
 trials as "bad" (these can be reviewed after the pipeline is run if you
@@ -44,32 +46,15 @@ like). Bad trials are not deleted from the data, but marked so they will
 be excluded from averaging below. The output file will be prepended with
 the letter "a".
 
-### Combine Planar Gradiometers
-
-The next step is only necessary for scalp-time statistics on planar
-gradiometers. For scalp-time images, one value is needed for each sensor
-location. Neuromag's planar gradiometers measure two orthogonal
-directions of the magnetic gradient at each location, so these need to
-be combined into one value for a scalar (rather than vector) topographic
-representation. The simplest way to do this is to take the Root Mean
-Square (RMS) of the two gradiometers at each location (i.e. estimate the
-2D vector length). In SPM, this will create a new sensor type called
-MCOMB. Note that this step is NOT necessary for source reconstruction
-(where, the forward model captures both gradiometers). Note also that
-the RMS is a nonlinear operation, which means that zero-mean additive
-noise will no longer cancel by averaging across trials, in turn meaning
-that it is difficult to compare conditions that differ in the number of
-trials. To take the RMS, select "Combine Planar" from the "SPM -- M/EEG
--- Preprocessing" menu, highlight "File Name", select the "dependency"
-button, and choose the Artefact-corrected file above. Leave the "copying
-mode" as default -- "Replace planar". The produced file will be
-prepended with `P`.
+> **Tip:** How is the threshold set?
+>
+> You would usually set the threshold by reviewing data visually, for example by plotting the EOG channels and looking for large deflections that correspond to blinks. You could open the `Mcbefdspmeeg_run_01_sss.mat` file in the reviewing tool (`Display -- M/EEG`) switch to the `Other` tab and look at the panels corresponding to the two EOG channels. You can figure out the channel name and type by right-clicking on the plot which will show a pop-up menu with these details. In the top right corner of the window, you see a trial list where you can switch between trials by clicking on them. You can also Shift- and Ctrl- click to plot a few trials together. If you click on the first trial and then scroll to the bottom of the list and click on the last trial while holding Shift, you can plot all trials in between together (though it can take a while). If you then right-click on an EOG channel plot and select the channel name in the popup menu, the plot will open in a separate figure (after some time) where you can examine the y-axis values, zoom in and out and get an idea of what a good threshold might be. Note that some of the subjects were very good and you might get no blinks at all within the peristimulus time depending on what subject you are working on. In this case try comparing your plots to the ones of your fellow students.
 
 ### Trial averaging
 
 To average the data across trials, select "SPM -- M/EEG -- Average --
 Averaging", and define the input as dependent on the output of the
-planar combination module. Keep the remaining options as the default
+artefact detection module. Keep the remaining options as the default
 values. (If you like, you could change the type of averaging from
 "standard" to "Robust". Robust averaging is a more sophisticated version
 of normal averaging, where each timepoint in each trial is weighted
@@ -96,66 +81,53 @@ For example, to create an ER that is the difference between faces
 (averaged across Famous and Unfamiliar) and scrambled faces, enter the
 vector `[0.5 0.5 -1]` (assuming conditions are ordered
 Famous-Unfamiliar-Scrambled; see comment earlier in "Prepare" module),
-and give it a name. Or to create the differential ER between Famous and
+and give it a name by specifying "New condition label" as e.g. 'Faces_vs_Scrambled'. 
+Or to create the differential ER between Famous and
 Unfamiliar faces, enter the vector `[1 -1 0]`. Sometimes it is worth
 repeating the conditions from the previous averaging step by entering,
 in this case, three contrasts: `[1 0 0]`, `[0 1 0]` and `[0 0 1]`, for
 Famous, Unfamiliar and Scrambled conditions respectively. These will be
-exactly the same as in the averaged file above, but now we can examine
-them, as well as the differential responses, within the same file (i.e.
+exactly the same as in the averaged file above, but now we can examine them, 
+as well as the differential responses, within the same file (i.e.
 same graphics window when we review that file), and so can also delete
-the previous `m` file.
+the previous `m` file by adding a 'Delete' module'. Set 'Weight by replications' to 'No'.
+This option is useful e.g. for combining averages over blocks with different numbers of trials. But
+in this case we don't want our contrasts to be affected by trial numbers.
 
-### Save batch and review.
+### Save batch and review
 
-At this point, you can save batch and script again. The resulting batch
-file should look like the `batch_preproc_meeg_erp_job.m` file in the
-`SPM12batch` part of the `SPMscripts` FTP directory. The script file can
+At this point, you can save batch and script again as `batch_preproc_meeg_evoked_meeg`.  The script file can
 be run (and possibly combined with the previous script created).
 
 We will start by looking at the trial-averaged ERs to each of the three
 conditions. Select the "Display" button on the SPM Menu and select the
-file `wmPapMcbdspmeeg_run_01_sss.mat`. Then select, for example, the
+file `wmapMcbefdspmeeg_run_01_sss.mat`. Then select, for example, the
 "EEG" tab, and you will see each channel as a row ("strip", or "standard
 view") for the mean ER for Famous faces. If you press "scalp" instead,
 the channels will be flat-projected based on their scalp position (nose
 upwards). You can now display multiple conditions at once by holding the
-shift-key and selecting Trials 2 and 3 (Unfamiliar and Scrambled) as
-well (as in Figure <a href="#multi:fig:2" data-reference-type="ref"
-data-reference="multi:fig:2">1.2</a>, after zooming the y-axis
-slightly). If you press the expand y-axis button (top left) a few times
+shift-key and selecting Trials 4 and 5 (Unfamiliar and Scrambled).
+If you press the expand y-axis button (top left) a few times
 to up-scale the data, you should see something like in
-Figure <a href="#multi:fig:2" data-reference-type="ref"
-data-reference="multi:fig:2">1.2</a>. You can see the biggest evoked
+the below figure. You can see the biggest evoked
 potentials (relative to average over channels) at the back of the head.
 
-<figure id="multi:fig:2">
-<div class="center">
-<img src="../../../../assets/figures/manual/multi/figure2.png" style="width:100mm" />
-</div>
-<figcaption><em>Trial-averaged ERPs for each condition over all EEG
-channel positions on the scalp. <span id="multi:fig:2"
-label="multi:fig:2"></span></em></figcaption>
-</figure>
+![Trial-averaged ERPs for each condition over all EEG channel positions on the scalp.](./erps.png)
+
+*Figure: Trial-averaged ERPs for each condition displayed across all EEG channel positions on the scalp. The scalp projection shows the spatial distribution of evoked responses, with the largest potentials visible at posterior channels.*
 
 If you press the magnifying glass icon, then with the cross-hairs select
-Channel 70 (in bottom right quadrant of display), you will get a new
-figure like in Figure <a href="#multi:fig:3" data-reference-type="ref"
-data-reference="multi:fig:3">1.3</a> that shows the ERPs for that
+Channel `EEG70` (in bottom right quadrant of display), you will get a new
+figure like below that shows the ERPs for that
 channel in more detail (and which can be adjusted using the usual MATLAB
 figure controls). You can see that faces (blue and green lines) show a
 more negative deflection around 170ms than do scrambled faces (red
 line), the so-called "N170" component believed to index the earliest
 stage of face processing.
 
-<figure id="multi:fig:3">
-<div class="center">
-<img src="../../../../assets/figures/manual/multi/figure3.png" style="width:100mm" />
-</div>
-<figcaption><em>Trial-averaged ERPs for each condition from EEG channel
-70 (right posterior). <span id="multi:fig:3"
-label="multi:fig:3"></span></em></figcaption>
-</figure>
+![Trial-averaged ERPs for each condition from EEG channel 70 (right posterior).](./erp_singlechan.png)
+
+*Figure: Trial-averaged ERPs for each condition from EEG channel 70 (right posterior). The faces (blue and green lines) show a more negative deflection around 170ms than scrambled faces (red line), demonstrating the N170 component.*
 
 To see the topography of this differential N170 component, select
 instead the fourth trial (contrast) labelled "Faces -- Scrambled". Then
@@ -165,21 +137,14 @@ shift the time-slider on the bottom of that window to the leftmost
 position, and then repeatedly click on the right arrow, you will see the
 evolution of the face effect, with no consistent difference during the
 prestimulus period, or until about 155ms, at which point a clear dipolar
-field pattern should emerge
-(Figure <a href="#multi:fig:4" data-reference-type="ref"
-data-reference="multi:fig:4">1.4</a>).
+field pattern should emerge.
 
-<figure id="multi:fig:4">
-<div class="center">
-<img src="../../../../assets/figures/manual/multi/figure4.png" style="width:100mm" />
-</div>
-<figcaption><em>Topography of differential ERP for faces (famous and
-unfamiliar) vs scrambled at 155ms. <span id="multi:fig:4"
-label="multi:fig:4"></span></em></figcaption>
-</figure>
+![Topography of differential ERP for faces (famous and unfamiliar) vs scrambled at 155ms.](./topography.png)
 
-You can of course explore the other sensor-types (magnetometers, MEG)
-and combined gradiometers (MCOMB), which will show an analogous "M170".
+*Figure: Topography of differential ERP for faces (famous and unfamiliar) vs scrambled at 155ms. A clear dipolar field pattern emerges, indicating the neural response to face stimuli.*
+
+You can of course also explore the magnetometers (MEG)
+which will show an analogous "M170".
 You can also examine the EOG and ECG channels, which appear under the
 "OTHER" tab. (Note that the VEOG channel contains a hint of an evoked
 response: this is not due to eye-movements, but due to the fact that
@@ -202,11 +167,11 @@ first, we have to convert these sensor-by-time data into 3D images of
 
 To create 3D scalp-time images for each trial, the 2D representation of
 the scalp is created by projecting the sensor locations onto a plane,
-and then interpolating linearly between them onto a 32$\times$<!-- -->32
+and then interpolating linearly between them onto a 32×32
 pixel grid. This grid is then tiled across each timepoint. To do this,
 you need to select the "SPM -- M/EEG -- Images -- Convert2Images" option
 in the batch editor. For the input file, select the
-`PapMcbdspmeeg_run_01_sss.mat` file that contains every cropped trial
+`apMcbefdspmeeg_run_01_sss.mat` file that contains every cropped trial
 (i.e, before averaging), but with bad trials marked (owing to excessive
 EOG signals; see earlier). Next select "Mode", and select "scalp x
 time". Then, select "conditions", select "Specify" and enter the
@@ -216,57 +181,42 @@ condition label "Famous". Then repeat for the condition labels
 To select the channels that will create your image, highlight the
 "Channel selection", and then select "New: Select channels by type" and
 select "EEG". The final step is to name the Directory prefix
-`eeg_img_st` this can be done by highlighting "directory prefix",
+`eeg_img_st_` this can be done by highlighting "directory prefix",
 selecting "Specify", and the prefix can then be entered.
 
-This process can be repeated for the MEGMAG channels, and the MEGCOMB
-channels (although we will focus only on the EEG here). If so, the
+This process can be repeated for the MEGMAG channels
+(although we will focus only on the EEG here). If so, the
 easiest way to do this is to right-click "Convert2Images" in the Module
-List, and select "replicate module". You will have to do this twice, and
+List, and select "replicate module", and
 then update the channels selected, and the directory prefix to
-`mag_img_mat` and `grm_img_mat` to indicate the magnetometers (MEGMAG)
-and the gradiometers (MEGCOMB) respectively.
+`mag_img_st_` indicate the magnetometers (MEGMAG).
 
 ##### Save batch and review.
 
-At this point, you can save batch and script again. The resulting batch
-file should look like the `batch_preproc_meeg_erp_images_job.m` file in
-the `SPM12batch` FTP directory. Once you have run this script, a new
-directory will be created for each channel-type, which is based on the
+At this point, you can save batch and script again e.g. as `batch_preproc_meeg_erp_images_job.m` 
+Once you have run this script (note that this step might be quite slow on your system so you might want to 
+run it overnight), a new directory will be created for each channel-type, which is based on the
 input file and prefix specified above (e.g.,
-`eeg_img_st_PapMcbdspmeeg_run_01_sss` for the EEG data). Within that
+`eeg_img_st_apMcbefdspmeeg_run_01_sss` for the EEG data). Within that
 directory will be three 4D NIfTI files, one per condition. It is very
 important to note that these 4D files contain multiple "frames" (i.e. 3D
-scalp-time images), one per trial (i.e. 296 in the case of unfamiliar
+scalp-time images), one per trial (i.e. ~100 in the case of unfamiliar
 faces). To view one of these, press "Display -- Images" in the SPM Menu
 window, and select, say, the `condition_Unfamiliar.nii` file. But note
 that by default you will only see the first scalp-time image in each
 file (because the default setting of "Frames" within the Select Image
 window is `1`). To be able to select from all frames, change the
 "Frames" value from `1` to `Inf` (infinite), and now you will see all
-296 frames (trials) that contained Unfamiliar faces. If you select, say,
-number 296, you should see an image like in
-Figure <a href="#multi:fig:5" data-reference-type="ref"
-data-reference="multi:fig:5">1.5</a> (this was created after selecting
+~100 frames (trials) that contained Unfamiliar faces. If you select, say,
+number 50, you should see an image like below (this was created after selecting
 "Edit -- Colormap" from the top toolbar, then "Tools -- Standard
 Colormap -- Jet", and entering `[0 0 165]` as the coordinates in order
 to select 165ms post-stimulus). You can scroll will the cross-hair to
 see the changes in topography over time.
 
-<figure id="multi:fig:5">
-<div class="center">
-<img src="../../../../assets/figures/manual/multi/figure5.png" style="width:150mm" />
-</div>
-<figcaption><em>3D Scalp-Time image for 296th trial in the Unfamiliar
-condition. <span id="multi:fig:5"
-label="multi:fig:5"></span></em></figcaption>
-</figure>
+![3D Scalp-Time image for 296th trial in the Unfamiliar condition.](./erp_image.png)
 
-Note that Random Field Theory, used to correct the statistics below,
-assumes a certain minimum smoothness of the data (at least three times
-the voxel size). The present data meet this requirement, but in other
-cases, one could add an additional step of Gaussian smoothing of the
-images to ensure this smoothness criterion is met.
+*Figure: Example 3D scalp-time image for a single trial*
 
 ## Scalp-Time Statistics across trials within one subject
 
@@ -277,52 +227,61 @@ assume that each trial is an independent observation, so our GLM
 corresponds to a one-way, non-repeated-measures ANOVA with 3 levels
 (conditions).
 
+# Smoothing
+
+Random Field Theory, used to correct the statistics below,
+assumes a certain minimum smoothness of the data (at least three times
+the voxel size). To ensure that the data meet this criterion, we will
+add an additional step of Gaussian smoothing of the
+images.
+
+Start a new batch and add an "SPM -- Spatial -- Smooth" module.
+A key parameter for smoothing is the full-width at half maximum (FWHM) the smoothing kernel.
+In this case it's defined by a 1x3 vector `[8 8 8]` meaning 8x8 mm on the scalp and 8 ms.
+We will use this default but you could change the parameters and see how that affects the results.
+
+> **Tip:** A general principle useful for determining the optimal degree of smoothing is the "Matched Filter Theorem" that says
+> that the smoothing kernel should be similar in its dimensions to the features of interest. You will be able to make a better use of this
+>idea once you develop an intuition for the spatial and temporal characteristics of the effects we are looking for.
+
+Click on `Images to smooth` and navigate to the `eeg_img_st_apMcbefdspmeeg_run_01_sss` folder. You will see the 3 NIfTI files corresponding to the 3 conditions. What we need to do no is select all the trials for the first condition - Famous. A convenient way to do that is to first use a filter
+to exclude the other conditions. The filter box is just below the file list and contains the string `.*` by default. This means 'all files'. This is a particular case of a 'regular expression', which is a powerful tool for matching patterns in text. If you want to learn more about how these work  you can look at the documentation page of the 'regexp' function via
+
+```matlab
+doc regexp
+```
+
+For our purposes, it is sufficient to change the string in the box to `Fam.*` and press `Enter`. If everything worked as intended you should now see only the  'condition_Famous.nii,1' file as in the below figure.
+
+![Selecting the first condition using a regular expression.](./image_selection.png)
+
+*Figure: Selecting the first condition using a regular expression.*
+
+Now you can change the value in the `Frames` box from `1` to `Inf` and press `Enter`. This will show a list of all the trials in the file.
+You can now select them by right-clicking in the file list box and choosing `Select all` from the popup menu. You should now see that all the trials for the Famous condition are selected (listed in the box at the bottom of the dialogue). Click `Done` to return to the batch editor.
+
+Now repeat this process for the Unfamiliar and Scrambled conditions (add a new "SPM -- Spatial -- Smooth" module for each). Note that if you replicate the module and want to select a new set of files you need to unselect the original selection first by right-clicking on any name in the bottom box and choosing `Unselect all`.
+
 ### Model Specification
 
-To create this model, open a new batch, select "Factorial design
-specification" under "Stats" on the SPM toolbar at the top of the batch
-editor window. The first thing is to specify the output directory where
+Now add  "SPM -- Stats -- Factorial design specification" module to the batch. 
+The first thing is to specify the output directory where
 the SPM stats files will be saved. So first create such a directory
 within the subject's sub-directory, calling it for example `STStats`,
 and then create a sub-directory `eeg` within `STStats` (and potentially
-two more called `mag` and `grm` if you want to examine other
-sensor-types too). Then go back to the batch editor and select this new
+one more called `mag` if you want to examine the MEG
+data too). Then go back to the batch editor and select this new
 `eeg` directory.
 
 Highlight "Design" and from the current item window, select "One-way
 ANOVA". Highlight "Cell", select "New: Cell" and repeat until there are
 three cells. Select the option "Scan" beneath each "Cell" heading
-(identified by the presence of a "$<$-X"). Select "Specify", and in the
-file selector window, remember to change the "Frames" value from `1` to
-`Inf` as previously to see all the trials. Select all of the image files
-for one condition (by using the right-click "select all" option). It is
-vital that the files are selected in the order in which the conditions
+(identified by the presence of a "<-X"). Select `Dependency`, and choose
+one of the smoothing outputs in the corresponding order for each cell. It is
+vital that the dependencies are selected in the order in which the conditions
 will later appear within the Contrast Manager module (i.e., Famous,
-Unfamiliar, Scrambled). Next highlight "Independence" and select "Yes",
-but set the variance to "Unequal". Keep all the remaining defaults (see
-other SPM chapters for more information about these options).
-
-Finally, to make the GLM a bit more interesting, we will add 3 extra
-regressors that model the effect of time within each condition (e.g. to
-model practice or fatigue effects). (This step is optional if you'd
-rather omit.) Press "New: Covariate" under the "Covariates" menu, and
-for the "Name", enter "Order Famous". Keep the default "None" to
-interactions, and "Overall mean" for "centering". We now just need to
-enter a vector of values for every trial in the experiment. These trials
-are ordered Famous, Unfamiliar and Scrambled, since this is how we
-selected them above. So to model linear effects of time within Famous
-trials, we need a vector that goes from `1:295` (since there are 295
-Famous trials). However, we also need to mean-correct this, so we can
-enter `detrend([1:295],0)` as the first part of the vector (covariate)
-required. We then need to add zeros for the remaining Unfamiliar and
-Scrambled trials, of which there are 296+289=585 in total. So the
-complete vector we need to enter (for the Famous condition) is
-`[detrend([1:295],0) zeros(1,585)]`. We then need to repeat this time
-covariate for the remaining two conditions. So press "New: Covariate"
-again, but this time enter "Order Unfamiliar" as the name, and
-`[zeros(1,295) detrend([1:296],0) zeros(1,289)]` as the vector. Finally,
-press "New: Covariate", but this time enter "Order Scrambled" as the
-name, and `[zeros(1,591) detrend([1:289],0)]` as the vector.
+Unfamiliar, Scrambled). Make sure "Independence" is set to "Yes",
+and the variance to "Unequal". Keep all the remaining defaults.
 
 This now completes the GLM specification, but before running it, we will
 add two more modules.
@@ -343,10 +302,10 @@ comparisons of conditions by adding a "Contrast Manager" module from the
 The first contrast will be a generic one that tests whether significant
 variance is captured by the 6 regressors (3 for the main effect of each
 condition, and 3 for the effects of time within each condition). This
-corresponds to an F-contrast based on a 6x6 identity matrix. Highlight
+corresponds to an F-contrast based on a 6×6 identity matrix. Highlight
 contrast sessions and select a new F-contrast session. Name this
 contrast "All Effects". Then define the weights matrix by typing in
-`eye(6)` (which is MATLAB for a 6$\times$<!-- -->6 identity matrix).
+`eye(6)` (which is MATLAB for a 6×6 identity matrix).
 (Since there is only one "session" in this GLM, select "Don't replicate"
 from the "replicate over sessions" question.) We will use this contrast
 later to plot the parameter estimates for these 6 regressors.
@@ -358,7 +317,7 @@ Figure <a href="#multi:fig:3" data-reference-type="ref"
 data-reference="multi:fig:3">1.3</a> is reliable given the variability
 from trial to trial, and to also discover where else in space or time
 there might be reliable differences between faces and scrambled faces).
-So make another F-contrast, name this one "Faces (Fam+ Unf) $<>$
+So make another F-contrast, name this one "Faces (Fam+ Unf) <>
 Scrambled", and type in the weights `[0.5 0.5 -1 0 0 0]` (which
 contrasts the main effect of faces vs scrambled faces, ignoring any time
 effects (though SPM will complete the final zeros if you omit). Note
@@ -382,7 +341,7 @@ the `SPM12batch` FTP directory).
 The results of this output can be viewed by selecting "Results" from the
 SPM Menu window. Select the `SPM.mat` file in the `STStats/eeg`
 directory, and from the new "Contrast Manager" window, select the
-pre-specified contrast "Faces (Fam+Unf) $<>$ Scrambled". Within the
+pre-specified contrast "Faces (Fam+Unf) <> Scrambled". Within the
 Interactive window which will appear on the left hand side, select the
 following: Apply Masking: None, P value adjustment to control: FWE, keep
 the threshold at 0.05, extent threshold {voxels}: 0; Data Type:
