@@ -191,7 +191,7 @@ List, and select "replicate module", and
 then update the channels selected, and the directory prefix to
 `mag_img_st_` indicate the magnetometers (MEGMAG).
 
-##### Save batch and review.
+### Save batch and review.
 
 At this point, you can save batch and script again e.g. as `batch_preproc_meeg_erp_images_job.m` 
 Once you have run this script (note that this step might be quite slow on your system so you might want to 
@@ -227,7 +227,7 @@ assume that each trial is an independent observation, so our GLM
 corresponds to a one-way, non-repeated-measures ANOVA with 3 levels
 (conditions).
 
-# Smoothing
+### Smoothing
 
 Random Field Theory, used to correct the statistics below,
 assumes a certain minimum smoothness of the data (at least three times
@@ -260,7 +260,7 @@ For our purposes, it is sufficient to change the string in the box to `Fam.*` an
 Now you can change the value in the `Frames` box from `1` to `Inf` and press `Enter`. This will show a list of all the trials in the file.
 You can now select them by right-clicking in the file list box and choosing `Select all` from the popup menu. You should now see that all the trials for the Famous condition are selected (listed in the box at the bottom of the dialogue). Click `Done` to return to the batch editor.
 
-Now repeat this process for the Unfamiliar and Scrambled conditions (add a new "SPM -- Spatial -- Smooth" module for each). Note that if you replicate the module and want to select a new set of files you need to unselect the original selection first by right-clicking on any name in the bottom box and choosing `Unselect all`.
+Now repeat this process for the Unfamiliar and Scrambled conditions (add a new "SPM -- Spatial -- Smooth" module for each). Note that if you replicate the module and want to select a new set of files you need to unselect the original selection first by right-clicking on any name in the bottom box and choosing `Unselect all`. An alternative way to do that is to right-click on the `Images to smooth` item in the batch and choose `Clear value` from the popup menu before selecting a new set of files.
 
 ### Model Specification
 
@@ -269,7 +269,7 @@ The first thing is to specify the output directory where
 the SPM stats files will be saved. So first create such a directory
 within the subject's sub-directory, calling it for example `STStats`,
 and then create a sub-directory `eeg` within `STStats` (and potentially
-one more called `mag` if you want to examine the MEG
+one more called `meg` if you want to examine the MEG
 data too). Then go back to the batch editor and select this new
 `eeg` directory.
 
@@ -289,105 +289,98 @@ add two more modules.
 ### Model Estimation
 
 The next step within this pipeline is to estimate the above model. Add a
-module for "Model Estimation" from the "Stats" option on the SPM toolbar
-and define the file name as being dependent on the results of the
+module for "SPM -- Stats -- Model Estimation" 
+and define the `SPM file` as being dependent on the results of the
 factorial design specification output. For "write residuals", keep "no".
 Select classical statistics.
 
 ### Setting up contrasts
 
 The final step in the statistics pipeline is create some planned
-comparisons of conditions by adding a "Contrast Manager" module from the
-"Stats" bar. Define the file name as dependent on the model estimation.
+comparisons of conditions by adding "SPM -- Stats -- Contrast Manager" module.
+Define `SPM file` as dependent on the model estimation.
 The first contrast will be a generic one that tests whether significant
-variance is captured by the 6 regressors (3 for the main effect of each
-condition, and 3 for the effects of time within each condition). This
-corresponds to an F-contrast based on a 6×6 identity matrix. Highlight
+variance is captured by the 3 regressors. This
+corresponds to an F-contrast based on a 3×3 identity matrix. Highlight
 contrast sessions and select a new F-contrast session. Name this
 contrast "All Effects". Then define the weights matrix by typing in
-`eye(6)` (which is MATLAB for a 6×6 identity matrix).
+`eye(3)` (which is MATLAB for a 3×3 identity matrix).
 (Since there is only one "session" in this GLM, select "Don't replicate"
 from the "replicate over sessions" question.) We will use this contrast
-later to plot the parameter estimates for these 6 regressors.
+later to plot the parameter estimates for these 3 regressors.
 
 More interestingly perhaps, we can also define a contrast that compares
 faces against scrambled faces (e.g. to test whether the N170 seen in the
-average over trials in right posterior EEG channels in
-Figure <a href="#multi:fig:3" data-reference-type="ref"
-data-reference="multi:fig:3">1.3</a> is reliable given the variability
+average over trials in right posterior EEG channels is reliable given the variability
 from trial to trial, and to also discover where else in space or time
 there might be reliable differences between faces and scrambled faces).
 So make another F-contrast, name this one "Faces (Fam+ Unf) <>
-Scrambled", and type in the weights `[0.5 0.5 -1 0 0 0]` (which
+Scrambled", and type in the weights `[0.5 0.5 -1]` (which
 contrasts the main effect of faces vs scrambled faces, ignoring any time
-effects (though SPM will complete the final zeros if you omit). Note
-that we use an F-test because we don't have strong interest in the
+effects). Note that we use an F-test because we don't have strong interest in the
 polarity of the face-scrambled difference (whose distribution over the
 scalp depends on the EEG referencing). But if we did want to look at
 just positive and negative differences, you could enter two T-contrasts
 instead, with opposite signs on their weights.
 
-##### Save batch and review
+### Save batch and review
 
 Once you have added all the contrasts you want, you can save this batch
-file (it should look like the `batch_stats_ANOVA_job.m` file in the
-`SPM12batch` FTP directory). This only runs a GLM for one sensor-type
+file (as e.g. `batch_stats_meeg_ANOVA.m` ). This only runs a GLM for one sensor-type
 (we cannot combine the sensors until we get to source space later), so
-you can write a script around this batch that calls it three times, once
-per sensor-type (i.e, for magnetometers and gradiometer RMS too), just
-changing the output directory and input files (see `master_script.m` on
-the `SPM12batch` FTP directory).
+you can write a script around this batch that calls it twice, once
+per sensor-type, just changing the output directory and input files.
 
-The results of this output can be viewed by selecting "Results" from the
+### Reviewing statistical results
+
+Once you run the batch (it could take a long time to run in Desktop@UCL so you could run it overnight),
+the results can be viewed by selecting "Results" from the
 SPM Menu window. Select the `SPM.mat` file in the `STStats/eeg`
 directory, and from the new "Contrast Manager" window, select the
 pre-specified contrast "Faces (Fam+Unf) <> Scrambled". Within the
 Interactive window which will appear on the left hand side, select the
 following: Apply Masking: None, P value adjustment to control: FWE, keep
 the threshold at 0.05, extent threshold {voxels}: 0; Data Type:
-Scalp-Time. The Graphics window should then show what is in
-Figure <a href="#multi:fig:6" data-reference-type="ref"
-data-reference="multi:fig:6">1.6</a>.
+Scalp-Time. The Graphics window should then be similar to the Figure below.
 
-<figure id="multi:fig:6">
-<div class="center">
-<img src="../../../../assets/figures/manual/multi/figure6.png" style="width:150mm" />
-</div>
-<figcaption><em>Scalp-Time SPM for F-contrast, thresholded at p&lt;.05
+![Scalp-Time SPM for F-contrast Faces<>Scrambled](./facesvscrambled_st.png)
+
+*Figure: Scalp-Time SPM for F-contrast, thresholded at p<.05
 FWE corrected, for faces vs scrambled faces across trials for one
-subject. <span id="multi:fig:6"
-label="multi:fig:6"></span></em></figcaption>
-</figure>
+subject.*
 
-If you move the cursor to the earliest local maximum -- the third local
-peak in the first cluster -- this corresponds to `x=+38mm`, `y=-62mm`
-and `t=150ms` (i.e. right posterior scalp, close to the sensor shown in
-Figure <a href="#multi:fig:3" data-reference-type="ref"
-data-reference="multi:fig:3">1.3</a>, though note that distances are
-only approximations). If you then press "Plot -- Contrast Estimates --
-All Effects", you will get 6 bars like in
-Figure <a href="#multi:fig:7" data-reference-type="ref"
-data-reference="multi:fig:7">1.7</a>. The first three reflect the three
-main conditions (the red bar is the standard error from the model fit).
-You can see that Famous and Unfamiliar faces produce a more negative
-amplitude at this space-time point than Scrambled faces (the "N70"). The
-next three bars show the parameter estimates for the modulation of the
-evoked response by time. These effects are much smaller relative to
-their error bars (i.e., less significant), but suggest that the N170 to
-Famous faces becomes less negative with time, and that to scrambled
-faces becomes larger (though one can test these claims formally with
-further contrasts).
+Note that since you might be working on a different subject, your
+results might look different. Compare your results with those of your
+fellow students to get an idea of the variability across subjects.
 
-<figure id="multi:fig:7">
-<div class="center">
-<img src="../../../../assets/figures/manual/multi/figure7.png" style="width:100mm" />
-</div>
-<figcaption><em>Effects of interest from sub-peak +38mm -62mm +150ms.
-First three bars are mean evoked response amplitude vs baseline for
-Famous, Unfamiliar and Scrambled faces; next three bars are modulations
-about mean by time throughout experiment. <span id="multi:fig:7"
-label="multi:fig:7"></span></em></figcaption>
-</figure>
+The three plots in the top left corner of the graphics window show the
+SPM thresholded at p<0.05 FWE-corrected, in three orthogonal
+planes. The bottom panel shows the scalp topography similar to the ones
+we saw when plotting raw sensor data, except the head is rotated 90
+degrees so front is right and back is left. The panel above it, combines time
+with antero-posterior (front-to-back) spatial axis that matches the scalp topography below and the top right panel is similar except the spatial axis is left-to-right. These plots show maximal intensity projections (MIPs), that you might be familiar with from fMRI, where the most significant voxel along each line of sight is shown.
+
+The panel at the top right of the graphics window shows a representation of the GLM design matrix and the contrast we are looking at.
+
+The table in the bottom half of the graphics window shows the statistical results in greater details. The rightmost column lists the coordinates of most prominent local peaks in space and time. You can click on any of these rows to move the cross-hairs in the three orthogonal views to that peak. Focus on peaks close to 170ms and look for one with a posterior scalp distribution (for each subject the exact timing and location will vary a bit).
+
+If you then press "Plot -- Contrast Estimates --
+All Effects", you will get 3 bars like in the below
+Figure. They  reflect the three main conditions (the red bar is the standard error from the model fit). You can see that Famous and Unfamiliar faces produce a more negative amplitude at this space-time point than Scrambled faces (the "N70").
+
+![Scalp-Time SPM for F-contrast Faces<>Scrambled](./contrast_estimates.png)
+
+*Figure:Effects of interest from a posterior sub-peak around 170ms.
+The three bars are mean evoked response amplitude vs baseline for
+Famous, Unfamiliar and Scrambled faces.*
+
+To find out which channel is closes to the effect peak, right-click on the MIP
+plot and select `display/hide channels` from the popup menu. You will be asked to
+choose an M/EEG dataset. Any dataset with the same channel set from our preprocessing pipeline will work. Once you have selected a dataset, the channel locations will be overlaid on the MIP plot. It might be difficult to read the labels as they will overlap but you can zoom in around the peak as shown in the below Figure.
+
+![Finding the channel nearest to the effect peak](./nearestchan.png)
+
+*Figure:Finding the channel nearest to the effect peak*
 
 There are many further options you can try. For example, within the
 bottom left window, there will be a section named "Display", in the
@@ -398,4 +391,7 @@ Or you can of course examine other contrasts, such as the difference
 between famous and unfamiliar faces, which you will see is a much weaker
 and slightly later effect.
 
---8<-- "addons/abbreviations.md"
+You can also repeat this analysis for the MEG data, which will show an
+M170 effect that is very similar to the EEG N170, but with a different
+topography (because the MEG is insensitive to radial sources, unlike
+EEG). 
