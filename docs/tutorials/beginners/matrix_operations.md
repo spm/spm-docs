@@ -3,10 +3,11 @@
 ## Singular Value Decomposition
 
 Singular value decomposition of a matrix $\mathbf{X}$ involves decomposing it into three other matrices,
-which will be referred to as $\mathcal{U}$, $\mathcal{S}$ and 4\mathcal{V}$ (you may recall an ``svd`` function from earlier).
+which will be referred to as $\mathcal{U}$, $\mathcal{S}$ and $\mathcal{V}$ (you may recall an ``svd`` function from earlier).
 The properties of these matrices are that the columns of both $\mathbf{U}$ and $\mathbf{V}$ are orthonormal (which will be described later),
 and $\mathbf{S}$ is a diagonal matrix, with nonnegative values along the diagonal.
 The original $\mathbf{X}$ can be reconstructed from $\mathbf{U} \mathbf{S} \mathbf{V}^T$.
+
 ```matlab
 
 % Create a matrix of random numbers

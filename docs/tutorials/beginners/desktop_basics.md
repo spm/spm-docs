@@ -9,7 +9,9 @@ and type `matlab` in the search bar. Select `Matlab 2024a`.
 When you start MATLAB®, the desktop appears in its default
 layout.
 
-![MATLAB desktop in its default layout. At the top is a toolstrip with tabs labeled Home, Plots, and Apps. The Files panel and the Workspace panel are open on the left side of the desktop. The Command Window is open above the bottom sidebar.](./desktop.png)
+![MATLAB desktop in its default layout.](./desktop.png)
+
+*Figure MATLAB desktop in its default layout. At the top is a toolstrip with tabs labeled Home, Plots, and Apps. The Files panel and the Workspace panel are open on the left side of the desktop. The Command Window is open above the bottom sidebar.* 
 
 The desktop includes these areas:
 
