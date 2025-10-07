@@ -176,6 +176,7 @@ When the batch has finished, you can review the results by clicking the `Results
 If you now click on the right side of the top row in the results table to bring the cursor to the peak, you can press the `plot` in the small interactive window of SPM, select `Contrast estimates and 90% CI` and then `All effects`. You should get a plot like the one below showing the average power for each condition separately at the peak.
 
 ![MEG time-frequency power ANOVA contrast estimates.](./tf_anova_contrast_estimates.png)
+
 *Figure: MEG time-frequency power ANOVA contrast estimates.*
 
 > **Tip** You can use the tool "Display -- TF images" to view the time-frequency images generated as part of the GLM estimation. For instance, the figure below shows the images
