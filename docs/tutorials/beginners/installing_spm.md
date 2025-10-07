@@ -4,7 +4,16 @@ SPM (Statistical Parametric Mapping) is a Matlab toolobox designed for the analy
 
 # Installing SPM
 
-To install SPM, you need to download it from the web and let Matlab know where to find it by adding it to the Matlab path. We will use a program called `Github Desktop` to install SPM in a way that will make it easy to update in the future. 
+To install SPM, you need to download it from the web and let Matlab know where to find it by adding it to the Matlab path.
+
+## Option 1
+
+1. Download SPM.zip file from the link on the course Moodle page.
+2. Extract the SPM folder from the zip file to your N: drive (i.e., `N:\spm`).
+ 
+## Option 2
+ 
+We will use a program called `Github Desktop` to install SPM in a way that will make it easy to update in the future. 
 
 1. Open `UCL Applications Store` and search for `Github Desktop` in the search bar. 
 2. Run `Github Desktop`, when asked to register select `Skip this step`.
@@ -13,19 +22,23 @@ To install SPM, you need to download it from the web and let Matlab know where t
 5. Enter the following URL: `https://github.com/spm/spm.git`
 4. For the local path, select your N: drive's root directory (i.e., `N:\spm`).
 5. Click `Clone` and wait for installation to complete which may take a few minutes.
-6. Once the installation is complete, open Matlab and type the following command in the command window:
+
+
+# Adding SPM to the Matlab path
+
+* Once the installation is complete, open Matlab and type the following command in the command window:
 
    ```matlab
    addpath('N:\spm');
    ```
-7. To make this change permanent, you can save the path by typing:
+* To make this change permanent, you can save the path by typing:
 
     ```matlab
     fid = fopen('N:\Documents\MATLAB\startup.m','w');
     fprintf(fid, 'addpath(''N:\\spm'');');
     fclose(fid);
    ```
-8. To check that SPM is installed correctly, restart MATLAB and type the following command in the Matlab command window:
+* To check that SPM is installed correctly, restart MATLAB and type the following command in the Matlab command window:
 
    ```
    spm fmri
