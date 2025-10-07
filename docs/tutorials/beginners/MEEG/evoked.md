@@ -143,6 +143,32 @@ field pattern should emerge.
 
 *Figure: Topography of differential ERP for faces (famous and unfamiliar) vs scrambled at 155ms. A clear dipolar field pattern emerges, indicating the neural response to face stimuli.*
 
+
+> # Assessment question
+>
+> **Effects of Digital Filtering on the Shape of Visual Evoked Responses**
+>
+> Using a single channel that displays a clear evoked response, investigate how digital filtering affects the waveform. To make things simpler, you can only process one data run (one raw file) and define only one experimental condition by selecting events corresponding to all the three stimulus types (famous, unfamiliar and scrambled faces) together.
+>
+> Follow these steps:
+>
+> 1. **Baseline:** Repeat the preprocessing pipeline without applying any filters. Extend both the baseline and post-stimulus periods to capture potential filtering artefacts.
+> 2. **Systematic Filtering:** Apply and compare the following filters, both separately and in combination:
+>     - **High-pass filters:** Test several cut-off frequencies (e.g., 0.1 Hz, 1 Hz, 2 Hz).
+>     - **Low-pass filters:** Test at different cut-offs (e.g., 30 Hz, 40 Hz, 70 Hz).
+>     - **Notch filters:** Apply at 50 Hz and harmonics (e.g., 100 Hz, 150 Hz) to suppress line noise.
+> 3. **Analysis:** For each filtering condition, plot the evoked response and describe the effects on waveform morphology, latency, and amplitude.
+> 4. **Artefact Identification:** Highlight any artefacts introduced by specific filters.
+> 5. **Justification:** Based on your observations, justify the optimal filtering strategy for your data.
+>
+> ### Tips:
+>
+> 1. To make the pipeline run faster, you can only process the selected single channel. To do that, use the `Channel selection` settings in the `Conversion` module. First, delete the default `All` option, then select `Custom channel` enter the name of the channel you want to process (e.g., `EEG052`).
+> 2. To facilitate comparison, consider overlaying the evoked responses from different filtering conditions on a single plot. This will help visualize how each filter affects the waveform. You can do this by first changing the prefix in the `Filter` tool to indicate the filter frequency for each block and then using the `Merge` tool to merge all the averaged datsets for different filtering settings together. If you set `New label for the merged file` to `#file#`. the condition label in the merged file will be set to the original file name which will help you identify the different filtering conditions.
+> 3. You can use the reviewing tool to plot the different waveforms together as described above for eyeblink artefacts.
+
+
+
 You can of course also explore the magnetometers (MEG)
 which will show an analogous "M170".
 You can also examine the EOG and ECG channels, which appear under the
