@@ -28,12 +28,13 @@ We will use a program called `Github Desktop` to install SPM in a way that will 
 
 * Once the installation is complete, open Matlab and type the following command in the command window:
 
-   ```matlab
+```matlab
    addpath('N:\spm');
-   ```
+```
+
 * To make this change permanent, you can save the path by typing:
 
-    ```matlab
+   ```matlab
     fid = fopen('N:\Documents\MATLAB\startup.m','w');
     fprintf(fid, 'addpath(''N:\\spm'');');
     fclose(fid);
