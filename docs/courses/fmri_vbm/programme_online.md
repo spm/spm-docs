@@ -28,7 +28,7 @@ Each lecture will be streamed at the indicated time. Recordings are also availab
 
 Each lecture will be followed by some **time for questions** from the audience and a **short break** before the next lecture.
 
-Questions can be asked at any time during the lectures using [Slack](https://join.slack.com/t/spmcoursefmri-put5820/shared_invite/zt-2sdquk69e-o9yanUUmytwbmvshZpPBxQ) or the Q&A window within Zoom. We will aim at answering them at the end of each lecture or during one of the Q&A sessions.
+Questions can be asked at any time during the lectures using [Slack](https://join.slack.com/t/spmmricourse2025/shared_invite/zt-3eyoqk7iv-vftDsAkGY8ZkjpgctSJYOg) or the Q&A window within Zoom. We will aim at answering them at the end of each lecture or during one of the Q&A sessions.
 
 Please do not share the link to this webpage publicly as it contains information for the participants of the course only (Zoom login).
 
