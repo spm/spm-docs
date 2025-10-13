@@ -206,6 +206,7 @@ nav:
         - 'Bayesian inference':               'courses/fmri_vbm/recordings/bayesian_inference.md'
         - 'Introduction to DCM':              'courses/fmri_vbm/recordings/dcm_introduction.md'
         - 'DCM: Testing hypotheses':          'courses/fmri_vbm/recordings/dcm_hypothesis_testing.md'
+        - 'DCM for resting-state':            'courses/fmri_vbm/recordings/dcm_resting_state.md'
         - 'Earlier recordings':               'courses/fmri_vbm/recordings/fmri_legacy_recordings.md'
   - 'Reference documentation':
     - 'reference/index.md'

@@ -14,6 +14,7 @@ Our SPM courses include both lectures and interactive workshops. We make videos 
 - [Bayesian inference](./bayesian_inference.md)
 - [Introduction to DCM](./dcm_introduction.md)
 - [DCM: Testing hypotheses](./dcm_hypothesis_testing.md)
+- [DCM for resting-state](./dcm_resting_state.md)
 
 ## Older recordings
 Recordings from earlier SPM courses are available [here](./fmri_legacy_recordings.md). These are hosted on UCL's website, and therefore may be helpful if you do not have access to Youtube.
