@@ -34,11 +34,11 @@ Please do not share the link to this webpage publicly as it contains information
 
 !!! info ""
     
-    *Zoom Meeting link*: TBC
+    *Zoom Meeting link*: https://ucl.zoom.us/j/94422152527?pwd=grQ8a6IGYAuCLzVJbTt7JjVQkcYWq5.1
     
-    *Zoom Meeting ID*: TBC
+    *Zoom Meeting ID*: 944 2215 2527
 
-    *Zoom Meeting Passcode*: TBC
+    *Zoom Meeting Passcode*: SPM2025
 
 Joining in requires a Zoom account, you can quickly [sign up here](https://zoom.us/signup) if you don't already have an account. Make sure to use the most up-to-date version of Zoom, you might have to update ahead of the course.
 
