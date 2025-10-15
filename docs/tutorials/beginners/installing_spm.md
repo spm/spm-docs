@@ -6,13 +6,12 @@ SPM (Statistical Parametric Mapping) is a Matlab toolobox designed for the analy
 
 To install SPM, you need to download it from the web and let Matlab know where to find it by adding it to the Matlab path.
 
-## Option 1
-
 1. Download SPM.zip file from the link on the course Moodle page.
 2. Extract the SPM folder from the zip file to your N: drive (i.e., `N:\spm`).
  
+<!-- 
 ## Option 2
- 
+
 We will use a program called `Github Desktop` to install SPM in a way that will make it easy to update in the future. 
 
 1. Open `UCL Applications Store` and search for `Github Desktop` in the search bar. 
@@ -20,9 +19,9 @@ We will use a program called `Github Desktop` to install SPM in a way that will 
 3. Provide your UCL email and chosen username at the next screen.
 4. Select `Clone a repository from the Internet` and click on `URL` tab.
 5. Enter the following URL: `https://github.com/spm/spm.git`
-4. For the local path, select your N: drive's root directory (i.e., `N:\spm`).
-5. Click `Clone` and wait for installation to complete which may take a few minutes.
-
+6. For the local path, select your N: drive's root directory (i.e., `N:\spm`).
+7. Click `Clone` and wait for installation to complete which may take a few minutes.
+-->
 
 # Adding SPM to the Matlab path
 
@@ -39,6 +38,20 @@ We will use a program called `Github Desktop` to install SPM in a way that will 
     fprintf(fid, 'addpath(''N:\\spm'');');
     fclose(fid);
    ```
+   
+   > **Tip:**  
+   > If you extracted your SPM folder to a different location, update the path in both code segments. Use double backslashes (`\\`) in the `startup.m` file.  
+   >  
+   > For example, if your folder is at `N:\Documents\Matlab\spm`, use:
+   > 
+   > ```matlab
+   > addpath('N:\Documents\Matlab\spm');
+   > fid = fopen('N:\Documents\MATLAB\startup.m','w');
+   > fprintf(fid, 'addpath(''N:\\Documents\\Matlab\\spm'');');
+   > fclose(fid);
+   > ```
+
+
 * To check that SPM is installed correctly, restart MATLAB and type the following command in the Matlab command window:
 
    ```
