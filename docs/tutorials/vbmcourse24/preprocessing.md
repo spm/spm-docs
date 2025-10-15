@@ -66,7 +66,7 @@ This may take a little while to complete, depending on the size of your dataset 
 - `rc1[filename].nii` – Dartel import space grey matter segmentation  
 - `rc2[filename].nii` – Dartel import space white matter segmentation  
 - `rc3[filename].nii` – Dartel import space CSF segmentation  
-- `m[filename].nii` – Native space bias corrected T1w  
+- `m[filename].nii` – Native space intensity nonuniformity corrected T1w  
 - `[filename]_seg8.mat` – Various normalization transform data
 
 Below is a figure showing native `c1` (left) and `dartel import` (right) segmentations. Basically, `dartel import` is orientated (rigidly aligned) with MNI space, meaning every subject’s data is in reasonably close alignment with one another which will help produce better results using the warping algorithms. 

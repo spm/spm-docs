@@ -223,7 +223,7 @@ The visualisation section of the interactive window also provides an overlay fac
 
 3. **Render:** overlay on a volume rendered brain.
 
-Thresholded SPMs can be saved as NIfTI image files in the working directory by using the "Save" button in the Interactive window. In the figures below the `listening > rest` activation has been superimposed on a spatially normalised, bias-corrected anatomical image.
+Thresholded SPMs can be saved as NIfTI image files in the working directory by using the "Save" button in the Interactive window. In the figures below the `listening > rest` activation has been superimposed on a spatially normalised, intensity nonuniformity corrected anatomical image.
 
 ![](../../../../assets/figures/manual/auditory/slices.png)
 

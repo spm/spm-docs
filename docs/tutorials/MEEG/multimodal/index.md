@@ -1620,8 +1620,8 @@ Press the `Batch` button and then:
   `Dependency` of the `Segment: Forward Deformations` (from the prior
   segmentation module). For the "Images to Write", select a `Dependency`
   on the `Coreg: Estimate: Coregistered Images` (which will be all the
-  coregistered EPI images) and `Segment: INU Corrected` (which will
-  be the bias-corrected structural image). Also, change the `Voxel
+  coregistered EPI images) and `Segment: INU corrected` (which will
+  be the intensity nonuniformity corrected structural image). Also, change the `Voxel
   sizes` to \[3 3 3\], to save diskspace.
 
 - Add a `Spatial`: :material-arrow-right-bold: `Smooth` module, and for

@@ -39,11 +39,11 @@ There won't be time to segment all scans, so the plan is to demonstrate how one 
 
         * **Volumes**: Here you specify all the IXI scans to be segmented.
 
-        * **Bias regularisation**: Leave this as it is.  It works reasonably well for most images.
+        * **INU regularisation**: Leave this as it is.  It works reasonably well for most images.
 
-        * **Bias FWHM**: Again, leave this as it is.
+        * **INU FWHM**: Again, leave this as it is.
 
-        * **Save Bias Corrected**: This gives the option to save intensity inhomogeneity corrected version of the images, or a field that encodes the inhomogeneity. Leave this at **Save nothing** because we don't have a use for them here.
+        * **Save INU corrected**: This gives the option to save intensity inhomogeneity corrected version of the images, or a field that encodes the inhomogeneity. Leave this at **Save nothing** because we don't have a use for them here.
 
 * **Tissues**: This is a list of the tissues to identify.
 

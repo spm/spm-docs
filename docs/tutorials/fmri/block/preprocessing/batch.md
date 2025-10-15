@@ -37,7 +37,7 @@ The SPM batch interface allows you to create workflows for executing multiple pr
 10. Complete the segmentation module:
     1. Select `Data` :material-arrow-right-bold: `Volumes` :material-arrow-right-bold: `Dependency`. 
     2. In the pop-up window, select the coregistered anatomical image `Coregister: estimate: coregistered images` and press `OK`.
-    3. Select `Save bias corrected` :material-arrow-right-bold: `Save bias corrected` (`Save INU corrected` in newer SPM versions).
+    3. Select `Save INU corrected` :material-arrow-right-bold: `Save INU corrected` (`Save bias corrected` in older SPM versions).
     4. Select `Deformation fields` :material-arrow-right-bold: `Forward`.
 11. Add the **normalisation** module - `SPM` :material-arrow-right-bold: `Spatial` :material-arrow-right-bold: `Normalise` :material-arrow-right-bold: `Normalise: write`.
 12. Complete the normalisation module:

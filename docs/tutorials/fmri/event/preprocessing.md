@@ -123,12 +123,12 @@ Press the `Segment` button. This will call
 up the specification of a segmentation job in the batch editor window.
 Highlight the `Volumes` field in `Data > Channels` and then select the
 subjects coregistered anatomical image eg. `sM03953_0007.img`. Change
-`Save Bias Corrected` so that it contains `Save Bias Corrected` instead
-of `Save Nothing`. At the bottom of the list, select `Forward` in
+`Save INU corrected` so that it contains `Save INU corrected` instead
+of `Save nothing`. At the bottom of the list, select `Forward` in
 `Deformation Fields`. Save the job file as `segment.mat` and then press
 the `Run` button. SPM will segment the structural image using the
 default tissue probability maps as priors. SPM will create, by default,
-gray and white matter images and bias-field corrected structural image.
+gray and white matter images and intensity nonuniformity corrected structural image.
 These can be viewed using the `CheckReg` facility as described in the
 previous section [^1].
 
@@ -174,14 +174,14 @@ directory. These files have the prefix `w`.
 
 If you wish to superimpose a subject's functional activations on their
 own anatomy [^3] you will also need to apply the spatial normalisation
-parameters to their (bias-corrected) anatomical image. To do this
+parameters to their (intensity nonuniformity corrected) anatomical image. To do this
 
 - Select `Normalise (Write)`, highlight `Data`, select `New Subject`.
 
 - Highlight `Deformation field`, select the `y_sM03953_0007.nii` file
   that you created in the previous section, press `Done`.
 
-- Highlight `Images to Write`, select the bias-corrected structural eg.
+- Highlight `Images to Write`, select the intensity nonuniformity corrected structural eg.
   `msM03953_0007.nii`, press `Done`.
 
 - Open `Writing Options`, select voxel sizes and change the default \[`2

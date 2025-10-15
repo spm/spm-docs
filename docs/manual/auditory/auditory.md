@@ -167,14 +167,14 @@ label="aud_checkreg"></span></em></figcaption>
 Press the <span class="smallcaps">Segment</span> button. This will call
 up the specification of a segmentation job in the batch editor.
 Highlight the "Volumes" field and then select the subject's registered
-anatomical image eg. `sM00223_002.img`. Highlight "Save Bias Corrected"
-and select "Save Bias Corrected". Highlight "Deformation Fields" t͡he
+anatomical image eg. `sM00223_002.img`. Highlight "Save INU corrected"
+and select "Save INU corrected". Highlight "Deformation Fields" t͡he
 bottom of the list and select "Forward". Save the job file as
 `segment.mat` and then press `RUN`. SPM will segment the structural
 image using the default tissue probability maps as priors (Ashburner and
 Friston 2005).
 
-SPM will create gray and white matter images and bias-field corrected
+SPM will create gray and white matter images and an intensity nonuniformity corrected
 structural image. These can be viewed using the
 <span class="smallcaps">CheckReg</span> facility as described in the
 previous section. Figure <a href="#aud_gray" data-reference-type="ref"
@@ -182,7 +182,7 @@ data-reference="aud_gray">1.5</a> shows the gray matter image,
 `c1sM0023_002.nii` along with the original structural.
 Figure <a href="#aud_bias" data-reference-type="ref"
 data-reference="aud_bias">1.6</a> shows the structural and
-bias-corrected image, `msM0023_002.nii`.
+intensity nonuniformity corrected image, `msM0023_002.nii`.
 
 <figure id="aud_gray">
 <div class="center">
@@ -196,10 +196,10 @@ image.<span id="aud_gray" label="aud_gray"></span></em></figcaption>
 <div class="center">
 <img src="../../../assets/figures/manual/auditory/bias.png" style="width:125mm" />
 </div>
-<figcaption><em>Structural image (top) and bias-corrected structural
+<figcaption><em>Structural image (top) and intensity nonuniformity (INU) corrected structural
 image (bottom). Notice that the original structural is darker at the top
 than at the bottom. This non-uniformity has been removed in the
-bias-corrected image.<span id="aud_bias"
+INU corrected image.<span id="aud_bias"
 label="aud_bias"></span></em></figcaption>
 </figure>
 
@@ -235,7 +235,7 @@ directory. These files have the prefix `w`.
 
 If you wish to superimpose a subject's functional activations on their
 own anatomy[^2] you will also need to apply the spatial normalisation
-parameters to their (bias-corrected) anatomical image. To do this
+parameters to their (intensity nonuniformity corrected) anatomical image. To do this
 
 - Select <span class="smallcaps">Normalise (Write)</span>, highlight
   "Data", select "New Subject".
@@ -243,7 +243,7 @@ parameters to their (bias-corrected) anatomical image. To do this
 - Highlight "Deformation Field", select the `y_sM00223_002.nii` file
   that you created in the previous section, press "Done".
 
-- Highlight "Images to Write", select the bias-corrected structural eg.
+- Highlight "Images to Write", select the intensity nonuniformity corrected structural eg.
   `msM00223_002.nii`, press "Done".
 
 - Open "Writing Options", select voxel sizes and change the default \[2
@@ -704,7 +704,7 @@ data-reference="aud_slices">1.15</a>,
 data-reference="aud_sections">1.16</a> and
 <a href="#aud_render" data-reference-type="ref"
 data-reference="aud_render">1.17</a> the 'listening $>$ rest' activation
-has been superimposed on the spatially normalised, bias-corrected
+has been superimposed on the spatially normalised, intensity nonuniformity corrected
 anatomical image `wmsM00223_002.nii` created earlier.
 
 <figure id="aud_slices">

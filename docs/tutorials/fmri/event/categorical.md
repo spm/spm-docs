@@ -199,7 +199,7 @@ The columns in volume table show, from right to left:
 
 Right-click on the MIP and select `goto global maximum`. The cursor will
 move to \[`39 -70 -14`\]. You can view this activation on the subject's
-normalised, bias-corrected structural (`wmsM03953_0007i̇mg`), which gives
+normalised, intensity nonuniformity corrected structural (`wmsM03953_0007i̇mg`), which gives
 best anatomical precision, or on the normalised mean functional
 (`wmeansM03953_0005_0006.nii`), which is closer to the true data and
 spatial resolution (including distortions in the functional EPI data).
