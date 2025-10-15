@@ -6,7 +6,7 @@ SPM (Statistical Parametric Mapping) is a Matlab toolobox designed for the analy
 
 To install SPM, you need to download it from the web and let Matlab know where to find it by adding it to the Matlab path.
 
-1. Download SPM.zip file from the link on the course Moodle page.
+1. Download SPM.zip file from the link on the course Moodle page (in `Data analysis resources` section).
 2. Extract the SPM folder from the zip file to your N: drive (i.e., `N:\spm`).
  
 <!-- 
