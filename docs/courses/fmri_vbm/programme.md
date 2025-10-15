@@ -43,7 +43,7 @@ This is a sample programme of the [SPM course for MRI](./index.md). The course w
 | *Comfort break*               	                                                           |
 | 10:10 - 11:10     | [Introduction to DCM](./recordings/dcm_introduction.md)       | [Prof Peter Zeidman](https://peterzeidman.co.uk) |
 | *Tea & coffee*                                                                        	   |
-| 11:40 - 12:15	    | DCM for resting-state  	      | [Dr George Thomas](https://profiles.ucl.ac.uk/68520-george-thomas) |
+| 11:40 - 12:15	    | [DCM for resting-state](./recordings/dcm_resting_state.md)  	      | [Dr George Thomas](https://profiles.ucl.ac.uk/68520-george-thomas) |
 | 12:15 - 13:00	    | Q&A clinic            	      | SPM faculty                            |
 | *Lunch*	                                                                                   |
 | 14:00 - 17:00     | Practical session III	          | SPM faculty                            |
