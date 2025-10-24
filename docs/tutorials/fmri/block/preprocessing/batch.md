@@ -28,9 +28,9 @@ The SPM batch interface allows you to create workflows for executing multiple pr
     8. Select `Reference slice` :material-arrow-right-bold: `32` or `64/2`.
 7. Next, add the **coregistration** module to your batch file - `SPM` :material-arrow-right-bold: `Spatial` :material-arrow-right-bold: `Coregister` :material-arrow-right-bold: `Coregister: estimate`. 
 8. Complete the coregistration module:
-    1. Select `Reference image` :material-arrow-right-bold: `Dependency`.
+    1. Select `Fixed image` :material-arrow-right-bold: `Dependency`.
     2. In the pop-up window, select the mean image that will be generated during realignment - `Realign: estimate & reslice: mean image` and press `OK`.
-    3. Select `Source image`.
+    3. Select `Moved image`.
     4. In the pop-up window, navigate to `sub-01/anat/`. 
     5. Select the anatomical image - `sub-01_T1w.nii` and press `Done`.
 9. Now add the **segmentation** module - `SPM` :material-arrow-right-bold: `Spatial` :material-arrow-right-bold: `Segment`.

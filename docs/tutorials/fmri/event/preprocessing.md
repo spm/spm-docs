@@ -94,10 +94,10 @@ Select `Coregister (Estimate)` from the
 `Coregister` pulldown menu. This will call up the specification of a
 coregistration job in the batch editor window.
 
-- Highlight `Reference Image` and then select the mean functional image
+- Highlight `Fixed Image` and then select the mean functional image
   `meansM03953_0005_0006.img`.
 
-- Highlight `Source Image` and then select the structural image eg.
+- Highlight `Moved Image` and then select the structural image eg.
   `sM03953_0007.img`.
 
 - Press the `Save` button and save the job as `coreg.job`
@@ -107,7 +107,7 @@ coregistration job in the batch editor window.
 SPM will then implement a coregistration between the structural and
 functional data that maximises the mutual information. The image
 displayed below should then appear in the Graphics
-window. SPM will have changed the header of the source file which in
+window. SPM will have changed the header of the moved file, which in
 this case is the structural image `sM03953_0007.hdr`.
 
 <figure>
