@@ -4,7 +4,7 @@
   <figcaption></figcaption>
 </figure>
 
-We are delighted to welcome visitors to our SPM courses every May and October. They are taught by an international faculty of SPM developers and collaborators, either online or in-person at the Functional Imaging Laboratory (FIL) in London. They form part of the [UCL Queen Square Institute of Neurology's short course programme](https://www.ucl.ac.uk/ion/education).
+We are delighted to welcome visitors to our SPM courses every spring and autumn. They are taught by an international faculty of SPM developers and collaborators, either online or in-person at the Functional Imaging Laboratory (FIL) in London. They form part of the [UCL Queen Square Institute of Neurology's short course programme](https://www.ucl.ac.uk/ion/education).
 
 ## Registration
 <div class="grid cards" markdown>
@@ -27,12 +27,12 @@ We are delighted to welcome visitors to our SPM courses every May and October. T
 </div>
 
 ## About
-Since 2010, we have provided two separate SPM courses reflecting the different imaging modalities. There is a four-day course on [SPM for EEG/MEG](./eeg_meg/index.md) followed by the three-day course on [SPM for MRI](./fmri_vbm/index.md). Both courses are suitable for beginners and more advanced users. We advise students to gain at least some minimal familiarity with the methodology, for example, from reading introductory articles available from the SPM webpage or by following data analysis examples in the [SPM tutorials](../tutorials/index.md).
+Since 2010, we have provided two separate SPM courses reflecting the different imaging modalities. There is a four-day course on [SPM for EEG/MEG](./eeg_meg/index.md) and a three-day course on [SPM for MRI](./fmri_vbm/index.md). Both courses are suitable for beginners and more advanced users. We advise students to gain at least some minimal familiarity with the methodology, for example, from reading introductory articles available from the SPM webpage or by following data analysis examples in the [SPM tutorials](../tutorials/index.md).
 
 Read more about the [SPM for M/EEG course](./eeg_meg/index.md) or the [SPM for MRI course](./fmri_vbm/index.md).
 
 ## Modes of attendance
-The SPM courses are available in three modes: in person, online live, and online self-paced. All course formats include full access to lectures, slides, and hands-on tutorials. Choose the format that best suits your schedule and learning style
+The SPM courses are available in three modes: in-person, online live, and online self-paced. All course formats include full access to lectures, slides, and hands-on tutorials. Choose the format that best suits your schedule and learning style
 
 | **In-Person <br> (MRI only)**                                                                                                            | **Online – Live <br>(MRI or M/EEG)**                                                                                         | **Online – Self-paced <br> (MRI or M/EEG)**                                                                                     |
 |:----------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------:|
