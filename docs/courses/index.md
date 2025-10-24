@@ -4,7 +4,7 @@
   <figcaption></figcaption>
 </figure>
 
-We are delighted to welcome visitors to our SPM courses every spring and autumn. They are taught by an international faculty of SPM developers and collaborators, either online or in-person at the Functional Imaging Laboratory (FIL) in London. They form part of the [UCL Queen Square Institute of Neurology's short course programme](https://www.ucl.ac.uk/ion/education).
+We are delighted to welcome visitors to our SPM courses every spring and autumn. The courses are taught by an international faculty of SPM developers and collaborators, either online or in-person at the Functional Imaging Laboratory (FIL) in London. They form part of the [UCL Queen Square Institute of Neurology's short course programme](https://www.ucl.ac.uk/ion/education).
 
 ## Registration
 <div class="grid cards" markdown>
@@ -70,7 +70,7 @@ London WC1N 3BG
     Information and course materials can be accessed from the menu on this page.
 
 ??? note "Does the course count towards any credits for my MSc or postgraduate course?"
-    Yes, if you are a UCL student. Students, however, must ensure they attend each session to claim these credits.
+    Yes, if you are a UCL student. Students must register and log their attendance via Inkpath to claim these credits.
 
 ??? note "Can I pay for the course other than by credit or debit card?"
     Payment for the course is by debit or credit card only.
@@ -80,3 +80,6 @@ London WC1N 3BG
 
 ??? note "Can I get a discount if I am unemployed?"
     We regret we are not able to offer any discounts other than the discounted rate for students.
+
+??? note "Do you offer fee waivers?"
+    We provide a fee waiver option for individuals who reside and work in countries ranking on the [2025 UNESCO Institute of Statistics and World Bank List of Low and Lower-Middle Income Countries](https://www.humanbrainmapping.org/files/faq/2025_UNESCO_List_Abstract_Fee_Waiver_FINAL.pdf) (based on gross national income per capita). Please contact the [FIL admin team](mailto:ion.fil.reception@ucl.ac.uk) for more information about the process.
