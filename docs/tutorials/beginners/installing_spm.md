@@ -47,12 +47,12 @@ We will use a program called `Github Desktop` to install SPM in a way that will 
    > **Tip:**  
    > If you extracted your SPM folder to a different location, update the path in both code segments. Use double backslashes (`\\`) in the `startup.m` file.  
    >  
-   > For example, if your folder is at `N:\Documents\Matlab\spm`, use:
+   > For example, if your folder is at `S:\FBS_CLNE0068\SPM`, use:
    > 
    > ```matlab
-   > addpath('N:\Documents\Matlab\spm');
+   > addpath('S:\FBS_CLNE0068\SPM');
    > fid = fopen('N:\Documents\MATLAB\startup.m','w');
-   > fprintf(fid, 'addpath(''N:\\Documents\\Matlab\\spm'');');
+   > fprintf(fid, 'addpath(''S:\\FBS_CLNE0068\\SPM'');');
    > fclose(fid);
    > ```
 
