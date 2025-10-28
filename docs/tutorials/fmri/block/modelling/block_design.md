@@ -4,12 +4,12 @@
 
 This tutorial uses the same auditory data described in the [fMRI preprocessing tutorial](../preprocessing/introduction.md). Before attempting this tutorial you will need a copy of the preprocessed data. Either follow the steps in the [fMRI preprocessing tutorial](../preprocessing/introduction.md) or download a copy of the preprocessed data from [here](). 
 
-Before starting to analyse your data, set up a directory where you will save your results and give it a meaningful name, e.g. `first_level_analysis`. Then launch SPM by typing `spm fmri` in your MATLAB command window and begin your analysis.
+Before starting to analyse your data, set up a folder where you will save your results and give it a meaningful name, e.g. `first_level_analysis`. Then launch SPM by typing `spm fmri` in your MATLAB command window and begin your analysis.
 
 1. Press the `Specify 1st-level` button. This will call up the
 specification of an fMRI specification job in the batch editor.
 
-2. Highlight `Directory` and point SPM towards the `first_level_analysis` directory you created. 
+2. Highlight `Directory` and point SPM towards the `first_level_analysis` folder you created. 
 
 3. Under `Timing parameters`, select `Units for design` :material-arrow-right-bold: `Scans`.
 
@@ -32,7 +32,7 @@ specification of an fMRI specification job in the batch editor.
 
 12. Run your batch by pressing :material-play:.
 
-SPM will now write an `SPM.mat` file to your chosen directory. It will also plot the design matrix:
+SPM will now write an `SPM.mat` file to your chosen folder. It will also plot the design matrix:
 
 ![](../../../../assets/figures/manual/auditory/design.png)
 
@@ -53,11 +53,11 @@ Columns $x_1$ and $x_2$ are orthogonal if the inner product $x_1^T x_2=0$. The i
 
 1. Press the `Estimate` button. This will call up the specification of an fMRI estimation job in the batch editor.
 
-2. Highlight the `Select SPM.mat` option and then choose the `SPM.mat` file saved in your directory.
+2. Highlight the `Select SPM.mat` option and then choose the `SPM.mat` file saved in your folder.
 
 3. Save the job as `first_level_estimation.mat` and run your batch by pressing :material-play:.
 
-SPM will write a number of files into the selected directory including
+SPM will write a number of files into the selected folder, including
 an `SPM.mat` file.
 
 ## Inference
@@ -121,7 +121,7 @@ Entering a value $k$ here will produce SPMs with clusters containing at least $k
 
 ## Files
 
-A number of files are written to the working directory at this time.
+A number of files are written to the working directory (the folder that SPM is running in and where it first looks for files) at this time.
 Images containing weighted parameter estimates are saved as
 `con_0001.nii`, `con_0002.nii`, etc. in the working directory. Images of
 T-statistics are saved as `spmT_0001.nii`, `spmT_0002.nii` etc., also in

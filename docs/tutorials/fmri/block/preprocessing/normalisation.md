@@ -30,7 +30,7 @@ Normalisation refers to bringing your data into a standard template space to all
 10. Save this batch for future reference - `File` :material-arrow-right-bold: `Save batch` and name it, e.g. `normalisation_batch.mat.`
 11. Run your batch by pressing :material-play:.
 
-SPM will now write spatially normalised files to the functional data directory, i.e. `sub-01/func/`. These files have the prefix `w`.
+SPM will now write spatially normalised files to the folder that contains the functional data, i.e. `sub-01/func/`. These files have the prefix `w`.
 
 ### Video walk-through
 

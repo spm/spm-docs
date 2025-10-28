@@ -16,7 +16,7 @@ Now press the `Specify 1st-level` button.
 This will call up the specification of a fMRI specification job in the
 batch editor window. Then
 
-- For `Directory`, select the `categorical` folder you created earlier,
+- For `Directory`, select the `categorical` folder (directory) you created earlier,
 
 - In the `Timing parameters` option,
 
@@ -76,13 +76,13 @@ batch editor window. Then
 - Open `Canonical HRF` under `Basis Functions`. Select `Model
   derivatives` and select `Time and Dispersion derivatives`.
 
-- Highlight `Directory` and select the `DIR/categorical` directory you
+- Highlight `Directory` and select the `DIR/categorical` folder you
   created earlier.
 
 - Save the job as `categorical_spec.mat` and press the `Run` button.
 
 SPM will then write an `SPM.mat` file to the `DIR/categorical`
-directory. It will also plot the design matrix, as shown below
+folder. It will also plot the design matrix, as shown below
 
 <figure>
 <div class="center">
@@ -120,11 +120,11 @@ up the specification of an fMRI estimation job in the batch editor
 window. Then
 
 - Highlight the `Select SPM.mat` option and then choose the `SPM.mat`
-  file saved in the `DIR/categorical` directory.
+  file saved in the `DIR/categorical` folder.
 
 - Save the job as `categorical_est.job` and press `Run` button.
 
-SPM will write a number of files into the selected directory including
+SPM will write a number of files into the selected folder including
 an `SPM.mat` file.
 
 ## Inference for categorical design
@@ -223,7 +223,7 @@ told SPM that we have a factorial design, this required contrast will
 have been created automatically - it is number 3.
 
 - Press `Results` and select the `SPM.mat` file in the `DIR/categorical`
-  directory.
+  folder.
 
 - Select the `F-contrast` toggle and the contrast number 3, as shown in
   the next image. Press `Done`.

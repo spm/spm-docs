@@ -6,9 +6,9 @@ Here we will check if there is an overall effect of the task (i.e. contrast `con
 
 ## Specifying the model
 
-1. Navigate to `derivatives/second_level` and make a folder for this analysis. Make an empty directory where you will save your results. Name it something meaningful to you, e.g. `one_sample_ttest_task`. 
+1. Navigate to `derivatives/second_level` and make a folder for this analysis. Make an empty folder where you will save your results. Name it something meaningful to you, e.g. `one_sample_ttest_task`. 
 2. Select `Specify 2nd level` from the SPM menu. 
-3. In the pop-up batch editor window, select your newly created output directory by clicking `Directory` and navigating to `derivatives/second_level/one_sample_ttest_task` in the selection box.
+3. In the pop-up batch editor window, select your newly created output folder (directory) by clicking `Directory` and navigating to `derivatives/second_level/one_sample_ttest_task` in the selection box.
 4. Define your statistical model by selecting `Design` :material-arrow-right-bold: `One-sample t-test` (this is selected by default).
 5. Select `Scans` :material-arrow-right-bold: `Specify...`.
 6. Now, using the selection window recursively filter for contrast `con_0009.nii`. To do this, navigate to `derivatives/first-level` via the left-hand side panel. In the filter box, type in `^con_0009.nii` and click the `Rec` button. You should see 40 files selected in the bottom window. Double check that the correct contrast and subjects have been selected. Confirm selection by pressing `Done`. 
@@ -64,7 +64,7 @@ The columns in the results table show:
 greater height (T- or Z-statistic), corrected (FWE or FDR)/uncorrected for search volume,
 - `x, y, z (mm)` - coordinates in MNI space for each maximum.
 
-You can also display your statistical maps on a different image. To do so, from the drop down menu in the SPM results window which shows `overlays`, select `sections`. In the pop-up, navigate to your the directory where SPM is saved and select `canonical/avg305T1.nii` which is standard template in MNI space. This will display your results as a heatmap on a standard brain template: 
+You can also display your statistical maps on a different image. To do so, from the drop down menu in the SPM results window which shows `overlays`, select `sections`. In the pop-up, navigate to the folder where SPM is saved and select `canonical/avg305T1.nii` which is standard template in MNI space. This will display your results as a heatmap on a standard brain template: 
 
 ![](../../../assets/figures/tutorials/fmri/group/semantic_one_sample_ttest_results_2.png)
 

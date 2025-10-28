@@ -26,15 +26,15 @@ The desktop includes these areas:
 
 # Some things to know before doing anything
 
-## How to navigate within a folder:
+## How to navigate within the directory system:
 
-- `>> pwd` … present working directory
-- `>> dir` (or `>> ls`) … what folders (or files) are in this directory
-- `>> cd ..` … move up one directory from here
-- `>> mkdir Data` … make a new folder named "Data" in the current directory
-- `>> mkdir Students` … make a new folder named "Students" in the current directory
-- `>> cd Data` … change directory into the folder “Data” within this directory
-- `>> cd ../Students` … move up one directory then into “Students” within that directory
+- `>> pwd` … present working directory (folder). This is the folder that MATLAB currently works from.
+- `>> dir` (or `>> ls`) … what folders (or files) are in this folder (directory)
+- `>> cd ..` … move up one folder from here (into the parent directory)
+- `>> mkdir Data` … make a new folder named "Data" in the current folder
+- `>> mkdir Students` … make a new folder named "Students" in the current folder
+- `>> cd Data` … change directory into the folder “Data” 
+- `>> cd ../Students` … move into the parent folder and then into “Students” within that folder
 
 > **Tip:**  
 > You can also use the path box above the command window to navigate to a different folder. Copy the path to the folder you want to navigate to, paste it into the path box, and press Enter. This will change the current working directory to the specified folder.

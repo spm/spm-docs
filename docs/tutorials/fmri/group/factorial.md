@@ -6,9 +6,9 @@ We will use the contrast corresponding to overall task activation (`con_0009.nii
 
 ## Specifying the model
 
-1. Make an empty directory where you will save your results. Navigate to `derivatives/second_level` and make a folder for this analysis. Name it something meanigful to you, e.g. `factorial_handedness_response_hand_task`. 
+1. Make an empty folder (directory) where you will save your results. Navigate to `derivatives/second_level` and make a folder for this analysis. Name it something meanigful to you, e.g. `factorial_handedness_response_hand_task`. 
 2. Select `Specify 2nd level` from the SPM menu. 
-3. In the pop-up batch editor window, select your newly created output directory by clicking `Directory` and navigating to `derivatives/second_level/factorial_handedness_response_hand_task` in the selection box.
+3. In the pop-up batch editor window, select your newly created output folder by clicking `Directory` and navigating to `derivatives/second_level/factorial_handedness_response_hand_task` in the selection box.
 4. Define your statistical model by selecting `Design` :material-arrow-right-bold: `Flexible factorial`.
 5. Now, under `Factors` specify the factors you want to investigate, (1) `Name` :material-arrow-right-bold: `Handedness`, (2) `Name` :material-arrow-right-bold: `Response hand`. Leave the remaining options as default.
 6. Now let's input our data. Under `Specify subjects or all scans & factors` you'll have two ways to do this. You can either specify your subjects and factors on at a time or select all the relevant scans for all subjects in one step and manually specify a corresponding factor matrix. We will choose the latter option, `Specify subjects or all scans & factors` :material-arrow-right-bold: `Specify all`. 

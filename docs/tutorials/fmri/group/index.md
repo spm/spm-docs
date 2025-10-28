@@ -22,7 +22,7 @@ derivatives
     second_level        <- space for your second-level models
 ```
 
-Within the first-level directory, you will find estimated first-level model for the first participant (sub-001). For the remaining participants we have included only the contrast images, which are required for group analysis, to reduce the size of the download. Below you can see the design matrix that was specified for each of the participants. 
+Within the first-level folder (directory), you will find estimated first-level model for the first participant (sub-001). For the remaining participants we have included only the contrast images, which are required for group analysis, to reduce the size of the download. Below you can see the design matrix that was specified for each of the participants. 
 
 ![](../../../assets/figures/tutorials/fmri/group/semantic_first_level_design_matrix.png)
 

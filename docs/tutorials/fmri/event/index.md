@@ -38,16 +38,16 @@ functional images `sM03953_0005_*.{hdr,img}` of dimension
 3$\times$3$\times$4.5 mm$^3$ voxels. A structural image
 is also provided in Analyze format (`sM03953_0007.{hdr,img}`).
 
-To analyse the data, first create a new directory `DIR` eg.
+To analyse the data, first create a new folder `DIR` eg.
 `C:\data\face_rep`, in which to place the
-results of your analysis. Then create 3 subdirectories (i) `jobs`, (ii)
+results of your analysis. Then create three subfolders (i) `jobs`, (ii)
 `categorical`, (iii) `parametric` and (iv) `bayesian`. As the analysis
-proceeds these directories will be filled with job-specification files,
+proceeds, these folders will be filled with job-specification files,
 design matrices and models estimated using classical or Bayesian methods.
 
 As well as the classical/Bayesian distinction we will show how this data can be analysed from a parametric as well as a categorical perspective. We will look at the main effects of fame and repetition and in the parametric analysis we will look at responses as a function of “lag”, that is, the number of faces intervening between repetition of a specific face.
 
-Start up MATLAB, enter your `jobs` directory and type `spm fmri` at the
+Start up MATLAB, navigate into your `jobs` folder and type `spm fmri` at the
 MATLAB prompt. SPM will then open in fMRI mode with three windows (1)
 the top-left or "Menu" window, (2) the bottom-left or "Interactive"
 window and (3) the right-hand or "Graphics" window. Analysis then takes

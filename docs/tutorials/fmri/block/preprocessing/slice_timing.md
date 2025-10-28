@@ -43,7 +43,7 @@ Slice timing correction aims to account for the differences in timing of data ac
 
         * `.` a period indicates any character. Filtering for `...` would show all files containing at least 3 characters. To filter for files containing a period in their name, use `\.`
 
-        * `*` an asterisk indicates 0 or more instances of the preceding character. SPM's default filter is `.*`, meaning filter for any number of any characters, i.e. show all files present in a directory.
+        * `*` an asterisk indicates 0 or more instances of the preceding character. SPM's default filter is `.*`, meaning filter for any number of any characters, i.e. show all files present in a folder.
 
         * `^` a caret indicates a string that begins with the indicated characters. Filtering for `^r` would show all files starting with `r`. 
 

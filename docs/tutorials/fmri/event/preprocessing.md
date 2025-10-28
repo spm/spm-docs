@@ -34,7 +34,7 @@ a realignment job specification in the batch editor window. Then
 - Press the `Run` button in the batch editor window (green triangle).
 
 This will run the realign job which will write realigned images into the
-directory where the functional images are. These new images will be
+folder where the functional images are. These new images will be
 prefixed with the letter "`r`". SPM will then plot the estimated time
 series of translations and rotations. These data, the realignment
 parameters, are also saved to a file eg. `rp_sM03953_0005_0006.txt`, so
@@ -86,7 +86,7 @@ making the slice acquisition order \[`24 23 22 ... 1`\].
 - Save the job as `slice_timing.mat` and press the `Run` button.
 
 SPM will write slice-time corrected files with the prefix `a` in the
-functional data directory.
+same folder as the functional data.
 
 ## Coregistration
 
@@ -141,7 +141,7 @@ image (below).</figcaption>
 </figure>
 
 SPM will also write a spatial normalisation deformation field file eg.
-`y_sM03953_0007.nii` file in the original structural directory. This
+`y_sM03953_0007.nii` file in the original structural folder. This
 will be used in the next section to normalise the functional data.
 
 ## Normalise
@@ -169,8 +169,8 @@ up the specification of a normalise job in the batch editor window.
 - Press `Save`, save the job as normalise.mat and then press the `Run`
   button.
 
-SPM will then write spatially normalised files to the functional data
-directory. These files have the prefix `w`.
+SPM will then write spatially normalised files to the folder containing the functional data.
+These files have the prefix `w`.
 
 If you wish to superimpose a subject's functional activations on their
 own anatomy [^3] you will also need to apply the spatial normalisation

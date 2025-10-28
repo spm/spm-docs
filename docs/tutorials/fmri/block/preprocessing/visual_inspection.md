@@ -18,7 +18,7 @@ MoAEpilot
 └── task-auditory_bold.json
 ```
 
-Inside the folder containing the Mother of All Experiments (MoAE) data, you can find `CHANGES`, `dataset_description.json`, `README` and `task-auditory_bold.json` files - these files contain meta-data about the study. The subject directory, `sub-01`, contains `anat` and `func` folders, which store anatomical and functional images, respectively. Additionally, onset timings for task data are stored in the `func` folder alongside task images. 
+Inside the folder containing the Mother of All Experiments (MoAE) data, you can find `CHANGES`, `dataset_description.json`, `README` and `task-auditory_bold.json` files - these files contain meta-data about the study. The subject folder (directory), `sub-01`, contains `anat` and `func` folders, which store anatomical and functional images, respectively. Additionally, onset timings for task data are stored in the `func` folder alongside task images. 
 
 ## Inspecting anatomical data
 
@@ -84,7 +84,7 @@ Select `Check Reg` from the SPM menu and choose the functional data you want to 
     * all available volumes or a 4D file, e.g. `Inf` or `NaN`
     
 
-Up to this point you have only loaded the first volume from your functional time series. To load the full time series, right-click on the SPM graphics window and navigate to `Browse`. In the pop-up window type `Inf` in the box below the `Filter` button and hit :material-keyboard-return: on your keyboard. This will prompt SPM to show all 84 volumes present in this directory. Right-click on the list of files and choose `Select all`. Press `Done`. 
+Up to this point you have only loaded the first volume from your functional time series. To load the full time series, right-click on the SPM graphics window and navigate to `Browse`. In the pop-up window type `Inf` in the box below the `Filter` button and hit :material-keyboard-return: on your keyboard. This will prompt SPM to show all 84 volumes present in this folder. Right-click on the list of files and choose `Select all`. Press `Done`. 
 
 You will now see :material-play: appear in the bottom-right corner of the SPM graphics window. Press the button to watch your functional time series as a movie. 
 
