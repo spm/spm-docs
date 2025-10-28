@@ -21,13 +21,11 @@ SPM is already available in a special network folder set up for our course. We j
 <summary>Click to see the instructions</summary>
 
 1. Download SPM.zip file from the link on the course Moodle page (in `Data analysis resources` section).
+
 2. Double-click the downloaded `SPM.zip` file to navigate into it.
+
 3. Drag the `SPM` folder from inside the zip file to where you want to keep it.
 `Documents\MATLAB` would be a good location.
-
-![Copying SPM](./spm_copy.png)
-
-*Figure: Copying the SPM folder to the N: drive*
 
 Once the copying is complete, open Matlab and type the following command in the command window:
 
@@ -44,9 +42,9 @@ fid = fopen('C:\Users\yourusername\Documents\MATLAB\startup.m','w');
 fprintf(fid, 'addpath(''C:\\Users\\yourusername\\Documents\\MATLAB'');');
 fclose(fid);
 ```
-</details>
+Note that you need to duplicate the backslashes (`\`) in the path within the `fprintf` function.
 
-<br>
+</details>
 
 # Testing the installation
 
