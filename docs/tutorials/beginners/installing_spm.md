@@ -13,7 +13,7 @@ SPM is already available in a special network folder set up for our course. We j
    fid = fopen('N:\Documents\MATLAB\startup.m','w');
    fprintf(fid, 'addpath(''S:\\FBS_CLNE0068\\SPM'');');
    fclose(fid);
-  ``` 
+``` 
 
 ## Option 2 - If you want to install SPM on your own computer
 <br>
