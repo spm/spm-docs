@@ -61,6 +61,8 @@ Entering the coordinates from copilot in the `MNI` box we get the results below:
 
 This looks roughly the same area as in the figure from Yoo et al. (2015).
 
-Note that in the paper left was on the left (so called neurological convention) whereas here left is on the right (radiological convention). This is a common source of confusion so be careful.
+Note that the paper talks about a parietal area contralateral to the hand, so it could be either in the left or the right hemisphere and we could include both. Symmetric locations on the left and on the right differ in the sign of their first (X) coordinate. So the right inferior parietal lobule coordinates would be `40, -66, 46`.
+
+Note also that in some cases the left hemisphere is shown on the left (so called neurological convention) whereas in others left is on the right (radiological convention). This is a common source of confusion so be careful.
 
 Your goal is to examine several more papers in this way and come up with 3-5 relevant brain areas in total. You could use several different search tools and combine the results. Note that the main aim of this exercise is not to be comprehensive or super-precise location-wise, but rather that each of your choices is well-justified and relevant to the rating scale you were asked about. So if in doubt, it is better to include fewer areas with stronger justification.
