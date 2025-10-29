@@ -1,6 +1,6 @@
 # Preparing the preregistration document
 
-You will be provided with a name of a cognitive or clinical rating scale. Your task is to search the literature to find a few brain areas that are most likely to show BOLD activity correlated with the scores on this scale. You will then write a short preregistration document (max 1 page) describing your hypotheses and listing the region anatomical labels and coordinates.
+You will be provided with a name of a cognitive or clinical rating scale. Your task is to search the literature to find a few brain areas that are most likely to show BOLD activity correlated with the scores on this scale. You will then write a short preregistration document (max 1 page, the template is provided on the course page) describing your hypotheses and listing the regions' anatomical labels and coordinates. The hypothesis can be a general description of the areas you identified (e.g. 'movement-related frontal regions').
 
 Let's consider an example where you are given the "Unified Parkinson's Disease Rating Scale (UPDRS) Motor Subscale (part III)". 
 
@@ -42,7 +42,7 @@ We will also add the Yoo et al. (2015) paper to our reference list.
 
 The final thing we need to do is include the MNI coordinates of the Inferior Parietal Lobule. 
 
-The authors do not report the coordinates in the paper so we could as MS Copilot again:
+The authors do not report the coordinates in the paper so we could ask MS Copilot again:
 
 >What are the MNI coordinates of the left inferior parietal lobule? Search the web.
 
