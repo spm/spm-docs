@@ -1,10 +1,10 @@
-# Multiple Regression
+# First-level multiple regression
 
-This section describes fitting a mutiple regression model to preprocessed
+This section describes fitting a multiple regression model to preprocessed
 data from a single participant.
 Normally, statistical findings from a single individual are not very useful for
 informing us about brain function in the general population, so a group analysis
-of data from several participants wil be done later.
+of data from several participants will be done later.
 The main outcome required at this stage is a "contrast image"
 from the subject, which can be entered into the group analysis.
 
@@ -91,7 +91,7 @@ It will also show the design matrix on the A4-shaped window.
 At this stage it is advisable to check your model specification using
 SPM's review facility which is accessed via the `Review` button. This
 brings up a `Design` tab on the interactive window clicking on which
-produces a pulldown menu. You can play around with the various options
+produces a pull-down menu. You can play around with the various options
 without doing any harm.
 
 <figure>
@@ -115,12 +115,12 @@ window. Then
 
 Save the job as `model_est_job.m` and press `Run` button.
 
-SPM will make a number of changes to the `SPM.mat` file, and write a number of additiona files into the selected folder.
+SPM will make a number of changes to the `SPM.mat` file, and write a number of additional files into the selected folder.
 These include
 - `mask.nii` is a binary image of ones and zeros that indicate which parts of the image were analysed.
 - `beta_0001.nii` through to `beta_0026.nii`. Each of these contains the parameter estimates for the corresponding column of the design matrix.
 - `ResMS.nii`. This contains a map of the residual sum of squares at each voxel.
-- `RPV.nii`. This contains a map of the "resels" (resoution elements) per voxel, which indicates the smoothness of the residuals at each location. This is derived from the correlations among neighbouring voxels.
+- `RPV.nii`. This contains a map of the "resels" (resolution elements) per voxel, which indicates the smoothness of the residuals at each location. This is derived from the correlations among neighbouring voxels.
 
 
 ## Inference 
@@ -132,6 +132,7 @@ This is where you define what you'd like to ask of the data by specifying contra
 
 We'll start by asking where the BOLD signal is higher for faces versus scrambled faces in both sessions.
 To formulate the contrast vector, we'll recap what all the columns of the design matrix encode.
+
 1. Famous faces in run 1
 2. Temporal derivatives for famous faces in run 1
 3. Unfamiliar faces in run 1
@@ -187,7 +188,7 @@ This will then lead to a few questions in the "interactive window".
 - The first is about whether to `apply masking`, which will allow you to reduce the search volume and therefore reduce the severity of the corrections for multiple comparisons.
 This is most useful if you have a prior hypothesis about the involvement of certain brain regions.
 To begin with, select `none`.
-- The next is whether youd like `p value adjustment to control` for family-wise error or not.
+- The next is whether you'd like `p value adjustment to control` for family-wise error or not.
 By selecting FWE, you see only those regions that have survived after correction for multiple comparisons.
 - The next is the `p value (FWE)` that you consider to be statistically significant (the alpha value). The convention is usually 0.05, but this is purely a convention and has no empirical or theoretical justification.
 - The final question is `& extent threshold (voxels)`. This is an option to filter out any tiny blobs, but a value of `0` is suggested.
@@ -214,14 +215,14 @@ The columns in volume table show, from right to left:
   a peak with this or a greater height (T- or Z-statistic), corrected
   (FWE or FDR) / uncorrected for search volume.
 - **cluster-level**: the chance (p) of finding a cluster with this
-  many(ke) or a greater number of voxels, corrected (FWE or FDR) /
+  many (ke) or a greater number of voxels, corrected (FWE or FDR) /
   uncorrected for search volume.
 - **set-level**: the chance (p) of finding this (c) or a greater number
   of clusters in the search volume.
 
 Ignore the `set-level` and `cluster-level` columns for now.
 If we focus on the `peak-level` columns we see:
-- `p_FWE-cor` shows family-wise corrected p vaues based on the magnitudes of the t statistics. These should all be below the `0.05` threshold entered earlier. This is the main column of interest.
+- `p_FWE-cor` shows family-wise corrected p values based on the magnitudes of the t statistics. These should all be below the `0.05` threshold entered earlier. This is the main column of interest.
 - `q_FDR-cor` shows the results of a false discovery rate correction, based on a proportion of blobs that will be false discoveries. This might be a bit advanced, so ignore it.
 - `T` shows the actual t statistics computed from the data.
 - `(Z_E)` shows the Z statistic that would have the equivalent statistical significance as the t statistic in the previous column.
@@ -234,14 +235,14 @@ These coordinates may not mean much to you, but if you'd like to see what brain 
 If you then right-click on the coordinates, you can see which brain structure they probably correspond with.
 
 The interactive window gives you many other options, which should be safe to play with without breaking anything.
-One of the options is to superimpose the blobs onto some background image, which you can do from the `Overlays` pulldown menu by selecting `sections`.
-For this, you could specify the spatially normalised and intensity nonuniformity corrected anatomical scan you created previously (`../anat/wmsub-XX-T1w.nii`).
+One of the options is to superimpose the blobs onto some background image, which you can do from the `Overlays` pull-down menu by selecting `sections`.
+For this, you could specify the spatially normalised and intensity non-uniformity corrected anatomical scan you created previously (`../anat/wmsub-XX-T1w.nii`).
 Returning to the table can be done by clicking the `whole brain` button on the interactive figure.
 
 Notice that some new images have been created in the results folder.
 These are `con_0001.nii` and `spmT_0001.nii`.
 The former is the linear combination of beta images that you specified using a contrast vector, while the latter is the corresponding map of t statistics.
-When you later do a second-level anaysis across subjects, this will be based on a `con_00XX.nii` from each subject.
+When you later do a second-level analysis across subjects, this will be based on a `con_00XX.nii` from each subject.
 
 
 ### Famous - Unfamiliar 
@@ -260,6 +261,7 @@ Once this is specified, SPM will open a table listing the various brain structur
 Neuromorphometrics atlas. You can select one or more of these (which will require you to hold
 the `Ctrl` button on your keyboard when selecting the 2nd, 3rd, etc structure).
 Brain regions to consider (from skimming a review by Natu \& O'Tool, 2011) might include the following, which are listed in order:
+
 - `Right Amygdala`
 - `Left Amygdala`
 - `Right FuG fusiform gyrus`
@@ -276,17 +278,18 @@ Brain regions to consider (from skimming a review by Natu \& O'Tool, 2011) might
 - `Left STG superior temporal gyrus`
 - `Right TMP temporal pole`
 - `Left TMP temporal pole`
-Another way to suggest brain regions that may be involved in various tasks is to search for relevant terms at (*Neurosynth*)[https://neurosynth.org/analyses/terms/].
-Note that the mask is `inclusive` because it includes only these regions. You can see which voxells are included by looking at the `Neuromorphometrics_mask_0XX.nii` image.
+
+Another way to suggest brain regions that may be involved in various tasks is to search for relevant terms at [*Neurosynth*](https://neurosynth.org/analyses/terms/).
+Note that the mask is `inclusive` because it includes only these regions. You can see which voxels are included by looking at the `Neuromorphometrics_mask_0XX.nii` image.
 
 There may or may not be any statistically significant findings from this comparison.
 Only two of the nine runs per subject are used, which will reduce statistical power.
 
 
-## Any effect
+### Any effect
 Now we will do an F test to identify regions where there is any variance in the data explained by the events, in a way that is shared between the runs.
 As for the t contrasts, this involves hitting the `Results` button and selecting the `SPM.mat` to open the contrast manager.
-This time you would definine a new F contrast.
+This time you would define a new F contrast.
 This requires an F contrast matrix that would take a lot of effort to type out as ones and zeros.
 Instead an easier way is used to generate it by defining it as follows:
 ```matlab
