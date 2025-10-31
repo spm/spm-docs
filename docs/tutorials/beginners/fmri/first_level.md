@@ -50,6 +50,7 @@ the result into.
         - Highlight `Scans` and use SPM's file selector to choose all the 
           smoothed, spatially normalised and realigned volumes in the first run
           (i.e., all volumes in `func/swrsub-XX_ses-mri_task-facerecognition_run-01_bold.nii`).
+          To select all the volumes in a file, change the field that says `1` to `NaN`.
         - Highlight `Conditions` and select `New condition` three times.
             - Open the first newly created `Condition` option and
                 - Highlight `Name` and enter `Famous`. This is simply giving the condition an interpretable name.
