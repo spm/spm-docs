@@ -5,11 +5,13 @@ This tutorial only uses a subset of the original data.
 Originally, there were nine runs of fMRI for each participant, but we will use only the first two.
 
 For subject `XX`, the data you should have are:
+
 - `sub-XX/anat/sub-XX-T1w.nii`. A T1-weighted MPRAGE MRI scan (TR 2,250 ms, TE 2.98 ms, TI 900 ms, 190 Hz/pixel; flip angle 9°) of 1 mm isotropic resolution.
 - `sub-XX/func/sub-XX_ses-mri_task-facerecognition_run-01_bold.nii`. The first run of functional data, acquired using an EPI sequence (TR 2000 ms, TE 30 ms, flip angle 78°), with 208 volumes.  Slices were acquired interleaved, with odd then even numbered slices (where slice 1 was the most inferior slice).
 - `sub-XX/func/sub-XX_ses-mri_task-facerecognition_run-01_events.nii`. A MATLAB file containing the onset times of the three types of stimuli for the first fMRI run. The file contains three variables: `famous`, `unfamiliar` and `scrambled`.
 - `sub-XX/func/sub-XX_ses-mri_task-facerecognition_run-02_bold.nii`. The second run of functional data, acquired using an EPI sequence, with 208 volumes.
 - `sub-XX/func/sub-XX_ses-mri_task-facerecognition_run-02_events.nii`. A MATLAB file containing the onset times of the three types of stimuli for the second fMRI run.
+
 
 ## Experimental design
 For the sake of this analysis, three types of stimuli (trial-types) were used

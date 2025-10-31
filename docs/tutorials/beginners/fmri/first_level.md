@@ -9,10 +9,10 @@ The main outcome required at this stage is a "contrast image"
 from the subject, which can be entered into the group analysis.
 
 
-## Loading onset times
+## Before you begin
 
 Before setting up the analysis we must first load the stimulus
-onsets times into MATLAB. A separate file has been created that
+onset times into MATLAB. A separate file has been created that
 contains the stimulus onset times for each of the two runs.
 To load these, you would type the following (obviously after
 changing `XX` to the appropriate participant number, and possibly
@@ -27,17 +27,16 @@ in the MATLAB workspace. These each contain three fields called `famous`,
 `scrambled` and `unfamiliar`. Each field contains a vector of onset times
 (in seconds).
 
-## Create a results folder
 
 The results from fitting the multiple regression are saved into a folder,
 which needs to be created beforehand. How you create this empty folder
 (and what you call it) is up to you.
 
+
 ## Model specification
 
 Now press the `Specify 1st-level` button.
-This will call up the specification of a fMRI specification job in the
-batch editor window. Then
+This will call up an fMRI specification job in the batch editor window. Then
 
 - For `Directory`, select the folder (directory) you created for saving
 the result into.

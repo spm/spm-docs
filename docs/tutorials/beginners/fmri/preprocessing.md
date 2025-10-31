@@ -122,7 +122,7 @@ parameters to their (intensity non-uniformity corrected) anatomical image. To do
   2 2`\] to \[`1 1 1`\] which better matches the original resolution of the
   images.
 
-- Save the job as `norm_struct_job.m` and press `Run` button.
+- Save the job as `norm_struct_job.m` and press the `Run` button.
 
 ## Smoothing
 
@@ -132,7 +132,7 @@ call up the specification of a smooth job in the batch editor window.
 - Select `Images to Smooth` and then select the spatially normalised
   volumes created in the last section (`func/wrsub-XX_ses-mri_task-facerecognition_run-01_bold.nii` and `func/wrsub-XX_ses-mri_task-facerecognition_run-02_bold.nii`).
 
-- Save the job as `smooth_job.m` and press `Run` button.
+- Save the job as `smooth_job.m` and press the `Run` button.
 
 This will smooth the data by (the default) 8 mm in each direction.
 
