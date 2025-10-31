@@ -26,8 +26,8 @@ a realignment job specification in the batch editor window. Then
   `Session` option.
 
 - Select `Specify Files` and use the SPM file selector to choose all of
-  your functional images eg. `sM03953_0005_*.img`. You should select 351
-  files.
+  your functional image volumes eg. `sM03953_0005_*.img`. You should select 351
+  volumes.
 
 - Save the job file as eg. `DIR/jobs/realign.mat`.
 
@@ -85,7 +85,7 @@ making the slice acquisition order \[`24 23 22 ... 1`\].
 
 - Save the job as `slice_timing.mat` and press the `Run` button.
 
-SPM will write slice-time corrected files with the prefix `a` in the
+SPM will write slice-time corrected versions of the images with the prefix `a` in the
 same folder as the functional data.
 
 ## Coregistration
@@ -158,7 +158,7 @@ up the specification of a normalise job in the batch editor window.
 - Highlight `Images to write` and select all of the slice-time
   corrected, realigned functional images `arsM*.img`. Note: This can be
   done efficiently by changing the filter in the SPM file selector to
-  `^ar.*`. You can then right click over the listed files, choose
+  `^ar.*`. You can then right click over the listed images, choose
   `Select all`. You might also want to select the mean functional image
   created during realignment (which would not be affected by slice-time
   correction), i.e, the `meansM03953_0005_006.img`. Then press `Done`.
@@ -169,7 +169,7 @@ up the specification of a normalise job in the batch editor window.
 - Press `Save`, save the job as normalise.mat and then press the `Run`
   button.
 
-SPM will then write spatially normalised files to the folder containing the functional data.
+SPM will then write spatially normalised versions of the images to the folder containing the functional data.
 These files have the prefix `w`.
 
 If you wish to superimpose a subject's functional activations on their
@@ -196,7 +196,7 @@ Press the `Smooth` button [^4]. This will
 call up the specification of a smooth job in the batch editor window.
 
 - Select `Images to Smooth` and then select the spatially normalised
-  files created in the last section eg. `war*.img`.
+  volumes created in the last section eg. `war*.img`.
 
 - Save the job as smooth.mat and press `Run` button.
 

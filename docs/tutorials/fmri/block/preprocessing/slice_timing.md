@@ -36,10 +36,10 @@ Slice timing correction aims to account for the differences in timing of data ac
 
 2. Select `Data` :material-arrow-right-bold: `New Session` :material-arrow-right-bold: `Session`.
 3. In the pop-up window, use the left-hand panel to navigate to `sub-01/func/`. 
-4. Identify the realigned time series - this will be the file with an `r` prefix, i.e. `rsub-01_task-auditory_bold.nii`. Use the box underneath the `Filter` button to show a 4D file by replacing `1` with `NaN` and pressing ++return++. You can do this in combination with filtering for files starting with `r` by typing in `^r.*` in the `Filter` box and pressing ++return++. 
+4. Identify the realigned time series - this will be the file with an `r` prefix, i.e. `rsub-01_task-auditory_bold.nii`. Use the box underneath the `Filter` button to show a 4D file by replacing `1` with `NaN` and pressing ++return++. You can do this in combination with filtering for file names starting with `r` by typing in `^r.*` in the `Filter` box and pressing ++return++. 
 
     !!! tip "Top tip"
-        The `Filter` box allows you to filter files based on a specific combination of characters. The syntax used in filtering file is based on regular expressions. Below are some useful expressions for selecting files:
+        The `Filter` box allows you to filter file names based on a specific combination of characters. The syntax used in filtering files is based on regular expressions. Below are some useful expressions for selecting files:
 
         * `.` a period indicates any character. Filtering for `...` would show all files containing at least 3 characters. To filter for files containing a period in their name, use `\.`
 
