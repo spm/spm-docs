@@ -1,3 +1,10 @@
+# Overview
+
+The material here is for students doing the **CLNE0068: Research Methods and Data Analysis in Human Neuroscience** course at UCL.
+
+
+For the first-level analysis, each student should download and analyse a different subject's data from the 'MRI data' link in the 'Data analysis resources' section. Download the attached Excel file and find out which subject you will be working on from your Candidate Number. At a later stage, we'll be combining everyone's results for group analysis, so it is important you work on your assigned subject.
+
 
 ## Data
 The entire original dataset is from 19 participants (8F & 11M, ages 23-37 years) and described in the paper by Wakeman et al (2015).
@@ -15,6 +22,7 @@ For subject `XX`, the data you should have are:
 
 ## Experimental design
 For the sake of this analysis, three types of stimuli (trial-types) were used
+
 * **Famous** Faces. Grey-scale photographs of people the participants are likely to recognise.
 * **Unfamiliar** Faces. Grey-scale photographs of random people, but with similar properties to the famous faces.
 * **Scrambled** Faces. Essentially just slightly smooth random noise, but with some properties similar to that of the face data.
@@ -31,10 +39,7 @@ To sustain participants' attention, they were asked to press a key with either t
 Start up MATLAB and type `spm fmri` at the
 MATLAB prompt. SPM will then open in fMRI mode with three windows (1)
 the top-left or "Menu" window, (2) the bottom-left or "Interactive"
-window and (3) the right-hand or "Graphics" window. Analysis then takes
-place in three major stages (i) spatial pre-processing, (ii) model
-specification, review and estimation and (iii) inference. These stages
-organise the buttons in SPM's base window.
+window and (3) the right-hand or "Graphics" window.
 
 <figure>
 <div class="center">

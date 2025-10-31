@@ -1,21 +1,20 @@
 # Spatial preprocessing
 
-This page describes the transforms applied to the image data prior to statistical analysis. 
+This page describes the transforms applied to the image data of a single participant prior to statistical analysis. 
+
 
 ## Display
 
-Display one of the functional image volumes using the `Display` button. Note
+Display one of the functional image volumes using the `Display` button on the "Menu" window. Note
 the orbitofrontal and inferior temporal drop-out and ghosting. This can be
 seen more clearly by selecting `Brighten` from the `Effects` menu in the
-`Colours` menu from the `SPM Figure` tab at the top of the Graphics
-window.
+`Colours` menu from the `SPM Figure` tab at the top of the "Graphics" window.
 
 
 ## Realignment
 
 Under the spatial pre-processing section of the SPM base window select
-`Realign (Est & Res)` from the
-`Realign` pull-down menu. This will call up
+`Realign (Est & Res)` from the `Realign` pull-down on the "Menu" window. This will call up
 a realignment job specification in the batch editor window. Then
 
 - Highlight data, select `New Session`, then highlight the newly created
@@ -68,7 +67,7 @@ which will be used in the next step of spatial processing - coregistration.
 ## Coregistration
 
 Select `Coregister (Estimate)` from the
-`Coregister` pull-down menu. This will call up the specification of a
+`Coregister` pull-down on the "Menu" window. This will call up the specification of a
 coregistration job in the batch editor window.
 
 - Highlight `Fixed Image` and then select the mean functional image
@@ -89,7 +88,7 @@ position and orientation.
 
 ## Segmentation
 
-Press the `Segment` button. This will call
+Press the `Segment` button on the "Menu" window. This will call
 up the specification of a segmentation job in the batch editor window.
 Highlight the `Volumes` field in `Data > Channels` and then select the
 subject's coregistered anatomical image `anat/sub-XX-T1w.nii`. Change
@@ -109,7 +108,7 @@ will be used in the next section to spatially normalise the functional data.
 ## Normalise
 
 Select `Normalise (Write)` from the
-`Normalise` pull-down menu. This will call
+`Normalise` pull-down on the "Menu" window. This will call
 up the specification of a normalise job in the batch editor window.
 
 - Highlight `Data`, select `New Subject`.
@@ -149,7 +148,7 @@ The spatially normalised image will be saved as `anat/wmsub-XX-T1w.nii`.
 
 ## Smoothing
 
-Press the `Smooth` button. This will call up the specification of a smooth job in the batch editor window.
+Press the `Smooth` button on the "Menu" window. This will call up the specification of a smooth job in the batch editor window.
 
 - Select `Images to Smooth` and then select the spatially normalised
   volumes created in the last section (`func/wrsub-XX_ses-mri_task-facerecognition_run-01_bold.nii` and `func/wrsub-XX_ses-mri_task-facerecognition_run-02_bold.nii`). To select all the volumes in a file, change the field that says `1` to `NaN`.
@@ -157,5 +156,6 @@ Press the `Smooth` button. This will call up the specification of a smooth job i
 - Save the job as `smooth_job.m` and press the `Run` button.
 
 This will smooth the data by (the default) 8 mm in each direction, which will be saved as image files prefixed by `s` (`func/swrsub-XX_ses-mri_task-facerecognition_run-01_bold.nii` and `func/swrsub-XX_ses-mri_task-facerecognition_run-02_bold.nii`).
+
 
 --8<-- "addons/abbreviations.md"

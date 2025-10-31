@@ -35,7 +35,7 @@ which needs to be created beforehand. How you create this empty folder
 
 ## Model specification
 
-Now press the `Specify 1st-level` button.
+Now press the `Specify 1st-level` button on the "Menu" window.
 This will call up an fMRI specification job in the batch editor window. Then
 
 - For `Directory`, select the folder (directory) you created for saving
@@ -90,7 +90,7 @@ It will also show the design matrix on the A4-shaped window.
 
 At this stage it is advisable to check your model specification using
 SPM's review facility which is accessed via the `Review` button. This
-brings up a `Design` tab on the interactive window clicking on which
+brings up a `Design` tab on the "Interactive" window clicking on which
 produces a pull-down menu. You can play around with the various options
 without doing any harm.
 
@@ -104,7 +104,7 @@ without doing any harm.
 
 ## Model estimation
 
-Press the `Estimate` button. This will call
+Press the `Estimate` button on the "Menu" window. This will call
 up the specification of an fMRI estimation job in the batch editor
 window. Then
 
@@ -127,7 +127,7 @@ These include
 Three examples of statistical inference are provided here.
 
 ### Faces - Scrambled
-Press the `Results` button and select the `SPM.mat` file. This
+Press the `Results` button on the "Menu" window and select the `SPM.mat` file. This
 will invoke the contrast manager. 
 This is where you define what you'd like to ask of the data by specifying contrast vectors (for t statistics) or matrices (for F statistics).
 
@@ -185,7 +185,7 @@ You can then enter a suitable name for the contrast, along with the contrast vec
 <figcaption><strong>Defining a t contrast vector.</strong></figcaption>
 </figure>
 
-This will then lead to a few questions in the "interactive window".
+This will then lead to a few questions in the "Interactive" window.
 - The first is about whether to `apply masking`, which will allow you to reduce the search volume and therefore reduce the severity of the corrections for multiple comparisons.
 This is most useful if you have a prior hypothesis about the involvement of certain brain regions.
 To begin with, select `none`.
@@ -194,7 +194,7 @@ By selecting FWE, you see only those regions that have survived after correction
 - The next is the `p value (FWE)` that you consider to be statistically significant (the alpha value). The convention is usually 0.05, but this is purely a convention and has no empirical or theoretical justification.
 - The final question is `& extent threshold (voxels)`. This is an option to filter out any tiny blobs, but a value of `0` is suggested.
 
-This then leads on to the results being shown in the "graphics" (A4 shaped) window.
+This then leads on to the results being shown in the "Graphics" (A4 shaped) window.
 The results you obtain may look like those shown in the figure below.
 <figure>
 <div class="center">
@@ -232,13 +232,13 @@ If we focus on the `peak-level` columns we see:
 The final three columns of the table show the coordinates at which the statistics are computed.
 If you click on these coordinates, you should see that the red `<` in the MIP moves to that location.
 The units of the coordinates are mm, and relate to the space to which the images were normalised (ICBM space).
-These coordinates may not mean much to you, but if you'd like to see what brain structure they approximately correspond with, you could click on `Atlas` at the top of the interactive window (the lower left of the three that appear when you start SPM), where you get the option to `Label using` `Neuromorphometrics`[^1].
+These coordinates may not mean much to you, but if you'd like to see what brain structure they approximately correspond with, you could click on `Atlas` at the top of the "Interactive" window (the lower left of the three that appear when you start SPM), where you get the option to `Label using` `Neuromorphometrics`[^1].
 If you then right-click on the coordinates, you can see which brain structure they probably correspond with.
 
-The interactive window gives you many other options, which should be safe to play with without breaking anything.
+The "Interactive" window gives you many other options, which should be safe to play with without breaking anything.
 One of the options is to superimpose the blobs onto some background image, which you can do from the `Overlays` pull-down menu by selecting `sections`.
 For this, you could specify the spatially normalised and intensity non-uniformity corrected anatomical scan you created previously (`../anat/wmsub-XX-T1w.nii`).
-Returning to the table can be done by clicking the `whole brain` button on the interactive figure.
+Returning to the table can be done by clicking the `whole brain` button on the "Interactive" window.
 
 Notice that some new images have been created in the results folder.
 These are `con_0001.nii` and `spmT_0001.nii`.
@@ -248,14 +248,13 @@ When you later do a second-level analysis across subjects, this will be based on
 
 ### Famous - Unfamiliar 
 Here, the aim is to identify where the BOLD signal is higher for the famous faces versus the unfamiliar faces.
-As previously, hit the `Results` button, select the `SPM.mat`, define a new t contrast and give it a name (whatever you like as long as you know what it represents).
+As previously, hit the `Results` button on the "Menu" window, select the `SPM.mat`, define a new t contrast and give it a name (whatever you like as long as you know what it represents).
 The contrast vector you enter would be:
 ```matlab
 1 0 -1 0 0 0  0 0 0 0 0 0  1 0 -1 0 0 0  0 0 0 0 0 0  0 0
 ```
 
 One might expect more subtle effects from this contrast, so it may be worth using a prior hypotheses about where to expect differences in order to reduce the severity of the corrections for multiple comparisons.
-As previously, click the `Results` button and define a t contrast using the contrast manager.
 This time though, when asked about whether to `apply masking`, click the `atlas` button.
 This will ask you to select an atlas file, in which case choose 'labels_Neuromorphometrics.nii,1'.
 
