@@ -185,7 +185,8 @@ You can then enter a suitable name for the contrast, along with the contrast vec
 <figcaption><strong>Defining a t contrast vector.</strong></figcaption>
 </figure>
 
-This will then lead to a few questions in the "Interactive" window.
+This will then lead to a few questions in the "Interactive" window:
+
 - The first is about whether to `apply masking`, which will allow you to reduce the search volume and therefore reduce the severity of the corrections for multiple comparisons.
 This is most useful if you have a prior hypothesis about the involvement of certain brain regions.
 To begin with, select `none`.
@@ -261,7 +262,7 @@ This will ask you to select an atlas file, in which case choose 'labels_Neuromor
 SPM will then open a table listing the various brain structures from the
 Neuromorphometrics[^1] atlas. You can select one or more of these (which will require you to hold
 the `Ctrl` button on your keyboard when selecting the 2nd, 3rd, etc structure).
-Brain regions to consider (from skimming a review by Natu \& O'Tool, 2011) might include the following, which are listed in order:
+Brain regions to consider (from skimming a review by Natu & O'Tool, 2011) might include the following, which are listed in order:
 
 - `Right Amygdala`
 - `Left Amygdala`
