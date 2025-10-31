@@ -43,7 +43,7 @@ batch editor window. Then
 the result into.
 - In the `Timing parameters` option,
     - Highlight `Units for design` and select `Seconds`. This should be self-explanatory.
-    - Highlight `Interscan interval` and enter `2`. Again, this should be self explanatory because the TR is two seconds.
+    - Highlight `Interscan interval` and enter `2`. Again, this should be self-explanatory because the TR is two seconds.
     - Leave `Microtime resolution` at the default value of `16`. This option is there to simplify convolving a vector of ones and zeros with the haemodynamic response function.
     - leave `Microtime onset` at the default value of `8`. This sets time zero to the middle slice in time.
 - Highlight `Data and Design` and select `New Subject/Session` twice to set up the analysis of the two fMRI runs.
@@ -51,7 +51,7 @@ the result into.
         - Highlight `Scans` and use SPM's file selector to choose all the 
           smoothed, spatially normalised and realigned volumes in the first run
           (i.e., all volumes in `func/swrsub-XX_ses-mri_task-facerecognition_run-01_bold.nii`).
-        - Highlight `Conditions` and select `New condition`[^2] three times.
+        - Highlight `Conditions` and select `New condition` three times.
             - Open the first newly created `Condition` option and
                 - Highlight `Name` and enter `Famous`. This is simply giving the condition an interpretable name.
                 - Highlight `Onsets` and enter `r1.famous` (to specify the run 1 onset times for famous faces that you loaded into MATLAB earlier).
@@ -80,7 +80,7 @@ the result into.
         - Click on `Model derivatives` and select `Time derivatives`. This allows more leeway in the timings of the events.
 - Ignore `Model Interactions (Volterra)`. This is a bit too complicated for beginners.
 - Leave `Global normalisation` at its default value of `None`. This would allow all the fMRI volumes to be rescaled so they have the same average intensity, but we do not want this.
-- Leave `Masking threshold` at its default value of `0.8`. This is a crude heuristic for deciding which oparts of the data to include in the analysis.
+- Leave `Masking threshold` at its default value of `0.8`. This is a crude heuristic for deciding which parts of the data to include in the analysis.
 - Leave `Serial correlations` at the default setting of `AR(1)`. This option is for dealing with the fact that noise in fMRI is correlated over time. Data with shorter TRs might need the `FAST` option, but `AR(1)` is reasonable for two second TRs.
 
 Save the job as `model_spec_job.m` and press the `Run` button.
@@ -124,6 +124,7 @@ These include
 
 
 ## Inference 
+Three examples of statistical inference are provided here.
 
 ### Faces - Scrambled
 Press the `Results` button and select the `SPM.mat` file. This
@@ -199,7 +200,7 @@ The results you obtain may look like those shown in the figure below.
 <div class="center">
 <img src="../results1.png" style="width:80mm" />
 </div>
-<figcaption><strong>Defining a t contrast vector.</strong></figcaption>
+<figcaption><strong>Results for faces - scrambled.</strong></figcaption>
 </figure>
 
 The top left of the window shows the *maximum intensity projection* (MIP), with is like three X-ray views through the results.
@@ -231,7 +232,7 @@ If we focus on the `peak-level` columns we see:
 The final three columns of the table show the coordinates at which the statistics are computed.
 If you click on these coordinates, you should see that the red `<` in the MIP moves to that location.
 The units of the coordinates are mm, and relate to the space to which the images were normalised (ICBM space).
-These coordinates may not mean much to you, but if you'd like to see what brain structure they approximately correspond with, you could click on `Atlas` at the top of the interactive window (the lower left of the three that appear when you start SPM), where you get the option to `Label using` `Neuromorphometrics`.
+These coordinates may not mean much to you, but if you'd like to see what brain structure they approximately correspond with, you could click on `Atlas` at the top of the interactive window (the lower left of the three that appear when you start SPM), where you get the option to `Label using` `Neuromorphometrics`[^1].
 If you then right-click on the coordinates, you can see which brain structure they probably correspond with.
 
 The interactive window gives you many other options, which should be safe to play with without breaking anything.
@@ -257,8 +258,9 @@ One might expect more subtle effects from this contrast, so it may be worth usin
 As previously, click the `Results` button and define a t contrast using the contrast manager.
 This time though, when asked about whether to `apply masking`, click the `atlas` button.
 This will ask you to select an atlas file, in which case choose 'labels_Neuromorphometrics.nii,1'.
-Once this is specified, SPM will open a table listing the various brain structures from the
-Neuromorphometrics atlas. You can select one or more of these (which will require you to hold
+
+SPM will then open a table listing the various brain structures from the
+Neuromorphometrics[^1] atlas. You can select one or more of these (which will require you to hold
 the `Ctrl` button on your keyboard when selecting the 2nd, 3rd, etc structure).
 Brain regions to consider (from skimming a review by Natu \& O'Tool, 2011) might include the following, which are listed in order:
 
@@ -295,9 +297,17 @@ Instead an easier way is used to generate it by defining it as follows:
 ```matlab
 eye(6) zeros(6) eye(6)
 ```
+The results you obtain may look like those shown in the figure below.
+<figure>
+<div class="center">
+<img src="../results3.png" style="width:80mm" />
+</div>
+<figcaption><strong>F test results.</strong></figcaption>
+</figure>
+
 
 [^1]: Neuromorphometrics is a company that manually labels brain MRI.
-    This atlas is based on their manual annotations.
+    This atlas is based on some of their manual annotations that were made freelly available.
 
 --8<-- "addons/abbreviations.md"
 
