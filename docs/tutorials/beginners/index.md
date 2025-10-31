@@ -25,3 +25,12 @@
     * [Introducing SPM](installing_spm.md). How to install SPM and check that it is working.
     * [Statistical Tests](linear_model.md). How t and F tests are implemented in SPM.
     * [Haemodynamic Modelling](haemodynamic_modelling.md). Modifications for working with fMRI data.
+
+* **BSc Example Data**
+
+    Analysis of example datasets for the BSc course.
+
+    * [fMRI Overview](fmri/index.md)
+    * [fMRI Preprocessing](fmri/preprocessing.md)
+    * [fMRI First Level](fmri/first_level.md)
+
