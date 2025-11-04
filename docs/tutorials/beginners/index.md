@@ -32,5 +32,6 @@
 
     * [fMRI Overview](fmri/index.md)
     * [fMRI Preprocessing](fmri/preprocessing.md)
-    * [fMRI First Level](fmri/first_level.md)
+    * [fMRI First-level](fmri/first_level.md)
+    * [fMRI Second-level Example](fmri/second_level_example.md)
 

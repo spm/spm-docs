@@ -84,9 +84,10 @@ nav:
           - 'Statistical Tests':          'tutorials/beginners/linear_model.md'
           - 'Haemodynamic Modelling':     'tutorials/beginners/haemodynamic_modelling.md'
         - 'fMRI analysis':
-            - 'Overview': 'tutorials/beginners/fmri/index.md'
+            - 'Overview':      'tutorials/beginners/fmri/index.md'
             - 'Preprocessing': 'tutorials/beginners/fmri/preprocessing.md'
-            - 'First-level': 'tutorials/beginners/fmri/first_level.md'
+            - 'First-level':   'tutorials/beginners/fmri/first_level.md'
+            - 'Second-level':  'tutorials/beginners/fmri/second_level_example.md'
       - 'fMRI':
         - 'tutorials/fmri/index.md'
         - 'Block design fMRI':
