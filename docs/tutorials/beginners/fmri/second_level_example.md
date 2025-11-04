@@ -1,5 +1,8 @@
 # Second-level analysis example
-The material here is for students doing the **CLNE0068: Research Methods and Data Analysis in Human Neuroscience** course at UCL.
+
+??? info "CLNE0068: Research Methods and Data Analysis in Human Neuroscience"
+    The material here is for students doing the **CLNE0068: Research Methods and Data Analysis in Human Neuroscience** course at UCL. It may eventually be made more generally available.
+
 
 First of all, create a folder to save your results into.
 Then start MATLAB and type
