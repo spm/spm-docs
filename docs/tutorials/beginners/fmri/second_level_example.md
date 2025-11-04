@@ -28,7 +28,7 @@ This gives `age` and `sex` variables in the MATLAB workspace that can be entered
 ## Specify 2nd-level
 Press the `Specify 2nd-level` button on the "Menu" window to get a `Factorial design specification` job in the batch editor.
 Modify the design so it looks like the following
-```matlab
+```
 Directory                            [specify the directory you created]
 Design
  . Multiple regression
