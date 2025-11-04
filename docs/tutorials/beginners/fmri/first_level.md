@@ -164,7 +164,7 @@ To formulate the contrast vector, we'll recap what all the columns of the design
 Identifying voxels where BOLD is higher for faces versus scrambled involves taking the average of the beta values from the famous and unfamiliar faces and subtracting the beta values for the scrambled faces, and doing this for both runs.
 Note that the beta values corresponding with the temporal derivatives are ignored.
 This can be considered as taking a weighted sum of the beta values, where the weights are as follows:
-```matlab
+```
 0.5 0 0.5 0 -1 0  0 0 0 0 0 0  0.5 0 0.5 0 -1 0  0 0 0 0 0 0  0 0
 ```
 This is the contrast vector that would be used for a t test to identify these differences.
@@ -251,7 +251,7 @@ When you later do a second-level analysis across subjects, this will be based on
 Here, the aim is to identify where the BOLD signal is higher for the famous faces versus the unfamiliar faces.
 As previously, hit the `Results` button on the "Menu" window, select the `SPM.mat`, define a new t contrast and give it a name (whatever you like as long as you know what it represents).
 The contrast vector you enter would be:
-```matlab
+```
 1 0 -1 0 0 0  0 0 0 0 0 0  1 0 -1 0 0 0  0 0 0 0 0 0  0 0
 ```
 

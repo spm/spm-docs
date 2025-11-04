@@ -77,7 +77,7 @@ Remember that the columns of the design matrix correspond with:
 ### Main Effect
 When the aim is to assess whether the average values in the contrast image are greater than zero, we can simply assess the first beta image, which encodes the mean.
 The t contrast vector to do this is
-```matlab
+```
 1 0 0
 ```
 Note that this is an ANCOVA model because effects of age and sex are covaried out.
@@ -86,7 +86,7 @@ Note that this is an ANCOVA model because effects of age and sex are covaried ou
 Age is encoded by the second column of the design matrix.
 To see both positive and negative age effects, we would need a two-tailed t test.
 This can be achieved using an F contrast of
-```matlab
+```
 0 1 0
 ```
 With data from only 16 participants and three columns in theh design matrix, the statistical analyses have only 13 degrees of freedom.
@@ -95,7 +95,7 @@ It may therefore not be very sensitive to age-related effects.
 ### Any age or sex effect
 Now we are intersted in any variance explained by the second and third columns of the design matrix.
 This can be done using the following F contrast:
-```matlab
+```
 0 1 0
 0 0 1
 ```
