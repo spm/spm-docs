@@ -1,4 +1,4 @@
-## Source Reconstruction
+# Source Reconstruction
 
 To estimate the cortical sources that give rise to the EEG and MEG data we will perform source reconstruction (also known as "inverse modelling"). We need to use the structural MRI of the subject to create a "head model" (that defines the cortex, skull and scalp in terms of meshes) and then a "forward model" (that uses a conductor model to simulate the signal at each sensor predicted by a dipolar source at each point in the cortical mesh). This corresponds to an "imaging" or "distributed" solution to the inverse problem.
 
@@ -6,7 +6,7 @@ You can view the structural MRI of your subject by displaying the NIfTI file `su
 
 To estimate total power (evoked and induced) of the cortical sources, we need to have the original data for each individual trial. Therefore our input file will be `apMcbefdspmeeg_run_01_sss.mat` (we could select the trial-averaged file if we just wanted to localise evoked effects). Note that one cannot localise power (or phase) data directly.
 
-### Create Head Model
+## Create Head Model
 
 Select "SPM → M/EEG → Time-frequency → Head model specification". Select the file `apMcbefdspmeeg_run_01_sss.mat` as the "M/EEG datasets", and the inversion index as `1` (this index can track different types of forward models and inverse solutions, for example if you want to compare them). Additional comments relating to each index can be inserted if "comments" is selected.
 
@@ -20,7 +20,7 @@ As well as the fiducials, a number of head-points across the scalp were digitise
 
 Finally, for the forward model itself, select "EEG head model" and specify this as "EEG BEM"; select "MEG head model" and specify this as "Single Shell". This can then be run. Note that the model parameters are saved, but the gain matrix itself is not estimated until inversion.
 
-### Model Inversion
+## Model Inversion
 
 We will compare two approaches to inverting the above forward model (both within a Parametric Empirical Bayesian framework). The first one is called "Multiple Sparse Priors" (MSP), which is a novel approach unique to SPM. This corresponds to a sparse prior on the sources, namely that only a few are active. Go back to the batch editor and select "M/EEG → Source reconstruction → Source Inversion". Use the `Dependency` button to specify the input of the module as the output of the previous module and set the inversion index to `1`.
 
@@ -30,7 +30,7 @@ The second type of inversion we will examine corresponds to a L2-minimum norm (M
 
 > **Tip** You can slightly speed things up by right-clicking on the `Source Inversion` module in the module list on the left, selecting `Replicate module`, and then just changing the inversion type and index.
 
-### Time-frequency contrasts
+## Time-frequency contrasts
 
 Here we are inverting the whole epoch from -100 to +800 ms (and all frequencies), which will produce a time course for every single source. If we want to localise an effect within the cortical mesh, we need to summarise this 4D data by averaging power across a particular time–frequency window. To do this, select "M/EEG → Source reconstruction → Inversion Results". Specify the input as dependent on the output of the source inversion, and set the inversion index to `1`.
 
@@ -40,12 +40,12 @@ Set the output space as "MNI". Then replicate this module to produce a second "I
 
 Now the source power can be written in one of two ways: (1) as a volumetric NIfTI "Image", or (2) as a surface-based GIfTI "Mesh". The source data are currently represented on the cortical mesh, so writing them to a volumetric image involves interpolation. We will choose the "Image" option so that we can treat the resulting contrast images in the same way that we do MRI images and use 3D Random Field Theory (RFT) for voxel-wise statistics.
 
-### Save batch and review
+## Save batch and review
 
 You can now save this inversion batch file (it should look like `batch_localise_job.m`). Once you have run it, you can explore the forward model by pressing the `3D Source Reconstruction` button within the SPM Menu window. This will open a new GUI window, in which you can select "Load" and choose the `apMcbefdspmeeg_run_01_sss.mat` file. On the left-hand side of the "source localisation" window, select the "display" button below the "MRI" button. This will bring up the scalp (orange), inner and outer skull (red) and cortical (blue) meshes of your subject's brain, as shown in the figure below.
 
 ![Head model meshes compared with slices from the MRI](./meshes.png)
-
+<br>
 *Figure: Head model meshes compared with slices from the MRI. Note that the fiducials are shown by cyan disks.*
 
 The meshes are plotted together with slices from the structural image. The main thing to check here is that the meshes have a sensible shape and are well aligned with the MRI.
@@ -53,7 +53,7 @@ The meshes are plotted together with slices from the structural image. The main 
 You can also try pressing the "display" button beneath the "Co-register" and "Forward Model" buttons to look at the head models and sensor plots. The things to check there are that the EEG and MEG sensors are in sensible positions with respect to the head.
 
 ![Forward models for EEG and MEG](./forward.png)
-
+<br>
 *Figure: Forward models for EEG (left) and MEG (right).* 
 
 Note that the EEG sensors are on the scalp surface, whereas the MEG head model is located more or less in the centre of the MEG sensor array, as expected.
@@ -61,6 +61,7 @@ Note that the EEG sensors are on the scalp surface, whereas the MEG head model i
 We can also use the same tool to look at the inversion results. The latest inversion index will be shown (2 in this case), which corresponds to the IID inversion. Press the `mip` button below the "Invert" button, and you should see something like the figure below.
 
 ![IID inversion results](./iid.png)
+<br>
 *Figure: IID inversion results.*
 
 The top plot shows the evoked responses for the three conditions from the peak vertex (at +39 -90 -4) at 170 ms, with the red line being the currently selected condition, here "1" for Famous faces (press the "condition" button to toggle through the other conditions). 
@@ -83,6 +84,7 @@ This is done by specifying a binary image (i.e., thresholded statistical map) th
 You can generate a suitable image by presenting your statistical results using the `Results` button in the SPM Menu window, selecting the relevant `SPM.mat` file from your fMRI analysis, and then thresholding the resulting statistical map in a way that will selectively show the relevant areas (in this case primary visual and fusiform cortex). You can then save this thresholded image as a binary NIfTI file by selecting `save -- all clusters (binary)` in the interactive window as shown below.
 
 ![Saving a thresholded image](./priors_saving.png)
+<br>
 *Figure: Saving a thresholded image.*
 
 The resulting image can then be entered in the `Priors file` field of the `Source Inversion` module in the batch editor.
