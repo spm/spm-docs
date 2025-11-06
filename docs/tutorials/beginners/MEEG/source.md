@@ -91,14 +91,15 @@ The resulting image can then be entered in the `Priors file` field of the `Sourc
 
 <br>
 
-> # Assessment question
+> ## Assessment question
 >
-> ## Exploring Inverse Solution Priors in Source Reconstruction
+> ### Exploring Inverse Solution Priors in Source Reconstruction
 >
 > The M/EEG inverse problem is ill-posed and depends on prior assumptions. Load the evoked response of your subject into the 3D Source Reconstruction interface or use an SPM batch. Compare the following inverse priors:
-> - MSP (GS)
-> - COH
-> - IID
+><br>
+> - MSP (GS) <br>
+> - COH <br>
+> - IID <br>
 >
->If fMRI results are available, generate a thresholded activation image and incorporate it as a spatial prior using the fMRI priors option. Evaluate the influence of fMRI constraints on each  solution type. Additionally, explore how varying the time window across the peristimulus interval affects source localisation. Present the reconstructed source images and comment on spatial distribution, peak locations, and temporal dynamics across conditions.
+> If fMRI results are available, generate a thresholded activation image and incorporate it as a spatial prior using the fMRI priors option. Evaluate the influence of fMRI constraints on each solution type. Additionally, explore how varying the time window across the peristimulus interval affects source localisation. Present the reconstructed source images and comment on spatial distribution, peak locations, and temporal dynamics across conditions.
 
