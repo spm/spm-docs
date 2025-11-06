@@ -1,13 +1,13 @@
 # Testing
 Testing is the process by which we check if our code is valid and robust. It allows developers to make changes to SPM and then run the automated tests to check that their code does not break other aspects of SPM. We test on Windows, MAC and Linux, using Matlab releases as far back as 2020. The configuration file for the automatic testing workflow is available [in the Github repo](https://github.com/spm/spm/blob/main/.github/workflows/matlab.yml). It is not necessary to understand this file to contribute tests to SPM or run them locally on your machine. The outcomes are available from the [GitHub Actions tab](https://github.com/spm/spm/actions).
 
-Their are two types of tests used in SPM. These are unit tests and regression tests. Unit tests are ideally short code segments that test the validity of a function. In short, does the code do what it is supposed to do? Regression tests determine if the changes in the code cause a change in the results. They do not necessarily test validity, only code stability. 
+There are two types of tests used in SPM. These are unit tests and regression tests. Unit tests are ideally short code segments that test the validity of a function. In short, does the code do what it is supposed to do? Regression tests determine if the changes in the code cause a change in the results. They do not necessarily test validity, only code stability. 
 
 
 ## Running tests locally
 The testing framework runs unit tests every day and regression tests once a week automatically on GitHub. However, you can also run the code locally on your machine before contributing code. Some of the tests require input data that can be downloaded from [here](https://www.fil.ion.ucl.ac.uk/spm/download/data/tests/tests_data.zip). This archive has to be unpacked into a directory within your local copy of SPM called `spm/tests/data` before running the tests.
 
-Once the data is downloaded the all the unit tests can be run with the following code snippet.
+Once the data is downloaded all the unit tests can be run with the following code snippet.
 
 ```matlab
 spm_tests('class','unit')
@@ -32,21 +32,30 @@ spm_tests('class','regression','test','test_regress_spm_opm')
 
 
 ## Contributing Tests 
-SPM testing is performed using the [MATLAB Unit Testing Framework](https://www.mathworks.com/help/matlab/matlab-unit-test-framework.html).
+SPM testing is performed using the [MATLAB Unit Testing Framework](https://www.mathworks.com/help/matlab/matlab-unit-test-framework.html) with [Class-Based Tests](https://de.mathworks.com/help/matlab/matlab_prog/class-based-unit-tests.html). Class-based tests contain a small amount of boilerplate code, but have additional advantages like running them for the compiled SPM standalone.
 
 SPM tests are stored in the [`spm/tests`](https://github.com/spm/spm/tree/main/tests) directory. Please place any tests you write here. We'll now look at an example of a unit test to test the validity of the `spm_eeg_filter` function. The first thing to do is is write a small amount of code that will run all the tests in a given `.m` file.
 
 ```matlab
-function tests = test_spm_eeg_filter
+
+classdef test_spm_eeg_filter < matlab.unittest.TestCase
 % Unit Tests for spm_eeg_filter
 %__________________________________________________________________________
 
 % Copyright (C) 2024 Wellcome Centre for Human Neuroimaging
 
+methods (Test)
+    function test_spm_eeg_filter_1(testCase)
+        <testing-code>
+    end
+    function test_spm_eeg_filter_2(testCase)
+        <testing-code>
+    end
+end
 
-tests = functiontests(localfunctions);
+end
 ```
-After this section is written we can now write multiple functions in the same file to test different aspects of the code. The first thing to note is that the test function, shown below, has the same name as the top function but is suffixed with an underscore and a number(e.g. `_1`). For multiple tests of the same function just simply change the number of the suffix. In the example below we just have 1. 
+There can be multiple functions in the same file to test different aspects of the code. 
 
 If you have placed the test data in the appropriate folder you'll be able to access it with the code below. The data in this case is an empty M/EEE dataset of 1 second duration and 110 channels. 
 
@@ -81,8 +90,36 @@ dB = 20*log10(mean(Y./res));
 
 testCase.verifyTrue(dB>100);
 
+end
 ```
 In the example above we set the channels to 'MEG' channels and then insert a 40Hz sinusoid. We then apply a low pass filter and verify that the magnitude of the signal is reduced by at least 100dB at 40Hz. Once you establish your criteria for assessing the validity of the function you can end the function with `testCase.verifyTrue(condition)`.
+
+### Setup and Teardown
+
+Setup and teardown methods allow you to execute code before and after your tests run. MATLAB's Unit Testing Framework provides two main types:
+
+- **TestClassSetup/TestClassTeardown**: Run once before/after all tests in the class
+- **TestMethodSetup/TestMethodTeardown**: Run before/after each individual test method
+
+Use `TestClassSetup` for initialization that can be shared across all tests, such as configuring SPM defaults (e.g. test_regress_fmri_group.m):
+
+```matlab
+methods (TestClassSetup)
+    function setupSPM(testCase)
+        spm('defaults','fmri');
+        spm_jobman('initcfg');
+        spm_get_defaults('cmdline',true);
+    end
+end
+```
+
+### Disabled Tests
+
+All tests inside a `methods` block can be disabled by giving the `Disabled` tag (e.g. test_checkcode.m):
+
+```matlab
+methods (Test, TestTags = {'Disabled'})
+```
 
 ## Contributing Regression Tests 
 Regression tests can be contributed in the exact same way as unit tests but we prefix the test with `test_regress`. See the `test_regress_spm_opm` as an example.
