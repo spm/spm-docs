@@ -18,8 +18,7 @@ Make sure you report the following:
 1. The threshold you used for whole-brain FWE correction and how many distinct blobs you found.
 2. The uncorrected threshold you used and how many clusters/peaks you found at that threshold.
 3. For how many of these peaks/clusters you found relevant literature references.
-4. What threshold you used for small volume correction and how many significant peaks you found in your pre-registered areas.
-
+4. What method and threshold you used for small volume correction and how many significant peaks you found in your pre-registered areas.
 
 > **Tip:** Remember that the association with the score could be either positive or negative - check both directions. (F test or two separate t tests could be used).
 

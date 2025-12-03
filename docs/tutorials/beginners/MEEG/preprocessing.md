@@ -6,6 +6,28 @@ We will start by performing the different preprocessing steps one by one, then w
 preprocessing the M/EEG data for a single subject, and then scripting
 these pipelines to repeat over multiple subjects.
 
+### Getting the data
+
+If you are working with Desktop@UCL Anywhere, the data can be found in the
+`S:\FBS_CLNE0068\Data\Faces` folder. Find the subject you were previously working with for the fMRI part of the course, and copy their `anat` and `meg` subfolders to your working folder. If you are working on your own computer, you can download a zip file with your subject's data from the `MEEG` sharepoint folder. A link is available in the `Data analysis resources` section of the course Moodle page. Make sure you have a good connection as the zip file can be quite large.
+
+### Running SPM
+
+You should already be familiar with SPM from the previous term and SPM should be set up in your Matlab environment. This term, we will be using the M/EEG functionality of SPM and you should access it by running
+
+```matlab
+    spm eeg
+```
+from the command window.
+
+If you write any scripts, it's good practice to start them with the line
+
+```matlab
+    spm('defaults', 'eeg');
+```
+
+to make sure that all the relevant functions are loaded.
+
 ### Convert
 The first step is to convert raw M/EEG data from its native format
 (which depends on the acquisition system) to the format used by SPM. In
@@ -289,6 +311,16 @@ pipeline from the "History" section of the "Info" tab, and can view
 single trials by selecting one of the EEG, MEG (magnetometer) tabs
 (see other chapters for how to use the buttons in the
 M/EEG Review window).
+
+> **Tip:** A simple way to run any batch pipeline in your script is to save it as an `.m` file and add the line
+>
+>```matlab
+>    spm_jobman('run', matlabbatch);
+>```
+>
+>at the end. If you now run this script, it will execute the batch pipeline defined in the `matlabbatch` variable. You can change some of the lines if necessary (such as the path to the input file) before running the script or put a loop around the lines where you change some of the inputs and rerun the batch.
+
+
 
 ### Merging (concatenating runs)
 
