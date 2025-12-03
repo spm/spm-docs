@@ -26,6 +26,8 @@ We will compare two approaches to inverting the above forward model (both within
 
 Highlight "what conditions to include" and select "All". Next highlight inversion parameters, choose "custom" and set the inversion type to "MSP (GS)". This is one of several fitting algorithms for optimising the MSP approach: Greedy Search (GS). Then enter the time window of interest as `[-100 800]` and set the frequency window of interest to `[0 256]`. Select "yes" for the "PST Hanning window". Keep all remaining parameters at their defaults, including the Modalities as "All" (which will simultaneously invert, or "fuse", the data from MEG and EEG).
 
+> ***Tip** You can also try inverting MEG and EEG separately by selecting only one modality at a time and compare the results of the MEG, EEG and MEG+EEG.*
+
 The second type of inversion we will examine corresponds to a L2-minimum norm (MNM), i.e., fitting the data while minimising the total energy of the sources. In SPM, this is called "IID" because it corresponds to assuming that the prior probability of each source being active is independent and identically distributed (i.e., an identity matrix for the prior covariance). Go back to the batch editor, add another "M/EEG → Source reconstruction → Source Inversion" module, and select the input files as before as the output of the previous inversion module but set the inversion index to `2`, so that the new inversion can be added to the MSP solution. Set the inversion parameters to "custom", but the inversion type to be "IID". The remaining parameters should be made to match the MSP (GS) inversion above.
 
 > **Tip** You can slightly speed things up by right-clicking on the `Source Inversion` module in the module list on the left, selecting `Replicate module`, and then just changing the inversion type and index.
@@ -74,7 +76,6 @@ If you press "display" under the "Window" button, you can see a MIP for the time
 
 If you press the `previous` button, you can select the previous inversion (1), which here corresponds to the MSP inversion. Press the `mip` button again, and you should see results that are sparser and deeper inside the brain, in medial and anterior temporal cortex. This solution actually has a higher model evidence (even though it explains a smaller percentage of the data variance) because it corresponds to a less complex model. We will compare these two inverse solutions in a different way when we do group statistics later.
 
-
 ## fMRI priors for source reconstruction
 
 We can also use fMRI results as spatial priors for source reconstruction. The idea is that you make the sources that are likely to be active based on the fMRI results 'easier' to include in the solution.
@@ -96,7 +97,7 @@ The resulting image can then be entered in the `Priors file` field of the `Sourc
 > ### Exploring Inverse Solution Priors in Source Reconstruction
 >
 > The M/EEG inverse problem is ill-posed and depends on prior assumptions. Load the evoked response of your subject into the 3D Source Reconstruction interface or use an SPM batch. Compare the following inverse priors:
-><br>
+><br><br>
 > - MSP (GS) <br>
 > - COH <br>
 > - IID <br>

@@ -207,7 +207,7 @@ deleted. Save the resulting batch once again.
 
 Once you have created a linear pipeline, you might want to repeat it on
 multiple sessions (runs) within a subject, or even across multiple
-subjects. In the present case, there were 6 independent MEG runs
+subjects. In the present case, there were 2 independent MEG runs
 (separated only by a short period to give the subjects a rest), which
 can all be processed identically. One option would be to save the batch
 file, manually alter the "File Name" that is initially loaded into the
@@ -252,7 +252,7 @@ spm_jobman('run', jobs, inputs{:});
 ```
 
 At the top of this script is listed the variable `nrun = X`: replace `X`
-with `6` for the six runs you wish to convert. You also need to complete
+with `2` for the two runs you wish to convert. You also need to complete
 the missing MATLAB code needed for each run: here, 1) the raw input file
 to convert, 2) the channel file containing the bad channels (which is actually the same for
 each run, but differs across subjects, which will matter later when we
@@ -262,14 +262,14 @@ because the files are named systematically by run, we can complete the
 relevant lines of the script with:
 
 ```matlab
-     inputs{1, crun} = cellstr(fullfile(rawpth,'SubXX','MEEG',sprintf('run_%02d_sss.fif',crun)));
-     inputs{2, crun} = cellstr(fullfile(rawpth,'SubXX','MEEG','bad_channels.mat'));
-     inputs{3, crun} = cellstr(fullfile(rawpth,'SubXX','MEEG','Trials',sprintf('run_%02d_trldef.mat',crun)));
+     inputs{1, crun} = cellstr(fullfile(rawpth,'sub-XX','MEEG',sprintf('run_%02d_sss.fif',crun)));
+     inputs{2, crun} = cellstr(fullfile(rawpth,'sub-XX','MEEG','bad_channels.mat'));
+     inputs{3, crun} = cellstr(fullfile(rawpth,'sub-XX','MEEG','Trials',sprintf('run_%02d_trldef.mat',crun)));
 ```
 
-> **Tip:** Replace `XX` with the subject number, e.g., use `Sub15` for subject 15 and replace "rawpth" with the path to the directory containing the subject's folder.
+> **Tip:** Replace `XX` with the subject number, e.g., use `sub-15` for subject 15 and replace "rawpth" with the path to the directory containing the subject's folder.
 
-where `rawpth` refers to your base directory, `Sub15` is the subject
+where `rawpth` refers to your base directory, `sub-15` is the subject
 directory that contains `MEG` and `Trials` sub-directories and `%02d` refers to
 the run number, expressed as two digits.
 
@@ -280,9 +280,9 @@ selections from the earlier GUI steps.
 
 This completes the first part of the preprocessing pipeline. You can
 then run this script by selecting the green play button on the upper
-toolbar of the script MATLAB Editor window. The results will be 6 files
+toolbar of the script MATLAB Editor window. The results will be 2 files
 labelled `befdspmeeg_run_%02d_sss.mat`, where `%02d` refers to the run
-number `1-6`. If you want to view any of these output files, press
+number `1-2`. If you want to view any of these output files, press
 "Display" on the main SPM menu pane, select "M/EEG", then select one of
 these files. You will be able to review the preprocessing steps as a
 pipeline from the "History" section of the "Info" tab, and can view
