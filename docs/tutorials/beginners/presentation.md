@@ -7,7 +7,9 @@ You should look at the effects associated with your assigned score values in 3 w
 
 1. **FWE whole brain-corrected results** - use the FWE option with the appropriate threshold. Report any significant peaks.
 2. **Uncorrected results** - use an uncorrected threshold of p < 0.05 ('none' option). Report any clusters/peaks that would be significant at this threshold. If you have too many clusters/peaks, you can use a more stringent uncorrected threshold (e.g. p < 0.01) to reduce the number of results reported. If you have too few you can use a more lenient threshold (e.g. p < 0.1). 
-3. **Small volume correction (SVC)** - look at the areas listed in your preregistration. You could use the atlas functionality you saw in one of the tutorials or the `small volume` button in SPM results GUI where you'll be able to enter the coordinates you pre-registered and look at a small sphere around them (e.g. 8 mm radius). Report any significant peaks.
+3. **Small volume correction (SVC)** - look at the areas listed in your preregistration. You could use the atlas functionality you saw in one of the tutorials or the `small volume` button in SPM results GUI (see the below figure) where you'll be able to enter the coordinates you pre-registered and look at a small sphere around them (e.g. 8 mm radius). Report any significant peaks.
+
+![Small volume correction](small_volume.png)
 
 Use web search or AI tools as you did for the preregistration to find relevant references for the peaks you found (if they are outside the pre-registered areas). Make sure to check and cite the original papers. You can use the [MNI ←→ Talairach Converter with Brodmann Areas](https://bioimagesuiteweb.github.io/webapp/mni2tal.html) to figure out the anatomical labels from the MNI coordinates of your peaks. If you don't find any relevant papers, this is not a problem - just report that.
 
