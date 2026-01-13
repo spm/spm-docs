@@ -31,10 +31,7 @@ to make sure that all the relevant functions are loaded.
 ### Convert
 The first step is to convert raw M/EEG data from its native format
 (which depends on the acquisition system) to the format used by SPM. In
-the present example, the raw data are continuous. They can be converted
-to continuous SPM data, but to save disk space and time, we can "cut
-out" time windows (epochs) around the trials during the conversion step,
-so that the resulting SPM file contains epoched data.
+the present example, the raw data are continuous. 
 
 In the batch editor, select SPM on the top toolbar, and from the
 dropdown menu select M/EEG. At the top of the new dropdown menu, select
@@ -68,6 +65,8 @@ batch could be run. However, for this example, we will continue to use
 the current batch editor window, so do not press the "play" button yet.
 
 Save the configured batch by selecting "File" from the top toolbar and then "Save Batch". You can save it either as a `.mat` file or as a `.m` script. Either would work but saving it as a `.m` script will allow you to easily review and modify the batch in Matlab editor. Choose a meaningful file name, such as `batch_preproc_meeg_convert`.
+
+You can now run the batch.
 
 ### Prepare
 
@@ -125,6 +124,8 @@ selection file). You can try it in your spare time.
 
 Save the configured batch by selecting "File" from the top toolbar and then "Save Batch". Choose a meaningful file name, such as `batch_preproc_meeg_prepare`. 
 
+You can now run the batch.
+
 ### Downsample
 
 The data were sampled at 1000Hz, but for the analyses below, we rarely
@@ -140,9 +141,11 @@ prepended with a `d`.
 
 Save the configured batch by selecting "File" from the top toolbar and then "Save Batch". Choose a meaningful file name, such as `batch_preproc_meeg_downsample`.
 
+You can now run the batch.
+
 ### High-pass filtering
 
-The next step is to high-pass filter the data to remove slow drifts in the signal. This is important because these drifts can obscure the neural signals of interest, especially in the EEG data. To do this, start a new batch and select "Filter" from the "SPM -- M/EEG -- Preprocessing" menu. In the Current Module window, select the input file as the output of the previous step (`dspmeeg_run_01_sss.mat`) and set the "Band" to "highpass". Set the frequency cut-off by clicking on the "Cutoff (s)" variable and entering a value. The recommended high-pass filter frequency is 0.5Hz, which is usually sufficient for most M/EEG analyses. However, you can also try a different value (e.g., `1` for 1Hz). Now run the batch step The output file will be prepended with an `f`. Save the configured batch by selecting "File" from the top toolbar and then "Save Batch". Choose a meaningful file name, such as `batch_preproc_meeg_filter`. 
+The next step is to high-pass filter the data to remove slow drifts in the signal. This is important because these drifts can obscure the neural signals of interest, especially in the EEG data. To do this, start a new batch and select "Filter" from the "SPM -- M/EEG -- Preprocessing" menu. In the Current Module window, select the input file as the output of the previous step (`dspmeeg_run_01_sss.mat`) and set the "Band" to "highpass". Set the frequency cut-off by clicking on the "Cutoff (s)" variable and entering a value. The recommended high-pass filter frequency is 0.5Hz, which is usually sufficient for most M/EEG analyses. However, you can also try a different value (e.g., `1` for 1Hz). Now run the batch step The output file will be prepended with an `f`. Save the configured batch by selecting "File" from the top toolbar and then "Save Batch". Choose a meaningful file name, such as `batch_preproc_meeg_filter` and run the batch
 
 Note that the order of the preprocessing steps can vary. Sometimes changing the order does not make much difference, in other cases it could have a significant impact on the results. It is usually advisable to high-pass filter the data early in the pipeline to get rid of possible large offsets in the data (called DC offsets). If this is not done then subsequent low-pass filtering steps may generate so called "ringing artefacts" at the edges of the data (that look like a series of high amplitude deflections). In this case, we are not very worried about this because there are stretches of unused data at the beginning and end of each block which will be removed soon at the epoching step. Downsampling early accelerates all the subsequent steps due to the reduced data size so here we chose to put the filtering step after it.
 
@@ -195,7 +198,7 @@ Now you can return to the Batch tool and select "Epoching" from the "SPM -- M/EE
 
 Baseline correction is a common preprocessing step in M/EEG data analysis. It involves subtracting the mean of the data in a specified time window (the baseline) usually before the event of interest (e.g., stimulus onset) from the data in the entire trial. This helps to remove any baseline shifts or drifts in the data that could affect the analysis. Epoching the data in the previous step has already resulted in baseline correction using the [-500 0]ms as the baseline period. This is not ideal as the baseline with the safety margin is too long. created a baseline period, which is the time before the stimulus onset. So we will redefine the baseline to be from -100ms to 0ms
 relative to the stimulus onset. Select "Baseline Correct" from under the
-"SPM -- M/EEG -- Preprocessing" menu. Select the output file of the previous step (`efdspmeeg_run_01_sss.mat`) as the input file. In the Current Module window, you will see a variable called "Baseline". This is where you can specify the baseline period. Click on "Baseline" and then click on "Specify". A dialog box will appear where you can enter the baseline period as a 1-by-2 array. Enter `[-100 0]` (units are milliseconds). The output file will be prepended with a `b`. Save the configured batch by selecting "File" from the top toolbar and then "Save Batch". Choose a meaningful file name, such as `batch_preproc_meeg_baseline`.
+"SPM -- M/EEG -- Preprocessing" menu. Select the output file of the previous step (`efdspmeeg_run_01_sss.mat`) as the input file. In the Current Module window, you will see a variable called "Baseline". This is where you can specify the baseline period. Click on "Baseline" and then click on "Specify". A dialog box will appear where you can enter the baseline period as a 1-by-2 array. Enter `[-100 0]` (units are milliseconds). The output file will be prepended with a `b`. Save the configured batch by selecting "File" from the top toolbar and then "Save Batch". Choose a meaningful file name, such as `batch_preproc_meeg_baseline`. You can now run the batch and review the output.
 
 ### Building a pipeline
 
