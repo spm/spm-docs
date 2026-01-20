@@ -13,7 +13,7 @@
 
     1. Download the spm ZIP file (not standalone) from the newest [GitHub release](https://github.com/spm/spm/releases/latest/).
 
-    2. Unzip `spm_<version>.zip` in a folder of your choice, such as `C:\Users\login\Documents\MATLAB\spm`.
+    2. Unzip `spm_<version>.zip` in a folder of your choice, such as `C:\Users\<login>\Documents\MATLAB\spm`.
 
     3. Start MATLAB and add SPM to your path, either using:
 
@@ -30,7 +30,7 @@
 
     <span id="mac"></span>
 
-    1. Download the spm ZIP file (not standalone) from the newest [GitHub release](https://github.com/spm/spm/releases/latest/) in your home directory.
+    1. Download the spm ZIP file (not standalone) from the newest [GitHub release](https://github.com/spm/spm/releases/latest/).
 
     2. Uncompress the archive by typing the following in a terminal:
     
@@ -102,7 +102,7 @@
 
     <span id="linux"></span>
 
-    1. Download the spm ZIP file (not standalone) from the newest [GitHub release](https://github.com/spm/spm/releases/latest/) in your home directory.
+    1. Download the spm ZIP file (not standalone) from the newest [GitHub release](https://github.com/spm/spm/releases/latest/).
 
     2. Uncompress the archive by typing the following in a terminal:
 
@@ -142,7 +142,7 @@
 
 If you are using MATLAB without its desktop, you can open the Set Path dialog box by typing `pathtool` at the MATLAB prompt.
 
-!!! danger
+!!! danger ""
     If using the graphical interface, make sure to use the `Add Folder...` button and not `Add with Subfolders...`. SPM will automatically add the appropriate subfolders to the MATLAB path at runtime.
 
 ![Matlab Setpath Window](../assets/figures/matlab_setpath.png)
