@@ -1,6 +1,6 @@
 # SPM help
 
-## :octicons-mail-24: SPM mailing list
+## :fontawesom-envelope: SPM mailing list
 
 If you have questions about SPM, please use the [SPM mailing list](https://www.jiscmail.ac.uk/cgi-bin/webadmin?A0=SPM). 
 
