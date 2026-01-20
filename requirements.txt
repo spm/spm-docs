@@ -1,6 +1,6 @@
+mkdocs-macros-plugin
 mkdocs-material
 mkdocs-video
 mkdocs-bibtex
 codespell
 pyspelling
-mkdocs-macros-plugin
