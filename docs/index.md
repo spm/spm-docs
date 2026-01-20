@@ -48,20 +48,26 @@ The SPM software package has been designed for the analysis of brain imaging dat
 
 </div>
 
-## History
+## Citing SPM
 
-The SPM suite and associated theory was originally developed by [Karl Friston](https://www.fil.ion.ucl.ac.uk/~karl/) for the routine statistical analysis of functional neuroimaging data from Positron Emission Tomography (PET), while at the Medical Research Council Cyclotron Unit. Now known as SPMclassic, this software was made available to the emerging functional imaging community in 1991, to promote collaboration and a common analysis scheme across laboratories.
+Please acknowledge using SPM by citing:
 
-SPM'94 was the first major revision of the SPM software. SPM'94 was written primarily by [Karl Friston](https://www.fil.ion.ucl.ac.uk/~karl/) during the summer of 1994, with invaluable conceptual and technical help from [John Ashburner](https://www.fil.ion.ucl.ac.uk/~john/), Jon Heather, Andrew Holmes and Jean-Baptiste Poline. SPM'95, [SPM'96](https://www.fil.ion.ucl.ac.uk/spm/software/spm96/), [SPM'99](https://www.fil.ion.ucl.ac.uk/spm/software/spm99/), [SPM2](https://www.fil.ion.ucl.ac.uk/spm/software/spm2/), [SPM5](https://www.fil.ion.ucl.ac.uk/spm/software/spm5/), [SPM8](https://www.fil.ion.ucl.ac.uk/spm/software/spm8/) and [SPM12](https://www.fil.ion.ucl.ac.uk/spm/software/spm12/) are based on SPM'94, and represent the ongoing theoretical advances and technical improvements.
+Tierney et al., (2025). SPM 25: open source neuroimaging analysis software. *Journal of Open Source Software, 10*(110), 8103, https://doi.org/10.21105/joss.08103
 
-!!! abstract "Further reading"
+```
+@article{Tierney2025, 
+    title = {SPM 25: open source neuroimaging analysis software}, 
+    author = {Tierney, Tim M. and Alexander, Nicholas A. and Ashburner, John and Avila, Nicole Labra and Balbastre, Yaël and Barnes, Gareth and Bezsudnova, Yulia and Brudfors, Mikael and Eckstein, Korbinian and Flandin, Guillaume and Friston, Karl and Jafarian, Amirhossein and Kowalczyk, Olivia S. and Litvak, Vladimir and Medrano, Johan and Mellor, Stephanie and O'Neill, George and Parr, Thomas and Razi, Adeel and Timms, Ryan and Zeidman, Peter}, 
+    journal = {Journal of Open Source Software} 
+    doi = {10.21105/joss.08103}, 
+    url = {https://doi.org/10.21105/joss.08103}, 
+    year = {2025}, 
+    publisher = {The Open Journal}, 
+    volume = {10}, 
+    number = {110}, 
+    pages = {8103}, 
+}
+```
 
-    [Ashburner, J. (2012). *SPM: A history*.](https://doi.org/10.1016/j.neuroimage.2011.10.025)
-
-    [Flandin, G. and Friston, K.J. *Statistical parametric mapping (SPM)*.](http://www.scholarpedia.org/article/Statistical_parametric_mapping_(SPM))
-
-    [Friston, K.J. *A short history of statistical parametric mapping in functional neuroimaging*.](./reading/spm_history.md)
-
-    [Penny, W., Friston, K., Ashburner, J., Kiebel, S., & Nichols, T. (2006). *Statistical parametric mapping: The analysis of functional brain images*.](https://www.fil.ion.ucl.ac.uk/spm/doc/#books)
 
 --8<-- "addons/abbreviations.md"
