@@ -16,19 +16,20 @@ The SPM software package has been designed for the analysis of brain imaging dat
 </figure>
 
 ## Getting started
-We recommended using [the latest release](https://github.com/spm/spm/releases/latest/).
+We recommended using [the latest release](https://github.com/spm/spm/releases/latest/) of SPM.
 
-For detailed installation instructions, please check the [installation page](./installation/index.md):
-[:fontawesome-brands-windows: Windows](./installation/index.md#windows)
-[:fontawesome-brands-apple: macOS](./installation/index.md#mac)
-[:fontawesome-brands-linux: Linux](./installation/index.md#linux) 
+For detailed installation instructions, please check the installation page:
+- [:fontawesome-brands-windows: Windows](./installation/index.md#windows)
+- [:fontawesome-brands-apple: macOS](./installation/index.md#mac)
+- [:fontawesome-brands-linux: Linux](./installation/index.md#linux) 
 
 
 ## Citing SPM
 
 Please acknowledge using SPM by citing:
 
-Tierney et al., (2025). SPM 25: open source neuroimaging analysis software. *Journal of Open Source Software, 10*(110), 8103, https://doi.org/10.21105/joss.08103
+!!! quote ""
+    Tierney et al., (2025). SPM 25: open source neuroimaging analysis software. *Journal of Open Source Software, 10*(110), 8103, https://doi.org/10.21105/joss.08103
 
 ```
 @article{Tierney2025, 
