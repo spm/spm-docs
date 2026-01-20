@@ -81,6 +81,7 @@ legend('Data','Estimated fit')
 
 A plot of the data and model fit might be clearer without the linear trend in signal intensity.
 We can adjust what is plotted by subtracting the estimated linear trend.
+This is similar to what SPM does when plotting adjusted data.
 ```matlab
 y_adj   = y - X(:,3)*beta(3);
 fit_adj = X(:,1:2)*beta(1:2);
@@ -153,8 +154,17 @@ p    = spm_Tcdf(-t,nu);     % P value
 
 Once the above function has been saved in a file, you can run it by typing the following in MATLAB:
 ```matlab
-[p,t] = T_stat(y,X,c)
+[p,t] = t_stat(y,X,c)
 ```
+
+Note that we could use a slightly different formulation of the design matrix (`X1`) and contrast vector (`c1`), and that these give the same t statistics and p values.
+```matlab
+X1 = [X(:,1)+X(:,2), X(:,2)-X(:,1), X(:,3)]
+c1 = [0 1 0]
+[p,t]   = t_stat(y,X,c)
+[p1,t1] = t_stat(y,X1,c1)
+```
+
 
 ### F Statistic
 F tests are a bit harder to explain than t tests.
@@ -188,7 +198,7 @@ X0 = X*null(c)
 
 An F test is done by comparing the amount of variance in ``y`` that cannot be explained by the full design matrix ``X``,
 against how much of it cannot be explained by the reduced matrix ``X0``.
-TO do this, we need to know the degrees of freedom, which for F tests have two values.
+To do this, we need to know the degrees of freedom, which for F tests have two values.
 The first is the degrees of freedom in the part of the design matrix of interest (1 in this example).
 The second is the same value as for the t test (7 in this example).
 ```matlab
@@ -202,6 +212,8 @@ v  = sum(r.^2)/nu(2)
 r0 = y - X0*(X0\y);
 v0 = (sum(r0.^2) - sum(r.^2))/nu(1)
 ```
+The first variance estimate (`v`) is computed from the residuals after fitting all columns of the design matrix to the vector of data.
+The second variance estimate (`v0`) is effectively computed from the residuals after fitting a restricted subset of columns (using the parts of the design matrix that are unrelated to the question).
 
 The ratio of these two variances gives the F statistic.
 ```matlab
@@ -263,6 +275,8 @@ Once the above function has been saved in a file, you can run it by typing the f
 [p,t] = F_stat(y,X,c)
 ```
 
-Notice that the resulting p value is twice as big as the p value for the `T_stat.m` function.
+Notice that the resulting p value is twice as big as the p value for the `t_stat.m` function.
 The reason for this is that when the F contrast is a vector, rather than a matrix, it does the equivalent of a two-taied t test.
+
+More generally though, F contrasts can be defined as matrices.
 
