@@ -16,15 +16,48 @@ The SPM software package has been designed for the analysis of brain imaging dat
 </figure>
 
 ## Getting started
-We recommended using [the latest release](https://github.com/spm/spm/releases/latest/) of SPM.
 
-For detailed installation instructions, please check the installation page:
+=== ":fontawesome-brands-windows: Windows"
 
-- [:fontawesome-brands-windows: Windows](./installation/index.md#windows)
+    1. Download [the latest SPM release](https://github.com/spm/spm/releases/latest/) and uncompress it.
 
-- [:fontawesome-brands-apple: macOS](./installation/index.md#mac)
+    2. Start MATLAB and add SPM to your path:
 
-- [:fontawesome-brands-linux: Linux](./installation/index.md#linux) 
+        ```matlab
+        addpath('C:\Users\<login>\Documents\MATLAB\spm')
+        savepath % if you want to save the current MATLAB path
+        ```
+
+    *For a detailed overview of the steps, please check our [installation page](./installation/index.md#windows)*
+
+=== ":fontawesome-brands-apple: macOS"
+
+    1. Download [the latest SPM release](https://github.com/spm/spm/releases/latest/) and uncompress it.
+
+    2. Start MATLAB and add SPM to your path:
+
+        ```matlab
+        addpath /Users/<login>/spm
+        savepath % if you want to save the current MATLAB path
+        ```
+
+    *For a detailed overview of the steps, please check our [installation page](./installation/index.md#mac)*
+
+=== ":fontawesome-brands-linux: Linux"
+
+    1. Download [the latest SPM release](https://github.com/spm/spm/releases/latest/) and uncompress it.
+
+    2. Start MATLAB and add SPM to your path:
+
+        ```matlab
+        addpath /home/<login>/spm
+        savepath % if you want to save the current MATLAB path
+        ```
+
+    *For a detailed overview of the steps, please check our [installation page](./installation/index.md#linux)*
+
+!!! info inline "" 
+    For other installation options, please consult our [installation instructions](./installation/index.md)
 
 
 ## Citing SPM
