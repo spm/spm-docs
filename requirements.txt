@@ -3,3 +3,4 @@ mkdocs-video
 mkdocs-bibtex
 codespell
 pyspelling
+mkdocs-macros-plugin

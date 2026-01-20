@@ -265,6 +265,7 @@ markdown_extensions:
       permalink: true
 
 plugins:
+  - macros
   - mkdocs-video:
       css_style:
         width: "100%"
