@@ -18,7 +18,7 @@ The SPM software package has been designed for the analysis of brain imaging dat
 ## Getting started
 
 !!! info inline end "Alternative installation options" 
-    For other installation options, please consult our [installation instructions](./installation/index.md)
+    For other installation options, including versions not requiring MATLAB, please consult our [installation instructions](./installation/index.md)
 
 === ":fontawesome-brands-windows: Windows"
 
@@ -63,7 +63,7 @@ The SPM software package has been designed for the analysis of brain imaging dat
 
 Please acknowledge using SPM by citing:
 
-Tierney et al., (2025). **SPM 25: open source neuroimaging analysis software**. Journal of Open Source Software, 10(110), 8103, https://doi.org/10.21105/joss.08103.
+> Tierney et al., (2025). **SPM 25: open source neuroimaging analysis software**. Journal of Open Source Software, 10(110), 8103, https://doi.org/10.21105/joss.08103.
 
 ```
 @article{Tierney2025, 
