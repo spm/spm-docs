@@ -229,6 +229,8 @@ nav:
     - 'Compilation':  'development/compilation/index.md'
     - 'Versioning':   'development/versioning.md'
     - 'Release':      'development/release.md'
+  - 'Help': 
+    - 'SPM discussion list': 'https://www.jiscmail.ac.uk/cgi-bin/webadmin?A0=SPM'
 
 markdown_extensions:
   - abbr
