@@ -9,6 +9,8 @@
 
 === ":fontawesome-brands-windows: Windows"
 
+    ### {#windows}
+
     1. Download the spm ZIP file (not standalone) from the newest [GitHub release](https://github.com/spm/spm/releases/latest/).
 
     2. Unzip `spm_<version>.zip` in a folder of your choice, such as `C:\Users\login\Documents\MATLAB\spm`.
@@ -25,6 +27,8 @@
         ```
 
 === ":fontawesome-brands-apple: macOS"
+
+    {#mac}
 
     1. Download the spm ZIP file (not standalone) from the newest [GitHub release](https://github.com/spm/spm/releases/latest/) in your home directory.
 
@@ -95,6 +99,8 @@
         ```
 
 === ":fontawesome-brands-linux: Linux"
+
+    {#linux}
 
     1. Download the spm ZIP file (not standalone) from the newest [GitHub release](https://github.com/spm/spm/releases/latest/) in your home directory.
 

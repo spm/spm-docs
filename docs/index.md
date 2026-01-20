@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Statistical Parametric Mapping
 
 ## Overview
@@ -11,42 +16,13 @@ The SPM software package has been designed for the analysis of brain imaging dat
 </figure>
 
 ## Getting started
+We recommended using [the latest release](https://github.com/spm/spm/releases/latest/).
 
-<div class="grid cards" markdown>
+For detailed installation instructions, please check the [installation page](./installation/index.md):
+[:fontawesome-brands-windows: Windows](./installation/index.md#windows)
+[:fontawesome-brands-apple: macOS](./installation/index.md#mac)
+[:fontawesome-brands-linux: Linux](./installation/index.md#linux) 
 
--   :material-lock-open:{ .lg .middle } __Software__
-
-    ---
-
-    SPM is free and open source academic software.
-
-    [:octicons-arrow-right-24: **Installation** ](installation/index.md)
-
--   :material-monitor:{ .lg .middle } __Educational materials__
-
-    ---
-
-    We provide a curated list of tutorials for different imaging analyses.
-
-    [:octicons-arrow-right-24: **Tutorials**](tutorials/index.md)
-
--   :fontawesome-solid-graduation-cap:{ .lg .middle } __Courses__
-
-    ---
-
-    Regular SPM courses run every autumn and spring, both online and in-person in London.
-
-    [:octicons-arrow-right-24: **Courses information**](courses/index.md)
-
--   :material-account-question:{ .lg .middle } __Support__
-
-    ---
-
-    The SPM discussion list provides live support to your queries.
-
-    [:octicons-arrow-right-24: **SPM discussion list**](https://www.fil.ion.ucl.ac.uk/spm/support/)
-
-</div>
 
 ## Citing SPM
 
