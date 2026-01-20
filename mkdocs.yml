@@ -11,7 +11,7 @@ repo_name: spm/spm
 edit_uri: https://github.com/spm/spm-docs/blob/main/docs/
 
 # Copyright
-copyright: Copyright &copy; 1991 - 2024 SPM Team and Collaborators
+copyright: Copyright &copy; 1991 - {{ now().strftime('%Y') }} SPM Team and Collaborators
 
 # Configuration
 theme:
