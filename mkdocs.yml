@@ -11,7 +11,7 @@ repo_name: spm/spm
 edit_uri: https://github.com/spm/spm-docs/blob/main/docs/
 
 # Copyright
-copyright: Copyright &copy; 1991 - {{ now().strftime('%Y') }} SPM Team and Collaborators
+copyright: Copyright &copy; 1991 - <span id="current-year"></span> SPM Team and Collaborators
 
 # Configuration
 theme:
@@ -290,5 +290,6 @@ extra_css:
 
 extra_javascript:
   - assets/javascripts/mathjax.js
+  - assets/javascripts/current_year.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
