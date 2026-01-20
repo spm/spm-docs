@@ -1,4 +1,4 @@
-# MEG/EEG analyis overview
+# MEG/EEG analysis overview
 
 ## Overview
 

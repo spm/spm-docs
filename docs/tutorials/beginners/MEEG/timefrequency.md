@@ -19,7 +19,7 @@ For this section, we will look at MEG data and focus on a single channel where w
 
 *Figure: Topography of MEG evoked response difference between Faces and Scrambled*
 
-One can see some clear differences at the back of the head corresponding to the bottom of the figure, especially on the left. To look at it in greater detail, press the topograpy button (the coloured button at te top) and scroll to around 170ms with the scrollbar at the bottom of the topography window. Also to inform our channel selection, press the `channel names` button and maximise the figure size to see the channel names more clearly. You should see something similar to the next figure.
+One can see some clear differences at the back of the head corresponding to the bottom of the figure, especially on the left. To look at it in greater detail, press the topograpy button (the coloured button at the top) and scroll to around 170ms with the scrollbar at the bottom of the topography window. Also to inform our channel selection, press the `channel names` button and maximise the figure size to see the channel names more clearly. You should see something similar to the next figure.
 
 ![MEG evoked response difference between Faces and Scrambled.](./megtopofaces.png)
 

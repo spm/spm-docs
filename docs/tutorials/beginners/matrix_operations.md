@@ -42,7 +42,7 @@ X = [1 2; 2 4];
 disp(S)
 ```
 
-To avoid this, computing a pseudoinverse is done by setting the result to zero for any values on the diagonal below some predefined tolerence:
+To avoid this, computing a pseudoinverse is done by setting the result to zero for any values on the diagonal below some predefined tolerance:
 ```
 tol = 1e-9;
 s = diag(S);
@@ -52,7 +52,7 @@ Sp = diag(sp);
 P = V*Sp*U'
 ```
 
-The rank of a matrix is computed from how many of these diagonal elements of ``S`` are above the tolerence.
+The rank of a matrix is computed from how many of these diagonal elements of ``S`` are above the tolerance.
 
 ### Principal Component Analysis
 Principal component analysis (PCA) is a linear dimensionality reduction technique that can be useful for summarising what is in fMRI data.
@@ -164,7 +164,7 @@ $$
 
 Here, $\mathbf{L}$ would be some form of weighting matrix, which is symmetric and positive semidefinite.
 A symmetric matrix means that ``L(i,j) == L(j,i)`` for all elements of the matrix.
-Positive semidefinite means that for any column vector ``r`` that has the same length as the dimention of the matrix, the value of ``r'*L*r >= 0``.
+Positive semidefinite means that for any column vector ``r`` that has the same length as the dimension of the matrix, the value of ``r'*L*r >= 0``.
 
 For a simple weighted least squares fit, ``L`` would be a diagonal matrix, with positive values (or zero) along the diagonal.
 As you will discover for fMRI, sometimes the weighting matrix needs to also include non-zero values on the off-diagonal elements.

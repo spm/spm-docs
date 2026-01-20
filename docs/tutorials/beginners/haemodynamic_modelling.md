@@ -116,7 +116,7 @@ In SPM, the form of the covariance matrix is estimated from the data itself usin
 You don't need to know the details of how this works, but it's useful to be aware of it.
 
 There are four different tasks/stimuli modelled by the design matrix.
-When computing t statistics, we define how we would like to interpet the data in terms of a contrast vector.
+When computing t statistics, we define how we would like to interpret the data in terms of a contrast vector.
 The design matrix has nine columns, so the contrast vector should have nine elements.
 In the SPM software, you could enter a smaller number of elements and it would pad the contrast vector with zeros to make it the right length.
 For this example, we'll use a contrast vector of:

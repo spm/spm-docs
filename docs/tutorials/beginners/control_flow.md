@@ -37,7 +37,7 @@ end
 
 ## For
 ``for`` statements are used when we want to repeat some operations. Again, they are terminated with an ``end`` statement, and the convention is to use indenting.
-Ths is a simple example:
+This is a simple example:
 ```matlab
 count = 0;
 for i=1:10
@@ -103,7 +103,7 @@ disp(number)
 ```
 
 ## Using Functions
-Series of instructions are often bundeled together into functions. In MATLAB, these have input arguments and output arguments.
+Series of instructions are often bundled together into functions. In MATLAB, these have input arguments and output arguments.
 Many functions only return a single output argument. For example, ``sin`` is a built-in function that returns a single output.
 In the following example, ``x`` is the input argument, and ``y`` is the output argument.
 ```matlab
@@ -178,7 +178,7 @@ You can see this search path by typing:
 ```matlab
 path
 ```
-The path can also be viewed and edited via a widgit at the top of the MATLAB window.
+The path can also be viewed and edited via a widget at the top of the MATLAB window.
 Clicking ``HOME`` and then the ``Set Path`` widget brings up a user interface for seeing and changing this search path (or at least it does on my computer).
 
 If you save the following test as a file called ``quadsol.m``, then it will give you the solutions to a quadratic of the form ``a*x^2 + b*x + c == 0``, which you may remember from school:

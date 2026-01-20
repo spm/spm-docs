@@ -93,7 +93,7 @@ With data from only 16 participants and three columns in theh design matrix, the
 It may therefore not be very sensitive to age-related effects.
 
 ### Any age or sex effect
-Now we are intersted in any variance explained by the second and third columns of the design matrix.
+Now we are interested in any variance explained by the second and third columns of the design matrix.
 This can be done using the following F contrast:
 ```
 0 1 0

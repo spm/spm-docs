@@ -178,7 +178,7 @@ plot3([-c(1) c(1)],[-c(2) c(2)],[-c(3) c(3)],'k', [-d(1) d(1)],[-d(2) d(2)],[-d(
 axis image
 rotate3d on
 ```
-If you manually rotate the plot by dragging the curser around on it, then you should see that there is a right angle between all vectors. 
+If you manually rotate the plot by dragging the cursor around on it, then you should see that there is a right angle between all vectors. 
 We can say that ``d`` and ``e`` form the null space of ``c``.
 In MATLAB, we can obtain the null space for ``c`` by ``Cn = null(c)``.
 This can be used to remove information related to the contrast of interest from the design matrix by:

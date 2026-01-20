@@ -72,7 +72,7 @@ the result into.
         - Leave `Multiple conditions` alone. This is a short-cut for those who can set up MATAB data structures.
         - Leave `Regressors` alone. This allows additional confounding effects to be included in the model. A potentia use case might be to ignore a corrupted time point by including a vector of all zeros - apart from a `1` corresponding to the time point to ignore.
         - Double-click `Multiple regressors` and specify the text file containing the estimated motion parameters for the first fMRI run (`func/rp_sub-XX_ses-mri_task-facerecognition_run-01_bold.txt`). This is to remove variance that has a simple linear relationship with head motion.
-        - `High-pass filter` can be left at the default setting of `128` seconds. This specifies how many cosine basis functions should be included to model out slow drifts over time. Although included in the multiple regression, these basis functions are not dispayed by SPM.
+        - `High-pass filter` can be left at the default setting of `128` seconds. This specifies how many cosine basis functions should be included to model out slow drifts over time. Although included in the multiple regression, these basis functions are not displayed by SPM.
     - Now you need to specify a similar set of information for the second fMRI run. This should be straightforward, but if there were nine runs, you would begin to see why scripting could be useful.
 - Ignore `Factorial design`.
 - Click on `Basis Functions` and choose

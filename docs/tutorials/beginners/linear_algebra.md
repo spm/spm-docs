@@ -214,7 +214,7 @@ r = rank(X)
 In this example, it should be clear that any column of the matrix can be constructed from a linear combination of the other columns.
 
 An inverse $\mathbf{P}$ of a matrix $\mathbf{X}$ is defined when $\mathbf{P} \mathbf{X} = \mathbf{X} \mathbf{P} = \mathbf{I}$, where $\mathbf{I}$ is an identity matrix (i.e., all zeros, but with 1 along its diagonal).
-The "pseudoinverse" (``pinv``) of a marix has a more general definition, whereby $\mathbf{X} \mathbf{P} \mathbf{X} = \mathbf{X}$.
+The "pseudoinverse" (``pinv``) of a matrix has a more general definition, whereby $\mathbf{X} \mathbf{P} \mathbf{X} = \mathbf{X}$.
 We can try these two definitions in MATLAB by:
 ```matlab
 pinv(X)*X - eye(size(X,2))

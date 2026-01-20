@@ -164,7 +164,7 @@ field pattern should emerge.
 > ### Tips:
 >
 > 1. To make the pipeline run faster, you can only process the selected single channel. To do that, use the `Channel selection` settings in the `Conversion` module. First, delete the default `All` option, then select `Custom channel` enter the name of the channel you want to process (e.g., `EEG052`).
-> 2. To facilitate comparison, consider overlaying the evoked responses from different filtering conditions on a single plot. This will help visualize how each filter affects the waveform. You can do this by first changing the prefix in the `Filter` tool to indicate the filter frequency for each block and then using the `Merge` tool to merge all the averaged datsets for different filtering settings together. If you set `New label for the merged file` to `#file#`. the condition label in the merged file will be set to the original file name which will help you identify the different filtering conditions.
+> 2. To facilitate comparison, consider overlaying the evoked responses from different filtering conditions on a single plot. This will help visualize how each filter affects the waveform. You can do this by first changing the prefix in the `Filter` tool to indicate the filter frequency for each block and then using the `Merge` tool to merge all the averaged datasets for different filtering settings together. If you set `New label for the merged file` to `#file#`. the condition label in the merged file will be set to the original file name which will help you identify the different filtering conditions.
 > 3. You can use the reviewing tool to plot the different waveforms together as described above for eyeblink artefacts.
 
 
