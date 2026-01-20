@@ -7,7 +7,7 @@
 
 ## Installation
 
-=== "Windows"
+=== ":fontawesome-brands-windows: Windows"
 
     1. Download the spm ZIP file (not standalone) from the newest [GitHub release](https://github.com/spm/spm/releases/latest/).
 
@@ -24,7 +24,7 @@
         savepath % if you want to save the current MATLAB path
         ```
 
-=== "macOS"
+=== ":fontawesome-brands-apple: macOS"
 
     1. Download the spm ZIP file (not standalone) from the newest [GitHub release](https://github.com/spm/spm/releases/latest/) in your home directory.
 
@@ -94,7 +94,7 @@
         sudo find SPM_PATH -name "*.mexmaci64" -exec spctl --add {} \;
         ```
 
-=== "Linux"
+=== ":fontawesome-brands-linux: Linux"
 
     1. Download the spm ZIP file (not standalone) from the newest [GitHub release](https://github.com/spm/spm/releases/latest/) in your home directory.
 
