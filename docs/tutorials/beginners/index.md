@@ -16,7 +16,6 @@
     Understanding some linear algebra will be essential for understanding the statistical analyses you do with the SPM software.
 
     * [Basic Linear Algebra](linear_algebra.md). Concepts relevant to fitting linear combinations of basis functions to vectors of data.
-    * [More Linear Algebra](matrix_operations.md). Slightly more advanced linear algebra topics.
 
 * **SPM Statistics**
 

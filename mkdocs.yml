@@ -74,7 +74,6 @@ nav:
           - 'Control Flow':               'tutorials/beginners/control_flow.md'
         - 'Linear Algebra':
           - 'Basic Linear Algebra':       'tutorials/beginners/linear_algebra.md'
-          - 'More Linear Algebra':        'tutorials/beginners/matrix_operations.md'
         - 'SPM Statistics':
           - 'Introducing SPM':            'tutorials/beginners/installing_spm.md'
           - 'Statistical Tests':          'tutorials/beginners/linear_model.md'

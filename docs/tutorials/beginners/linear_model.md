@@ -5,7 +5,7 @@ Consider a simple linear model with two conditions and a linear effect that vari
 In the example below, we let the first column encode the baseline, the second columns encodes the task, and the third column is some linear effect of time.
 Any haemodynamic effect is ignored to keep things simple.
 Try copy/pasting the following into MATLAB.
-```
+```matab
 X = [[ones(2,1) zeros(2,1)
       zeros(2,1) ones(2,1)
       ones(2,1) zeros(2,1)
@@ -43,15 +43,15 @@ and a variance of 4.0.
 In MATLAB, i.i.d. Gaussian random values with a variance of 1 can be created using the ``randn()`` function.
 To give the values a variance of 4, we multiply the random numbers by the standard deviation (the square root of the variance).
 The following snippet can be copy/pasted into MATLAB to simulate some data according to our model.
-```
+```matlab
 beta_gt = [30; 35; 2];
-v_gt    = 4;
+v_gt    = 2.3;
 y       = X*beta_gt + randn(10,1)*sqrt(v_gt);
 ```
 
 ## Estimating Model Parameters
 We can estimate the ``beta`` values from the simulated data as we would for real data.
-```
+```matlab
 beta = X\y
 ```
 After fitting a model like this in SPM, a set of beta_0001.nii, beta_0002.nii and beta_0003.nii images are created that encode
@@ -60,7 +60,7 @@ the estimated ``beta`` values at each voxel.
 We can also estimate the variance of the data by computing it from the residuals.
 This needs the degrees of freedom, which are computed from the length of ``y`` minus the rank of the design matrix ``X``.
 This rank is the number of linearly independent columns (or rows), which in this case is 3.
-```
+```matlab
 nu = size(X,1) - rank(X); % Degrees of freedom
 r  = y - X*beta;          % Residuals
 v  = sum(r.^2)/nu
@@ -72,7 +72,7 @@ When a statistical analysis is run in SPM, a file entitled ResMS.nii is created,
 
 ## Plotting
 We can plot the (simulated) data, along with the model fit, by
-```
+```matlab
 plot((1:10)', y, 'k.',  (1:10)', X*beta, 'b-')
 xlabel('Time')
 ylabel('Signal')
@@ -81,7 +81,7 @@ legend('Data','Estimated fit')
 
 A plot of the data and model fit might be clearer without the linear trend in signal intensity.
 We can adjust what is plotted by subtracting the estimated linear trend.
-```
+```matlab
 y_adj   = y - X(:,3)*beta(3);
 fit_adj = X(:,1:2)*beta(1:2);
 plot((1:10)', y_adj, 'k.',  (1:10)', fit_adj, 'b-')
@@ -96,7 +96,7 @@ This can be computed from the estimated ``beta``, and is simply ``beta(2)-beta(1
 Another way to think about this is as ``-1*beta(1) + 1*beta(2) + 0*beta(3)``.
 The weights ``[-1 1 0]`` give us the linear combination of ``beta`` values that are relevant to our question.
 We call this a "contrast vector". If this is called ``c``, then the linear combination of ``beta`` values is given by
-```
+```matlab
 c   = [-1 1 0];
 con = c * beta
 ```
@@ -108,11 +108,11 @@ With one sided t tests, this would be the probability of obtaining a value of ``
 the one actually obtained.
 To do this, we need ``c * beta``, as well as the estimated standard deviation of ``c * beta`` (the standard error).
 If we divide one by the other, we obtain the t statistic.
-```
+```matlab
 t = (c * beta) / sqrt(v * c * inv(X'*X) * c')
 ```
 Without any correction for multiple comparisons, we can obtain the p value for this t statistic by
-```
+```matlab
 p = spm_Tcdf(-t,nu)
 % or
 p = 1-spm_Tcdf(t,nu)
@@ -151,6 +151,11 @@ t    = con./sqrt(v*tmp);    % T statistic (spmT_XXXX.nii)
 p    = spm_Tcdf(-t,nu);     % P value
 ```
 
+Once the above function has been saved in a file, you can run it by typing the following in MATLAB:
+```matlab
+[p,t] = T_stat(y,X,c)
+```
+
 ### F Statistic
 F tests are a bit harder to explain than t tests.
 One concept we need is the idea of a null space.
@@ -158,7 +163,7 @@ One concept we need is the idea of a null space.
 First though, we need to understand orthogonality.
 If two row vectors, say ``c`` and ``d``, are orthogonal, then ``c * d' == 0``.
 We can try this by copy/pasting the following into MATLAB:
-```
+```matlab
 d = [1 1 0];
 d = d/sqrt(d*d'); % Makes the length of d equal to 1 (Pythagorus)
 c*d'
@@ -168,7 +173,7 @@ c*e'
 ```
 We also note that in the above example, ``d * e' == 0``.
 Because the vectors contains three elements, they represent directions in 3D and can be visualised by:
-```
+```matlab
 plot3([-c(1) c(1)],[-c(2) c(2)],[-c(3) c(3)],'k', [-d(1) d(1)],[-d(2) d(2)],[-d(3) d(3)],'c', [-e(1) e(1)],[-e(2) e(2)],[-e(3) e(3)],'m')
 axis image
 rotate3d on
@@ -177,7 +182,7 @@ If you manually rotate the plot by dragging the curser around on it, then you sh
 We can say that ``d`` and ``e`` form the null space of ``c``.
 In MATLAB, we can obtain the null space for ``c`` by ``Cn = null(c)``.
 This can be used to remove information related to the contrast of interest from the design matrix by:
-```
+```matlab
 X0 = X*null(c)
 ```
 
@@ -186,12 +191,12 @@ against how much of it cannot be explained by the reduced matrix ``X0``.
 TO do this, we need to know the degrees of freedom, which for F tests have two values.
 The first is the degrees of freedom in the part of the design matrix of interest (1 in this example).
 The second is the same value as for the t test (7 in this example).
-```
+```matlab
 nu  = [rank(X)-rank(X0), size(X,1)-rank(X)]
 ```
 
 The residuals and degrees of freedom are used to give two variance estimates:
-```
+```matlab
 r  = y - X*(X\y);
 v  = sum(r.^2)/nu(2)
 r0 = y - X0*(X0\y);
@@ -199,12 +204,12 @@ v0 = (sum(r0.^2) - sum(r.^2))/nu(1)
 ```
 
 The ratio of these two variances gives the F statistic.
-```
+```matlab
 F = v0/v
 ```
 
 Similar to the t test, we can compute a p value from this F statistic by
-```
+```matlab
 p = 1 - spm_Fcdf(F, nu)
 ```
 
@@ -226,42 +231,38 @@ function [p, F] = F_stat(y, X, C)
 % Error checking
 assert(ndims(y)<=2 && ndims(X)<=2 && size(y,1)==size(X,1),...
        'Lengths of data and design matrix do not match.')
-assert(ndims(c)<=2 && size(c,2)==size(X,2),...
-       'Length of contrast vector does not match the number of design matrix columns.')
+assert(ndims(C)<=2 && size(C,2)==size(X,2),...
+       'Width of contrast vector/matrix does not match the number of design matrix columns.')
 assert(size(X,1)>rank(X),...
        'Over-determined design matrix.')
-
-nu2  = size(X,1)-rank(X);
-beta = (X'*X)\X'*y;
-r    = y - X*beta;
-v    = sum(r.^2)/nu2;
-
-Nc = null(c);
-X0 = X*Nc;
-nu = [rank(X)-rank(X0), nu2];
-beta0 = inv(Nc'*X'*X*Nc)*Nc'*X*y;
-
-r0 = y - X0*beta0;
-v0 = (sum(r0.^2) - sum(r.^2))/nu(1)
-
-%v0 = r0'*r0
-XX = X'*X;
-%v0 = y'*y - beta'*XX*Nc*inv(Nc'*XX*Nc)*Nc'*XX*beta
-%v0 = beta'*XX*beta - beta'*XX*Nc*inv(Nc'*XX*Nc)*Nc'*XX*beta
-
-v0 = (beta'*(XX - XX*Nc*inv(Nc'*XX*Nc)*Nc'*XX)*beta)/nu(1)
-
-F  = v0/v
 
 % Things computed via SPM's Estimate button
 nu2  = size(X,1) - rank(X); % Degrees of freedom (saved in SPM.mat)
 beta = (X'*X)\X'*y;         % Beta values (beta_XXXX.nii files)
 r    = y - X*beta;          % Residuals
-v    = sum(r.^2)/nu;        % Variance (ResMS.nii)
+v    = sum(r.^2)/nu2;       % Variance (ResMS.nii)
 
-% Things computed once the contrast vector is specified
-con  = c*beta;              % Contrast (con_XXXX.nii)
-tmp  = c*inv(X'*X)*c';
-t    = con./sqrt(v*tmp);    % T statistic (spmT_XXXX.nii)
-p    = spm_Tcdf(-t,nu);     % P value
+
+% Things computed once the contrast vector/matrix is specified
+Nc    = null(C);                 % "Null-space" of contrast
+X0    = X*Nc;                    % Part of design matrix unrelated to the contrast
+nu    = [rank(X)-rank(X0), nu2]; % Degrees of freedom
+
+% Instead of using the following, the variance is computed so that `y` is not involved.
+% b0 = inv(X0'*X0)*X0'*y;
+% r0 = y - X0*b0;
+% v0 = (sum(r0.^2) - sum(r.^2))/nu(1);
+v0   = (beta'*(X'*X - X'*X0*inv(X0'*X0)*X0'*X)*beta)/nu(1);
+
+F    = v0/v;                 % F statistic (ratio of two variance estimates)
+p    = 1 - spm_Fcdf(F,nu);   % P value
 ```
+
+Once the above function has been saved in a file, you can run it by typing the following in MATLAB:
+```matlab
+[p,t] = F_stat(y,X,c)
+```
+
+Notice that the resulting p value is twice as big as the p value for the `T_stat.m` function.
+The reason for this is that when the F contrast is a vector, rather than a matrix, it does the equivalent of a two-taied t test.
+
