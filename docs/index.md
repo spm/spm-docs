@@ -17,6 +17,9 @@ The SPM software package has been designed for the analysis of brain imaging dat
 
 ## Getting started
 
+!!! info inline end "Alternative installation options" 
+    For other installation options, please consult our [installation instructions](./installation/index.md)
+
 === ":fontawesome-brands-windows: Windows"
 
     1. Download [the latest SPM release](https://github.com/spm/spm/releases/latest/) and uncompress it.
@@ -55,10 +58,6 @@ The SPM software package has been designed for the analysis of brain imaging dat
         ```
 
     *For a detailed overview of the steps, please check our [installation page](./installation/index.md#linux)*
-
-!!! info inline "" 
-    For other installation options, please consult our [installation instructions](./installation/index.md)
-
 
 ## Citing SPM
 
