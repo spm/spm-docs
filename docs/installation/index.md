@@ -9,7 +9,7 @@
 
 === ":fontawesome-brands-windows: Windows"
 
-    ### {#windows}
+    ### Windows {#windows}
 
     1. Download the spm ZIP file (not standalone) from the newest [GitHub release](https://github.com/spm/spm/releases/latest/).
 
@@ -28,7 +28,7 @@
 
 === ":fontawesome-brands-apple: macOS"
 
-    {#mac}
+    ### macOS {#mac}
 
     1. Download the spm ZIP file (not standalone) from the newest [GitHub release](https://github.com/spm/spm/releases/latest/) in your home directory.
 
@@ -100,7 +100,7 @@
 
 === ":fontawesome-brands-linux: Linux"
 
-    {#linux}
+    ### Linux {#linux}
 
     1. Download the spm ZIP file (not standalone) from the newest [GitHub release](https://github.com/spm/spm/releases/latest/) in your home directory.
 
