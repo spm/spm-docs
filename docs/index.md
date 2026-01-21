@@ -1,14 +1,14 @@
 ---
 hide:
   - navigation
+  - footer
 ---
 
-# Statistical Parametric Mapping
+# Statistical Parametric Mapping (SPM)
 
 ## Overview
-Statistical Parametric Mapping is the construction and assessment of spatially extended statistical processes used to test hypotheses about functional imaging data. These ideas have been instantiated in a free and open source software that is called **SPM**.
-
-The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject. The current release is designed for the analysis of **fMRI**, **PET**, **SPECT**, **EEG** and **MEG**.
+Statistical Parametric Mapping (SPM) is an integrated set of methods for testing hypotheses
+about neuroimaging data. These methods are implemented in an open-source software package, SPM. The current release supports the analysis of **fMRI**, **PET**, **SPECT**, **EEG** and **MEG**.
 
 <figure markdown>
   ![spm logo](assets/images/spm_front.png)
@@ -17,7 +17,7 @@ The SPM software package has been designed for the analysis of brain imaging dat
 
 ## Getting started
 
-SPM is openly available and designed to work across all major operating systems. We recommend you use [the lastest version](https://github.com/spm/spm/releases/latest/). Older versions are available but no longer supported: [SPM12](https://github.com/spm/spm12), [SPM8](https://github.com/spm/spm8), [SPM5](https://github.com/spm/spm5), [SPM99](https://github.com/spm/spm99). 
+SPM is openly available and designed to work across all major operating systems. We recommend you use [the lastest version](https://github.com/spm/spm/releases/latest/). Older versions are available but no longer supported: [SPM12](https://github.com/spm/spm12) :octicons-dot-16: [SPM8](https://github.com/spm/spm8) :octicons-dot-16: [SPM5](https://github.com/spm/spm5) :octicons-dot-16: [SPM99](https://github.com/spm/spm99). 
 
 ### Installation
 
@@ -89,9 +89,11 @@ Tierney et al., (2025). **SPM 25: open source neuroimaging analysis software**. 
 ```
 
 ## License
+
 SPM is an open-source software available under GPL-2.0 license. For more details, see the [license](https://github.com/spm/spm?tab=GPL-2.0-1-ov-file#GPL-2.0-1-ov-file).
 
 ## Contributing 
-The development of SPM takes place on [GitHub](https://github.com/spm/spm/). If you wish to contribute, please visit our [development page](./development/).
+
+The development of SPM takes place on [GitHub](https://github.com/spm/). If you wish to contribute, please visit our [development page](./development/).
 
 --8<-- "addons/abbreviations.md"
