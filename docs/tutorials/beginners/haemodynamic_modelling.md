@@ -33,6 +33,8 @@ title('Haemodynamic Response Functions')
 figure(gcf)
 ```
 
+![Haemodynamic response function.](./HRF_variability.png)
+
 Now we can consider how the HRF is used in practice.
 Consider the activity in a single voxel over 200 seconds, from a subject stimulated briefly at 50, 100, 150 seconds.
 ```
@@ -52,6 +54,8 @@ title('Simulated BOLD Responses');
 figure(gcf)
 ```
 
+![Simulated BOLD signal.](./sim_BOLD1.png)
+
 The duration of stimuli can be variable, and the HRFs they elicit often overlap.
 Copy/paste the following to 
 ```
@@ -70,6 +74,8 @@ title('Simulated BOLD Responses');
 figure(gcf)
 ```
 
+![Simulated BOLD signal.](./sim_BOLD2.png)
+
 ## Simulating a Design Matrix
 An fMRI experiment may consist of several different tasks, and interactions among the tasks are often modelled.
 We can simulate a design matrix for such an experiment by:
@@ -83,7 +89,10 @@ X = convn(X,h);
 X = [X(1:N,:) spm_dctmtx(N,5)];
 imagesc(X)
 colormap(gray)
+figure(gcf)
 ```
+
+![Design matrix.](./design_matrix.png)
 
 In the above matrix, the first four columns model different types of task, white the final 10 columns would model smooth drifts in the overall BOLD signal.
 
@@ -116,6 +125,8 @@ xlabel('Time (seconds)');
 ylabel('Signal')
 figure(gcf)
 ```
+
+![Simulated BOLD signal.](./sim_BOLD_noise.png)
 
 Because of the temporal correlations in the data,
 both the data and design matrix are "pre-whitened" before doing the statistics by dividing by the matrix square root of the covariance matrix.

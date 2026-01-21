@@ -80,6 +80,8 @@ legend('Data','Estimated fit')
 figure(gcf)
 ```
 
+![Simple linear fit.](./simple_fit.png)
+
 A plot of the data and model fit might be clearer without the linear trend in signal intensity.
 We can adjust what is plotted by subtracting the estimated linear trend.
 This is similar to what SPM does when plotting adjusted data.
@@ -92,6 +94,8 @@ ylabel('Adjusted signal')
 legend('Adjusted data','Adjusted fit')
 figure(gcf)
 ```
+
+![Simple adjusted linear fit.](./simple_adjusted_fit.png)
 
 ## Contrast Vectors and Statistics
 With fMRI, what we are typically interested in is the difference between BOLD signal during the task and BOLD signal during the baseline.
@@ -194,6 +198,9 @@ axis image
 rotate3d on
 figure(gcf)
 ```
+
+![Simple orthogonalisation illustration.](./orthogonal_illustration.png)
+
 If you manually rotate the plot by dragging the cursor around on it, then you should see that there is a right angle between all vectors. 
 We can say that ``d`` and ``e`` form the null space of ``c``.
 </details>

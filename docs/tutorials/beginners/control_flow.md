@@ -113,6 +113,8 @@ plot(x,y)
 figure(gcf)
 ```
 
+![Sine function.](./sin_function.png)
+
 Other functions may return several output arguments, in which case these need to be surrounded by square brackets.
 An occasionally useful example might be the following, which does something called singular value decomposition (which we may return to later)
 ```matlab
@@ -239,5 +241,7 @@ ylabel('3x^2 + 4x - 5')
 title('Example Quadratic')
 figure(gcf)
 ```
+
+![Example of a quadratic.](./example_quadratic.png)
 
 

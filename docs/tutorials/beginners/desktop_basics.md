@@ -35,17 +35,18 @@ If you refer to a file, the name that you use should either be relative to this 
 
 <details>
 <summary>Windows example</summary>
-For example, if the full file name is `C:\Users\student\data\study1\sub-02\func\sub-02_run-01.nii` (i.e. a file called `sub-02_run-01.nii` that is in directory `C:\Users\student\data\study1\sub-02\func`), and your working directory is `C:\Users\student\data\study1`, then this file can be referred to as `sub-02\func\sub-02_run-01.nii`.
-If the working directory happens to be `C:\Users\student\data\study1\results`, and you wish to refer to the file, then you need to go back one directory using `..` and then forward again, referring to the file as `..\sub-02\func\sub-02_run-01.nii`.
+For example, if the full file name is ``C:\Users\student\data\study1\sub-02\func\sub-02_run-01.nii`` (i.e. a file called ``sub-02_run-01.nii`` that is in directory ``C:\Users\student\data\study1\sub-02\func``), and your working directory is ``C:\Users\student\data\study1``, then this file can be referred to as ``sub-02\func\sub-02_run-01.nii``.
+If the working directory happens to be ``C:\Users\student\data\study1\results``, and you wish to refer to the file, then you need to go back one level using ``..`` and then forward again, referring to the file as ``..\sub-02\func\sub-02_run-01.nii``.
 </details>
 
 <details>
 <summary>Mac example</summary>
-For example, if the full file name is `/home/student/data/study1/sub-02/func/sub-02_run-01.nii` (i.e. a file called `sub-02_run-01.nii` that is in directory `/home/student/data/study1/sub-02/func`), and your working directory is `/home/student/data/study1`, then this file can be referred to as `sub-02/func/sub-02_run-01.nii`.
-If the working directory happens to be `/home/student/data/study1/results`, and you wish to refer to the file, then you need to go back one directory using `..` and then forward again, referring to the file as `../sub-02/func/sub-02_run-01.nii`.
+For example, if the full file name is ``/home/student/data/study1/sub-02/func/sub-02_run-01.nii`` (i.e. a file called ``sub-02_run-01.nii`` that is in directory ``/home/student/data/study1/sub-02/func``), and your working directory is ``/home/student/data/study1``, then this file can be referred to as ``sub-02/func/sub-02_run-01.nii``.
+If the working directory happens to be ``/home/student/data/study1/results``, and you wish to refer to the file, then you need to go back one level using ``..`` and then forward again, referring to the file as ``../sub-02/func/sub-02_run-01.nii``.
 </details>
 
 MATAB has several tools for navigating this tree structure.
+
 - `>> pwd` … present working directory (folder). This is the folder that MATLAB currently works from.
 - `>> dir` (or `>> ls`) … what folders (or files) are in this folder (directory)
 - `>> cd ..` … move up one folder from here (into the parent directory)
