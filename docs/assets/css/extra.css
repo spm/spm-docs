@@ -11,11 +11,6 @@
      display: none;
 }
 
-/* Ensure header items align properly */
-.md-header__inner {
-  justify-content: space-between;
-}
-
 /* Push icons (search, GitHub) to the right */
 .md-header__inner > .md-header__option:last-child {
   margin-left: auto;
