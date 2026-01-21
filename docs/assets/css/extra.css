@@ -1,7 +1,11 @@
 .md-typese__table {
-    min-width: 100%;
+     min-width: 100%;
 }
  
 .md-typeset table:not([class]) {
      display: table;
+}
+
+.md-header__title {
+     display: none;
 }
