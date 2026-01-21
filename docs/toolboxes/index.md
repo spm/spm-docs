@@ -40,4 +40,5 @@ The software listed here is externally maintained and has not been tested by the
 - [MarsBAR](https://github.com/marsbar-toolbox/marsbar)
 - [PALM](https://github.com/andersonwinkler/PALM)
 - [TAPAS](https://github.com/ComputationalPsychiatry)
+- [TFCE](https://github.com/ChristianGaser/tfce)
 - [SnPM](https://github.com/SnPM-toolbox/SnPM-devel)
