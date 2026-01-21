@@ -199,8 +199,6 @@ rotate3d on
 figure(gcf)
 ```
 
-![Simple orthogonalisation illustration.](./orthogonal_illustration.png)
-
 If you manually rotate the plot by dragging the cursor around on it, then you should see that there is a right angle between all vectors. 
 We can say that ``d`` and ``e`` form the null space of ``c``.
 </details>
