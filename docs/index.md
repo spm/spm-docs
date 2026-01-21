@@ -17,19 +17,11 @@ The SPM software package has been designed for the analysis of brain imaging dat
 
 ## Getting started
 
-SPM is openly available and designed to work across all major operating systems. We recommend you use [the lastest version](https://github.com/spm/spm/releases/latest/). Older versions are available but no longer support:
-
-- [SPM12](https://github.com/spm/spm12)
-
-- [SPM8](https://github.com/spm/spm8)
-
-- [SPM5](https://github.com/spm/spm5)
-
-- [SPM99](https://github.com/spm/spm99)
-
-=== ":fontawesome-brands-windows: Windows"
+SPM is openly available and designed to work across all major operating systems. We recommend you use [the lastest version](https://github.com/spm/spm/releases/latest/). Older versions are available but no longer supported: [SPM12](https://github.com/spm/spm12), [SPM8](https://github.com/spm/spm8), [SPM5](https://github.com/spm/spm5), [SPM99](https://github.com/spm/spm99). 
 
 ### Installation
+
+=== ":fontawesome-brands-windows: Windows"
 
     1. Download [the latest SPM release](https://github.com/spm/spm/releases/latest/) and uncompress it.
 
@@ -68,7 +60,7 @@ SPM is openly available and designed to work across all major operating systems.
 
     *For a detailed overview of the steps, please check our [installation page](./installation/index.md#linux).*
 
-!!! info inline end "Alternative installation options" 
+!!! info "Alternative installation options" 
     For other installation options, including versions not requiring MATLAB, please consult our [installation instructions](./installation/index.md)
 
 ### Usage
