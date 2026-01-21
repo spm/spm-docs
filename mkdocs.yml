@@ -218,6 +218,7 @@ nav:
       - 'Sensor-level analysis':        'reference/MEEG/eeg_sensoranalysis.md'
       - 'Source imaging':               'reference/MEEG/eeg_imaging.md'
       - 'DCM for evoked responses':     'reference/MEEG/eeg_DCM.md'
+    - 'SPM12 manual': 'https://github.com/spm/spm12/blob/main/man/manual.pdf'
   - 'Development':
     - 'Introduction': 'development/index.md'
     - 'Git':          'development/git.md'
