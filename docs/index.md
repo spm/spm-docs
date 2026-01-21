@@ -90,6 +90,8 @@ Tierney et al., (2025). **SPM 25: open source neuroimaging analysis software**. 
 }
 ```
 
+Other SPM-relevant references can be found on the [reference page](./reference/).
+
 ## License
 
 SPM is an open-source software available under GPL-2.0 license. For more details, see the [license](https://github.com/spm/spm?tab=GPL-2.0-1-ov-file#GPL-2.0-1-ov-file).
