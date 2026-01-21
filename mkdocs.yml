@@ -210,7 +210,7 @@ nav:
         - 'Earlier recordings':               'courses/fmri_vbm/recordings/fmri_legacy_recordings.md'
   - 'Reference':
     - 'reference/index.md'
-    - 'SPM: An annotate bibliography': 'reference/annotated_bibliography.md'
+    - 'SPM: An annotated bibliography': 'reference/annotated_bibliography.md'
     - 'History': 'reference/history.md'
     - 'M/EEG':
       - 'Getting started':              'reference/MEEG/index.md'
