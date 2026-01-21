@@ -208,7 +208,7 @@ nav:
         - 'DCM: Testing hypotheses':          'courses/fmri_vbm/recordings/dcm_hypothesis_testing.md'
         - 'DCM for resting-state':            'courses/fmri_vbm/recordings/dcm_resting_state.md'
         - 'Earlier recordings':               'courses/fmri_vbm/recordings/fmri_legacy_recordings.md'
-  - 'Reference documentation':
+  - 'Reference':
     - 'reference/index.md'
     - 'SPM: An annotate bibliography': 'reference/annotated_bibliography.md'
     - 'History': 'reference/history.md'
@@ -219,6 +219,8 @@ nav:
       - 'Source imaging':               'reference/MEEG/eeg_imaging.md'
       - 'DCM for evoked responses':     'reference/MEEG/eeg_DCM.md'
     - 'SPM12 manual': 'https://github.com/spm/spm12/blob/main/man/manual.pdf'
+  - 'Toolboxes':
+    - 'toolboxes/index.md'
   - 'Development':
     - 'Introduction': 'development/index.md'
     - 'Git':          'development/git.md'
