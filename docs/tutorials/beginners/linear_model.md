@@ -54,7 +54,7 @@ We can estimate the ``beta`` values from the simulated data as we would for real
 ```matlab
 beta = X\y
 ```
-After fitting a model like this in SPM, a set of beta_0001.nii, beta_0002.nii and beta_0003.nii images are created that encode
+After fitting a model like this in SPM, a set of `beta_0001.nii`, `beta_0002.nii` and `beta_0003.nii` images are created that encode
 the estimated ``beta`` values at each voxel.
 
 We can also estimate the variance of the data by computing it from the residuals.
@@ -68,7 +68,7 @@ v  = sum(r.^2)/nu
 If you copy and paste the above snippets into MATLAB, you will see that the estimates (``beta`` and ``v``)
 are similar to, but not identical to the ground truth (``beta_gt`` and ``v_gt``).
 
-When a statistical analysis is run in SPM, a file entitled ResMS.nii is created, which contains information about the variance estimated at each voxel.
+When a statistical analysis is run in SPM, a file entitled `ResMS.nii` is created, which contains information about the variance estimated at each voxel.
 
 ## Plotting
 We can plot the (simulated) data, along with the model fit, by
@@ -101,7 +101,7 @@ We call this a "contrast vector". If this is called ``c``, then the linear combi
 c   = [-1 1 0];
 con = c * beta
 ```
-In SPM, the above would generate a con_???.nii file that contains the specified linear combination of ``beta`` values.
+In SPM, the above would generate a `con_???.nii` file that contains the specified linear combination of ``beta`` values.
 
 ### T Statistic
 p values are based on probabilities of observing the data under the null hypothesis.
@@ -152,12 +152,13 @@ t    = con./sqrt(v*tmp);    % T statistic (spmT_XXXX.nii)
 p    = spm_Tcdf(-t,nu);     % P value
 ```
 
-Once the above function has been saved in a file, you can run it by typing the following in MATLAB:
+Once the above text has been saved in a file (that MATAB can find), you can run it by typing the following:
 ```matlab
 [p,t] = t_stat(y,X,c)
 ```
 
 Note that we could use a slightly different formulation of the design matrix (`X1`) and contrast vector (`c1`), and that these give the same t statistics and p values.
+Both of these types of approach are routinely used in SPM.
 ```matlab
 X1 = [X(:,1)+X(:,2), X(:,2)-X(:,1), X(:,3)]
 c1 = [0 1 0]
@@ -170,7 +171,9 @@ c1 = [0 1 0]
 F tests are a bit harder to explain than t tests.
 One concept we need is the idea of a null space.
 
-First though, we need to understand orthogonality.
+<details>
+<summary>Null space</summary>
+First of all, we need to understand orthogonality.
 If two row vectors, say ``c`` and ``d``, are orthogonal, then ``c * d' == 0``.
 We can try this by copy/pasting the following into MATLAB:
 ```matlab
@@ -190,6 +193,8 @@ rotate3d on
 ```
 If you manually rotate the plot by dragging the cursor around on it, then you should see that there is a right angle between all vectors. 
 We can say that ``d`` and ``e`` form the null space of ``c``.
+</details>
+
 In MATLAB, we can obtain the null space for ``c`` by ``Cn = null(c)``.
 This can be used to remove information related to the contrast of interest from the design matrix by:
 ```matlab
@@ -224,10 +229,6 @@ Similar to the t test, we can compute a p value from this F statistic by
 ```matlab
 p = 1 - spm_Fcdf(F, nu)
 ```
-
-You should notice that the p value given from the F statistic is twice as large as that from the t statistic.
-The reason for this is that the t static is based on a one-tailed t test,
-whereas the p value from the F statistic is equivalent to that from a two-tailed t test.
 
 As we may be running F tests again, I would suggest creating an ``F_stat.m`` file somewhere on MATLAB's search path, which contains the following:
 ```
@@ -272,11 +273,17 @@ p    = 1 - spm_Fcdf(F,nu);   % P value
 
 Once the above function has been saved in a file, you can run it by typing the following in MATLAB:
 ```matlab
-[p,t] = F_stat(y,X,c)
+[p,F] = F_stat(y,X,c)
 ```
 
-Notice that the resulting p value is twice as big as the p value for the `t_stat.m` function.
-The reason for this is that when the F contrast is a vector, rather than a matrix, it does the equivalent of a two-taied t test.
+You should notice that the p value given from the F statistic is twice as large as that from the t statistic.
+The reason for this is that the t static is based on a one-tailed t test,
+whereas the p value from the F statistic is equivalent to that from a two-tailed t test.
 
 More generally though, F contrasts can be defined as matrices.
+For example, to assess whether there is a statistically significant amount of variance explained by either the task versus baseline comparison, or the linear drift, then the following contrast matrix can be used:
+```matlab
+C = [-1 1 0; 0 0 1]
+[p,F] = F_stat(y,X,C)
+```
 

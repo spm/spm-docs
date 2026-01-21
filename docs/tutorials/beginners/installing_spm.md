@@ -1,12 +1,12 @@
 # Introducing SPM
 
-SPM (Statistical Parametric Mapping) is a Matlab toolobox designed for the analysis of brain imaging data such as MRI/fMRI, MEG and EEG. It has been developed by the Imaging Neuroscience methods team at UCL since the early 1990s. SPM provides a set of functions that you can access from the Matlab command line or through a graphical user interface (GUI).
+SPM (Statistical Parametric Mapping) is a MATAB toolobox designed for the analysis of brain imaging data such as MRI/fMRI, MEG and EEG. It has been developed by the Imaging Neuroscience methods team at UCL since the early 1990s. SPM provides a set of functions that you can access from the MATAB command line or through a graphical user interface (GUI).
 
 # Installing SPM
 
 ## Option 1 - If you are using Desktop@UCL Anywhere
 
-SPM is already available in a special network folder set up for our course. We just need to let Matlab know where to find it. To do that, run Matlab, copy the following code into the Matlab command window and press Enter:
+SPM is already available in a special network folder set up for our course. We just need to let MATAB know where to find it. To do that, run MATAB, copy the following code into the MATAB command window and press Enter:
 
 ```matlab
    addpath('S:\FBS_CLNE0068\SPM');
@@ -27,7 +27,7 @@ SPM is already available in a special network folder set up for our course. We j
 3. Drag the `SPM` folder from inside the zip file to where you want to keep it.
 `Documents\MATLAB` would be a good location.
 
-Once the copying is complete, open Matlab and type the following command in the command window:
+Once the copying is complete, open MATAB and type the following command in the command window:
 
 ```matlab
 addpath('C:\Users\yourusername\Documents\MATLAB');
@@ -48,7 +48,7 @@ Note that you need to duplicate the backslashes (`\`) in the path within the `fp
 
 # Testing the installation
 
-* To check that SPM is installed correctly, restart MATLAB and type the following command in the Matlab command window:
+* To check that SPM is installed correctly, restart MATLAB and type the following command in the MATAB command window:
 
    ```matlab
    spm fmri

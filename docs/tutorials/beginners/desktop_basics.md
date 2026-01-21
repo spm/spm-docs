@@ -4,8 +4,8 @@ For convenience, we will work with Desktop@UCL Anywhere which gives you access t
 in the classroom and on your own computers. You should be able to keep working on the same files if you save
 them on the N: drive which is the same as your UCL OneDrive. See [installation instructions](https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere).
 
-To start Matlab in a UCL terminal, go to the `UCL Applications Store`.
-and type `matlab` in the search bar. Select `Matlab 2024a`.
+To start MATLAB in a UCL terminal, go to the `UCL Applications Store`.
+and type `matlab` in the search bar. Select `MATLAB 2024a`.
 When you start MATLAB®, the desktop appears in its default
 layout.
 
@@ -28,6 +28,24 @@ The desktop includes these areas:
 
 ## How to navigate within the directory system:
 
+Files on computers are organised hierarchically, with files contained in folders, and folders within other folders.
+"Folders" are more properly referred to as "directories".
+When you run MATLAB, it will work from some specific directory (the "working directory").
+If you refer to a file, the name that you use should either be relative to this working directory, or should be the full path to the file.
+
+<details>
+<summary>Windows example</summary>
+For example, if the full file name is `C:\Users\student\data\study1\sub-02\func\sub-02_run-01.nii` (i.e. a file called `sub-02_run-01.nii` that is in directory `C:\Users\student\data\study1\sub-02\func`), and your working directory is `C:\Users\student\data\study1`, then this file can be referred to as `sub-02\func\sub-02_run-01.nii`.
+If the working directory happens to be `C:\Users\student\data\study1\results`, and you wish to refer to the file, then you need to go back one directory using `..` and then forward again, referring to the file as `..\sub-02\func\sub-02_run-01.nii`.
+</details>
+
+<details>
+<summary>Mac example</summary>
+For example, if the full file name is `/home/student/data/study1/sub-02/func/sub-02_run-01.nii` (i.e. a file called `sub-02_run-01.nii` that is in directory `/home/student/data/study1/sub-02/func`), and your working directory is `/home/student/data/study1`, then this file can be referred to as `sub-02/func/sub-02_run-01.nii`.
+If the working directory happens to be `/home/student/data/study1/results`, and you wish to refer to the file, then you need to go back one directory using `..` and then forward again, referring to the file as `../sub-02/func/sub-02_run-01.nii`.
+</details>
+
+MATAB has several tools for navigating this tree structure.
 - `>> pwd` … present working directory (folder). This is the folder that MATLAB currently works from.
 - `>> dir` (or `>> ls`) … what folders (or files) are in this folder (directory)
 - `>> cd ..` … move up one folder from here (into the parent directory)
@@ -55,7 +73,7 @@ The desktop includes these areas:
 Create a string, a scalar, and a vector as follows:
 
 ```matlab
-MyString = 'I am learning Matlab';
+MyString = 'I am learning MATLAB';
 MyScalar = 6;
 MyVector = [1,2,3];
 MyMatrix = [1,2;3,4];
@@ -63,7 +81,7 @@ MyMatrix = [1,2;3,4];
 
 ## Arrays
 
-In Matlab, the variable we referred to as a vector can also be simply a list of numbers, known as an array.
+In MATLAB, the variable we referred to as a vector can also be simply a list of numbers, known as an array.
 
 Create an array with ‘elements’ increasing from -4 to +4 in increments of 0.01.
 
@@ -71,11 +89,11 @@ Create an array with ‘elements’ increasing from -4 to +4 in increments of 0.
 MyArray = -4:0.01:4;
 ```
 
-How many elements do you think there are in this array? Note: Each element can be ‘indexed’ by entering its name followed by an index in round brackets (e.g `MyArray(1)`). By using indexing, what is the 230th element of MyArray? Use Matlab to find out the dimensions of your three vectors and this new array using the function `size` (type help size if you want to know how).
+How many elements do you think there are in this array? Note: Each element can be ‘indexed’ by entering its name followed by an index in round brackets (e.g `MyArray(1)`). By using indexing, what is the 230th element of MyArray? Use MATLAB to find out the dimensions of your three vectors and this new array using the function `size` (type help size if you want to know how).
 
 ## Functions
 
-The concept of a function describes how one quantity (the input) determines the value of another (the output) e.g., The quantity y is a function of the quantity x. This concept is used all the time in Matlab. We are going to use a function from the library to create several data sets and plot them on the same graph.
+The concept of a function describes how one quantity (the input) determines the value of another (the output) e.g., The quantity y is a function of the quantity x. This concept is used all the time in MATLAB. We are going to use a function from the library to create several data sets and plot them on the same graph.
 
 Multiply your array by π to create a new array with numbers running from -4π to 4π.
 
@@ -127,21 +145,21 @@ Use the help function to find out more about the plot function and decide on the
 
 ## Editor
 
-The Matlab editor is a powerful tool for writing and debugging scripts and functions. You can open the editor by by selecting `New Script` from the `Home` tab in the toolstrip or by switching to the `Editor` tab and clicking on `New` and selecting `Script` from the dropdown menu.
+The MATLAB editor is a powerful tool for writing and debugging scripts and functions. You can open the editor by by selecting `New Script` from the `Home` tab in the toolstrip or by switching to the `Editor` tab and clicking on `New` and selecting `Script` from the dropdown menu.
 
 - Create a new script and copy all the commands above into it.
 - Save the script with a meaningful name, such as `my_first_script.m`.
 
 ## Running and debugging code
 
-- To run your script you can type its name (without the `.m` extension) in the Command Window and press `Enter`. For that to work, you should ensure that the current folder is the one where your script is saved (use cd command to change folder if necessary). It is possible to call scripts and functions from other folders when they are on the Matlab path. More on that later.
+- To run your script you can type its name (without the `.m` extension) in the Command Window and press `Enter`. For that to work, you should ensure that the current folder is the one where your script is saved (use cd command to change folder if necessary). It is possible to call scripts and functions from other folders when they are on the MATLAB path. More on that later.
 - Another way to run your script is to click the `Run` button (green triangle) in the `Editor` toolbar.
 
 If your code does not work as expected, you can use the debugging tools in the editor to find and fix errors. You can set breakpoints by clicking in the left margin next to a line of code (a red dot should appear). When you run the script, execution will pause at the breakpoint, allowing you to inspect variables and step through the code line by line, using `Step` button located next to the `Run` button in the toolbar. To exit debugging mode, click the `Continue` button (green triangle with a line) or the `Stop` button (red square).
 
 Some other useful debugging commands are:
 
-- `dbstop if error` … this command will cause Matlab to enter debug mode if an error occurs, allowing you to inspect the state of your program at the point of the error.
+- `dbstop if error` … this command will cause MATLAB to enter debug mode if an error occurs, allowing you to inspect the state of your program at the point of the error.
 - `dbclear all` … this command will clear all breakpoints that you have set in your code.
 - `dbquit` … this command will exit debug mode and return to normal execution.
 
@@ -166,11 +184,11 @@ You can run a cell by clicking the `Run Section` button in the editor toolbar or
 <!-- Commented out for now as Copilot is not available in 2024a
 ### Copilot
 
-Matlab Copilot is a built-in large language model (LLM) that can help you write code and explain bits of code that someone else wrote as well as error messages. It is available in Matlab versions 2025a and later so if you are using an older Matlab, you will not find it there. To open Copilot, click on the Copilot icon in the top right corner of the Matlab window.
+MATLAB Copilot is a built-in large language model (LLM) that can help you write code and explain bits of code that someone else wrote as well as error messages. It is available in MATLAB versions 2025a and later so if you are using an older MATLAB, you will not find it there. To open Copilot, click on the Copilot icon in the top right corner of the MATLAB window.
 
-![Copilot icon in the top right corner of the Matlab window.](./copilot.png)
+![Copilot icon in the top right corner of the MATLAB window.](./copilot.png)
  
-A Copilot Chat window will open that works similarly to ChatGPT and other LLMs you might already be using, except it's more knowledgeable about Matlab programming. You can ask Copilot questions about your code, and it will try to help you understand it or suggest improvements.
+A Copilot Chat window will open that works similarly to ChatGPT and other LLMs you might already be using, except it's more knowledgeable about MATLAB programming. You can ask Copilot questions about your code, and it will try to help you understand it or suggest improvements.
 
 You can also select a piece of code in the editor, right-click and select `Explain code` from the `Copilot` submenu. An explanation of the code will appear in the Copilot Chat window.
 

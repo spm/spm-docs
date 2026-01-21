@@ -13,6 +13,8 @@ ylabel('BOLD activity');
 title('Haemodynamic Response Function')
 ```
 
+![Haemodynamic response function.](./HRF.png)
+
 The code allows the HRF to be varied according to seven parameters.
 For information about what these parameters mean, you can type:
 ```
