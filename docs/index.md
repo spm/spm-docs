@@ -7,8 +7,8 @@ hide:
 # Statistical Parametric Mapping (SPM)
 
 ## Overview
-Statistical Parametric Mapping (SPM) is an integrated set of methods for testing hypotheses
-about neuroimaging data. These methods are implemented in an open-source software package, SPM. The current release supports the analysis of **fMRI**, **PET**, **SPECT**, **EEG** and **MEG**.
+Statistical Parametric Mapping is an integrated set of methods for testing hypotheses
+about neuroimaging data. These methods are implemented in an open-source software package, **SPM**. The current release supports the analysis of **fMRI**, **PET**, **SPECT**, **EEG** and **MEG**.
 
 <figure markdown>
   ![spm logo](assets/images/spm_front.png)
@@ -17,7 +17,9 @@ about neuroimaging data. These methods are implemented in an open-source softwar
 
 ## Getting started
 
-SPM is openly available and designed to work across all major operating systems. We recommend you use [the lastest version](https://github.com/spm/spm/releases/latest/). Older versions are available but no longer supported: [SPM12](https://github.com/spm/spm12) :octicons-dot-16: [SPM8](https://github.com/spm/spm8) :octicons-dot-16: [SPM5](https://github.com/spm/spm5) :octicons-dot-16: [SPM99](https://github.com/spm/spm99). 
+SPM is openly available and designed to work across all major operating systems. We recommend you use [the lastest version](https://github.com/spm/spm/releases/latest/). 
+
+Older versions are available but no longer supported: [SPM12](https://github.com/spm/spm12) :octicons-dot-16: [SPM8](https://github.com/spm/spm8) :octicons-dot-16: [SPM5](https://github.com/spm/spm5) :octicons-dot-16: [SPM99](https://github.com/spm/spm99). 
 
 ### Installation
 
