@@ -1,6 +1,7 @@
 # Statistical Parametric Mapping: An Annotated Bibliography
 
 W.D. Penny, J. Ashburner, S. Kiebel, R. Henson, D.E. Glaser, C. Phillips and K. Friston.
+
 Wellcome Department of Imaging Neuroscience, University College London.
 
 *21 May 2001*
@@ -276,6 +277,7 @@ In a study of visual attentional mechanisms [11] measures of effective connectiv
 The table below shows a list of those papers that have been cited at least 50 times in scientific journals - naturally, older papers appear more often than newer ones. The information was collated from the Institute for Scientific Information (ISI) citation database. Note that this database does not include volumes 1 and 2 of the Human Brain Mapping journal. A list of SPM methods papers with at least 50 citations. The number of citations are in the left column.
 
 |**Citations**	| **Papers**                                                            | 
+|---------------|-----------------------------------------------------------------------|
 |722	        | Comparing functional (PET) images - the assessment .. (1991)          | 
 |456	        | The relationship between global and local changes .. (1990)           | 
 |436	        | A 3-dimensional statistical analysis .. (1992)                        | 
