@@ -58,7 +58,7 @@ nav:
     - 'index.md'
   - 'Getting started':
     - 'installation/index.md'
-    - 'Installation with MATLAB': 'installation/index.md'
+    - 'Installation with MATLAB': 'installation/matlab.md'
     - 'Standalone':   'installation/standalone.md'
     - 'Containers':   'installation/containers.md'
     - 'Octave':       'installation/octave.md'
