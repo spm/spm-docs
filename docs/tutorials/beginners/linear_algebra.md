@@ -69,6 +69,7 @@ x = randn(4,1)
 ss = x'*x
 sum(x.^2)
 ```
+Note that the above examples include a transpose operation (``'``), which is described next.
 
 ## Transpose
 Sometimes, we swap around the rows and columns of a matrix. This is called transposing. In maths, we would denote transposing matrix $\mathbf{A}$ by $\mathbf{A}^T$. In MATLAB, we would write
@@ -277,14 +278,11 @@ r = X*beta - y
 ```
 
 In MATLAB, ``size(X,1)`` and ``size(X,2)`` give the number of rows and columns of ``X``, respectively.
-The mean squared residuals (correcting for loss of degrees of freedom because we estimate two parameters $b_1$ and $b_2$) is then by:
+The mean squared residuals (correcting for loss of degrees of freedom because we estimate two parameters $\beta_1$ and $\beta_2$) is then by:
 ```matlab
-v = sum(r.^r)/(size(X,1)-rank(X))
+v = sum(r.*r)/(size(X,1)-rank(X))
 ```
-In the above, the `` .* `` denotes element-by element multiplication. Another way of achieving the same result ($(r_1^2 + r_2^2 + r_3^2 + r_4^2 + r_5^2)/3$) is by:
-```matlab
-v = r'*r/(size(X,1)-size(X,2))
-```
+In the above, the `` .* `` denotes element-by element multiplication, giving the solution $(r_1^2 + r_2^2 + r_3^2 + r_4^2 + r_5^2)/3$.
 The `` v `` above is an estimate of the variance on the data.
 
 ## Basic Plotting
@@ -295,7 +293,7 @@ figure
 
 We can then plot the data and model fit. In the following, `` X(:,2) '' means the second column of $\mathbf{X}$. The `` 'r.' `` means use red dots and the `` 'b-' `` means use a blue line:
 ```matlab
-plot(X(:,2), y, 'r.', X(:,2), X*b, 'b-')
+plot(X(:,2), y, 'r.', X(:,2), X*beta, 'b-')
 ```
 We can also annotate the plot with axis labels, a title and a legend.
 ```matlab
@@ -306,7 +304,7 @@ legend('Data','Model fit')
 figure(gcf)
 ```
 
-In the above, the ``figure(gcf)`` command causes MATAB to display the current figure window. If you want to create a new figure window, you can simply type ``figure``.
+In the above, the ``figure(gcf)`` command causes MATAB to display the current figure window.
 For more information about commands/functions in MATLAB, you can type e.g. for the `` plot `` command:
 ```matlab
 help plot
