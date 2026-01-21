@@ -8,7 +8,9 @@ hide:
 
 ## Overview
 Statistical Parametric Mapping is an integrated set of methods for testing hypotheses
-about neuroimaging data. These methods are implemented in an open-source software package, **SPM**. The current release supports the analysis of **fMRI**, **PET**, **SPECT**, **EEG** and **MEG**.
+about neuroimaging data. These methods are implemented in an open-source software package **SPM**. 
+
+The current release supports the analysis of **fMRI**, **PET**, **SPECT**, **EEG** and **MEG**.
 
 <figure markdown>
   ![spm logo](assets/images/spm_front.png)
