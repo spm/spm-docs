@@ -11,7 +11,22 @@
      display: none;
 }
 
-/* Push icons (search, GitHub) to the right */
-.md-header__inner > .md-header__option:last-child {
-  margin-left: auto;
+/* Make header a clean flex container */
+.md-header__inner {
+  display: flex;
+  align-items: center;
+}
+
+/* Ensure logo stays on the far left */
+.md-header__button.md-logo {
+  margin-right: auto;
+}
+
+/* Push all other header options (search, repo) to the right */
+.md-header__option {
+  margin-left: 0;
+}
+
+.md-header__option:not(:first-of-type) {
+  margin-left: 0.4rem;
 }
