@@ -89,6 +89,7 @@ title('V^T')
 subplot(2,2,4);
 plot(diag(S))
 title('S')
+figure(gcf)
 ```
 
 The diagonal of ``S`` shows how much variance is explained by each of the columns of ``U`` and ``V``.

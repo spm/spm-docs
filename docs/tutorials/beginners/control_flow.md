@@ -110,6 +110,7 @@ In the following example, ``x`` is the input argument, and ``y`` is the output a
 x = 0:0.01:2*pi;
 y = sin(x);
 plot(x,y)
+figure(gcf)
 ```
 
 Other functions may return several output arguments, in which case these need to be surrounded by square brackets.
@@ -236,6 +237,7 @@ plot(x, quad(x,a,b,c), '-',  [x1 x2], quad([x1 x2], a, b, c), 'ro-', x_minmax, q
 xlabel('x')
 ylabel('3x^2 + 4x - 5')
 title('Example Quadratic')
+figure(gcf)
 ```
 
 

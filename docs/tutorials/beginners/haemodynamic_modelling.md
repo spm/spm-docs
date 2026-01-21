@@ -11,6 +11,7 @@ plot(h,'k.-')
 xlabel('Time (seconds)')
 ylabel('BOLD activity');
 title('Haemodynamic Response Function')
+figure(gcf)
 ```
 
 ![Haemodynamic response function.](./HRF.png)
@@ -29,6 +30,7 @@ plot([spm_hrf(1,[6 16 1 1 6 0]) spm_hrf(1,[7 16 1 1 6 0]) ...
 xlabel('Time (seconds)')
 ylabel('BOLD activity');
 title('Haemodynamic Response Functions')
+figure(gcf)
 ```
 
 Now we can consider how the HRF is used in practice.
@@ -47,6 +49,7 @@ legend('Stimuli','Expected BOLD response')
 xlabel('Time (seconds)')
 ylabel('Signal')
 title('Simulated BOLD Responses');
+figure(gcf)
 ```
 
 The duration of stimuli can be variable, and the HRFs they elicit often overlap.
@@ -64,6 +67,7 @@ legend('Stimuli','Expected BOLD response')
 xlabel('Time (seconds)')
 ylabel('Signal')
 title('Simulated BOLD Responses');
+figure(gcf)
 ```
 
 ## Simulating a Design Matrix
@@ -110,6 +114,7 @@ legend('Noise-free','With noise')
 title('Simulated BOLD');
 xlabel('Time (seconds)');
 ylabel('Signal')
+figure(gcf)
 ```
 
 Because of the temporal correlations in the data,
@@ -136,12 +141,7 @@ ya   = S*y;
 Xa   = S*X;
 
 % Compute the t statistic using the pre-whitened ``Xa`` and ``ya``.
-beta = Xa\ya;
-nu   = size(Xa,1) - rank(Xa);
-r    = ya - Xa*beta;
-v    = sum(r.^2)/nu;
-t    = (c * beta) / sqrt(v * c * inv(Xa'*Xa) * c')
-p    = 1-spm_Tcdf(t,nu)
+[p,t] = t_stat(ya,Xa,c)
 ```
 
 In the above example, p should typically not indicate statistical significance.

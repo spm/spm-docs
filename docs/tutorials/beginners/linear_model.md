@@ -77,6 +77,7 @@ plot((1:10)', y, 'k.',  (1:10)', X*beta, 'b-')
 xlabel('Time')
 ylabel('Signal')
 legend('Data','Estimated fit')
+figure(gcf)
 ```
 
 A plot of the data and model fit might be clearer without the linear trend in signal intensity.
@@ -89,6 +90,7 @@ plot((1:10)', y_adj, 'k.',  (1:10)', fit_adj, 'b-')
 xlabel('Time')
 ylabel('Adjusted signal')
 legend('Adjusted data','Adjusted fit')
+figure(gcf)
 ```
 
 ## Contrast Vectors and Statistics
@@ -190,6 +192,7 @@ Because the vectors contains three elements, they represent directions in 3D and
 plot3([-c(1) c(1)],[-c(2) c(2)],[-c(3) c(3)],'k', [-d(1) d(1)],[-d(2) d(2)],[-d(3) d(3)],'c', [-e(1) e(1)],[-e(2) e(2)],[-e(3) e(3)],'m')
 axis image
 rotate3d on
+figure(gcf)
 ```
 If you manually rotate the plot by dragging the cursor around on it, then you should see that there is a right angle between all vectors. 
 We can say that ``d`` and ``e`` form the null space of ``c``.

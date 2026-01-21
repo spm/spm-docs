@@ -303,8 +303,10 @@ xlabel('Time (seconds)')
 ylabel('Value')
 title('Simulated data and linear fit')
 legend('Data','Model fit')
+figure(gcf)
 ```
 
+In the above, the ``figure(gcf)`` command causes MATAB to display the current figure window. If you want to create a new figure window, you can simply type ``figure``.
 For more information about commands/functions in MATLAB, you can type e.g. for the `` plot `` command:
 ```matlab
 help plot
@@ -317,5 +319,6 @@ This can be done by:
 imagesc(X)
 axis image
 colormap(gray)
+figure(gcf)
 ```
 Notice that a grey-scale image is just a 2D array of numbers.
