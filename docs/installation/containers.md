@@ -1,15 +1,15 @@
-# SPM and Containers
+# SPM and containers
 
-??? info "What is Docker?"
+!!! info "What is Docker?"
     [Docker](https://www.docker.com/) is a container technology, performing operating-system-level virtualisation.
 
-??? info "What is Singularity?"
+!!! info "What is Singularity?"
     Singularity is another container technology that performs operating-system-level virtualization. One of the main uses of Singularity is to  bring containers and reproducibility to scientific computing and HPC.
     <!-- markdown-link-check-disable-next-line -->
     [`https://sylabs.io/singularity/`](https://sylabs.io/singularity/)
     [`https://apptainer.org/`](https://apptainer.org/)
 
-## SPM Containers
+## SPM containers
 
 Official SPM [`Dockerfile`](https://github.com/spm/spm-docker) (using the [Standalone SPM](standalone.md)) with the docker images hosted on the [GitHub container registry](https://github.com/spm/spm-docker/pkgs/container/spm-docker)
 

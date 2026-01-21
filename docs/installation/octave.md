@@ -1,6 +1,6 @@
 # GNU Octave
 
-!!! note "What is GNU Octave?"
+!!! info "What is GNU Octave?"
     [GNU Octave](https://en.wikipedia.org/wiki/GNU_Octave) is a high-level language that is mostly compatible with MATLAB. It is free open source software under the terms of the GNU General Public License.
 
 ## Octave
