@@ -103,6 +103,10 @@ electrocardiogram, which can be used to detect cardiac artifacts.
 Second, in the same way, set the type of  `EEG064` as "other" (this is just a free-floating electrode, and does not
 contain data of interest).
 
+
+> **Warning:**  
+> Don't forget to delete the "All(1)" option when you use the channel selection tool in batch unless you specifically want to include all channels.
+
 One more job we need to do is specify "bad" channels. These only exist
 for the EEG (MEG bad channels are assumed to be corrected by the prior
 MaxFiltering step). Bad EEG channels were identified by hand by an
