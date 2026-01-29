@@ -208,6 +208,9 @@ nav:
         - 'DCM: Testing hypotheses':          'courses/fmri_vbm/recordings/dcm_hypothesis_testing.md'
         - 'DCM for resting-state':            'courses/fmri_vbm/recordings/dcm_resting_state.md'
         - 'Earlier recordings':               'courses/fmri_vbm/recordings/fmri_legacy_recordings.md'
+    - 'MRI Physics Primer':
+      - 'courses/physics/index.md'
+      - 'Learning objectives':        'courses/physics/learning_objectives.md'
   - 'Reference':
     - 'reference/index.md'
     - 'SPM: An annotated bibliography': 'reference/annotated_bibliography.md'
