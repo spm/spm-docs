@@ -1,11 +1,11 @@
 # MRI Physics Primer
 
 <div class="grid cards" markdown>
-- :fontawesome-solid-brain:{ .lg .middle } [__Upcoming course__](./programme.md)
+- :fontawesome-solid-brain:{ .lg .middle } __Upcoming course__
 
     ---
 
-    26 May 2026, **London**. | [Registeration is ope an available as part of the SPM MRI Course.](https://onlinestore.ucl.ac.uk/conferences-and-events/faculty-of-brain-sciences-c07/ucl-institute-of-neurology-d07/d07-spm-mri-course-plus-optional-1-day-mri-physics-primer)
+    26 May 2026, **London**. | [Registeration is open an available as part of the SPM MRI Course.](https://onlinestore.ucl.ac.uk/conferences-and-events/faculty-of-brain-sciences-c07/ucl-institute-of-neurology-d07/d07-spm-mri-course-plus-optional-1-day-mri-physics-primer)
 
     </div>
 
