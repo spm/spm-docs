@@ -5,15 +5,15 @@
 
     ---
 
-    15-17 October 2025, **online**. | Registration is closed.
+    26-29 May 2026, **London**. | [Registeration is now open.](https://onlinestore.ucl.ac.uk/conferences-and-events/faculty-of-brain-sciences-c07/ucl-institute-of-neurology-d07/d07-spm-mri-course-plus-optional-1-day-mri-physics-primer)
 
-    27-29 May 2026, **in-person**. | More details will be announced soon.
+    October 2026, **online**. | More details will be announced soon.
     </div>
 
 !!! info inline end "Course recordings"
     Select topics from the menu to view recordings from a previous MRI course.
     
-This three-day course introduces the analysis of neuroimaging data, including Magnetic Resonance Imaging (MRI) and functional MRI (fMRI). It covers:
+This course introduces the analysis of neuroimaging data, including Magnetic Resonance Imaging (MRI) and functional MRI (fMRI). It covers:
 
 - Experimental design
 - Pre-processing brain images
