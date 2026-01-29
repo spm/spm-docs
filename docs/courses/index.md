@@ -16,7 +16,7 @@ We are delighted to welcome visitors to our SPM courses every spring and autumn.
     19-22 May 2025, **online**. | Registration is closed.
 </div>
 <div class="grid cards" markdown>
-- :fontawesome-solid-brain:{ .lg .middle } [__SPM for MRI__](./fmri_vbm/index.md) (+ optional MRI Physics Primer)
+- :fontawesome-solid-brain:{ .lg .middle } [__SPM for MRI__](./fmri_vbm/index.md) (+ optional [MRI Physics Primer](./physics/index.md))
 
     ---
 
