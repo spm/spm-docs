@@ -1,4 +1,4 @@
-# SPM Course - MRI
+# SPM Course for MRI
 
 ## Pre-course materials
 

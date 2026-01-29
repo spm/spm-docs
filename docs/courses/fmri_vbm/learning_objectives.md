@@ -1,6 +1,6 @@
-# SPM Course - MRI
+# SPM Course for MRI
 
-## SPM course learning objectives
+## Learning objectives
 
 1.	Be able to define the principles and basic concepts of functional Magnetic Resonance Imaging (fMRI) and Voxel-Based Morphometry (VBM) in neuroimaging research.
 2.	Gain proficiency in preprocessing fMRI data using SPM, including motion correction, slice timing correction, and spatial normalisation.

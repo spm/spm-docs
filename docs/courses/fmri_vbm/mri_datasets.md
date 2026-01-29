@@ -1,4 +1,4 @@
-# SPM Course - MRI
+# SPM Course for MRI
 These datasets will be used during the course and are available to download.
 
 ## Preferred download link

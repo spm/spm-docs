@@ -1,4 +1,4 @@
-# SPM Course - MRI
+# SPM Course for MRI
 
 <div class="grid cards" markdown>
 - :fontawesome-solid-brain:{ .lg .middle } [__Upcoming course__](./programme.md)
