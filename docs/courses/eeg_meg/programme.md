@@ -1,4 +1,4 @@
-# SPM Course - EEG & MEG
+# SPM Course for EEG & MEG
 
 ## Course programme
 

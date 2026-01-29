@@ -1,4 +1,4 @@
-# SPM Course - EEG & MEG
+# SPM Course for EEG & MEG
 
 These datasets will be used during the course and are available to download.
 
