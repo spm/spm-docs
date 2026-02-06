@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - footer
+---
+
 # SPM toolboxes
 
 SPM has a rich ecosystem of community-developed toolboxes. The SPM team does not maintain a comprehensive list, however, several examples are included below. If you would like your toolbox featured on this list, please submit a [pull request](https://github.com/spm/spm-docs/compare).

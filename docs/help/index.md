@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - footer
+---
+
 # SPM help
 
 ## :fontawesome-solid-envelope: SPM mailing list
