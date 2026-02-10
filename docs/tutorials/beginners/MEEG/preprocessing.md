@@ -331,7 +331,7 @@ M/EEG Review window).
 
 ### Merging (concatenating runs)
 
-To analyse the data as one file, the six runs need to be merged. To do
+To analyse the data as one file, the two runs need to be merged. To do
 this, select "Merging" from "SPM -- M/EEG -- Preprocessing -- Merging",
 select "File Names", "specify", and select the 2 file names
 `befdspmeeg_run_01_sss.mat` and `befdspmeeg_run_02_sss.mat`. If you were to run this stage now, the
