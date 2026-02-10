@@ -333,8 +333,8 @@ M/EEG Review window).
 
 To analyse the data as one file, the six runs need to be merged. To do
 this, select "Merging" from "SPM -- M/EEG -- Preprocessing -- Merging",
-select "File Names", "specify", and select the 6 file names
-`befdspmeeg_run_%02d_sss.mat`. If you were to run this stage now, the
+select "File Names", "specify", and select the 2 file names
+`befdspmeeg_run_01_sss.mat` and `befdspmeeg_run_02_sss.mat`. If you were to run this stage now, the
 output file would match the first input file, but be prepended with a
 `c`, i.e, `cbefdspmeeg_run_01_sss.mat`. However, we will wait to add some
 more modules before running, as below. At this stage, you could also add
