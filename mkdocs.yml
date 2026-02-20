@@ -170,6 +170,7 @@ nav:
       - 'courses/eeg_meg/index.md'
       - 'Course schedule':                    'courses/eeg_meg/programme.md'
       - 'Datasets':                           'courses/eeg_meg/eeg_datasets.md'
+      - 'Preparatory materials':              'courses/eeg_meg/preparatory_materials.md'
       - 'Lecture recordings':
         - 'Overview':                                                                     'courses/eeg_meg/recordings/index.md'
         - 'Introduction & resources':                                                     'courses/eeg_meg/recordings/introduction.md'
