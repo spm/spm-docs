@@ -13,7 +13,8 @@ We are delighted to welcome visitors to our SPM courses every spring and autumn.
 
     ---
 
-    :material-calendar-month: 18-21 May 2026, **online**. | Registration is open
+    :material-calendar-month: 18-21 May 2026, **online**. | [Registeration is now open.](https://onlinestore.ucl.ac.uk/conferences-and-events/faculty-of-brain-sciences-c07/ucl-institute-of-neurology-d07/d07-statistical-parametric-mapping-for-megeeg-2026) 
+</div>
 </div>
 <div class="grid cards" markdown>
 - :fontawesome-solid-brain:{ .lg .middle } [__SPM for MRI__](./fmri_vbm/index.md) (+ optional [MRI Physics Primer](./physics/index.md))
