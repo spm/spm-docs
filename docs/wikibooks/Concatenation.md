@@ -33,14 +33,19 @@ you need to add to these onsets the length of sessions before the
 session. For example, suppose you have 3 sessions and corresponding
 onsets 1-3, and each session has 60, 55, 44 volume scans respectively:
 
-\<syntaxhighlight lang=\"matlab\"\> scans = \[60 55 40\];
+```matlab
+scans = [60 55 40];
 
-% If onsets are in scans onsets_concat = \[onsets1,onsets2 + 60,
-onsets3 + 115\];
+% If onsets are in scans
+onsets_concat = [onsets1,onsets2 + 60, onsets3 + 115];
 
-% If onsets are in seconds TR = 2; % Replace with the actual value
-according to your scanning protocol onsets_concat = \[onsets1,onsets2 +
-60\*TR, onsets3 + 115\*TR\]; \</syntaxhighlight\>Other regressors (e.g.
+% If onsets are in seconds
+TR = 2;
+% Replace with the actual value according to your scanning protocol
+onsets_concat = [onsets1,onsets2 + 60*TR, onsets3 + 115*TR];
+```
+
+Other regressors (e.g.
 head motion regressors) should be similarly concatenated.
 
 ### Specifying the concatenated GLM
@@ -64,8 +69,10 @@ Run the following code in the main Matlab window. Again, \'scans\' here
 denotes the number of volumes in each session in the original
 timeseries.
 
-\<syntaxhighlight lang=\"matlab\"\> scans = \[60 55 40\];
-spm_fmri_concatenate(\'SPM.mat\', scans); \</syntaxhighlight\>
+```matlab
+scans = [60 55 40];
+spm_fmri_concatenate('SPM.mat', scans);
+```
 
 The adjusted GLM (SPM.mat) will replace the GLM you specified before
 (its copy will be saved as SPM_backup.mat). Now you can estimate the GLM
