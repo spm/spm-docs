@@ -7,11 +7,11 @@ You are already familiar with the concept of second-level (group) analyses from 
 You can now pool the results per condition from the following modalities
 
 - Sensor-level evoked responses (scalp-time images) for EEG
-- Single-channel time-frequency images for MEG
+- Single-channel time-frequency power and phaseimages for MEG
 - Source images (MEG+EEG) for IID.
 - Source images (MEG+EEG) for MSP(GS)
 
-Copy the files for your subject for the three original conditions (Familiar, Unfamiliar and Scrambled) and the two contrasts (Faces vs Scrambled and Familiar vs Unfamiliar) to the corresponding group analysis folders in `S:\FBS_CLNE0068_students\`.
+You can find pre-computed individual data for all the subjects in `S:\FBS_CLNE0068\Data\MEG_group`. These data should be similar to your own results if you followed all the tutorials correctly so you can use CheckReg to compare the images to the ones you generated.
 
 You can now use the 2nd-level designs you are already familiar with to answer different research questions about the datasets.
 
