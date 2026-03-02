@@ -7,7 +7,7 @@ You are already familiar with the concept of second-level (group) analyses from 
 You can now pool the results per condition from the following modalities
 
 - Sensor-level evoked responses (scalp-time images) for EEG
-- Single-channel time-frequency power and phaseimages for MEG
+- Single-channel time-frequency power and phase images for MEG
 - Source images (MEG+EEG) for IID.
 - Source images (MEG+EEG) for MSP(GS)
 
