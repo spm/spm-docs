@@ -12,7 +12,7 @@ Select "SPM → M/EEG → Time-frequency → Head model specification". Select t
 
 The next step is to specify the meshes. Highlight "meshes" and select "mesh source". From here select "Individual structural image" and select the `sub-XX-T1w.nii` in the `anat` directory. The mesh resolution can be kept as normal (approximately 4000 vertices per hemisphere). Note that the cortical mesh (and scalp and skull meshes) are created by warping template meshes from a brain in MNI space, based on normalising this subject's MRI image to that MNI brain. This is called the canonical approach. Other software packages use meshes derived directly from the subject's structural MRI. The advantage of SPM's approach is that the cortical meshes for different subjects have the same number of vertices and the same anatomical correspondence across subjects, which makes group analyses easier. The disadvantage is that the meshes may not fit the subject's anatomy as well as those derived directly from the MRI.
 
-To coregister the MRI and M/EEG data, you must select "specify coregistration parameters". First you need to specify fiducials. You will need to select at least three of these, with coordinates in the space of the MRI image selected. Here we will define "Nasion", "LPA", and "RPA". You can do this by loading the MRI and clicking, but here we will use the coordinates provided in the `mri_fids.txt` file described above. For each of the fiducials, specify its label as it appears in the file and the corresponding coordinates (copy and enter the three numbers, via the `Type MNI coordinates` option).
+To coregister the MRI and M/EEG data, you must select "specify coregistration parameters". First you need to specify fiducials. You will need to select at least three of these, with coordinates in the space of the MRI image selected. Here we will define "Nasion", "LPA", and "RPA". You can do this by loading the MRI and clicking, but here we will use the coordinates provided in the `mri_fids.txt` file described above. For each of the fiducials, specify its label (use "Nasion" rather than "NAS" in the batch as this is the label used in the data file) and the corresponding coordinates (copy and enter the three numbers, via the `Type MNI coordinates` option).
 
 > **Tip** To verify that the fiducials make sense, open the anatomical image via the 'Display/Images' button and paste the fiducial coordinates into the `mm` box of the image viewer. You should see that the crosshairs land on the correct anatomical locations (nasion, left and right pre-auricular points).
 
@@ -82,7 +82,16 @@ We can also use fMRI results as spatial priors for source reconstruction. The id
 
 This is done by specifying a binary image (i.e., thresholded statistical map) that indicates which voxels should be included in the prior. This allows us to focus the source reconstruction on regions that are known to be involved in the task, based on fMRI data. You can derive such an image from your previous single-subject fMRI analysis or from the group fMRI contrast maps (e.g. looking at the mean term in the multiple regression model you used for your presentation assignment).
 
-You can generate a suitable image by presenting your statistical results using the `Results` button in the SPM Menu window, selecting the relevant `SPM.mat` file from your fMRI analysis, and then thresholding the resulting statistical map in a way that will selectively show the relevant areas (in this case primary visual and fusiform cortex). You can then save this thresholded image as a binary NIfTI file by selecting `save -- all clusters (binary)` in the interactive window as shown below.
+You can generate a suitable image by presenting your statistical results using the `Results` button in the SPM Menu window, selecting the relevant `SPM.mat` file from your fMRI analysis, and then thresholding the resulting statistical map in a way that will selectively show the relevant areas (in this case primary visual and fusiform cortex).
+
+You can use the following sequence of step:
+
+1. Click on the `Results` button in the SPM Menu window and select the `SPM.mat` file from your Presentation assignment fMRI analysis.
+2. Create a contrast looking at the mean term in your multiple regression model (normally [1 0 0 0] assuming the mean comes first).
+3. A good way of thesholding the image would be p<0.01 uncorrected, with extent threshold of 300 voxels, but you can try different thresholds and see how this affects the source reconstruction results.
+4. You can then save this thresholded image as a binary NIfTI file by selecting `save -- all clusters (binary)` in the interactive window as shown below. <br>
+
+
 
 ![Saving a thresholded image](./priors_saving.png)
 <br>
