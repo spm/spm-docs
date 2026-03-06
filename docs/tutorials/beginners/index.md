@@ -34,3 +34,9 @@
     * [fMRI First-level](fmri/first_level.md)
     * [fMRI Second-level Example](fmri/second_level_example.md)
 
+* **MSc VBM tutorial**
+
+    * [Voxel-Based Morphometry](vbm/index.md)
+    * [Image processing for VBM](image_processing_dartel.md)
+    * [Statistical Analysis](statistical_analysis.md)
+

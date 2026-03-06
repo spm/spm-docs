@@ -57,7 +57,7 @@ figure(gcf)
 ![Simulated BOLD signal.](./sim_BOLD1.png)
 
 The duration of stimuli can be variable, and the HRFs they elicit often overlap.
-Copy/paste the following to MATLAB:
+Copy/paste the following to simulate the BOLD response from events at random times:
 ```matlab
 y0 = zeros(N,1);                   % 200 seconds of scanning
 y0(round(rand(30,1)*(N-1)+1)) = 1; % Stimuli at 50, 100 and 150 seconds
