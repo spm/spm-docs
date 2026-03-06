@@ -193,8 +193,8 @@ This will prompt you for answers to a series of questions, so here goes.
 After waiting some time for the results to appear, you should see some blobs that show what is likely to happen to your brain in future.
 
 <p>
-<img src="../../../assets/figures/tutorials/vbm/vbm-results1.png" width="45%" />
-<img src="../../../assets/figures/tutorials/vbm/vbm-results2.png" width="45%" />  
+<img src="../../../../assets/figures/tutorials/vbm/vbm-results1.png" width="45%" />
+<img src="../../../../assets/figures/tutorials/vbm/vbm-results2.png" width="45%" />  
 <figure id="Fig:results" markdown>
 <figcaption> A table of results (left) and the blobs superimposed on one of the average brains released with SPM (right).  </figcaption>
 </figure>

@@ -139,8 +139,8 @@ I suggest that you click the **Check Reg** button, and take a look at some of th
 For one of the subjects, select the original, the ``c1``, ``c2`` and ``c3``.  This should give an idea about which voxels the algorithm identifies as the different tissue types. Also try this for some of the other subjects.
 
 <p>
-<img src="../../../assets/figures/tutorials/vbm/vbm-SegResults14.png" width="45%" />
-<img src="../../../assets/figures/tutorials/vbm/vbm-Imported14.png" width="45%" /> 
+<img src="../../../../assets/figures/tutorials/vbm/vbm-SegResults14.png" width="45%" />
+<img src="../../../../assets/figures/tutorials/vbm/vbm-Imported14.png" width="45%" /> 
 <figure id="Fig:segoutput" markdown>
 <figcaption> Left: An image, along with grey matter (``c1``), white matter (``c2``) and CSF (``c3``) identified by **Segment**.  Right: Imported grey (``rc1``) and white matter (``rc2``) for three subjects.  </figcaption>
 </figure>
@@ -161,8 +161,8 @@ The Run Shooting module would be set up as follows:
     * **Images**: Select the imported white matter images (``rc2*.nii``).  These should be specified in the same order as the grey matter, so that the grey matter image for any subject corresponds with the appropriate white matter image.
 
 <p>
-<img src="../../../assets/figures/tutorials/vbm/vbm-Shoot24.png"  width="45%" />
-<img src="../../../assets/figures/tutorials/vbm/vbm-template8.png" width="45%" />  
+<img src="../../../../assets/figures/tutorials/vbm/vbm-Shoot24.png"  width="45%" />
+<img src="../../../../assets/figures/tutorials/vbm/vbm-template8.png" width="45%" />  
 <figure id="Fig:Shoot" markdown>
 <figcaption> The form of a **Run Shooting** job (left) and the template data after different numbers of iterations (right).  </figcaption>
 </figure>
