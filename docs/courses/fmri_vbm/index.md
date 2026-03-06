@@ -5,7 +5,7 @@
 
     ---
 
-    :material-calendar-month: 27-29 May 2026, **London**. | [Registeration is now open.](https://onlinestore.ucl.ac.uk/conferences-and-events/faculty-of-brain-sciences-c07/ucl-institute-of-neurology-d07/d07-spm-mri-course-plus-optional-1-day-mri-physics-primer)
+    :material-calendar-month: 27-29 May 2026, **London**. | [Registration is now open.](https://onlinestore.ucl.ac.uk/conferences-and-events/faculty-of-brain-sciences-c07/ucl-institute-of-neurology-d07/d07-spm-mri-course-plus-optional-1-day-mri-physics-primer)
 
     *This course includes optional sessions on **MRI physics** and **concurrent fMRI-EEG**.*
 
