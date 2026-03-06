@@ -1,4 +1,4 @@
-# Statistical Analysis
+# VBM Statistical Analysis
 
 ??? info "For MSc Advanced Neuroimaging students"
     MSc Advanced Neuroimaging students should work with the images from the ``processed`` folder and use the pre-prepared ``info.txt`` file.

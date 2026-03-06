@@ -1,4 +1,4 @@
-# Image processing for VBM
+# VBM Image processing
 
 ??? info "For MSc Advanced Neuroimaging students"
     Work with the images from the ``examples`` folder.

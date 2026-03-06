@@ -123,3 +123,7 @@ The panel on the right shows various pieces of information about the image being
 
 Another option allows the image to be zoomed to a region around the cross-hair.  The effects of changing the interpolation are most apparent when the image is zoomed up.  Also, if the original image was collected in a different orientation, then the image can be viewed in **Native Space** (as opposed to **World Space**), to show it this way.
 
+The next steps are:
+    * [Image processing](image_processing_dartel.md) to prepare the data.
+    * [Statistical Analysis](statistical_analysis.md) to identify differences.
+
