@@ -37,6 +37,6 @@
 * **MSc VBM tutorial**
 
     * [Voxel-Based Morphometry](vbm/index.md)
-    * [Image processing for VBM](image_processing_dartel.md)
-    * [Statistical Analysis](statistical_analysis.md)
+    * [Image processing for VBM](vbm/image_processing_dartel.md)
+    * [Statistical Analysis](vbm/statistical_analysis.md)
 
