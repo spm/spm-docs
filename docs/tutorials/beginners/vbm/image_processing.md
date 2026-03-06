@@ -122,7 +122,7 @@ There won't be time to segment all scans, so the plan is to demonstrate how one 
     * **Deformation fields**: Not needed here, so leave at **None**.
 
 <figure id="Fig:segjob" markdown>
-![](../../assets/figures/tutorials/vbm/vbm-Segment24.png){width=50%}
+![](../../../assets/figures/tutorials/vbm/vbm-Segment24.png){width=50%}
 <figcaption> The form of a Segment job. </figcaption>
 </figure>
 
@@ -210,7 +210,7 @@ About 8mm may be suitable, but I don't much have empirical evidence to suggest a
 The optimal value is likely to vary from region to region: lower for subcortical regions with less variability, and more for the highly variable cortex.
 
 <figure id="Fig:Processed" markdown>
-![](../../assets/figures/tutorials/vbm/vbm-Processed14.png){width=50%}
+![](../../../assets/figures/tutorials/vbm/vbm-Processed14.png){width=50%}
 <figcaption> Processed grey and white matter data for three subjects, which are smoothed by 8 mm FWHM. Note that all data are shown scaled the same, which illustrates the effect of different global brain sizes (darker for smaller brains because structures are smaller).  </figcaption>
 </figure>
 
@@ -218,7 +218,7 @@ The smoothed images represent the regional volume of tissue.
 Statistical analysis is done using these data, so one would hope that differences among the processed data actually reflect differences among the regional volumes of grey matter.
 
 <figure id="Fig:interpretation" markdown>
-![](../../assets/figures/tutorials/vbm/vbm-interpretation.png){width=90%}
+![](../../../assets/figures/tutorials/vbm/vbm-interpretation.png){width=90%}
 <figcaption> We generally hope that the results of VBM analyses can be interpreted as systematic volumetric differences (such as folding or thickness), rather than artifacts (such as misclassification or misregistration).  Because of this, it is essential that the processing be as accurate as possible. Note that exactly the same argument can be made of the results of manual volumetry, which depend on the accuracy with which the regions are defined, and on whether there is any systematic error made.  </figcaption>
 </figure>
 

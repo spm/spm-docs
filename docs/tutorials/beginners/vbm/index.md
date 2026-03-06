@@ -57,8 +57,8 @@ The  **Batch** button on this window will call the batching system used in this 
 ??? failure "Can't find SPM?"
     If MATLAB can't find spm, then it probably needs the search path to be correctly set. Find and click the **Set Path** button in the MATLAB user interface. This will give you a window that allows you to tell MATLAB where to find the SPM12 software.
 
-    <img src="../../assets/figures/tutorials/vbm/vbm-find-set-path.png" width="50%">
-    <img src="../../assets/figures/tutorials/vbm/vbm-set-path.png" width="40%">
+    <img src="../../../assets/figures/tutorials/vbm/vbm-find-set-path.png" width="50%">
+    <img src="../../../assets/figures/tutorials/vbm/vbm-set-path.png" width="40%">
 
     More advanced users could use the ``path`` command to do this.
 
@@ -76,13 +76,13 @@ You are advised to change to the directory where you have the data, as this make
     NIfTI images can consist of single 3D volumes, but 4D or even 5D images are possible.  For SPM5 onwards, the 4D images may have an additional ``.mat`` file.
 
     <figure id="Fig:handedness" markdown>
-    ![](../../assets/figures/tutorials/vbm/vbm-handedness.png){width=90%}
+    ![](../../../assets/figures/tutorials/vbm/vbm-handedness.png){width=90%}
     <figcaption> Left- and right-handed coordinate systems.  </figcaption>
     </figure>
 
 
 <p float="center">
-<img src="../../assets/figures/tutorials/vbm/vbm-CheckReg14.png" width="45%" /> <img src="../../assets/figures/tutorials/vbm/vbm-Display14.png" width="45%" />  
+<img src="../../../assets/figures/tutorials/vbm/vbm-CheckReg14.png" width="45%" /> <img src="../../assets/figures/tutorials/vbm/vbm-Display14.png" width="45%" />  
 <figure id="Fig:display" markdown>
 <figcaption> Check Reg and Display. </figcaption>
 </figure>
