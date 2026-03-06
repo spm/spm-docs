@@ -10,7 +10,7 @@ SPM works on :fontawesome-brands-windows: Windows, :fontawesome-brands-apple: ma
 
 ## Versions
 
-We recommend you use [the lastest version](https://github.com/spm/spm/releases/latest/) of SPM. 
+We recommend you use [the latest version](https://github.com/spm/spm/releases/latest/) of SPM. 
 
 Older versions are available but no longer supported: 
 

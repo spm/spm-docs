@@ -118,12 +118,9 @@ nav:
           - 'Factorial':              'tutorials/fmri/group/factorial.md'
       - 'VBM':
           - 'Getting started':       'tutorials/vbmcourse24/index.md' 
-            #- 'Data preparation':      'tutorials/vbmcourse24/data_prep.md' 
+         #- 'Data preparation':      'tutorials/vbmcourse24/data_prep.md' 
           - 'Preprocessing':         'tutorials/vbmcourse24/preprocessing.md' 
           - 'Analysis':              'tutorials/vbmcourse24/analysis.md' 
-          #- 'Getting started':      'tutorials/vbm/index.md'
-          #- 'Image processing':     'tutorials/vbm/image_processing.md'
-          #- 'Statistical analysis': 'tutorials/vbm/statistical_analysis.md'
       - 'M/EEG':
         - 'Getting started':              'tutorials/MEEG/index.md'
         - 'EEG mismatch negativity data': 'tutorials/MEEG/mmn/index.md'

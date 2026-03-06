@@ -110,7 +110,7 @@ If the approximate location of an activation can be specified in advance then th
 
 In more recent work [10], Kiebel et al. propose a model for the analysis of PET and fMRI data that allows incorporation of prior neuroanatomical knowledge. Specifically, a set of basis functions placed on the grey matter surface obtained from a T1-weighted MRI image, allows one to specify a spatial smoothing on the data that both varies over the image and is anatomically informed. This improves the spatial resolution and the sensitivity of the resulting SPM analysis.
 
-The mathematical basis of GRF theory is described in a series of peer-reviewed articles in statisical journals [11, 12, 13, 14, 15].
+The mathematical basis of GRF theory is described in a series of peer-reviewed articles in statistical journals [11, 12, 13, 14, 15].
 
 ### References
 
@@ -136,7 +136,7 @@ There are a number of useful reviews of different approaches to experimental des
 
 The first analyses of PET images used a `cognitive subtraction' paradigm which relies upon the assumption of pure insertion - this assumes that a new cognitive component can be purely inserted ie. without affecting the expression of previous ones. This assumption is often invalid, however, as shown in [4] where it was demonstrated that interaction terms (between the new and previous cognitive components) are often significant.
 
-More powerful experimental designs, such as parametric designs (involving continuous dependent variables, such as time) and factorial designs (which explicitly look at interaction terms) can be facilitated with the GLM. The first published study using a parametric analysis was by Price et al. [5] where activity in primary auditory cortex was found to be linearly related to the word presentation rate (this was in contrast to, for example, Wernicke's area which responded solely to the occurence of a word rather than its presentation rate).
+More powerful experimental designs, such as parametric designs (involving continuous dependent variables, such as time) and factorial designs (which explicitly look at interaction terms) can be facilitated with the GLM. The first published study using a parametric analysis was by Price et al. [5] where activity in primary auditory cortex was found to be linearly related to the word presentation rate (this was in contrast to, for example, Wernicke's area which responded solely to the occurrence of a word rather than its presentation rate).
 
 In [6] Buchel et al. extend the above analysis by allowing stimulus or task parameters to be nonlinear functions of the hemodynamic response. This was implemented using second-order polynomial expansions and applied to PET data. In [7] the method was implemented in the context of the General Linear Model and SPM's, based on omnibus F-statistics (eg. to test for any significant linear and/or nonlinear effect), were used to test for local linear or nonlinear dependencies in fMRI data.
 
@@ -154,7 +154,7 @@ The relative merits of RFX versus conjunction analysis and the larger issues are
 2. K.J. Friston, C.J. Price, C. Buchel, and R.S.J. Frackowiak. A taxonomy of study design. In R.S.J. Frackowiak, K.J Friston, C.D. Frith, R.J. Dolan, and J.C. Mazziotta, editors, Human Brain Function, pages 141-159. Academic Press USA, 1997.
 3. K.J. Friston. Experimental design and statistical issues. In Brain Mapping: The Disorders, pages 33-58. Academic Press, 2000.
 4. K.J. Friston, C.J. Price, P. Fletcher, C. Moore, R.S.J. Frackowiak, and R.J. Dolan. The trouble with cognitive subtraction. NeuroImage, 4:97-104, 1996.
-5. C. Price, R. Wise, S. Ramsay, K. Friston, D. Howard, K. Patterson, and R. Frackowiak. Regional response differences withing the human auditory cortex when listening to words. Neuroscience Letters, 11:179-182, 1992.
+5. C. Price, R. Wise, S. Ramsay, K. Friston, D. Howard, K. Patterson, and R. Frackowiak. Regional response differences within the human auditory cortex when listening to words. Neuroscience Letters, 11:179-182, 1992.
 6. C. Buchel, R.J.S. Wise, C.J. Mummery, J.B. Poline, and K.J. Friston. Nonlinear regression in parametric activation studies. NeuroImage, 4:60-66, 1996.
 7. C. Buchel, A.P. Holmes, G. Rees, and K.J. Friston. Characterizing stimulus-response functions using nonlinear regressors in parametric fMRI experiments. NeuroImage, 8:140-148, 1998.
 8. K.J. Friston, C. Frith, R.E. Passingham, P. Liddle, and R.S.J. Frackowiak. Motor practice and neurophysiological adaptation in the cerebellum: a positron tomography study. Proc. Royal Soc. Lond. Series B, 248:223-228, 1992.
@@ -167,7 +167,7 @@ The relative merits of RFX versus conjunction analysis and the larger issues are
 
 ## fMRI
 
-To apply SPM to fMRI time-series it was necessary to account for two fundamental characteristics of fMRI data: (i) that the Hemodynamic Reponse Function (HRF) is transient, delayed and dispersed in time and (ii) that the sampling interval is shorter than the time constant of the HRF, making the observed time-series highly correlated. These issues were addressed in [1] where the HRF was modelled using a Poisson function and the intrinsic correlation was measured after first removing the signal components that were phase-locked to the stimulus (ie. the extrinsic components).
+To apply SPM to fMRI time-series it was necessary to account for two fundamental characteristics of fMRI data: (i) that the Hemodynamic Response Function (HRF) is transient, delayed and dispersed in time and (ii) that the sampling interval is shorter than the time constant of the HRF, making the observed time-series highly correlated. These issues were addressed in [1] where the HRF was modelled using a Poisson function and the intrinsic correlation was measured after first removing the signal components that were phase-locked to the stimulus (ie. the extrinsic components).
 
 In a later paper [2], the authors consider a temporal smoothing of the fMRI time-series (using a Gaussian filter) so as to induce a known autocorrelation structure. This is then used to adjust the degrees of freedom used when making inferences from the GLM. In the further development of this model [3], Worsley and Friston introduced a general procedure for unbiased estimation of the error variance term. This series of papers culminates in [4], where it was shown that whitening (estimating the autocorrelations and then removing them - a procedure favoured by a number of other researchers) can result in a large bias in the resulting statistical inferences (ie. many false positives).
 
@@ -187,7 +187,7 @@ A second key feature of fMRI data, as opposed to PET data, is that data can be c
 
 ## Event-related fMRI
 
-Event-related fMRI (efMRI) is the use of fMRI to characterize and detect transient hemodynamic responses to brief stimuli or tasks, and is analagous to the the study of event-related potentials in electrophysiology. A review of the statistical issues underlying efMRI is presented in [1] with special emphasis on determining the optimal experimental design for testing a given hypothesis.
+Event-related fMRI (efMRI) is the use of fMRI to characterize and detect transient hemodynamic responses to brief stimuli or tasks, and is analogous to the the study of event-related potentials in electrophysiology. A review of the statistical issues underlying efMRI is presented in [1] with special emphasis on determining the optimal experimental design for testing a given hypothesis.
 
 In [2], temporal basis functions were used to model the `early' and `late' components of the evoked response (in the context of a block-design). These took the form of exponentially modulated sine functions. The model can detect `conventional' activations, where both components are expressed to the same degree, and differential activations such as are involved in tasks that do not require sustained attention.
 
@@ -195,7 +195,7 @@ Josephs et al. [3] proposed staggering stimulus times relative to scan acquisiti
 
 Friston et al. [5] characterise the evoked hemodynamic response using Volterra kernels. This allows for nonlinear components of the response to be modelled, such as the saturation of responses at high presentation rates. The linear models described above may be viewed as a first order approximation to this nonlinear model.
 
-In [6], the authors consider stochastic experimental designs where an event (eg. a stimulus) has a certain probability of occuring at any given time point. This is to be contrasted with deterministic designs in which the timing of events is fixed. They then make the distinction between stationary stochastic designs where the probability is fixed and nonstationary designs where this probability may vary over time. They conclude that block designs are generally the most efficient for detecting differential responses, whereas designs including null events are the most efficient for detecting transient responses.
+In [6], the authors consider stochastic experimental designs where an event (eg. a stimulus) has a certain probability of occurring at any given time point. This is to be contrasted with deterministic designs in which the timing of events is fixed. They then make the distinction between stationary stochastic designs where the probability is fixed and nonstationary designs where this probability may vary over time. They conclude that block designs are generally the most efficient for detecting differential responses, whereas designs including null events are the most efficient for detecting transient responses.
 
 In [7], Hopfinger et al. looked at the sensitivity of event-related fMRI analyses to voxel size, spatial and temporal smoothing parameters and the basis set used to characterise the HRF.
 
@@ -217,7 +217,7 @@ The simplest and most frequently applied multivariate procedure is Principal Com
 
 A more sophisticated use of PCA occurs in the context of Generalised Eigenimage Analysis (GEA) [3] where the principal component is found which is maximally expressed in one experimental condition/group and minimally expressed in another (eg. control and patient groups).
 
-Friston et al. [4] apply Multi-Dimensional Scaling (MDS) to data from schizophrenic and control subjects. The MDS procedure maps functionally connected areas into similar positions in a 2D or 3D map. This results in a `functional map' rather than an `anatomical map'. For the data studied, abnormal connectivity patterns were observed in a schizophrenic group. The MDS algorithm works by preserving pairwise distances between data in the original high dimensional space and data in the low dimensional (2D or 3D) visualisation space. If the distance metric is chosen to be the Euclidian distance then MDS turns out to be equivalent to projecting the data onto the first 2 or 3 principal components.
+Friston et al. [4] apply Multi-Dimensional Scaling (MDS) to data from schizophrenic and control subjects. The MDS procedure maps functionally connected areas into similar positions in a 2D or 3D map. This results in a `functional map' rather than an `anatomical map'. For the data studied, abnormal connectivity patterns were observed in a schizophrenic group. The MDS algorithm works by preserving pairwise distances between data in the original high dimensional space and data in the low dimensional (2D or 3D) visualisation space. If the distance metric is chosen to be the Euclidean distance then MDS turns out to be equivalent to projecting the data onto the first 2 or 3 principal components.
 
 A second useful multivariate procedure is the Multivariate Linear Model (MLM) (see eg. [3]) which maps one set of variables to another, ie. there are multiple independent variables (inputs) and multiple dependent variables (outputs). This is to be contrasted with the Linear Model (LM) or General Linear Model (GLM) which has multiple independent variables but only a single dependent variable (eg. the model for a voxel in a standard SPM analysis). The multivariate analysis of covariance (ManCova), for example, may be implemented using an MLM - the MLM is to ManCova what the LM is to the analysis of variance (Anova).
 
@@ -250,11 +250,11 @@ In [4], the interactions between V1 and V2 were characterized using a nonlinear 
 
 To characterize the interactions between multiple areas a 'Structural Equation Model (SEM)' or a 'Path Model' is required. This is specified by a directed graph. In its simplest incarnation a number of path coefficients define the linear relation between nodes on the graph (ie. neuroanatomical areas). These coefficients are then set so as to explain the observed covariance among the variables, as described in [5]. SEM was introduced to neuroimaging by McIntosh and Gonzalez-Lima [6].
 
-Buchel and Friston [7] propose an SEM with time-dependent connections which are estimated using a Kalman filter algorithm. The approach is reviewed in [8] which also has a general discussion on effective connectiviy.
+Buchel and Friston [7] propose an SEM with time-dependent connections which are estimated using a Kalman filter algorithm. The approach is reviewed in [8] which also has a general discussion on effective connectivity.
 
 In [9], Friston et al. introduced the concept of Psychophysiological Interactions (PPIs) to neuroimaging. This model explains the activation at any given voxel as an interaction between a psychological variable and a physiological variable (plus the main effects of each). This is a powerful cross-fertilisation of two related concepts (i) factorial designs - which look at the interactions between two psychological variables and (ii) effective connecticity - which looks at the interactions between two physiological variables (ie. the activations in different anatomical areas).
 
-In a study of associative learning of objects and their positions [10], increases in effective connectivity between distinct cortical systems specialised for spatial and object processing were observed (in addition to the expected repetition supression effect).
+In a study of associative learning of objects and their positions [10], increases in effective connectivity between distinct cortical systems specialised for spatial and object processing were observed (in addition to the expected repetition suppression effect).
 
 In a study of visual attentional mechanisms [11] measures of effective connectivity based on a nonlinear system identification showed that the effective connectivity between V2 and V5/MT is dependent on activity in parietal cortex. This provides evidence for the role of top-down 'backwards' connections in visual processing.
 

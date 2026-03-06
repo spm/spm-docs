@@ -160,7 +160,7 @@ c     = [1 -1 -1 1  0 0 0 0 0];
 [p,t] = t_stat(ya,Xa,c)
 ```
 
-We can also do F tests this way. For example, to test whether a statisticaly significant amount of variance is expained by any of the task types, we could do an F test with the following contrast matrix:
+We can also do F tests this way. For example, to test whether a statisticaly significant amount of variance is explained by any of the task types, we could do an F test with the following contrast matrix:
 ```matlab
 C     = [1 0 0 0  0 0 0 0 0
          0 1 0 0  0 0 0 0 0
