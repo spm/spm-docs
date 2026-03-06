@@ -142,7 +142,7 @@ For one of the subjects, select the original, the ``c1``, ``c2`` and ``c3``.  Th
 <img src="../../../../assets/figures/tutorials/vbm/vbm-SegResults14.png" width="45%" />
 <img src="../../../../assets/figures/tutorials/vbm/vbm-Imported14.png" width="45%" /> 
 <figure id="Fig:segoutput" markdown>
-<figcaption> Left: An image, along with grey matter (``c1``), white matter (``c2``) and CSF (``c3``) identified by **Segment**.  Right: Imported grey (``rc1``) and white matter (``rc2``) for three subjects.  </figcaption>
+<figcaption> Left: An image, along with grey matter (`c1`), white matter (`c2`) and CSF (`c3`) identified by Segment.  Right: Imported grey (`rc1`) and white matter (`rc2`) for three subjects.  </figcaption>
 </figure>
 </p>
 
@@ -164,7 +164,7 @@ The Run Shooting module would be set up as follows:
 <img src="../../../../assets/figures/tutorials/vbm/vbm-Shoot24.png"  width="45%" />
 <img src="../../../../assets/figures/tutorials/vbm/vbm-template8.png" width="45%" />  
 <figure id="Fig:Shoot" markdown>
-<figcaption> The form of a **Run Shooting** job (left) and the template data after different numbers of iterations (right).  </figcaption>
+<figcaption> The form of a Run Shooting job (left) and the template data after different numbers of iterations (right).  </figcaption>
 </figure>
 </p>
 
