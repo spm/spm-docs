@@ -43,6 +43,7 @@ SPM runs in the MATLAB package, which is worth learning how to program a little 
 
 
 The next steps are:
+
     * [Display & Check Reg](displaying_images.md) to start SPM and show some images.
     * [Image Processing](image_processing_dartel.md) to prepare the data.
     * [Statistical Analysis](statistical_analysis.md) to identify differences.
