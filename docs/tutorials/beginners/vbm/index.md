@@ -23,7 +23,7 @@ The tutorial will use SPM12, which is is available from [http://www.fil.ion.ucl.
 SPM runs in the MATLAB package, which is worth learning how to program a little if you ever plan to do any imaging research.
 
 ??? note "Older SPM versions"
-    Older versions are SPM8, SPM5, SPM2, SPM99, SPM96 and SPM91 (SPMclassic). Anything before SPM5 is considered ancient, and any good manuscript reviewer will look down their noses at studies done using ancient software versions.
+    Older versions are SPM8, SPM5, SPM2, SPM99, SPM96 and SPM91 (SPMclassic). Anything before SPM5 is considered ancient.
 
 
 The overall plan is:
