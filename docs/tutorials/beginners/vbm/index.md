@@ -15,11 +15,10 @@
 
     Data is provided for the MSc students, but others may wish to use their own, or download datasets from (e.g.) [http://www.brain-development.org/](http://www.brain-development.org/).
 
-    To save time, students are advised to copy all the folders containing the example dataset from ``S:\IoN_Education_PGTstudents\ANIWorkshops\P4\P4MVW1`` to somewhere in the local workspace.  This would save time, because copying would be very slow if everyone tries to do it at the same time. Please don't work in the original example dataset folder (i.e., work on your copy) because this messes thing up for other students.
+    A script is provided (on Moodle) for students to download and install the SPM software, as well as the data needed for the workshop.
 
     The data provided are a selection of T1-weighted scans from the freely available IXI dataset, available via [http://www.brain-development.org/](http://www.brain-development.org/).  Note that the scans were acquired in the sagittal orientation, but a matrix in the NIfTI headers encodes this information so SPM can treat them as axial.
 
-    SPM12 appears to have been installed in the ``S:\IoN_Education_PGTstudents\ANIWorkshops\Software\spm12`` folder, so there is no need to download it now.
 
 The overall plan will be to
 
