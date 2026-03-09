@@ -27,13 +27,13 @@ SPM runs in the MATLAB package, which is worth learning how to program a little 
 
 
 The overall plan is:
-* [Display & Check Reg](displaying_images.md) to start SPM and display some images.
-    - Start up SPM.
-    - Check that the images are in a suitable format (**Check Reg** and **Display** buttons).
-* [Image Processing](image_processing_dartel.md) to prepare the data for VBM analysis.
-    - Segment the images, to identify grey and white matter (using the **Segment** button). Grey matter will eventually be warped to MNI space.  This step also generates "imported" images, which will be used in the next step.
-    - Estimate the deformations that best align the images together by iteratively registering the imported images with their average (**SPM:material-arrow-right-bold:Tools:material-arrow-right-bold:Shoot Tools:material-arrow-right-bold:Run Shooting (create Templates)**).
-    - Generate spatially normalised and smoothed Jacobian scaled grey matter images, using the deformations estimated in the previous step (**SPM:material-arrow-right-bold:Tools:material-arrow-right-bold:Shoot Tools:material-arrow-right-bold:Write Normalised**).
-* [Statistical Analysis](statistical_analysis.md) to identify differences.
-    - Do some statistics on the smoothed images (**Basic models**, **Estimate** and **Results** options).
+*    [Display & Check Reg](displaying_images.md) to start SPM and display some images.
+    -    Start up SPM.
+    -    Check that the images are in a suitable format (**Check Reg** and **Display** buttons).
+*    [Image Processing](image_processing_dartel.md) to prepare the data for VBM analysis.
+    -    Segment the images, to identify grey and white matter (using the **Segment** button). Grey matter will eventually be warped to MNI space.  This step also generates "imported" images, which will be used in the next step.
+    -    Estimate the deformations that best align the images together by iteratively registering the imported images with their average (**SPM:material-arrow-right-bold:Tools:material-arrow-right-bold:Shoot Tools:material-arrow-right-bold:Run Shooting (create Templates)**).
+    -    Generate spatially normalised and smoothed Jacobian scaled grey matter images, using the deformations estimated in the previous step (**SPM:material-arrow-right-bold:Tools:material-arrow-right-bold:Shoot Tools:material-arrow-right-bold:Write Normalised**).
+*    [Statistical Analysis](statistical_analysis.md) to identify differences.
+    -    Do some statistics on the smoothed images (**Basic models**, **Estimate** and **Results** options).
 
