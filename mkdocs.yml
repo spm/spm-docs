@@ -85,7 +85,7 @@ nav:
           - 'Second-level':  'tutorials/beginners/fmri/second_level_example.md'
         - 'VBM':
           - 'tutorials/beginners/vbm/index.md'
-          - 'Voxel-Based Morphometry':  'tutorials/beginners/vbm/displaying_images.md'
+          - 'VBM Display & Check Reg':  'tutorials/beginners/vbm/displaying_images.md'
           - 'VBM Image processing':     'tutorials/beginners/vbm/image_processing.md'
           - 'VBM Statistical analysis': 'tutorials/beginners/vbm/statistical_analysis.md'
       - 'fMRI':
