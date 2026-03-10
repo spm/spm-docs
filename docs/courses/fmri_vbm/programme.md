@@ -16,7 +16,7 @@ This is a sample programme of the [SPM course for MRI](./index.md). The course w
 | 10:50 - 11:25     | [Contrasts & classical inference](./recordings/contrasts_classical_inference.md) | [Dr Vasileia Kotoula](https://www.kcl.ac.uk/people/vasileia-kotoula) |
 | 11:25 - 12:10	    | [Voxel-based morphometry](./recordings/vbm.md)	      | [Dr Christian Lambert](https://profiles.ucl.ac.uk/11034-christian-lambert) |
 | *Comfort break*               	                                                           |
-| 12:20 - 13:00     | [Random field theory](./recordings/random_field_theory.md)             | [Dr Tim Tierney](https://profiles.ucl.ac.uk/41354-tim-tierney) |
+| 12:20 - 13:00     | [Random field theory](./recordings/random_field_theory.md)             | [Prof Thomas Nichols](https://www.bdi.ox.ac.uk/Team/t-e-nichols) |
 | *Lunch*	                                                                                   |
 | 14:00 - 17:00     | Practical session I	          | SPM faculty                            |
 
