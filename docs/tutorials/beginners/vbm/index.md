@@ -34,7 +34,7 @@ The overall plan is:
 
     -    Check that the images are in a suitable format (**Check Reg** and **Display** buttons).
 
-*    [Image Processing](image_processing_dartel.md) to prepare the data for VBM analysis.
+*    [Image Processing](image_processing.md) to prepare the data for VBM analysis.
 
     -    Segment the images, to identify grey and white matter (using the **Segment** button). Grey matter will eventually be warped to MNI space.  This step also generates "imported" images, which will be used in the next step.
 
