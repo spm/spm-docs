@@ -9,8 +9,8 @@ This is a sample programme of the [SPM course for MRI](./index.md). The course w
 | Time              | Title                           | Faculty                                |
 | ----------------- | ------------------------------- | -------------------------------------- |
 | 08:30 - 09:00     | Registration                                                             |
-| 09:00 - 09:15     | Introduction & overview         |	[Prof Peter Zeidman](https://peterzeidman.co.uk) & [Dr Olivia Kowalczyk](https://oliviakowalczyk.co.uk/) |
-| 09:15 - 10:00     | [Spatial preprocessing](./recordings/preprocessing.md)	          | [Prof John Ashburner](https://www.fil.ion.ucl.ac.uk/~john/) |
+| 09:00 - 09:15     | Introduction & overview         |	[Prof Peter Zeidman](https://peterzeidman.co.uk) & [Dr Olivia Kowalczyk](https://kclpure.kcl.ac.uk/portal/en/persons/olivia.kowalczyk) |
+| 09:15 - 10:00     | [Spatial preprocessing](./recordings/preprocessing.md)	          | [Dr Yael Balbastre](https://profiles.ucl.ac.uk/61880-yael-balbastre) |
 | 10:00 - 10:20     | [The general linear model](./recordings/glm.md)	      | [Dr Nadège Corbin](https://scholar.google.com/citations?user=TjIzldkAAAAJ&hl=fr) |
 | *Tea & coffee*                                                                               |
 | 10:50 - 11:25     | [Contrasts & classical inference](./recordings/contrasts_classical_inference.md) | [Dr Vasileia Kotoula](https://www.kcl.ac.uk/people/vasileia-kotoula) |
@@ -27,9 +27,9 @@ This is a sample programme of the [SPM course for MRI](./index.md). The course w
 | ----------------- | ------------------------------- | -------------------------------------- |
 | 09:15 - 10:05     | [Experimental design](./recordings/experimental_design.md)             | [Dr Carolin Moessnang](https://www.zi-mannheim.de/en/research/people/person/6741.html) |
 | *Comfort break*               	                                                           |
-| 10:15 - 11:00     | [Event-related fMRI](./recordings/event_related_fmri.md) 	          | [Dr Anjali Bhat](https://www.anjalibhat.org) |
+| 10:15 - 11:00     | [Event-related fMRI](./recordings/event_related_fmri.md) 	          | [Dr Sonia Medina](https://sites.exeter.ac.uk/pain/group/sonia-medina/) |
 | *Tea & coffee*                                                                        	   |
-| 11:30 - 12:00     | [Group level analysis](./recordings/group_analysis.md)            | [Prof Emma Holmes](https://emmaholmes.co.uk) |
+| 11:30 - 12:00     | [Group level analysis](./recordings/group_analysis.md)            | [Dr Nadine Dijkstra](https://profiles.ucl.ac.uk/74410-nadine-dijkstra) |
 | 12:00 - 13:00	    | Q&A clinic            	      | SPM faculty                            |
 | *Lunch*	                                                                                   |
 | 14:00 - 17:00     | Practical session II	          | SPM faculty                            |
