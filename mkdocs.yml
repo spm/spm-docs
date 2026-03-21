@@ -213,6 +213,7 @@ nav:
         - 'Earlier recordings':               'courses/fmri_vbm/recordings/fmri_legacy_recordings.md'
     - 'MRI Physics Primer':
       - 'courses/physics/index.md'
+      - 'Course schedule':                    'courses/physics/programme.md'
       - 'Learning objectives':        'courses/physics/learning_objectives.md'
   - 'Reference':
     - 'reference/index.md'
