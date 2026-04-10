@@ -190,6 +190,8 @@ nav:
         - 'Bayesian model selection and averaging':                                       'courses/eeg_meg/recordings/bayesian_model_selection.md'
         - 'DAiSS: An SPM toolbox for alternate source imaging approaches (talk & demo)':  'courses/eeg_meg/recordings/daiss.md'
         - 'Group M/EEG data analysis':                                                    'courses/eeg_meg/recordings/group_analysis.md'
+      - 'Previous editions':
+        - '2025':                                                                         'courses/eeg_meg/programme_2025.md'
     - 'MRI': 
       - 'courses/fmri_vbm/index.md'
       - 'Course schedule':                    'courses/fmri_vbm/programme.md'
