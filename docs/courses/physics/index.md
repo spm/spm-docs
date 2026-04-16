@@ -5,7 +5,7 @@
 
     ---
 
-    26 May 2026, **London**. | [Registration is open an available as part of the SPM MRI Course.](https://onlinestore.ucl.ac.uk/conferences-and-events/faculty-of-brain-sciences-c07/ucl-institute-of-neurology-d07/d07-spm-mri-course-plus-optional-1-day-mri-physics-primer)
+    26 May 2026, **London**. | [Registration is open and available as part of the SPM MRI Course.](https://onlinestore.ucl.ac.uk/conferences-and-events/faculty-of-brain-sciences-c07/ucl-institute-of-neurology-d07/d07-spm-mri-course-plus-optional-1-day-mri-physics-primer)
 
     </div>
 
