@@ -238,6 +238,7 @@ nav:
     - 'Compilation':  'development/compilation/index.md'
     - 'Versioning':   'development/versioning.md'
     - 'Release':      'development/release.md'
+    - 'Documentation': 'development/docs.md'
   - 'Help': 
     - 'help/index.md'
 

@@ -37,3 +37,11 @@ Platform-specific instructions to compile SPM MEX files are provided in the link
 !!! tip "Release"
 
     [Triggering a new Release](release.md)
+
+## Contributing to this website
+
+How to contribute to this documentation website:
+
+!!! tip "Documentation"
+
+    [Contributing to the Docs](docs.md)
