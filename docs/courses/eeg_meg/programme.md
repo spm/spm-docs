@@ -1,10 +1,9 @@
 # SPM Course for EEG & MEG
 
-**[Under construction]**
-
 ## Course programme
 
 This is a draft programme of the upcoming online [SPM course for EEG and MEG](./index.md). The course will consist of lectures and practical workshops where attendees will be guided through analyses of different neuroimaging datasets. 
+Lecture times are to be considered in UK Time.
 
 **Organisers**: [Dr Alberto Mariola](https://profiles.ucl.ac.uk/98818-alberto-mariola)
 
