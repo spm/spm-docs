@@ -12,7 +12,7 @@ SPM works on :fontawesome-brands-windows: Windows, :fontawesome-brands-apple: ma
 
 We recommend you use [the latest version](https://github.com/spm/spm/releases/latest/) of SPM. 
 
-Older versions are available but no longer supported: 
+Older versions that are no longer supported are available in dedicated repositories: 
 
 - [SPM12](https://github.com/spm/spm12) - released in 2012.
 
@@ -21,3 +21,5 @@ Older versions are available but no longer supported:
 - [SPM5](https://github.com/spm/spm5) - released in 2003.
 
 - [SPM99](https://github.com/spm/spm99) - released in 2000. 
+
+An archive containing additional historic versions of SPM2, SPM96, SPM99, SPM5, SPM8 and SPM12 can be found on [Figshare](https://doi.org/10.6084/m9.figshare.30090136).
