@@ -3,7 +3,7 @@
 ## Course programme
 
 This is a draft programme of the upcoming online [SPM course for EEG and MEG](./index.md). The course will consist of lectures and practical workshops where attendees will be guided through analyses of different neuroimaging datasets. 
-Lecture times are to be considered in UK Time.
+Lecture times are to be considered in BST (i.e., London time).
 
 **Organisers**: [Dr Alberto Mariola](https://profiles.ucl.ac.uk/98818-alberto-mariola)
 
@@ -45,8 +45,8 @@ Lecture times are to be considered in UK Time.
 | Time              | Title                           | Faculty                                |
 | ----------------- | ------------------------------- | -------------------------------------- |
 | 10:00 - 10:45     | General Q&A + student's show & tell                    | SPM faculty                         |
-| 10:45 - 11:45     | The principles of dynamic causal modelling (DCM)     | [Dr Arthur Mitchell](https://profiles.ucl.ac.uk/75769-arthur-mitchell) |
-| 11:45 - 13:00     | DCM for evoked responses                            | [Dr Ashley Tyrer](https://www.au.dk/en/ashley.tyrer@cfin.au.dk) |
+| 10:45 - 11:40     | The principles of dynamic causal modelling (DCM)     | [Dr Arthur Mitchell](https://profiles.ucl.ac.uk/75769-arthur-mitchell) |
+| 11:40 - 13:00     | DCM for evoked responses                            | [Dr Ashley Tyrer](https://www.au.dk/en/ashley.tyrer@cfin.au.dk) |
 | *Lunch Break*                                                                               |
 | 14:00 - 15:00     | DCM for cross-spectral densities                     | [Dr Pranay Yadav](https://profiles.ucl.ac.uk/103112-pranay-yadav/about) |
 | 15:00 - 15:45     | DCM - Demo                                           | [Dr Julia Rodriguez-Sanchez](https://scholar.google.co.uk/citations?user=cTstz8wAAAAJ&hl=en) |
