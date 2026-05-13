@@ -16,12 +16,12 @@ Lecture times are to be considered in UK Time.
 | 10:45 - 11:45     | What are we measuring with M/EEG?                    | [Dr Catharina Zich](https://www.ndcn.ox.ac.uk/team/catharina-zich)      |
 | 11:45 - 13:00     | Data preprocessing                              | [Dr Nicholas Alexander](https://profiles.ucl.ac.uk/74968-nicholas-alexander) |
 | *Lunch Break*                                                                               |
-| 13:45 - 15:00     | Data preprocessing - Demo                            | [Dr Michael Motoussis](https://profiles.ucl.ac.uk/36080-michael-moutoussis) |
-| 15:00 - 15:55     | General linear model (GLM) and classical inference | [Dr Chetan Gohil](https://scholar.google.com/citations?user=dhV0wLwAAAAJ&hl=en) |
+| 13:45 - 14:55     | Data preprocessing - Demo                            | [Dr Michael Motoussis](https://profiles.ucl.ac.uk/36080-michael-moutoussis) |
+| 14:55 - 15:40     | General linear model (GLM) and classical inference | [Dr Chetan Gohil](https://scholar.google.com/citations?user=dhV0wLwAAAAJ&hl=en) |
 | *Break*    
-| 16:00 - 16:45     | Multiple comparisons - Problems & solutions       | [Dr Tim Tierney](https://profiles.ucl.ac.uk/41354-tim-tierney) |
-| 16:45 - 17:45     | [SPM-Python](https://github.com/spm/spm-python) | [Dr Johan Medrano](https://profiles.ucl.ac.uk/91185-johan-medrano) |
-| 17:45 - 18:15     | General Q&A                                         | SPM faculty                            |
+| 15:45 - 16:30     | Multiple comparisons - Problems & solutions       | [Dr Tim Tierney](https://profiles.ucl.ac.uk/41354-tim-tierney) |
+| 16:30 - 17:30     | [SPM-Python](https://github.com/spm/spm-python) | [Dr Johan Medrano](https://profiles.ucl.ac.uk/91185-johan-medrano) |
+| 17:30 - 18:00     | General Q&A                                         | SPM faculty                            |
 
 
 ### Day 2 (19/05/26)
@@ -32,12 +32,12 @@ Lecture times are to be considered in UK Time.
 | 10:30 - 12:20     | Group M/EEG dataset analysis - Demo                 | [Dr Jason Taylor](https://research.manchester.ac.uk/en/persons/jason.taylor) |
 | 12:20 - 13:20     | Bayesian inference                                   | [Dr Dimitris Pinotsis](https://www.city.ac.uk/about/people/academics/dimitrios-pinotsis) |
 | *Lunch Break* 
-| 14:10 - 15:10     | M/EEG source analysis                            | [Dr Timothy West](https://profiles.ucl.ac.uk/45635-timothy-west) ||
-| 15:15 - 15:55     | M/EEG source analysis - Demo                         | [Dr Meaghan Spedden](https://profiles.ucl.ac.uk/88661-meaghan-spedden) |
+| 14:10 - 15:00     | M/EEG source analysis                            | [Dr Timothy West](https://profiles.ucl.ac.uk/45635-timothy-west) ||
+| 15:00 - 15:40     | M/EEG source analysis - Demo                         | [Dr Meaghan Spedden](https://profiles.ucl.ac.uk/88661-meaghan-spedden) |
 | *Break* 
-| 16:00 - 16:45     | Analysis of optically pumped magnetometers (OPM) data | [Dr Stephanie Mellor](https://profiles.ucl.ac.uk/63631-stephanie-mellor)      |
-| 16:45 - 17:15     | OPM data analysis - Demo                     | TBD |
-| 17:15 - 17:45     | General Q&A                                           | SPM faculty                            |
+| 15:45 - 16:30     | Analysis of optically pumped magnetometers (OPM) data | [Dr Stephanie Mellor](https://profiles.ucl.ac.uk/63631-stephanie-mellor)      |
+| 16:30 - 17:00     | OPM data analysis - Demo                     | [Dr Nicholas Alexander](https://profiles.ucl.ac.uk/74968-nicholas-alexander) |
+| 17:00 - 17:30     | General Q&A                                           | SPM faculty                            |
 
 
 ### Day 3 (20/05/26)
