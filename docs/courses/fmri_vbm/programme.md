@@ -25,9 +25,9 @@ This is a sample programme of the [SPM course for MRI](./index.md). The course w
 
 | Time              | Title                           | Faculty                                |
 | ----------------- | ------------------------------- | -------------------------------------- |
-| 09:15 - 10:05     | [Experimental design](./recordings/experimental_design.md)             | [Dr Carolin Moessnang](https://www.zi-mannheim.de/en/research/people/person/6741.html) |
+| 09:15 - 10:05     | [Experimental design](./recordings/experimental_design.md)             | [Dr Herberto Dhanis](https://profiles.ucl.ac.uk/101605-herberto-dhanis/publications) |
 | *Comfort break*               	                                                           |
-| 10:15 - 11:00     | [Event-related fMRI](./recordings/event_related_fmri.md) 	          | [Dr Sonia Medina](https://sites.exeter.ac.uk/pain/group/sonia-medina/) |
+| 10:15 - 11:00     | [Event-related fMRI](./recordings/event_related_fmri.md) 	          | [Dr Olivia Kowalczyk](https://oliviakowalczyk.github.io) |
 | *Tea & coffee*                                                                        	   |
 | 11:30 - 12:00     | [Group level analysis](./recordings/group_analysis.md)            | [Dr Nadine Dijkstra](https://profiles.ucl.ac.uk/74410-nadine-dijkstra) |
 | 12:00 - 13:00	    | Q&A clinic            	      | SPM faculty                            |
