@@ -16,6 +16,8 @@ These datasets will be used during the course and are available to download.
 
 - [DCM for CSD](https://github.com/Frederikvdsteen/SPM_course_MEEG_2022)
 
+- [DCM for ERP (by Ashley Tyrer)](https://github.com/AshleyTyrer/DCM_for_ERPs)
+
 ## Tutorial datasets
 
 ### BEM file for source reconstruction
