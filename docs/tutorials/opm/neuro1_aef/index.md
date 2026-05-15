@@ -27,7 +27,7 @@ BIDS.directory = data_dir;
 Now use SPM to read in the Neuro-1 data and peripheral files. 
 
 Make sure you have downloaded spm. This tutorial has been tested on development version (spm/spm)
-[commit download link](https://github.com/spm/spm/archive/49e95f2d570528e2d8cccc95b621896a2456a3d5.zip)
+[commit download link](https://github.com/spm/spm/archive/bec64318df81d2e0983064fa44ad7a6047598a3d.zip)
 
 ```matlab
 % Run spm (change path as appropriate)
@@ -249,16 +249,13 @@ S = [];
 S.D = avg_e_filt_D;
 S.mode = 'scalp';
 S.timewin = [90 125];
-S.channels = 'regexp_.*-Z.*';
+S.channels = 'regexp_.*Z.*';
 S.optimise = 1;
 S.prefix = 'M100_';
-spm_eeg_convert2images(S);
+image_dir = spm_eeg_convert2images(S);
 
 % Plot image
-image_dir = fullfile(BIDS.directory,['sub-', BIDS.sub], 'meg', ...
-			['M100_avg_e_filt_','sub-', BIDS.sub, '_task-',BIDS.task, '_run-', BIDS.run,'_meg'] ...
-			,['condition_', avg_e_filt_D.conditions{1}, '.nii']);
-spm_image('display',image_dir)
+spm_image('display',image_dir{1})
 ```
 
 The topography is sensible, showing two dipoles, left and right.
@@ -286,7 +283,7 @@ lay.mask{1} = lay.outline{1}; % Extrapolate to fill circle (demo purposes only!)
 % Topoplot
 cfg = [];
 cfg.layout = lay;
-cfg.channel = {'*-Z'};
+cfg.channel = {'Z*'};
 cfg.xlim = [0.09 0.125];
 ft_topoplotER(cfg,ft_D);
 ```
