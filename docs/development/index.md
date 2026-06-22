@@ -38,6 +38,14 @@ Platform-specific instructions to compile SPM MEX files are provided in the link
 
     [Triggering a new Release](release.md)
 
+## FieldTrip Synchronisation
+
+SPM includes a subset of [FieldTrip](https://www.fieldtriptoolbox.org/) in `external/fieldtrip/`. A daily GitHub Action keeps it in sync with FieldTrip's stable `release` branch by opening a pull request that auto-merges once the test suite passes.
+
+!!! tip "FieldTrip Sync"
+
+    [FieldTrip Synchronisation](fieldtrip.md)
+
 ## Contributing to this website
 
 How to contribute to this documentation website:
