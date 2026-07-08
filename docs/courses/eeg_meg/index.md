@@ -6,7 +6,7 @@
 
     ---
 
-    :material-calendar-month: 18-21 May 2026, **online**. | Registration is closed.
+    More details will be announced soon.
 </div>
 
 This course introduces the analysis of EEG and MEG data. The first three days combine theoretical presentations with practical demonstrations of the different data analysis methods implemented in SPM. On the last day participants have the opportunity to work on SPM tutorial data sets under the supervision of the course faculty. We also invite students to use their own data for analysis. 

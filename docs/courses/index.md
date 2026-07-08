@@ -13,7 +13,7 @@ We are delighted to welcome visitors to our SPM courses every spring and autumn.
 
     ---
 
-    :material-calendar-month: 18-21 May 2026, **online**. | Registration is closed.
+    More details will be announced soon.
 </div>
 
 
@@ -21,10 +21,6 @@ We are delighted to welcome visitors to our SPM courses every spring and autumn.
 - :fontawesome-solid-brain:{ .lg .middle } [__SPM for MRI__](./fmri_vbm/index.md) (+ optional [MRI Physics Primer](./physics/index.md))
 
     ---
-
-    :material-calendar-month: 27-29 May 2026, **London**. | Registration is closed.
-    
-    *This course includes optional sessions on **MRI physics** and **concurrent fMRI-EEG**.*
 
     :material-calendar-month: 19-21 October 2026, **online**. | More details will be announced soon.
     

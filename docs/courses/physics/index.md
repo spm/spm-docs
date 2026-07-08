@@ -5,7 +5,7 @@
 
     ---
 
-    26 May 2026, **London**. | Registration is closed.
+    More details will be announced soon.
 
     </div>
 
