@@ -217,7 +217,7 @@ nav:
       - 'courses/physics/index.md'
       - 'Course schedule':                    'courses/physics/programme.md'
       - 'Learning objectives':        'courses/physics/learning_objectives.md'
-      - 'Lecture slides':                 'courses/physics/slides/2026'
+      - 'Lecture slides':                 'https://github.com/spm/spm-docs/tree/main/docs/courses/physics/slides/2026'
   - 'Reference':
     - 'reference/index.md'
     - 'SPM: An annotated bibliography': 'reference/annotated_bibliography.md'
