@@ -18,11 +18,13 @@ We are delighted to welcome visitors to our SPM courses every spring and autumn.
 
 
 <div class="grid cards" markdown>
-- :fontawesome-solid-brain:{ .lg .middle } [__SPM for MRI__](./fmri_vbm/index.md) (+ optional [MRI Physics Primer](./physics/index.md))
+- :fontawesome-solid-brain:{ .lg .middle } [__SPM for MRI__](./fmri_vbm/index.md)
 
     ---
 
-    :material-calendar-month: 19-21 October 2026, **online**. | More details will be announced soon.
+    :material-calendar-month: 19-21 October 2026, **online**. | [Registration is now open.](https://onlinestore.ucl.ac.uk/conferences-and-events/faculty-of-brain-sciences-c07/ucl-institute-of-neurology-d07/d07-spm-mri-course-online)
+</div>
+
     
 </div>
 
