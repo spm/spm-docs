@@ -23,6 +23,8 @@ We are delighted to welcome visitors to our SPM courses every spring and autumn.
     ---
 
     :material-calendar-month: 19-21 October 2026, **online**. | [Registration is now open.](https://onlinestore.ucl.ac.uk/conferences-and-events/faculty-of-brain-sciences-c07/ucl-institute-of-neurology-d07/d07-spm-mri-course-online)
+
+    :material-calendar-month: 2-4 June 2027, **in London**. | More details will be announced soon.
 </div>
 
     
