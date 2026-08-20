@@ -30,12 +30,12 @@ If FieldTrip's `release` branch has not changed since the last sync, the workflo
 
 ### Auto-merge
 
-For auto-merge to take effect, two repository-level settings must be in place:
+For auto-merge to wait for the tests, two repository-level settings must be in place:
 
 - **Allow auto-merge** must be enabled in the repository settings.
-- A **branch protection rule on `main`** must require at least one status check (the `Tests passed` check above).
+- The `main-required-checks` ruleset on `main` must require the `Tests passed` check, which the [Tests workflow](https://github.com/spm/spm/blob/main/.github/workflows/matlab.yml) publishes once every test job has finished.
 
-If either is missing, the `gh pr merge --auto` call fails and the workflow emits a warning; the PR stays open and can be merged manually.
+Without a required check there is nothing for auto-merge to wait on, so the pull request is merged straight away and the tests never gate it. If **Allow auto-merge** is off, the `gh pr merge --auto` call fails and the workflow emits a warning; the PR stays open and can be merged manually.
 
 ## Authentication token
 
