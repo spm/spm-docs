@@ -34,3 +34,11 @@ The [SPM standalone](../installation/standalone.md) is built with the newest mat
 ## Containers
 
 The [SPM containers](../installation/containers.md) build-action is automatically triggerend after the release process finishes. It builds one docker container with the SPM standalone and the Matlab Runtime and a second container with SPM using [GNU Octave](https://octave.org/). In addition, both docker containers are transformed into singularity containers and released as well. They can be accessed on the [GitHub Container Registry](https://github.com/spm/spm-docker/pkgs/container/spm-docker). All the containers can be used without a Matlab License.
+
+## Keeping the workflow actions up to date
+
+The GitHub Actions used across the SPM workflows are pinned to commit hashes rather than to version tags, because a tag can be moved to point at different code. [Dependabot](https://github.com/spm/spm/blob/main/.github/dependabot.yml) proposes updates to those pins in a single grouped pull request each month.
+
+Four actions are excluded from Dependabot and have to be checked by hand, roughly once a year. Two of them, [peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch) and [softprops/action-gh-release](https://github.com/softprops/action-gh-release), are used only in `release.yml`. No pull request runs that workflow, so the test suite says nothing about them and an outdated or broken version would first show up during a release. It is worth checking both for newer versions before creating a release tag.
+
+The other two, `matlab-actions/setup-matlab` and `matlab-actions/run-command`, are deliberately kept at v1 in the jobs that test the older MATLAB releases, which Dependabot has no way to express.
