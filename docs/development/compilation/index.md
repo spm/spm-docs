@@ -24,9 +24,11 @@ Platform-specific throubleshooting is available with the links above. We list he
 
 !!! info "How is the recompilation triggered?"
 
-    If new `.c`, `.cpp`, `.h` or `.hpp` files or changes of those are pushed to `main`, the [compile MEX](https://github.com/spm/spm/actions/workflows/compile_mex.yml) action will automatically run and recompile all MEX files. In can also be triggered manually, which works for a any branch.
+    If new `.c`, `.cpp`, `.h` or `.hpp` files or changes of those are pushed to any branch, the [compile MEX](https://github.com/spm/spm/actions/workflows/compile_mex.yml) action will automatically run and recompile all MEX files. Changes in `external/` are ignored. It can also be triggered manually.
 
 The compiled MEX files will be available as zip a file under the [compile MEX](https://github.com/spm/spm/actions/workflows/compile_mex.yml) action by selecting the corresponding run of the action and downloading the `spm-mex-all.zip` file. It contains compiled MEX files for Windows, Linux, MacOS (Intel) and MacOS (Apple Silicon).
+
+The Linux MEX files are compiled inside a [manylinux2014](https://github.com/pypa/manylinux) container, so they only require `glibc` 2.17 and load on every Linux distribution supported by MATLAB. The run summary reports the `glibc` and `libstdc++` versions they require. MEX files compiled locally require at least the `glibc` version of the machine they were built on, so only add the automatically compiled Linux MEX files to the repository.
 
 The suggested steps after changing or adding new c code are:
 
