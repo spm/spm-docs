@@ -60,7 +60,7 @@ The duration of stimuli can be variable, and the HRFs they elicit often overlap.
 Copy/paste the following to simulate the BOLD response from events at random times:
 ```matlab
 y0 = zeros(N,1);                   % 200 seconds of scanning
-y0(round(rand(30,1)*(N-1)+1)) = 1; % Stimuli at 50, 100 and 150 seconds
+y0(round(rand(30,1)*(N-1)+1)) = 1; % Stimuli at random times
 
 y  = convn(y0,h);     % Convolve stimuli with the HRF
 y  = y(1:length(y0)); % Remove the trailing time points
