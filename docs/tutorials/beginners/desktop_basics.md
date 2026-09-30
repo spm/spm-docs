@@ -5,7 +5,7 @@ in the classroom and on your own computers. You should be able to keep working o
 them on the N: drive which is the same as your UCL OneDrive. See [installation instructions](https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere).
 
 To start MATLAB in a UCL terminal, go to the `UCL Applications Store`.
-and type `matlab` in the search bar. Select `MATLAB 2024a`.
+and type `matlab` in the search bar. Select `MATLAB 2025b`.
 When you start MATLAB®, the desktop appears in its default
 layout.
 
