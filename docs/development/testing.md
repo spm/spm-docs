@@ -5,7 +5,7 @@ There are two types of tests used in SPM. These are unit tests and regression te
 
 
 ## Running tests locally
-Tests run automatically on GitHub in two tiers: a quick tier on every pull request and nightly, running the oldest and the newest tested MATLAB release on every platform, and a full tier every Wednesday covering all releases in between. Unit tests run in every job; regression tests run in a single Linux job in the quick tier and in every job of the full tier. However, you can also run the code locally on your machine before contributing code. Some of the tests require input data that can be downloaded from [here](https://www.fil.ion.ucl.ac.uk/spm/download/data/tests/tests_data.zip). This archive has to be unpacked into a directory within your local copy of SPM called `spm/tests/data` before running the tests.
+Tests run automatically on GitHub in two tiers: a quick tier on every pull request and nightly, running the oldest and the newest tested MATLAB release on Linux and Windows and one job each on an Intel Mac (oldest) and an Apple Silicon Mac (newest), and a full tier every Wednesday covering all releases in between. Unit tests run in every job; regression tests run in a single Linux job in the quick tier and in every job of the full tier. However, you can also run the code locally on your machine before contributing code. Some of the tests require input data that can be downloaded from [here](https://www.fil.ion.ucl.ac.uk/spm/download/data/tests/tests_data.zip). This archive has to be unpacked into a directory within your local copy of SPM called `spm/tests/data` before running the tests.
 
 Once the data is downloaded all the unit tests can be run with the following code snippet.
 
