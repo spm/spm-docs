@@ -29,7 +29,7 @@ The main SPM release is available as e.g. spm_25.01.02.zip on the [release page 
 
 ## SPM standalone
 
-The [SPM standalone](../installation/standalone.md) is built with the newest matlab release on four different OS configurations: Windows, Linux, MacOS (Intel) and MacOS (Apple Silicon). The standalone ZIP contains an installer for the required Matlab Runtime, downloading a smaller Matlab Runtime version tailored to running SPM.
+The [SPM standalone](../installation/standalone.md) is built on four different OS configurations: Windows, Linux, MacOS (Intel) and MacOS (Apple Silicon). The MATLAB release is fixed in [release.yml](https://github.com/spm/spm/blob/main/.github/workflows/release.yml) rather than following the newest release, so a new MATLAB release cannot change a build unannounced; update it there, and in `install_test_standalone.yml` and `test_container.yml`, before a release. MacOS (Intel) is built with an older release, because MATLAB R2026a and later no longer support Intel Macs. The standalone ZIP contains an installer for the required Matlab Runtime, downloading a smaller Matlab Runtime version tailored to running SPM.
 
 ## Containers
 
@@ -39,6 +39,4 @@ The [SPM containers](../installation/containers.md) build-action is automaticall
 
 The GitHub Actions used across the SPM workflows are pinned to commit hashes rather than to version tags, because a tag can be moved to point at different code. [Dependabot](https://github.com/spm/spm/blob/main/.github/dependabot.yml) proposes updates to those pins in a single grouped pull request each month.
 
-Four actions are excluded from Dependabot and have to be checked by hand, roughly once a year. Two of them, [peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch) and [softprops/action-gh-release](https://github.com/softprops/action-gh-release), are used only in `release.yml`. No pull request runs that workflow, so the test suite says nothing about them and an outdated or broken version would first show up during a release. It is worth checking both for newer versions before creating a release tag.
-
-The other two, `matlab-actions/setup-matlab` and `matlab-actions/run-command`, are deliberately kept at v1 in the jobs that test the older MATLAB releases, which Dependabot has no way to express.
+Two actions are excluded from Dependabot and have to be checked by hand, roughly once a year: [peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch) and [softprops/action-gh-release](https://github.com/softprops/action-gh-release). They are used only in `release.yml`. No pull request runs that workflow, so the test suite says nothing about them and an outdated or broken version would first show up during a release. It is worth checking both for newer versions before creating a release tag.
