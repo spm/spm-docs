@@ -86,6 +86,6 @@ Joining in requires a Zoom account, you can quickly [sign up here](https://zoom.
 | 11:05 - 12:05     | [Introduction to DCM](./recordings/dcm_introduction.md)             | [Prof Peter Zeidman](https://peterzeidman.co.uk)|
 | *Lunch*                                                                        	   |
 | 13:05 - 13:45	    | [DCM for resting-state](./recordings/dcm_resting_state.md)  	      | [Dr George Thomas](https://profiles.ucl.ac.uk/68520-george-thomas) |
-| 13:45 - 14:35	    | Q&A clinic            	      | SPM faculty                            |
+| 13:45 - 14:45	    | Q&A clinic            	      | SPM faculty                            |
 | *Break*	                                                                                   |
 | 15:00 - 17:30     | Practical session III	          | SPM faculty                            |
