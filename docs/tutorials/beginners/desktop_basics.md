@@ -56,7 +56,17 @@ MATAB has several tools for navigating this tree structure.
 - `>> cd ../Students` … move into the parent folder and then into “Students” within that folder
 
 > **Tip:**  
-> You can also use the path box above the command window to navigate to a different folder. Copy the path to the folder you want to navigate to, paste it into the path box, and press Enter. This will change the current working directory to the specified folder.
+>It is common particulatly on Desktop @ UCL that the folder where MATLAB starts is not the folder where you want to work. It might not even be writable. So the first thing you might want to do is to change the working directory to a folder where you can write files. On Desktop @ UCL, you can use the N: drive (which is your UCL OneDrive) for this purpose. You can also create a new folder within your OneDrive to keep your work organised. So start your session with:
+
+```matlab
+cd N:\
+mkdir CLNE0068
+cd CLNE0068
+```
+
+> **Tip:**  
+> You can also use the path box above the command window to navigate to a different folder. Copy the path to the folder you want to navigate to (e.g. `N:\`), paste it into the path box, and press Enter. This will change the current working directory to the specified folder. 
+
 
 ## Variables
 - Their names can be a mix of letters and numbers but they begin with a letter
