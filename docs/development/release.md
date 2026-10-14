@@ -33,10 +33,10 @@ The [SPM standalone](../installation/standalone.md) is built on four different O
 
 ## Containers
 
-The [SPM containers](../installation/containers.md) build-action is automatically triggerend after the release process finishes. It builds one docker container with the SPM standalone and the Matlab Runtime and a second container with SPM using [GNU Octave](https://octave.org/). In addition, both docker containers are transformed into singularity containers and released as well. They can be accessed on the [GitHub Container Registry](https://github.com/spm/spm-docker/pkgs/container/spm-docker). All the containers can be used without a Matlab License.
+The [SPM containers](../installation/containers.md) are built by [spm-docker](https://github.com/spm/spm-docker), which checks hourly for new releases. It builds one docker container with the SPM standalone and the Matlab Runtime and a second container with SPM using [GNU Octave](https://octave.org/). Both are also released as singularity containers. They can be accessed on the [GitHub Container Registry](https://github.com/spm/spm-docker/pkgs/container/spm-docker). All the containers can be used without a Matlab License.
 
 ## Keeping the workflow actions up to date
 
 The GitHub Actions used across the SPM workflows are pinned to commit hashes rather than to version tags, because a tag can be moved to point at different code. [Dependabot](https://github.com/spm/spm/blob/main/.github/dependabot.yml) proposes updates to those pins in a single grouped pull request each month.
 
-Two actions are excluded from Dependabot and have to be checked by hand, roughly once a year: [peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch) and [softprops/action-gh-release](https://github.com/softprops/action-gh-release). They are used only in `release.yml`. No pull request runs that workflow, so the test suite says nothing about them and an outdated or broken version would first show up during a release. It is worth checking both for newer versions before creating a release tag.
+One action is excluded from Dependabot and has to be checked by hand, roughly once a year: [softprops/action-gh-release](https://github.com/softprops/action-gh-release). It is used only in `release.yml`. No pull request runs that workflow, so an outdated or broken version would first show up during a release. Check it for a newer version before creating a release tag.
