@@ -218,6 +218,8 @@ nav:
       - 'Course schedule':                    'courses/physics/programme.md'
       - 'Learning objectives':        'courses/physics/learning_objectives.md'
       - 'Lecture slides':                 'https://github.com/spm/spm-docs/tree/main/docs/courses/physics/slides/2026'
+    - 'Code of conduct':
+      -'courses/conduct.md'
   - 'Reference':
     - 'reference/index.md'
     - 'SPM: An annotated bibliography': 'reference/annotated_bibliography.md'
