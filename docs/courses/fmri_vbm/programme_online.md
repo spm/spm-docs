@@ -34,9 +34,9 @@ Please do not share the link to this webpage publicly as it contains information
 
 !!! info ""
     
-    **Zoom Meeting link:** tbc
+    **Zoom Meeting link:** [https://ucl.zoom.us/j/91562883352?pwd=RLnyeCHDc3A8ZIdAzV1ZXW8o8Sn1y3.1](https://ucl.zoom.us/j/91562883352?pwd=RLnyeCHDc3A8ZIdAzV1ZXW8o8Sn1y3.1)
     
-    **Zoom Meeting ID:** tbc
+    **Zoom Meeting ID:** 915 6288 3352
 
     **Zoom Meeting Passcode:** SPM2026
 
