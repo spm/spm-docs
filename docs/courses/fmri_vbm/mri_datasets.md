@@ -9,9 +9,5 @@ We provide a MATLAB script that will download and unzip the datasets on your com
 
 ## Alternative download options
 
-### Individual zip files
-Alternatively, you can manually download separate files for the course:
-
-- [:material-folder-zip-outline: The latest SPM for MATLAB from Github](https://github.com/spm/spm/releases/latest)
-- [:material-folder-zip-outline: Files for day 1 (1GB)](https://www.fil.ion.ucl.ac.uk/spm/data/spmcourse/day_1.zip)
-- [:material-folder-zip-outline: Files for day 2 (1.3GB)](https://www.fil.ion.ucl.ac.uk/spm/data/spmcourse/day_2.zip)
+### Individual zip file
+Alternatively, you can manually download a [zip file](https://www.fil.ion.ucl.ac.uk/spm/data/spmcourse/core_practical_materials.zip) for the course, containing core materials (SPM and the example data).
