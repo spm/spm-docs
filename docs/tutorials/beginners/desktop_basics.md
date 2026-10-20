@@ -147,7 +147,7 @@ and then press the up-arrow key.
 - `>> help <functionName>` … gives a brief description of a function called functionName
 - `>> doc <functionName>` … returns a complete description of functionName
 
-Get help about the function `plot` and document this in your lab-book.
+Get help about the function `plot` and try out a few of the plotting options .
 
 ## Plotting
 The plot function can be used in quite a sophisticated fashion to plot several data sets on the same axis in different colours and different line-types. Axes can be labelled and the graph can be titled – experiment with this because it can make your thesis or papers look great!

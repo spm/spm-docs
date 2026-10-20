@@ -10,8 +10,9 @@ SPM is already available in a special network folder set up for our course. We j
 
 ```matlab
    addpath('S:\FBS_CLNE0068\SPM');
-   fid = fopen('N:\Documents\MATLAB\startup.m','w');
+   fid = fopen('N:\Documents\MATLAB\startup.m','w+');
    fprintf(fid, 'addpath(''S:\\FBS_CLNE0068\\SPM'');');
+   fprintf(fid, 'cd(''N:\\Documents\\MATLAB\\'');');
    fclose(fid);
 ``` 
 
