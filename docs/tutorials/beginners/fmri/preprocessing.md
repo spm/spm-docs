@@ -1,0 +1,161 @@
+# Spatial preprocessing
+
+This page describes the transforms applied to the image data of a single participant prior to statistical analysis. 
+
+
+## Display
+
+Display one of the functional image volumes using the `Display` button on the "Menu" window. Note
+the orbitofrontal and inferior temporal drop-out and ghosting. This can be
+seen more clearly by selecting `Brighten` from the `Effects` menu in the
+`Colours` menu from the `SPM Figure` tab at the top of the "Graphics" window.
+
+
+## Realignment
+
+Under the spatial pre-processing section of the SPM base window select
+`Realign (Est & Res)` from the `Realign` pull-down on the "Menu" window. This will call up
+a realignment job specification in the batch editor window. Then
+
+- Highlight data, select `New Session`, then highlight the newly created
+  `Session` option. There are two fMRI runs, so you need to do this twice.
+
+- For the first session, select `Specify Files` and use the SPM file
+  selector to choose all of the functional image volumes for the first run.
+  To select all the volumes in a file, change the field that says `1` to `NaN`.
+
+- For the second session, select `Specify Files` and use the SPM file
+  selector to choose all of the functional image volumes for the second run.
+
+- The other options in the user interface can be left as they are.
+
+- Save the job file as e.g. `realign_job.m`. When saved as a `.m` file, the jobs are human readable text that can serve as a starting point for creating scripts. If you read the contents of `realign_job.m` in a text editor, the structure of the contents should be comparable to the structure shown in the batch editor.
+```matlab
+matlabbatch{1}.spm.spatial.realign.estwrite.data = {
+                                                    {'func\sub-XX_ses-mri_task-facerecognition_run-01_bold.nii'}
+                                                    {'func\sub-XX_ses-mri_task-facerecognition_run-02_bold.nii'}
+                                                    }';
+matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.quality = 0.95;
+matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.sep = 1.5;
+matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.fwhm = 1;
+matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.rtm = 1;
+matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.interp = 2;
+matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.wrap = [0 0 0];
+matlabbatch{1}.spm.spatial.realign.estwrite.eoptions.weight = '';
+matlabbatch{1}.spm.spatial.realign.estwrite.roptions.which = [2 1];
+matlabbatch{1}.spm.spatial.realign.estwrite.roptions.interp = 4;
+matlabbatch{1}.spm.spatial.realign.estwrite.roptions.wrap = [0 0 0];
+matlabbatch{1}.spm.spatial.realign.estwrite.roptions.mask = 1;
+matlabbatch{1}.spm.spatial.realign.estwrite.roptions.prefix = 'r';
+```
+
+- Press the `Run` button in the batch editor window (green triangle).
+
+This will run the realign job which will write realigned images into the
+folder where the functional images are. These new images will be
+prefixed with the letter "`r`". SPM will then plot the estimated time
+series of translations and rotations. These data, the realignment
+parameters for each run, are also saved to a file called `func/rp_sub-XX_ses-mri_task-facerecognition_run-XX_bold.txt`, so
+that these variables can be used as regressors when fitting GLMs. This
+allows movements effects to be discounted when looking for brain
+activations.
+
+In addition to resliced versions of the original images (`func/rsub-XX_ses-mri_task-facerecognition_run-01_bold.nii` and `func/rsub-XX_ses-mri_task-facerecognition_run-02_bold.nii`), SPM will also create a mean image (`func/meansub-XX_ses-mri_task-facerecognition_run-01_bold.nii`)
+which will be used in the next step of spatial processing - coregistration.
+
+
+## Coregistration
+
+Select `Coregister (Estimate)` from the
+`Coregister` pull-down on the "Menu" window. This will call up the specification of a
+coregistration job in the batch editor window.
+
+- Highlight `Fixed Image` and then select the mean functional image
+  `func/meansub-XX_ses-mri_task-facerecognition_run-01_bold.nii`.
+
+- Highlight `Moved Image` and then select the anatomical image
+  `anat/sub-XX-T1w.nii`.
+
+- Press the `Save` button and save the job as `coreg_job.m`
+
+- Then press the `Run` button.
+
+SPM will then coregister the anatomical image so that it matches the
+functional data (as far as possible using a rigid-body transform).
+SPM will have changed the header of the moved (anatomical) image to reflect its new
+position and orientation.
+
+
+## Segmentation
+
+Press the `Segment` button on the "Menu" window. This will call
+up the specification of a segmentation job in the batch editor window.
+Highlight the `Volumes` field in `Data > Channels` and then select the
+subject's coregistered anatomical image `anat/sub-XX-T1w.nii`. Change
+`Save INU corrected` so that it contains `Save INU corrected` instead
+of `Save nothing`. At the bottom of the list, select `Forward` in
+`Deformation Fields`. Save the job file as `segment_job.m` and then press
+the `Run` button. SPM will segment the structural image using the
+default tissue probability maps as priors. SPM will create, by default,
+gray and white matter images and an intensity non-uniformity corrected version of the image.
+These can be viewed using the `Check Reg` facility.
+
+SPM will also write a spatial normalisation deformation field file 
+`anat/y_sub-XX-T1w.nii` in the original `anat` folder. This
+will be used in the next section to spatially normalise the functional data.
+
+
+## Normalise
+
+Select `Normalise (Write)` from the
+`Normalise` pull-down on the "Menu" window. This will call
+up the specification of a normalise job in the batch editor window.
+
+- Highlight `Data`, select `New Subject`.
+
+- Open `Subject`, highlight `Deformation field` and select the
+  `anat/y_sub-XX-T1w.nii` file that you created in the previous section.
+
+- Highlight `Images to write` and select all of the 
+  resliced functional images (`func/rsub-XX_ses-mri_task-facerecognition_run-01_bold.nii` and `func/rsub-XX_ses-mri_task-facerecognition_run-02_bold.nii`). To select all the volumes in a file, change the field that says `1` to `NaN`.
+
+- Press `Save`, save the job as `norm_func_job.m` and then press the `Run`
+  button.
+
+SPM will then write spatially normalised versions of the images to the `func` folder.
+These files have the prefix `w` (func/wrsub-XX_ses-mri_task-facerecognition_run-01_bold.nii` and `func/wrsub-XX_ses-mri_task-facerecognition_run-02_bold.nii`).
+
+If you wish to superimpose a subject's functional activations on their
+own anatomy you will also need to apply the spatial normalisation
+parameters to their (intensity non-uniformity corrected) anatomical image. To do this
+
+- Select `Normalise (Write)`, highlight `Data`, select `New Subject`.
+
+- Highlight `Deformation field`, select the `anat/y_sub-XX-T1w.nii` file
+  that you created previously and press `Done`.
+
+- Highlight `Images to Write`, select the intensity non-uniformity corrected anatomical MRI
+  `anat/msub-XX-T1w.nii` and press `Done`.
+
+- Open `Writing Options`, select voxel sizes and change the default \[`2
+  2 2`\] to \[`1 1 1`\] which better matches the original resolution of the
+  images.
+
+- Save the job as `norm_struct_job.m` and press the `Run` button.
+
+The spatially normalised image will be saved as `anat/wmsub-XX-T1w.nii`.
+
+
+## Smoothing
+
+Press the `Smooth` button on the "Menu" window. This will call up the specification of a smooth job in the batch editor window.
+
+- Select `Images to Smooth` and then select the spatially normalised
+  volumes created in the last section (`func/wrsub-XX_ses-mri_task-facerecognition_run-01_bold.nii` and `func/wrsub-XX_ses-mri_task-facerecognition_run-02_bold.nii`). To select all the volumes in a file, change the field that says `1` to `NaN`.
+
+- Save the job as `smooth_job.m` and press the `Run` button.
+
+This will smooth the data by (the default) 8 mm in each direction, which will be saved as image files prefixed by `s` (`func/swrsub-XX_ses-mri_task-facerecognition_run-01_bold.nii` and `func/swrsub-XX_ses-mri_task-facerecognition_run-02_bold.nii`).
+
+
+--8<-- "addons/abbreviations.md"

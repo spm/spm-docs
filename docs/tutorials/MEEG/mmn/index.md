@@ -367,7 +367,7 @@ label="c23"></span></em></figcaption>
 
 ### Automatisation of preprocessing
 
-The preprocessing steps we performed separately for instructive puproses
+The preprocessing steps we performed separately for instructive purposes
 can all be run together as part of a pipeline. Once specified such a
 pipeline can be reused on a different input dataset from a different
 session or subject. There are two ways to build a pipeline in SPM. One

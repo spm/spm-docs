@@ -1,9 +1,34 @@
 .md-typese__table {
-    min-width: 100%;
+     min-width: 100%;
 }
 
 .md-typeset table:not([class]) {
      display: table;
+}
+
+/* Remove site title space */
+.md-header__title {
+     display: none;
+}
+
+/* Make header a clean flex container */
+.md-header__inner {
+  display: flex;
+  align-items: center;
+}
+
+/* Ensure logo stays on the far left */
+.md-header__button.md-logo {
+  margin-right: auto;
+}
+
+/* Push all other header options (search, repo) to the right */
+.md-header__option {
+  margin-left: 0;
+}
+
+.md-header__option:not(:first-of-type) {
+  margin-left: 0.4rem;
 }
 
 /* Admonition Matlab */

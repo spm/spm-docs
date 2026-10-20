@@ -1,4 +1,4 @@
-# SPM Course - EEG & MEG
+# SPM Course for EEG & MEG
 
 These datasets will be used during the course and are available to download.
 
@@ -14,7 +14,11 @@ These datasets will be used during the course and are available to download.
 
 - [Group fMRI results](https://www.fil.ion.ucl.ac.uk/spm/data/fusion/fMRI_group_results_images.zip)
 
+### DCM demos
+
 - [DCM for CSD](https://github.com/Frederikvdsteen/SPM_course_MEEG_2022)
+
+- [DCM for ERP (by Ashley Tyrer)](https://github.com/AshleyTyrer/DCM_for_ERPs)
 
 ## Tutorial datasets
 

@@ -5,67 +5,72 @@
 Data structures available in MATLAB behave differently from those often
 used in Python.
 
-In MATLAB:
-
-- MATLAB uses 1-indexing; 1 denotes the first element in a list.
-- Arrays and scalars are instances of the same type (such as `single`
-  or `double`). Scalars are arrays with shape `[1 1]`.
-- Arrays have an infinite number of singleton dimensions. In other words, an
-  array with size `[m n]` and an array with size `[m n 1 1]` are exactly
-  identical.
-- When an operator acts on arrays with different shapes, these implicit
-  trailing dimensions mean that arrays are broadcasted to the right. For
-  example, the sum of arrays with shape `[m n]` and `[m 1 k]` is possible
-  and results in an array with shape `[m n k]`, as if the first array
-  had shape `[m n 1]`.
-- The size of an array, returned by `size(a)` always has a length of at
-  least 2. That is, a scalar has size `[1 1]`, a column vector has size
-  `[n 1]` and a row vector has size `[1 n]`.
-- Indexing multidimensional arrays is _explicit_. If the number of indexed
-  dimensions is smaller than the number of array dimensions, the remaining
-  (rightmost) dimensions are flattened by the indexing operation.
-- By default, literals have type `double`, unless they are explicitly
-  cast to another data type. That is, `1` has type `double`, even if
-  no decimal separator is used.
-- Cells (which can contain elements of any type), can be cell _arrays_,
-  with any number of dimensions. A one dimensional cell is a cell array
-  with size `[1 n]`.
-- Similarly, structures can be structure _arrays_. A scalar structure is
-  a structure array with size `[1 1]`.
-- The fields of a structure are accessed using the dot notation (`x.field`).
-  When the field of a structure array is accessed, a series of individual
-  values are returned, which can be stored in a cell
-  (`s(3,3).a = 1; [c{1:9}] = s.a`).
-- MATLAB structures can be implicitly defined and reshaped; assigning an
- element out of bounds implicitly resizes a numeric (or cell or structure)
- array.
-
-In Python:
-
-- Python uses 0-indexing; 0 denotes the first element in a list.
-- Python defines builtin scalar types `bool`, `int`, `float` and `complex`.
-  The underlying `C` data type is plarform specific, but generally maps
-  to `bool`, `int64`, `float64` and `complex128`.
-- Python does not defines builtin arrays, but the widely used NumPy package
-  does. All NumPy arrays have the same type (`np.ndarray`), and the data
-  type of their elements is an attribute of a given array instance.
-- The shape of a NumPy array is one of its attributes. Arrays can have an
-  empty shape (in which case it is equivalent to a scalar for most
-  purposes), or a shape with any number of dimensions. Dimensions are
-  _explicit_: arrays with shape `[m, n]` and `[m, n, 1, 1]` behave
-  differently.
-- When an operator acts on arrays with different number of dimensions,
-  arrays are broadcasted to the left. For example, the sum of arrays with
-  shape `[m n]` and `[k 1 n]` is possible and results in an array with
-  shape `[k m n]`, as if the first array had shape `[1 m n]`.
-- Indexing multidimensional arrays is _implicit_: non-indexed dimensions
-  are preserved (`a[i, j]` and `a[i, j, :, :]` are equivalent if `a` has
-  four dimensions).
-- Literals that have a decimal separator are of type `float` (_e.g._, `1.`),
-  whereas those that do not are of type `int` (_e.g._, `1`).
-- Lists can contain elements of any type, and are one-dimensional.
-- Dictionaries are accessed with the indexing notation (`x["field"]) and
-  are always scalar.
++----------------------------------------------+----------------------------------------------+
+| !!! matlab "MATLAB"                          | !!! python "Python"                          |
++==============================================+==============================================+
+| 1-indexing;                                  | 0-indexing;                                  |
+| 1 denotes the first element in a list.       | 0 denotes the first element in a list.       |
++----------------------------------------------+----------------------------------------------+
+| Arrays and scalars are instances of          | Python defines builtin scalar types          |
+| the same type (`single` or `double`)         | `bool`, `int`, `float` and `complex`.        |
+| Scalars are arrays with shape `[1 1]`.       | The underlying `C` data type is platform     |
+|                                              | specific, but generally maps to              |
+|                                              | `bool`, `int64`, `float64` and `complex128`. |
++----------------------------------------------+----------------------------------------------+
+| The size of an array, returned by  `size(a)` | The shape of a NumPy array is one of its     |
+| always has a length of at least 2. That is,  | attributes. Arrays can have an empty shape   |
+| a scalar has size `[1 1]`, a column vector   | (in which case it is equivalent to a scalar  |
+| has size `[n 1]` and a row vector has size   | for most purposes), or a shape with any      |
+| `[1 n]`.                                     | number of dimensions.                        |
++----------------------------------------------+----------------------------------------------+
+| Arrays have an infinite number of singleton  | Dimensions are  _explicit_: arrays with      |
+| dimensions. In other words, an array with    | shape `[m, n]` and `[m, n, 1, 1]` behave     |
+| size `[m n]` and an array with size          | differently.                                 |
+| `[m n 1 1]` are identical.                   |                                              |
++----------------------------------------------+----------------------------------------------+
+| When an operator acts on arrays with         | When an operator acts on arrays with         |
+| different shapes, these implicit trailing    | different number of dimensions, arrays are   |
+| dimensions mean that arrays are broadcasted  | broadcasted to the left.                     |
+| to the right.                                |                                              |
+|                                              |                                              |
+| For example, the sum of arrays with shape    | For example, the sum of arrays with shape    |
+| `[m n]` and `[m 1 k]` is possible and results| `[m n]` and `[k 1 n]` is possible and results|
+|  in an array with shape `[m n k]`, as if the | in an array with shape `[k m n]`, as if the  |
+| first array had shape `[m n 1]`.             | first array had shape `[1 m n]`.             |
++----------------------------------------------+----------------------------------------------+
+| Indexing multidimensional arrays is          | Indexing multidimensional arrays is          |
+| _explicit_. If the number of indexed         | _implicit_: non-indexed dimensions are       |
+| dimensions is smaller than the number of     | preserved (`a[i, j]` and `a[i, j, :, :]` are |
+| array dimensions, the remaining (rightmost)  | equivalent if `a` has   four dimensions).    |
+| dimensions are flattened by the indexing     |                                              |
+| operation.                                   |                                              |
++----------------------------------------------+----------------------------------------------+
+| By default, literals have type `double`,     | Literals that have a decimal separator are of|
+| unless they are explicitly cast to another   | type `float` (_e.g._, `1.`),  whereas those  |
+| data type. That is, `1` has type `double`,   | that do not are of type `int` (_e.g._, `1`). |
+| even if no decimal separator is used.        |                                              |
++----------------------------------------------+----------------------------------------------+
+| Cells (which can contain elements of any     | Lists can contain elements of any type, and  |
+| type), can be cell _arrays_, with any number | are one-dimensional.                         |
+| of dimensions. A one dimensional cell is a   |                                              |
+| cell array with size `[1 n]`.                |                                              |
++----------------------------------------------+----------------------------------------------+
+| Similarly, structures can be structure       | Dictionaries are always scalar.              |
+| _arrays_. A scalar structure is a structure  |                                              |
+| array with size `[1 1]`.                     |                                              |
++----------------------------------------------+----------------------------------------------+
+| The fields of a structure are accessed using | Dictionaries are accessed with the indexing  |
+| the dot notation (`x.field`).                | notation (`x["field"]`).                     |
+| When the field of a structure array is       |                                              |
+| accessed, a series of individual values are  |                                              |
+| returned, which can be stored in a cell      |                                              |
+| (`s(3,3).a = 1; [c{1:9}] = s.a`).            |                                              |
++----------------------------------------------+----------------------------------------------+
+| MATLAB structures can be implicitly defined  |                                              |
+|and reshaped; assigning an element out of     |                                              |
+| bounds implicitly resizes a numeric (or cell |                                              |
+| or structure) array.                         |                                              |
++----------------------------------------------+----------------------------------------------+
 
 ## The SPM-Python type system
 
@@ -100,11 +105,13 @@ and pure NumPy arrays can be passed to SPM functions that expect a numeric
 array. The `Array` class adds implicit indexing, such that the following
 (self-explanatory) snippet works:
 
-```python
-x = Array([0])  # Define an array with shape [0] -- it is empty
-x[1] = 1        # Assign value 1 at index 3. Intermediate indices are filled with zeros
-print(x)        # Prints: [0.0, 1.0]
-print(repr(x))  # Prints: Array([0., 1.])
+```pycon
+>>> x = Array([0])  # Define an array with shape [0] -- it is empty
+>>> x[1] = 1        # Assign value 1 at index 3. Intermediate indices are filled with zeros
+>>> print(x)
+[0.0, 1.0]
+>>> print(repr(x))
+Array([0., 1.])
 ```
 
 !!! failure
@@ -117,16 +124,20 @@ print(repr(x))  # Prints: Array([0., 1.])
 
 Implicit indexing is also supported by types `Cell` and `Struct`:
 
-```python
-c = Cell()
-c[1] = 1
-print(c)        # Prints: [[], 1]
-print(repr(c))  # Prints: Cell([Array([]), 1])
+```pycon
+>>> c = Cell()
+>>> c[1] = 1
+>>> print(c)
+[[], 1]
+>>> print(repr(c))
+Cell([Array([]), 1])
 
-s = Struct()
-s[1].field = 1
-print(s)        # Prints: [{'field': Array([])}, {'field': 1}]
-print(repr(s))  # Prints: Struct([{'field': Array([])}, {'field': 1}])
+>>> s = Struct()
+>>> s[1].field = 1
+>>> print(s)
+[{'field': Array([])}, {'field': 1}]
+>>> print(repr(s))
+Struct([{'field': Array([])}, {'field': 1}])
 ```
 
 Implicit indexing can be deeply nested, a feature that is commonly used

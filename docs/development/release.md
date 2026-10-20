@@ -29,8 +29,14 @@ The main SPM release is available as e.g. spm_25.01.02.zip on the [release page 
 
 ## SPM standalone
 
-The [SPM standalone](../installation/standalone.md) is built with the newest matlab release on four different OS configurations: Windows, Linux, MacOS (Intel) and MacOS (Apple Silicon). The standalone ZIP contains an installer for the required Matlab Runtime, downloading a smaller Matlab Runtime version tailored to running SPM.
+The [SPM standalone](../installation/standalone.md) is built on four different OS configurations: Windows, Linux, MacOS (Intel) and MacOS (Apple Silicon). The MATLAB release is fixed in [release.yml](https://github.com/spm/spm/blob/main/.github/workflows/release.yml) rather than following the newest release, so a new MATLAB release cannot change a build unannounced; update it there, and in `install_test_standalone.yml` and `test_container.yml`, before a release. MacOS (Intel) is built with an older release, because MATLAB R2026a and later no longer support Intel Macs. The standalone ZIP contains an installer for the required Matlab Runtime, downloading a smaller Matlab Runtime version tailored to running SPM.
 
 ## Containers
 
-The [SPM containers](../installation/containers.md) build-action is automatically triggerend after the release process finishes. It builds one docker container with the SPM standalone and the Matlab Runtime and a second container with SPM using [GNU Octave](https://octave.org/). In addition, both docker containers are transformed into singularity containers and released as well. They can be accessed on the [GitHub Container Registry](https://github.com/spm/spm-docker/pkgs/container/spm-docker). All the containers can be used without a Matlab License.
+The [SPM containers](../installation/containers.md) are built by [spm-docker](https://github.com/spm/spm-docker), which checks hourly for new releases. It builds one docker container with the SPM standalone and the Matlab Runtime and a second container with SPM using [GNU Octave](https://octave.org/). Both are also released as singularity containers. They can be accessed on the [GitHub Container Registry](https://github.com/spm/spm-docker/pkgs/container/spm-docker). All the containers can be used without a Matlab License.
+
+## Keeping the workflow actions up to date
+
+The GitHub Actions used across the SPM workflows are pinned to commit hashes rather than to version tags, because a tag can be moved to point at different code. [Dependabot](https://github.com/spm/spm/blob/main/.github/dependabot.yml) proposes updates to those pins in a single grouped pull request each month.
+
+One action is excluded from Dependabot and has to be checked by hand, roughly once a year: [softprops/action-gh-release](https://github.com/softprops/action-gh-release). It is used only in `release.yml`. No pull request runs that workflow, so an outdated or broken version would first show up during a release. Check it for a newer version before creating a release tag.

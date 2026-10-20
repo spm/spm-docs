@@ -1,0 +1,209 @@
+## Desktop Basics
+
+For convenience, we will work with Desktop@UCL Anywhere which gives you access to the same environment
+in the classroom and on your own computers. You should be able to keep working on the same files if you save
+them on the N: drive which is the same as your UCL OneDrive. See [installation instructions](https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere).
+
+To start MATLAB in a UCL terminal, go to the `UCL Applications Store`.
+and type `matlab` in the search bar. Select `MATLAB 2025b`.
+When you start MATLAB®, the desktop appears in its default
+layout.
+
+![MATLAB desktop in its default layout.](./desktop.png)
+
+*Figure MATLAB desktop in its default layout. At the top is a toolstrip with tabs labeled Home, Plots, and Apps. The Files panel and the Workspace panel are open on the left side of the desktop. The Command Window is open above the bottom sidebar.* 
+
+The desktop includes these areas:
+
+* Files panel — Access your files.
+* Workspace panel — Explore data that you create or import from
+  files.
+* Command Window — Enter commands at the command line, indicated by the
+  prompt (`>>`).
+* Sidebars — Access tools docked in the desktop and additional
+  panels.
+
+
+# Some things to know before doing anything
+
+## How to navigate within the directory system:
+
+Files on computers are organised hierarchically, with files contained in folders, and folders within other folders.
+"Folders" are more properly referred to as "directories".
+When you run MATLAB, it will work from some specific directory (the "working directory").
+If you refer to a file, the name that you use should either be relative to this working directory, or should be the full path to the file.
+
+<details>
+<summary>Windows example</summary>
+For example, if the full file name is ``C:\Users\student\data\study1\sub-02\func\sub-02_run-01.nii`` (i.e. a file called ``sub-02_run-01.nii`` that is in directory ``C:\Users\student\data\study1\sub-02\func``), and your working directory is ``C:\Users\student\data\study1``, then this file can be referred to as ``sub-02\func\sub-02_run-01.nii``.
+If the working directory happens to be ``C:\Users\student\data\study1\results``, and you wish to refer to the file, then you need to go back one level using ``..`` and then forward again, referring to the file as ``..\sub-02\func\sub-02_run-01.nii``.
+</details>
+
+<details>
+<summary>Mac example</summary>
+For example, if the full file name is ``/home/student/data/study1/sub-02/func/sub-02_run-01.nii`` (i.e. a file called ``sub-02_run-01.nii`` that is in directory ``/home/student/data/study1/sub-02/func``), and your working directory is ``/home/student/data/study1``, then this file can be referred to as ``sub-02/func/sub-02_run-01.nii``.
+If the working directory happens to be ``/home/student/data/study1/results``, and you wish to refer to the file, then you need to go back one level using ``..`` and then forward again, referring to the file as ``../sub-02/func/sub-02_run-01.nii``.
+</details>
+
+MATAB has several tools for navigating this tree structure.
+
+- `>> pwd` … present working directory (folder). This is the folder that MATLAB currently works from.
+- `>> dir` (or `>> ls`) … what folders (or files) are in this folder (directory)
+- `>> cd ..` … move up one folder from here (into the parent directory)
+- `>> mkdir Data` … make a new folder named "Data" in the current folder
+- `>> mkdir Students` … make a new folder named "Students" in the current folder
+- `>> cd Data` … change directory into the folder “Data” 
+- `>> cd ../Students` … move into the parent folder and then into “Students” within that folder
+
+> **Tip:**  
+>It is common particulatly on Desktop @ UCL that the folder where MATLAB starts is not the folder where you want to work. It might not even be writable. So the first thing you might want to do is to change the working directory to a folder where you can write files. On Desktop @ UCL, you can use the N: drive (which is your UCL OneDrive) for this purpose. You can also create a new folder within your OneDrive to keep your work organised. So start your session with:
+
+```matlab
+cd N:\
+mkdir CLNE0068
+cd CLNE0068
+```
+
+> **Tip:**  
+> You can also use the path box above the command window to navigate to a different folder. Copy the path to the folder you want to navigate to (e.g. `N:\`), paste it into the path box, and press Enter. This will change the current working directory to the specified folder. 
+
+
+## Variables
+- Their names can be a mix of letters and numbers but they begin with a letter
+- Their names are case sensitive
+- Their names must be no longer than 31 characters in length
+- They can be:
+
+    - A string
+    - A scalar
+    - A vector
+    - A matrix…
+
+- Their ‘index’ starts at 1
+
+Create a string, a scalar, and a vector as follows:
+
+```matlab
+MyString = 'I am learning MATLAB';
+MyScalar = 6;
+MyVector = [1,2,3];
+MyMatrix = [1,2;3,4];
+```
+
+## Arrays
+
+In MATLAB, the variable we referred to as a vector can also be simply a list of numbers, known as an array.
+
+Create an array with ‘elements’ increasing from -4 to +4 in increments of 0.01.
+
+```matlab
+MyArray = -4:0.01:4;
+```
+
+How many elements do you think there are in this array? Note: Each element can be ‘indexed’ by entering its name followed by an index in round brackets (e.g `MyArray(1)`). By using indexing, what is the 230th element of MyArray? Use MATLAB to find out the dimensions of your three vectors and this new array using the function `size` (type help size if you want to know how).
+
+## Functions
+
+The concept of a function describes how one quantity (the input) determines the value of another (the output) e.g., The quantity y is a function of the quantity x. This concept is used all the time in MATLAB. We are going to use a function from the library to create several data sets and plot them on the same graph.
+
+Multiply your array by π to create a new array with numbers running from -4π to 4π.
+
+```matlab
+MyInput = pi*MyArray;
+```
+
+This array will help us plot two complete periods either side of zero with a period 2π. The first function is simply a sine function:
+
+```matlab
+sinY0 = sin(MyInput);
+```
+
+The second is a cosine:
+
+```matlab
+cosY0 = cos(MyInput);
+```
+
+A third is a sine function that is π/6 radians out of phase with the first:
+
+```matlab
+sinY0a = sin(MyInput - pi/6);
+```
+
+A fourth is a sine function that has twice the frequency of the first – 1st harmonic!
+
+```matlab
+sinY1 = sin(2*MyInput);
+```
+
+You can recall previous commands by pressing the up- and down-arrow
+keys, ↑ and ↓. Press the arrow keys either at an empty
+command line or after you type the first few characters of a command.
+For example, to recall the command `MyInput = pi*MyArray`, type `M`,
+and then press the up-arrow key.
+
+## How to get some help
+
+- `>> help <functionName>` … gives a brief description of a function called functionName
+- `>> doc <functionName>` … returns a complete description of functionName
+
+Get help about the function `plot` and document this in your lab-book.
+
+## Plotting
+The plot function can be used in quite a sophisticated fashion to plot several data sets on the same axis in different colours and different line-types. Axes can be labelled and the graph can be titled – experiment with this because it can make your thesis or papers look great!
+
+Use the help function to find out more about the plot function and decide on the best way to represent the data you’ve created (e.g., hold on). Create some further data with different frequencies and phase differences and add some together. Comment in your workbook on the relative phase of each of these and how that affects the summation.
+
+## Editor
+
+The MATLAB editor is a powerful tool for writing and debugging scripts and functions. You can open the editor by by selecting `New Script` from the `Home` tab in the toolstrip or by switching to the `Editor` tab and clicking on `New` and selecting `Script` from the dropdown menu.
+
+- Create a new script and copy all the commands above into it.
+- Save the script with a meaningful name, such as `my_first_script.m`.
+
+## Running and debugging code
+
+- To run your script you can type its name (without the `.m` extension) in the Command Window and press `Enter`. For that to work, you should ensure that the current folder is the one where your script is saved (use cd command to change folder if necessary). It is possible to call scripts and functions from other folders when they are on the MATLAB path. More on that later.
+- Another way to run your script is to click the `Run` button (green triangle) in the `Editor` toolbar.
+
+If your code does not work as expected, you can use the debugging tools in the editor to find and fix errors. You can set breakpoints by clicking in the left margin next to a line of code (a red dot should appear). When you run the script, execution will pause at the breakpoint, allowing you to inspect variables and step through the code line by line, using `Step` button located next to the `Run` button in the toolbar. To exit debugging mode, click the `Continue` button (green triangle with a line) or the `Stop` button (red square).
+
+Some other useful debugging commands are:
+
+- `dbstop if error` … this command will cause MATLAB to enter debug mode if an error occurs, allowing you to inspect the state of your program at the point of the error.
+- `dbclear all` … this command will clear all breakpoints that you have set in your code.
+- `dbquit` … this command will exit debug mode and return to normal execution.
+
+## Comments
+
+Any line starting with % is a comment and will not be executed. Comments are useful for explaining what your code does or for leaving notes for yourself or others who may read your code later.
+
+- Add comments to your script to explain what each section of code does.
+
+## Cells
+
+You can divide your script into sections called cells. Each cell can be executed independently, which is useful for debugging and testing parts of your code without running the entire script.  To create a cell, add a line with `%%` at the beginning. For example:
+
+```matlab 
+%% Create an array
+MyArray = -4:0.01:4;
+```
+
+You can run a cell by clicking the `Run Section` button in the editor toolbar or by pressing `Ctrl + Enter`.
+
+
+<!-- Commented out for now as Copilot is not available in 2024a
+### Copilot
+
+MATLAB Copilot is a built-in large language model (LLM) that can help you write code and explain bits of code that someone else wrote as well as error messages. It is available in MATLAB versions 2025a and later so if you are using an older MATLAB, you will not find it there. To open Copilot, click on the Copilot icon in the top right corner of the MATLAB window.
+
+![Copilot icon in the top right corner of the MATLAB window.](./copilot.png)
+ 
+A Copilot Chat window will open that works similarly to ChatGPT and other LLMs you might already be using, except it's more knowledgeable about MATLAB programming. You can ask Copilot questions about your code, and it will try to help you understand it or suggest improvements.
+
+You can also select a piece of code in the editor, right-click and select `Explain code` from the `Copilot` submenu. An explanation of the code will appear in the Copilot Chat window.
+
+As you write your code, Copilot will suggest completions and improvements. You can accept these suggestions by pressing `Tab` or clicking on the suggestion. Make sure to review the suggestions carefully, as they may not always be correct or optimal.
+
+- Repeat the exercise with plotting, asking Copilot for help.
+-->

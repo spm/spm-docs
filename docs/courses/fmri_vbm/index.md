@@ -1,19 +1,19 @@
-# SPM Course - fMRI & VBM
+# SPM Course for MRI
 
 <div class="grid cards" markdown>
-- :fontawesome-solid-brain:{ .lg .middle } [__Upcoming course__](./programme.md)
+- :fontawesome-solid-brain:{ .lg .middle } [__Upcoming courses__](./programme.md)
 
     ---
 
-    23-25 April 2025, **in-person**. | Registration is closed.
+    :material-calendar-month: 19-21 October 2026, **online**. | Registration is now closed.
 
-    October 2025, **online**. | More details will be announced soon.
+    :material-calendar-month: 2-4 June 2027, **in London**. | More details will be announced soon.
     </div>
 
 !!! info inline end "Course recordings"
-    Select topics from the menu to view recordings from a previous fMRI & VBM course.
+    Select topics from the menu to view recordings from a previous MRI course.
     
-This three-day course introduces the analysis of neuroimaging data, including Magnetic Resonance Imaging (MRI) and functional MRI (fMRI). It covers:
+This course introduces the analysis of neuroimaging data, including Magnetic Resonance Imaging (MRI) and functional MRI (fMRI). It covers:
 
 - Experimental design
 - Pre-processing brain images

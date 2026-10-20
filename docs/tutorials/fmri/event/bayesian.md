@@ -23,9 +23,9 @@ will call up an fMRI specification job in the batch editor window. Then
 
 - Press `Done`.
 
-- Highlight `Directory` and select the `DIR/bayesian` directory you
+- Highlight `Directory` and select the `DIR/bayesian` folder (directory) you
   created earlier (you will first need to deselect the `DIR/categorical`
-  directory).
+  folder).
 
 - Save the job as `specify_bayesian.mat` and press the `Run` button.
 
@@ -36,7 +36,7 @@ up the specification of an fMRI estimation job in the batch editor
 window. Then
 
 - Highlight the `Select SPM.mat` option and then choose the `SPM.mat`
-  file saved in the `DIR/bayesian` subdirectory
+  file saved in the `DIR/bayesian` subfolder
 
 - Highlight `Method` and select the `Choose Bayesian 1st-level` option.
 
@@ -50,7 +50,7 @@ window. Then
 indicating heterogeneity near the circle of Willis </figcaption>
 </figure>
 
-SPM will write a number of files into the output directory including
+SPM will write a number of files into the output folder, including
 
 - An `SPM.mat` file.
 

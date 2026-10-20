@@ -34,7 +34,7 @@ Again save your batch before proceeding. If you have done everything right, you 
 
 ## Analysis and visualisation
 
-Before we finish, it is a good idea to generate a population average brain for projecting our data onto (because it is not precisely MNI). To do this, we simply warp the bias corrected T1s to our group average space. You can do this using `SPM` :material-arrow-right-bold: `Tools` :material-arrow-right-bold: `Shoot tools` :material-arrow-right-bold: `Write normalised`
+Before we finish, it is a good idea to generate a population average brain for projecting our data onto (because it is not precisely MNI). To do this, we simply warp the intensity nonuniformity corrected T1s to our group average space. You can do this using `SPM` :material-arrow-right-bold: `Tools` :material-arrow-right-bold: `Shoot tools` :material-arrow-right-bold: `Write normalised`
 
 * **Shoot Template**: As before, select the final template image created in the previous step (`Template_4.nii`).
 
@@ -44,9 +44,9 @@ Before we finish, it is a good idea to generate a population average brain for p
 
         * **Deformation fields**: Select all the ``y_*.nii``.
 
-        * **Images**: Need one channel of images for warping the bias corrected scans.
+        * **Images**: Need one channel of images for warping the intensity nonuniformity corrected scans.
 
-            * **Images**: Select the bias corrected images (``m*.nii``), in the same order as the deformation fields.
+            * **Images**: Select the intensity nonuniformity corrected images (``m*.nii``), in the same order as the deformation fields.
 
 * **Voxel Sizes**: Specify voxel sizes for spatially normalised images (1mm might be a good choice).
 

@@ -41,7 +41,7 @@ batch editor window. Then:
   bit simpler for present purposes!).
 
 - Highlight `Directory` and select `DIR/parametric` (having "unselected"
-  the current definition of directory from the Categorical analysis).
+  the currently defined folder from the Categorical analysis).
 
 - Save the job as `parametric_spec` and press the `Run` button.
 
@@ -67,11 +67,11 @@ up the specification of an fMRI estimation job in the batch editor
 window. Then
 
 - Highlight the `Select SPM.mat` option and then choose the `SPM.mat`
-  file saved in the `DIR/parametric` directory.
+  file saved in the `DIR/parametric` follder.
 
 - Save the job as `parametric_est.job` and press the `Run` button.
 
-SPM will write a number of files into the selected directory including
+SPM will write a number of files into the selected folder (directory) including
 an `SPM.mat` file.
 
 ## Plotting parametric responses
@@ -81,7 +81,7 @@ and quadratic terms) on the response to repeated Famous faces, within
 those regions generally activated by faces versus baseline. To do this
 
 - Press `Results` and select the `SPM.mat` file in the `DIR/parametric`
-  directory.
+  folder.
 
 - Press `Define new contrast`, enter the name `Famous Lag`, press the
   `F-contrast` radio button, enter `1:6 9:15` in the `columns in reduced

@@ -18,5 +18,6 @@ These tutorials cover the following areas in OPM analysis.
 3. [Coregistration](coreg/index.md)
 4. [Simulation](simulation/index.md)
 5. [Supported File Formats](formats/index.md)
+6. [Neuro1: Sensor Level AEF](neuro1_aef/index.md)
 
 --8<-- "addons/abbreviations.md"

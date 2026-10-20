@@ -2,7 +2,7 @@
 
 ## Introduction
 
-!!! note "What is Standalone SPM?"
+!!! info "What is Standalone SPM?"
     Standalone SPM is a version of SPM that has been compiled using the [MATLAB Compiler](https://www.mathworks.com/products/compiler.html) so that it does not require a MATLAB licence (you might want to check first [here](https://www.mathworks.com/academia/tah-support-program/eligibility.html) whether you have access to a MATLAB campus license).
 
 The download contains:
@@ -23,7 +23,7 @@ The download contains:
     runtime_installer/Runtime_R2024b_for_spm_standalone_24.11.install -agreeToLicense yes
     ```
 
-### First Run
+### First run
 
 - The first time the standalone application will be executed, the CTF file will be unpacked in a subfolder so if you installed the CTF in a folder that requires administrative permission for write access, you should execute the application once under those privileges -- see below.
 
@@ -128,7 +128,7 @@ Furthermore, `batch` followed by a batch filename (`*.mat` or `*.m`) will start 
     SPM_HTML_BROWSER=0
     ```
 
-## Frequently Asked Questions
+## FAQ
 
 !!! question "Will it run faster?"
 

@@ -115,9 +115,9 @@ Matlab code in Python (taken from the OPM tutorial).
     Here, D will be a meeg object which contains a virtual representation
     of the Matlab object. Class methods should work as expected, e.g.:
 
-    ```python
-    D.fullfile()
-    >>> './OPM_meg_001.mat'
+    ```pycon
+    >>> D.fullfile()
+    './OPM_meg_001.mat'
     ```
 
     Note that the alternative call that exist in Matlab
@@ -186,9 +186,9 @@ Matlab code in Python (taken from the OPM tutorial).
     <div markdown="1" style="width:49%; margin-right:1%">
     !!! matlab "MATLAB"
         ```matlab
-        S=[];
-        S.D=D;
-        S.freq=[10];
+        S = [];
+        S.D = D;
+        S.freq = [10];
         S.band = 'high';
         fD = spm_eeg_ffilter(S);
         ```

@@ -43,6 +43,10 @@ This will generate `*.mexa64` MEX files.
 
     or similar, and you may then further edit that copy if required. If you match the release, `mex` will find your copy of `mexopts.sh`.
 
+!!! failure "`GLIBC_2.xx not found` error"
+
+    If calling a MEX file fails with an error such as "`/lib64/libc.so.6: version 'GLIBC_2.29' not found`", the MEX file was compiled on a system with a newer `glibc` than yours. Recompile the MEX files on your machine as described [above](#instructions).
+
 !!! failure "`mex: command not found` error"
 
     If you get the error "`mex: command not found`" check that `mex` is in your path. Either add the MATLAB binary directory (usually `/usr/local/matlab/bin`) to your path or create a link to `mex` somewhere already in the path (usually `/usr/local/bin)`.

@@ -11,7 +11,7 @@ repo_name: spm/spm
 edit_uri: https://github.com/spm/spm-docs/blob/main/docs/
 
 # Copyright
-copyright: Copyright &copy; 1991 - 2024 SPM Team and Collaborators
+copyright: Copyright &copy; 1991 - <span id="current-year"></span> SPM Team and Collaborators
 
 # Configuration
 theme:
@@ -56,18 +56,38 @@ theme:
 nav:
   - 'Home':
     - 'index.md'
-    - 'Installation': 'installation/index.md'
-    - 'Courses':      'courses/index.md'
-    - 'Tutorials':    'tutorials/index.md'
-    - 'Development':  'development/index.md'
   - 'Getting started':
     - 'installation/index.md'
-    - 'Installation': 'installation/index.md'
+    - 'Installation with MATLAB': 'installation/matlab.md'
     - 'Standalone':   'installation/standalone.md'
     - 'Containers':   'installation/containers.md'
     - 'Octave':       'installation/octave.md'
   - 'Tutorials':
       - 'tutorials/index.md'
+      - 'Beginners':
+        - 'tutorials/beginners/index.md'
+        - 'Learning MATLAB':
+          - 'Desktop Basics':             'tutorials/beginners/desktop_basics.md'
+          - 'Variables':                  'tutorials/beginners/variables.md'
+          - 'Other Types':                'tutorials/beginners/other_types.md'
+          - 'Structures and Cell Arrays': 'tutorials/beginners/cells_and_structs.md'
+          - 'Control Flow':               'tutorials/beginners/control_flow.md'
+        - 'Linear Algebra':
+          - 'Basic Linear Algebra':       'tutorials/beginners/linear_algebra.md'
+        - 'SPM Statistics':
+          - 'Introducing SPM':            'tutorials/beginners/installing_spm.md'
+          - 'Statistical Tests':          'tutorials/beginners/linear_model.md'
+          - 'Haemodynamic Modelling':     'tutorials/beginners/haemodynamic_modelling.md'
+        - 'fMRI analysis':
+          - 'Overview':      'tutorials/beginners/fmri/index.md'
+          - 'Preprocessing': 'tutorials/beginners/fmri/preprocessing.md'
+          - 'First-level':   'tutorials/beginners/fmri/first_level.md'
+          - 'Second-level':  'tutorials/beginners/fmri/second_level_example.md'
+        - 'VBM':
+          - 'tutorials/beginners/vbm/index.md'
+          - 'VBM Display & Check Reg':  'tutorials/beginners/vbm/displaying_images.md'
+          - 'VBM Image processing':     'tutorials/beginners/vbm/image_processing.md'
+          - 'VBM Statistical analysis': 'tutorials/beginners/vbm/statistical_analysis.md'
       - 'fMRI':
         - 'tutorials/fmri/index.md'
         - 'Block design fMRI':
@@ -99,12 +119,9 @@ nav:
           - 'Factorial':              'tutorials/fmri/group/factorial.md'
       - 'VBM':
           - 'Getting started':       'tutorials/vbmcourse24/index.md'
-            #- 'Data preparation':      'tutorials/vbmcourse24/data_prep.md'
+         #- 'Data preparation':      'tutorials/vbmcourse24/data_prep.md'
           - 'Preprocessing':         'tutorials/vbmcourse24/preprocessing.md'
           - 'Analysis':              'tutorials/vbmcourse24/analysis.md'
-          #- 'Getting started':      'tutorials/vbm/index.md'
-          #- 'Image processing':     'tutorials/vbm/image_processing.md'
-          #- 'Statistical analysis': 'tutorials/vbm/statistical_analysis.md'
       - 'M/EEG':
         - 'Getting started':              'tutorials/MEEG/index.md'
         - 'EEG mismatch negativity data': 'tutorials/MEEG/mmn/index.md'
@@ -131,6 +148,7 @@ nav:
           - 'Source level: Evoked response': 'tutorials/opm/evoked_source/index.md'
           - 'Coregistration':                'tutorials/opm/coreg/index.md'
           - 'Simulation':                    'tutorials/opm/simulation/index.md'
+          - 'Neuro-1 example':               'tutorials/opm/neuro1_aef/index.md'
           - 'Supported file formats':        'tutorials/opm/formats/index.md'
       - 'DCM':
           - 'Overview of DCM':                  'tutorials/dcm/index.md'
@@ -154,6 +172,7 @@ nav:
       - 'courses/eeg_meg/index.md'
       - 'Course schedule':                    'courses/eeg_meg/programme.md'
       - 'Datasets':                           'courses/eeg_meg/eeg_datasets.md'
+      - 'Preparatory materials':              'courses/eeg_meg/preparatory_materials.md'
       - 'Lecture recordings':
         - 'Overview':                                                                     'courses/eeg_meg/recordings/index.md'
         - 'Introduction & resources':                                                     'courses/eeg_meg/recordings/introduction.md'
@@ -171,7 +190,9 @@ nav:
         - 'Bayesian model selection and averaging':                                       'courses/eeg_meg/recordings/bayesian_model_selection.md'
         - 'DAiSS: An SPM toolbox for alternate source imaging approaches (talk & demo)':  'courses/eeg_meg/recordings/daiss.md'
         - 'Group M/EEG data analysis':                                                    'courses/eeg_meg/recordings/group_analysis.md'
-    - 'fMRI/VBM':
+      - 'Previous editions':
+        - '2025':                                                                         'courses/eeg_meg/programme_2025.md'
+    - 'MRI':
       - 'courses/fmri_vbm/index.md'
       - 'Course schedule':                    'courses/fmri_vbm/programme.md'
       - 'Datasets':                           'courses/fmri_vbm/mri_datasets.md'
@@ -190,15 +211,27 @@ nav:
         - 'Bayesian inference':               'courses/fmri_vbm/recordings/bayesian_inference.md'
         - 'Introduction to DCM':              'courses/fmri_vbm/recordings/dcm_introduction.md'
         - 'DCM: Testing hypotheses':          'courses/fmri_vbm/recordings/dcm_hypothesis_testing.md'
+        - 'DCM for resting-state':            'courses/fmri_vbm/recordings/dcm_resting_state.md'
         - 'Earlier recordings':               'courses/fmri_vbm/recordings/fmri_legacy_recordings.md'
-  - 'Reference documentation':
+    - 'MRI Physics Primer':
+      - 'courses/physics/index.md'
+      - 'Course schedule':                    'courses/physics/programme.md'
+      - 'Learning objectives':                'courses/physics/learning_objectives.md'
+      - 'Lecture slides':                     'https://github.com/spm/spm-docs/tree/main/docs/courses/physics/slides/2026'
+    - 'Code of conduct':                      'courses/conduct.md'
+  - 'Reference':
     - 'reference/index.md'
+    - 'SPM: An annotated bibliography': 'reference/annotated_bibliography.md'
+    - 'History':                        'reference/history.md'
     - 'M/EEG':
       - 'Getting started':              'reference/MEEG/index.md'
       - 'M/EEG preprocessing':          'reference/MEEG/eeg_preprocessing.md'
       - 'Sensor-level analysis':        'reference/MEEG/eeg_sensoranalysis.md'
       - 'Source imaging':               'reference/MEEG/eeg_imaging.md'
       - 'DCM for evoked responses':     'reference/MEEG/eeg_DCM.md'
+    - 'SPM12 manual': 'https://github.com/spm/spm12/blob/main/man/manual.pdf'
+  - 'Toolboxes':
+    - 'toolboxes/index.md'
   - 'Python':
     - 'python/index.md'
     - 'Installation': 'python/installation.md'
@@ -218,6 +251,10 @@ nav:
     - 'Compilation':  'development/compilation/index.md'
     - 'Versioning':   'development/versioning.md'
     - 'Release':      'development/release.md'
+    - 'FieldTrip Sync': 'development/fieldtrip.md'
+    - 'Documentation': 'development/docs.md'
+  - 'Help':
+    - 'help/index.md'
 
 markdown_extensions:
   - abbr
@@ -252,6 +289,7 @@ markdown_extensions:
   - pymdownx.tilde
   - smarty
   - tables
+  - markdown_grid_tables
   - toc:
       permalink: true
 
@@ -264,6 +302,7 @@ plugins:
       video_autoplay: False
   - bibtex:
       bib_file: "docs/assets/bib/spm.bib"
+  #    csl_file: "docs/assets/bib/elsevier-vancouver.csl"
   - search:
       lang: en
 
@@ -280,5 +319,5 @@ extra_css:
 
 extra_javascript:
   - assets/javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - assets/javascripts/current_year.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

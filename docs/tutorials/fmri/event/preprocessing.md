@@ -26,15 +26,15 @@ a realignment job specification in the batch editor window. Then
   `Session` option.
 
 - Select `Specify Files` and use the SPM file selector to choose all of
-  your functional images eg. `sM03953_0005_*.img`. You should select 351
-  files.
+  your functional image volumes eg. `sM03953_0005_*.img`. You should select 351
+  volumes.
 
 - Save the job file as eg. `DIR/jobs/realign.mat`.
 
 - Press the `Run` button in the batch editor window (green triangle).
 
 This will run the realign job which will write realigned images into the
-directory where the functional images are. These new images will be
+folder where the functional images are. These new images will be
 prefixed with the letter "`r`". SPM will then plot the estimated time
 series of translations and rotations. These data, the realignment
 parameters, are also saved to a file eg. `rp_sM03953_0005_0006.txt`, so
@@ -85,8 +85,8 @@ making the slice acquisition order \[`24 23 22 ... 1`\].
 
 - Save the job as `slice_timing.mat` and press the `Run` button.
 
-SPM will write slice-time corrected files with the prefix `a` in the
-functional data directory.
+SPM will write slice-time corrected versions of the images with the prefix `a` in the
+same folder as the functional data.
 
 ## Coregistration
 
@@ -94,10 +94,10 @@ Select `Coregister (Estimate)` from the
 `Coregister` pulldown menu. This will call up the specification of a
 coregistration job in the batch editor window.
 
-- Highlight `Reference Image` and then select the mean functional image
+- Highlight `Fixed Image` and then select the mean functional image
   `meansM03953_0005_0006.img`.
 
-- Highlight `Source Image` and then select the structural image eg.
+- Highlight `Moved Image` and then select the structural image eg.
   `sM03953_0007.img`.
 
 - Press the `Save` button and save the job as `coreg.job`
@@ -107,7 +107,7 @@ coregistration job in the batch editor window.
 SPM will then implement a coregistration between the structural and
 functional data that maximises the mutual information. The image
 displayed below should then appear in the Graphics
-window. SPM will have changed the header of the source file which in
+window. SPM will have changed the header of the moved file, which in
 this case is the structural image `sM03953_0007.hdr`.
 
 <figure>
@@ -123,12 +123,12 @@ Press the `Segment` button. This will call
 up the specification of a segmentation job in the batch editor window.
 Highlight the `Volumes` field in `Data > Channels` and then select the
 subjects coregistered anatomical image eg. `sM03953_0007.img`. Change
-`Save Bias Corrected` so that it contains `Save Bias Corrected` instead
-of `Save Nothing`. At the bottom of the list, select `Forward` in
+`Save INU corrected` so that it contains `Save INU corrected` instead
+of `Save nothing`. At the bottom of the list, select `Forward` in
 `Deformation Fields`. Save the job file as `segment.mat` and then press
 the `Run` button. SPM will segment the structural image using the
 default tissue probability maps as priors. SPM will create, by default,
-gray and white matter images and bias-field corrected structural image.
+gray and white matter images and intensity nonuniformity corrected structural image.
 These can be viewed using the `CheckReg` facility as described in the
 previous section [^1].
 
@@ -141,7 +141,7 @@ image (below).</figcaption>
 </figure>
 
 SPM will also write a spatial normalisation deformation field file eg.
-`y_sM03953_0007.nii` file in the original structural directory. This
+`y_sM03953_0007.nii` file in the original structural folder. This
 will be used in the next section to normalise the functional data.
 
 ## Normalise
@@ -158,7 +158,7 @@ up the specification of a normalise job in the batch editor window.
 - Highlight `Images to write` and select all of the slice-time
   corrected, realigned functional images `arsM*.img`. Note: This can be
   done efficiently by changing the filter in the SPM file selector to
-  `^ar.*`. You can then right click over the listed files, choose
+  `^ar.*`. You can then right click over the listed images, choose
   `Select all`. You might also want to select the mean functional image
   created during realignment (which would not be affected by slice-time
   correction), i.e, the `meansM03953_0005_006.img`. Then press `Done`.
@@ -169,19 +169,19 @@ up the specification of a normalise job in the batch editor window.
 - Press `Save`, save the job as normalise.mat and then press the `Run`
   button.
 
-SPM will then write spatially normalised files to the functional data
-directory. These files have the prefix `w`.
+SPM will then write spatially normalised versions of the images to the folder containing the functional data.
+These files have the prefix `w`.
 
 If you wish to superimpose a subject's functional activations on their
 own anatomy [^3] you will also need to apply the spatial normalisation
-parameters to their (bias-corrected) anatomical image. To do this
+parameters to their (intensity nonuniformity corrected) anatomical image. To do this
 
 - Select `Normalise (Write)`, highlight `Data`, select `New Subject`.
 
 - Highlight `Deformation field`, select the `y_sM03953_0007.nii` file
   that you created in the previous section, press `Done`.
 
-- Highlight `Images to Write`, select the bias-corrected structural eg.
+- Highlight `Images to Write`, select the intensity nonuniformity corrected structural eg.
   `msM03953_0007.nii`, press `Done`.
 
 - Open `Writing Options`, select voxel sizes and change the default \[`2
@@ -196,7 +196,7 @@ Press the `Smooth` button [^4]. This will
 call up the specification of a smooth job in the batch editor window.
 
 - Select `Images to Smooth` and then select the spatially normalised
-  files created in the last section eg. `war*.img`.
+  volumes created in the last section eg. `war*.img`.
 
 - Save the job as smooth.mat and press `Run` button.
 

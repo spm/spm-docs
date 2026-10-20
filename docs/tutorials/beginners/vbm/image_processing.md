@@ -1,4 +1,4 @@
-# Image processing for VBM
+# VBM Image processing
 
 ??? info "For MSc Advanced Neuroimaging students"
     Work with the images from the ``examples`` folder.
@@ -39,11 +39,11 @@ There won't be time to segment all scans, so the plan is to demonstrate how one 
 
         * **Volumes**: Here you specify all the IXI scans to be segmented.
 
-        * **Bias regularisation**: Leave this as it is.  It works reasonably well for most images.
+        * **INU regularisation**: Leave this as it is.  It works reasonably well for most images.
 
-        * **Bias FWHM**: Again, leave this as it is.
+        * **INU FWHM**: Again, leave this as it is.
 
-        * **Save Bias Corrected**: This gives the option to save intensity inhomogeneity corrected version of the images, or a field that encodes the inhomogeneity. Leave this at **Save nothing** because we don't have a use for them here.
+        * **Save INU corrected**: This gives the option to save intensity inhomogeneity corrected version of the images, or a field that encodes the inhomogeneity. Leave this at **Save nothing** because we don't have a use for them here.
 
 * **Tissues**: This is a list of the tissues to identify.
 
@@ -122,7 +122,7 @@ There won't be time to segment all scans, so the plan is to demonstrate how one 
     * **Deformation fields**: Not needed here, so leave at **None**.
 
 <figure id="Fig:segjob" markdown>
-![](../../assets/figures/tutorials/vbm/vbm-Segment24.png){width=50%}
+![](../../../assets/figures/tutorials/vbm/vbm-Segment24.png){width=50%}
 <figcaption> The form of a Segment job. </figcaption>
 </figure>
 
@@ -139,10 +139,10 @@ I suggest that you click the **Check Reg** button, and take a look at some of th
 For one of the subjects, select the original, the ``c1``, ``c2`` and ``c3``.  This should give an idea about which voxels the algorithm identifies as the different tissue types. Also try this for some of the other subjects.
 
 <p>
-<img src="../../../assets/figures/tutorials/vbm/vbm-SegResults14.png" width="45%" />
-<img src="../../../assets/figures/tutorials/vbm/vbm-Imported14.png" width="45%" /> 
+<img src="../../../../assets/figures/tutorials/vbm/vbm-SegResults14.png" width="45%" />
+<img src="../../../../assets/figures/tutorials/vbm/vbm-Imported14.png" width="45%" /> 
 <figure id="Fig:segoutput" markdown>
-<figcaption> Left: An image, along with grey matter (``c1``), white matter (``c2``) and CSF (``c3``) identified by **Segment**.  Right: Imported grey (``rc1``) and white matter (``rc2``) for three subjects.  </figcaption>
+<figcaption> Left: An image, along with grey matter (`c1`), white matter (`c2`) and CSF (`c3`) identified by Segment.  Right: Imported grey (`rc1`) and white matter (`rc2`) for three subjects.  </figcaption>
 </figure>
 </p>
 
@@ -161,10 +161,10 @@ The Run Shooting module would be set up as follows:
     * **Images**: Select the imported white matter images (``rc2*.nii``).  These should be specified in the same order as the grey matter, so that the grey matter image for any subject corresponds with the appropriate white matter image.
 
 <p>
-<img src="../../../assets/figures/tutorials/vbm/vbm-Shoot24.png"  width="45%" />
-<img src="../../../assets/figures/tutorials/vbm/vbm-template8.png" width="45%" />  
+<img src="../../../../assets/figures/tutorials/vbm/vbm-Shoot24.png"  width="45%" />
+<img src="../../../../assets/figures/tutorials/vbm/vbm-template8.png" width="45%" />  
 <figure id="Fig:Shoot" markdown>
-<figcaption> The form of a **Run Shooting** job (left) and the template data after different numbers of iterations (right).  </figcaption>
+<figcaption> The form of a Run Shooting job (left) and the template data after different numbers of iterations (right).  </figcaption>
 </figure>
 </p>
 
@@ -210,7 +210,7 @@ About 8mm may be suitable, but I don't much have empirical evidence to suggest a
 The optimal value is likely to vary from region to region: lower for subcortical regions with less variability, and more for the highly variable cortex.
 
 <figure id="Fig:Processed" markdown>
-![](../../assets/figures/tutorials/vbm/vbm-Processed14.png){width=50%}
+![](../../../assets/figures/tutorials/vbm/vbm-Processed14.png){width=50%}
 <figcaption> Processed grey and white matter data for three subjects, which are smoothed by 8 mm FWHM. Note that all data are shown scaled the same, which illustrates the effect of different global brain sizes (darker for smaller brains because structures are smaller).  </figcaption>
 </figure>
 
@@ -218,7 +218,7 @@ The smoothed images represent the regional volume of tissue.
 Statistical analysis is done using these data, so one would hope that differences among the processed data actually reflect differences among the regional volumes of grey matter.
 
 <figure id="Fig:interpretation" markdown>
-![](../../assets/figures/tutorials/vbm/vbm-interpretation.png){width=90%}
+![](../../../assets/figures/tutorials/vbm/vbm-interpretation.png){width=90%}
 <figcaption> We generally hope that the results of VBM analyses can be interpreted as systematic volumetric differences (such as folding or thickness), rather than artifacts (such as misclassification or misregistration).  Because of this, it is essential that the processing be as accurate as possible. Note that exactly the same argument can be made of the results of manual volumetry, which depend on the accuracy with which the regions are defined, and on whether there is any systematic error made.  </figcaption>
 </figure>
 

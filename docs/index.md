@@ -1,9 +1,16 @@
-# Statistical Parametric Mapping
+---
+hide:
+  - navigation
+  - footer
+---
+
+# Statistical Parametric Mapping (SPM)
 
 ## Overview
-Statistical Parametric Mapping is the construction and assessment of spatially extended statistical processes used to test hypotheses about functional imaging data. These ideas have been instantiated in a free and open source software that is called **SPM**.
+Statistical Parametric Mapping is an integrated set of methods for testing hypotheses
+about neuroimaging data. These methods are implemented in an open-source software package **SPM**. 
 
-The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject. The current release is designed for the analysis of **fMRI**, **PET**, **SPECT**, **EEG** and **MEG**.
+The current release supports the analysis of **fMRI**, **PET**, **SPECT**, **EEG** and **MEG**.
 
 <figure markdown>
   ![spm logo](assets/images/spm_front.png)
@@ -12,56 +19,87 @@ The SPM software package has been designed for the analysis of brain imaging dat
 
 ## Getting started
 
-<div class="grid cards" markdown>
+SPM is openly available and designed to work across all major operating systems. We recommend you use [the latest version](https://github.com/spm/spm/releases/latest/). 
 
--   :material-lock-open:{ .lg .middle } __Software__
+Older versions are available but no longer supported: [SPM12](https://github.com/spm/spm12) :octicons-dot-16: [SPM8](https://github.com/spm/spm8) :octicons-dot-16: [SPM5](https://github.com/spm/spm5) :octicons-dot-16: [SPM99](https://github.com/spm/spm99). 
 
-    ---
+### Installation
 
-    SPM is free and open source academic software.
+=== ":fontawesome-brands-windows: Windows"
 
-    [:octicons-arrow-right-24: **Installation** ](installation/index.md)
+    1. Download [the latest SPM release](https://github.com/spm/spm/releases/latest/) and uncompress it.
 
--   :material-monitor:{ .lg .middle } __Educational materials__
+    2. Start MATLAB and add SPM to your path:
 
-    ---
+        ```matlab
+        addpath('C:\Users\<login>\Documents\MATLAB\spm')
+        savepath % if you want to save the current MATLAB path
+        ```
 
-    We provide a curated list of tutorials for different imaging analyses.
+    *For a detailed overview of the steps, please check our [installation page](./installation/index.md#windows).*
 
-    [:octicons-arrow-right-24: **Tutorials**](tutorials/index.md)
+=== ":fontawesome-brands-apple: macOS"
 
--   :fontawesome-solid-graduation-cap:{ .lg .middle } __Courses__
+    1. Download [the latest SPM release](https://github.com/spm/spm/releases/latest/) and uncompress it.
 
-    ---
+    2. Start MATLAB and add SPM to your path:
 
-    Regular SPM courses run every autumn and spring, both online and in-person in London.
+        ```matlab
+        addpath /Users/<login>/spm
+        savepath % if you want to save the current MATLAB path
+        ```
 
-    [:octicons-arrow-right-24: **Courses information**](courses/index.md)
+    *For a detailed overview of the steps, please check our [installation page](./installation/index.md#mac).*
 
--   :material-account-question:{ .lg .middle } __Support__
+=== ":fontawesome-brands-linux: Linux"
 
-    ---
+    1. Download [the latest SPM release](https://github.com/spm/spm/releases/latest/) and uncompress it.
 
-    The SPM discussion list provides live support to your queries.
+    2. Start MATLAB and add SPM to your path:
 
-    [:octicons-arrow-right-24: **SPM discussion list**](https://www.fil.ion.ucl.ac.uk/spm/support/)
+        ```matlab
+        addpath /home/<login>/spm
+        savepath % if you want to save the current MATLAB path
+        ```
 
-</div>
+    *For a detailed overview of the steps, please check our [installation page](./installation/index.md#linux).*
 
-## History
+!!! info "Alternative installation options" 
+    For other installation options, including versions not requiring MATLAB, please consult our [installation instructions](./installation/index.md)
 
-The SPM suite and associated theory was originally developed by [Karl Friston](https://www.fil.ion.ucl.ac.uk/~karl/) for the routine statistical analysis of functional neuroimaging data from Positron Emission Tomography (PET), while at the Medical Research Council Cyclotron Unit. Now known as SPMclassic, this software was made available to the emerging functional imaging community in 1991, to promote collaboration and a common analysis scheme across laboratories.
+### Usage
 
-SPM'94 was the first major revision of the SPM software. SPM'94 was written primarily by [Karl Friston](https://www.fil.ion.ucl.ac.uk/~karl/) during the summer of 1994, with invaluable conceptual and technical help from [John Ashburner](https://www.fil.ion.ucl.ac.uk/~john/), Jon Heather, Andrew Holmes and Jean-Baptiste Poline. SPM'95, [SPM'96](https://www.fil.ion.ucl.ac.uk/spm/software/spm96/), [SPM'99](https://www.fil.ion.ucl.ac.uk/spm/software/spm99/), [SPM2](https://www.fil.ion.ucl.ac.uk/spm/software/spm2/), [SPM5](https://www.fil.ion.ucl.ac.uk/spm/software/spm5/), [SPM8](https://www.fil.ion.ucl.ac.uk/spm/software/spm8/) and [SPM12](https://www.fil.ion.ucl.ac.uk/spm/software/spm12/) are based on SPM'94, and represent the ongoing theoretical advances and technical improvements.
+Once installed, you can use SPM via the graphical user interface or command line. Please see our [tutorials page](./tutorials/) for examples. 
 
-!!! abstract "Further reading"
+## Citing SPM
 
-    [Penny, W., Friston, K., Ashburner, J., Kiebel, S., & Nichols, T. (2006). *Statistical parametric mapping: The analysis of functional brain images*.](https://www.fil.ion.ucl.ac.uk/spm/doc/#books)
+Please acknowledge using SPM by citing:
 
-    [Friston, K.J. *A short history of statistical parametric mapping in functional neuroimaging*.](https://www.fil.ion.ucl.ac.uk/spm/doc/history.html)
+Tierney et al., (2025). **SPM 25: open source neuroimaging analysis software**. Journal of Open Source Software, 10(110), 8103, https://doi.org/10.21105/joss.08103.
 
-    [Flandin, G. and Friston, K.J. *Statistical parametric mapping (SPM)*.](http://www.scholarpedia.org/article/Statistical_parametric_mapping_(SPM))
+```
+@article{Tierney2025, 
+    title = {SPM 25: open source neuroimaging analysis software}, 
+    author = {Tierney, Tim M. and Alexander, Nicholas A. and Ashburner, John and Avila, Nicole Labra and Balbastre, Yaël and Barnes, Gareth and Bezsudnova, Yulia and Brudfors, Mikael and Eckstein, Korbinian and Flandin, Guillaume and Friston, Karl and Jafarian, Amirhossein and Kowalczyk, Olivia S. and Litvak, Vladimir and Medrano, Johan and Mellor, Stephanie and O'Neill, George and Parr, Thomas and Razi, Adeel and Timms, Ryan and Zeidman, Peter}, 
+    journal = {Journal of Open Source Software} 
+    doi = {10.21105/joss.08103}, 
+    url = {https://doi.org/10.21105/joss.08103}, 
+    year = {2025}, 
+    publisher = {The Open Journal}, 
+    volume = {10}, 
+    number = {110}, 
+    pages = {8103}, 
+}
+```
 
-    [Ashburner, J. (2012). *SPM: A history*.](https://doi.org/10.1016/j.neuroimage.2011.10.025)
+Other SPM-relevant references can be found on the [reference page](./reference/).
+
+## License
+
+SPM is an open-source software available under GPL-2.0 license. For more details, see the [license](https://github.com/spm/spm?tab=GPL-2.0-1-ov-file#GPL-2.0-1-ov-file).
+
+## Contributing 
+
+The development of SPM takes place on [GitHub](https://github.com/spm/). If you wish to contribute, please visit our [development page](./development/).
 
 --8<-- "addons/abbreviations.md"
