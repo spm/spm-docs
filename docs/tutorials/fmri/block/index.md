@@ -2,7 +2,7 @@
 
 ## About the data
 
-The dataset used in this tutorial can be [downloaded from here](https://www.fil.ion.ucl.ac.uk/spm/download/data/MoAEpilot/MoAEpilot.bids.zip). 
+The dataset used in this tutorial can be [downloaded from here](https://www.fil.ion.ucl.ac.uk/spm/download/data/MoAEpilot/MoAEpilot.bids.zip). Students working with Desktop@UCL Anywhere can also copy the data from the network folder `S:\FBS_CLNE0068\Data\MoAEpilot`.
 
 The data consists of 96 volumes (TR = 7s, 64 contiguous slices, 3$\times$3$\times$3mm voxels) from a single participant, in blocks of six, giving sixteen 42s blocks. Due to the lack of lead-in dummy scans, the first 12 volumes have been discarded leaving 84 volumes. 
 
