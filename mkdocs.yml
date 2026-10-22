@@ -112,16 +112,16 @@ nav:
           - 'Categorical Modelling': 'tutorials/fmri/event/categorical.md'
           - 'Parametric Modelling':  'tutorials/fmri/event/parametric.md'
           - 'Bayesian Analysis':     'tutorials/fmri/event/bayesian.md'
-        - 'Group-level fMRI': 
+        - 'Group-level fMRI':
           - 'Getting started':        'tutorials/fmri/group/index.md'
           - 'One-sample t-test':      'tutorials/fmri/group/one_sample_ttest.md'
           - 'Two-sample t-test':      'tutorials/fmri/group/two_sample_ttest.md'
           - 'Factorial':              'tutorials/fmri/group/factorial.md'
       - 'VBM':
-          - 'Getting started':       'tutorials/vbmcourse24/index.md' 
-         #- 'Data preparation':      'tutorials/vbmcourse24/data_prep.md' 
-          - 'Preprocessing':         'tutorials/vbmcourse24/preprocessing.md' 
-          - 'Analysis':              'tutorials/vbmcourse24/analysis.md' 
+          - 'Getting started':       'tutorials/vbmcourse24/index.md'
+         #- 'Data preparation':      'tutorials/vbmcourse24/data_prep.md'
+          - 'Preprocessing':         'tutorials/vbmcourse24/preprocessing.md'
+          - 'Analysis':              'tutorials/vbmcourse24/analysis.md'
       - 'M/EEG':
         - 'Getting started':              'tutorials/MEEG/index.md'
         - 'EEG mismatch negativity data': 'tutorials/MEEG/mmn/index.md'
@@ -153,7 +153,7 @@ nav:
       - 'DCM':
           - 'Overview of DCM':                  'tutorials/dcm/index.md'
           - 'DCM for fMRI - 1st level (Attention)': 'tutorials/dcm/dcm_fmri_first_level_gui.md'
-          - 'DCM for fMRI - 2nd level (Motor)': 'tutorials/dcm/dcm_fmri_second_level_motor.md'          
+          - 'DCM for fMRI - 2nd level (Motor)': 'tutorials/dcm/dcm_fmri_second_level_motor.md'
           - 'DCM for fMRI - 1st level (Language)':  'tutorials/dcm/dcm_fmri_first_level.md'
           - 'DCM for fMRI - 2nd level (Language)':  'tutorials/dcm/dcm_fmri_second_level.md'
           - 'DCM for evoked responses':         'tutorials/dcm/dcm_erp.md'
@@ -192,7 +192,7 @@ nav:
         - 'Group M/EEG data analysis':                                                    'courses/eeg_meg/recordings/group_analysis.md'
       - 'Previous editions':
         - '2025':                                                                         'courses/eeg_meg/programme_2025.md'
-    - 'MRI': 
+    - 'MRI':
       - 'courses/fmri_vbm/index.md'
       - 'Course schedule':                    'courses/fmri_vbm/programme.md'
       - 'Datasets':                           'courses/fmri_vbm/mri_datasets.md'
@@ -216,13 +216,13 @@ nav:
     - 'MRI Physics Primer':
       - 'courses/physics/index.md'
       - 'Course schedule':                    'courses/physics/programme.md'
-      - 'Learning objectives':        'courses/physics/learning_objectives.md'
-      - 'Lecture slides':                 'https://github.com/spm/spm-docs/tree/main/docs/courses/physics/slides/2026'
-    - 'Code of conduct': 'courses/conduct.md'
+      - 'Learning objectives':                'courses/physics/learning_objectives.md'
+      - 'Lecture slides':                     'https://github.com/spm/spm-docs/tree/main/docs/courses/physics/slides/2026'
+    - 'Code of conduct':                      'courses/conduct.md'
   - 'Reference':
     - 'reference/index.md'
     - 'SPM: An annotated bibliography': 'reference/annotated_bibliography.md'
-    - 'History': 'reference/history.md'
+    - 'History':                        'reference/history.md'
     - 'M/EEG':
       - 'Getting started':              'reference/MEEG/index.md'
       - 'M/EEG preprocessing':          'reference/MEEG/eeg_preprocessing.md'
@@ -232,6 +232,17 @@ nav:
     - 'SPM12 manual': 'https://github.com/spm/spm12/blob/main/man/manual.pdf'
   - 'Toolboxes':
     - 'toolboxes/index.md'
+  - 'Python':
+    - 'python/index.md'
+    - 'Installation': 'python/installation.md'
+    - 'Getting Started': 'python/gettingstarted.md'
+    - 'Data Types': 'python/datatypes.md'
+    - 'Troubleshooting': 'python/troubleshooting.md'
+    # - 'Tutorials':
+    #   - 'fMRI preproc': 'python/tutorial_fmri.md'
+    #   - 'PEB': 'python/tutorial_peb.md'
+    - 'API': 'python/api/spm/index.md'
+    - 'External projects': 'python/external.md'
   - 'Development':
     - 'Introduction': 'development/index.md'
     - 'Git':          'development/git.md'
@@ -242,7 +253,7 @@ nav:
     - 'Release':      'development/release.md'
     - 'FieldTrip Sync': 'development/fieldtrip.md'
     - 'Documentation': 'development/docs.md'
-  - 'Help': 
+  - 'Help':
     - 'help/index.md'
 
 markdown_extensions:
@@ -278,6 +289,7 @@ markdown_extensions:
   - pymdownx.tilde
   - smarty
   - tables
+  - markdown_grid_tables
   - toc:
       permalink: true
 
