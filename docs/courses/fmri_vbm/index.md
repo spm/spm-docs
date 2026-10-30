@@ -5,8 +5,6 @@
 
     ---
 
-    :material-calendar-month: 19-21 October 2026, **online**. | Registration is now closed.
-
     :material-calendar-month: 2-4 June 2027, **in London**. | More details will be announced soon.
     </div>
 
