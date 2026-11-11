@@ -43,6 +43,7 @@ theme:
     repo: fontawesome/brands/github
   features:
     - content.code.copy
+    - content.code.annotate
     - content.tabs.link
     - content.tooltips
     - content.action.edit
@@ -238,11 +239,12 @@ nav:
     - 'Getting Started': 'python/gettingstarted.md'
     - 'Data Types': 'python/datatypes.md'
     - 'Troubleshooting': 'python/troubleshooting.md'
-    # - 'Tutorials':
-    #   - 'fMRI preproc': 'python/tutorial_fmri.md'
-    #   - 'PEB': 'python/tutorial_peb.md'
     - 'API': 'python/api/spm/index.md'
-    - 'External projects': 'python/external.md'
+    - 'Other Python projects': 'python/external.md'
+    - 'Tutorials':
+      - 'Auditory fMRI': 'python/tutorials/auditory.md'
+      - 'Coregistration': 'python/tutorials/coreg.md'
+      # - 'PEB': 'python/tutorial_peb.md'
   - 'Development':
     - 'Introduction': 'development/index.md'
     - 'Git':          'development/git.md'
@@ -272,6 +274,8 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+      options:
+        custom_icons: ["overrides/.icons"]
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -298,8 +302,8 @@ plugins:
       css_style:
         width: "100%"
         height: "42.172vw"
-      is_video: True
-      video_autoplay: False
+      is_video: true
+      video_autoplay: false
   - bibtex:
       bib_file: "docs/assets/bib/spm.bib"
   #    csl_file: "docs/assets/bib/elsevier-vancouver.csl"
