@@ -41,7 +41,7 @@ We can generate some simulated data (``y``) according to this model, where we us
 and a variance of 4.0.
 
 In MATLAB, i.i.d. Gaussian random values with a variance of 1 can be created using the ``randn()`` function.
-To give the values a variance of 4, we multiply the random numbers by the standard deviation (the square root of the variance).
+For example, to give the values a variance of 4, we multiply the random numbers by the standard deviation (the square root of the variance).
 The following snippet can be copy/pasted into MATLAB to simulate some data according to our model.
 ```matlab
 beta_gt = [30; 35; 2];
