@@ -2,6 +2,9 @@
   "ignorePatterns": [
     {
       "pattern": "^(?!http)"
+    },
+    {
+      "pattern": "^https?://doi.org"
     }
   ],
   "aliveStatusCodes": [200,206,503],
