@@ -1,4 +1,4 @@
-\_\_NOTOC\_\_
+__NOTOC__
 
 # Brain Imaging Data Structure
 
@@ -15,7 +15,7 @@ behavioural data.
 
 - [BIDS Validator](https://github.com/bids-standard/bids-validator/):
   [online](http://incf.github.io/bids-validator/) or from the command
-  line \<code\>bids-validator\</code\>.
+  line `bids-validator`.
 
 ### Discussion Forums
 
@@ -73,45 +73,49 @@ according to BIDS.
 ### JSON files
 
 A [JSON file](https://www.json.org/) can be read/written using
-\<code\>spm_jsonread\</code\> and \<code\>spm_jsonwrite\</code\>.
+`spm_jsonread` and `spm_jsonwrite`.
 
-\<syntaxhighlight lang=\"matlab\"\> \>\> type sub-01_task-rest_bold.json
+```matlab
+>> type sub-01_task-rest_bold.json
 
 {
 
-` "RepetitionTime": 3.0,`  
-` "Instruction": "Lie still and keep your eyes open"`
+ "RepetitionTime": 3.0,  
+ "Instruction": "Lie still and keep your eyes open"
 
-} \>\> bold = spm_jsonread(\'sub-01_task-rest_bold.json\')
+}
+
+>> bold = spm_jsonread('sub-01_task-rest_bold.json')
 
 bold =
 
-`   RepetitionTime: 3`  
-`      Instruction: 'Lie still and keep your eyes open'`
+   RepetitionTime: 3  
+      Instruction: 'Lie still and keep your eyes open'
 
-\</syntaxhighlight\>
+```
 
-\<syntaxhighlight lang=\"matlab\"\> \>\> descr = struct(\'Name\',\'My
-Dataset\',\'BIDSVersion\',\'1.0.2\')
+```matlab 
+>> descr = struct('Name','My Dataset','BIDSVersion','1.0.2')
 
 descr =
 
-`          Name: 'My Dataset'`  
-`   BIDSVersion: '1.0.2'`
+          Name: 'My Dataset'  
+   BIDSVersion: '1.0.2'
 
-\>\> spm_jsonwrite(\'dataset_description.json\',descr,
-struct(\'indent\',\' \')); \>\> type dataset_description.json
+>> spm_jsonwrite('dataset_description.json',descr,struct('indent',' '));
+>> type dataset_description.json
 
 {
 
-` "Name": "My Dataset",`  
-` "BIDSVersion": "1.0.2"`
+ "Name": "My Dataset",  
+ "BIDSVersion": "1.0.2"
 
-} \</syntaxhighlight\>
+}
+```
 
 These functions are also independently available in [JSONio, a JSON
 library for MATLAB and Octave](https://github.com/gllmflndn/JSONio).
-They are compatible with MATLAB\'s
+They are compatible with MATLAB's
 [jsonencode](http://www.mathworks.com/help/matlab/ref/jsonencode.html)
 and
 [jsondecode](http://www.mathworks.com/help/matlab/ref/jsondecode.html).
@@ -120,245 +124,277 @@ and
 
 A [tab-separated values (TSV)
 file](https://www.wikipedia.org/wiki/Tab-separated_values) can be
-read/written using \<code\>spm_load\</code\> and
-\<code\>spm_save\</code\>.
+read/written using `spm_load` and
+`spm_save`.
 
-\<syntaxhighlight lang=\"matlab\"\> \>\> type
-task-Checkerboard_acq-TR645_events.tsv
+```matlab 
+>> type task-Checkerboard_acq-TR645_events.tsv
 
-onset duration trial_type 0 20 Fixation 20 20 Checkerboard 40 20
-Fixation 60 20 Checkerboard 80 20 Fixation 100 20 Checkerboard \>\>
-events = spm_load(\'task-Checkerboard_acq-TR645_events.tsv\')
+onset duration  trial_type
+0 20  Fixation
+20  20  Checkerboard
+40  20  Fixation
+60  20  Checkerboard
+80  20  Fixation
+100 20  Checkerboard
+
+>> events = spm_load('task-Checkerboard_acq-TR645_events.tsv')
 
 events =
 
-`        onset: [6x1 double]`  
-`     duration: [6x1 double]`  
-`   trial_type: {6x1 cell}`
+        onset: [6x1 double] 
+     duration: [6x1 double]
+   trial_type: {6x1 cell}
 
-\</syntaxhighlight\>
+```
 
-\<syntaxhighlight lang=\"matlab\"\> \>\> p =
-struct(\'participant_id\',{{\'sub-01\',\'sub-02\'}},
-\'sex\',{{\'M\',\'F\'}}, \'age\',\[28 21\])
+```matlab
+>> p = struct('participant_id',{{'sub-01','sub-02'}},'sex',{{'M','F'}}, 'age',[28 21])
 
 p =
 
-`   participant_id: {'sub-01'  'sub-02'}`  
-`              sex: {'M'  'F'}`  
-`              age: [28 21]`
+   participant_id: {'sub-01'  'sub-02'}  
+              sex: {'M'  'F'}  
+              age: [28 21]
 
-\>\> spm_save(\'participants.tsv\',p) \>\> type participants.tsv
+>> spm_save('participants.tsv',p)
+>> type participants.tsv
 
-participant_id sex age sub-01 M 28 sub-02 F 21 \</syntaxhighlight\>
+participant_id	sex	age
+sub-01	M	28
+sub-02	F	21
+```
 
 These functions are compatible with MATLAB [table
 array](https://www.mathworks.com/help/matlab/ref/table.html) and handle
 gzip compression transparently.
 
-\<syntaxhighlight lang=\"matlab\"\> \>\> participant_id = {\'sub-01\';
-\'sub-02\'}; \>\> sex = {\'M\'; \'F\'}; \>\> age = \[28 21\]\'; \>\> p =
-table(participant_id,sex,age); \>\> spm_save(\'participants.tsv.gz\',p)
-\>\> spm_load(\'participants.tsv.gz\')
+```matlab 
+>> participant_id = {'sub-01';'sub-02'}; 
+>> sex = {'M'; 'F'};
+>> age = [28 21]; 
+>> p = table(participant_id,sex,age); 
+>> spm_save('participants.tsv.gz',p)
+>> spm_load('participants.tsv.gz')
 
 ans =
 
-`   participant_id: {2x1 cell}`  
-`              sex: {2x1 cell}`  
-`              age: [2x1 double]`
+   participant_id: {2x1 cell} 
+              sex: {2x1 cell}
+              age: [2x1 double]
 
-\</syntaxhighlight\>
+```
 
 ### NIfTI files
 
 [NIfTI files](https://nifti.nimh.nih.gov/) can be read/written using
-\<code\>spm_vol\</code\> or \<code\>@nifti\</code\>.
+`spm_vol` or `@nifti`.
 
-\<syntaxhighlight lang=\"matlab\"\> \>\> S =
-nifti(\'sub-2475376\_\_T1w.nii\')
+```matlab
+>> S = nifti('sub-2475376_T1w.nii')
 
 S =
 
 NIFTI object: 1-by-1
 
-`           dat: [256x256x192 file_array]`  
-`           mat: [4x4 double]`  
-`    mat_intent: 'Scanner'`  
-`          mat0: [4x4 double]`  
-`   mat0_intent: 'Scanner'`  
-`       descrip: 'MR'`
+           dat: [256x256x192 file_array] 
+           mat: [4x4 double]
+    mat_intent: 'Scanner'
+          mat0: [4x4 double] 
+   mat0_intent: 'Scanner'
+       descrip: 'MR'
 
-\>\> F = nifti(\'sub-2475376_task-Checkerboard_bold.nii\')
+>> F = nifti('sub-2475376_task-Checkerboard_bold.nii')
 
 F =
 
 NIFTI object: 1-by-1
 
-`           dat: [4-D file_array]`  
-`           mat: [4x4 double]`  
-`    mat_intent: 'Scanner'`  
-`          mat0: [4x4 double]`  
-`   mat0_intent: 'Scanner'`  
-`        timing: [1x1 struct]`  
-`       descrip: '4D image'`
+           dat: [4-D file_array]  
+           mat: [4x4 double]  
+    mat_intent: 'Scanner'  
+          mat0: [4x4 double]  
+   mat0_intent: 'Scanner'  
+        timing: [1x1 struct]  
+       descrip: '4D image'
 
-\>\> F.timing.tspace
+>> F.timing.tspace
 
 ans =
 
-`   1.4000`
+   1.4000
 
-\</syntaxhighlight\>
+```
 
 By default, SPM does not support compressed NIfTI files
-(\<code\>.nii.gz\</code\>) but MATLAB/Octave provide
+(`.nii.gz`) but MATLAB/Octave provide
 [gzip](https://www.mathworks.com/help/matlab/ref/gzip.html)/[gunzip](https://www.mathworks.com/help/matlab/ref/gunzip.html)
 functions if needed and they are also available through the batch
-interface from \<code\>BasicIO \> File Operations \> Gunzip
-Files\</code\>.
+interface from `BasicIO > File Operations > Gunzip
+Files`.
 
 ### BIDS parser and queries
 
 A data directory organised according to BIDS can be parsed with
-\<code\>spm_BIDS\</code\>.
+`spm_BIDS`.
 
 Here is an example using the
 [ds007](https://github.com/INCF/BIDS-examples/tree/master/ds007)
 dataset:
 
-\<syntaxhighlight lang=\"matlab\"\> \>\> % Parse BIDS directory \>\>
-BIDS = spm_BIDS(\'/data/BIDS-examples/ds007\');
+```matlab 
+>> % Parse BIDS directory
+>> BIDS = spm_BIDS('/data/BIDS-examples/ds007');
 
-\>\> % Make general queries about the dataset \>\>
-spm_BIDS(BIDS,\'subjects\') ans =
-
-`   '01'  '02'  '03'  '04'  '05'  '06'  '07'  '08'  '09'  '10'  '11'  '12'  '13'  '14'  '15'  '16'  '17'  '18'  '19'  '20'`
-
-\>\> spm_BIDS(BIDS,\'sessions\') ans =
-
-`   Empty cell array: 1-by-0`
-
-\>\> spm_BIDS(BIDS,\'runs\') ans =
-
-`   '01'    '02'`
-
-\>\> spm_BIDS(BIDS,\'tasks\') ans =
-
-`   'stopsignalwithletternaming'    'stopsignalwithmanualresponse'    'stopsignalwithpseudowordnaming'`
-
-\>\> spm_BIDS(BIDS,\'types\') ans =
-
-`   'T1w'    'bold'    'events'    'inplaneT2'`
-
-\>\> spm_BIDS(BIDS,\'modalities\') ans =
-
-`   'anat'    'func'`
-
-\>\> % Make more specific queries \>\>
-spm_BIDS(BIDS,\'runs\',\'type\',\'T1w\') ans =
-
-`  Empty cell array: 1-by-0`
-
-\>\> spm_BIDS(BIDS,\'runs\',\'type\',\'bold\') ans =
-
-`   '01'    '02'`
-
-\>\> % Get the NIfTI file for subject \'05\', run \'02\' and task
-\'stopsignalwithmanualresponse\': \>\>
-spm_BIDS(BIDS,\'data\',\'sub\',\'05\',\'run\',\'02\',\'task\',\'stopsignalwithmanualresponse\',\'type\',\'bold\')
+>> % Make general queries about the dataset
+>> spm_BIDS(BIDS,'subjects')
 
 ans =
 
-`   '/data/ds007/sub-05/func/sub-05_task-stopsignalwithmanualresponse_run-02_bold.nii.gz'`
+   '01'  '02'  '03'  '04'  '05'  '06'  '07'  '08'  '09'  '10'  '11'  '12'  '13'  '14'  '15'  '16'  '17'  '18'  '19'  '20'
 
-\>\> % and corresponding metadata, including TR: \>\>
-spm_BIDS(BIDS,\'metadata\',\'sub\',\'05\',\'run\',\'02\',\'task\',\'stopsignalwithmanualresponse\',\'type\',\'bold\')
-
-ans =
-
-`   RepetitionTime: 2`  
-`         TaskName: 'stop signal with manual response'`
-
-\>\> % Get the T1-weighted images from all subjects: \>\>
-spm_BIDS(BIDS,\'data\',\'type\',\'T1w\')
+>> spm_BIDS(BIDS,'sessions')
 
 ans =
 
-`   '/data/ds007/sub-01/anat/sub-01_T1w.nii.gz'`  
-`   '/data/ds007/sub-02/anat/sub-02_T1w.nii.gz'`  
-`   '/data/ds007/sub-03/anat/sub-03_T1w.nii.gz'`  
-`   '/data/ds007/sub-04/anat/sub-04_T1w.nii.gz'`  
-`   '/data/ds007/sub-05/anat/sub-05_T1w.nii.gz'`  
-`   '/data/ds007/sub-06/anat/sub-06_T1w.nii.gz'`  
-`   '/data/ds007/sub-07/anat/sub-07_T1w.nii.gz'`  
-`   '/data/ds007/sub-08/anat/sub-08_T1w.nii.gz'`  
-`   '/data/ds007/sub-09/anat/sub-09_T1w.nii.gz'`  
-`   '/data/ds007/sub-10/anat/sub-10_T1w.nii.gz'`  
-`   '/data/ds007/sub-11/anat/sub-11_T1w.nii.gz'`  
-`   '/data/ds007/sub-12/anat/sub-12_T1w.nii.gz'`  
-`   '/data/ds007/sub-13/anat/sub-13_T1w.nii.gz'`  
-`   '/data/ds007/sub-14/anat/sub-14_T1w.nii.gz'`  
-`   '/data/ds007/sub-15/anat/sub-15_T1w.nii.gz'`  
-`   '/data/ds007/sub-16/anat/sub-16_T1w.nii.gz'`  
-`   '/data/ds007/sub-17/anat/sub-17_T1w.nii.gz'`  
-`   '/data/ds007/sub-18/anat/sub-18_T1w.nii.gz'`  
-`   '/data/ds007/sub-19/anat/sub-19_T1w.nii.gz'`  
-`   '/data/ds007/sub-20/anat/sub-20_T1w.nii.gz'`
+   Empty cell array: 1-by-0
 
-\</syntaxhighlight\>
+>> spm_BIDS(BIDS,'runs')
+
+ans =
+
+   '01'    '02'
+
+>> spm_BIDS(BIDS,'tasks')
+
+ans =
+
+   'stopsignalwithletternaming'    'stopsignalwithmanualresponse'    'stopsignalwithpseudowordnaming'
+
+>> spm_BIDS(BIDS,'types')
+
+ans =
+
+   'T1w'    'bold'    'events'    'inplaneT2'
+
+>> spm_BIDS(BIDS,'modalities')
+ans =
+
+   'anat'    'func'
+
+>> % Make more specific queries
+>> spm_BIDS(BIDS,'runs','type','T1w')
+
+ans =
+
+  Empty cell array: 1-by-0
+
+>> spm_BIDS(BIDS,'runs','type','bold')
+
+ans =
+
+   '01'    '02'
+
+>> % Get the NIfTI file for subject '05', run '02' and task 'stopsignalwithmanualresponse':
+>> spm_BIDS(BIDS,'data','sub','05','run','02','task','stopsignalwithmanualresponse','type','bold')
+
+ans =
+
+   '/data/ds007/sub-05/func/sub-05_task-stopsignalwithmanualresponse_run-02_bold.nii.gz'
+
+>> % and corresponding metadata, including TR:
+>> spm_BIDS(BIDS,'metadata','sub','05','run','02','task','stopsignalwithmanualresponse','type','bold')
+
+ans =
+
+   RepetitionTime: 2  
+         TaskName: 'stop signal with manual response'
+
+>> % Get the T1-weighted images from all subjects:
+>> spm_BIDS(BIDS,'data','type','T1w')
+
+ans =
+
+   '/data/ds007/sub-01/anat/sub-01_T1w.nii.gz'  
+   '/data/ds007/sub-02/anat/sub-02_T1w.nii.gz'  
+   '/data/ds007/sub-03/anat/sub-03_T1w.nii.gz'  
+   '/data/ds007/sub-04/anat/sub-04_T1w.nii.gz'  
+   '/data/ds007/sub-05/anat/sub-05_T1w.nii.gz'  
+   '/data/ds007/sub-06/anat/sub-06_T1w.nii.gz'  
+   '/data/ds007/sub-07/anat/sub-07_T1w.nii.gz'  
+   '/data/ds007/sub-08/anat/sub-08_T1w.nii.gz'  
+   '/data/ds007/sub-09/anat/sub-09_T1w.nii.gz'  
+   '/data/ds007/sub-10/anat/sub-10_T1w.nii.gz'  
+   '/data/ds007/sub-11/anat/sub-11_T1w.nii.gz'  
+   '/data/ds007/sub-12/anat/sub-12_T1w.nii.gz'  
+   '/data/ds007/sub-13/anat/sub-13_T1w.nii.gz'  
+   '/data/ds007/sub-14/anat/sub-14_T1w.nii.gz'  
+   '/data/ds007/sub-15/anat/sub-15_T1w.nii.gz'  
+   '/data/ds007/sub-16/anat/sub-16_T1w.nii.gz'  
+   '/data/ds007/sub-17/anat/sub-17_T1w.nii.gz'  
+   '/data/ds007/sub-18/anat/sub-18_T1w.nii.gz'  
+   '/data/ds007/sub-19/anat/sub-19_T1w.nii.gz'  
+   '/data/ds007/sub-20/anat/sub-20_T1w.nii.gz'
+
+```
 
 ### Formatting datasets into BIDS
 
-Helper functions \<code\>spm_mkdir\</code\> and
-\<code\>spm_copy\</code\> might come handy, as well as previously
-mentioned \<code\>spm_save\</code\> and \<code\>spm_jsonwrite\</code\>.
+Helper functions `spm_mkdir` and
+`spm_copy` might come handy, as well as previously
+mentioned `spm_save` and `spm_jsonwrite`.
 
 For example, the following piece of code using
-\<code\>spm_mkdir\</code\>:
+`spm_mkdir`:
 
-\<syntaxhighlight lang=\"matlab\"\> \>\>
-spm_mkdir(\'/data/bids\',{\'sub-2475376\',\'sub-5489652\'},{\'ses-1\',\'ses-2\'},\'func\');
-\>\>
-spm_mkdir(\'/data/bids\',{\'sub-2475376\',\'sub-5489652\'},\'ses-1\',\'anat\');
-\</syntaxhighlight\>
+```matlab 
+>> spm_mkdir('/data/bids',{'sub-2475376','sub-5489652'},{'ses-1','ses-2'},'func');
+>> spm_mkdir('/data/bids',{'sub-2475376','sub-5489652'},'ses-1','anat');
+```
 
 creates this directory hierarchy:
 
-\<syntaxhighlight lang=\"bash\"\> /data └── bids
+```bash 
+/data 
+ └── bids
+     ├── sub-2475376  
+     │   ├── ses-1  
+     │   │   ├── anat  
+     │   │   └── func  
+     │   └── ses-2  
+     │       └── func  
+     └── sub-5489652  
+         ├── ses-1  
+         │   ├── anat  
+         │   └── func  
+         └── ses-2  
+             └── func
+```
 
-`   ├── sub-2475376`  
-`   │   ├── ses-1`  
-`   │   │   ├── anat`  
-`   │   │   └── func`  
-`   │   └── ses-2`  
-`   │       └── func`  
-`   └── sub-5489652`  
-`       ├── ses-1`  
-`       │   ├── anat`  
-`       │   └── func`  
-`       └── ses-2`  
-`           └── func`
-
-\</syntaxhighlight\>
-
-while \<code\>spm_copy\</code\> makes it easier to copy files and their
+while `spm_copy` makes it easier to copy files and their
 attached metadata (e.g. sidecar JSON files) with compression on the fly.
 
-\<syntaxhighlight lang=\"matlab\"\> \>\> ls
-sub-2475376_task-rest_bold.json sub-2475376_task-rest_bold.nii.gz \>\>
-spm_copy(\'sub-2475376_task-rest_bold.nii.gz\',\'/derivatives\',
-\'nifti\',true, \'gunzip\',true) \>\> ls /derivatives
-sub-2475376_task-rest_bold.json sub-2475376_task-rest_bold.nii
-\</syntaxhighlight\>
+```matlab
+>> ls
+
+  sub-2475376_task-rest_bold.json
+  sub-2475376_task-rest_bold.nii.gz
+
+>> spm_copy('sub-2475376_task-rest_bold.nii.gz','/derivatives', 'nifti',true, 'gunzip',true)
+>> ls /derivatives
+
+  sub-2475376_task-rest_bold.json
+  sub-2475376_task-rest_bold.nii
+```
 
 See also these options in the batch interface:
 
-- The \<code\>DICOM Import\</code\> batch module has an option to create
+- The `DICOM Import` batch module has an option to create
   metadata sidecar JSON files:
 
 `matlabbatch{1}.spm.util.import.dicom.convopts.meta = true;`
 
-- The \<code\>3D to 4D File Conversion\</code\> batch module has an
+- The `3D to 4D File Conversion` batch module has an
   option to store the TR in the NIfTI header:
 
 `matlabbatch{1}.spm.util.cat.RT = TR;`
